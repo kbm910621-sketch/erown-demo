@@ -18,7 +18,7 @@ $categories = array(
   'print'  => '인쇄물·대형현수막',
   'online' => '통합 온라인 마케팅',
   'web'    => '웹 & UI/UX 제작',
-  'video'  => '4K 영상 제작',
+  'video'  => '영상제작 (4K Production)',
   'mart'   => '대형마트 리테일',
 );
 
@@ -62,31 +62,31 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/header.php";?>
   
   <!-- ============================================
-       01 HERO STAGE : DYNAMIC KINETIC BILLBOARD
+       01 HERO STAGE : KINETIC CINEMATIC BILLBOARD
   ============================================ -->
   <section class="dyn-hero-stage" id="hero">
     <div class="dyn-container">
       
-      <!-- TOP INTERACTIVE NAVIGATOR CHIPS -->
+      <!-- TOP NAVIGATOR CHIPS -->
       <div class="dhn-chip-row wow fadeInDown" data-wow-duration="0.6s">
         <span class="dhn-status-dot"></span>
-        <span class="dhn-title-label">GAON-N TOTAL ADVERTISING SYSTEM</span>
+        <span class="dhn-title-label">GAON-N TOTAL MEDIA AGENCY 2026</span>
         <div class="dhn-quick-nav">
-          <a href="#bus" class="dqn-item">01 시내버스 104개 노선</a>
-          <a href="#online" class="dqn-item">02 네이버 1위 마케팅</a>
-          <a href="#video" class="dqn-item">03 4K 시네마 영상</a>
+          <a href="#bus" class="dqn-item">01 시내버스 광고</a>
+          <a href="#online" class="dqn-item">02 온라인 마케팅</a>
+          <a href="#video" class="dqn-item">03 영상제작 (4K)</a>
           <a href="#other" class="dqn-item">04 특화 옥외매체</a>
         </div>
       </div>
 
-      <!-- DIRECT IMPACT HERO COPY -->
+      <!-- HERO HEADLINE -->
       <div class="dhn-headline-area wow fadeInUp" data-wow-duration="0.8s">
         <h1 class="dhn-h1">
           광주 시내버스 104개 노선 독점 직영,<br>
-          <span class="dhn-highlight">옥외광고 · 온라인 검색 1위 · 4K 영상</span>
+          <span class="dhn-highlight">옥외광고 · 네이버 1위 마케팅 · 영상제작</span>
         </h1>
         <p class="dhn-sub">
-          광주 5개 구 1,000대 시내버스 래핑부터 스마트플레이스 상위노출, 4K 홍보영상까지 본사 전문팀이 100% 직접 시공 및 운영합니다.
+          광주 5개 구 1,000대 시내버스 래핑부터 스마트플레이스 상위노출, 4K 시네마틱 영상제작까지 가온엔 본사가 기획부터 시공까지 100% 직접 전담합니다.
         </p>
       </div>
 
@@ -97,11 +97,11 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
         <button type="button" class="dhn-btn-secondary bus-guide-open" data-guide="guideBus">
-          <span>실측 규격 가이드 확인 ↗</span>
+          <span>매체별 실측 상세 가이드 ↗</span>
         </button>
       </div>
 
-      <!-- INTERACTIVE CINEMA DISPLAY WITH LIVE COUNTERS -->
+      <!-- 21:9 CINEMA STAGE -->
       <div class="dhn-cinema-display wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.2s">
         <div class="dcd-viewport">
           <video autoplay muted loop playsinline class="dcd-video">
@@ -135,18 +135,25 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       02 SECTION 01 : BUS BLUEPRINT & ROUTE SIMULATOR (DYNAMIC INTERACTIVE)
+       02 SECTION 01 : BUS ADVERTISING (DETAILED CLICK CONSOLE)
   ============================================ -->
   <section class="dyn-section dyn-bg-slate" id="bus">
     <div class="dyn-container">
       
       <div class="ds-head-box wow fadeInUp" data-wow-duration="0.7s">
-        <span class="ds-num-tag">01 / BUS OOH SIMULATOR</span>
-        <h2 class="ds-title">광주 시내버스 3면 래핑 &amp; 104개 노선 시뮬레이터</h2>
-        <p class="ds-desc">차량 부착 위치별 실측 치수(mm)와 주요 상권별 버스 노선망을 직접 클릭하여 확인하세요.</p>
+        <div class="dsh-flex">
+          <div>
+            <span class="ds-num-tag">01 / BUS ADVERTISING</span>
+            <h2 class="ds-title">광주 시내버스 외부 · 내부 옥외광고</h2>
+            <p class="ds-desc">원하는 부착 위치 칩을 클릭하시면 상세한 실측 규격, 노출 타깃, 최적의 상권 전략이 즉시 표시됩니다.</p>
+          </div>
+          <button type="button" class="dsh-guide-btn bus-guide-open" data-guide="guideBus">
+            <span>시내버스 7대 규격 상세 가이드 ↗</span>
+          </button>
+        </div>
       </div>
 
-      <!-- DYNAMIC BUS INTERACTIVE CONSOLE -->
+      <!-- BUS INTERACTIVE CONSOLE -->
       <div class="dyn-bus-console wow fadeInUp" data-wow-duration="0.8s">
         
         <!-- STEP 1: INTERACTIVE DIMENSION CHIP SELECTOR -->
@@ -154,41 +161,54 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <button type="button" class="dbc-chip bus-spot-btn on"
                   data-name="차도면 대형 래핑"
                   data-size="3,700 × 1,000 mm"
-                  data-target="왕복 6~8차선 반대편 차량 운전자 및 보행자 정면 100% 노출"
-                  data-benefit="도심 간선도로 주행 중 가장 거대한 면적으로 브랜드 인지도를 각인시킵니다.">
+                  data-target="왕복 6~8차선 반대편 차량 운전자 &amp; 반대편 보행자 정면 100% 노출"
+                  data-material="LG 하우시스 최고급 내후성 정품 솔벤 시트 (1년 이상 변색 방지)"
+                  data-benefit="도심 간선도로 주행 시 시야를 완벽하게 장악하는 가장 대표적인 초대형 래핑면입니다. 상무지구, 광천터미널 등 핵심 도로에서 3초 안에 브랜드를 각인시킵니다.">
             차도면 (3,700×1,000)
           </button>
           <button type="button" class="dbc-chip bus-spot-btn"
                   data-name="인도면 표준 래핑"
                   data-size="3,000 × 500 mm"
-                  data-target="버스 정류장 대기 승객 및 인도 보행자 눈높이 1:1 밀착"
-                  data-benefit="승객 탑승 시 눈높이 정면에 위치하여 전화번호, 진료과목 등 상세 정보 전달에 최적입니다.">
+                  data-target="버스 정류소 대기 승객 &amp; 인도 보행자 눈높이 1:1 밀착"
+                  data-material="LG 하우시스 최고급 내후성 정품 솔벤 시트"
+                  data-benefit="승객 탑승 시 눈높이 정면에 위치하여 전화번호, 진료과목, 핵심 진료 안내 등 상세 정보 전달에 가장 효과적인 밀착형 규격입니다.">
             인도면 (3,000×500)
           </button>
           <button type="button" class="dbc-chip bus-spot-btn"
                   data-name="후면 번호판 상단 래핑"
                   data-size="2,400 × 300 mm"
-                  data-target="신호 대기 및 도로 정체 시 후방 차량 운전자 3분 이상 강제 주시"
-                  data-benefit="출퇴근 정체 구간에서 후방 차량 운전자의 시야를 장시간 단독 점유합니다.">
+                  data-target="신호 대기 및 출퇴근 정체 시 후방 차량 운전자 3분 이상 강제 주시"
+                  data-material="LG 하우시스 정품 솔벤 반사 시트 지원"
+                  data-benefit="출퇴근 시간 및 교차로 신호 대기 중 뒤따르는 차량 운전자와 동승자 시선 정면에 장시간 강제 노출되는 가온엔 필수 패키지 면입니다.">
             후면 (2,400×300)
           </button>
           <button type="button" class="dbc-chip bus-spot-btn"
                   data-name="사랑면 (승하차문 측면)"
                   data-size="1,000 × 500 mm"
-                  data-target="승객 승하차 시 즉각적 시선 집중"
-                  data-benefit="하차문 바로 옆에 위치하여 탑승객의 마지막 시선을 사로잡습니다.">
+                  data-target="승객 승하차 시 즉각적인 시선 유도"
+                  data-material="고접착 실사 솔벤 시트"
+                  data-benefit="하차문 바로 옆에 위치하여 탑승객이 내릴 때 100% 마주치게 되며, 보행자가 버스에 접근할 때 즉각적인 주목도를 형성합니다.">
             사랑면 (1,000×500)
           </button>
           <button type="button" class="dbc-chip bus-spot-btn"
                   data-name="내부 중앙창문 포스터"
                   data-size="1,100 × 500 mm"
                   data-target="좌석 및 통로 탑승객 15~30분간 시선 독점"
-                  data-benefit="이동 시간 내내 승객 시선 정면에 머물며 세부 스토리텔링을 전달합니다.">
+                  data-material="실내 고선명 페트(PET) 출력"
+                  data-benefit="목적지까지 이동하는 15~30분 동안 승객 시선 정면에 머물며 병원/학원의 세부 강점과 브랜드 스토리를 정독시키는 고밀도 매체입니다.">
             내부 창문 (1,100×500)
+          </button>
+          <button type="button" class="dbc-chip bus-spot-btn"
+                  data-name="정류소 음성 안내 방송"
+                  data-size="1회 7초 성우 음성"
+                  data-target="해당 정류소 도착 전 탑승 승객 전원 청각 100% 각인"
+                  data-material="전문 성우 육성 녹음 + 공식 오디오 마스터링"
+                  data-benefit="'이번 정류소는 ○○병원 앞입니다.' 정류소당 단 1개 광고주만 독점 송출되어 시각적 한계를 넘어 청각으로 확실하게 기억시킵니다.">
+            음성 안내 방송 (7초)
           </button>
         </div>
 
-        <!-- STAGE VIEWER & LIVE SPEC CARD -->
+        <!-- STAGE VIEWER & LIVE DETAILED SPEC CARD -->
         <div class="dbc-stage-grid">
           
           <div class="dbc-visual-stage">
@@ -204,12 +224,17 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             
             <div class="dsc-row">
               <span class="dsc-lbl">노출 타깃</span>
-              <strong class="dsc-val" id="dynBusTarget">왕복 6~8차선 반대편 차량 운전자 및 보행자 정면 100% 노출</strong>
+              <strong class="dsc-val" id="dynBusTarget">왕복 6~8차선 반대편 차량 운전자 &amp; 반대편 보행자 정면 100% 노출</strong>
+            </div>
+
+            <div class="dsc-row">
+              <span class="dsc-lbl">소재 및 재질</span>
+              <strong class="dsc-val" id="dynBusMaterial">LG 하우시스 최고급 내후성 정품 솔벤 시트 (1년 이상 변색 방지)</strong>
             </div>
             
             <div class="dsc-row">
-              <span class="dsc-lbl">매체 특장점</span>
-              <p class="dsc-desc" id="dynBusBenefit">도심 간선도로 주행 중 가장 거대한 면적으로 브랜드 인지도를 각인시킵니다.</p>
+              <span class="dsc-lbl">전략적 특장점 상세 설명</span>
+              <p class="dsc-desc" id="dynBusBenefit">도심 간선도로 주행 시 시야를 완벽하게 장악하는 가장 대표적인 초대형 래핑면입니다. 상무지구, 광천터미널 등 핵심 도로에서 3초 안에 브랜드를 각인시킵니다.</p>
             </div>
 
             <div class="dsc-action">
@@ -222,7 +247,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <!-- STEP 2: DYNAMIC ROUTE SEARCH & FILTER -->
         <div class="dbc-routes-filter-box">
           <div class="drf-header">
-            <h4>광주 104개 노선 상권별 빠른 조회</h4>
+            <h4>광주 104개 노선 상권별 빠른 분류 및 타깃 안내</h4>
             <div class="drf-tabs">
               <button type="button" class="drf-tab on" data-route-cat="all">전체 노선</button>
               <button type="button" class="drf-tab" data-route-cat="express">급행 (광역 도심)</button>
@@ -233,24 +258,24 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
           <div class="drf-grid" id="dynRouteGrid">
             <div class="drg-card" data-cat="express">
-              <span class="drgc-badge red">급행</span>
+              <span class="drgc-badge red">급행 (Express)</span>
               <strong>순환01, 첨단09, 수완03</strong>
-              <p>상무지구 ↔ 광천터미널 ↔ 충장로 ↔ 전남대·조선대 관통</p>
+              <p>상무지구 ↔ 광천터미널 ↔ 충장로 ↔ 전남대·조선대 최단 시간 관통. 광주 전역 광역 브랜드 인지도 구축에 최적입니다.</p>
             </div>
             <div class="drg-card" data-cat="main">
-              <span class="drgc-badge blue">간선</span>
+              <span class="drgc-badge blue">간선 (Main Line)</span>
               <strong>매월16, 문흥18, 지원15</strong>
-              <p>광주 5개 구 대규모 아파트 단지 ↔ 중심 상업지구 직통</p>
+              <p>문흥·금호·풍암 등 대규모 아파트 밀집지와 시청·법원 중심 업무지구를 직통 연결하여 출퇴근 직장인을 집중 공략합니다.</p>
             </div>
             <div class="drg-card" data-cat="main">
-              <span class="drgc-badge blue">간선</span>
+              <span class="drgc-badge blue">간선 (Main Line)</span>
               <strong>봉선37, 일곡28, 첨단30</strong>
-              <p>봉선동 학원가, 일곡지구, 첨단산단 핵심 주거 라인</p>
+              <p>봉선동 학원가, 일곡지구, 첨단산단 핵심 주거 라인을 관통하여 학생, 학부모 및 전문직 타깃에 일상 반복 각인합니다.</p>
             </div>
             <div class="drg-card" data-cat="feeder">
-              <span class="drgc-badge green">지선</span>
+              <span class="drgc-badge green">지선 (Feeder)</span>
               <strong>수완12, 첨단20, 용봉83</strong>
-              <p>골목 상권, 병·의원, 마트 밀집지 밀착 운행</p>
+              <p>아파트 단지 앞 정류소, 학원가, 마트, 골목길을 촘촘히 이어 지역 로컬 단골 환자 및 고객과의 친밀도를 극대화합니다.</p>
             </div>
           </div>
         </div>
@@ -262,15 +287,22 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       03 SECTION 02 : ONLINE SEO SIMULATOR (DYNAMIC SEARCH COCKPIT)
+       03 SECTION 02 : ONLINE MARKETING (DETAILED CLICK COCKPIT)
   ============================================ -->
   <section class="dyn-section" id="online">
     <div class="dyn-container">
 
       <div class="ds-head-box wow fadeInUp" data-wow-duration="0.7s">
-        <span class="ds-num-tag">02 / LIVE SEO COCKPIT</span>
-        <h2 class="ds-title">네이버 스마트플레이스 1위 &amp; 키워드 검색 시뮬레이터</h2>
-        <p class="ds-desc">원하는 업종 키워드를 클릭하면 실제 상위 노출 랭킹과 예약 전환 데이터가 실시간으로 연동됩니다.</p>
+        <div class="dsh-flex">
+          <div>
+            <span class="ds-num-tag">02 / ONLINE MARKETING &amp; SEO</span>
+            <h2 class="ds-title">네이버 스마트플레이스 1위 &amp; 통합 온라인 마케팅</h2>
+            <p class="ds-desc">업종 키워드 칩이나 우측 전략 카드를 클릭하시면 세부적인 검색 로직과 실행 방안이 자세히 표시됩니다.</p>
+          </div>
+          <button type="button" class="dsh-guide-btn bus-guide-open" data-guide="guideOnline">
+            <span>온라인 6대 전략 가이드 ↗</span>
+          </button>
+        </div>
       </div>
 
       <!-- DYNAMIC SEARCH COCKPIT -->
@@ -278,11 +310,11 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         
         <!-- KEYWORD SELECTOR STRIP -->
         <div class="dsc-kw-strip">
-          <span class="dks-label">빠른 업종 시뮬레이션:</span>
-          <button type="button" class="dks-btn on" data-kw="광주 상무지구 안과" data-rank="1" data-review="2,840+" data-calls="480">광주 상무지구 안과</button>
-          <button type="button" class="dks-btn" data-kw="광주 수완지구 치과" data-rank="1" data-review="1,920+" data-calls="390">광주 수완지구 치과</button>
-          <button type="button" class="dks-btn" data-kw="광주 첨단 피부과" data-rank="1" data-review="2,450+" data-calls="510">광주 첨단 피부과</button>
-          <button type="button" class="dks-btn" data-kw="광주 봉선동 입시학원" data-rank="1" data-review="1,240+" data-calls="320">광주 봉선동 입시학원</button>
+          <span class="dks-label">업종별 시뮬레이션 클릭:</span>
+          <button type="button" class="dks-btn on" data-kw="광주 상무지구 안과" data-rank="1" data-review="2,840+" data-calls="480" data-strategy="상무지구 라식/라섹/백내장 키워드 최적화 및 네이버 예약 활성화">광주 상무지구 안과</button>
+          <button type="button" class="dks-btn" data-kw="광주 수완지구 치과" data-rank="1" data-review="1,920+" data-calls="390" data-strategy="수완지구 임플란트/교정 C-Rank 블로그 칼럼 및 영수증 리뷰 빌드업">광주 수완지구 치과</button>
+          <button type="button" class="dks-btn" data-kw="광주 첨단 피부과" data-rank="1" data-review="2,450+" data-calls="510" data-strategy="첨단지구 리프팅/여드름 SNS 릴스 숏폼 & 당근 로컬 반경 타깃팅">광주 첨단 피부과</button>
+          <button type="button" class="dks-btn" data-kw="광주 봉선동 입시학원" data-rank="1" data-review="1,240+" data-calls="320" data-strategy="봉선동 학부모 맘카페 바이럴 및 수능/내신 대비 플레이스 상위 안착">광주 봉선동 입시학원</button>
         </div>
 
         <div class="dsc-cockpit-grid">
@@ -312,29 +344,36 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 <span class="das-btn">길찾기</span>
               </div>
             </div>
+
+            <div class="dsm-detail-box" style="margin-top:16px; padding:14px; background:#f8fafc; border-radius:10px; border:1px solid #e2e8f0;">
+              <span style="font-size:11px; font-weight:800; color:#1855b7; display:block; margin-bottom:4px;">적용된 1위 최적화 공식</span>
+              <p id="dynStrategyDesc" style="font-size:12.5px; color:#475569; margin:0; line-height:1.5;">상무지구 라식/라섹/백내장 키워드 최적화 및 네이버 예약 활성화</p>
+            </div>
           </div>
 
-          <!-- RIGHT: 3 CORE STRATEGIES -->
+          <!-- RIGHT: 3 DETAILED STRATEGIC CARDS (CLICKABLE) -->
           <div class="dsm-strategy-col">
-            <div class="dstrat-card">
+            <div class="dstrat-card on" data-strat-title="스마트플레이스 1위 SEO 상세" data-strat-body="'진료과목/업종 + 광주/상무/수완/첨단/봉선' 로컬 키워드 알고리즘을 100% 최적화하여 1페이지 지도 상위에 안착시키고 방문자 예약/리뷰 자산을 구축합니다.">
               <div class="dst-num">01</div>
               <div class="dst-body">
-                <h4>스마트플레이스 1위 최적화</h4>
-                <p>'진료과목/업종 + 광주/상무/수완/첨단/봉선' 로컬 키워드 알고리즘을 100% 최적화하여 1페이지 지도 상위에 안착시킵니다.</p>
+                <h4>스마트플레이스 1위 알고리즘 최적화</h4>
+                <p>소비자가 모바일에서 '광주+진료과목/업종' 검색 시 지도 1페이지 상단 TOP 3에 진입하도록 플레이스 정보, 대표 키워드, 영수증 리뷰, 네이버 예약을 통합 관리합니다.</p>
               </div>
             </div>
-            <div class="dstrat-card">
+
+            <div class="dstrat-card" data-strat-title="C-Rank 브랜드 블로그 상세" data-strat-body="의료법 사전 법무 검수를 통과한 월 8~12편의 고품질 정보성 칼럼으로 네이버 뷰탭 상위 노출과 환자들의 높은 신뢰를 구축합니다.">
               <div class="dst-num">02</div>
               <div class="dst-body">
-                <h4>C-Rank &amp; DIA+ 브랜드 블로그</h4>
-                <p>의료법 사전 법무 검수를 통과한 월 8~12편의 고품질 정보성 칼럼으로 환자들의 높은 신뢰를 구축합니다.</p>
+                <h4>C-Rank &amp; DIA+ 브랜드 블로그 &amp; 맘카페</h4>
+                <p>의료법 100% 사전 법무 검수를 통과한 월 8~12편의 전문 칼럼과 광주 대표 맘카페 바이럴을 통해 과장 광고 없는 청정한 정보성 콘텐츠로 신뢰 여론을 형성합니다.</p>
               </div>
             </div>
-            <div class="dstrat-card">
+
+            <div class="dstrat-card" data-strat-title="SNS 릴스 & 당근 로컬 상세" data-strat-body="병원 반경 1~3km 지역 거주민을 정밀 타깃팅하여 즉각적인 문의 전화와 예약 전환을 만들어냅니다.">
               <div class="dst-num">03</div>
               <div class="dst-body">
-                <h4>SNS 릴스 &amp; 당근 로컬 비즈니스</h4>
-                <p>병원 반경 1~3km 지역 거주민을 정밀 타깃팅하여 즉각적인 문의 전화와 예약 전환을 만들어냅니다.</p>
+                <h4>SNS 릴스 &amp; 당근 로컬 비즈니스 타깃</h4>
+                <p>매장 및 병원 반경 1~3km 로컬 주민에게 인스타그램 세로형 숏폼 영상 광고와 당근마켓 피드 광고를 집행하여 즉각적인 전화 문의와 내방 예약을 촉진합니다.</p>
               </div>
             </div>
           </div>
@@ -348,74 +387,118 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       04 SECTION 03 : 4K VIDEO STUDIO (DYNAMIC FORMAT SWITCHER)
+       04 SECTION 03 : 영상제작 (4K CINEMATIC PRODUCTION - DARK THEME)
   ============================================ -->
-  <section class="dyn-section dyn-bg-slate" id="video">
+  <section class="dyn-section dyn-bg-dark" id="video">
     <div class="dyn-container">
 
-      <div class="ds-head-box wow fadeInUp" data-wow-duration="0.7s">
-        <span class="ds-num-tag">03 / 4K PRODUCTION STUDIO</span>
-        <h2 class="ds-title">4K 시네마틱 홍보영상 &amp; 9:16 모바일 숏폼 스튜디오</h2>
-        <p class="ds-desc">화면 비율 모드를 전환하여 16:9 와이드 영상과 9:16 모바일 숏폼의 실시간 퀄리티를 확인하세요.</p>
+      <div class="ds-head-box dark-head wow fadeInUp" data-wow-duration="0.7s">
+        <div class="dsh-flex">
+          <div>
+            <span class="ds-num-tag gold">03 / 4K VIDEO PRODUCTION</span>
+            <h2 class="ds-title white">4K 시네마틱 영상제작 &amp; SNS 숏폼 스튜디오</h2>
+            <p class="ds-desc light">기업·병원 브랜드 필름부터 TV CF, 9:16 모바일 숏폼, 옥외 DID 모션까지 인하우스 프로덕션이 14일 Fast-Track으로 제작합니다.</p>
+          </div>
+          <button type="button" class="dsh-guide-btn dark bus-guide-open" data-guide="guideVideo">
+            <span>영상제작 공정 가이드 ↗</span>
+          </button>
+        </div>
       </div>
 
       <!-- VIDEO STUDIO DUAL CONSOLE -->
-      <div class="dyn-video-console wow fadeInUp" data-wow-duration="0.8s">
+      <div class="dyn-video-console dark-console wow fadeInUp" data-wow-duration="0.8s">
         
         <!-- FORMAT SWITCH BUTTONS -->
         <div class="dvc-mode-bar">
-          <button type="button" class="dvc-mode-btn on" data-video-mode="wide">16:9 와이드 시네마 모드</button>
-          <button type="button" class="dvc-mode-btn" data-video-mode="shorts">9:16 SNS 릴스/숏폼 모드</button>
+          <button type="button" class="dvc-mode-btn dark on" data-video-mode="wide">16:9 와이드 시네마 모드</button>
+          <button type="button" class="dvc-mode-btn dark" data-video-mode="shorts">9:16 SNS 릴스/숏폼 모드</button>
         </div>
 
         <div class="dvc-player-grid">
           
           <!-- MAIN VIDEO DISPLAY -->
-          <div class="dvc-display-frame" id="dynVideoFrame">
+          <div class="dvc-display-frame dark-frame" id="dynVideoFrame">
             <video autoplay muted loop playsinline class="dvc-video-element" id="dynMainVideo">
               <source src="/images/movie.mp4" type="video/mp4">
             </video>
             <div class="dvc-video-scrim"></div>
             
             <div class="dvc-video-caption">
-              <span class="dvc-tag" id="dynVideoTag">16:9 4K BRAND FILM</span>
+              <span class="dvc-tag gold" id="dynVideoTag">16:9 4K BRAND FILM</span>
               <h3 id="dynVideoTitle">기업 · 상급병원 4K 시네마틱 브랜드 필름</h3>
               <p id="dynVideoSub">Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 더빙</p>
             </div>
           </div>
 
-          <!-- 4 CLEAR DELIVERABLES -->
-          <div class="dvc-products-list">
-            <div class="dvp-item on" data-target-mode="wide">
+          <!-- 4 CLEAR DELIVERABLES WITH EXPANDED EXPLANATIONS -->
+          <div class="dvc-products-list dark-list">
+            
+            <div class="dvp-item dark on" data-target-mode="wide"
+                 data-vtitle="기업 · 상급병원 4K 시네마틱 브랜드 필름"
+                 data-vsub="Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 더빙">
               <span class="dvp-idx">01</span>
               <div>
-                <strong>기업·병원 브랜드 필름 (3~5분)</strong>
-                <p>홈페이지 메인 및 공식 채널용 최고급 4K 홍보영상</p>
+                <strong>기업 · 상급병원 브랜드 필름 (3~5분)</strong>
+                <p>홈페이지 메인 및 공식 채널에 최적화된 영화급 홍보영상으로 Sony FX Cinema 풀프레임 카메라와 국토부 승인 4K 항공 드론으로 기업의 품격을 완성합니다.</p>
               </div>
             </div>
-            <div class="dvp-item" data-target-mode="wide">
+
+            <div class="dvp-item dark" data-target-mode="wide"
+                 data-vtitle="TV CF & 극장 스크린 광고 (15초 / 30초)"
+                 data-vsub="15초/30초 고임팩트 스토리텔링 + 2D/3D 모션그래픽">
               <span class="dvp-idx">02</span>
               <div>
-                <strong>TV CF · 극장 광고 (15/30초)</strong>
-                <p>고임팩트 스토리텔링 &amp; 2D/3D 모션그래픽 제작</p>
+                <strong>TV CF · 극장 광고 (15초 / 30초)</strong>
+                <p>지상파/케이블 TV 및 CGV/메가박스 스크린에 송출되는 광고로, 짧은 시간 안에 강렬한 메시지를 각인시키는 임팩트 중심 스토리텔링을 제작합니다.</p>
               </div>
             </div>
-            <div class="dvp-item" data-target-mode="shorts">
+
+            <div class="dvp-item dark" data-target-mode="shorts"
+                 data-vtitle="SNS 모바일 숏폼 바이럴 (9:16 세로형)"
+                 data-vsub="인스타그램 릴스 + 유튜브 쇼츠 + 틱톡 최적화 바이럴">
               <span class="dvp-idx">03</span>
               <div>
-                <strong>SNS 릴스 · 유튜브 쇼츠 (9:16)</strong>
-                <p>모바일 최적화 세로형 숏폼 바이럴 영상</p>
+                <strong>SNS 릴스 · 유튜브 쇼츠 (9:16 세로형)</strong>
+                <p>첫 3초 만에 시선을 사로잡는 빠른 컷 전환과 자막 모션그래픽으로 수만~수십만 뷰의 알고리즘 유기적 도달을 달성하는 모바일 최적화 영상입니다.</p>
               </div>
             </div>
-            <div class="dvp-item" data-target-mode="wide">
+
+            <div class="dvp-item dark" data-target-mode="wide"
+                 data-vtitle="DID 디지털 전광판 모션그래픽 (15초 풀HD)"
+                 data-vsub="옥외 고휘도 스크린 전용 15초 풀HD 고시인성 모션">
               <span class="dvp-idx">04</span>
               <div>
-                <strong>DID 전광판 모션그래픽 (15초)</strong>
-                <p>옥외 고휘도 스크린 전용 15초 풀HD 고시인성 모션</p>
+                <strong>DID 전광판 모션그래픽 (15초 풀HD)</strong>
+                <p>유스퀘어 터미널, 지하철역, 관공서 로비 등의 고휘도 LED 전광판 환경에서 텍스트와 비주얼이 멀리서도 1초 만에 읽히는 고시인성 모션을 제작합니다.</p>
               </div>
             </div>
+
           </div>
 
+        </div>
+
+        <!-- 4-STEP FAST-TRACK PRODUCTION STRIP -->
+        <div class="dyn-prod-workflow">
+          <div class="dpw-step">
+            <span class="dpw-badge">STEP 01</span>
+            <strong>콘티 기획 (D+3)</strong>
+            <span>1:1 맞춤 스토리보드 확정</span>
+          </div>
+          <div class="dpw-step">
+            <span class="dpw-badge">STEP 02</span>
+            <strong>4K 본촬영 (D+7)</strong>
+            <span>Sony FX + 항공 드론 현장 촬영</span>
+          </div>
+          <div class="dpw-step">
+            <span class="dpw-badge">STEP 03</span>
+            <strong>가편집 &amp; 더빙 (D+10)</strong>
+            <span>전문 성우 녹음 및 BGM 믹싱</span>
+          </div>
+          <div class="dpw-step highlight">
+            <span class="dpw-badge">STEP 04</span>
+            <strong>최종 납품 (D+14)</strong>
+            <span>14일 내 멀티포맷 완성본 납품</span>
+          </div>
         </div>
 
       </div>
@@ -425,15 +508,22 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       05 SECTION 04 : SPECIALIZED OOH ACCORDION (DYNAMIC HOVER)
+       05 SECTION 04 : SPECIALIZED OOH ACCORDION (DETAILED CLICK)
   ============================================ -->
   <section class="dyn-section" id="other">
     <div class="dyn-container">
 
       <div class="ds-head-box wow fadeInUp" data-wow-duration="0.7s">
-        <span class="ds-num-tag">04 / SPECIALIZED OOH MEDIA</span>
-        <h2 class="ds-title">택시 · 택배 · 대형마트 · DID 4대 특화 매체</h2>
-        <p class="ds-desc">마우스를 올려 각 매체의 실측 규격과 일일 노출 시간을 확인하세요.</p>
+        <div class="dsh-flex">
+          <div>
+            <span class="ds-num-tag">04 / SPECIALIZED OOH MEDIA</span>
+            <h2 class="ds-title">택시 · 택배 · 대형마트 · DID 4대 특화 옥외매체</h2>
+            <p class="ds-desc">각 매체 카드를 클릭하시면 상세한 실측 규격, 운영 시간, 최적의 타깃 분석을 확인하실 수 있습니다.</p>
+          </div>
+          <button type="button" class="dsh-guide-btn bus-guide-open" data-guide="guideTaxiDelivery">
+            <span>특화 매체 실측표 가이드 ↗</span>
+          </button>
+        </div>
       </div>
 
       <!-- DYNAMIC INTERACTIVE ACCORDION GRID -->
@@ -443,10 +533,10 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="택시 래핑 광고">
           <div class="doa-scrim"></div>
           <div class="doa-content">
-            <span class="doa-kicker">01 / MOBILITY</span>
-            <h3>택시 양측면 래핑</h3>
-            <p>광주 전역 200여 대 차량이 주요 번화가와 골목길을 24시간 누비며 보행자 눈높이에 밀착 노출됩니다.</p>
-            <div class="doa-spec">규격: 2,100 × 320 mm | 24시간 상시 운행</div>
+            <span class="doa-kicker">01 / URBAN MOBILITY</span>
+            <h3>법인 · 개인택시 양측면 래핑</h3>
+            <p>광주 전역 200여 대 차량이 주요 번화가와 골목길을 24시간 365일 상시 운행하며, 보행자 눈높이에서 밀착 노출되어 높은 주목도를 발휘합니다.</p>
+            <div class="doa-spec">실측 규격: 2,100 × 320 mm | 24시간 365일 연속 운행</div>
           </div>
         </div>
 
@@ -454,10 +544,10 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="택배차량 래핑 광고">
           <div class="doa-scrim"></div>
           <div class="doa-content">
-            <span class="doa-kicker">02 / LOGISTICS</span>
-            <h3>택배 탑차 3면 래핑</h3>
-            <p>광주 5개 구 아파트 단지와 주택가 골목길에 매일 10시간 이상 정차하는 움직이는 초대형 빌보드입니다.</p>
-            <div class="doa-spec">규격: 양면 3,000×1,500 + 후면 | 1일 10시간 체류</div>
+            <span class="doa-kicker">02 / LOGISTICS BILLBOARD</span>
+            <h3>택배 탑차 3면 와이드 래핑</h3>
+            <p>광주 5개 구 대규모 아파트 단지와 주택가 골목길에 매일 10시간 이상 머무는 움직이는 초대형 랜드마크 빌보드로 주민 일상에 자연스럽게 각인됩니다.</p>
+            <div class="doa-spec">실측 규격: 양면 3,000×1,500 + 후면 | 1일 10시간 체류</div>
           </div>
         </div>
 
@@ -465,10 +555,10 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <img src="/images/sub_bg_d.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="대형마트 쇼핑카트">
           <div class="doa-scrim"></div>
           <div class="doa-content">
-            <span class="doa-kicker">03 / RETAIL</span>
-            <h3>대형마트 쇼핑카트</h3>
-            <p>이마트, 롯데마트 1,000여 대 카트 손잡이 정면에 위치하여 실질적 구매권을 가진 주부 고객과 60분간 동행합니다.</p>
-            <div class="doa-spec">규격: 280 × 160 mm | 쇼핑 1회당 60분 주시</div>
+            <span class="doa-kicker">03 / RETAIL PURCHASE POINT</span>
+            <h3>대형마트 쇼핑카트 &amp; 무빙워크</h3>
+            <p>이마트, 롯데마트 1,000여 대 카트 손잡이 정면에 위치하여 실질적 구매권을 가진 3050 주부 및 가족 고객과 60분간 1:1로 동행합니다.</p>
+            <div class="doa-spec">실측 규격: 280 × 160 mm | 쇼핑 1회당 60분 연속 주시</div>
           </div>
         </div>
 
@@ -476,10 +566,10 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <img src="/images/sub_bg_e.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="DID 디지털 전광판">
           <div class="doa-scrim"></div>
           <div class="doa-content">
-            <span class="doa-kicker">04 / DIGITAL</span>
-            <h3>DID 디지털 전광판</h3>
-            <p>유스퀘어 터미널, 지하철 환승역, 관공서 로비에 고휘도 55~85" UHD 스크린으로 15초 영상을 하루 100회 이상 송출합니다.</p>
-            <div class="doa-spec">규격: 55~85" UHD 패널 | 일 100회 이상 송출</div>
+            <span class="doa-kicker">04 / DIGITAL SMART SIGNAGE</span>
+            <h3>DID 디지털 전광판 &amp; 전자현수막</h3>
+            <p>유스퀘어 터미널, 지하철 환승역, 관공서 로비에 고휘도 55~85" UHD 스크린으로 15초 영상을 하루 100회 이상 연속 송출합니다.</p>
+            <div class="doa-spec">실측 규격: 55~85" UHD 패널 | 일 100회 이상 송출</div>
           </div>
         </div>
 
@@ -503,8 +593,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <div class="dyn-filter-bar">
           <button type="button" class="dfb-btn on" data-filter="all">전체보기</button>
           <button type="button" class="dfb-btn" data-filter="bus">시내버스</button>
-          <button type="button" class="dfb-btn" data-filter="online">온라인 SEO</button>
-          <button type="button" class="dfb-btn" data-filter="video">4K 영상</button>
+          <button type="button" class="dfb-btn" data-filter="online">온라인 마케팅</button>
+          <button type="button" class="dfb-btn" data-filter="video">영상제작</button>
           <button type="button" class="dfb-btn" data-filter="taxi">택시·택배</button>
           <button type="button" class="dfb-btn" data-filter="mart">마트·DID</button>
         </div>
@@ -649,7 +739,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <div>
           <span class="lmh-label">GAON-N OFFICIAL SPECIFICATION DECK</span>
           <h3 class="lmh-title">가온엔 통합 미디어 실측 규격 &amp; 운영 가이드</h3>
-          <p class="lmh-desc">광주 시내버스 104개 전 노선 실측 치수부터 택시·택배, 마트·DID, 온라인 SEO 및 4K 영상 제작 스펙을 확인하세요.</p>
+          <p class="lmh-desc">광주 시내버스 104개 전 노선 실측 치수부터 택시·택배, 마트·DID, 온라인 SEO 및 4K 영상제작 스펙을 확인하세요.</p>
         </div>
         <button type="button" class="lux-modal-close" id="btnCloseBusGuide">✕</button>
       </div>
@@ -659,7 +749,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <button type="button" class="lmt-tab" data-target="guideTaxiDelivery">택시 · 택배차량</button>
         <button type="button" class="lmt-tab" data-target="guideMartDid">대형마트 · DID</button>
         <button type="button" class="lmt-tab" data-target="guideOnline">온라인 마케팅 &amp; SEO</button>
-        <button type="button" class="lmt-tab" data-target="guideVideo">4K 영상 &amp; 숏폼 제작</button>
+        <button type="button" class="lmt-tab" data-target="guideVideo">영상제작 (4K Production)</button>
       </div>
 
       <div class="lux-modal-body">
@@ -837,7 +927,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <!-- 05 VIDEO -->
         <div class="bus-guide-page" id="guideVideo">
           <div class="lux-table-block">
-            <h4 class="ltb-title">01 4K 시네마틱 영상 &amp; SNS 숏폼 제작 프로덕션</h4>
+            <h4 class="ltb-title">01 4K 시네마틱 영상제작 &amp; SNS 숏폼 프로덕션</h4>
             <div class="lux-spec-table">
               <div class="lst-row">
                 <div class="lst-name">01 시네마틱 브랜드 필름</div>

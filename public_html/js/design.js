@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GAON-N 2026 TRULY DYNAMIC INTERACTIVE JS
+   GAON-N 2026 DEEP EXPLANATION INTERACTION JS
    ========================================================================== */
 $(function () {
   'use strict';
@@ -24,13 +24,14 @@ $(function () {
     });
   });
 
-  /* 02. BUS BLUEPRINT CHIP SWITCHER */
+  /* 02. BUS BLUEPRINT CHIP SWITCHER WITH RICH EXPLANATIONS */
   $(document).on('click', '.bus-spot-btn', function(e) {
     e.preventDefault();
     var $btn = $(this);
     var name = $btn.attr('data-name');
     var size = $btn.attr('data-size');
     var target = $btn.attr('data-target');
+    var material = $btn.attr('data-material');
     var benefit = $btn.attr('data-benefit');
 
     $('.bus-spot-btn').removeClass('on');
@@ -39,15 +40,19 @@ $(function () {
     $('#dynBusBadge').text(name);
     $('#dynBusSize').text(size);
     $('#dynBusTarget').text(target);
+    if (material) {
+      $('#dynBusMaterial').text(material);
+    }
     $('#dynBusBenefit').text(benefit);
 
-    // Dynamic marker positioning feedback
+    // Marker positioning feedback
     var markerPos = [
       { top: '35%', left: '25%' },
       { top: '55%', left: '60%' },
       { top: '35%', left: '85%' },
       { top: '48%', left: '72%' },
-      { top: '25%', left: '50%' }
+      { top: '25%', left: '50%' },
+      { top: '40%', left: '15%' }
     ];
     var idx = $btn.index() % markerPos.length;
     $('#dvsMarker').css(markerPos[idx]);
@@ -82,6 +87,7 @@ $(function () {
     var rank = $btn.attr('data-rank');
     var review = $btn.attr('data-review');
     var calls = $btn.attr('data-calls');
+    var strategy = $btn.attr('data-strategy');
 
     $('.dks-btn').removeClass('on');
     $btn.addClass('on');
@@ -90,9 +96,22 @@ $(function () {
     $('#dynRankBadge').text('#' + rank + ' 네이버 스마트플레이스 1위');
     $('#dynReviewCount').text('(방문자 영수증 리뷰 ' + review + ')');
     $('#dynCallCount').text('네이버 예약 (월 ' + calls + '건)');
+    if (strategy) {
+      $('#dynStrategyDesc').text(strategy);
+    }
   });
 
-  /* 05. VIDEO FORMAT SWITCHER */
+  $(document).on('click', '.dstrat-card', function(e) {
+    e.preventDefault();
+    $('.dstrat-card').removeClass('on');
+    $(this).addClass('on');
+    var body = $(this).attr('data-strat-body');
+    if (body) {
+      $('#dynStrategyDesc').text(body);
+    }
+  });
+
+  /* 05. VIDEO FORMAT SWITCHER & PRODUCT CLICK */
   $(document).on('click', '.dvc-mode-btn', function(e) {
     e.preventDefault();
     var mode = $(this).attr('data-video-mode');
@@ -118,7 +137,12 @@ $(function () {
     $('.dvp-item').removeClass('on');
     $(this).addClass('on');
     var targetMode = $(this).attr('data-target-mode');
+    var vtitle = $(this).attr('data-vtitle');
+    var vsub = $(this).attr('data-vsub');
+
     $('.dvc-mode-btn[data-video-mode="' + targetMode + '"]').trigger('click');
+    if (vtitle) $('#dynVideoTitle').text(vtitle);
+    if (vsub) $('#dynVideoSub').text(vsub);
   });
 
   /* 06. OOH ACCORDION HOVER/CLICK */
