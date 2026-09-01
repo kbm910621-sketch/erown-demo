@@ -61,292 +61,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/header.php";?>
   
-  <!-- ============================================
-       01 HERO STAGE : GSAP SCROLL STEP HERO (ORIGINAL INTERACTION)
-  ============================================ -->
-  <section class="main_hero" id="hero">
-    <div class="main_hero_text_wrap">
-      <h1 class="main_hero_text">
-        보여주는 광고보다<br>
-        이해되는 광고를 만듭니다.
-      </h1>
-      <div class="main_hero_keywords">
-        <a href="#bus" class="mhk-pill">버스 광고</a>
-        <a href="#other" class="mhk-pill">택시 광고</a>
-        <a href="#online" class="mhk-pill">온라인·SNS</a>
-        <a href="#video" class="mhk-pill">영상제작</a>
-        <a href="#online" class="mhk-pill">병원 마케팅</a>
-      </div>
-    </div>
-
-    <div class="main_hero_panel_wrap">
-      <div class="main_hero_panel">
-        <div class="main_hero_panel_video_wrap">
-          <video autoplay muted loop playsinline class="main_hero_panel_video">
-            <source src="/images/movie.mp4" type="video/mp4">
-          </video>
-          <div class="main_hero_panel_dim"></div>
-          <div class="main_hero_panel_overlay_text">
-            <div class="mho-text-box">
-              <h2 class="mho-title">
-                보여주는 광고보다<br>
-                이해되는 광고를 만듭니다.
-              </h2>
-              <p class="mho-sub">
-                광주 시내버스 104개 노선 단독 직영 · 네이버 1위 마케팅 · 4K 시네마틱 프로덕션
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================
-       01-B ABOUT STATS SECTION (SCREENSHOT 1:1 MATCH & WIDE BREATHING GAPS)
-  ============================================ -->
-  <section class="am-about-stats-sec">
-    <!-- ULTRA-SUBTLE SMOOTH CONTINUOUS WAVE LINES -->
-    <div class="aas-silk-canvas">
-      <svg class="aas-silk-svg" viewBox="0 0 1600 600" fill="none" preserveAspectRatio="none">
-        <path class="silk-line line-1" d="M-100,220 C350,60 700,380 1150,140 C1400,-20 1550,220 1750,160" stroke="#e8edf4" stroke-width="1.1" stroke-linecap="round" />
-        <path class="silk-line line-2" d="M-80,360 C320,180 780,460 1180,240 C1420,80 1560,340 1780,260" stroke="#edf2f7" stroke-width="0.9" stroke-linecap="round" />
-      </svg>
-    </div>
-
-    <div class="am-container" style="position:relative; z-index:2;">
-      
-      <!-- TOP COPY & WATERMARK BRANDING -->
-      <div class="aas-top-row wow fadeInUp" data-wow-duration="0.8s">
-        <div class="aas-headline-col">
-          <div class="aas-kicker-line">
-            <span class="akl-dash"></span>
-            <span class="akl-text">ABOUT</span>
-          </div>
-          <h2 class="aas-main-title">
-            우리는 광고의<br>
-            <span class="aas-blue-highlight">오프라인과 온라인을 잇는</span><br>
-            통합 마케팅 파트너입니다.
-          </h2>
-        </div>
-
-        <div class="aas-watermark-col">
-          <div class="awc-huge-text">BUS</div>
-          <div class="awc-huge-text">TAXI</div>
-          <div class="awc-huge-text bold">ONLINE</div>
-        </div>
-      </div>
-
-      <!-- 5 CLEAN WHITE SQUARE CARDS (70PX WIDE GAP & PADDING) -->
-      <div class="aas-cards-grid wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.15s">
-        
-        <div class="aas-stat-card">
-          <span class="asc-label">누적 광고 집행</span>
-          <div class="asc-value-row">
-            <strong class="asc-num counter" data-target="500">500</strong><span class="asc-plus">+</span>
-          </div>
-          <span class="asc-unit">건</span>
-        </div>
-
-        <div class="aas-stat-card">
-          <span class="asc-label">운행 광고 차량</span>
-          <div class="asc-value-row">
-            <strong class="asc-num counter" data-target="200">200</strong><span class="asc-plus">+</span>
-          </div>
-          <span class="asc-unit">대</span>
-        </div>
-
-        <div class="aas-stat-card">
-          <span class="asc-label">광주 지역 서비스</span>
-          <div class="asc-value-row">
-            <strong class="asc-num counter" data-target="10">10</strong>
-          </div>
-          <span class="asc-unit">년</span>
-        </div>
-
-        <div class="aas-stat-card">
-          <span class="asc-label">고객 재계약률</span>
-          <div class="asc-value-row">
-            <strong class="asc-num counter" data-target="98">98</strong>
-          </div>
-          <span class="asc-unit">%</span>
-        </div>
-
-        <div class="aas-stat-card">
-          <span class="asc-label">협력 매체사</span>
-          <div class="asc-value-row">
-            <strong class="asc-num counter" data-target="50">50</strong><span class="asc-plus">+</span>
-          </div>
-          <span class="asc-unit">곳</span>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================
-       02 SECTION 01 : 시내버스 광고 (PICTOGRAM PROMO CARDS)
-  ============================================ -->
-  <section class="am-section am-bg-slate" id="bus">
-    <div class="am-container">
-      
-      <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
-        <div class="ash-flex">
-          <div>
-            <span class="ash-kicker">01 / OOH BUS ADVERTISING</span>
-            <h2 class="ash-title">시내버스 광고</h2>
-            <p class="ash-desc">광주 시내버스 104개 전 노선 단독 배차. 일일 150만 시민의 눈높이에서 18시간 동안 반복 각인되는 움직이는 랜드마크입니다.</p>
-          </div>
-          <div class="ash-actions">
-            <button type="button" class="ash-guide-btn blue" id="btnOpenRouteSearchModal">
-              <span>광주 104개 노선 실시간 검색기 ↗</span>
-            </button>
-            <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideBus">
-              <span>시내버스 규격 가이드 ↗</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- BUS BLUEPRINT STUDIO CONSOLE -->
-      <div class="am-bus-console wow fadeInUp" data-wow-duration="0.8s">
-        
-        <div class="abc-chip-bar">
-          <button type="button" class="abc-chip bus-spot-btn on"
-                  data-name="차도면 대형 래핑"
-                  data-size="3,700 × 1,000 mm"
-                  data-target="왕복 6~8차선 반대편 차량 운전자 &amp; 보행자 시야 정면 100% 노출"
-                  data-material="LG 하우시스 최고급 내후성 정품 솔벤 시트 (1년 이상 변색 방지)"
-                  data-benefit="도심 간선도로 주행 중 가장 거대한 면적으로 브랜드 인지도를 각인시킵니다. 상무지구, 광천터미널 등 핵심 도로에서 3초 안에 시선을 장악합니다.">
-            차도면 (3,700×1,000)
-          </button>
-          <button type="button" class="abc-chip bus-spot-btn"
-                  data-name="인도면 표준 래핑"
-                  data-size="3,000 × 500 mm"
-                  data-target="버스 정류장 대기 승객 &amp; 인도 보행자 눈높이 1:1 밀착"
-                  data-material="LG 하우시스 최고급 내후성 정품 솔벤 시트"
-                  data-benefit="승객 탑승 시 눈높이 정면에 위치하여 전화번호, 진료과목, 핵심 진료 안내 등 상세 정보 전달에 가장 효과적인 밀착형 규격입니다.">
-            인도면 (3,000×500)
-          </button>
-          <button type="button" class="abc-chip bus-spot-btn"
-                  data-name="후면 번호판 상단 래핑"
-                  data-size="2,400 × 300 mm"
-                  data-target="신호 대기 및 도로 정체 시 후방 차량 운전자 3분 이상 강제 주시"
-                  data-material="LG 하우시스 정품 솔벤 반사 시트 지원"
-                  data-benefit="출퇴근 시간 및 교차로 신호 대기 중 뒤따르는 차량 운전자와 동승자 시선 정면에 장시간 강제 노출되는 가온엔 필수 패키지 면입니다.">
-            후면 (2,400×300)
-          </button>
-          <button type="button" class="abc-chip bus-spot-btn"
-                  data-name="사랑면 (승하차문 측면)"
-                  data-size="1,000 × 500 mm"
-                  data-target="승객 승하차 시 즉각적인 시선 유도"
-                  data-material="고접착 실사 솔벤 시트"
-                  data-benefit="하차문 바로 옆에 위치하여 탑승객이 내릴 때 100% 마주치게 되며, 보행자가 버스에 접근할 때 즉각적인 주목도를 형성합니다.">
-            사랑면 (1,000×500)
-          </button>
-          <button type="button" class="abc-chip bus-spot-btn"
-                  data-name="내부 중앙창문 포스터"
-                  data-size="1,100 × 500 mm"
-                  data-target="좌석 및 통로 탑승객 15~30분간 시선 독점"
-                  data-material="실내 고선명 페트(PET) 출력"
-                  data-benefit="목적지까지 이동하는 15~30분 동안 승객 시선 정면에 머물며 병원/학원의 세부 강점과 브랜드 스토리를 정독시키는 고밀도 매체입니다.">
-            내부 창문 (1,100×500)
-          </button>
-          <button type="button" class="abc-chip bus-spot-btn"
-                  data-name="정류소 음성 안내 방송"
-                  data-size="1회 7초 성우 음성"
-                  data-target="해당 정류소 도착 전 탑승 승객 전원 청각 100% 각인"
-                  data-material="전문 성우 육성 녹음 + 공식 오디오 마스터링"
-                  data-benefit="'이번 정류소는 ○○병원 앞입니다.' 정류소당 단 1개 광고주만 독점 송출되어 시각적 한계를 넘어 청각으로 확실하게 기억시킵니다.">
-            음성 안내 방송 (7초)
-          </button>
-        </div>
-
-        <div class="abc-stage-row">
-          <div class="abc-visual-viewport">
-            <div class="avv-frame">
-              <img src="/images/sample_bus.jpg" id="dynBusImg" alt="시내버스 광고 실사">
-              <div class="avv-marker" id="dvsMarker" style="top:35%; left:25%;"></div>
-            </div>
-          </div>
-
-          <div class="abc-brief-panel">
-            <div class="abp-badge" id="dynBusBadge">차도면 대형 래핑</div>
-            <h3 class="abp-title" id="dynBusSize">3,700 × 1,000 mm</h3>
-            
-            <div class="abp-field">
-              <span class="abp-lbl">노출 타깃</span>
-              <strong class="abp-val" id="dynBusTarget">왕복 6~8차선 반대편 차량 운전자 &amp; 보행자 시야 정면 100% 노출</strong>
-            </div>
-
-            <div class="abp-field">
-              <span class="abp-lbl">소재 및 재질</span>
-              <strong class="abp-val" id="dynBusMaterial">LG 하우시스 최고급 내후성 정품 솔벤 시트 (1년 이상 변색 방지)</strong>
-            </div>
-            
-            <div class="abp-field">
-              <span class="abp-lbl">상권 공략 전략</span>
-              <p class="abp-desc" id="dynBusBenefit">도심 간선도로 주행 중 가장 거대한 면적으로 브랜드 인지도를 각인시킵니다. 상무지구, 광천터미널 등 핵심 도로에서 3초 안에 시선을 장악합니다.</p>
-            </div>
-
-            <div class="abp-action">
-              <a href="/board/estmate/write.php" class="abp-btn">이 규격으로 맞춤 견적 신청 →</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- BUS PROMOTIONAL 3-PILLAR ADVANTAGES (WITH PURE VECTOR PICTOGRAMS) -->
-      <div class="am-bus-promo-grid wow fadeInUp" data-wow-duration="0.8s">
-        
-        <div class="abp-promo-card">
-          <div class="apc-top-row">
-            <div class="apc-picto-circle">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/><path d="M7 3v7"/><path d="M17 3v7"/></svg>
-            </div>
-            <span class="apc-num">01</span>
-          </div>
-          <h3>광주 104개 전 노선 단독 직영 배차</h3>
-          <p>병원, 학원, 분양 홍보관의 주 타깃 고객이 밀집된 상무·수완·봉선·첨단 등 핵심 거점을 정확하게 관통하는 맞춤형 최적 노선을 단독 설계합니다.</p>
-          <div class="apc-stat">광주 5개 구 1,000대 시내버스 독점 운영</div>
-        </div>
-
-        <div class="abp-promo-card">
-          <div class="apc-top-row">
-            <div class="apc-picto-circle">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><path d="M22 12A10 10 0 0 0 12 2"/></svg>
-            </div>
-            <span class="apc-num">02</span>
-          </div>
-          <h3>1일 18시간 · 일 150만 시민 눈높이 노출</h3>
-          <p>새벽 5시 30분부터 밤 12시까지 도심 주요 간선도로와 교차로를 쉼 없이 순환하며, 운전자와 보행자 시선 정면에 하루 150만 회 이상 강제 노출됩니다.</p>
-          <div class="apc-stat">차도면 3.7m + 인도면 3.0m + 후면 2.4m 3면 패키지</div>
-        </div>
-
-        <div class="abp-promo-card">
-          <div class="apc-top-row">
-            <div class="apc-picto-circle">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-            </div>
-            <span class="apc-num">03</span>
-          </div>
-          <h3>LG 하우시스 정품 솔벤 시트 &amp; 100% 직영 시공</h3>
-          <p>외주 하청 없는 10년 경력의 본사 전문 시공팀이 내후성 정품 솔벤 시트로 직접 출력 및 부착하며, 시공 직후 번호판 포함 4면 증빙 사진을 실시간 보고합니다.</p>
-          <div class="apc-stat">시공 직후 차량 4면 번호판 실사 즉시 전송</div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================
-       03 SECTION 02 : 온라인 마케팅 (SENSUAL VISUAL SHOWCASE DECK)
+    <!-- ============================================
+       03 SECTION 02 : 20-YEAR CREATIVE DIRECTOR BENTO ONLINE MARKETING
   ============================================ -->
   <section class="am-section" id="online">
     <div class="am-container">
@@ -354,106 +70,103 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
         <div class="ash-flex">
           <div>
-            <span class="ash-kicker">02 / DIGITAL PERFORMANCE GROUP</span>
-            <h2 class="ash-title">온라인 마케팅</h2>
-            <p class="ash-desc">시내버스 옥외광고의 압도적 주목도를 실시간 네이버 1위 예약 및 매출 폭발로 연결하는 가온엔 디지털 솔루션입니다.</p>
+            <span class="ash-kicker">02 / INTEGRATED DIGITAL PERFORMANCE</span>
+            <h2 class="ash-title">온라인 마케팅 솔루션</h2>
+            <p class="ash-desc">시내버스 옥외광고의 압도적 각인 효과를 실시간 네이버 1위 예약 및 폭발적 매출로 직결시키는 가온엔 인하우스 디지털 솔루션입니다.</p>
           </div>
           <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideOnline">
-            <span>온라인 6대 채널 심층 가이드 확인 ↗</span>
+            <span>온라인 6대 채널 종합 가이드 ↗</span>
           </button>
         </div>
       </div>
 
-      <!-- HIGH-IMPACT SENSATIONAL ONLINE VISUAL SHOWCASE GRID -->
-      <div class="am-online-sensual-grid wow fadeInUp" data-wow-duration="0.8s">
+      <!-- 20-YEAR CREATIVE DIRECTOR BENTO GRID -->
+      <div class="am-bento-online-grid wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- CARD 01: SMART PLACE #1 -->
-        <div class="aos-card">
-          <div class="aos-media-box">
-            <img src="/images/sub_bg_a.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="네이버 플레이스 1위">
-            <div class="aos-scrim"></div>
-            <div class="aos-floating-hud">
-              <span class="afh-badge">NAVER PLACE #1</span>
-              <div class="afh-stat-pill">지도 1페이지 최상단 안착</div>
+        <!-- BENTO HERO CARD : NAVER SMART PLACE 1위 & C-RANK BLOG ENGINE -->
+        <div class="abog-hero-card">
+          <div class="ahc-media-layer">
+            <img src="/images/sub_bg_a.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="네이버 1위 마케팅">
+            <div class="ahc-gradient-scrim"></div>
+            
+            <!-- LIVE HUD SIMULATION BADGES -->
+            <div class="ahc-hud-top">
+              <div class="ahc-live-pill"><span class="ahc-dot"></span> NAVER PLACE TOP 3 LOCKED</div>
+              <div class="ahc-cert-pill">의료법 100% 사전 법무 검수 통과</div>
+            </div>
+
+            <div class="ahc-hud-bottom">
+              <div class="ahc-stat-group">
+                <div class="asg-item">
+                  <span class="asg-label">광주 지역 키워드 점유율</span>
+                  <strong class="asg-val">94.8%</strong>
+                </div>
+                <div class="asg-divider"></div>
+                <div class="asg-item">
+                  <span class="asg-label">월간 전문 칼럼 발행</span>
+                  <strong class="asg-val">8 ~ 12편</strong>
+                </div>
+                <div class="asg-divider"></div>
+                <div class="asg-item">
+                  <span class="asg-label">네이버 예약 전환율</span>
+                  <strong class="asg-val">+340%</strong>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="aos-caption">
-            <div class="aos-kicker-row">
-              <span class="akr-idx">01</span>
-              <span class="akr-tag blue">검색 지도 1위</span>
+
+          <div class="ahc-content-box">
+            <div class="ahc-tag-row">
+              <span class="ahc-kicker blue">SEARCH &amp; PLACE SEO</span>
+              <span class="ahc-subtag">네이버 지도 1위 + C-Rank 블로그</span>
             </div>
-            <h3 class="aos-title">스마트플레이스 1위 세팅</h3>
-            <p class="aos-one-liner">광주 로컬 키워드 검색 시 지도 최상단 노출 &amp; 24시간 네이버 예약 연동</p>
+            <h3 class="ahc-title">스마트플레이스 1위 세팅 &amp; C-Rank 브랜드 블로그</h3>
+            <p class="ahc-desc">
+              광주 로컬 키워드 검색 시 1페이지 지도 최상단 안착 및 24시간 네이버 예약 연동. 보건소 행정처분 위험 0%의 철저한 사전 법무 검수를 거친 원장님 전문 칼럼으로 스마트블록과 뷰탭을 완벽히 점유합니다.
+            </p>
           </div>
         </div>
 
-        <!-- CARD 02: C-RANK BLOG -->
-        <div class="aos-card">
-          <div class="aos-media-box">
-            <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="C-Rank 브랜드 블로그">
-            <div class="aos-scrim"></div>
-            <div class="aos-floating-hud">
-              <span class="afh-badge green">MEDICAL LAW 100% PASS</span>
-              <div class="afh-stat-pill">월 8~12편 전문 칼럼</div>
+        <!-- BENTO SIDE 2 STACK CARDS -->
+        <div class="abog-side-stack">
+          
+          <!-- CARD 01: MOM CAFE & DAANGN VIRAL -->
+          <div class="as-card">
+            <div class="asc-media-box">
+              <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="맘카페 및 당근 바이럴">
+              <div class="asc-scrim"></div>
+              <span class="asc-badge gold">LOCAL COMMUNITY BUZZ</span>
+            </div>
+            <div class="asc-text-wrap">
+              <span class="asc-kicker green">02 / LOCAL COMMUNITY VIRAL</span>
+              <h4 class="asc-title">광주 대표 맘카페 &amp; 당근마켓 바이럴</h4>
+              <p class="asc-desc">광주맘스홀릭, 맘수다방 및 당근마켓 동네생활 실유저 침투로 3050 주부 신뢰 100% 내방 후기 여론을 형성합니다.</p>
             </div>
           </div>
-          <div class="aos-caption">
-            <div class="aos-kicker-row">
-              <span class="akr-idx">02</span>
-              <span class="akr-tag blue">의료법 완벽 검수</span>
-            </div>
-            <h3 class="aos-title">C-Rank 브랜드 블로그</h3>
-            <p class="aos-one-liner">보건소 행정처분 위험 0% 법무 검수와 원장님 전문 칼럼으로 스마트블록 장악</p>
-          </div>
-        </div>
 
-        <!-- CARD 03: MOM CAFE & DAANGN VIRAL -->
-        <div class="aos-card">
-          <div class="aos-media-box">
-            <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="광주 맘카페 바이럴">
-            <div class="aos-scrim"></div>
-            <div class="aos-floating-hud">
-              <span class="afh-badge gold">LOCAL COMMUNITY BUZZ</span>
-              <div class="afh-stat-pill">3050 주부 신뢰 100%</div>
+          <!-- CARD 02: SNS REELS & SPONSORED -->
+          <div class="as-card">
+            <div class="asc-media-box">
+              <img src="/images/sub_bg_e.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="SNS 릴스 스폰서드">
+              <div class="asc-scrim"></div>
+              <span class="asc-badge cyan">1~3KM TARGETING</span>
+            </div>
+            <div class="asc-text-wrap">
+              <span class="asc-kicker blue">03 / SNS PERFORMANCE AD</span>
+              <h4 class="asc-title">인스타그램 릴스 &amp; 초정밀 반경 스폰서드</h4>
+              <p class="asc-desc">병원/매장 반경 1~3km 내 실제 거주 세대원만을 정밀 타깃팅하여 9:16 숏폼 영상으로 문의 전화를 즉각 폭발시킵니다.</p>
             </div>
           </div>
-          <div class="aos-caption">
-            <div class="aos-kicker-row">
-              <span class="akr-idx">03</span>
-              <span class="akr-tag green">지역 여론 형성</span>
-            </div>
-            <h3 class="aos-title">광주 맘카페 &amp; 당근 바이럴</h3>
-            <p class="aos-one-liner">맘스홀릭 및 동네생활 실유저 침투로 자연스러운 내방 후기 여론 형성</p>
-          </div>
-        </div>
 
-        <!-- CARD 04: INSTAGRAM REELS & SPONSORED -->
-        <div class="aos-card">
-          <div class="aos-media-box">
-            <img src="/images/sub_bg_e.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="SNS 릴스 스폰서드">
-            <div class="aos-scrim"></div>
-            <div class="aos-floating-hud">
-              <span class="afh-badge">1~3KM LOCAL TARGET</span>
-              <div class="afh-stat-pill">9:16 세로형 숏폼 광고</div>
-            </div>
-          </div>
-          <div class="aos-caption">
-            <div class="aos-kicker-row">
-              <span class="akr-idx">04</span>
-              <span class="akr-tag gold">초정밀 반경 타깃</span>
-            </div>
-            <h3 class="aos-title">SNS 릴스 &amp; 스폰서드</h3>
-            <p class="aos-one-liner">병원 반경 1~3km 내 실제 거주 세대원만을 정밀 타깃팅하여 문의 폭발</p>
-          </div>
         </div>
 
       </div>
 
-      <!-- VISUAL SYMBOL ASSURANCE DECK -->
+      <!-- 3-PILLAR LUXURY TRUST METRICS -->
       <div class="am-online-guarantee-deck wow fadeInUp" data-wow-duration="0.8s">
         <div class="aog-card">
           <div class="aog-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
           </div>
           <div class="aog-body">
             <strong>의료법 100% 준수 보증</strong>
@@ -463,7 +176,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         <div class="aog-card">
           <div class="aog-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
           </div>
           <div class="aog-body">
             <strong>주간 순위 투명 리포트</strong>
@@ -473,7 +186,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         <div class="aog-card">
           <div class="aog-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
           </div>
           <div class="aog-body">
             <strong>1:1 전담 마케팅 디렉터</strong>

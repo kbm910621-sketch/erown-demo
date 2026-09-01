@@ -112,7 +112,7 @@ $(function() {
       .to(overlay, { duration: 0.6, opacity: 1, y: 0, ease: 'power2.out' }, '<')
       .fromTo('.mho-text-box', { scale: 1.12, opacity: 0 }, { duration: 0.8, scale: 1, opacity: 1, ease: 'power2.out' }, '-=0.5');
 
-    /* UP TIMELINE (SHRINK BACK SMOOTHLY) */
+        /* UP TIMELINE (SLOWER, SILKY SMOOTH 1.2S WEIGHTLESS INERTIA) */
     var tlUp = gsap.timeline({
       paused: true,
       onStart: function() {
@@ -129,14 +129,14 @@ $(function() {
     });
 
     tlUp
-      .to('.mho-text-box', { duration: 0.35, scale: 1.1, opacity: 0, ease: 'power2.in' })
-      .to(overlay, { duration: 0.35, opacity: 0, y: -20, ease: 'power2.in' }, '<')
-      .to(dim, { duration: 0.4, backgroundColor: 'rgba(0,0,0,0)', ease: 'power2.out' }, '<')
-      .to(wrap, { duration: 0.8, width: '60%', height: '62vh', top: '36%', ease: 'power2.inOut' }, '-=0.2')
-      .to(panel, { duration: 0.8, borderRadius: '42px', y: 40, scale: 0.9, ease: 'power2.inOut' }, '<')
-      .to(video, { duration: 0.8, scale: 1, ease: 'power2.inOut' }, '<')
-      .to(keywords, { duration: 0.45, opacity: 1, ease: 'power2.out' }, '-=0.3')
-      .to(title, { duration: 0.45, opacity: 1, ease: 'power2.out' }, '<');
+      .to('.mho-text-box', { duration: 0.45, scale: 1.08, opacity: 0, ease: 'power2.inOut' })
+      .to(overlay, { duration: 0.45, opacity: 0, y: -15, ease: 'power2.inOut' }, '<')
+      .to(dim, { duration: 0.6, backgroundColor: 'rgba(0,0,0,0)', ease: 'power2.out' }, '<')
+      .to(wrap, { duration: 1.2, width: '60%', height: '62vh', top: '36%', ease: 'power3.inOut' }, '-=0.3')
+      .to(panel, { duration: 1.2, borderRadius: '42px', y: 40, scale: 0.9, ease: 'power3.inOut' }, '<')
+      .to(video, { duration: 1.2, scale: 1, ease: 'power3.inOut' }, '<')
+      .to(keywords, { duration: 0.6, opacity: 1, ease: 'power2.out' }, '-=0.4')
+      .to(title, { duration: 0.6, opacity: 1, ease: 'power2.out' }, '<');
 
 
     function stepDown() {
