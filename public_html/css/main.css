@@ -6,21 +6,22 @@
 .agency-master-system { position:relative; width:100%; overflow-x:hidden; background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; -webkit-font-smoothing:antialiased; }
 .am-container { max-width:1420px; margin:0 auto; padding:0 36px; }
 
-/* 01 HERO CLEAN SCREENSHOT 1:1 MATCH */
-.am-hero-clean { padding:140px 0 60px; background:#f8fafc; text-align:center; overflow:hidden; }
-.amhc-title-box { max-width:980px; margin:0 auto 28px; }
-.amhc-h1 { font-size:62px; font-weight:900; line-height:1.2; letter-spacing:-2.5px; color:#0f172a; margin:0; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
+/* MAIN_HERO GSAP SCROLL INTERACTION */
+.main_hero { position:relative; width:100%; height:100vh; min-height:760px; overflow:hidden; background:#f8fafc; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.main_hero_text_wrap { position:absolute; top:16%; left:50%; transform:translateX(-50%); text-align:center; z-index:5; width:100%; max-width:980px; pointer-events:auto; }
+.main_hero_text { font-size:62px; font-weight:900; line-height:1.2; letter-spacing:-2.5px; color:#0f172a; margin:0 0 24px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
+.main_hero_keywords { display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:wrap; }
+.mhk-pill { padding:10px 22px; border-radius:100px; background:#0f274e; color:#ffffff; font-size:13.5px; font-weight:800; text-decoration:none; transition:all 0.2s; box-shadow:0 6px 18px rgba(15,39,78,0.2); }
+.mhk-pill:hover { background:#1855b7; color:#ffffff; }
 
-.amhc-pills-row { display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:50px; }
-.amhc-pill-chip { padding:10px 22px; border-radius:100px; background:#0f274e; color:#ffffff; font-size:13.5px; font-weight:800; text-decoration:none; transition:all 0.25s cubic-bezier(0.16, 1, 0.3, 1); box-shadow:0 6px 18px rgba(15,39,78,0.2); }
-.amhc-pill-chip:hover { background:#1855b7; transform:translateY(-2px); box-shadow:0 10px 24px rgba(24,85,183,0.3); color:#ffffff; }
+.main_hero_panel_wrap { position:absolute; left:50%; top:35%; transform:translateX(-50%); width:60%; height:80vh; max-height:680px; z-index:3; overflow:visible; }
+.main_hero_panel { position:relative; width:100%; height:100%; border-radius:42px; overflow:hidden; box-shadow:0 30px 90px rgba(15,23,42,0.2); background:#0f172a; }
+.main_hero_panel_video_wrap { position:relative; width:100%; height:100%; overflow:hidden; }
+.main_hero_panel_video { width:100%; height:100%; object-fit:cover; display:block; }
+.main_hero_panel_dim { position:absolute; inset:0; background:rgba(0,0,0,0); pointer-events:none; transition:background-color 0.4s; }
+.main_hero_panel_overlay_text { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; z-index:4; pointer-events:none; opacity:0; }
+.main_hero_panel_overlay_text h2 { font-size:36px; font-weight:900; color:#ffffff; letter-spacing:-1px; text-shadow:0 4px 20px rgba(0,0,0,0.5); font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
 
-/* SCROLL-INTERACTIVE SCALING CINEMATIC VIDEO */
-.amhc-video-stage-wrapper { width:100%; display:flex; justify-content:center; padding:0 36px; }
-.amhc-video-frame { position:relative; width:100%; max-width:1360px; border-radius:32px; overflow:hidden; background:#0f172a; box-shadow:0 30px 80px rgba(15,23,42,0.14); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1); transform-origin:center top; }
-.acf-viewport { position:relative; width:100%; aspect-ratio:21/9; min-height:460px; overflow:hidden; }
-.acf-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
-.acf-scrim { position:absolute; inset:0; background:linear-gradient(180deg, rgba(15,23,42,0.1) 0%, rgba(15,23,42,0.6) 100%); }
 
 
 /* 01-B ELEGANT SCREENSHOT-ACCURATE SILK LINES & ABOUT CARDS */

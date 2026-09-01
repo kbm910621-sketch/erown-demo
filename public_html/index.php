@@ -62,38 +62,33 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/header.php";?>
   
   <!-- ============================================
-       01 HERO STAGE : SCREENSHOT 1:1 HERO & SCROLL INTERACTIVE CINEMA
+       01 HERO STAGE : GSAP SCROLL STEP HERO (ORIGINAL INTERACTION)
   ============================================ -->
-  <section class="am-hero-clean" id="hero">
-    <div class="am-container">
-      
-      <!-- HERO HEADLINE (SCREENSHOT 1:1 MATCH) -->
-      <div class="amhc-title-box wow fadeInUp" data-wow-duration="0.8s">
-        <h1 class="amhc-h1">
-          보여주는 광고보다<br>
-          이해되는 광고를 만듭니다.
-        </h1>
+  <section class="main_hero" id="hero">
+    <div class="main_hero_text_wrap">
+      <h1 class="main_hero_text">
+        보여주는 광고보다<br>
+        이해되는 광고를 만듭니다.
+      </h1>
+      <div class="main_hero_keywords">
+        <a href="#bus" class="mhk-pill">버스 광고</a>
+        <a href="#other" class="mhk-pill">택시 광고</a>
+        <a href="#online" class="mhk-pill">온라인·SNS</a>
+        <a href="#video" class="mhk-pill">영상제작</a>
+        <a href="#online" class="mhk-pill">병원 마케팅</a>
       </div>
-
-      <!-- 5 SLEEK NAVY PILL CHIPS (SCREENSHOT 1:1 MATCH) -->
-      <div class="amhc-pills-row wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-        <a href="#bus" class="amhc-pill-chip">버스 광고</a>
-        <a href="#other" class="amhc-pill-chip">택시 광고</a>
-        <a href="#online" class="amhc-pill-chip">온라인·SNS</a>
-        <a href="#video" class="amhc-pill-chip">영상제작</a>
-        <a href="#online" class="amhc-pill-chip">병원 마케팅</a>
-      </div>
-
     </div>
 
-    <!-- SCROLL-INTERACTIVE SCALING CINEMATIC VIDEO CONTAINER -->
-    <div class="amhc-video-stage-wrapper">
-      <div class="amhc-video-frame" id="heroScrollVideoFrame">
-        <div class="acf-viewport">
-          <video autoplay muted loop playsinline class="acf-video">
+    <div class="main_hero_panel_wrap">
+      <div class="main_hero_panel">
+        <div class="main_hero_panel_video_wrap">
+          <video autoplay muted loop playsinline class="main_hero_panel_video">
             <source src="/images/movie.mp4" type="video/mp4">
           </video>
-          <div class="acf-scrim"></div>
+          <div class="main_hero_panel_dim"></div>
+          <div class="main_hero_panel_overlay_text">
+            <h2>TOTAL MARKETING PARTNER GAON-N</h2>
+          </div>
         </div>
       </div>
     </div>
