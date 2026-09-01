@@ -123,19 +123,17 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   ============================================ -->
   <section class="am-about-stats-sec">
     <!-- SEAMLESS FLOWING WAVES BACKGROUND -->
-    <div class="aas-flowing-canvas">
-      <div class="aas-wave-track">
-        <svg class="aas-wave-svg" viewBox="0 0 2880 500" fill="none" preserveAspectRatio="none">
-          <path d="M0,220 C400,80 800,360 1440,200 C2080,40 2480,320 2880,220" stroke="#cbd5e1" stroke-width="1.8" />
-          <path d="M0,340 C350,180 750,440 1440,280 C2130,120 2530,380 2880,340" stroke="#e2e8f0" stroke-width="1.4" />
-          <path d="M0,120 C500,300 950,80 1440,240 C1930,400 2380,180 2880,120" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="8 8" />
-        </svg>
-        <svg class="aas-wave-svg" viewBox="0 0 2880 500" fill="none" preserveAspectRatio="none">
-          <path d="M0,220 C400,80 800,360 1440,200 C2080,40 2480,320 2880,220" stroke="#cbd5e1" stroke-width="1.8" />
-          <path d="M0,340 C350,180 750,440 1440,280 C2130,120 2530,380 2880,340" stroke="#e2e8f0" stroke-width="1.4" />
-          <path d="M0,120 C500,300 950,80 1440,240 C1930,400 2380,180 2880,120" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="8 8" />
-        </svg>
-      </div>
+    <div class="aas-silk-canvas">
+      <svg class="aas-silk-svg" viewBox="0 0 1600 600" fill="none" preserveAspectRatio="none">
+        <!-- Line 1: Elegant High-to-Low Sweeping Curve (Screenshot Accurate) -->
+        <path class="silk-line line-1" d="M-100,160 C320,-40 680,480 1140,80 C1380,-80 1560,260 1750,140" stroke="#e2e8f0" stroke-width="1.8" stroke-linecap="round" />
+        
+        <!-- Line 2: Harmonious Counter-Arching Floating Curve -->
+        <path class="silk-line line-2" d="M-80,380 C260,220 720,520 1080,260 C1340,60 1520,380 1780,240" stroke="#cbd5e1" stroke-width="1.4" stroke-linecap="round" />
+        
+        <!-- Line 3: Subtle Fine Detail Ribbon Flow -->
+        <path class="silk-line line-3" d="M-120,80 C420,380 840,40 1260,340 C1460,460 1600,180 1740,200" stroke="#e2e8f0" stroke-width="1.2" stroke-linecap="round" />
+      </svg>
     </div>
 
     <div class="am-container" style="position:relative; z-index:2;">
