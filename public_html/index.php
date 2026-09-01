@@ -78,7 +78,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/header.php";?>
   
   <!-- ============================================
-       01 HERO STAGE : AWARD-WINNING CINEMATIC EDITORIAL
+       01 HERO STAGE : SIMPLE LUXURY BLUE EDITORIAL
   ============================================ -->
   <section class="gp-hero" id="hero">
     <div class="gp-container">
@@ -90,8 +90,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
         
         <h1 class="gp-hero-h1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-          도시를 움직이는 압도적 옥외광고,<br>
-          <em>데이터로 증명하는 온·오프라인 마케팅.</em>
+          도시의 시선을 점유하고,<br>
+          <em>브랜드의 성장을 완성합니다.</em>
         </h1>
         
         <p class="gp-hero-lead wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
@@ -327,7 +327,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <div class="gpsh-actions">
             <button type="button" class="gp-btn-spec bus-guide-open" data-guide="guideOnline">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"></path><path d="m14.5 5.5 2 2"></path><path d="m11.5 8.5 2 2"></path><path d="m8.5 11.5 2 2"></path></svg>
               <span>온라인 마케팅 가이드</span>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </button>
@@ -351,7 +351,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
 
           <button type="button" class="gpsv-corner-btn bus-guide-open" data-guide="guideOnline">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"></path><path d="m14.5 5.5 2 2"></path><path d="m11.5 8.5 2 2"></path><path d="m8.5 11.5 2 2"></path></svg>
             <span>전략 보기</span>
           </button>
         </div>
@@ -460,7 +460,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <div class="gpsh-actions">
             <button type="button" class="gp-btn-spec bus-guide-open" data-guide="guideVideo">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"></path><path d="m14.5 5.5 2 2"></path><path d="m11.5 8.5 2 2"></path><path d="m8.5 11.5 2 2"></path></svg>
               <span>영상 제작 가이드</span>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </button>
@@ -489,7 +489,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
 
           <button type="button" class="gpsv-corner-btn bus-guide-open" data-guide="guideVideo">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"></path><path d="m14.5 5.5 2 2"></path><path d="m11.5 8.5 2 2"></path><path d="m8.5 11.5 2 2"></path></svg>
             <span>스펙 보기</span>
           </button>
         </div>
@@ -579,7 +579,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <div class="gpsh-actions">
             <button type="button" class="gp-btn-spec bus-guide-open" data-guide="guideTaxiDelivery">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H10a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-4V4a2 2 0 0 0-2-2z"></path><circle cx="7" cy="14" r="2"></circle><circle cx="17" cy="14" r="2"></circle></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"></path><path d="m14.5 5.5 2 2"></path><path d="m11.5 8.5 2 2"></path><path d="m8.5 11.5 2 2"></path></svg>
               <span>특화 매체 가이드</span>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </button>

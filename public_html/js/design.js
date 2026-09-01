@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GAON-N GRAND PRIX AWARD-WINNING INTERACTION JS
+   GAON-N CLEAN LUXURY ROYAL BLUE INTERACTION JS
    ========================================================================== */
 $(function () {
   'use strict';
