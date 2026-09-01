@@ -73,37 +73,43 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/blank.php";?>
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/skip.php";?>
 
-<div id="wrap" class="agency-luxury-wrap">
+<div id="wrap" class="agency-master-wrap">
 
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/header.php";?>
   
   <!-- ============================================
-       01 HERO : SWISS EDITORIAL CINEMATIC
+       01 HERO STAGE : AWARD-WINNING CINEMATIC EDITORIAL
   ============================================ -->
-  <section class="lux-hero" id="hero">
-    <div class="lux-container">
+  <section class="gp-hero" id="hero">
+    <div class="gp-container">
       
-      <div class="lux-hero-copy">
-        <p class="lux-eyebrow wow fadeInDown" data-wow-duration="0.6s">GAON-N CREATIVE AGENCY</p>
-        <h1 class="lux-hero-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-          도시를 움직이는 옥외광고,<br>
-          <em>브랜드의 성장을 만드는 마케팅.</em>
+      <div class="gp-hero-editorial">
+        <div class="gp-hero-ticker wow fadeInDown" data-wow-duration="0.6s">
+          <span class="ght-badge">GAON-N CREATIVE AGENCY</span>
+          <span class="ght-meta">광주 시내버스 104개 노선 단독 직영 · 온라인 SEO 퍼포먼스 · 4K 시네마틱 프로덕션</span>
+        </div>
+        
+        <h1 class="gp-hero-h1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+          도시를 움직이는 압도적 옥외광고,<br>
+          <em>데이터로 증명하는 온·오프라인 마케팅.</em>
         </h1>
-        <p class="lux-hero-sub wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-          가온엔은 광주 시내버스 104개 전 노선 단독 직영 인프라와 데이터 기반 온라인 퍼포먼스, 4K 브랜드 영상을 기획·제작하는 종합 광고 대행사입니다.
+        
+        <p class="gp-hero-lead wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+          가온엔은 광주 5개 구 전역 1,000여 대 시내버스 독점 인프라와 로컬 검색 1위 최적화, 4K 시네마틱 영상 제작을 아우르는 대한민국 대표 종합 광고대행사입니다.
         </p>
       </div>
 
-      <!-- CINEMA SHOWREEL FRAME -->
-      <div class="lux-hero-media wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.3s">
-        <div class="lhm-inner">
-          <video autoplay muted loop playsinline class="lhm-video">
+      <!-- SHOWREEL VIEWPORT -->
+      <div class="gp-hero-cinema wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.3s">
+        <div class="ghc-frame">
+          <video autoplay muted loop playsinline class="ghc-video">
             <source src="/images/movie.mp4" type="video/mp4">
           </video>
-          <div class="lhm-overlay"></div>
-          <div class="lhm-text">
-            <span>SHOWREEL</span>
-            <h2>광주 전역을 잇는 가장 확실한 미디어 네트워크</h2>
+          <div class="ghc-scrim"></div>
+          
+          <div class="ghc-caption">
+            <div class="ghcc-tag">BRAND SHOWREEL 2026</div>
+            <h2 class="ghcc-title">광주 전역을 잇는 가장 확실하고 강력한 미디어 네트워크</h2>
           </div>
         </div>
       </div>
@@ -113,34 +119,50 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       02 STATS : CLEAN NUMERICAL STRIP (NO BOXES)
+       02 CORE CAPABILITY MATRIX (4대 핵심 지표)
   ============================================ -->
-  <section class="lux-stats-sec">
-    <div class="lux-container">
-      <div class="lux-stats-row wow fadeInUp" data-wow-duration="0.8s">
+  <section class="gp-metrics-sec">
+    <div class="gp-container">
+      <div class="gp-metrics-grid wow fadeInUp" data-wow-duration="0.8s">
         
-        <div class="ls-col">
-          <div class="ls-num">104<em>노선</em></div>
-          <h3 class="ls-title">광주 시내버스 단독 직영</h3>
-          <p class="ls-desc">5개 구 1,000여 대 전 노선 직영 배차 및 자체 책임 시공</p>
+        <div class="gpm-card">
+          <div class="gpm-header">
+            <span class="gpm-idx">01</span>
+            <span class="gpm-pill">단독 직영</span>
+          </div>
+          <div class="gpm-value">104<em>개 전 노선</em></div>
+          <h3 class="gpm-title">광주 시내버스 단독 배차</h3>
+          <p class="gpm-desc">광주 5개 구 1,000여 대 전 노선 직영 배차 및 자체 전문 시공</p>
         </div>
 
-        <div class="ls-col">
-          <div class="ls-num">18<em>시간</em></div>
-          <h3 class="ls-title">일일 연속 노출</h3>
-          <p class="ls-desc">주요 간선도로와 번화가를 매일 순환하며 시야 점유</p>
+        <div class="gpm-card">
+          <div class="gpm-header">
+            <span class="gpm-idx">02</span>
+            <span class="gpm-pill">상시 노출</span>
+          </div>
+          <div class="gpm-value">18<em>시간 / 일</em></div>
+          <h3 class="gpm-title">일일 연속 노출 보장</h3>
+          <p class="gpm-desc">주요 간선도로와 중심 상권을 매일 순환하며 시야를 독점</p>
         </div>
 
-        <div class="ls-col">
-          <div class="ls-num">98.4<em>%</em></div>
-          <h3 class="ls-title">광고주 재계약률</h3>
-          <p class="ls-desc">종합병원, 전문 의료기관, 공공기관이 신뢰한 전환 성과</p>
+        <div class="gpm-card">
+          <div class="gpm-header">
+            <span class="gpm-idx">03</span>
+            <span class="gpm-pill">신뢰 성과</span>
+          </div>
+          <div class="gpm-value">98.4<em>%</em></div>
+          <h3 class="gpm-title">광고주 재계약률</h3>
+          <p class="gpm-desc">상급종합병원, 전문 의료기관, 공공기관이 검증한 전환 성과</p>
         </div>
 
-        <div class="ls-col">
-          <div class="ls-num">1:1<em>Direct</em></div>
-          <h3 class="ls-title">인하우스 전담제</h3>
-          <p class="ls-desc">기획, 디자인, 실사출력, 시공, 리포트까지 원스톱 완결</p>
+        <div class="gpm-card">
+          <div class="gpm-header">
+            <span class="gpm-idx">04</span>
+            <span class="gpm-pill">원스톱</span>
+          </div>
+          <div class="gpm-value">1:1<em>Direct</em></div>
+          <h3 class="gpm-title">인하우스 전담 책임제</h3>
+          <p class="gpm-desc">기획, 디자인, 실사출력, 시공, 운행 리포트까지 원스톱 완결</p>
         </div>
 
       </div>
@@ -151,10 +173,10 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   <!-- ============================================
        03 SHOWCASE CORE (01 버스 ~ 04 특화매체)
   ============================================ -->
-  <main class="lux-showcase-main" id="port">
+  <main class="gp-main-showcase" id="port">
 
     <!-- ============================================
-         01. 시내버스 옥외광고
+         01. 시내버스 옥외광고 플래그십
     ============================================ -->
     <?php
     $busStageImage = '';
@@ -162,105 +184,121 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       $busStageImage = $portBus[0]['thumb'];
     }
     ?>
-    <section class="lux-sec" id="bus">
-      <div class="lux-container">
+    <section class="gp-section" id="bus">
+      <div class="gp-container">
 
-        <div class="lux-sec-head wow fadeInUp" data-wow-duration="0.7s">
-          <div class="lsh-text">
-            <span class="lsh-label">01 / BUS ADVERTISING</span>
-            <h2 class="lsh-title">
+        <div class="gp-section-head wow fadeInUp" data-wow-duration="0.7s">
+          <div class="gpsh-left">
+            <span class="gpsh-num">01 / BUS ADVERTISING</span>
+            <h2 class="gpsh-title">
               도심을 누비는 움직이는 랜드마크,<br>
-              <em>광주 시내버스 옥외광고.</em>
+              <em>광주 시내버스 옥외광고 플래그십.</em>
             </h2>
-            <p class="lsh-desc">
-              광주 5개 구 104개 전 노선 단독 직영. 매일 18시간 동안 핵심 도로를 운행하며 보행자와 운전자의 시선에 브랜드를 각인시킵니다.
+            <p class="gpsh-desc">
+              광주 5개 구 104개 전 노선 단독 직영. 매일 18시간 동안 핵심 간선도로를 순환하며 보행자와 운전자의 눈높이에 브랜드를 확실하게 각인시킵니다.
             </p>
           </div>
-          <div class="lsh-btns">
-            <button type="button" class="lux-btn-guide bus-guide-open" data-guide="guideBus">
+          <div class="gpsh-actions">
+            <button type="button" class="gp-btn-spec bus-guide-open" data-guide="guideBus">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"></path><path d="m14.5 5.5 2 2"></path><path d="m11.5 8.5 2 2"></path><path d="m8.5 11.5 2 2"></path></svg>
               <span>실측 규격 가이드</span>
-              <i>↗</i>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </button>
-            <a href="/board/estmate/write.php" class="lux-btn-primary">
-              <span>견적 상담 신청</span>
-              <i>→</i>
+            <a href="/board/estmate/write.php" class="gp-btn-quote">
+              <span>노선 맞춤 견적 신청</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
         </div>
 
         <!-- STAGE VIEWER -->
-        <div class="lux-stage-viewer wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" id="busStageVisual">
-          <div class="lsv-media">
+        <div class="gp-stage-viewer wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" id="busStageVisual">
+          <div class="gpsv-media">
             <img id="busStageImg" src="<?php echo htmlspecialchars($busStageImage); ?>" alt="시내버스 광고" style="<?php echo empty($busStageImage) ? 'display:none;' : ''; ?>">
             <?php if (empty($busStageImage)): ?>
-            <div class="lsv-empty">시내버스 광고 대표 이미지</div>
+            <div class="gpsv-placeholder">시내버스 광고 대표 이미지</div>
             <?php endif; ?>
-            <div class="lsv-gradient"></div>
+            <div class="gpsv-gradient"></div>
+            
+            <!-- Live Dimension Callouts -->
+            <div class="gpsv-dim-strip">
+              <span class="gds-chip">차도면 3,700 × 1,000 mm</span>
+              <span class="gds-chip">인도면 3,000 × 500 mm</span>
+              <span class="gds-chip">후면 2,400 × 300 mm</span>
+            </div>
           </div>
           
-          <div class="lsv-info">
-            <span class="lsv-tag" id="busStageIndex">외부 대형 래핑</span>
-            <h3 class="lsv-title" id="busStageTitle">외부 광고 (차도면 3,700×1,000 / 인도면 3,000×500)</h3>
-            <p class="lsv-desc" id="busStageDesc">
+          <div class="gpsv-content">
+            <span class="gpsv-badge" id="busStageIndex">외부 대형 래핑</span>
+            <h3 class="gpsv-title" id="busStageTitle">외부 광고 (차도면 3,700×1,000 / 인도면 3,000×500)</h3>
+            <p class="gpsv-desc" id="busStageDesc">
               왕복 6~8차선 반대편 차량 운전자와 인도 보행자의 시야 정면에 브랜드를 확실하게 전달합니다.
             </p>
           </div>
 
-          <button type="button" class="lsv-corner-btn bus-guide-open" data-guide="guideBus">
-            <span>규격 보기 ↗</span>
+          <button type="button" class="gpsv-corner-btn bus-guide-open" data-guide="guideBus">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"></path><path d="m14.5 5.5 2 2"></path><path d="m11.5 8.5 2 2"></path><path d="m8.5 11.5 2 2"></path></svg>
+            <span>도면 규격 확인</span>
           </button>
         </div>
 
         <!-- UNDERLINE MINIMAL TABS -->
-        <div class="lux-tabs-row">
-          <button type="button" class="lux-tab bus-service-tab on"
+        <div class="gp-tabs-bar">
+          <button type="button" class="gp-tab bus-service-tab on"
                   data-index="외부 대형 래핑"
                   data-title="외부 광고 (차도면 3,700×1,000 / 인도면 3,000×500)"
                   data-desc="왕복 6~8차선 반대편 차량 운전자와 인도 보행자의 시야 정면에 브랜드를 확실하게 전달합니다."
                   data-image="<?php echo htmlspecialchars($busStageImage); ?>">
-            <strong>외부 대형 래핑</strong>
-            <span>차도면 · 인도면 · 후면</span>
+            <strong>01. 외부 대형 래핑</strong>
+            <span>차도면 · 인도면 · 후면 패키지</span>
           </button>
 
-          <button type="button" class="lux-tab bus-service-tab"
+          <button type="button" class="gp-tab bus-service-tab"
                   data-index="내부 승객 밀착"
                   data-title="내부 광고 (중앙창문 1,100×500 / 하차문 500×700)"
                   data-desc="탑승 승객이 목적지까지 15~30분 동안 머무르는 동안 시선 정면에 밀착되어 정밀한 메시지를 전달합니다."
                   data-image="">
-            <strong>내부 승객 밀착</strong>
-            <span>중앙창문 포스터 &amp; 하차문</span>
+            <strong>02. 내부 승객 밀착</strong>
+            <span>중앙창문 포스터 &amp; 하차문 면</span>
           </button>
 
-          <button type="button" class="lux-tab bus-service-tab"
+          <button type="button" class="gp-tab bus-service-tab"
                   data-index="음성 및 영상"
                   data-title="음성 안내 7초 &amp; 실내 FHD 모니터 15초"
                   data-desc="정류소 진입 전 전문 성우의 7초 독점 육성 방송과 실내 Full HD 모니터 영상을 결합하여 시·청각을 동시 사로잡습니다."
                   data-image="">
-            <strong>정류소 음성 &amp; DID</strong>
-            <span>음성 방송 &amp; 실내 모니터</span>
+            <strong>03. 정류소 음성 &amp; DID</strong>
+            <span>성우 음성 방송 &amp; 실내 모니터</span>
           </button>
         </div>
 
-        <!-- GALLERY ARCHIVE -->
-        <div class="lux-archive-bar">
-          <h4 class="lab-title">버스 광고 집행 사례</h4>
-          <a href="/portfolio.php?category=bus" class="lab-link">전체보기 →</a>
+        <!-- PORTFOLIO ARCHIVE -->
+        <div class="gp-archive-bar">
+          <div>
+            <span class="gpab-kicker">SELECTED ARCHIVE</span>
+            <h4 class="gpab-title">버스 광고 집행 사례</h4>
+          </div>
+          <a href="/portfolio.php?category=bus" class="gpab-more">
+            <span>사례 더보기</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </div>
 
-        <div class="lux-grid-3">
+        <div class="gp-grid-3">
           <?php foreach (array_slice($portBus, 0, 3) as $item): ?>
-          <div class="lux-card main-port-card" data-cat="<?php echo htmlspecialchars($item['category']); ?>" data-id="<?php echo (int)$item['id']; ?>" data-name="<?php echo htmlspecialchars($item['title']); ?>">
-            <div class="lc-img">
+          <div class="gp-card main-port-card" data-cat="<?php echo htmlspecialchars($item['category']); ?>" data-id="<?php echo (int)$item['id']; ?>" data-name="<?php echo htmlspecialchars($item['title']); ?>">
+            <div class="gpc-thumb">
               <?php if (!empty($item['thumb'])): ?>
               <img src="<?php echo htmlspecialchars($item['thumb']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
               <?php else: ?>
-              <div class="lc-empty">이미지 준비 중</div>
+              <div class="gpc-empty">이미지 준비 중</div>
               <?php endif; ?>
-              <div class="lc-dim"></div>
+              <div class="gpc-scrim"></div>
+              <span class="gpc-tag">BUS WRAPPING</span>
             </div>
-            <div class="lc-info">
-              <span class="lc-cat">시내버스 옥외광고</span>
-              <strong class="lc-title"><?php echo htmlspecialchars($item['title']); ?></strong>
+            <div class="gpc-info">
+              <span class="gpc-cat">시내버스 옥외광고</span>
+              <strong class="gpc-title"><?php echo htmlspecialchars($item['title']); ?></strong>
             </div>
           </div>
           <?php endforeach; ?>
@@ -271,120 +309,129 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
     <!-- ============================================
-         02. 온라인 마케팅
+         02. 온라인 마케팅 & SEO
     ============================================ -->
-    <section class="lux-sec lux-bg-soft" id="online">
-      <div class="lux-container">
+    <section class="gp-section gp-bg-soft" id="online">
+      <div class="gp-container">
 
-        <div class="lux-sec-head wow fadeInUp" data-wow-duration="0.7s">
-          <div class="lsh-text">
-            <span class="lsh-label">02 / ONLINE MARKETING</span>
-            <h2 class="lsh-title">
+        <div class="gp-section-head wow fadeInUp" data-wow-duration="0.7s">
+          <div class="gpsh-left">
+            <span class="gpsh-num">02 / ONLINE MARKETING</span>
+            <h2 class="gpsh-title">
               오프라인의 인지도를<br>
               <em>실제 검색과 방문 매출로 전환합니다.</em>
             </h2>
-            <p class="lsh-desc">
+            <p class="gpsh-desc">
               옥외광고를 접한 소비자가 포털에 검색했을 때 가장 먼저 찾아오도록 최적화합니다. 스마트플레이스 1위 세팅, 병원 전문 바이럴, SNS 퍼포먼스를 통합 운영합니다.
             </p>
           </div>
-          <div class="lsh-btns">
-            <button type="button" class="lux-btn-guide bus-guide-open" data-guide="guideOnline">
+          <div class="gpsh-actions">
+            <button type="button" class="gp-btn-spec bus-guide-open" data-guide="guideOnline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
               <span>온라인 마케팅 가이드</span>
-              <i>↗</i>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </button>
-            <a href="/board/estmate/write.php" class="lux-btn-primary">
-              <span>마케팅 상담 신청</span>
-              <i>→</i>
+            <a href="/board/estmate/write.php" class="gp-btn-quote">
+              <span>온라인 상담 신청</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
         </div>
 
         <!-- STAGE VIEWER ONLINE -->
-        <div class="lux-stage-viewer lsv-online wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" id="onlineStageVisual">
-          <div class="lsv-media lsv-bg-online"></div>
+        <div class="gp-stage-viewer gpsv-online wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" id="onlineStageVisual">
+          <div class="gpsv-media gpsv-online-backdrop"></div>
           
-          <div class="lsv-info">
-            <span class="lsv-tag" id="onlineStageTag">로컬 검색 최적화</span>
-            <h3 class="lsv-title" id="onlineStageTitle">스마트플레이스 &amp; 로컬 검색 최적화 (SEO)</h3>
-            <p class="lsv-desc" id="onlineStageDesc">
+          <div class="gpsv-content">
+            <span class="gpsv-badge" id="onlineStageTag">로컬 검색 최적화</span>
+            <h3 class="gpsv-title" id="onlineStageTitle">스마트플레이스 &amp; 로컬 검색 최적화 (SEO)</h3>
+            <p class="gpsv-desc" id="onlineStageDesc">
               광주 지역 고객이 '진료과목+지역명', '업종+지역명'을 검색할 때 네이버 지도 상위 노출과 신뢰도 높은 리뷰 자산을 구축합니다.
             </p>
           </div>
 
-          <button type="button" class="lsv-corner-btn bus-guide-open" data-guide="guideOnline">
-            <span>전략 보기 ↗</span>
+          <button type="button" class="gpsv-corner-btn bus-guide-open" data-guide="guideOnline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span>전략 보기</span>
           </button>
         </div>
 
         <!-- UNDERLINE MINIMAL TABS -->
-        <div class="lux-tabs-row">
-          <button type="button" class="lux-tab online-service-tab on"
+        <div class="gp-tabs-bar">
+          <button type="button" class="gp-tab online-service-tab on"
                   data-index="스마트플레이스"
                   data-tag="로컬 검색 최적화"
                   data-title="스마트플레이스 &amp; 로컬 검색 최적화 (SEO)"
                   data-desc="광주 지역 고객이 '진료과목+지역명', '업종+지역명'을 검색할 때 네이버 지도 상위 노출과 신뢰도 높은 리뷰 자산을 구축합니다.">
-            <strong>스마트플레이스 최적화</strong>
+            <strong>01. 스마트플레이스 SEO</strong>
             <span>네이버 지도 1순위 랭크 및 리뷰</span>
           </button>
 
-          <button type="button" class="lux-tab online-service-tab"
+          <button type="button" class="gp-tab online-service-tab"
                   data-index="전문 바이럴"
                   data-tag="전문 바이럴"
                   data-title="병원·브랜드 전문 바이럴 &amp; C-Rank 블로그"
                   data-desc="의료법 100% 사전 검수 가이드라인에 맞춘 고품질 블로그 콘텐츠와 지역 맘카페 운영으로 신뢰도를 높입니다.">
-            <strong>전문 바이럴 마케팅</strong>
+            <strong>02. 전문 바이럴 마케팅</strong>
             <span>브랜드 블로그 · 맘카페 침투</span>
           </button>
 
-          <button type="button" class="lux-tab online-service-tab"
+          <button type="button" class="gp-tab online-service-tab"
                   data-index="SNS 타깃 광고"
                   data-tag="SNS 타깃 광고"
                   data-title="SNS 퍼포먼스 광고 (인스타 릴스 &amp; 당근 로컬)"
                   data-desc="매장 반경 1~3km 로컬 타깃팅과 인스타그램 숏폼 영상 광고를 결합하여 신규 유입 콜과 방문을 유도합니다.">
-            <strong>SNS 퍼포먼스 광고</strong>
+            <strong>03. SNS 퍼포먼스 광고</strong>
             <span>인스타그램 릴스 · 당근 로컬 타깃</span>
           </button>
         </div>
 
-        <!-- KPI SUMMARY -->
-        <div class="lux-kpi-strip">
-          <div class="lks-item">
-            <span class="lks-lbl">목표 지표</span>
-            <strong class="lks-val">지도 TOP 3</strong>
-            <p class="lks-sub">네이버 플레이스 지역 검색 상위 안착</p>
+        <!-- KPI SUMMARY STRIP -->
+        <div class="gp-kpi-strip">
+          <div class="gpk-item">
+            <span class="gpk-lbl">TARGET KPI</span>
+            <strong class="gpk-val">지도 TOP 3</strong>
+            <p class="gpk-sub">네이버 플레이스 지역 검색 상위 안착</p>
           </div>
-          <div class="lks-item">
-            <span class="lks-lbl">유입 성과</span>
-            <strong class="lks-val">+320%</strong>
-            <p class="lks-sub">월간 유입 전화 및 네이버 예약 증가율</p>
+          <div class="gpk-item">
+            <span class="gpk-lbl">CONVERSION</span>
+            <strong class="gpk-val">+320%</strong>
+            <p class="gpk-sub">월간 유입 전화 및 네이버 예약 증가율</p>
           </div>
-          <div class="lks-item">
-            <span class="lks-lbl">법률 가이드</span>
-            <strong class="lks-val">의료법 100%</strong>
-            <p class="lks-sub">사전 광고 심의 및 과장 표현 원천 차단</p>
+          <div class="gpk-item">
+            <span class="gpk-lbl">COMPLIANCE</span>
+            <strong class="gpk-val">의료법 100%</strong>
+            <p class="gpk-sub">사전 광고 심의 및 과장 표현 원천 차단</p>
           </div>
         </div>
 
-        <!-- GALLERY ARCHIVE -->
-        <div class="lux-archive-bar">
-          <h4 class="lab-title">온라인 마케팅 집행 사례</h4>
-          <a href="/portfolio.php?category=online" class="lab-link">전체보기 →</a>
+        <!-- PORTFOLIO ARCHIVE -->
+        <div class="gp-archive-bar">
+          <div>
+            <span class="gpab-kicker">SELECTED CASES</span>
+            <h4 class="gpab-title">온라인 마케팅 집행 사례</h4>
+          </div>
+          <a href="/portfolio.php?category=online" class="gpab-more">
+            <span>사례 더보기</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </div>
 
-        <div class="lux-grid-4">
+        <div class="gp-grid-4">
           <?php foreach (array_slice($portOnline, 0, 4) as $item): ?>
-          <div class="lux-card main-port-card" data-cat="<?php echo htmlspecialchars($item['category']); ?>" data-id="<?php echo (int)$item['id']; ?>" data-name="<?php echo htmlspecialchars($item['title']); ?>">
-            <div class="lc-img">
+          <div class="gp-card main-port-card" data-cat="<?php echo htmlspecialchars($item['category']); ?>" data-id="<?php echo (int)$item['id']; ?>" data-name="<?php echo htmlspecialchars($item['title']); ?>">
+            <div class="gpc-thumb">
               <?php if (!empty($item['thumb'])): ?>
               <img src="<?php echo htmlspecialchars($item['thumb']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
               <?php else: ?>
-              <div class="lc-empty">이미지 준비 중</div>
+              <div class="gpc-empty">이미지 준비 중</div>
               <?php endif; ?>
-              <div class="lc-dim"></div>
+              <div class="gpc-scrim"></div>
+              <span class="gpc-tag">ONLINE SEO</span>
             </div>
-            <div class="lc-info">
-              <span class="lc-cat">온라인 마케팅</span>
-              <strong class="lc-title"><?php echo htmlspecialchars($item['title']); ?></strong>
+            <div class="gpc-info">
+              <span class="gpc-cat">온라인 마케팅</span>
+              <strong class="gpc-title"><?php echo htmlspecialchars($item['title']); ?></strong>
             </div>
           </div>
           <?php endforeach; ?>
@@ -395,107 +442,115 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
     <!-- ============================================
-         03. 4K 영상 제작
+         03. 4K 영상 제작 프로덕션
     ============================================ -->
-    <section class="lux-sec" id="video">
-      <div class="lux-container">
+    <section class="gp-section" id="video">
+      <div class="gp-container">
 
-        <div class="lux-sec-head wow fadeInUp" data-wow-duration="0.7s">
-          <div class="lsh-text">
-            <span class="lsh-label">03 / VIDEO PRODUCTION</span>
-            <h2 class="lsh-title">
+        <div class="gp-section-head wow fadeInUp" data-wow-duration="0.7s">
+          <div class="gpsh-left">
+            <span class="gpsh-num">03 / VIDEO PRODUCTION</span>
+            <h2 class="gpsh-title">
               브랜드의 위상을 완성하는<br>
               <em>4K 시네마틱 영상 크리에이티브.</em>
             </h2>
-            <p class="lsh-desc">
+            <p class="gpsh-desc">
               기획부터 촬영, 모션그래픽, 최종 납품까지 인하우스 프로덕션이 원스톱으로 제작합니다. 브랜드 홍보영상, TV CF, SNS 숏폼, 옥외 DID 모션까지 완벽 대응합니다.
             </p>
           </div>
-          <div class="lsh-btns">
-            <button type="button" class="lux-btn-guide bus-guide-open" data-guide="guideVideo">
+          <div class="gpsh-actions">
+            <button type="button" class="gp-btn-spec bus-guide-open" data-guide="guideVideo">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
               <span>영상 제작 가이드</span>
-              <i>↗</i>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </button>
-            <a href="/board/estmate/write.php" class="lux-btn-primary">
+            <a href="/board/estmate/write.php" class="gp-btn-quote">
               <span>영상 제작 상담</span>
-              <i>→</i>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
         </div>
 
         <!-- STAGE VIEWER VIDEO -->
-        <div class="lux-stage-viewer lsv-video wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" id="videoStageVisual">
-          <div class="lsv-media">
-            <video class="lhm-video" autoplay muted loop playsinline>
+        <div class="gp-stage-viewer gpsv-video wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s" id="videoStageVisual">
+          <div class="gpsv-media">
+            <video class="ghc-video" autoplay muted loop playsinline>
               <source src="/images/movie.mp4" type="video/mp4">
             </video>
-            <div class="lsv-gradient"></div>
+            <div class="gpsv-gradient"></div>
           </div>
           
-          <div class="lsv-info">
-            <span class="lsv-tag" id="videoStageTag">브랜드 홍보영상</span>
-            <h3 class="lsv-title" id="videoStageTitle">4K 시네마틱 브랜드 필름 &amp; TV CF</h3>
-            <p class="lsv-desc" id="videoStageDesc">
+          <div class="gpsv-content">
+            <span class="gpsv-badge" id="videoStageTag">브랜드 홍보영상</span>
+            <h3 class="gpsv-title" id="videoStageTitle">4K 시네마틱 브랜드 필름 &amp; TV CF</h3>
+            <p class="gpsv-desc" id="videoStageDesc">
               Sony FX Cinema 라인업과 짐벌 시스템, 4K 항공 드론 촬영으로 기업과 병원의 품격을 높여드립니다.
             </p>
           </div>
 
-          <button type="button" class="lsv-corner-btn bus-guide-open" data-guide="guideVideo">
-            <span>스펙 보기 ↗</span>
+          <button type="button" class="gpsv-corner-btn bus-guide-open" data-guide="guideVideo">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+            <span>스펙 보기</span>
           </button>
         </div>
 
         <!-- UNDERLINE MINIMAL TABS -->
-        <div class="lux-tabs-row">
-          <button type="button" class="lux-tab video-service-tab on"
+        <div class="gp-tabs-bar">
+          <button type="button" class="gp-tab video-service-tab on"
                   data-index="시네마틱 필름"
                   data-tag="브랜드 홍보영상"
                   data-title="4K 시네마틱 브랜드 필름 &amp; TV CF"
                   data-desc="Sony FX Cinema 라인업과 짐벌 시스템, 4K 항공 드론 촬영으로 기업과 병원의 품격을 높여드립니다.">
-            <strong>시네마틱 브랜드 필름</strong>
+            <strong>01. 시네마틱 브랜드 필름</strong>
             <span>4K 홍보영상 · 기업/병원 CF</span>
           </button>
 
-          <button type="button" class="lux-tab video-service-tab"
+          <button type="button" class="gp-tab video-service-tab"
                   data-index="SNS 숏폼"
                   data-tag="SNS 숏폼"
                   data-title="바이럴 숏폼 영상 (인스타 릴스 · 유튜브 쇼츠)"
                   data-desc="첫 3초 만에 시선을 사로잡는 모바일 9:16 Full HD 포맷과 빠른 호흡의 연출로 유기적 도달을 달성합니다.">
-            <strong>SNS 모바일 숏폼</strong>
+            <strong>02. SNS 모바일 숏폼</strong>
             <span>9:16 인스타그램 릴스 · 틱톡</span>
           </button>
 
-          <button type="button" class="lux-tab video-service-tab"
+          <button type="button" class="gp-tab video-service-tab"
                   data-index="DID 사이니지"
                   data-tag="DID 모션"
                   data-title="DID 전광판 &amp; 옥외 모션그래픽"
                   data-desc="도심 옥외 전광판과 터미널 DID 모니터의 시야각에 최적화된 고선명 2D/3D 모션그래픽을 제작합니다.">
-            <strong>DID 디지털 사이니지</strong>
+            <strong>03. DID 디지털 사이니지</strong>
             <span>도심 전광판 고휘도 모션그래픽</span>
           </button>
         </div>
 
-        <!-- GALLERY ARCHIVE -->
-        <div class="lux-archive-bar">
-          <h4 class="lab-title">영상 제작 포트폴리오</h4>
-          <a href="/portfolio.php?category=video" class="lab-link">전체보기 →</a>
+        <!-- PORTFOLIO ARCHIVE -->
+        <div class="gp-archive-bar">
+          <div>
+            <span class="gpab-kicker">SELECTED SHOWREEL</span>
+            <h4 class="gpab-title">영상 제작 포트폴리오</h4>
+          </div>
+          <a href="/portfolio.php?category=video" class="gpab-more">
+            <span>쇼릴 전체보기</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </div>
 
-        <div class="lux-grid-3">
+        <div class="gp-grid-3">
           <?php foreach (array_slice($portVideo, 0, 3) as $item): ?>
-          <div class="lux-card main-port-card" data-cat="<?php echo htmlspecialchars($item['category']); ?>" data-id="<?php echo (int)$item['id']; ?>" data-name="<?php echo htmlspecialchars($item['title']); ?>">
-            <div class="lc-img">
+          <div class="gp-card main-port-card" data-cat="<?php echo htmlspecialchars($item['category']); ?>" data-id="<?php echo (int)$item['id']; ?>" data-name="<?php echo htmlspecialchars($item['title']); ?>">
+            <div class="gpc-thumb">
               <?php if (!empty($item['thumb'])): ?>
               <img src="<?php echo htmlspecialchars($item['thumb']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
               <?php else: ?>
-              <div class="lc-empty">영상 준비 중</div>
+              <div class="gpc-empty">영상 준비 중</div>
               <?php endif; ?>
-              <div class="lc-dim"></div>
-              <div class="lc-play-tag">PLAY</div>
+              <div class="gpc-scrim"></div>
+              <div class="gpc-play-btn">PLAY SHOWREEL</div>
             </div>
-            <div class="lc-info">
-              <span class="lc-cat">영상 콘텐츠</span>
-              <strong class="lc-title"><?php echo htmlspecialchars($item['title']); ?></strong>
+            <div class="gpc-info">
+              <span class="gpc-cat">영상 콘텐츠</span>
+              <strong class="gpc-title"><?php echo htmlspecialchars($item['title']); ?></strong>
             </div>
           </div>
           <?php endforeach; ?>
@@ -506,125 +561,138 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
     <!-- ============================================
-         04. 특화 옥외매체
+         04. 특화 옥외매체 와이드 행 카드
     ============================================ -->
-    <section class="lux-sec lux-bg-soft" id="other">
-      <div class="lux-container">
+    <section class="gp-section gp-bg-soft" id="other">
+      <div class="gp-container">
 
-        <div class="lux-sec-head wow fadeInUp" data-wow-duration="0.7s">
-          <div class="lsh-text">
-            <span class="lsh-label">04 / SPECIALIZED MEDIA</span>
-            <h2 class="lsh-title">
-              도심 구석구석과 쇼핑 접점까지,<br>
+        <div class="gp-section-head wow fadeInUp" data-wow-duration="0.7s">
+          <div class="gpsh-left">
+            <span class="gpsh-num">04 / SPECIALIZED OOH MEDIA</span>
+            <h2 class="gpsh-title">
+              도심 구석구석과 구매 접점까지,<br>
               <em>빈틈없는 4대 특화 옥외매체 네트워크.</em>
             </h2>
-            <p class="lsh-desc">
+            <p class="gpsh-desc">
               골목길을 누비는 택시·택배차량부터 주부와 가족 고객을 잡는 대형마트, 관공서 DID까지 타깃 맞춤형 매체를 지원합니다.
             </p>
           </div>
-          <div class="lsh-btns">
-            <button type="button" class="lux-btn-guide bus-guide-open" data-guide="guideTaxiDelivery">
+          <div class="gpsh-actions">
+            <button type="button" class="gp-btn-spec bus-guide-open" data-guide="guideTaxiDelivery">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H10a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-4V4a2 2 0 0 0-2-2z"></path><circle cx="7" cy="14" r="2"></circle><circle cx="17" cy="14" r="2"></circle></svg>
               <span>특화 매체 가이드</span>
-              <i>↗</i>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </button>
           </div>
         </div>
 
-        <!-- 4-MEDIA CLEAN CARDS -->
-        <div class="lux-media-list wow fadeInUp" data-wow-duration="0.8s">
+        <!-- 4-MEDIA EDITORIAL ROW CARDS -->
+        <div class="gp-media-rows wow fadeInUp" data-wow-duration="0.8s">
           
-          <div class="lml-row">
-            <div class="lml-img">
+          <div class="gmr-card">
+            <div class="gmr-media">
               <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="택시 래핑 광고">
+              <span class="gmr-chip">24H 365D 상시 운행</span>
             </div>
-            <div class="lml-body">
-              <span class="lml-kicker">01 택시 외부 래핑</span>
-              <h3 class="lml-title">법인 · 개인택시 양측면 래핑 광고</h3>
-              <p class="lml-desc">광주 전역 200여 대 차량이 주요 번화가와 골목길까지 24시간 연속 운행하며 보행자 시선 정면에 밀착 노출됩니다.</p>
-              <div class="lml-specs">
+            <div class="gmr-body">
+              <span class="gmr-kicker">01 / URBAN MOBILITY</span>
+              <h3 class="gmr-title">법인 · 개인택시 양측면 래핑 광고</h3>
+              <p class="gmr-desc">광주 전역 200여 대 차량이 주요 번화가와 골목길까지 24시간 연속 운행하며 보행자 시선 정면에 밀착 노출됩니다.</p>
+              <div class="gmr-meta">
                 <span>실측 규격: 2,100 × 320 mm</span>
                 <span>주요 타깃: 2050 직장인 &amp; 보행자</span>
                 <span>노출 빈도: 24시간 상시 기동</span>
+                <span>추천 업종: 안과 · 로펌 · 치과</span>
               </div>
             </div>
           </div>
 
-          <div class="lml-row">
-            <div class="lml-img">
+          <div class="gmr-card">
+            <div class="gmr-media">
               <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="택배차량 래핑 광고">
+              <span class="gmr-chip">생활 밀착형 랜드마크</span>
             </div>
-            <div class="lml-body">
-              <span class="lml-kicker">02 택배차량 래핑</span>
-              <h3 class="lml-title">택배차량 탑차 3면 와이드 래핑</h3>
-              <p class="lml-desc">광주 5개 구 아파트 단지와 주택가 골목길에 매일 10시간 이상 정차하며 주민들의 일상 동선에 자연스럽게 녹아듭니다.</p>
-              <div class="lml-specs">
+            <div class="gmr-body">
+              <span class="gmr-kicker">02 / LOGISTICS BILLBOARD</span>
+              <h3 class="gmr-title">택배차량 탑차 3면 와이드 래핑</h3>
+              <p class="gmr-desc">광주 5개 구 아파트 단지와 주택가 골목길에 매일 10시간 이상 정차하며 주민들의 일상 동선에 자연스럽게 녹아듭니다.</p>
+              <div class="gmr-meta">
                 <span>실측 규격: 양면 3,000×1,500 + 후면</span>
-                <span>주요 타깃: 아파트 입주민 &amp; 로컬 세대원</span>
+                <span>주요 타깃: 아파트 입주민 &amp; 세대원</span>
                 <span>노출 빈도: 1일 10시간 체류</span>
+                <span>추천 업종: 어학원 · 정형외과</span>
               </div>
             </div>
           </div>
 
-          <div class="lml-row">
-            <div class="lml-img">
+          <div class="gmr-card">
+            <div class="gmr-media">
               <img src="/images/sub_bg_d.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="대형마트 쇼핑카트 광고">
+              <span class="gmr-chip">구매 접점 100% 동행</span>
             </div>
-            <div class="lml-body">
-              <span class="lml-kicker">03 대형마트 리테일</span>
-              <h3 class="lml-title">대형마트 쇼핑카트 &amp; 무빙워크 조명</h3>
-              <p class="lml-desc">이마트, 롯데마트 1,000여 대 카트 손잡이 정면에 위치하여 실질적 구매 결정권을 가진 주부 및 가족 고객과 60분 이상 동행합니다.</p>
-              <div class="lml-specs">
+            <div class="gmr-body">
+              <span class="gmr-kicker">03 / RETAIL PURCHASE POINT</span>
+              <h3 class="gmr-title">대형마트 쇼핑카트 &amp; 무빙워크 조명</h3>
+              <p class="gmr-desc">이마트, 롯데마트 1,000여 대 카트 손잡이 정면에 위치하여 실질적 구매 결정권을 가진 주부 및 가족 고객과 60분 이상 동행합니다.</p>
+              <div class="gmr-meta">
                 <span>실측 규격: 플레이트 280 × 160 mm</span>
                 <span>주요 타깃: 3050 주부 &amp; 가족 고객</span>
-                <span>노출 빈도: 쇼핑 1회당 60분 연속 주시</span>
+                <span>노출 빈도: 쇼핑 1회당 60분 주시</span>
+                <span>추천 업종: 식음료 · 소아과/치과</span>
               </div>
             </div>
           </div>
 
-          <div class="lml-row">
-            <div class="lml-img">
+          <div class="gmr-card">
+            <div class="gmr-media">
               <img src="/images/sub_bg_e.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="DID 디지털 전광판">
+              <span class="gmr-chip">초고화질 디지털 사이니지</span>
             </div>
-            <div class="lml-body">
-              <span class="lml-kicker">04 DID 전광판</span>
-              <h3 class="lml-title">DID 전자현수막 &amp; 도심 전광판</h3>
-              <p class="lml-desc">유스퀘어 터미널, 지하철 환승역, 관공서 로비에 고휘도 55~85인치 UHD 스크린으로 15~20초 영상을 하루 100회 이상 송출합니다.</p>
-              <div class="lml-specs">
+            <div class="gmr-body">
+              <span class="gmr-kicker">04 / DIGITAL SMART SIGNAGE</span>
+              <h3 class="gmr-title">DID 전자현수막 &amp; 도심 전광판</h3>
+              <p class="gmr-desc">유스퀘어 터미널, 지하철 환승역, 관공서 로비에 고휘도 55~85인치 UHD 스크린으로 15~20초 영상을 하루 100회 이상 송출합니다.</p>
+              <div class="gmr-meta">
                 <span>실측 규격: 55~85" UHD 패널 / 전광판</span>
                 <span>주요 타깃: 환승객 &amp; 터미널 방문객</span>
                 <span>노출 빈도: 일 100회 이상 송출</span>
+                <span>추천 업종: 공공 캠페인 · 대학교</span>
               </div>
             </div>
           </div>
 
         </div>
 
-        <!-- GALLERY ARCHIVE -->
-        <div class="lux-archive-bar" style="margin-top:60px;">
-          <h4 class="lab-title">특화 매체 시공 사례</h4>
-          <div class="lux-filters">
-            <button type="button" class="lf-btn other-port-filter-btn on" data-filter="all">전체</button>
-            <button type="button" class="lf-btn other-port-filter-btn" data-filter="taxi">택시</button>
-            <button type="button" class="lf-btn other-port-filter-btn" data-filter="mart">마트</button>
-            <button type="button" class="lf-btn other-port-filter-btn" data-filter="did">DID/인쇄</button>
+        <!-- PORTFOLIO ARCHIVE -->
+        <div class="gp-archive-bar" style="margin-top:60px;">
+          <div>
+            <span class="gpab-kicker">SELECTED CASES</span>
+            <h4 class="gpab-title">특화 매체 시공 사례</h4>
+          </div>
+          <div class="gp-filters">
+            <button type="button" class="gpf-btn other-port-filter-btn on" data-filter="all">전체</button>
+            <button type="button" class="gpf-btn other-port-filter-btn" data-filter="taxi">택시</button>
+            <button type="button" class="gpf-btn other-port-filter-btn" data-filter="mart">마트</button>
+            <button type="button" class="gpf-btn other-port-filter-btn" data-filter="did">DID/인쇄</button>
           </div>
         </div>
 
         <?php if (count($portOutdoor) > 0): ?>
-        <div class="lux-grid-4" id="otherPortGrid">
+        <div class="gp-grid-4" id="otherPortGrid">
           <?php foreach (array_slice($portOutdoor, 0, 4) as $item): ?>
-          <div class="lux-card main-port-card other-port-item" data-cat="<?php echo htmlspecialchars($item['category']); ?>" data-id="<?php echo (int)$item['id']; ?>" data-name="<?php echo htmlspecialchars($item['title']); ?>">
-            <div class="lc-img">
+          <div class="gp-card main-port-card other-port-item" data-cat="<?php echo htmlspecialchars($item['category']); ?>" data-id="<?php echo (int)$item['id']; ?>" data-name="<?php echo htmlspecialchars($item['title']); ?>">
+            <div class="gpc-thumb">
               <?php if (!empty($item['thumb'])): ?>
               <img src="<?php echo htmlspecialchars($item['thumb']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
               <?php else: ?>
-              <div class="lc-empty">이미지 준비 중</div>
+              <div class="gpc-empty">이미지 준비 중</div>
               <?php endif; ?>
-              <div class="lc-dim"></div>
+              <div class="gpc-scrim"></div>
+              <span class="gpc-tag"><?php echo isset($categories[$item['category']]) ? $categories[$item['category']] : '옥외매체'; ?></span>
             </div>
-            <div class="lc-info">
-              <span class="lc-cat"><?php echo isset($categories[$item['category']]) ? $categories[$item['category']] : '옥외매체'; ?></span>
-              <strong class="lc-title"><?php echo htmlspecialchars($item['title']); ?></strong>
+            <div class="gpc-info">
+              <span class="gpc-cat">특화 옥외매체</span>
+              <strong class="gpc-title"><?php echo htmlspecialchars($item['title']); ?></strong>
             </div>
           </div>
           <?php endforeach; ?>
@@ -638,44 +706,59 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       04 WORKFLOW : CLEAN MINIMAL TIMELINE
+       04 WORKFLOW : THE GAON-N WAY (4단계 원스톱)
   ============================================ -->
-  <section class="lux-sec" id="process">
-    <div class="lux-container">
-      <div class="lux-sec-head text-center wow fadeInUp" data-wow-duration="0.7s">
-        <div class="lsh-text" style="max-width:720px; margin:0 auto;">
-          <span class="lsh-label">PROCESS</span>
-          <h2 class="lsh-title">
+  <section class="gp-section" id="process">
+    <div class="gp-container">
+      <div class="gp-section-head text-center wow fadeInUp" data-wow-duration="0.7s">
+        <div class="gpsh-left" style="max-width:720px; margin:0 auto;">
+          <span class="gpsh-num">WORKFLOW PIPELINE</span>
+          <h2 class="gpsh-title">
             상담부터 시공 및 성과 보고까지,<br>
             <em>가온엔이 함께하는 광고 진행 과정.</em>
           </h2>
+          <p class="gpsh-desc">
+            외주 대행 없는 100% 본사 인하우스 전문팀이 전 과정을 책임지고 전담합니다.
+          </p>
         </div>
       </div>
 
-      <div class="lux-process-grid wow fadeInUp" data-wow-duration="0.8s">
+      <div class="gp-process-grid wow fadeInUp" data-wow-duration="0.8s">
         
-        <div class="lp-step">
-          <span class="lp-num">01</span>
-          <h3 class="lp-title">상권 분석 &amp; 매체 제안</h3>
-          <p class="lp-desc">병원, 학원, 기업의 주 타깃 고객 동선을 분석하여 가장 효과적인 노선과 온·오프라인 믹스를 제안합니다.</p>
+        <div class="gpp-step">
+          <div class="gpp-top">
+            <span class="gpp-num">01</span>
+            <span class="gpp-tag">D+1</span>
+          </div>
+          <h3 class="gpp-title">상권 분석 &amp; 노선 믹스</h3>
+          <p class="gpp-desc">병원, 학원, 기업의 주 타깃 고객 동선을 정밀 분석하여 가장 효과적인 노선과 온·오프라인 미디어를 제안합니다.</p>
         </div>
 
-        <div class="lp-step">
-          <span class="lp-num">02</span>
-          <h3 class="lp-title">디자인 시안 제작</h3>
-          <p class="lp-desc">도심 속에서 3초 안에 메시지가 읽히도록 가독성 높은 실사 래핑 디자인 및 영상 콘티를 기획합니다.</p>
+        <div class="gpp-step">
+          <div class="gpp-top">
+            <span class="gpp-num">02</span>
+            <span class="gpp-tag">D+3</span>
+          </div>
+          <h3 class="gpp-title">1:1 디자인 시안 기획</h3>
+          <p class="gpp-desc">도심 속에서 3초 안에 메시지가 읽히도록 가독성 높은 실사 래핑 디자인 및 4K 영상 스토리보드를 제작합니다.</p>
         </div>
 
-        <div class="lp-step">
-          <span class="lp-num">03</span>
-          <h3 class="lp-title">자체 출력 &amp; 직영 시공</h3>
-          <p class="lp-desc">내후성 정품 솔벤 시트와 10년 이상 경력의 본사 전문 시공팀이 직접 투입되어 깔끔하게 부착합니다.</p>
+        <div class="gpp-step">
+          <div class="gpp-top">
+            <span class="gpp-num">03</span>
+            <span class="gpp-tag">D+7</span>
+          </div>
+          <h3 class="gpp-title">직영 출력 &amp; 책임 시공</h3>
+          <p class="gpp-desc">내후성 정품 솔벤 시트와 10년 이상 경력의 본사 전문 시공팀이 직접 투입되어 깔끔하게 부착합니다.</p>
         </div>
 
-        <div class="lp-step">
-          <span class="lp-num">04</span>
-          <h3 class="lp-title">실시간 증빙 &amp; 리포트</h3>
-          <p class="lp-desc">시공 직후 4면 촬영본을 전송해 드리며, 온라인 노출 성과 데이터를 투명하게 공유합니다.</p>
+        <div class="gpp-step">
+          <div class="gpp-top">
+            <span class="gpp-num">04</span>
+            <span class="gpp-tag">D+14</span>
+          </div>
+          <h3 class="gpp-title">실시간 증빙 &amp; 리포트</h3>
+          <p class="gpp-desc">시공 직후 차량 4면 촬영본을 전송해 드리며, 온라인 노출 성과 데이터를 투명하게 공유합니다.</p>
         </div>
 
       </div>
@@ -684,34 +767,41 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       05 LOGOS MARQUEE
+       05 PARTNER TRUST MARQUEE
   ============================================ -->
-  <section class="lux-logos-sec">
-    <div class="lux-container">
-      <div class="ll-title">PARTNERS</div>
+  <section class="gp-partners-sec">
+    <div class="gp-container">
+      <div class="gpp-title">TRUSTED BY INDUSTRY LEADERS</div>
     </div>
-    <div class="ll-marquee">
-      <div class="ll-row track-left">
-        <span class="ll-chip">전남대학교병원</span><span class="ll-chip">조선대학교병원</span><span class="ll-chip">광주안과</span><span class="ll-chip">센트럴치과병원</span><span class="ll-chip">이루다어학원</span><span class="ll-chip">중흥건설</span><span class="ll-chip">광주도시공사</span><span class="ll-chip">그린모빌리티</span>
-        <span class="ll-chip">전남대학교병원</span><span class="ll-chip">조선대학교병원</span><span class="ll-chip">광주안과</span><span class="ll-chip">센트럴치과병원</span><span class="ll-chip">이루다어학원</span><span class="ll-chip">중흥건설</span><span class="ll-chip">광주도시공사</span><span class="ll-chip">그린모빌리티</span>
+    <div class="gpp-marquee">
+      <div class="gpp-row track-left">
+        <span class="gpp-chip">전남대학교병원</span><span class="gpp-chip">조선대학교병원</span><span class="gpp-chip">광주안과</span><span class="gpp-chip">센트럴치과병원</span><span class="gpp-chip">이루다어학원</span><span class="gpp-chip">중흥건설</span><span class="gpp-chip">광주도시공사</span><span class="gpp-chip">그린모빌리티</span>
+        <span class="gpp-chip">전남대학교병원</span><span class="gpp-chip">조선대학교병원</span><span class="gpp-chip">광주안과</span><span class="gpp-chip">센트럴치과병원</span><span class="gpp-chip">이루다어학원</span><span class="gpp-chip">중흥건설</span><span class="gpp-chip">광주도시공사</span><span class="gpp-chip">그린모빌리티</span>
+      </div>
+      <div class="gpp-row track-right">
+        <span class="gpp-chip">원광대한방병원</span><span class="gpp-chip">바른정형외과</span><span class="gpp-chip">법무법인 광산</span><span class="gpp-chip">드림공인중개사</span><span class="gpp-chip">홀리데이호텔</span><span class="gpp-chip">라붐웨딩홀</span><span class="gpp-chip">베비에르</span><span class="gpp-chip">봉선어학센터</span>
+        <span class="gpp-chip">원광대한방병원</span><span class="gpp-chip">바른정형외과</span><span class="gpp-chip">법무법인 광산</span><span class="gpp-chip">드림공인중개사</span><span class="gpp-chip">홀리데이호텔</span><span class="gpp-chip">라붐웨딩홀</span><span class="gpp-chip">베비에르</span><span class="gpp-chip">봉선어학센터</span>
       </div>
     </div>
   </section>
 
 
   <!-- ============================================
-       06 CTA CONSULTATION
+       06 STUDIO ESTIMATE CTA STRIP
   ============================================ -->
-  <section class="lux-sec">
-    <div class="lux-container">
-      <div class="lux-cta-box wow fadeInUp" data-wow-duration="0.8s">
-        <div>
-          <span class="lcb-label">CONTACT</span>
-          <h2 class="lcb-title">광고, 이제<br><em>가온엔과 함께 제대로</em> 시작하세요.</h2>
-          <p class="lcb-desc">오프라인 버스 옥외광고부터 온라인 스마트플레이스 검색 마케팅까지, 1:1 맞춤 견적을 안내해 드립니다.</p>
+  <section class="gp-cta-sec">
+    <div class="gp-container">
+      <div class="gp-cta-box wow fadeInUp" data-wow-duration="0.8s">
+        <div class="gpc-left">
+          <span class="gpc-kicker">START YOUR CAMPAIGN</span>
+          <h2 class="gpc-headline">광고, 이제<br><em>가온엔과 함께 제대로</em> 시작하세요.</h2>
+          <p class="gpc-sub">시내버스 옥외광고부터 스마트플레이스 SEO 검색 마케팅까지, 1:1 맞춤 견적을 신속하게 안내해 드립니다.</p>
         </div>
-        <div>
-          <a href="/board/estmate/write.php" class="lcb-btn">맞춤 견적 상담 신청 →</a>
+        <div class="gpc-right">
+          <a href="/board/estmate/write.php" class="gp-cta-btn">
+            <span>맞춤 견적 상담 신청</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -719,14 +809,14 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       07 SWISS-STYLE EDITORIAL GUIDE MODAL
+       07 SWISS-STYLE EDITORIAL SPECIFICATION MODAL (5 TABS)
   ============================================ -->
   <div class="bus-guide-overlay" id="busGuideOverlay">
     <div class="lux-modal-panel">
       
       <div class="lux-modal-head">
         <div>
-          <span class="lmh-label">GAON-N MEDIA SPECIFICATION</span>
+          <span class="lmh-label">GAON-N SPECIFICATION ARCHIVE</span>
           <h3 class="lmh-title">가온엔 통합 미디어 실측 규격 &amp; 운영 가이드</h3>
           <p class="lmh-desc">광주 시내버스 104개 전 노선 실측 치수부터 택시·택배, 마트·DID, 온라인 SEO 및 4K 영상 제작 스펙을 확인하세요.</p>
         </div>
@@ -737,8 +827,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <button type="button" class="lmt-tab on" data-target="guideBus">시내버스 옥외광고</button>
         <button type="button" class="lmt-tab" data-target="guideTaxiDelivery">택시 · 택배차량</button>
         <button type="button" class="lmt-tab" data-target="guideMartDid">대형마트 · DID</button>
-        <button type="button" class="lmt-tab" data-target="guideOnline">온라인 마케팅</button>
-        <button type="button" class="lmt-tab" data-target="guideVideo">4K 영상 제작</button>
+        <button type="button" class="lmt-tab" data-target="guideOnline">온라인 마케팅 &amp; SEO</button>
+        <button type="button" class="lmt-tab" data-target="guideVideo">4K 영상 &amp; 숏폼 제작</button>
       </div>
 
       <div class="lux-modal-body">
@@ -799,7 +889,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
 
           <div class="lux-table-block" style="margin-top:36px;">
-            <h4 class="ltb-title">03 광주 시내버스 104개 노선 체계 분류</h4>
+            <h4 class="ltb-title">03 광주 시내버스 104개 노선 분류 체계</h4>
             <div class="lux-spec-table">
               <div class="lst-row">
                 <div class="lst-name">급행 노선 (Express)</div>
@@ -953,7 +1043,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       08 PORTFOLIO DETAIL MODAL
+       08 PORTFOLIO CINEMATIC LIGHTBOX MODAL
   ============================================ -->
   <div class="portfolio-modal-backdrop" id="modalBackdrop">
     <div class="portfolio-modal-box">

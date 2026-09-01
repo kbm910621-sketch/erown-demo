@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GAON-N 100% INTERACTIVE SCRIPT (PORTFOLIO MODAL + GUIDE MODAL)
+   GAON-N GRAND PRIX AWARD-WINNING INTERACTION JS
    ========================================================================== */
 $(function () {
   'use strict';
@@ -26,7 +26,7 @@ $(function () {
 
     if (img && img.trim() !== '') {
       $('#busStageImg').attr('src', img).show();
-      $('.lsv-empty').hide();
+      $('.gpsv-placeholder').hide();
     }
   });
 
@@ -129,7 +129,7 @@ $(function () {
     $('#' + target).addClass('on').show();
   });
 
-  /* 06. PORTFOLIO DETAIL MODAL HANDLER */
+  /* 06. PORTFOLIO LIGHTBOX MODAL HANDLER */
   function openPortfolioModal(name, cat, img, id) {
     $('#modalTitle').text(name || '광고 프로젝트');
     $('#modalCat').text(cat || '광고 집행 사례');
@@ -151,10 +151,10 @@ $(function () {
     }
   }
 
-  $(document).on('click', '.main-port-card, .lux-card', function(e) {
+  $(document).on('click', '.main-port-card, .gp-card', function(e) {
     e.preventDefault();
-    var name = $(this).attr('data-name') || $(this).find('.lc-title').text();
-    var cat = $(this).attr('data-cat') || $(this).find('.lc-cat').text();
+    var name = $(this).attr('data-name') || $(this).find('.gpc-title').text();
+    var cat = $(this).attr('data-cat') || $(this).find('.gpc-cat').text();
     var id = $(this).attr('data-id') || '01';
     var img = $(this).find('img').attr('src');
     if (!img) {
@@ -174,7 +174,7 @@ $(function () {
     }
   });
 
-  /* ESC KEY CLOSES ALL MODALS */
+  /* ESC KEY */
   $(document).on('keydown', function(e) {
     if (e.key === 'Escape' || e.keyCode === 27) {
       closeGuideModal();
