@@ -29,18 +29,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 $total = count($list);
 
-$portBus = array();
-$portOnline = array();
-$portVideo = array();
-$portOther = array();
-
-foreach ($list as $item) {
-  if ($item['category'] == 'bus') $portBus[] = $item;
-  else if ($item['category'] == 'online') $portOnline[] = $item;
-  else if ($item['category'] == 'video') $portVideo[] = $item;
-  else $portOther[] = $item;
-}
-
 if($totals>0){
 	$sql = "SELECT * FROM popup WHERE pop_status='1' ORDER BY pop_order ASC";
 	$result = mysqli_query($conn, $sql);
@@ -69,73 +57,74 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/blank.php";?>
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/skip.php";?>
 
-<div id="wrap" class="agency-gold-wrap">
+<div id="wrap" class="dynamic-agency-wrap">
 
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/header.php";?>
   
   <!-- ============================================
-       01 HERO STAGE : 100% DIRECT, CRISP & CINEMATIC
+       01 HERO STAGE : DYNAMIC KINETIC BILLBOARD
   ============================================ -->
-  <section class="gold-hero" id="hero">
-    <div class="gold-container">
+  <section class="dyn-hero-stage" id="hero">
+    <div class="dyn-container">
       
-      <!-- TOP LIVE BADGE -->
-      <div class="gh-top-row wow fadeInDown" data-wow-duration="0.6s">
-        <div class="gh-tag">
-          <span class="gh-dot"></span>
-          <span>광주 전역 옥외광고 &amp; 디지털 마케팅 종합대행사</span>
+      <!-- TOP INTERACTIVE NAVIGATOR CHIPS -->
+      <div class="dhn-chip-row wow fadeInDown" data-wow-duration="0.6s">
+        <span class="dhn-status-dot"></span>
+        <span class="dhn-title-label">GAON-N TOTAL ADVERTISING SYSTEM</span>
+        <div class="dhn-quick-nav">
+          <a href="#bus" class="dqn-item">01 시내버스 104개 노선</a>
+          <a href="#online" class="dqn-item">02 네이버 1위 마케팅</a>
+          <a href="#video" class="dqn-item">03 4K 시네마 영상</a>
+          <a href="#other" class="dqn-item">04 특화 옥외매체</a>
         </div>
-        <div class="gh-sub-info">광주 시내버스 104개 전 노선 단독 직영 · 네이버 SEO · 4K 프로덕션</div>
       </div>
 
-      <!-- DIRECT CRISP HEADLINE -->
-      <div class="gh-headline-box wow fadeInUp" data-wow-duration="0.8s">
-        <h1 class="gh-title">
+      <!-- DIRECT IMPACT HERO COPY -->
+      <div class="dhn-headline-area wow fadeInUp" data-wow-duration="0.8s">
+        <h1 class="dhn-h1">
           광주 시내버스 104개 노선 독점 직영,<br>
-          <span class="gh-accent">옥외광고부터 네이버 1위 마케팅까지.</span>
+          <span class="dhn-highlight">옥외광고 · 온라인 검색 1위 · 4K 영상</span>
         </h1>
-        <p class="gh-desc">
-          시내버스 1,000대 래핑 광고, 네이버 스마트플레이스 1위 상위노출, 4K 브랜드 홍보영상을 가온엔 본사가 기획부터 시공까지 100% 직접 책임집니다.
+        <p class="dhn-sub">
+          광주 5개 구 1,000대 시내버스 래핑부터 스마트플레이스 상위노출, 4K 홍보영상까지 본사 전문팀이 100% 직접 시공 및 운영합니다.
         </p>
       </div>
 
-      <!-- DIRECT ACTION BUTTONS -->
-      <div class="gh-btn-group wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-        <a href="/board/estmate/write.php" class="gh-btn-primary">
-          <span>노선 &amp; 매체 견적 문의하기</span>
+      <!-- DIRECT CTAS -->
+      <div class="dhn-actions wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+        <a href="/board/estmate/write.php" class="dhn-btn-primary">
+          <span>맞춤 노선 &amp; 견적 신청</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
-        <button type="button" class="gh-btn-secondary bus-guide-open" data-guide="guideBus">
-          <span>실측 규격 가이드 확인</span>
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        <button type="button" class="dhn-btn-secondary bus-guide-open" data-guide="guideBus">
+          <span>실측 규격 가이드 확인 ↗</span>
         </button>
       </div>
 
-      <!-- FULL-WIDTH 21:9 CINEMA FRAME -->
-      <div class="gh-cinema-box wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.2s">
-        <div class="ghc-viewport">
-          <video autoplay muted loop playsinline class="ghc-video">
+      <!-- INTERACTIVE CINEMA DISPLAY WITH LIVE COUNTERS -->
+      <div class="dhn-cinema-display wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.2s">
+        <div class="dcd-viewport">
+          <video autoplay muted loop playsinline class="dcd-video">
             <source src="/images/movie.mp4" type="video/mp4">
           </video>
-          <div class="ghc-scrim"></div>
+          <div class="dcd-scrim"></div>
 
-          <!-- BOTTOM 4 FACTS HUD -->
-          <div class="ghc-hud">
-            <div class="gh-hud-card">
-              <div class="gh-hud-num">104<em>개</em></div>
-              <div class="gh-hud-lbl">광주 시내버스 전 노선 직영</div>
+          <div class="dcd-live-ticker">
+            <div class="dlt-card">
+              <span class="dlt-val counter" data-target="104">104</span><span class="dlt-unit">개</span>
+              <span class="dlt-lbl">광주 전 노선 단독 직영</span>
             </div>
-            <div class="gh-hud-card">
-              <div class="gh-hud-num">1,000<em>여 대</em></div>
-              <div class="gh-hud-lbl">광주 전역 독점 운행 차량</div>
+            <div class="dlt-card">
+              <span class="dlt-val counter" data-target="1000">1000</span><span class="dlt-unit">+ 대</span>
+              <span class="dlt-lbl">광주 5개 구 운행 차량</span>
             </div>
-            <div class="gh-hud-card">
-              <div class="gh-hud-num">18<em>시간</em></div>
-              <div class="gh-hud-lbl">매일 도로 연속 노출 시간</div>
+            <div class="dlt-card">
+              <span class="dlt-val counter" data-target="18">18</span><span class="dlt-unit">시간</span>
+              <span class="dlt-lbl">일일 도로 연속 노출</span>
             </div>
-            <div class="gh-hud-card highlight">
-              <div class="gh-hud-num">100<em>%</em></div>
-              <div class="gh-hud-lbl">본사 전문 시공팀 직접 부착</div>
+            <div class="dlt-card blue">
+              <span class="dlt-val counter" data-target="100">100</span><span class="dlt-unit">%</span>
+              <span class="dlt-lbl">본사 직영 책임 시공</span>
             </div>
           </div>
         </div>
@@ -146,127 +135,124 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       02 SECTION 01 : BUS OOH (DIRECT 3D BLUEPRINT STUDIO)
+       02 SECTION 01 : BUS BLUEPRINT & ROUTE SIMULATOR (DYNAMIC INTERACTIVE)
   ============================================ -->
-  <?php
-  $busStageImage = '';
-  if (count($portBus) > 0 && !empty($portBus[0]['thumb'])) {
-    $busStageImage = $portBus[0]['thumb'];
-  }
-  ?>
-  <section class="gold-sec gold-bg-slate" id="bus">
-    <div class="gold-container">
+  <section class="dyn-section dyn-bg-slate" id="bus">
+    <div class="dyn-container">
       
-      <div class="gs-head wow fadeInUp" data-wow-duration="0.7s">
-        <div class="gs-head-left">
-          <span class="gs-kicker">01 / BUS ADVERTISING</span>
-          <h2 class="gs-title">광주 시내버스 외부 · 내부 옥외광고</h2>
-          <p class="gs-desc">
-            차도면(3.7m), 인도면(3.0m), 후면 3면 패키지 부착으로 반대편 차량 운전자와 정류소 보행자 시야 정면에 매일 18시간 반복 노출됩니다.
-          </p>
-        </div>
-        <div class="gs-head-right">
-          <button type="button" class="gs-guide-btn bus-guide-open" data-guide="guideBus">
-            <span>시내버스 7대 실측 규격표 확인 ↗</span>
-          </button>
-        </div>
+      <div class="ds-head-box wow fadeInUp" data-wow-duration="0.7s">
+        <span class="ds-num-tag">01 / BUS OOH SIMULATOR</span>
+        <h2 class="ds-title">광주 시내버스 3면 래핑 &amp; 104개 노선 시뮬레이터</h2>
+        <p class="ds-desc">차량 부착 위치별 실측 치수(mm)와 주요 상권별 버스 노선망을 직접 클릭하여 확인하세요.</p>
       </div>
 
-      <!-- 2-COLUMN BLUEPRINT STUDIO -->
-      <div class="gs-bus-studio wow fadeInUp" data-wow-duration="0.8s">
+      <!-- DYNAMIC BUS INTERACTIVE CONSOLE -->
+      <div class="dyn-bus-console wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- LEFT: VEHICLE BLUEPRINT & HOTSPOTS -->
-        <div class="gbb-visual-panel">
-          <div class="gbb-canvas">
-            <img id="busStageImg" src="<?php echo htmlspecialchars($busStageImage); ?>" alt="시내버스 광고 실사" style="<?php echo empty($busStageImage) ? 'display:none;' : ''; ?>">
-            <?php if (empty($busStageImage)): ?>
-            <div class="gbb-empty">시내버스 광고 대표 이미지</div>
-            <?php endif; ?>
-            <div class="gbb-scrim"></div>
+        <!-- STEP 1: INTERACTIVE DIMENSION CHIP SELECTOR -->
+        <div class="dbc-selector-bar">
+          <button type="button" class="dbc-chip bus-spot-btn on"
+                  data-name="차도면 대형 래핑"
+                  data-size="3,700 × 1,000 mm"
+                  data-target="왕복 6~8차선 반대편 차량 운전자 및 보행자 정면 100% 노출"
+                  data-benefit="도심 간선도로 주행 중 가장 거대한 면적으로 브랜드 인지도를 각인시킵니다.">
+            차도면 (3,700×1,000)
+          </button>
+          <button type="button" class="dbc-chip bus-spot-btn"
+                  data-name="인도면 표준 래핑"
+                  data-size="3,000 × 500 mm"
+                  data-target="버스 정류장 대기 승객 및 인도 보행자 눈높이 1:1 밀착"
+                  data-benefit="승객 탑승 시 눈높이 정면에 위치하여 전화번호, 진료과목 등 상세 정보 전달에 최적입니다.">
+            인도면 (3,000×500)
+          </button>
+          <button type="button" class="dbc-chip bus-spot-btn"
+                  data-name="후면 번호판 상단 래핑"
+                  data-size="2,400 × 300 mm"
+                  data-target="신호 대기 및 도로 정체 시 후방 차량 운전자 3분 이상 강제 주시"
+                  data-benefit="출퇴근 정체 구간에서 후방 차량 운전자의 시야를 장시간 단독 점유합니다.">
+            후면 (2,400×300)
+          </button>
+          <button type="button" class="dbc-chip bus-spot-btn"
+                  data-name="사랑면 (승하차문 측면)"
+                  data-size="1,000 × 500 mm"
+                  data-target="승객 승하차 시 즉각적 시선 집중"
+                  data-benefit="하차문 바로 옆에 위치하여 탑승객의 마지막 시선을 사로잡습니다.">
+            사랑면 (1,000×500)
+          </button>
+          <button type="button" class="dbc-chip bus-spot-btn"
+                  data-name="내부 중앙창문 포스터"
+                  data-size="1,100 × 500 mm"
+                  data-target="좌석 및 통로 탑승객 15~30분간 시선 독점"
+                  data-benefit="이동 시간 내내 승객 시선 정면에 머물며 세부 스토리텔링을 전달합니다.">
+            내부 창문 (1,100×500)
+          </button>
+        </div>
+
+        <!-- STAGE VIEWER & LIVE SPEC CARD -->
+        <div class="dbc-stage-grid">
+          
+          <div class="dbc-visual-stage">
+            <div class="dvs-frame">
+              <img src="/images/sample_bus.jpg" id="dynBusImg" alt="시내버스 래핑 광고 실사">
+              <div class="dvs-pulse-marker" id="dvsMarker" style="top:35%; left:25%;"></div>
+            </div>
+          </div>
+
+          <div class="dbc-spec-console">
+            <div class="dsc-badge" id="dynBusBadge">차도면 대형 래핑</div>
+            <h3 class="dsc-dim" id="dynBusSize">3,700 × 1,000 mm</h3>
             
-            <!-- Exact Hotspots -->
-            <div class="gbb-hotspots">
-              <button type="button" class="gbb-spot bus-service-tab on"
-                      data-index="차도면 대형 래핑"
-                      data-title="차도면 대형 광고 (3,700 × 1,000 mm)"
-                      data-desc="왕복 6~8차선 반대편 차량 운전자와 인도 보행자의 시야 정면에 노출되는 대표 규격입니다."
-                      data-target="차량 운전자 &amp; 반대편 보행자 100% 강제 노출"
-                      data-image="<?php echo htmlspecialchars($busStageImage); ?>"
-                      style="top:32%; left:22%;">
-                <span>차도면 3,700×1,000</span>
-              </button>
+            <div class="dsc-row">
+              <span class="dsc-lbl">노출 타깃</span>
+              <strong class="dsc-val" id="dynBusTarget">왕복 6~8차선 반대편 차량 운전자 및 보행자 정면 100% 노출</strong>
+            </div>
+            
+            <div class="dsc-row">
+              <span class="dsc-lbl">매체 특장점</span>
+              <p class="dsc-desc" id="dynBusBenefit">도심 간선도로 주행 중 가장 거대한 면적으로 브랜드 인지도를 각인시킵니다.</p>
+            </div>
 
-              <button type="button" class="gbb-spot bus-service-tab"
-                      data-index="인도면 표준 래핑"
-                      data-title="인도면 표준 광고 (3,000 × 500 mm)"
-                      data-desc="정류소 대기 승객 및 인도 보행자의 눈높이와 1:1로 밀착되어 높은 가독성을 발휘합니다."
-                      data-target="정류소 승객 &amp; 인도 보행자 1:1 밀착"
-                      data-image=""
-                      style="top:48%; left:58%;">
-                <span>인도면 3,000×500</span>
-              </button>
-
-              <button type="button" class="gbb-spot bus-service-tab"
-                      data-index="후면 집중 패키지"
-                      data-title="후면 번호판 상단 광고 (2,400 × 300 mm)"
-                      data-desc="신호 대기 및 도로 정체 시 후방 차량 운전자에게 3분 이상 강제 주시되는 필수 면입니다."
-                      data-target="후방 정체 차량 운전자 장시간 주시"
-                      data-image=""
-                      style="top:32%; right:14%;">
-                <span>후면 2,400×300</span>
-              </button>
+            <div class="dsc-action">
+              <a href="/board/estmate/write.php" class="dsc-btn">이 규격으로 맞춤 견적 신청 →</a>
             </div>
           </div>
 
-          <!-- Dynamic Brief Card below vehicle -->
-          <div class="gbb-brief">
-            <div class="gb-brief-header">
-              <span class="gbb-tag" id="busStageIndex">차도면 대형 래핑</span>
-              <span class="gbb-target-text" id="busStageTarget">타깃: 차량 운전자 &amp; 반대편 보행자 100% 강제 노출</span>
-            </div>
-            <h3 class="gbb-name" id="busStageTitle">차도면 대형 광고 (3,700 × 1,000 mm)</h3>
-            <p class="gbb-txt" id="busStageDesc">왕복 6~8차선 반대편 차량 운전자와 인도 보행자의 시야 정면에 노출되는 대표 규격입니다.</p>
-            <div class="gbb-action-row">
-              <a href="/board/estmate/write.php" class="gbb-cta-btn">이 규격으로 견적 신청하기 →</a>
-            </div>
-          </div>
         </div>
 
-        <!-- RIGHT: 104 ROUTE CLASSIFICATION -->
-        <div class="gbb-routes-panel">
-          
-          <div class="gbr-card red">
-            <div class="gbr-top">
-              <span class="gbr-badge">급행 노선 (Express)</span>
-              <h4>순환01, 첨단09, 수완03 등</h4>
+        <!-- STEP 2: DYNAMIC ROUTE SEARCH & FILTER -->
+        <div class="dbc-routes-filter-box">
+          <div class="drf-header">
+            <h4>광주 104개 노선 상권별 빠른 조회</h4>
+            <div class="drf-tabs">
+              <button type="button" class="drf-tab on" data-route-cat="all">전체 노선</button>
+              <button type="button" class="drf-tab" data-route-cat="express">급행 (광역 도심)</button>
+              <button type="button" class="drf-tab" data-route-cat="main">간선 (주거·업무)</button>
+              <button type="button" class="drf-tab" data-route-cat="feeder">지선 (골목·학원)</button>
             </div>
-            <p>상무지구, 광천터미널, 충장로, 전남대·조선대를 최단 시간 관통하여 광주 전역 광역 노출을 극대화합니다.</p>
           </div>
 
-          <div class="gbr-card blue">
-            <div class="gbr-top">
-              <span class="gbr-badge">간선 노선 (Main Line)</span>
-              <h4>매월16, 문흥18, 지원15, 봉선37 등</h4>
+          <div class="drf-grid" id="dynRouteGrid">
+            <div class="drg-card" data-cat="express">
+              <span class="drgc-badge red">급행</span>
+              <strong>순환01, 첨단09, 수완03</strong>
+              <p>상무지구 ↔ 광천터미널 ↔ 충장로 ↔ 전남대·조선대 관통</p>
             </div>
-            <p>광주 5개 구 대규모 아파트 주거단지와 중심 상업·업무지구를 직통 연결하여 매일 반복 각인시킵니다.</p>
-          </div>
-
-          <div class="gbr-card green">
-            <div class="gbr-top">
-              <span class="gbr-badge">지선 노선 (Feeder)</span>
-              <h4>수완12, 첨단20, 용봉83 등</h4>
+            <div class="drg-card" data-cat="main">
+              <span class="drgc-badge blue">간선</span>
+              <strong>매월16, 문흥18, 지원15</strong>
+              <p>광주 5개 구 대규모 아파트 단지 ↔ 중심 상업지구 직통</p>
             </div>
-            <p>병원, 학원, 마트 밀집 골목 상권을 촘촘하게 연결하여 로컬 단골 환자 및 고객의 친밀도를 확보합니다.</p>
-          </div>
-
-          <div class="gbr-promo">
-            <div class="gp-text">
-              <strong>내 병원/업체에 딱 맞는 추천 노선은?</strong>
-              <span>빅데이터 기반 1:1 맞춤 노선 믹스를 무료로 분석해 드립니다.</span>
+            <div class="drg-card" data-cat="main">
+              <span class="drgc-badge blue">간선</span>
+              <strong>봉선37, 일곡28, 첨단30</strong>
+              <p>봉선동 학원가, 일곡지구, 첨단산단 핵심 주거 라인</p>
             </div>
-            <a href="/board/estmate/write.php" class="gp-btn">노선 무료 분석 신청 →</a>
+            <div class="drg-card" data-cat="feeder">
+              <span class="drgc-badge green">지선</span>
+              <strong>수완12, 첨단20, 용봉83</strong>
+              <p>골목 상권, 병·의원, 마트 밀집지 밀착 운행</p>
+            </div>
           </div>
-
         </div>
 
       </div>
@@ -276,186 +262,85 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       03 SECTION 02 : ONLINE SEO COCKPIT (DIRECT SMARTPLACE FACT)
+       03 SECTION 02 : ONLINE SEO SIMULATOR (DYNAMIC SEARCH COCKPIT)
   ============================================ -->
-  <section class="gold-sec" id="online">
-    <div class="gold-container">
+  <section class="dyn-section" id="online">
+    <div class="dyn-container">
 
-      <div class="gs-head wow fadeInUp" data-wow-duration="0.7s">
-        <div class="gs-head-left">
-          <span class="gs-kicker">02 / INTEGRATED ONLINE MARKETING &amp; SEO</span>
-          <h2 class="gs-title">네이버 스마트플레이스 1위 &amp; C-Rank 바이럴</h2>
-          <p class="gs-desc">
-            버스를 보고 검색한 잠재 고객이 실제로 찾아오도록, 로컬 검색 1페이지 상위 노출과 고품질 리뷰 자산을 구축합니다.
-          </p>
-        </div>
-        <div class="gs-head-right">
-          <button type="button" class="gs-guide-btn bus-guide-open" data-guide="guideOnline">
-            <span>온라인 전략 가이드 확인 ↗</span>
-          </button>
-        </div>
+      <div class="ds-head-box wow fadeInUp" data-wow-duration="0.7s">
+        <span class="ds-num-tag">02 / LIVE SEO COCKPIT</span>
+        <h2 class="ds-title">네이버 스마트플레이스 1위 &amp; 키워드 검색 시뮬레이터</h2>
+        <p class="ds-desc">원하는 업종 키워드를 클릭하면 실제 상위 노출 랭킹과 예약 전환 데이터가 실시간으로 연동됩니다.</p>
       </div>
 
-      <!-- COCKPIT ROW -->
-      <div class="gs-online-cockpit wow fadeInUp" data-wow-duration="0.8s">
+      <!-- DYNAMIC SEARCH COCKPIT -->
+      <div class="dyn-seo-cockpit wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- LEFT: REAL SMARTPLACE CARD -->
-        <div class="goc-mockup">
-          <div class="gom-search">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <span>광주 상무지구 안과 / 수완지구 학원</span>
-          </div>
+        <!-- KEYWORD SELECTOR STRIP -->
+        <div class="dsc-kw-strip">
+          <span class="dks-label">빠른 업종 시뮬레이션:</span>
+          <button type="button" class="dks-btn on" data-kw="광주 상무지구 안과" data-rank="1" data-review="2,840+" data-calls="480">광주 상무지구 안과</button>
+          <button type="button" class="dks-btn" data-kw="광주 수완지구 치과" data-rank="1" data-review="1,920+" data-calls="390">광주 수완지구 치과</button>
+          <button type="button" class="dks-btn" data-kw="광주 첨단 피부과" data-rank="1" data-review="2,450+" data-calls="510">광주 첨단 피부과</button>
+          <button type="button" class="dks-btn" data-kw="광주 봉선동 입시학원" data-rank="1" data-review="1,240+" data-calls="320">광주 봉선동 입시학원</button>
+        </div>
+
+        <div class="dsc-cockpit-grid">
           
-          <div class="gom-card">
-            <div class="gom-badge-row">
-              <span class="gom-rank">#1 네이버 스마트플레이스 1위 랭크</span>
-              <span class="gom-live">LIVE</span>
+          <!-- LEFT: LIVE SEARCH MOCKUP -->
+          <div class="dsm-frame">
+            <div class="dsm-search-bar">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <span id="dynKwText">광주 상무지구 안과</span>
             </div>
-            <h3 class="gom-name">가온엔 파트너스 병원 · 브랜드</h3>
-            <div class="gom-rating">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <strong>5.0</strong>
-              <span>(방문자 영수증 리뷰 2,480+)</span>
-            </div>
-            <p class="gom-addr">광주광역시 서구 상무중앙로 · 진료중 / 영업중</p>
-            <div class="gom-btns">
-              <span class="gb-btn blue">네이버 예약 (월 420건)</span>
-              <span class="gb-btn">전화 문의</span>
-              <span class="gb-btn">길찾기</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- RIGHT: 3 CLEAR SERVICES -->
-        <div class="goc-services">
-          <div class="gos-item">
-            <div class="gos-num">01</div>
-            <div class="gos-body">
-              <h4>스마트플레이스 1위 세팅</h4>
-              <p>'진료과목/업종 + 광주/상무/수완/첨단/봉선' 로컬 키워드 알고리즘을 최적화하여 1페이지 지도 상위에 안착시킵니다.</p>
-            </div>
-          </div>
-
-          <div class="gos-item">
-            <div class="gos-num">02</div>
-            <div class="gos-body">
-              <h4>C-Rank 브랜드 블로그 &amp; 맘카페</h4>
-              <p>의료법 100% 사전 법무 검수를 거친 전문 칼럼과 광주 대표 맘카페 바이럴로 실질적 내방 신뢰를 구축합니다.</p>
-            </div>
-          </div>
-
-          <div class="gos-item">
-            <div class="gos-num">03</div>
-            <div class="gos-body">
-              <h4>SNS 릴스 &amp; 당근 로컬 타깃</h4>
-              <p>매장 반경 1~3km 로컬 거주민과 인스타그램 숏폼 영상 광고를 결합하여 즉각적인 문의 콜을 유도합니다.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- KPI STRIP -->
-      <div class="gs-kpi-strip">
-        <div class="gk-col">
-          <span class="gk-lbl">TARGET GOAL</span>
-          <strong class="gk-val">지도 TOP 3</strong>
-          <p class="gk-sub">네이버 스마트플레이스 1페이지 상위 안착</p>
-        </div>
-        <div class="gk-col">
-          <span class="gk-lbl">CONVERSION RATE</span>
-          <strong class="gk-val">+320%</strong>
-          <p class="gk-sub">월간 유입 전화 및 네이버 예약 증가율</p>
-        </div>
-        <div class="gk-col">
-          <span class="gk-lbl">LEGAL COMPLIANCE</span>
-          <strong class="gk-val">의료법 100%</strong>
-          <p class="gk-sub">사전 광고 심의 및 과장 표현 원천 차단</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================
-       04 SECTION 03 : 4K VIDEO DUAL STUDIO (ZERO FLUFF)
-  ============================================ -->
-  <section class="gold-sec gold-bg-slate" id="video">
-    <div class="gold-container">
-
-      <div class="gs-head wow fadeInUp" data-wow-duration="0.7s">
-        <div class="gs-head-left">
-          <span class="gs-kicker">03 / 4K VIDEO PRODUCTION</span>
-          <h2 class="gs-title">4K 기업 홍보영상 · TV CF · SNS 숏폼 제작</h2>
-          <p class="gs-desc">
-            기획 콘티부터 4K 촬영, 전문 성우 더빙, 모션그래픽 편집까지 14일 이내 원스톱 납품을 보장합니다.
-          </p>
-        </div>
-        <div class="gs-head-right">
-          <button type="button" class="gs-guide-btn bus-guide-open" data-guide="guideVideo">
-            <span>영상 제작 가이드 확인 ↗</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- DUAL VIDEO CANVAS -->
-      <div class="gs-video-dual wow fadeInUp" data-wow-duration="0.8s">
-        
-        <!-- WIDE 16:9 CINEMA -->
-        <div class="gvd-wide">
-          <video autoplay muted loop playsinline class="gvd-video">
-            <source src="/images/movie.mp4" type="video/mp4">
-          </video>
-          <div class="gvd-scrim"></div>
-          <div class="gvd-info">
-            <span class="gvd-tag">4K BRAND FILM</span>
-            <h3>기업 · 상급병원 4K 시네마틱 홍보영상</h3>
-            <p>Sony FX Cinema 풀프레임 &amp; 4K 항공 드론 촬영으로 최상의 완성도를 제공합니다.</p>
-          </div>
-        </div>
-
-        <!-- 9:16 PHONE MOCKUP -->
-        <div class="gvd-phone">
-          <div class="gvp-screen">
-            <video autoplay muted loop playsinline class="gvp-video">
-              <source src="/images/movie_mo.mp4" type="video/mp4" onerror="this.src='/images/movie.mp4';">
-            </video>
-            <div class="gvp-overlay">
-              <span class="gvp-tag">9:16 SNS 릴스 &amp; 쇼츠</span>
-              <div class="gvp-stats">
-                <span>❤️ 24.8K</span>
-                <span>💬 1.2K</span>
-                <span>↗ 5.6K</span>
+            
+            <div class="dsm-place-box">
+              <div class="dpb-header">
+                <span class="dpb-rank" id="dynRankBadge">#1 네이버 스마트플레이스 1위</span>
+                <span class="dpb-live-badge">LIVE 랭킹</span>
+              </div>
+              <h3 class="dpb-title">가온엔 파트너스 병원 · 브랜드</h3>
+              <div class="dpb-rating">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <strong>5.0</strong>
+                <span id="dynReviewCount">(방문자 영수증 리뷰 2,840+)</span>
+              </div>
+              <p class="dpb-addr">광주광역시 서구 상무중앙로 · 진료중 / 영업중</p>
+              <div class="dpb-action-strip">
+                <span class="das-btn blue" id="dynCallCount">네이버 예약 (월 480건)</span>
+                <span class="das-btn">전화 문의</span>
+                <span class="das-btn">길찾기</span>
               </div>
             </div>
           </div>
+
+          <!-- RIGHT: 3 CORE STRATEGIES -->
+          <div class="dsm-strategy-col">
+            <div class="dstrat-card">
+              <div class="dst-num">01</div>
+              <div class="dst-body">
+                <h4>스마트플레이스 1위 최적화</h4>
+                <p>'진료과목/업종 + 광주/상무/수완/첨단/봉선' 로컬 키워드 알고리즘을 100% 최적화하여 1페이지 지도 상위에 안착시킵니다.</p>
+              </div>
+            </div>
+            <div class="dstrat-card">
+              <div class="dst-num">02</div>
+              <div class="dst-body">
+                <h4>C-Rank &amp; DIA+ 브랜드 블로그</h4>
+                <p>의료법 사전 법무 검수를 통과한 월 8~12편의 고품질 정보성 칼럼으로 환자들의 높은 신뢰를 구축합니다.</p>
+              </div>
+            </div>
+            <div class="dstrat-card">
+              <div class="dst-num">03</div>
+              <div class="dst-body">
+                <h4>SNS 릴스 &amp; 당근 로컬 비즈니스</h4>
+                <p>병원 반경 1~3km 지역 거주민을 정밀 타깃팅하여 즉각적인 문의 전화와 예약 전환을 만들어냅니다.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-      </div>
-
-      <!-- 4 CRISP VIDEO PRODUCTS -->
-      <div class="gs-products-strip">
-        <div class="gsp-card">
-          <span class="gsp-num">01</span>
-          <h4>기업·병원 브랜드 필름</h4>
-          <p>홈페이지 및 공식 채널용 풀프레임 4K 촬영 + 드론 + 성우 더빙</p>
-        </div>
-        <div class="gsp-card">
-          <span class="gsp-num">02</span>
-          <h4>TV CF · 극장 광고</h4>
-          <p>15초/30초 고임팩트 스토리텔링 및 2D/3D 모션그래픽 제작</p>
-        </div>
-        <div class="gsp-card">
-          <span class="gsp-num">03</span>
-          <h4>SNS 릴스 · 유튜브 쇼츠</h4>
-          <p>모바일 9:16 세로형 숏폼 영상으로 높은 바이럴 도달 달성</p>
-        </div>
-        <div class="gsp-card">
-          <span class="gsp-num">04</span>
-          <h4>DID 전광판 모션그래픽</h4>
-          <p>옥외 고휘도 스크린에 최적화된 15초 풀HD 고시인성 모션</p>
-        </div>
       </div>
 
     </div>
@@ -463,78 +348,138 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       05 SECTION 04 : SPECIALIZED OOH (4-QUADRANT MAGAZINE)
+       04 SECTION 03 : 4K VIDEO STUDIO (DYNAMIC FORMAT SWITCHER)
   ============================================ -->
-  <section class="gold-sec" id="other">
-    <div class="gold-container">
+  <section class="dyn-section dyn-bg-slate" id="video">
+    <div class="dyn-container">
 
-      <div class="gs-head wow fadeInUp" data-wow-duration="0.7s">
-        <div class="gs-head-left">
-          <span class="gs-kicker">04 / SPECIALIZED OOH MEDIA</span>
-          <h2 class="gs-title">택시 · 택배 · 대형마트 · DID 특화 옥외매체</h2>
-          <p class="gs-desc">
-            골목길을 누비는 택시·택배차량부터 마트 쇼핑카트, 관공서 DID까지 타깃별 맞춤 옥외광고를 제공합니다.
-          </p>
-        </div>
-        <div class="gs-head-right">
-          <button type="button" class="gs-guide-btn bus-guide-open" data-guide="guideTaxiDelivery">
-            <span>특화 매체 실측표 확인 ↗</span>
-          </button>
-        </div>
+      <div class="ds-head-box wow fadeInUp" data-wow-duration="0.7s">
+        <span class="ds-num-tag">03 / 4K PRODUCTION STUDIO</span>
+        <h2 class="ds-title">4K 시네마틱 홍보영상 &amp; 9:16 모바일 숏폼 스튜디오</h2>
+        <p class="ds-desc">화면 비율 모드를 전환하여 16:9 와이드 영상과 9:16 모바일 숏폼의 실시간 퀄리티를 확인하세요.</p>
       </div>
 
-      <!-- 4-QUADRANT GRID -->
-      <div class="gs-quad-grid wow fadeInUp" data-wow-duration="0.8s">
+      <!-- VIDEO STUDIO DUAL CONSOLE -->
+      <div class="dyn-video-console wow fadeInUp" data-wow-duration="0.8s">
         
-        <div class="gq-card">
-          <div class="gq-img">
-            <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="택시 래핑 광고">
-            <span class="gq-chip">24시간 상시 운행</span>
+        <!-- FORMAT SWITCH BUTTONS -->
+        <div class="dvc-mode-bar">
+          <button type="button" class="dvc-mode-btn on" data-video-mode="wide">16:9 와이드 시네마 모드</button>
+          <button type="button" class="dvc-mode-btn" data-video-mode="shorts">9:16 SNS 릴스/숏폼 모드</button>
+        </div>
+
+        <div class="dvc-player-grid">
+          
+          <!-- MAIN VIDEO DISPLAY -->
+          <div class="dvc-display-frame" id="dynVideoFrame">
+            <video autoplay muted loop playsinline class="dvc-video-element" id="dynMainVideo">
+              <source src="/images/movie.mp4" type="video/mp4">
+            </video>
+            <div class="dvc-video-scrim"></div>
+            
+            <div class="dvc-video-caption">
+              <span class="dvc-tag" id="dynVideoTag">16:9 4K BRAND FILM</span>
+              <h3 id="dynVideoTitle">기업 · 상급병원 4K 시네마틱 브랜드 필름</h3>
+              <p id="dynVideoSub">Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 더빙</p>
+            </div>
           </div>
-          <div class="gq-body">
-            <span class="gq-num">01 / MOBILITY</span>
-            <h3>법인 · 개인택시 양측면 래핑</h3>
-            <p>광주 전역 200여 대 차량이 주요 번화가와 골목길까지 24시간 연속 운행하며 보행자 시선에 밀착 노출됩니다.</p>
-            <div class="gq-meta">실측 규격: 2,100 × 320 mm | 24시간 상시 기동</div>
+
+          <!-- 4 CLEAR DELIVERABLES -->
+          <div class="dvc-products-list">
+            <div class="dvp-item on" data-target-mode="wide">
+              <span class="dvp-idx">01</span>
+              <div>
+                <strong>기업·병원 브랜드 필름 (3~5분)</strong>
+                <p>홈페이지 메인 및 공식 채널용 최고급 4K 홍보영상</p>
+              </div>
+            </div>
+            <div class="dvp-item" data-target-mode="wide">
+              <span class="dvp-idx">02</span>
+              <div>
+                <strong>TV CF · 극장 광고 (15/30초)</strong>
+                <p>고임팩트 스토리텔링 &amp; 2D/3D 모션그래픽 제작</p>
+              </div>
+            </div>
+            <div class="dvp-item" data-target-mode="shorts">
+              <span class="dvp-idx">03</span>
+              <div>
+                <strong>SNS 릴스 · 유튜브 쇼츠 (9:16)</strong>
+                <p>모바일 최적화 세로형 숏폼 바이럴 영상</p>
+              </div>
+            </div>
+            <div class="dvp-item" data-target-mode="wide">
+              <span class="dvp-idx">04</span>
+              <div>
+                <strong>DID 전광판 모션그래픽 (15초)</strong>
+                <p>옥외 고휘도 스크린 전용 15초 풀HD 고시인성 모션</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       05 SECTION 04 : SPECIALIZED OOH ACCORDION (DYNAMIC HOVER)
+  ============================================ -->
+  <section class="dyn-section" id="other">
+    <div class="dyn-container">
+
+      <div class="ds-head-box wow fadeInUp" data-wow-duration="0.7s">
+        <span class="ds-num-tag">04 / SPECIALIZED OOH MEDIA</span>
+        <h2 class="ds-title">택시 · 택배 · 대형마트 · DID 4대 특화 매체</h2>
+        <p class="ds-desc">마우스를 올려 각 매체의 실측 규격과 일일 노출 시간을 확인하세요.</p>
+      </div>
+
+      <!-- DYNAMIC INTERACTIVE ACCORDION GRID -->
+      <div class="dyn-ooh-accordion wow fadeInUp" data-wow-duration="0.8s">
+        
+        <div class="doa-card on">
+          <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="택시 래핑 광고">
+          <div class="doa-scrim"></div>
+          <div class="doa-content">
+            <span class="doa-kicker">01 / MOBILITY</span>
+            <h3>택시 양측면 래핑</h3>
+            <p>광주 전역 200여 대 차량이 주요 번화가와 골목길을 24시간 누비며 보행자 눈높이에 밀착 노출됩니다.</p>
+            <div class="doa-spec">규격: 2,100 × 320 mm | 24시간 상시 운행</div>
           </div>
         </div>
 
-        <div class="gq-card">
-          <div class="gq-img">
-            <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="택배차량 래핑 광고">
-            <span class="gq-chip">아파트 10시간 체류</span>
-          </div>
-          <div class="gq-body">
-            <span class="gq-num">02 / LOGISTICS</span>
-            <h3>택배 탑차 3면 와이드 래핑</h3>
-            <p>광주 5개 구 아파트 단지와 주택가 골목길에 매일 10시간 이상 정차하며 주민들의 일상 동선에 자연스럽게 노출됩니다.</p>
-            <div class="gq-meta">실측 규격: 양면 3,000×1,500 + 후면 | 1일 10시간 체류</div>
+        <div class="doa-card">
+          <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="택배차량 래핑 광고">
+          <div class="doa-scrim"></div>
+          <div class="doa-content">
+            <span class="doa-kicker">02 / LOGISTICS</span>
+            <h3>택배 탑차 3면 래핑</h3>
+            <p>광주 5개 구 아파트 단지와 주택가 골목길에 매일 10시간 이상 정차하는 움직이는 초대형 빌보드입니다.</p>
+            <div class="doa-spec">규격: 양면 3,000×1,500 + 후면 | 1일 10시간 체류</div>
           </div>
         </div>
 
-        <div class="gq-card">
-          <div class="gq-img">
-            <img src="/images/sub_bg_d.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="대형마트 쇼핑카트 광고">
-            <span class="gq-chip">주부 고객 60분 동행</span>
-          </div>
-          <div class="gq-body">
-            <span class="gq-num">03 / RETAIL</span>
-            <h3>대형마트 쇼핑카트 &amp; 무빙워크</h3>
-            <p>이마트, 롯데마트 1,000여 대 카트 손잡이 정면에 위치하여 실질적 구매 결정권을 가진 주부 및 가족 고객과 60분간 동행합니다.</p>
-            <div class="gq-meta">실측 규격: 280 × 160 mm | 쇼핑 1회당 60분 주시</div>
+        <div class="doa-card">
+          <img src="/images/sub_bg_d.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="대형마트 쇼핑카트">
+          <div class="doa-scrim"></div>
+          <div class="doa-content">
+            <span class="doa-kicker">03 / RETAIL</span>
+            <h3>대형마트 쇼핑카트</h3>
+            <p>이마트, 롯데마트 1,000여 대 카트 손잡이 정면에 위치하여 실질적 구매권을 가진 주부 고객과 60분간 동행합니다.</p>
+            <div class="doa-spec">규격: 280 × 160 mm | 쇼핑 1회당 60분 주시</div>
           </div>
         </div>
 
-        <div class="gq-card">
-          <div class="gq-img">
-            <img src="/images/sub_bg_e.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="DID 디지털 전광판">
-            <span class="gq-chip">UHD 초고화질</span>
-          </div>
-          <div class="gq-body">
-            <span class="gq-num">04 / DIGITAL</span>
-            <h3>DID 전자현수막 &amp; 도심 전광판</h3>
-            <p>유스퀘어 터미널, 지하철 환승역, 관공서 로비에 고휘도 55~85인치 UHD 스크린으로 15~20초 영상을 하루 100회 이상 송출합니다.</p>
-            <div class="gq-meta">실측 규격: 55~85" UHD 패널 | 일 100회 이상 송출</div>
+        <div class="doa-card">
+          <img src="/images/sub_bg_e.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="DID 디지털 전광판">
+          <div class="doa-scrim"></div>
+          <div class="doa-content">
+            <span class="doa-kicker">04 / DIGITAL</span>
+            <h3>DID 디지털 전광판</h3>
+            <p>유스퀘어 터미널, 지하철 환승역, 관공서 로비에 고휘도 55~85" UHD 스크린으로 15초 영상을 하루 100회 이상 송출합니다.</p>
+            <div class="doa-spec">규격: 55~85" UHD 패널 | 일 100회 이상 송출</div>
           </div>
         </div>
 
@@ -545,51 +490,50 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       06 MASTER PORTFOLIO ARCHIVE (ALL-IN-ONE SINGLE DECK)
+       06 ALL-IN-ONE MASTER PORTFOLIO ARCHIVE
   ============================================ -->
-  <section class="gold-sec gold-bg-slate" id="archive">
-    <div class="gold-container">
+  <section class="dyn-section dyn-bg-slate" id="archive">
+    <div class="dyn-container">
 
-      <div class="gs-head wow fadeInUp" data-wow-duration="0.7s">
-        <div class="gs-head-left">
-          <span class="gs-kicker">ALL-IN-ONE MASTER ARCHIVE</span>
-          <h2 class="gs-title">성공 광고 집행 사례 포트폴리오</h2>
-          <p class="gs-desc">카테고리별 탭을 클릭하여 고화질 실사 사례를 확인하고, 원하는 믹스의 견적을 즉시 문의하세요.</p>
-        </div>
-        <div class="gs-filters">
-          <button type="button" class="gsf-btn on" data-filter="all">전체보기</button>
-          <button type="button" class="gsf-btn" data-filter="bus">시내버스</button>
-          <button type="button" class="gsf-btn" data-filter="online">온라인 SEO</button>
-          <button type="button" class="gsf-btn" data-filter="video">4K 영상</button>
-          <button type="button" class="gsf-btn" data-filter="taxi">택시·택배</button>
-          <button type="button" class="gsf-btn" data-filter="mart">마트·DID</button>
+      <div class="ds-head-box wow fadeInUp" data-wow-duration="0.7s">
+        <span class="ds-num-tag">ALL-IN-ONE ARCHIVE</span>
+        <h2 class="ds-title">성공 광고 집행 사례 포트폴리오</h2>
+        <p class="ds-desc">카테고리 탭을 클릭하여 고화질 실사 사례를 확인하고, 즉시 1:1 맞춤 견적을 문의하세요.</p>
+        
+        <div class="dyn-filter-bar">
+          <button type="button" class="dfb-btn on" data-filter="all">전체보기</button>
+          <button type="button" class="dfb-btn" data-filter="bus">시내버스</button>
+          <button type="button" class="dfb-btn" data-filter="online">온라인 SEO</button>
+          <button type="button" class="dfb-btn" data-filter="video">4K 영상</button>
+          <button type="button" class="dfb-btn" data-filter="taxi">택시·택배</button>
+          <button type="button" class="dfb-btn" data-filter="mart">마트·DID</button>
         </div>
       </div>
 
       <!-- MASTER GRID -->
-      <div class="gs-master-grid wow fadeInUp" data-wow-duration="0.8s" id="masterPortGrid">
+      <div class="dyn-port-grid wow fadeInUp" data-wow-duration="0.8s" id="masterPortGrid">
         <?php foreach (array_slice($list, 0, 8) as $item): ?>
-        <div class="gsm-card main-port-card" data-cat="<?php echo htmlspecialchars($item['category']); ?>" data-id="<?php echo (int)$item['id']; ?>" data-name="<?php echo htmlspecialchars($item['title']); ?>">
-          <div class="gsmc-thumb">
+        <div class="dpg-card main-port-card" data-cat="<?php echo htmlspecialchars($item['category']); ?>" data-id="<?php echo (int)$item['id']; ?>" data-name="<?php echo htmlspecialchars($item['title']); ?>">
+          <div class="dpg-thumb">
             <?php if (!empty($item['thumb'])): ?>
             <img src="<?php echo htmlspecialchars($item['thumb']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
             <?php else: ?>
-            <div class="gsmc-empty">이미지 준비 중</div>
+            <div class="dpg-empty">이미지 준비 중</div>
             <?php endif; ?>
-            <div class="gsmc-scrim"></div>
-            <span class="gsmc-tag"><?php echo isset($categories[$item['category']]) ? $categories[$item['category']] : '광고사례'; ?></span>
-            <div class="gsmc-hover-btn">상세보기 &amp; 견적조회 ↗</div>
+            <div class="dpg-scrim"></div>
+            <span class="dpg-tag"><?php echo isset($categories[$item['category']]) ? $categories[$item['category']] : '광고사례'; ?></span>
+            <div class="dpg-hover-btn">상세보기 &amp; 견적조회 ↗</div>
           </div>
-          <div class="gsmc-info">
-            <span class="gsmc-cat"><?php echo isset($categories[$item['category']]) ? $categories[$item['category']] : '광고집행'; ?></span>
-            <strong class="gsmc-title"><?php echo htmlspecialchars($item['title']); ?></strong>
+          <div class="dpg-info">
+            <span class="dpg-cat"><?php echo isset($categories[$item['category']]) ? $categories[$item['category']] : '광고집행'; ?></span>
+            <strong class="dpg-title"><?php echo htmlspecialchars($item['title']); ?></strong>
           </div>
         </div>
         <?php endforeach; ?>
       </div>
 
-      <div class="gs-more-box">
-        <a href="/portfolio.php" class="gs-more-btn">
+      <div class="dyn-more-box">
+        <a href="/portfolio.php" class="dyn-more-btn">
           <span>포트폴리오 전체 100+ 사례 더보기</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
@@ -600,54 +544,52 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       07 WORKFLOW : 4-STEP PIPELINE
+       07 4-STEP MASTER PIPELINE
   ============================================ -->
-  <section class="gold-sec" id="process">
-    <div class="gold-container">
-      <div class="gs-head text-center wow fadeInUp" data-wow-duration="0.7s">
-        <div class="gs-head-left" style="max-width:720px; margin:0 auto;">
-          <span class="gs-kicker">WORKFLOW PIPELINE</span>
-          <h2 class="gs-title">가온엔 4단계 원스톱 마스터플랜</h2>
-          <p class="gs-desc">외주 대행 없는 100% 본사 인하우스 전문팀이 전 과정을 책임지고 전담합니다.</p>
-        </div>
+  <section class="dyn-section" id="process">
+    <div class="dyn-container">
+      <div class="ds-head-box text-center wow fadeInUp" data-wow-duration="0.7s">
+        <span class="ds-num-tag">WORKFLOW PIPELINE</span>
+        <h2 class="ds-title">가온엔 4단계 원스톱 책임 마스터플랜</h2>
+        <p class="ds-desc">외주 없는 100% 본사 인하우스 전문팀이 기획부터 시공, 보고까지 책임집니다.</p>
       </div>
 
-      <div class="gs-process-grid wow fadeInUp" data-wow-duration="0.8s">
+      <div class="dyn-process-grid wow fadeInUp" data-wow-duration="0.8s">
         
-        <div class="gsp-proc-card">
-          <div class="gpc-top">
-            <span class="gpc-num">01</span>
-            <span class="gpc-milestone">D+1</span>
+        <div class="dp-step-card">
+          <div class="dps-top">
+            <span class="dps-num">01</span>
+            <span class="dps-day">D+1</span>
           </div>
-          <h3 class="gpc-title">상권 분석 &amp; 노선 믹스</h3>
-          <p class="gpc-desc">병원, 학원, 기업의 주 타깃 고객 동선을 정밀 분석하여 가장 효과적인 노선과 온·오프라인 미디어를 제안합니다.</p>
+          <h3>상권 분석 &amp; 노선 믹스</h3>
+          <p>병원, 학원, 기업의 주 타깃 고객 동선을 정밀 분석하여 최적의 노선과 매체를 제안합니다.</p>
         </div>
 
-        <div class="gsp-proc-card">
-          <div class="gpc-top">
-            <span class="gpc-num">02</span>
-            <span class="gpc-milestone">D+3</span>
+        <div class="dp-step-card">
+          <div class="dps-top">
+            <span class="dps-num">02</span>
+            <span class="dps-day">D+3</span>
           </div>
-          <h3 class="gpc-title">1:1 디자인 시안 기획</h3>
-          <p class="gpc-desc">도심 속에서 3초 안에 메시지가 읽히도록 가독성 높은 실사 래핑 디자인 및 4K 영상 스토리보드를 제작합니다.</p>
+          <h3>1:1 디자인 시안 기획</h3>
+          <p>도심 속에서 3초 안에 메시지가 전달되도록 가독성 높은 실사 래핑 및 영상 콘티를 제작합니다.</p>
         </div>
 
-        <div class="gsp-proc-card">
-          <div class="gpc-top">
-            <span class="gpc-num">03</span>
-            <span class="gpc-milestone">D+7</span>
+        <div class="dp-step-card">
+          <div class="dps-top">
+            <span class="dps-num">03</span>
+            <span class="dps-day">D+7</span>
           </div>
-          <h3 class="gpc-title">직영 출력 &amp; 책임 시공</h3>
-          <p class="gpc-desc">내후성 정품 솔벤 시트와 10년 이상 경력의 본사 전문 시공팀이 직접 투입되어 깔끔하게 부착합니다.</p>
+          <h3>직영 출력 &amp; 책임 시공</h3>
+          <p>내후성 정품 솔벤 시트와 10년 이상 경력의 본사 전문 시공팀이 직접 깔끔하게 부착합니다.</p>
         </div>
 
-        <div class="gsp-proc-card">
-          <div class="gpc-top">
-            <span class="gpc-num">04</span>
-            <span class="gpc-milestone">D+14</span>
+        <div class="dp-step-card">
+          <div class="dps-top">
+            <span class="dps-num">04</span>
+            <span class="dps-day">D+14</span>
           </div>
-          <h3 class="gpc-title">실시간 증빙 &amp; 리포트</h3>
-          <p class="gpc-desc">시공 직후 차량 4면 촬영본을 전송해 드리며, 온라인 노출 성과 데이터를 투명하게 공유합니다.</p>
+          <h3>실시간 증빙 &amp; 리포트</h3>
+          <p>시공 직후 차량 4면 촬영본을 전송해 드리며, 온라인 노출 성과 데이터를 투명하게 보고합니다.</p>
         </div>
 
       </div>
@@ -658,18 +600,18 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   <!-- ============================================
        08 PARTNERS MARQUEE
   ============================================ -->
-  <section class="gold-partners-sec">
-    <div class="gold-container">
-      <div class="gpt-title">TRUSTED BY INDUSTRY LEADERS</div>
+  <section class="dyn-partners-sec">
+    <div class="dyn-container">
+      <div class="dpt-title">TRUSTED BY INDUSTRY LEADERS</div>
     </div>
-    <div class="gpt-marquee-box">
-      <div class="gpt-track track-left">
-        <span class="gpt-chip">전남대학교병원</span><span class="gpt-chip">조선대학교병원</span><span class="gpt-chip">광주안과</span><span class="gpt-chip">센트럴치과병원</span><span class="gpt-chip">이루다어학원</span><span class="gpt-chip">중흥건설</span><span class="gpt-chip">광주도시공사</span><span class="gpt-chip">그린모빌리티</span>
-        <span class="gpt-chip">전남대학교병원</span><span class="gpt-chip">조선대학교병원</span><span class="gpt-chip">광주안과</span><span class="gpt-chip">센트럴치과병원</span><span class="gpt-chip">이루다어학원</span><span class="gpt-chip">중흥건설</span><span class="gpt-chip">광주도시공사</span><span class="gpt-chip">그린모빌리티</span>
+    <div class="dpt-marquee-box">
+      <div class="dpt-track track-left">
+        <span class="dpt-chip">전남대학교병원</span><span class="dpt-chip">조선대학교병원</span><span class="dpt-chip">광주안과</span><span class="dpt-chip">센트럴치과병원</span><span class="dpt-chip">이루다어학원</span><span class="dpt-chip">중흥건설</span><span class="dpt-chip">광주도시공사</span><span class="dpt-chip">그린모빌리티</span>
+        <span class="dpt-chip">전남대학교병원</span><span class="dpt-chip">조선대학교병원</span><span class="dpt-chip">광주안과</span><span class="dpt-chip">센트럴치과병원</span><span class="dpt-chip">이루다어학원</span><span class="dpt-chip">중흥건설</span><span class="dpt-chip">광주도시공사</span><span class="dpt-chip">그린모빌리티</span>
       </div>
-      <div class="gpt-track track-right">
-        <span class="gpt-chip">원광대한방병원</span><span class="gpt-chip">바른정형외과</span><span class="gpt-chip">법무법인 광산</span><span class="gpt-chip">드림공인중개사</span><span class="gpt-chip">홀리데이호텔</span><span class="gpt-chip">라붐웨딩홀</span><span class="gpt-chip">베비에르</span><span class="gpt-chip">봉선어학센터</span>
-        <span class="gpt-chip">원광대한방병원</span><span class="gpt-chip">바른정형외과</span><span class="gpt-chip">법무법인 광산</span><span class="gpt-chip">드림공인중개사</span><span class="gpt-chip">홀리데이호텔</span><span class="gpt-chip">라붐웨딩홀</span><span class="gpt-chip">베비에르</span><span class="gpt-chip">봉선어학센터</span>
+      <div class="dpt-track track-right">
+        <span class="dpt-chip">원광대한방병원</span><span class="dpt-chip">바른정형외과</span><span class="dpt-chip">법무법인 광산</span><span class="dpt-chip">드림공인중개사</span><span class="dpt-chip">홀리데이호텔</span><span class="dpt-chip">라붐웨딩홀</span><span class="dpt-chip">베비에르</span><span class="dpt-chip">봉선어학센터</span>
+        <span class="dpt-chip">원광대한방병원</span><span class="dpt-chip">바른정형외과</span><span class="dpt-chip">법무법인 광산</span><span class="dpt-chip">드림공인중개사</span><span class="dpt-chip">홀리데이호텔</span><span class="dpt-chip">라붐웨딩홀</span><span class="dpt-chip">베비에르</span><span class="dpt-chip">봉선어학센터</span>
       </div>
     </div>
   </section>
@@ -678,16 +620,16 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   <!-- ============================================
        09 STUDIO CONSULTATION CTA
   ============================================ -->
-  <section class="gold-cta-sec">
-    <div class="gold-container">
-      <div class="gcta-box wow fadeInUp" data-wow-duration="0.8s">
-        <div class="gcta-left">
-          <span class="gcta-kicker">START YOUR CAMPAIGN</span>
-          <h2 class="gcta-headline">광고, 이제<br><em>가온엔과 함께 제대로</em> 시작하세요.</h2>
-          <p class="gcta-sub">시내버스 옥외광고부터 스마트플레이스 SEO 검색 마케팅까지, 1:1 맞춤 견적을 신속하게 안내해 드립니다.</p>
+  <section class="dyn-cta-sec">
+    <div class="dyn-container">
+      <div class="dcta-box wow fadeInUp" data-wow-duration="0.8s">
+        <div class="dcta-left">
+          <span class="dcta-kicker">START YOUR CAMPAIGN</span>
+          <h2 class="dcta-headline">광고, 이제<br><em>가온엔과 함께 제대로</em> 시작하세요.</h2>
+          <p class="dcta-sub">시내버스 옥외광고부터 스마트플레이스 SEO 검색 마케팅까지, 1:1 맞춤 견적을 신속하게 안내해 드립니다.</p>
         </div>
-        <div class="gcta-right">
-          <a href="/board/estmate/write.php" class="gcta-btn">
+        <div class="dcta-right">
+          <a href="/board/estmate/write.php" class="dcta-btn">
             <span>맞춤 견적 상담 신청</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
