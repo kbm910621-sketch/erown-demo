@@ -285,7 +285,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       03 SECTION 02 : 온라인 마케팅 (LARGE MEDIA FRAME & DEEP PRACTICAL PILLARS)
+       03 SECTION 02 : 온라인 마케팅 (EXPANDED CHANNELS & VISUAL SYMBOLS)
   ============================================ -->
   <section class="am-section" id="online">
     <div class="am-container">
@@ -295,10 +295,10 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div>
             <span class="ash-kicker">02 / INTEGRATED DIGITAL MARKETING</span>
             <h2 class="ash-title">온라인 마케팅</h2>
-            <p class="ash-desc">시내버스 옥외광고를 본 소비자가 네이버 검색 시 실제 내방 환자 및 결제 고객으로 전환되는 4대 실무 솔루션입니다.</p>
+            <p class="ash-desc">네이버 플레이스 1위부터 블로그, 맘카페, 인스타 스폰서드, 구글 GDN, 틱톡 숏폼까지 매출로 직결되는 통합 솔루션입니다.</p>
           </div>
           <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideOnline">
-            <span>온라인 4대 실무 전략 가이드 ↗</span>
+            <span>온라인 전체 채널 가이드 ↗</span>
           </button>
         </div>
       </div>
@@ -310,113 +310,98 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="aoh-scrim"></div>
           <div class="aoh-badge-float">
             <span class="abf-dot"></span>
-            <span>NAVER PLACE #1 &amp; C-RANK INTEGRATION</span>
+            <span>NAVER · GOOGLE · INSTAGRAM · TIKTOK INTEGRATED</span>
           </div>
           <div class="aoh-content-bottom">
-            <h3>검색 1위 상위노출부터 의료법 안심 바이럴까지</h3>
-            <p>스마트플레이스 1위 세팅 + C-Rank 브랜드 블로그 + 광주 맘카페 입소문 + SNS 릴스 반경 타깃팅을 원스톱 통합 실행합니다.</p>
+            <h3>검색 1위 상위노출부터 맘카페 바이럴 &amp; SNS 스폰서드까지</h3>
+            <p>스마트플레이스 + C-Rank 블로그 + 맘카페 + 인스타/당근 + 구글 GDN + 틱톡 숏폼을 원스톱 통합 실행합니다.</p>
           </div>
         </div>
       </div>
 
-      <!-- PRACTICAL DIGITAL MARKETING 4 PILLARS (DEEP CONTENT) -->
+      <!-- PRACTICAL DIGITAL MARKETING 4 CHANNELS (CRISP & BOLD) -->
       <div class="am-online-practical-grid wow fadeInUp" data-wow-duration="0.8s">
         
         <div class="aop-card">
           <div class="aop-top">
             <span class="aop-num">01</span>
-            <span class="aop-tag blue">1위 상위노출</span>
+            <span class="aop-tag blue">지도 1위</span>
           </div>
-          <h3 class="aop-title">네이버 스마트플레이스 1위 최적화</h3>
+          <h3 class="aop-title">스마트플레이스 1위</h3>
           <p class="aop-desc">
-            '광주+진료과목/업종' 검색 시 지도 1페이지 상단 TOP 3에 안착시킵니다. 대표 키워드 5개 세팅, 영수증 리뷰 자산화, 24시간 네이버 예약 연동을 전담합니다.
+            '광주+진료과목/업종' 검색 시 지도 1페이지 TOP 3 안착. 대표 키워드 5종 세팅, 영수증 리뷰 자산화 및 24시간 네이버 예약을 연동합니다.
           </p>
-          <div class="aop-deep-box">
-            <span class="adb-title">핵심 실행 내역:</span>
-            <ul class="aop-list">
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>로컬 1위 SEO 알고리즘 8대 평가 요소 완벽 세팅</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>실제 내방 고객 영수증 인증 리뷰 및 블로그 리뷰 빌드업</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>24시간 네이버 예약 &amp; 톡톡 실시간 상담 연동</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>고화질 대표 사진 20장 &amp; 상세 진료 안내문 최적화</span></li>
-            </ul>
-          </div>
+          <div class="aop-highlight-tag">네이버 지도 1페이지 상단 노출</div>
         </div>
 
         <div class="aop-card">
           <div class="aop-top">
             <span class="aop-num">02</span>
-            <span class="aop-tag blue">의료법 100% 안심</span>
+            <span class="aop-tag blue">의료법 안심</span>
           </div>
-          <h3 class="aop-title">C-Rank 브랜드 블로그 &amp; 파워콘텐츠</h3>
+          <h3 class="aop-title">C-Rank 블로그 &amp; 맘카페</h3>
           <p class="aop-desc">
-            보건소 행정처분 위험 없는 100% 사전 법무 검수 체계. 원장님의 진료 철학과 치료 사례를 담은 월 8~12편의 전문 칼럼으로 환자의 신뢰를 확보합니다.
+            보건소 행정처분 리스크 0%의 의료법 100% 사전 법무 검수. 원장님 전문 칼럼과 광주맘스홀릭 침투 바이럴로 압도적 신뢰를 구축합니다.
           </p>
-          <div class="aop-deep-box">
-            <span class="adb-title">핵심 실행 내역:</span>
-            <ul class="aop-list">
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>치료 전후 사진 규정 및 의료법 제56조 100% 사전 검수</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>원장님 진료 철학 기반 월 8~12편 전문 의료/업종 칼럼</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>네이버 스마트블록 &amp; 뷰탭 1페이지 상단 고정 점유</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>단순 노출을 넘어 실제 내원 결심을 이끄는 전문 필력</span></li>
-            </ul>
-          </div>
+          <div class="aop-highlight-tag">월 8~12편 전문 칼럼 &amp; 맘카페 후기</div>
         </div>
 
         <div class="aop-card">
           <div class="aop-top">
             <span class="aop-num">03</span>
-            <span class="aop-tag green">지역 여론 형성</span>
+            <span class="aop-tag green">로컬 타깃</span>
           </div>
-          <h3 class="aop-title">광주 대표 맘카페 &amp; 커뮤니티 바이럴</h3>
+          <h3 class="aop-title">인스타 스폰서드 &amp; 당근</h3>
           <p class="aop-desc">
-            광주맘스홀릭, 광주맘수다방 등 대표 맘카페 및 당근 동네생활에서 억지 광고가 아닌 자연스러운 내방 후기와 추천 여론을 형성합니다.
+            병원/매장 반경 1~3km 내 실제 거주 3050 핵심 세대원 타깃. 인스타그램 피드/스토리 스폰서드와 당근마켓 로컬 광고로 문의를 폭발시킵니다.
           </p>
-          <div class="aop-deep-box">
-            <span class="adb-title">핵심 실행 내역:</span>
-            <ul class="aop-list">
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>광주/전남 대표 맘카페 실유저 기반 자연스러운 추천 후기</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>당근마켓 동네생활 및 지역 커뮤니티 실시간 침투 바이럴</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>지역 학부모 및 3050 주부 타깃 신뢰 여론 100% 형성</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>악성 댓글 및 브랜드 평판 24시간 실시간 모니터링</span></li>
-            </ul>
-          </div>
+          <div class="aop-highlight-tag">반경 1~3km 정밀 세대원 타깃팅</div>
         </div>
 
         <div class="aop-card">
           <div class="aop-top">
             <span class="aop-num">04</span>
-            <span class="aop-tag gold">초정밀 로컬 타깃</span>
+            <span class="aop-tag gold">글로벌·숏폼</span>
           </div>
-          <h3 class="aop-title">SNS 릴스 &amp; 당근 반경 1~3km 광고</h3>
+          <h3 class="aop-title">구글 GDN &amp; 틱톡 숏폼</h3>
           <p class="aop-desc">
-            병원/매장 반경 1~3km 이내의 실제 거주 세대원만을 정밀 타깃팅하여 광고비 낭비 없이 인스타그램 숏폼 영상과 당근마켓 피드로 문의를 폭발시킵니다.
+            구글 검색/디스플레이 네트워크(GDN) 정밀 리타깃팅과 틱톡 세로형 9:16 바이럴 영상 광고로 2030 영타깃 및 광역 고객을 완벽 흡수합니다.
           </p>
-          <div class="aop-deep-box">
-            <span class="adb-title">핵심 실행 내역:</span>
-            <ul class="aop-list">
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>내 병원/매장 반경 1~3km 로컬 세대원 정밀 타깃팅</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>첫 3초 시선 장악 9:16 인스타그램 세로형 숏폼 제작</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>당근마켓 피드 및 검색 배너 광고 통합 집행</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>주간 클릭률(CTR), 전환수, 유입 콜 수 투명 리포트</span></li>
-            </ul>
-          </div>
+          <div class="aop-highlight-tag">구글 검색 키워드 + 틱톡 숏폼 바이럴</div>
         </div>
 
       </div>
 
-      <!-- ROI GUARANTEE STRIP -->
-      <div class="am-online-guarantee-strip">
-        <div class="aog-item">
-          <strong>의료법 100% 준수 보증</strong>
-          <span>허위·과장 표현 원천 차단으로 행정처분 위험 0%</span>
+      <!-- VISUAL SYMBOL ASSURANCE DECK -->
+      <div class="am-online-guarantee-deck wow fadeInUp" data-wow-duration="0.8s">
+        <div class="aog-card">
+          <div class="aog-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+          </div>
+          <div class="aog-body">
+            <strong>의료법 100% 준수 보증</strong>
+            <span>허위·과장 표현 원천 차단으로 행정처분 및 보건소 리스크 0%</span>
+          </div>
         </div>
-        <div class="aog-item">
-          <strong>주간 순위 투명 리포트</strong>
-          <span>플레이스 순위, 검색 키워드 유입수 매주 보고</span>
+
+        <div class="aog-card">
+          <div class="aog-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="aog-body">
+            <strong>주간 순위 투명 리포트</strong>
+            <span>플레이스 순위, 검색 키워드 유입수, 광고 CTR 매주 투명 보고</span>
+          </div>
         </div>
-        <div class="aog-item">
-          <strong>1:1 전담 마케팅 디렉터</strong>
-          <span>외주 대행 없는 본사 전담팀의 실시간 피드백</span>
+
+        <div class="aog-card">
+          <div class="aog-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+          </div>
+          <div class="aog-body">
+            <strong>1:1 전담 마케팅 디렉터</strong>
+            <span>외주 대행 없는 본사 인하우스 전담팀의 실시간 피드백 책임제</span>
+          </div>
         </div>
       </div>
 
@@ -425,7 +410,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       04 SECTION 03 : 영상제작 (CINEMATIC DARK PRODUCTION STUDIO)
+       04 SECTION 03 : 영상제작 (CINEMATIC DARK PRODUCTION & BIG WORKFLOW)
   ============================================ -->
   <section class="am-section am-bg-dark" id="video">
     <div class="am-container">
@@ -468,7 +453,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             </div>
           </div>
 
-          <!-- 4 DETAILED DELIVERABLES -->
+          <!-- 4 DELIVERABLES (BIG HEADLINES) -->
           <div class="avc-products-col">
             
             <div class="avp-card on" data-target-mode="wide"
@@ -476,8 +461,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                  data-vsub="Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 더빙">
               <span class="avp-idx">01</span>
               <div>
-                <strong>기업 · 상급병원 브랜드 필름 (3~5분)</strong>
-                <p>홈페이지 메인 및 공식 채널에 최적화된 최고급 4K 홍보영상으로 Sony FX Cinema 풀프레임 카메라와 국토부 승인 4K 항공 드론으로 기업의 품격을 완성합니다.</p>
+                <strong class="avp-big-title">기업 · 상급병원 브랜드 필름 (3~5분)</strong>
+                <p>Sony FX Cinema 풀프레임 카메라와 국토부 승인 4K 항공 드론으로 완성하는 최고급 영화급 홍보영상</p>
               </div>
             </div>
 
@@ -486,8 +471,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                  data-vsub="15초/30초 고임팩트 스토리텔링 + 2D/3D 모션그래픽">
               <span class="avp-idx">02</span>
               <div>
-                <strong>TV CF · 극장 광고 (15초 / 30초)</strong>
-                <p>지상파/케이블 TV 및 CGV/메가박스 스크린에 송출되는 광고로, 짧은 시간 안에 강렬한 메시지를 각인시키는 임팩트 중심 스토리텔링을 제작합니다.</p>
+                <strong class="avp-big-title">TV CF · 극장 광고 (15초 / 30초)</strong>
+                <p>지상파/케이블 TV 및 CGV/메가박스 스크린에 송출되는 15초/30초 초압축 임팩트 스토리텔링</p>
               </div>
             </div>
 
@@ -496,8 +481,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                  data-vsub="인스타그램 릴스 + 유튜브 쇼츠 + 틱톡 최적화 바이럴">
               <span class="avp-idx">03</span>
               <div>
-                <strong>SNS 릴스 · 유튜브 쇼츠 (9:16 세로형)</strong>
-                <p>첫 3초 만에 시선을 사로잡는 빠른 컷 전환과 자막 모션그래픽으로 수만~수십만 뷰의 알고리즘 유기적 도달을 달성하는 모바일 최적화 영상입니다.</p>
+                <strong class="avp-big-title">SNS 릴스 · 틱톡 숏폼 (9:16 세로형)</strong>
+                <p>첫 3초 만에 시선을 사로잡는 빠른 컷 전환과 자막 모션그래픽으로 수만~수십만 뷰의 유기적 알고리즘 도달</p>
               </div>
             </div>
 
@@ -506,8 +491,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                  data-vsub="옥외 고휘도 스크린 전용 15초 풀HD 고시인성 모션">
               <span class="avp-idx">04</span>
               <div>
-                <strong>DID 전광판 모션그래픽 (15초 풀HD)</strong>
-                <p>유스퀘어 터미널, 지하철역, 관공서 로비 등의 고휘도 LED 전광판 환경에서 텍스트와 비주얼이 멀리서도 1초 만에 읽히는 고시인성 모션을 제작합니다.</p>
+                <strong class="avp-big-title">DID 전광판 모션그래픽 (15초 풀HD)</strong>
+                <p>유스퀘어 터미널, 지하철역, 관공서 로비 등의 고휘도 LED 전광판 환경에서 1초 만에 읽히는 고시인성 모션</p>
               </div>
             </div>
 
@@ -515,27 +500,46 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         </div>
 
-        <!-- 14-DAY PRODUCTION WORKFLOW -->
-        <div class="am-video-workflow">
-          <div class="avw-step">
-            <span class="avw-badge">STEP 01</span>
-            <strong>콘티 기획 (D+3)</strong>
-            <span>1:1 맞춤 스토리보드 확정</span>
+        <!-- 14-DAY BIG PRODUCTION WORKFLOW WITH EMOJI ICONS -->
+        <div class="am-video-big-workflow">
+          <div class="avbw-card">
+            <div class="avbw-top">
+              <span class="avbw-emoji">📝</span>
+              <span class="avbw-day">D+3</span>
+            </div>
+            <span class="avbw-step">STEP 01</span>
+            <strong>콘티 기획</strong>
+            <p>1:1 맞춤형 스토리보드 및 연출 콘티 확정</p>
           </div>
-          <div class="avw-step">
-            <span class="avw-badge">STEP 02</span>
-            <strong>4K 본촬영 (D+7)</strong>
-            <span>Sony FX + 항공 드론 현장 촬영</span>
+
+          <div class="avbw-card">
+            <div class="avbw-top">
+              <span class="avbw-emoji">🎬</span>
+              <span class="avbw-day">D+7</span>
+            </div>
+            <span class="avbw-step">STEP 02</span>
+            <strong>4K 본촬영</strong>
+            <p>Sony FX 풀프레임 시네마 + 4K 드론 항공촬영</p>
           </div>
-          <div class="avw-step">
-            <span class="avw-badge">STEP 03</span>
-            <strong>가편집 &amp; 더빙 (D+10)</strong>
-            <span>전문 성우 녹음 및 BGM 믹싱</span>
+
+          <div class="avbw-card">
+            <div class="avbw-top">
+              <span class="avbw-emoji">🎧</span>
+              <span class="avbw-day">D+10</span>
+            </div>
+            <span class="avbw-step">STEP 03</span>
+            <strong>편집 &amp; 더빙</strong>
+            <p>전문 성우 내레이션 녹음, BGM 믹싱, 색보정</p>
           </div>
-          <div class="avw-step highlight">
-            <span class="avw-badge">STEP 04</span>
-            <strong>최종 납품 (D+14)</strong>
-            <span>14일 내 멀티포맷 완성본 납품</span>
+
+          <div class="avbw-card highlight">
+            <div class="avbw-top">
+              <span class="avbw-emoji">🚀</span>
+              <span class="avbw-day gold">D+14</span>
+            </div>
+            <span class="avbw-step">STEP 04</span>
+            <strong>최종 납품</strong>
+            <p>14일 내 멀티 포맷(16:9 / 9:16) 완성본 납품</p>
           </div>
         </div>
 
@@ -675,7 +679,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       07 SECTION 06 : 마스터플랜 (LUXURY ARCHITECTURAL TIMELINE)
+       07 SECTION 06 : 마스터플랜 (VISUAL PROGRESS PIPELINE)
   ============================================ -->
   <section class="am-section" id="process">
     <div class="am-container">
@@ -685,90 +689,63 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <p class="ash-desc" style="margin:0 auto;">외주 없는 100% 본사 인하우스 전문팀이 기획부터 시공, 보고까지 완벽히 책임지는 4단계 마스터플랜입니다.</p>
       </div>
 
-      <div class="am-masterplan-deck wow fadeInUp" data-wow-duration="0.8s">
+      <!-- VISUAL PROCESS PIPELINE (BIG TYPOGRAPHY & VISUAL ICONS) -->
+      <div class="am-pipeline-grid wow fadeInUp" data-wow-duration="0.8s">
         
-        <div class="amd-card">
-          <div class="amd-hero-row">
-            <span class="amd-num">01</span>
-            <div class="amd-day-badge">
-              <span class="adb-kicker">MILESTONE</span>
-              <strong>D+1 DAY</strong>
-            </div>
+        <div class="apg-step-card">
+          <div class="apg-step-header">
+            <span class="apg-huge-num">01</span>
+            <span class="apg-day-pill">D+1 DAY</span>
           </div>
-          <h3 class="amd-title">상권 분석 &amp; 노선 믹스</h3>
-          <p class="amd-desc">병원, 학원, 기업의 주 타깃 고객 동선을 정밀 빅데이터로 분석하여 가장 효과적인 노선과 온·오프라인 최적 미디어 믹스를 설계합니다.</p>
-          <div class="amd-deliverable">
-            <span class="ad-tag">핵심 산출물</span>
-            <strong>상권 타깃 분석 보고서 &amp; 최적 노선 믹스 제안서</strong>
+          <div class="apg-icon-circle">🧭</div>
+          <h3 class="apg-step-title">상권 분석 &amp; 노선 믹스</h3>
+          <p class="apg-step-sub">타깃 상권 빅데이터 분석 및 온·오프라인 최적 미디어 믹스 설계</p>
+          <div class="apg-deliverable-box">
+            <span>핵심 산출물:</span>
+            <strong>상권 분석 보고서 &amp; 최적 노선 믹스</strong>
           </div>
-          <ul class="amd-list">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>상무·수완·봉선·첨단 등 핵심 타깃 거점 분석</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>오프라인 버스 래핑 + 온라인 플레이스 믹스 설계</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>광고주 예산 맞춤형 최적 배차 수량 제안</span></li>
-          </ul>
         </div>
 
-        <div class="amd-card">
-          <div class="amd-hero-row">
-            <span class="amd-num">02</span>
-            <div class="amd-day-badge">
-              <span class="adb-kicker">MILESTONE</span>
-              <strong>D+3 DAY</strong>
-            </div>
+        <div class="apg-step-card">
+          <div class="apg-step-header">
+            <span class="apg-huge-num">02</span>
+            <span class="apg-day-pill">D+3 DAY</span>
           </div>
-          <h3 class="amd-title">1:1 디자인 시안 기획</h3>
-          <p class="amd-desc">도심 속에서 3초 안에 핵심 메시지가 읽히도록 가독성 높은 실사 래핑 디자인 및 영상 스토리보드를 10년차 전문 디자이너가 직접 제작합니다.</p>
-          <div class="amd-deliverable">
-            <span class="ad-tag">핵심 산출물</span>
-            <strong>3면 패키지 실측 1:1 맞춤 디자인 시안 3종</strong>
+          <div class="apg-icon-circle">🎨</div>
+          <h3 class="apg-step-title">1:1 디자인 시안 기획</h3>
+          <p class="apg-step-sub">도심 속에서 3초 안에 읽히는 실사 래핑 및 영상 스토리보드 제작</p>
+          <div class="apg-deliverable-box">
+            <span>핵심 산출물:</span>
+            <strong>3면 실측 1:1 맞춤 디자인 시안 3종</strong>
           </div>
-          <ul class="amd-list">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>시인성 100% 고려한 타이포그래피 &amp; 컬러 셋업</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>전화번호, 진료과목, 핵심 USP 3초 각인 레이아웃</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>광고주 피드백 반영 24시간 내 무제한 시안 수정</span></li>
-          </ul>
         </div>
 
-        <div class="amd-card">
-          <div class="amd-hero-row">
-            <span class="amd-num">03</span>
-            <div class="amd-day-badge">
-              <span class="adb-kicker">MILESTONE</span>
-              <strong>D+7 DAY</strong>
-            </div>
+        <div class="apg-step-card">
+          <div class="apg-step-header">
+            <span class="apg-huge-num">03</span>
+            <span class="apg-day-pill">D+7 DAY</span>
           </div>
-          <h3 class="amd-title">직영 출력 &amp; 책임 시공</h3>
-          <p class="amd-desc">LG 하우시스 정품 솔벤 시트 자체 출력과 10년 이상 경력의 본사 전문 시공팀이 직접 현장에 투입되어 기포와 들뜸 없이 완벽하게 부착합니다.</p>
-          <div class="amd-deliverable">
-            <span class="ad-tag">핵심 산출물</span>
-            <strong>LG 하우시스 최고급 내후성 정품 솔벤 시공</strong>
+          <div class="apg-icon-circle">🏗️</div>
+          <h3 class="apg-step-title">직영 출력 &amp; 책임 시공</h3>
+          <p class="apg-step-sub">LG 하우시스 정품 솔벤 시트 자체 출력과 본사 10년 경력팀 직접 시공</p>
+          <div class="apg-deliverable-box">
+            <span>핵심 산출물:</span>
+            <strong>LG 하우시스 최고급 내후성 시공</strong>
           </div>
-          <ul class="amd-list">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>눈, 비, 세차에도 1년 이상 색바램 없는 내후성 원단</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>본사 전문 시공팀 100% 직영 투입 책임 시공</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>차량 사고 및 훼손 시 48시간 내 무상 재시공 A/S</span></li>
-          </ul>
         </div>
 
-        <div class="amd-card">
-          <div class="amd-hero-row">
-            <span class="amd-num">04</span>
-            <div class="amd-day-badge">
-              <span class="adb-kicker">MILESTONE</span>
-              <strong>D+14 DAY</strong>
-            </div>
+        <div class="apg-step-card highlight">
+          <div class="apg-step-header">
+            <span class="apg-huge-num blue">04</span>
+            <span class="apg-day-pill gold">D+14 DAY</span>
           </div>
-          <h3 class="amd-title">실시간 증빙 &amp; 리포트</h3>
-          <p class="amd-desc">시공 직후 차량 4면 번호판 실사 촬영본을 당일 즉시 전송해 드리며, 온라인 노출 성과와 플레이스 순위 데이터를 투명하게 정기 보고합니다.</p>
-          <div class="amd-deliverable">
-            <span class="ad-tag">핵심 산출물</span>
-            <strong>차량 4면 번호판 실사 증빙철 &amp; 온라인 주간 리포트</strong>
+          <div class="apg-icon-circle blue">📈</div>
+          <h3 class="apg-step-title">실시간 증빙 &amp; 리포트</h3>
+          <p class="apg-step-sub">시공 직후 차량 4면 번호판 실사 촬영본 전송 및 주간 순위 투명 보고</p>
+          <div class="apg-deliverable-box blue">
+            <span>핵심 산출물:</span>
+            <strong>차량 4면 실사 증빙철 &amp; 주간 리포트</strong>
           </div>
-          <ul class="amd-list">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>시공 당일 차량 번호판 포함 4면 고화질 사진 전송</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>네이버 스마트플레이스 주간 순위 변동 리포트</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>1:1 전담 마케팅 디렉터 상시 성과 피드백</span></li>
-          </ul>
         </div>
 
       </div>
@@ -866,7 +843,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       11 SWISS-STYLE EDITORIAL PARAGRAPH SPECIFICATION MODAL (5 TABS)
+       11 SWISS-STYLE EDITORIAL SPECIFICATION MODAL (EXPANDED DIVERSE CONTENT)
   ============================================ -->
   <div class="bus-guide-overlay" id="busGuideOverlay">
     <div class="lux-modal-panel">
@@ -874,18 +851,18 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="lux-modal-head">
         <div>
           <span class="lmh-label">GAON-N OFFICIAL SPECIFICATION DECK</span>
-          <h3 class="lmh-title">가온엔 통합 미디어 실측 규격 &amp; 운영 가이드</h3>
-          <p class="lmh-desc">광주 시내버스 104개 전 노선 실측 치수부터 택시·택배, 마트·DID, 온라인 SEO 및 4K 영상제작 스펙을 확인하세요.</p>
+          <h3 class="lmh-title">가온엔 통합 미디어 실측 규격 &amp; 마케팅 종합 가이드</h3>
+          <p class="lmh-desc">시내버스 7대 규격부터 택시·택배, 마트·DID, 네이버·구글·인스타·틱톡 6대 온라인 전략, 4K 영상제작 공정까지 확인하세요.</p>
         </div>
         <button type="button" class="lux-modal-close" id="btnCloseBusGuide">✕</button>
       </div>
 
       <div class="lux-modal-tabs">
         <button type="button" class="lmt-tab on" data-target="guideBus">시내버스 광고</button>
+        <button type="button" class="lmt-tab" data-target="guideOnline">온라인 통합 마케팅</button>
+        <button type="button" class="lmt-tab" data-target="guideVideo">영상제작 (4K Production)</button>
         <button type="button" class="lmt-tab" data-target="guideTaxiDelivery">택시 · 택배차량</button>
         <button type="button" class="lmt-tab" data-target="guideMartDid">대형마트 · DID</button>
-        <button type="button" class="lmt-tab" data-target="guideOnline">온라인 마케팅</button>
-        <button type="button" class="lmt-tab" data-target="guideVideo">영상제작</button>
       </div>
 
       <div class="lux-modal-body">
@@ -948,7 +925,91 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
         </div>
 
-        <!-- 02 TAXI & DELIVERY -->
+        <!-- 02 ONLINE (EXPANDED DIVERSE CHANNELS) -->
+        <div class="bus-guide-page" id="guideOnline">
+          <h4 class="lmg-sec-title">가온엔 통합 온라인 마케팅 6대 채널 종합 가이드</h4>
+          <div class="lmg-card-grid">
+            <div class="lmg-card">
+              <div class="lmc-head">
+                <span class="lmc-badge blue">01 스마트플레이스</span>
+                <span class="lmc-dim">지도 TOP 3</span>
+              </div>
+              <strong class="lmc-name">네이버 스마트플레이스 1위 SEO</strong>
+              <p class="lmc-desc">로컬 1위 SEO 알고리즘 8대 평가 요소 세팅, 영수증 리뷰 빌드업, 24시간 네이버 예약/톡톡 연동으로 유입 콜 수를 극대화합니다.</p>
+            </div>
+
+            <div class="lmg-card">
+              <div class="lmc-head">
+                <span class="lmc-badge blue">02 C-Rank 블로그</span>
+                <span class="lmc-dim">의료법 100% 검수</span>
+              </div>
+              <strong class="lmc-name">C-Rank 브랜드 블로그 파워콘텐츠</strong>
+              <p class="lmc-desc">의료법 제56조 100% 사전 법무 검수로 행정처분 위험 0%. 원장님 진료 철학 기반 월 8~12편 전문 칼럼으로 스마트블록/뷰탭을 점유합니다.</p>
+            </div>
+
+            <div class="lmg-card">
+              <div class="lmc-head">
+                <span class="lmc-badge green">03 맘카페 바이럴</span>
+                <span class="lmc-dim">광주맘스홀릭</span>
+              </div>
+              <strong class="lmc-name">광주 대표 맘카페 &amp; 커뮤니티 바이럴</strong>
+              <p class="lmc-desc">광주맘스홀릭, 광주맘수다방, 당근마켓 동네생활 실유저 침투로 자연스러운 내방 후기와 3050 주부 신뢰 여론을 100% 형성합니다.</p>
+            </div>
+
+            <div class="lmg-card">
+              <div class="lmc-head">
+                <span class="lmc-badge gold">04 인스타/당근</span>
+                <span class="lmc-dim">반경 1~3km</span>
+              </div>
+              <strong class="lmc-name">SNS 릴스 &amp; 당근 로컬 스폰서드</strong>
+              <p class="lmc-desc">병원/매장 반경 1~3km 내 실제 거주 세대원만을 정밀 타깃팅하여 인스타그램 숏폼 영상 광고와 당근 피드로 문의를 폭발시킵니다.</p>
+            </div>
+
+            <div class="lmg-card">
+              <div class="lmc-head">
+                <span class="lmc-badge gold">05 구글 GDN</span>
+                <span class="lmc-dim">검색 &amp; 배너</span>
+              </div>
+              <strong class="lmc-name">구글 검색광고 &amp; GDN 디스플레이</strong>
+              <p class="lmc-desc">구글 검색 키워드 타깃팅과 유튜브/언론사 제휴 배너 네트워크(GDN)를 통해 관심 고객에게 지속적인 리타깃팅을 집행합니다.</p>
+            </div>
+
+            <div class="lmg-card">
+              <div class="lmc-head">
+                <span class="lmc-badge gold">06 틱톡 숏폼</span>
+                <span class="lmc-dim">9:16 바이럴</span>
+              </div>
+              <strong class="lmc-name">틱톡 &amp; 유튜브 쇼츠 숏폼 바이럴</strong>
+              <p class="lmc-desc">첫 3초 시선 장악 컷 전환과 자막 모션그래픽으로 수만~수십만 뷰의 유기적 알고리즘 도달을 달성하는 모바일 최적화 영상입니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 VIDEO (4K PRODUCTION) -->
+        <div class="bus-guide-page" id="guideVideo">
+          <h4 class="lmg-sec-title">4K 시네마틱 영상제작 &amp; SNS 숏폼 프로덕션 공정</h4>
+          <div class="lmg-card-grid">
+            <div class="lmg-card">
+              <div class="lmc-head">
+                <span class="lmc-badge gold">브랜드 필름</span>
+                <span class="lmc-dim">4K UHD</span>
+              </div>
+              <strong class="lmc-name">기업 · 상급병원 브랜드 필름</strong>
+              <p class="lmc-desc">Sony FX Cinema 풀프레임 + 4K 드론 항공촬영으로 최상의 품격을 완성하며 홈페이지 메인 및 TV CF에 최적화됩니다.</p>
+            </div>
+
+            <div class="lmg-card">
+              <div class="lmc-head">
+                <span class="lmc-badge gold">모바일 숏폼</span>
+                <span class="lmc-dim">9:16 FHD</span>
+              </div>
+              <strong class="lmc-name">SNS 릴스 · 틱톡 숏폼</strong>
+              <p class="lmc-desc">첫 3초 만에 시선을 사로잡는 빠른 템포의 모바일 영상으로 수만 뷰 이상의 유기적 도달을 달성합니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 TAXI & DELIVERY -->
         <div class="bus-guide-page" id="guideTaxiDelivery">
           <h4 class="lmg-sec-title">택시 &amp; 택배차량 래핑 실측 가이드</h4>
           <div class="lmg-card-grid">
@@ -971,7 +1032,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
         </div>
 
-        <!-- 03 MART & DID -->
+        <!-- 05 MART & DID -->
         <div class="bus-guide-page" id="guideMartDid">
           <h4 class="lmg-sec-title">대형마트 쇼핑카트 &amp; DID 전광판 규격</h4>
           <div class="lmg-card-grid">
@@ -990,52 +1051,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
               <strong class="lmc-name">DID 전자현수막 &amp; 도심 전광판</strong>
               <p class="lmc-desc">유스퀘어 터미널, 지하철 환승역, 관공서 로비에 고휘도 LED로 15~20초 영상이 일 100회 이상 연속 송출됩니다.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 04 ONLINE -->
-        <div class="bus-guide-page" id="guideOnline">
-          <h4 class="lmg-sec-title">가온엔 통합 온라인 마케팅 4대 핵심 전략</h4>
-          <div class="lmg-card-grid">
-            <div class="lmg-card">
-              <div class="lmc-head">
-                <span class="lmc-badge blue">01 플레이스</span>
-                <span class="lmc-dim">지도 TOP 3</span>
-              </div>
-              <strong class="lmc-name">스마트플레이스 1위 SEO</strong>
-              <p class="lmc-desc">광주 지역 고객이 '진료과목/업종+지역명' 검색 시 1페이지 지도 상위에 노출되도록 키워드 및 리뷰를 관리합니다.</p>
-            </div>
-            <div class="lmg-card">
-              <div class="lmc-head">
-                <span class="lmc-badge blue">02 C-Rank</span>
-                <span class="lmc-dim">의료법 100% 검수</span>
-              </div>
-              <strong class="lmc-name">C-Rank 브랜드 블로그 &amp; 맘카페</strong>
-              <p class="lmc-desc">의료법 100% 준수 가이드라인에 맞춘 고품질 정보성 칼럼을 네이버 알고리즘에 최적화하여 상위 노출합니다.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 05 VIDEO -->
-        <div class="bus-guide-page" id="guideVideo">
-          <h4 class="lmg-sec-title">4K 시네마틱 영상제작 &amp; SNS 숏폼 프로덕션</h4>
-          <div class="lmg-card-grid">
-            <div class="lmg-card">
-              <div class="lmc-head">
-                <span class="lmc-badge gold">브랜드 필름</span>
-                <span class="lmc-dim">4K UHD</span>
-              </div>
-              <strong class="lmc-name">기업 · 상급병원 브랜드 필름</strong>
-              <p class="lmc-desc">Sony FX Cinema 풀프레임 + 4K 드론 항공촬영으로 최상의 품격을 완성하며 홈페이지 메인 및 TV CF에 최적화됩니다.</p>
-            </div>
-            <div class="lmg-card">
-              <div class="lmc-head">
-                <span class="lmc-badge gold">모바일 숏폼</span>
-                <span class="lmc-dim">9:16 FHD</span>
-              </div>
-              <strong class="lmc-name">SNS 릴스 · 유튜브 쇼츠</strong>
-              <p class="lmc-desc">첫 3초 만에 시선을 사로잡는 빠른 템포의 모바일 영상으로 수만 뷰 이상의 유기적 도달을 달성합니다.</p>
             </div>
           </div>
         </div>
