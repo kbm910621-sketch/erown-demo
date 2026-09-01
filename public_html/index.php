@@ -104,33 +104,99 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </button>
       </div>
 
-      <!-- 21:9 CINEMA FRAME WITH LIVE COUNTERS -->
+      <!-- 21:9 CLEAN CINEMA FRAME (OVERLAY NUMBERS REMOVED) -->
       <div class="amh-cinema-frame wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.2s">
         <div class="acf-viewport">
           <video autoplay muted loop playsinline class="acf-video">
             <source src="/images/movie.mp4" type="video/mp4">
           </video>
           <div class="acf-scrim"></div>
-
-          <div class="acf-hud-bar">
-            <div class="ahb-item">
-              <span class="ahb-num counter" data-target="104">104</span><span class="ahb-unit">개</span>
-              <span class="ahb-lbl">광주 전 노선 단독 직영</span>
-            </div>
-            <div class="ahb-item">
-              <span class="ahb-num counter" data-target="1000">1000</span><span class="ahb-unit">+ 대</span>
-              <span class="ahb-lbl">광주 5개 구 운행 차량</span>
-            </div>
-            <div class="ahb-item">
-              <span class="ahb-num counter" data-target="18">18</span><span class="ahb-unit">시간</span>
-              <span class="ahb-lbl">일일 도로 연속 노출</span>
-            </div>
-            <div class="ahb-item blue">
-              <span class="ahb-num counter" data-target="100">100</span><span class="ahb-unit">%</span>
-              <span class="ahb-lbl">본사 직영 책임 시공</span>
-            </div>
-          </div>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       01-B ABOUT STATS SECTION (1:1 SCREENSHOT MATCH + ANIMATED FLOWING LINES)
+  ============================================ -->
+  <section class="am-about-stats-sec">
+    <!-- ANIMATED FLOWING GREY LINES BACKGROUND -->
+    <div class="aas-wave-bg">
+      <svg class="aas-wave-svg" viewBox="0 0 1440 460" fill="none" preserveAspectRatio="none">
+        <path class="aas-flowing-path path-1" d="M-100,180 C300,50 600,320 1000,120 C1250,0 1400,220 1600,150" stroke="#e2e8f0" stroke-width="1.6" />
+        <path class="aas-flowing-path path-2" d="M-50,320 C250,180 650,420 1050,220 C1300,100 1450,300 1650,240" stroke="#cbd5e1" stroke-width="1.3" />
+        <path class="aas-flowing-path path-3" d="M-80,80 C400,280 800,60 1200,290 C1380,400 1500,120 1620,180" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="6 6" />
+      </svg>
+    </div>
+
+    <div class="am-container" style="position:relative; z-index:2;">
+      
+      <!-- TOP COPY & WATERMARK BRANDING -->
+      <div class="aas-top-row wow fadeInUp" data-wow-duration="0.8s">
+        <div class="aas-headline-col">
+          <div class="aas-kicker-line">
+            <span class="akl-dash"></span>
+            <span class="akl-text">ABOUT</span>
+          </div>
+          <h2 class="aas-main-title">
+            우리는 광고의<br>
+            <span class="aas-blue-highlight">오프라인과 온라인을 잇는</span><br>
+            통합 마케팅 파트너입니다.
+          </h2>
+        </div>
+
+        <div class="aas-watermark-col">
+          <div class="awc-huge-text">BUS</div>
+          <div class="awc-huge-text">TAXI</div>
+          <div class="awc-huge-text bold">ONLINE</div>
+        </div>
+      </div>
+
+      <!-- 5 CLEAN WHITE SQUARE CARDS (1:1 MATCH WITH SCREENSHOT) -->
+      <div class="aas-cards-grid wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.15s">
+        
+        <div class="aas-stat-card">
+          <span class="asc-label">누적 광고 집행</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="500">500</strong><span class="asc-plus">+</span>
+          </div>
+          <span class="asc-unit">건</span>
+        </div>
+
+        <div class="aas-stat-card">
+          <span class="asc-label">운행 광고 차량</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="200">200</strong><span class="asc-plus">+</span>
+          </div>
+          <span class="asc-unit">대</span>
+        </div>
+
+        <div class="aas-stat-card">
+          <span class="asc-label">광주 지역 서비스</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="10">10</strong>
+          </div>
+          <span class="asc-unit">년</span>
+        </div>
+
+        <div class="aas-stat-card">
+          <span class="asc-label">고객 재계약률</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="98">98</strong>
+          </div>
+          <span class="asc-unit">%</span>
+        </div>
+
+        <div class="aas-stat-card">
+          <span class="asc-label">협력 매체사</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="50">50</strong><span class="asc-plus">+</span>
+          </div>
+          <span class="asc-unit">곳</span>
+        </div>
+
       </div>
 
     </div>
@@ -319,7 +385,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- PRACTICAL DIGITAL MARKETING 4 CHANNELS (CRISP & BOLD) -->
+      <!-- PRACTICAL DIGITAL MARKETING 4 CHANNELS -->
       <div class="am-online-practical-grid wow fadeInUp" data-wow-duration="0.8s">
         
         <div class="aop-card">
@@ -410,7 +476,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       04 SECTION 03 : 영상제작 (CINEMATIC DARK PRODUCTION & BIG WORKFLOW)
+       04 SECTION 03 : 영상제작 (CINEMATIC DARK PRODUCTION & VECTOR PICTOGRAMS)
   ============================================ -->
   <section class="am-section am-bg-dark" id="video">
     <div class="am-container">
@@ -453,14 +519,14 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             </div>
           </div>
 
-          <!-- 4 DELIVERABLES (BIG HEADLINES) -->
+          <!-- 4 DELIVERABLES (BIG SOFT WATERMARK NUMBERS 01~04) -->
           <div class="avc-products-col">
             
             <div class="avp-card on" data-target-mode="wide"
                  data-vtitle="기업 · 상급병원 4K 시네마틱 브랜드 필름"
                  data-vsub="Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 더빙">
-              <span class="avp-idx">01</span>
-              <div>
+              <span class="avp-watermark-num">01</span>
+              <div class="avp-text-box">
                 <strong class="avp-big-title">기업 · 상급병원 브랜드 필름 (3~5분)</strong>
                 <p>Sony FX Cinema 풀프레임 카메라와 국토부 승인 4K 항공 드론으로 완성하는 최고급 영화급 홍보영상</p>
               </div>
@@ -469,8 +535,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <div class="avp-card" data-target-mode="wide"
                  data-vtitle="TV CF & 극장 스크린 광고 (15초 / 30초)"
                  data-vsub="15초/30초 고임팩트 스토리텔링 + 2D/3D 모션그래픽">
-              <span class="avp-idx">02</span>
-              <div>
+              <span class="avp-watermark-num">02</span>
+              <div class="avp-text-box">
                 <strong class="avp-big-title">TV CF · 극장 광고 (15초 / 30초)</strong>
                 <p>지상파/케이블 TV 및 CGV/메가박스 스크린에 송출되는 15초/30초 초압축 임팩트 스토리텔링</p>
               </div>
@@ -479,8 +545,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <div class="avp-card" data-target-mode="shorts"
                  data-vtitle="SNS 모바일 숏폼 바이럴 (9:16 세로형)"
                  data-vsub="인스타그램 릴스 + 유튜브 쇼츠 + 틱톡 최적화 바이럴">
-              <span class="avp-idx">03</span>
-              <div>
+              <span class="avp-watermark-num">03</span>
+              <div class="avp-text-box">
                 <strong class="avp-big-title">SNS 릴스 · 틱톡 숏폼 (9:16 세로형)</strong>
                 <p>첫 3초 만에 시선을 사로잡는 빠른 컷 전환과 자막 모션그래픽으로 수만~수십만 뷰의 유기적 알고리즘 도달</p>
               </div>
@@ -489,8 +555,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <div class="avp-card" data-target-mode="wide"
                  data-vtitle="DID 디지털 전광판 모션그래픽 (15초 풀HD)"
                  data-vsub="옥외 고휘도 스크린 전용 15초 풀HD 고시인성 모션">
-              <span class="avp-idx">04</span>
-              <div>
+              <span class="avp-watermark-num">04</span>
+              <div class="avp-text-box">
                 <strong class="avp-big-title">DID 전광판 모션그래픽 (15초 풀HD)</strong>
                 <p>유스퀘어 터미널, 지하철역, 관공서 로비 등의 고휘도 LED 전광판 환경에서 1초 만에 읽히는 고시인성 모션</p>
               </div>
@@ -500,11 +566,13 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         </div>
 
-        <!-- 14-DAY BIG PRODUCTION WORKFLOW WITH EMOJI ICONS -->
+        <!-- 14-DAY BIG PRODUCTION WORKFLOW WITH VECTOR PICTOGRAMS -->
         <div class="am-video-big-workflow">
           <div class="avbw-card">
             <div class="avbw-top">
-              <span class="avbw-emoji">📝</span>
+              <div class="avbw-picto-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+              </div>
               <span class="avbw-day">D+3</span>
             </div>
             <span class="avbw-step">STEP 01</span>
@@ -514,7 +582,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
           <div class="avbw-card">
             <div class="avbw-top">
-              <span class="avbw-emoji">🎬</span>
+              <div class="avbw-picto-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/><circle cx="8.5" cy="12" r="2.5"/></svg>
+              </div>
               <span class="avbw-day">D+7</span>
             </div>
             <span class="avbw-step">STEP 02</span>
@@ -524,7 +594,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
           <div class="avbw-card">
             <div class="avbw-top">
-              <span class="avbw-emoji">🎧</span>
+              <div class="avbw-picto-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="13" x2="9" y2="15"/><line x1="15" y1="12" x2="15" y2="16"/></svg>
+              </div>
               <span class="avbw-day">D+10</span>
             </div>
             <span class="avbw-step">STEP 03</span>
@@ -534,7 +606,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
           <div class="avbw-card highlight">
             <div class="avbw-top">
-              <span class="avbw-emoji">🚀</span>
+              <div class="avbw-picto-box gold">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+              </div>
               <span class="avbw-day gold">D+14</span>
             </div>
             <span class="avbw-step">STEP 04</span>
@@ -679,7 +753,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       07 SECTION 06 : 마스터플랜 (VISUAL PROGRESS PIPELINE)
+       07 SECTION 06 : 마스터플랜 (VECTOR PICTOGRAM PIPELINE)
   ============================================ -->
   <section class="am-section" id="process">
     <div class="am-container">
@@ -689,7 +763,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <p class="ash-desc" style="margin:0 auto;">외주 없는 100% 본사 인하우스 전문팀이 기획부터 시공, 보고까지 완벽히 책임지는 4단계 마스터플랜입니다.</p>
       </div>
 
-      <!-- VISUAL PROCESS PIPELINE (BIG TYPOGRAPHY & VISUAL ICONS) -->
+      <!-- VISUAL PROCESS PIPELINE (BIG TYPOGRAPHY & VECTOR PICTOGRAMS) -->
       <div class="am-pipeline-grid wow fadeInUp" data-wow-duration="0.8s">
         
         <div class="apg-step-card">
@@ -697,7 +771,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <span class="apg-huge-num">01</span>
             <span class="apg-day-pill">D+1 DAY</span>
           </div>
-          <div class="apg-icon-circle">🧭</div>
+          <div class="apg-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          </div>
           <h3 class="apg-step-title">상권 분석 &amp; 노선 믹스</h3>
           <p class="apg-step-sub">타깃 상권 빅데이터 분석 및 온·오프라인 최적 미디어 믹스 설계</p>
           <div class="apg-deliverable-box">
@@ -711,7 +787,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <span class="apg-huge-num">02</span>
             <span class="apg-day-pill">D+3 DAY</span>
           </div>
-          <div class="apg-icon-circle">🎨</div>
+          <div class="apg-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.67-.75 1.67-1.67 0-.42-.17-.83-.42-1.17-.25-.33-.42-.75-.42-1.16 0-.92.75-1.67 1.67-1.67h1.92c3.08 0 5.58-2.5 5.58-5.58 0-4.83-4.42-8.75-9.42-8.75z"/><circle cx="7.5" cy="11.5" r="1.5"/><circle cx="12" cy="7.5" r="1.5"/><circle cx="16.5" cy="11.5" r="1.5"/></svg>
+          </div>
           <h3 class="apg-step-title">1:1 디자인 시안 기획</h3>
           <p class="apg-step-sub">도심 속에서 3초 안에 읽히는 실사 래핑 및 영상 스토리보드 제작</p>
           <div class="apg-deliverable-box">
@@ -725,7 +803,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <span class="apg-huge-num">03</span>
             <span class="apg-day-pill">D+7 DAY</span>
           </div>
-          <div class="apg-icon-circle">🏗️</div>
+          <div class="apg-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          </div>
           <h3 class="apg-step-title">직영 출력 &amp; 책임 시공</h3>
           <p class="apg-step-sub">LG 하우시스 정품 솔벤 시트 자체 출력과 본사 10년 경력팀 직접 시공</p>
           <div class="apg-deliverable-box">
@@ -739,7 +819,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <span class="apg-huge-num blue">04</span>
             <span class="apg-day-pill gold">D+14 DAY</span>
           </div>
-          <div class="apg-icon-circle blue">📈</div>
+          <div class="apg-icon-circle blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f3f8c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
+          </div>
           <h3 class="apg-step-title">실시간 증빙 &amp; 리포트</h3>
           <p class="apg-step-sub">시공 직후 차량 4면 번호판 실사 촬영본 전송 및 주간 순위 투명 보고</p>
           <div class="apg-deliverable-box blue">
