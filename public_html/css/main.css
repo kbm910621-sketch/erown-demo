@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GAON-N 2026 STRUCTURED PROMOTIONS & LARGE VISUAL CSS (SINGLE-LINE RULE)
+   GAON-N 2026 ELITE DEEP CONTENT & LUXURY MASTERPLAN CSS (SINGLE-LINE RULE)
    ========================================================================== */
 @charset "utf-8";
 
@@ -93,7 +93,7 @@
 .abp-promo-card p { font-size:13.5px; line-height:1.65; color:#64748b; margin:0 0 20px; flex:1; }
 .apc-stat { padding-top:14px; border-top:1px solid #f1f5f9; font-size:12.5px; font-weight:800; color:#1855b7; }
 
-/* 03 LARGE ONLINE MARKETING FRAME & 4 PILLARS */
+/* 03 LARGE ONLINE MARKETING FRAME & DEEP PILLARS */
 .am-online-hero-frame { position:relative; width:100%; border-radius:24px; overflow:hidden; background:#0f172a; aspect-ratio:21/9; min-height:340px; margin-bottom:40px; box-shadow:0 20px 50px rgba(15,23,42,0.12); }
 .aoh-image-wrap { position:relative; width:100%; height:100%; }
 .aoh-image-wrap img { width:100%; height:100%; object-fit:cover; display:block; }
@@ -114,9 +114,11 @@
 .aop-tag.green { background:#f0fdf4; color:#16a34a; }
 .aop-tag.gold { background:#fefce8; color:#ca8a04; }
 .aop-title { font-size:18px; font-weight:800; letter-spacing:-0.4px; color:#0f172a; margin:0 0 10px; }
-.aop-desc { font-size:13px; line-height:1.65; color:#64748b; margin:0 0 20px; flex:1; }
-.aop-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; border-top:1px solid #e2e8f0; padding-top:16px; }
-.aop-list li { display:flex; align-items:flex-start; gap:8px; font-size:12.5px; font-weight:700; color:#334155; line-height:1.45; }
+.aop-desc { font-size:13px; line-height:1.65; color:#64748b; margin:0 0 16px; }
+.aop-deep-box { background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:16px 14px; margin-top:auto; }
+.adb-title { font-size:11.5px; font-weight:800; color:#1855b7; display:block; margin-bottom:8px; }
+.aop-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; }
+.aop-list li { display:flex; align-items:flex-start; gap:8px; font-size:12px; font-weight:700; color:#334155; line-height:1.45; }
 .aop-list li svg { flex-shrink:0; margin-top:2px; }
 
 .am-online-guarantee-strip { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:20px; padding:24px 32px; border-radius:18px; background:#ffffff; border:1px solid #e2e8f0; }
@@ -193,15 +195,23 @@
 .am-more-btn { display:inline-flex; align-items:center; gap:8px; padding:15px 32px; border-radius:100px; background:#ffffff; border:1px solid #cbd5e1; font-size:14px; font-weight:800; color:#0f172a; text-decoration:none; transition:all 0.2s; }
 .am-more-btn:hover { background:#1855b7; border-color:#1855b7; color:#ffffff; transform:translateY(-2px); }
 
-/* 07 MASTERPLAN */
-.am-process-grid { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:24px; margin-top:40px; }
-.ap-card { padding:32px 26px; border-radius:20px; background:#f8fafc; border:1px solid #e2e8f0; transition:all 0.25s; }
-.ap-card:hover { transform:translateY(-5px); background:#ffffff; border-color:#93c5fd; box-shadow:0 16px 36px rgba(24,85,183,0.06); }
-.ap-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; }
-.ap-num { font-size:14px; font-weight:900; color:#1855b7; font-family:monospace; }
-.ap-milestone { font-size:11px; font-weight:800; color:#1855b7; background:#eff6ff; padding:3px 7px; border-radius:4px; }
-.ap-card h3 { font-size:17px; font-weight:800; letter-spacing:-0.3px; color:#0f172a; margin:0 0 8px; }
-.ap-card p { font-size:13px; line-height:1.65; color:#64748b; margin:0; }
+/* 07 LUXURY ARCHITECTURAL MASTERPLAN */
+.am-masterplan-deck { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:24px; margin-top:48px; }
+.amd-card { padding:36px 28px; border-radius:24px; background:#ffffff; border:1.5px solid #e2e8f0; display:flex; flex-direction:column; transition:all 0.25s; box-shadow:0 10px 30px rgba(0,0,0,0.03); }
+.amd-card:hover { transform:translateY(-6px); border-color:#1855b7; box-shadow:0 20px 48px rgba(24,85,183,0.08); }
+.amd-hero-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; border-bottom:1px solid #f1f5f9; padding-bottom:16px; }
+.amd-num { font-size:40px; font-weight:900; color:#1855b7; line-height:1; letter-spacing:-2px; }
+.amd-day-badge { display:flex; flex-direction:column; align-items:flex-end; gap:2px; }
+.adb-kicker { font-size:10px; font-weight:800; color:#94a3b8; letter-spacing:0.12em; }
+.amd-day-badge strong { font-size:13px; font-weight:900; color:#1855b7; background:#eff6ff; padding:3px 8px; border-radius:4px; }
+.amd-title { font-size:20px; font-weight:900; letter-spacing:-0.5px; color:#0f172a; margin:0 0 10px; }
+.amd-desc { font-size:13.5px; line-height:1.65; color:#64748b; margin:0 0 20px; }
+.amd-deliverable { padding:12px 14px; background:#f8fafc; border-radius:10px; border:1px solid #e2e8f0; margin-bottom:18px; }
+.ad-tag { font-size:10.5px; font-weight:800; color:#1855b7; display:block; margin-bottom:3px; }
+.amd-deliverable strong { font-size:12.5px; font-weight:800; color:#0f172a; line-height:1.4; display:block; }
+.amd-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; margin-top:auto; padding-top:16px; border-top:1px solid #f1f5f9; }
+.amd-list li { display:flex; align-items:flex-start; gap:8px; font-size:12px; font-weight:700; color:#475569; line-height:1.45; }
+.amd-list li svg { flex-shrink:0; margin-top:2px; }
 
 /* 08 PARTNERS MARQUEE */
 .am-partners-sec { padding:70px 0; background:#f8fafc; border-bottom:1px solid #e2e8f0; overflow:hidden; }
@@ -225,27 +235,46 @@
 .act-btn { display:inline-flex; align-items:center; gap:8px; padding:16px 32px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:14.5px; font-weight:800; text-decoration:none; transition:all 0.25s; white-space:nowrap; }
 .act-btn:hover { background:#2563eb; transform:translateY(-2px); box-shadow:0 14px 30px rgba(37,99,235,0.35); }
 
-/* 10 SEPARATE 104 BUS ROUTES SEARCH MODAL */
+/* 10 CLEAN SWISS DIRECTORY: 104 BUS ROUTES MODAL */
 .route-search-modal-overlay { display:none; position:fixed; inset:0; z-index:9999; background:rgba(15,23,42,0.75); backdrop-filter:blur(12px); padding:40px 20px; overflow-y:auto; }
-.rsm-panel { max-width:1080px; margin:0 auto; background:#ffffff; border-radius:24px; box-shadow:0 30px 80px rgba(15,23,42,0.25); overflow:hidden; }
+.rsm-panel { max-width:1120px; margin:0 auto; background:#ffffff; border-radius:24px; box-shadow:0 30px 80px rgba(15,23,42,0.25); overflow:hidden; }
 .rsm-head { display:flex; justify-content:space-between; align-items:flex-start; padding:32px 40px 24px; border-bottom:1px solid #f1f5f9; }
 .rsm-kicker { font-size:11px; font-weight:800; letter-spacing:0.16em; color:#1855b7; }
-.rsm-title { font-size:22px; font-weight:900; letter-spacing:-0.5px; color:#0f172a; margin:4px 0 4px; }
+.rsm-title { font-size:24px; font-weight:900; letter-spacing:-0.5px; color:#0f172a; margin:4px 0 4px; }
 .rsm-desc { font-size:13px; color:#64748b; margin:0; }
 .rsm-close { width:36px; height:36px; border-radius:50%; background:#f1f5f9; border:0; font-size:14px; font-weight:700; color:#475569; cursor:pointer; transition:all 0.2s; }
 .rsm-close:hover { background:#0f172a; color:#ffffff; }
 
 .rsm-body { padding:32px 40px; }
-.rsm-search-bar { display:flex; align-items:center; gap:10px; padding:12px 20px; border-radius:100px; background:#f8fafc; border:1.5px solid #cbd5e1; margin-bottom:18px; }
-.rsm-search-bar input { border:0; background:none; outline:none; font-size:13.5px; color:#0f172a; width:100%; font-family:inherit; }
+.rsm-search-bar { display:flex; align-items:center; gap:10px; padding:14px 22px; border-radius:100px; background:#f8fafc; border:1.5px solid #cbd5e1; margin-bottom:18px; }
+.rsm-search-bar input { border:0; background:none; outline:none; font-size:14px; color:#0f172a; width:100%; font-family:inherit; }
 .rsm-tabs-row { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:24px; }
 .rsm-tab { padding:7px 16px; border-radius:100px; background:#f1f5f9; border:0; font-size:12.5px; font-weight:700; color:#64748b; cursor:pointer; font-family:inherit; transition:all 0.2s; }
 .rsm-tab:hover { color:#0f172a; background:#e2e8f0; }
 .rsm-tab.on { background:#0f172a; color:#ffffff; }
 
-.rsm-routes-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:14px; max-height:460px; overflow-y:auto; padding-right:6px; }
-.rsm-foot { display:flex; justify-content:space-between; align-items:center; padding:18px 40px; background:#f8fafc; border-top:1px solid #e2e8f0; font-size:13px; font-weight:700; color:#1855b7; flex-wrap:wrap; gap:12px; }
-.rsm-foot-btn { display:inline-flex; align-items:center; padding:10px 22px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:13px; font-weight:800; text-decoration:none; transition:all 0.2s; }
+.rsm-directory-list { display:flex; flex-direction:column; gap:10px; max-height:480px; overflow-y:auto; padding-right:8px; }
+.rsd-row { display:grid; grid-template-columns:130px 1fr 180px 140px; gap:16px; align-items:center; padding:16px 20px; border-radius:14px; background:#f8fafc; border:1px solid #e2e8f0; transition:all 0.15s; }
+.rsd-row:hover { background:#ffffff; border-color:#93c5fd; box-shadow:0 6px 18px rgba(0,0,0,0.03); transform:translateX(2px); }
+.rsd-badge-col { display:flex; align-items:center; gap:8px; }
+.rsd-tag { font-size:10.5px; font-weight:800; padding:3px 7px; border-radius:4px; }
+.rsd-tag.red { background:#fef2f2; color:#dc2626; }
+.rsd-tag.blue { background:#eff6ff; color:#1855b7; }
+.rsd-tag.green { background:#f0fdf4; color:#16a34a; }
+.rsd-num { font-size:16px; font-weight:900; color:#0f172a; }
+.rsd-desc-col { display:flex; flex-direction:column; gap:2px; }
+.rsd-path { font-size:13.5px; font-weight:800; color:#0f172a; }
+.rsd-target { font-size:12px; color:#64748b; }
+.rsd-fleet-col { display:flex; flex-direction:column; gap:2px; font-size:12px; color:#475569; }
+.rsd-fleet-col strong { color:#1855b7; font-weight:800; }
+.rsd-action-col { text-align:right; }
+.rsd-btn { display:inline-flex; align-items:center; padding:7px 14px; border-radius:100px; background:#ffffff; border:1px solid #cbd5e1; font-size:12px; font-weight:800; color:#1855b7; text-decoration:none; transition:all 0.2s; }
+.rsd-btn:hover { background:#1855b7; color:#ffffff; border-color:#1855b7; }
+
+.rsm-foot { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:#f8fafc; border-top:1px solid #e2e8f0; flex-wrap:wrap; gap:14px; }
+.rf-notice strong { font-size:13.5px; font-weight:800; color:#0f172a; display:block; margin-bottom:2px; }
+.rf-notice span { font-size:12.5px; color:#64748b; }
+.rsm-foot-btn { display:inline-flex; align-items:center; padding:11px 24px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:13.5px; font-weight:800; text-decoration:none; transition:all 0.2s; }
 .rsm-foot-btn:hover { background:#0f3f8c; }
 
 /* 11 SWISS SPEC MODAL */

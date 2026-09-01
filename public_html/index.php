@@ -285,7 +285,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       03 SECTION 02 : 온라인 마케팅 (LARGE MEDIA FRAME & 4 PILLARS)
+       03 SECTION 02 : 온라인 마케팅 (LARGE MEDIA FRAME & DEEP PRACTICAL PILLARS)
   ============================================ -->
   <section class="am-section" id="online">
     <div class="am-container">
@@ -298,7 +298,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <p class="ash-desc">시내버스 옥외광고를 본 소비자가 네이버 검색 시 실제 내방 환자 및 결제 고객으로 전환되는 4대 실무 솔루션입니다.</p>
           </div>
           <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideOnline">
-            <span>온라인 전략 가이드 ↗</span>
+            <span>온라인 4대 실무 전략 가이드 ↗</span>
           </button>
         </div>
       </div>
@@ -319,7 +319,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- PRACTICAL DIGITAL MARKETING 4 PILLARS -->
+      <!-- PRACTICAL DIGITAL MARKETING 4 PILLARS (DEEP CONTENT) -->
       <div class="am-online-practical-grid wow fadeInUp" data-wow-duration="0.8s">
         
         <div class="aop-card">
@@ -329,13 +329,17 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <h3 class="aop-title">네이버 스마트플레이스 1위 최적화</h3>
           <p class="aop-desc">
-            '광주+진료과목/업종' 검색 시 지도 1페이지 TOP 3에 안착시킵니다. 대표 키워드 5개 세팅, 영수증 리뷰 자산화, 24시간 네이버 예약 연동을 전담합니다.
+            '광주+진료과목/업종' 검색 시 지도 1페이지 상단 TOP 3에 안착시킵니다. 대표 키워드 5개 세팅, 영수증 리뷰 자산화, 24시간 네이버 예약 연동을 전담합니다.
           </p>
-          <ul class="aop-list">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>로컬 1위 알고리즘 맞춤 대표 키워드 세팅</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>실제 내방 고객 영수증 리뷰 및 블로그 리뷰 빌드업</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>네이버 예약 &amp; 톡톡 실시간 상담 연동</span></li>
-          </ul>
+          <div class="aop-deep-box">
+            <span class="adb-title">핵심 실행 내역:</span>
+            <ul class="aop-list">
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>로컬 1위 SEO 알고리즘 8대 평가 요소 완벽 세팅</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>실제 내방 고객 영수증 인증 리뷰 및 블로그 리뷰 빌드업</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>24시간 네이버 예약 &amp; 톡톡 실시간 상담 연동</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>고화질 대표 사진 20장 &amp; 상세 진료 안내문 최적화</span></li>
+            </ul>
+          </div>
         </div>
 
         <div class="aop-card">
@@ -347,11 +351,15 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <p class="aop-desc">
             보건소 행정처분 위험 없는 100% 사전 법무 검수 체계. 원장님의 진료 철학과 치료 사례를 담은 월 8~12편의 전문 칼럼으로 환자의 신뢰를 확보합니다.
           </p>
-          <ul class="aop-list">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>치료 전후 사진 규정 및 의료법 100% 사전 검수</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>월 8~12편 고품질 전문 의료/업종 정보성 포스팅</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>네이버 뷰탭 &amp; 스마트블록 1페이지 상위 점유</span></li>
-          </ul>
+          <div class="aop-deep-box">
+            <span class="adb-title">핵심 실행 내역:</span>
+            <ul class="aop-list">
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>치료 전후 사진 규정 및 의료법 제56조 100% 사전 검수</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>원장님 진료 철학 기반 월 8~12편 전문 의료/업종 칼럼</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>네이버 스마트블록 &amp; 뷰탭 1페이지 상단 고정 점유</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>단순 노출을 넘어 실제 내원 결심을 이끄는 전문 필력</span></li>
+            </ul>
+          </div>
         </div>
 
         <div class="aop-card">
@@ -363,11 +371,15 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <p class="aop-desc">
             광주맘스홀릭, 광주맘수다방 등 대표 맘카페 및 당근 동네생활에서 억지 광고가 아닌 자연스러운 내방 후기와 추천 여론을 형성합니다.
           </p>
-          <ul class="aop-list">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>광주 맘카페 실유저 기반 자연스러운 추천 후기</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>지역 학부모 및 주부 타깃 신뢰도 100% 극대화</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>댓글 및 Q&amp;A 실시간 브랜드 모니터링</span></li>
-          </ul>
+          <div class="aop-deep-box">
+            <span class="adb-title">핵심 실행 내역:</span>
+            <ul class="aop-list">
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>광주/전남 대표 맘카페 실유저 기반 자연스러운 추천 후기</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>당근마켓 동네생활 및 지역 커뮤니티 실시간 침투 바이럴</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>지역 학부모 및 3050 주부 타깃 신뢰 여론 100% 형성</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>악성 댓글 및 브랜드 평판 24시간 실시간 모니터링</span></li>
+            </ul>
+          </div>
         </div>
 
         <div class="aop-card">
@@ -379,11 +391,15 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <p class="aop-desc">
             병원/매장 반경 1~3km 이내의 실제 거주 세대원만을 정밀 타깃팅하여 광고비 낭비 없이 인스타그램 숏폼 영상과 당근마켓 피드로 문의를 폭발시킵니다.
           </p>
-          <ul class="aop-list">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>내 병원/매장 반경 1~3km 로컬 세대원 타깃</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>9:16 인스타그램 세로형 숏폼 영상 광고 송출</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>주간 클릭률, 유입 콜 수 투명 리포트 제공</span></li>
-          </ul>
+          <div class="aop-deep-box">
+            <span class="adb-title">핵심 실행 내역:</span>
+            <ul class="aop-list">
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>내 병원/매장 반경 1~3km 로컬 세대원 정밀 타깃팅</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>첫 3초 시선 장악 9:16 인스타그램 세로형 숏폼 제작</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>당근마켓 피드 및 검색 배너 광고 통합 집행</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>주간 클릭률(CTR), 전환수, 유입 콜 수 투명 리포트</span></li>
+            </ul>
+          </div>
         </div>
 
       </div>
@@ -659,52 +675,100 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       07 SECTION 06 : 마스터플랜 (4-STEP RESPONSIBLE PIPELINE)
+       07 SECTION 06 : 마스터플랜 (LUXURY ARCHITECTURAL TIMELINE)
   ============================================ -->
   <section class="am-section" id="process">
     <div class="am-container">
       <div class="am-sec-head text-center wow fadeInUp" data-wow-duration="0.7s">
         <span class="ash-kicker">WORKFLOW PIPELINE</span>
         <h2 class="ash-title">마스터플랜</h2>
-        <p class="ash-desc" style="margin:0 auto;">외주 없는 100% 본사 인하우스 전문팀이 기획부터 시공, 보고까지 책임지는 4단계 마스터플랜입니다.</p>
+        <p class="ash-desc" style="margin:0 auto;">외주 없는 100% 본사 인하우스 전문팀이 기획부터 시공, 보고까지 완벽히 책임지는 4단계 마스터플랜입니다.</p>
       </div>
 
-      <div class="am-process-grid wow fadeInUp" data-wow-duration="0.8s">
+      <div class="am-masterplan-deck wow fadeInUp" data-wow-duration="0.8s">
         
-        <div class="ap-card">
-          <div class="ap-top">
-            <span class="ap-num">01</span>
-            <span class="ap-milestone">D+1</span>
+        <div class="amd-card">
+          <div class="amd-hero-row">
+            <span class="amd-num">01</span>
+            <div class="amd-day-badge">
+              <span class="adb-kicker">MILESTONE</span>
+              <strong>D+1 DAY</strong>
+            </div>
           </div>
-          <h3>상권 분석 &amp; 노선 믹스</h3>
-          <p>병원, 학원, 기업의 주 타깃 고객 동선을 정밀 분석하여 가장 효과적인 노선과 온·오프라인 매체 믹스를 제안합니다.</p>
+          <h3 class="amd-title">상권 분석 &amp; 노선 믹스</h3>
+          <p class="amd-desc">병원, 학원, 기업의 주 타깃 고객 동선을 정밀 빅데이터로 분석하여 가장 효과적인 노선과 온·오프라인 최적 미디어 믹스를 설계합니다.</p>
+          <div class="amd-deliverable">
+            <span class="ad-tag">핵심 산출물</span>
+            <strong>상권 타깃 분석 보고서 &amp; 최적 노선 믹스 제안서</strong>
+          </div>
+          <ul class="amd-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>상무·수완·봉선·첨단 등 핵심 타깃 거점 분석</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>오프라인 버스 래핑 + 온라인 플레이스 믹스 설계</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>광고주 예산 맞춤형 최적 배차 수량 제안</span></li>
+          </ul>
         </div>
 
-        <div class="ap-card">
-          <div class="ap-top">
-            <span class="ap-num">02</span>
-            <span class="ap-milestone">D+3</span>
+        <div class="amd-card">
+          <div class="amd-hero-row">
+            <span class="amd-num">02</span>
+            <div class="amd-day-badge">
+              <span class="adb-kicker">MILESTONE</span>
+              <strong>D+3 DAY</strong>
+            </div>
           </div>
-          <h3>1:1 디자인 시안 기획</h3>
-          <p>도심 속에서 3초 안에 핵심 메시지가 읽히도록 가독성 높은 실사 래핑 디자인 및 영상 스토리보드를 제작합니다.</p>
+          <h3 class="amd-title">1:1 디자인 시안 기획</h3>
+          <p class="amd-desc">도심 속에서 3초 안에 핵심 메시지가 읽히도록 가독성 높은 실사 래핑 디자인 및 영상 스토리보드를 10년차 전문 디자이너가 직접 제작합니다.</p>
+          <div class="amd-deliverable">
+            <span class="ad-tag">핵심 산출물</span>
+            <strong>3면 패키지 실측 1:1 맞춤 디자인 시안 3종</strong>
+          </div>
+          <ul class="amd-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>시인성 100% 고려한 타이포그래피 &amp; 컬러 셋업</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>전화번호, 진료과목, 핵심 USP 3초 각인 레이아웃</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>광고주 피드백 반영 24시간 내 무제한 시안 수정</span></li>
+          </ul>
         </div>
 
-        <div class="ap-card">
-          <div class="ap-top">
-            <span class="ap-num">03</span>
-            <span class="ap-milestone">D+7</span>
+        <div class="amd-card">
+          <div class="amd-hero-row">
+            <span class="amd-num">03</span>
+            <div class="amd-day-badge">
+              <span class="adb-kicker">MILESTONE</span>
+              <strong>D+7 DAY</strong>
+            </div>
           </div>
-          <h3>직영 출력 &amp; 책임 시공</h3>
-          <p>LG 하우시스 정품 솔벤 시트 자체 출력과 10년 이상 경력의 본사 전문 시공팀이 직접 투입되어 깔끔하게 부착합니다.</p>
+          <h3 class="amd-title">직영 출력 &amp; 책임 시공</h3>
+          <p class="amd-desc">LG 하우시스 정품 솔벤 시트 자체 출력과 10년 이상 경력의 본사 전문 시공팀이 직접 현장에 투입되어 기포와 들뜸 없이 완벽하게 부착합니다.</p>
+          <div class="amd-deliverable">
+            <span class="ad-tag">핵심 산출물</span>
+            <strong>LG 하우시스 최고급 내후성 정품 솔벤 시공</strong>
+          </div>
+          <ul class="amd-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>눈, 비, 세차에도 1년 이상 색바램 없는 내후성 원단</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>본사 전문 시공팀 100% 직영 투입 책임 시공</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>차량 사고 및 훼손 시 48시간 내 무상 재시공 A/S</span></li>
+          </ul>
         </div>
 
-        <div class="ap-card">
-          <div class="ap-top">
-            <span class="ap-num">04</span>
-            <span class="ap-milestone">D+14</span>
+        <div class="amd-card">
+          <div class="amd-hero-row">
+            <span class="amd-num">04</span>
+            <div class="amd-day-badge">
+              <span class="adb-kicker">MILESTONE</span>
+              <strong>D+14 DAY</strong>
+            </div>
           </div>
-          <h3>실시간 증빙 &amp; 리포트</h3>
-          <p>시공 직후 차량 4면 번호판 실사 촬영본을 전송해 드리며, 온라인 노출 성과 데이터를 투명하게 보고합니다.</p>
+          <h3 class="amd-title">실시간 증빙 &amp; 리포트</h3>
+          <p class="amd-desc">시공 직후 차량 4면 번호판 실사 촬영본을 당일 즉시 전송해 드리며, 온라인 노출 성과와 플레이스 순위 데이터를 투명하게 정기 보고합니다.</p>
+          <div class="amd-deliverable">
+            <span class="ad-tag">핵심 산출물</span>
+            <strong>차량 4면 번호판 실사 증빙철 &amp; 온라인 주간 리포트</strong>
+          </div>
+          <ul class="amd-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>시공 당일 차량 번호판 포함 4면 고화질 사진 전송</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>네이버 스마트플레이스 주간 순위 변동 리포트</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>1:1 전담 마케팅 디렉터 상시 성과 피드백</span></li>
+          </ul>
         </div>
 
       </div>
@@ -755,15 +819,15 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       10 SEPARATE 104 BUS ROUTES SEARCH MODAL
+       10 LUXURY DIRECTORY: 104 BUS ROUTES SEARCH MODAL
   ============================================ -->
   <div class="route-search-modal-overlay" id="routeSearchModal">
     <div class="rsm-panel">
       <div class="rsm-head">
         <div>
-          <span class="rsm-kicker">GAON-N BUS ROUTE DIRECTORY</span>
-          <h3 class="rsm-title">광주 시내버스 104개 전 노선 실시간 검색기</h3>
-          <p class="rsm-desc">노선 번호나 경유지(예: 상무지구, 봉선동, 전남대, 수완)를 검색하시면 해당 노선의 전체 경로를 즉시 확인하실 수 있습니다.</p>
+          <span class="rsm-kicker">GAON-N BUS ROUTE DIRECTORY 2026</span>
+          <h3 class="rsm-title">광주 시내버스 104개 전 노선 실시간 검색 디렉토리</h3>
+          <p class="rsm-desc">광주광역시 104개 전체 노선(급행/간선/지선)의 주요 경유 상권, 운행 대수, 배차 간격 및 타깃을 실시간으로 확인하세요.</p>
         </div>
         <button type="button" class="rsm-close" id="btnCloseRouteSearch">✕</button>
       </div>
@@ -771,7 +835,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="rsm-body">
         <div class="rsm-search-bar">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" id="modalBusRouteSearchInput" placeholder="노선 번호 또는 경유 상권 검색 (예: 순환01, 상무지구, 봉선동, 첨단)">
+          <input type="text" id="modalBusRouteSearchInput" placeholder="노선 번호 또는 경유 상권 검색 (예: 순환01, 상무지구, 봉선동, 첨단, 수완, 전남대)">
         </div>
 
         <div class="rsm-tabs-row">
@@ -785,14 +849,17 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <button type="button" class="rsm-tab" data-filter-cat="gwangsan">광산구 (수완·첨단)</button>
         </div>
 
-        <div class="rsm-routes-grid" id="modalBusRouteFullGrid">
-          <!-- Dynamically Injected -->
+        <div class="rsm-directory-list" id="modalBusRouteFullGrid">
+          <!-- Injected dynamically with rich directory styling -->
         </div>
       </div>
 
       <div class="rsm-foot">
-        <span>※ 내 병원/매장 앞 통과 노선 및 예산별 최적 배차 조합을 무료로 설계해 드립니다.</span>
-        <a href="/board/estmate/write.php" class="rsm-foot-btn">1:1 노선 무료 견적 문의하기 →</a>
+        <div class="rf-notice">
+          <strong>※ 병원 / 학원 / 매장 앞 통과 노선 무료 매칭 서비스</strong>
+          <span>광고주님의 사업장 위치를 알려주시면 가장 노출 빈도가 높은 골든 노선 조합을 1:1 무료 컨설팅해 드립니다.</span>
+        </div>
+        <a href="/board/estmate/write.php" class="rsm-foot-btn">1:1 노선 무료 분석 신청 →</a>
       </div>
     </div>
   </div>
