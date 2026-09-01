@@ -104,7 +104,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </button>
       </div>
 
-      <!-- 21:9 CLEAN CINEMA FRAME (OVERLAY NUMBERS REMOVED) -->
+      <!-- 21:9 CLEAN CINEMA FRAME -->
       <div class="amh-cinema-frame wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.2s">
         <div class="acf-viewport">
           <video autoplay muted loop playsinline class="acf-video">
@@ -119,16 +119,23 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       01-B ABOUT STATS SECTION (1:1 SCREENSHOT MATCH + ANIMATED FLOWING LINES)
+       01-B ABOUT STATS SECTION (SEAMLESS INFINITE FLOWING LINES + 5 CARDS)
   ============================================ -->
   <section class="am-about-stats-sec">
-    <!-- ANIMATED FLOWING GREY LINES BACKGROUND -->
-    <div class="aas-wave-bg">
-      <svg class="aas-wave-svg" viewBox="0 0 1440 460" fill="none" preserveAspectRatio="none">
-        <path class="aas-flowing-path path-1" d="M-100,180 C300,50 600,320 1000,120 C1250,0 1400,220 1600,150" stroke="#e2e8f0" stroke-width="1.6" />
-        <path class="aas-flowing-path path-2" d="M-50,320 C250,180 650,420 1050,220 C1300,100 1450,300 1650,240" stroke="#cbd5e1" stroke-width="1.3" />
-        <path class="aas-flowing-path path-3" d="M-80,80 C400,280 800,60 1200,290 C1380,400 1500,120 1620,180" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="6 6" />
-      </svg>
+    <!-- SEAMLESS FLOWING WAVES BACKGROUND -->
+    <div class="aas-flowing-canvas">
+      <div class="aas-wave-track">
+        <svg class="aas-wave-svg" viewBox="0 0 2880 500" fill="none" preserveAspectRatio="none">
+          <path d="M0,220 C400,80 800,360 1440,200 C2080,40 2480,320 2880,220" stroke="#cbd5e1" stroke-width="1.8" />
+          <path d="M0,340 C350,180 750,440 1440,280 C2130,120 2530,380 2880,340" stroke="#e2e8f0" stroke-width="1.4" />
+          <path d="M0,120 C500,300 950,80 1440,240 C1930,400 2380,180 2880,120" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="8 8" />
+        </svg>
+        <svg class="aas-wave-svg" viewBox="0 0 2880 500" fill="none" preserveAspectRatio="none">
+          <path d="M0,220 C400,80 800,360 1440,200 C2080,40 2480,320 2880,220" stroke="#cbd5e1" stroke-width="1.8" />
+          <path d="M0,340 C350,180 750,440 1440,280 C2130,120 2530,380 2880,340" stroke="#e2e8f0" stroke-width="1.4" />
+          <path d="M0,120 C500,300 950,80 1440,240 C1930,400 2380,180 2880,120" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="8 8" />
+        </svg>
+      </div>
     </div>
 
     <div class="am-container" style="position:relative; z-index:2;">
@@ -154,7 +161,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- 5 CLEAN WHITE SQUARE CARDS (1:1 MATCH WITH SCREENSHOT) -->
+      <!-- 5 CLEAN WHITE SQUARE CARDS -->
       <div class="aas-cards-grid wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.15s">
         
         <div class="aas-stat-card">
@@ -204,7 +211,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       02 SECTION 01 : 시내버스 광고 (CORE PROMOTIONS & SEPARATED SEARCH)
+       02 SECTION 01 : 시내버스 광고
   ============================================ -->
   <section class="am-section am-bg-slate" id="bus">
     <div class="am-container">
@@ -230,7 +237,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <!-- BUS BLUEPRINT STUDIO CONSOLE -->
       <div class="am-bus-console wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- STEP 1: DIMENSION CHIPS -->
         <div class="abc-chip-bar">
           <button type="button" class="abc-chip bus-spot-btn on"
                   data-name="차도면 대형 래핑"
@@ -282,9 +288,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </button>
         </div>
 
-        <!-- STAGE VIEWER & LIVE SPEC CARD -->
         <div class="abc-stage-row">
-          
           <div class="abc-visual-viewport">
             <div class="avv-frame">
               <img src="/images/sample_bus.jpg" id="dynBusImg" alt="시내버스 광고 실사">
@@ -315,14 +319,12 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <a href="/board/estmate/write.php" class="abp-btn">이 규격으로 맞춤 견적 신청 →</a>
             </div>
           </div>
-
         </div>
 
       </div>
 
       <!-- BUS PROMOTIONAL 3-PILLAR ADVANTAGES -->
       <div class="am-bus-promo-grid wow fadeInUp" data-wow-duration="0.8s">
-        
         <div class="abp-promo-card">
           <span class="apc-num">01</span>
           <h3>광주 104개 전 노선 단독 직영 배차</h3>
@@ -343,7 +345,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <p>외주 하청 없는 10년 경력의 본사 전문 시공팀이 내후성 정품 솔벤 시트로 직접 출력 및 부착하며, 시공 직후 번호판 포함 4면 증빙 사진을 실시간 보고합니다.</p>
           <div class="apc-stat">시공 직후 차량 4면 번호판 실사 즉시 전송</div>
         </div>
-
       </div>
 
     </div>
@@ -351,7 +352,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       03 SECTION 02 : 온라인 마케팅 (EXPANDED CHANNELS & VISUAL SYMBOLS)
+       03 SECTION 02 : 온라인 마케팅 (PROVEN REVENUE-GENERATING DIGITAL MARKETING)
   ============================================ -->
   <section class="am-section" id="online">
     <div class="am-container">
@@ -361,7 +362,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div>
             <span class="ash-kicker">02 / INTEGRATED DIGITAL MARKETING</span>
             <h2 class="ash-title">온라인 마케팅</h2>
-            <p class="ash-desc">네이버 플레이스 1위부터 블로그, 맘카페, 인스타 스폰서드, 구글 GDN, 틱톡 숏폼까지 매출로 직결되는 통합 솔루션입니다.</p>
+            <p class="ash-desc">시내버스 광고를 본 소비자가 검색창에 브랜드를 입력할 때 실제 구매와 내방으로 이어지게 만드는 4대 핵심 온라인 전략입니다.</p>
           </div>
           <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideOnline">
             <span>온라인 전체 채널 가이드 ↗</span>
@@ -376,64 +377,64 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="aoh-scrim"></div>
           <div class="aoh-badge-float">
             <span class="abf-dot"></span>
-            <span>NAVER · GOOGLE · INSTAGRAM · TIKTOK INTEGRATED</span>
+            <span>NAVER · GOOGLE · META · TIKTOK PERFORMANCE GROUP</span>
           </div>
           <div class="aoh-content-bottom">
-            <h3>검색 1위 상위노출부터 맘카페 바이럴 &amp; SNS 스폰서드까지</h3>
-            <p>스마트플레이스 + C-Rank 블로그 + 맘카페 + 인스타/당근 + 구글 GDN + 틱톡 숏폼을 원스톱 통합 실행합니다.</p>
+            <h3>옥외광고의 각인 효과를 폭발적인 온라인 매출로 전환합니다</h3>
+            <p>네이버 스마트플레이스 1위 선점부터 C-Rank 블로그, 지역 맘카페 여론 형성, 인스타그램·당근 로컬 타깃팅까지 한 번에 실행합니다.</p>
           </div>
         </div>
       </div>
 
-      <!-- PRACTICAL DIGITAL MARKETING 4 CHANNELS -->
+      <!-- PRACTICAL DIGITAL MARKETING 4 PILLARS -->
       <div class="am-online-practical-grid wow fadeInUp" data-wow-duration="0.8s">
         
         <div class="aop-card">
           <div class="aop-top">
             <span class="aop-num">01</span>
-            <span class="aop-tag blue">지도 1위</span>
+            <span class="aop-tag blue">검색 유입 1위</span>
           </div>
-          <h3 class="aop-title">스마트플레이스 1위</h3>
+          <h3 class="aop-title">스마트플레이스 1위 최적화</h3>
           <p class="aop-desc">
-            '광주+진료과목/업종' 검색 시 지도 1페이지 TOP 3 안착. 대표 키워드 5종 세팅, 영수증 리뷰 자산화 및 24시간 네이버 예약을 연동합니다.
+            광주 지역 소비자가 내 업종을 검색할 때 네이버 지도 최상단 TOP 3에 노출시킵니다. 대표 키워드 세팅과 영수증 리뷰 빌드업으로 신규 고객의 예약 전화를 이끌어냅니다.
           </p>
-          <div class="aop-highlight-tag">네이버 지도 1페이지 상단 노출</div>
+          <div class="aop-highlight-tag">네이버 지도 1페이지 상단 노출 보증</div>
         </div>
 
         <div class="aop-card">
           <div class="aop-top">
             <span class="aop-num">02</span>
-            <span class="aop-tag blue">의료법 안심</span>
+            <span class="aop-tag blue">의료법 완벽 안심</span>
           </div>
-          <h3 class="aop-title">C-Rank 블로그 &amp; 맘카페</h3>
+          <h3 class="aop-title">C-Rank 브랜드 블로그</h3>
           <p class="aop-desc">
-            보건소 행정처분 리스크 0%의 의료법 100% 사전 법무 검수. 원장님 전문 칼럼과 광주맘스홀릭 침투 바이럴로 압도적 신뢰를 구축합니다.
+            단순 배포가 아닌 원장님의 진료 철학과 치료 전문성을 담은 월 8~12편의 심층 칼럼을 발행합니다. 의료법 100% 사전 법무 검수로 행정처분 걱정 없이 스마트블록을 장악합니다.
           </p>
-          <div class="aop-highlight-tag">월 8~12편 전문 칼럼 &amp; 맘카페 후기</div>
+          <div class="aop-highlight-tag">의료법 사전 검수 &amp; 전문 칼럼 발행</div>
         </div>
 
         <div class="aop-card">
           <div class="aop-top">
             <span class="aop-num">03</span>
-            <span class="aop-tag green">로컬 타깃</span>
+            <span class="aop-tag green">지역 여론 형성</span>
           </div>
-          <h3 class="aop-title">인스타 스폰서드 &amp; 당근</h3>
+          <h3 class="aop-title">광주 맘카페 &amp; 커뮤니티 바이럴</h3>
           <p class="aop-desc">
-            병원/매장 반경 1~3km 내 실제 거주 3050 핵심 세대원 타깃. 인스타그램 피드/스토리 스폰서드와 당근마켓 로컬 광고로 문의를 폭발시킵니다.
+            광주 대표 맘카페(맘스홀릭 등)와 당근마켓 동네생활에서 억지 광고가 아닌 자연스러운 내방 후기와 추천 여론을 형성하여 실제 3050 주부들의 신뢰를 확보합니다.
           </p>
-          <div class="aop-highlight-tag">반경 1~3km 정밀 세대원 타깃팅</div>
+          <div class="aop-highlight-tag">실유저 기반 자연스러운 입소문 침투</div>
         </div>
 
         <div class="aop-card">
           <div class="aop-top">
             <span class="aop-num">04</span>
-            <span class="aop-tag gold">글로벌·숏폼</span>
+            <span class="aop-tag gold">초정밀 로컬 타깃</span>
           </div>
-          <h3 class="aop-title">구글 GDN &amp; 틱톡 숏폼</h3>
+          <h3 class="aop-title">인스타 스폰서드 &amp; 당근 피드</h3>
           <p class="aop-desc">
-            구글 검색/디스플레이 네트워크(GDN) 정밀 리타깃팅과 틱톡 세로형 9:16 바이럴 영상 광고로 2030 영타깃 및 광역 고객을 완벽 흡수합니다.
+            내 사업장 반경 1~3km 이내의 실제 거주 세대원만을 정밀 타깃팅합니다. 3초 시선 장악 9:16 숏폼 영상과 당근마켓 광고로 불필요한 광고비 낭비 없이 문의를 폭발시킵니다.
           </p>
-          <div class="aop-highlight-tag">구글 검색 키워드 + 틱톡 숏폼 바이럴</div>
+          <div class="aop-highlight-tag">반경 1~3km 로컬 세대원 집중 타깃팅</div>
         </div>
 
       </div>
@@ -446,7 +447,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <div class="aog-body">
             <strong>의료법 100% 준수 보증</strong>
-            <span>허위·과장 표현 원천 차단으로 행정처분 및 보건소 리스크 0%</span>
+            <span>과장 광고 및 불법 표현을 원천 차단하여 보건소 행정처분 리스크 0%</span>
           </div>
         </div>
 
@@ -456,7 +457,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <div class="aog-body">
             <strong>주간 순위 투명 리포트</strong>
-            <span>플레이스 순위, 검색 키워드 유입수, 광고 CTR 매주 투명 보고</span>
+            <span>플레이스 노출 순위, 유입 키워드, 광고 클릭률(CTR)을 매주 투명하게 보고</span>
           </div>
         </div>
 
@@ -466,7 +467,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <div class="aog-body">
             <strong>1:1 전담 마케팅 디렉터</strong>
-            <span>외주 대행 없는 본사 인하우스 전담팀의 실시간 피드백 책임제</span>
+            <span>하청 외주 없는 본사 인하우스 전담팀이 24시간 실시간 피드백을 지원</span>
           </div>
         </div>
       </div>
@@ -476,7 +477,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       04 SECTION 03 : 영상제작 (CINEMATIC DARK PRODUCTION & VECTOR PICTOGRAMS)
+       04 SECTION 03 : 영상제작 (BOLD GOTHIC NUMBERS & VECTOR PICTOGRAMS)
   ============================================ -->
   <section class="am-section am-bg-dark" id="video">
     <div class="am-container">
@@ -497,7 +498,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <!-- DARK VIDEO CONSOLE -->
       <div class="am-video-console wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- FORMAT SWITCH BUTTONS -->
         <div class="avc-mode-bar">
           <button type="button" class="avc-btn on" data-video-mode="wide">16:9 와이드 시네마 모드</button>
           <button type="button" class="avc-btn" data-video-mode="shorts">9:16 SNS 릴스/숏폼 모드</button>
@@ -505,7 +505,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         <div class="avc-grid">
           
-          <!-- VIDEO FRAME -->
           <div class="avc-player-frame" id="dynVideoFrame">
             <video autoplay muted loop playsinline class="avc-video" id="dynMainVideo">
               <source src="/images/movie.mp4" type="video/mp4">
@@ -519,7 +518,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             </div>
           </div>
 
-          <!-- 4 DELIVERABLES (BIG SOFT WATERMARK NUMBERS 01~04) -->
+          <!-- 4 DELIVERABLES (BOLD GOTHIC WATERMARK NUMBERS 01~04) -->
           <div class="avc-products-col">
             
             <div class="avp-card on" data-target-mode="wide"
@@ -566,7 +565,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         </div>
 
-        <!-- 14-DAY BIG PRODUCTION WORKFLOW WITH VECTOR PICTOGRAMS -->
+        <!-- 14-DAY PRODUCTION WORKFLOW WITH VECTOR PICTOGRAMS -->
         <div class="am-video-big-workflow">
           <div class="avbw-card">
             <div class="avbw-top">
@@ -624,7 +623,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       05 SECTION 04 : 특화 옥외매체 (INTERACTIVE ACCORDION)
+       05 SECTION 04 : 특화 옥외매체 (CLEAN ELLIPSIS OVERFLOW ... PREVENT CUTOFF)
   ============================================ -->
   <section class="am-section" id="other">
     <div class="am-container">
@@ -642,7 +641,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- DYNAMIC ACCORDION -->
+      <!-- DYNAMIC ACCORDION WITH CLEAN ELLIPSIS -->
       <div class="am-ooh-accordion wow fadeInUp" data-wow-duration="0.8s">
         
         <div class="aoa-card on">
@@ -650,8 +649,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="aoa-scrim"></div>
           <div class="aoa-content">
             <span class="aoa-kicker">01 / URBAN MOBILITY</span>
-            <h3>법인 · 개인택시 양측면 래핑</h3>
-            <p>광주 전역 200여 대 차량이 주요 번화가와 골목길을 24시간 365일 상시 운행하며, 보행자 눈높이에서 밀착 노출되어 높은 주목도를 발휘합니다.</p>
+            <h3 class="aoa-title-ellipsis">법인 · 개인택시 양측면 래핑</h3>
+            <p class="aoa-desc-ellipsis">광주 전역 200여 대 차량이 주요 번화가와 골목길을 24시간 365일 상시 운행하며, 보행자 눈높이에서 밀착 노출되어 높은 주목도를 발휘합니다.</p>
             <div class="doa-spec">실측 규격: 2,100 × 320 mm | 24시간 365일 연속 운행</div>
           </div>
         </div>
@@ -661,8 +660,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="aoa-scrim"></div>
           <div class="aoa-content">
             <span class="aoa-kicker">02 / LOGISTICS BILLBOARD</span>
-            <h3>택배 탑차 3면 와이드 래핑</h3>
-            <p>광주 5개 구 대규모 아파트 단지와 주택가 골목길에 매일 10시간 이상 머무는 움직이는 초대형 랜드마크 빌보드로 주민 일상에 자연스럽게 각인됩니다.</p>
+            <h3 class="aoa-title-ellipsis">택배 탑차 3면 와이드 래핑</h3>
+            <p class="aoa-desc-ellipsis">광주 5개 구 대규모 아파트 단지와 주택가 골목길에 매일 10시간 이상 머무는 움직이는 초대형 랜드마크 빌보드로 주민 일상에 자연스럽게 각인됩니다.</p>
             <div class="doa-spec">실측 규격: 양면 3,000×1,500 + 후면 | 1일 10시간 체류</div>
           </div>
         </div>
@@ -672,8 +671,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="aoa-scrim"></div>
           <div class="aoa-content">
             <span class="aoa-kicker">03 / RETAIL PURCHASE POINT</span>
-            <h3>대형마트 쇼핑카트 &amp; 무빙워크</h3>
-            <p>이마트, 롯데마트 1,000여 대 카트 손잡이 정면에 위치하여 실질적 구매권을 가진 3050 주부 및 가족 고객과 60분간 1:1로 동행합니다.</p>
+            <h3 class="aoa-title-ellipsis">대형마트 쇼핑카트 &amp; 무빙워크</h3>
+            <p class="aoa-desc-ellipsis">이마트, 롯데마트 1,000여 대 카트 손잡이 정면에 위치하여 실질적 구매권을 가진 3050 주부 및 가족 고객과 60분간 1:1로 동행합니다.</p>
             <div class="doa-spec">실측 규격: 280 × 160 mm | 쇼핑 1회당 60분 연속 주시</div>
           </div>
         </div>
@@ -683,8 +682,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="aoa-scrim"></div>
           <div class="aoa-content">
             <span class="aoa-kicker">04 / DIGITAL SMART SIGNAGE</span>
-            <h3>DID 디지털 전광판 &amp; 전자현수막</h3>
-            <p>유스퀘어 터미널, 지하철 환승역, 관공서 로비에 고휘도 55~85" UHD 스크린으로 15초 영상을 하루 100회 이상 연속 송출합니다.</p>
+            <h3 class="aoa-title-ellipsis">DID 디지털 전광판 &amp; 전자현수막</h3>
+            <p class="aoa-desc-ellipsis">유스퀘어 터미널, 지하철 환승역, 관공서 로비에 고휘도 55~85" UHD 스크린으로 15초 영상을 하루 100회 이상 연속 송출합니다.</p>
             <div class="doa-spec">실측 규격: 55~85" UHD 패널 | 일 100회 이상 송출</div>
           </div>
         </div>
@@ -696,7 +695,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       06 SECTION 05 : 성공 사례 (ALL-IN-ONE MASTER ARCHIVE)
+       06 SECTION 05 : 성공 사례
   ============================================ -->
   <section class="am-section am-bg-slate" id="archive">
     <div class="am-container">
@@ -753,7 +752,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       07 SECTION 06 : 마스터플랜 (VECTOR PICTOGRAM PIPELINE)
+       07 SECTION 06 : 마스터플랜 (BOLD BORDER & SOFT GOTHIC NUMBERS PIPELINE)
   ============================================ -->
   <section class="am-section" id="process">
     <div class="am-container">
@@ -763,12 +762,12 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <p class="ash-desc" style="margin:0 auto;">외주 없는 100% 본사 인하우스 전문팀이 기획부터 시공, 보고까지 완벽히 책임지는 4단계 마스터플랜입니다.</p>
       </div>
 
-      <!-- VISUAL PROCESS PIPELINE (BIG TYPOGRAPHY & VECTOR PICTOGRAMS) -->
+      <!-- VISUAL PROCESS PIPELINE (THICK SOFT LINES & BOLD GOTHIC NUMBERS) -->
       <div class="am-pipeline-grid wow fadeInUp" data-wow-duration="0.8s">
         
         <div class="apg-step-card">
           <div class="apg-step-header">
-            <span class="apg-huge-num">01</span>
+            <span class="apg-huge-gothic-num">01</span>
             <span class="apg-day-pill">D+1 DAY</span>
           </div>
           <div class="apg-icon-circle">
@@ -784,7 +783,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         <div class="apg-step-card">
           <div class="apg-step-header">
-            <span class="apg-huge-num">02</span>
+            <span class="apg-huge-gothic-num">02</span>
             <span class="apg-day-pill">D+3 DAY</span>
           </div>
           <div class="apg-icon-circle">
@@ -800,7 +799,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         <div class="apg-step-card">
           <div class="apg-step-header">
-            <span class="apg-huge-num">03</span>
+            <span class="apg-huge-gothic-num">03</span>
             <span class="apg-day-pill">D+7 DAY</span>
           </div>
           <div class="apg-icon-circle">
@@ -816,7 +815,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         <div class="apg-step-card highlight">
           <div class="apg-step-header">
-            <span class="apg-huge-num blue">04</span>
+            <span class="apg-huge-gothic-num blue">04</span>
             <span class="apg-day-pill gold">D+14 DAY</span>
           </div>
           <div class="apg-icon-circle blue">
@@ -925,7 +924,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       11 SWISS-STYLE EDITORIAL SPECIFICATION MODAL (EXPANDED DIVERSE CONTENT)
+       11 SWISS-STYLE EDITORIAL SPECIFICATION MODAL
   ============================================ -->
   <div class="bus-guide-overlay" id="busGuideOverlay">
     <div class="lux-modal-panel">
@@ -949,7 +948,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       <div class="lux-modal-body">
         
-        <!-- 01 BUS (STRUCTURED PARAGRAPH CARDS) -->
+        <!-- 01 BUS -->
         <div class="bus-guide-page on" id="guideBus">
           <h4 class="lmg-sec-title">시내버스 외부 광고 4대 부착면 실측 규격</h4>
           <div class="lmg-card-grid">
@@ -1007,7 +1006,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
         </div>
 
-        <!-- 02 ONLINE (EXPANDED DIVERSE CHANNELS) -->
+        <!-- 02 ONLINE -->
         <div class="bus-guide-page" id="guideOnline">
           <h4 class="lmg-sec-title">가온엔 통합 온라인 마케팅 6대 채널 종합 가이드</h4>
           <div class="lmg-card-grid">
@@ -1067,7 +1066,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
         </div>
 
-        <!-- 03 VIDEO (4K PRODUCTION) -->
+        <!-- 03 VIDEO -->
         <div class="bus-guide-page" id="guideVideo">
           <h4 class="lmg-sec-title">4K 시네마틱 영상제작 &amp; SNS 숏폼 프로덕션 공정</h4>
           <div class="lmg-card-grid">

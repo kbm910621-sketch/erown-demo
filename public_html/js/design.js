@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GAON-N 2026 SCREENSHOT MATCHED LUXURY AGENCY JS
+   GAON-N 2026 ELITE BRANDED STYLING & GOTHIC TYPOGRAPHY JS
    ========================================================================== */
 $(function () {
   'use strict';
