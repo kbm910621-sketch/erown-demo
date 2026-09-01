@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GAON-N 2026 GRAND PRIX AWARD-WINNING INTERACTION JS
+   GAON-N 2026 GRAND PRIX BESPOKE INTERACTION JS
    ========================================================================== */
 $(function () {
   'use strict';
@@ -8,7 +8,7 @@ $(function () {
     new WOW().init();
   }
 
-  /* 01. BUS SERVICE TAB SWITCHER */
+  /* 01. BUS BLUEPRINT HOTSPOT SWITCHER */
   $(document).on('click', '.bus-service-tab', function(e) {
     e.preventDefault();
     var $tab = $(this);
@@ -26,43 +26,11 @@ $(function () {
 
     if (img && img.trim() !== '') {
       $('#busStageImg').attr('src', img).show();
-      $('.msv-empty').hide();
+      $('.gpb-empty').hide();
     }
   });
 
-  /* 02. ONLINE SERVICE TAB SWITCHER */
-  $(document).on('click', '.online-service-tab', function(e) {
-    e.preventDefault();
-    var $tab = $(this);
-    var tag = $tab.attr('data-tag');
-    var title = $tab.attr('data-title');
-    var desc = $tab.attr('data-desc');
-
-    $('.online-service-tab').removeClass('on');
-    $tab.addClass('on');
-
-    $('#onlineStageTag').text(tag);
-    $('#onlineStageTitle').text(title);
-    $('#onlineStageDesc').text(desc);
-  });
-
-  /* 03. VIDEO SERVICE TAB SWITCHER */
-  $(document).on('click', '.video-service-tab', function(e) {
-    e.preventDefault();
-    var $tab = $(this);
-    var tag = $tab.attr('data-tag');
-    var title = $tab.attr('data-title');
-    var desc = $tab.attr('data-desc');
-
-    $('.video-service-tab').removeClass('on');
-    $tab.addClass('on');
-
-    $('#videoStageTag').text(tag);
-    $('#videoStageTitle').text(title);
-    $('#videoStageDesc').text(desc);
-  });
-
-  /* 04. OTHER MEDIA PORTFOLIO FILTER */
+  /* 02. OTHER MEDIA PORTFOLIO FILTER */
   $(document).on('click', '.other-port-filter-btn', function(e) {
     e.preventDefault();
     var filter = $(this).attr('data-filter');
@@ -84,7 +52,7 @@ $(function () {
     }
   });
 
-  /* 05. GUIDE MODAL HANDLERS (5 TABS) */
+  /* 03. GUIDE MODAL HANDLERS (5 TABS) */
   function openGuideModal(targetTab) {
     var target = targetTab || 'guideBus';
     $('html, body').addClass('modal-open');
@@ -129,7 +97,7 @@ $(function () {
     $('#' + target).addClass('on').show();
   });
 
-  /* 06. PORTFOLIO LIGHTBOX MODAL HANDLER */
+  /* 04. PORTFOLIO LIGHTBOX MODAL HANDLER */
   function openPortfolioModal(name, cat, img, id) {
     $('#modalTitle').text(name || '광고 프로젝트');
     $('#modalCat').text(cat || '광고 집행 사례');
@@ -151,10 +119,10 @@ $(function () {
     }
   }
 
-  $(document).on('click', '.main-port-card, .master-card', function(e) {
+  $(document).on('click', '.main-port-card, .gp-card', function(e) {
     e.preventDefault();
-    var name = $(this).attr('data-name') || $(this).find('.mc-title').text();
-    var cat = $(this).attr('data-cat') || $(this).find('.mc-cat').text();
+    var name = $(this).attr('data-name') || $(this).find('.gpc-title').text();
+    var cat = $(this).attr('data-cat') || $(this).find('.gpc-cat').text();
     var id = $(this).attr('data-id') || '01';
     var img = $(this).find('img').attr('src');
     if (!img) {
