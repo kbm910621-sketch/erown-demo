@@ -62,6 +62,288 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/header.php";?>
   
   <!-- ============================================
+       01 HERO STAGE : KINETIC CINEMATIC BILLBOARD
+  ============================================ -->
+  <section class="am-hero" id="hero">
+    <div class="am-container">
+      
+      <!-- TOP NAVIGATOR CHIPS -->
+      <div class="amh-top-row wow fadeInDown" data-wow-duration="0.6s">
+        <div class="amh-beacon">
+          <span class="amb-dot"></span>
+          <span>GAON-N TOTAL ADVERTISING GROUP 2026</span>
+        </div>
+        <div class="amh-nav-chips">
+          <a href="#bus" class="anc-chip">시내버스 광고</a>
+          <a href="#online" class="anc-chip">온라인 마케팅</a>
+          <a href="#video" class="anc-chip">영상제작</a>
+          <a href="#other" class="anc-chip">특화 옥외매체</a>
+          <a href="#process" class="anc-chip">마스터플랜</a>
+        </div>
+      </div>
+
+      <!-- HERO HEADLINE -->
+      <div class="amh-copy-block wow fadeInUp" data-wow-duration="0.8s">
+        <h1 class="amh-h1">
+          광주 시내버스 104개 노선 독점 직영,<br>
+          <span class="amh-gradient">옥외광고 · 온라인 마케팅 · 영상제작</span>
+        </h1>
+        <p class="amh-desc">
+          광주 5개 구 1,000대 시내버스 래핑부터 네이버 1위 상위노출, 4K 시네마틱 영상제작까지 본사가 기획부터 시공까지 100% 직접 전담합니다.
+        </p>
+      </div>
+
+      <!-- ACTION CTAS -->
+      <div class="amh-cta-row wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+        <a href="/board/estmate/write.php" class="amh-btn-primary">
+          <span>맞춤 노선 &amp; 견적 신청</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <button type="button" class="amh-btn-secondary bus-guide-open" data-guide="guideBus">
+          <span>매체별 실측 가이드 확인 ↗</span>
+        </button>
+      </div>
+
+      <!-- 21:9 CLEAN CINEMA FRAME -->
+      <div class="amh-cinema-frame wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.2s">
+        <div class="acf-viewport">
+          <video autoplay muted loop playsinline class="acf-video">
+            <source src="/images/movie.mp4" type="video/mp4">
+          </video>
+          <div class="acf-scrim"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       01-B ABOUT STATS SECTION (SCREENSHOT 1:1 MATCH & WIDE BREATHING GAPS)
+  ============================================ -->
+  <section class="am-about-stats-sec">
+    <!-- ULTRA-SUBTLE SMOOTH CONTINUOUS WAVE LINES -->
+    <div class="aas-silk-canvas">
+      <svg class="aas-silk-svg" viewBox="0 0 1600 600" fill="none" preserveAspectRatio="none">
+        <path class="silk-line line-1" d="M-100,220 C350,60 700,380 1150,140 C1400,-20 1550,220 1750,160" stroke="#e8edf4" stroke-width="1.1" stroke-linecap="round" />
+        <path class="silk-line line-2" d="M-80,360 C320,180 780,460 1180,240 C1420,80 1560,340 1780,260" stroke="#edf2f7" stroke-width="0.9" stroke-linecap="round" />
+      </svg>
+    </div>
+
+    <div class="am-container" style="position:relative; z-index:2;">
+      
+      <!-- TOP COPY & WATERMARK BRANDING -->
+      <div class="aas-top-row wow fadeInUp" data-wow-duration="0.8s">
+        <div class="aas-headline-col">
+          <div class="aas-kicker-line">
+            <span class="akl-dash"></span>
+            <span class="akl-text">ABOUT</span>
+          </div>
+          <h2 class="aas-main-title">
+            우리는 광고의<br>
+            <span class="aas-blue-highlight">오프라인과 온라인을 잇는</span><br>
+            통합 마케팅 파트너입니다.
+          </h2>
+        </div>
+
+        <div class="aas-watermark-col">
+          <div class="awc-huge-text">BUS</div>
+          <div class="awc-huge-text">TAXI</div>
+          <div class="awc-huge-text bold">ONLINE</div>
+        </div>
+      </div>
+
+      <!-- 5 CLEAN WHITE SQUARE CARDS (70PX WIDE GAP & PADDING) -->
+      <div class="aas-cards-grid wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.15s">
+        
+        <div class="aas-stat-card">
+          <span class="asc-label">누적 광고 집행</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="500">500</strong><span class="asc-plus">+</span>
+          </div>
+          <span class="asc-unit">건</span>
+        </div>
+
+        <div class="aas-stat-card">
+          <span class="asc-label">운행 광고 차량</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="200">200</strong><span class="asc-plus">+</span>
+          </div>
+          <span class="asc-unit">대</span>
+        </div>
+
+        <div class="aas-stat-card">
+          <span class="asc-label">광주 지역 서비스</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="10">10</strong>
+          </div>
+          <span class="asc-unit">년</span>
+        </div>
+
+        <div class="aas-stat-card">
+          <span class="asc-label">고객 재계약률</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="98">98</strong>
+          </div>
+          <span class="asc-unit">%</span>
+        </div>
+
+        <div class="aas-stat-card">
+          <span class="asc-label">협력 매체사</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="50">50</strong><span class="asc-plus">+</span>
+          </div>
+          <span class="asc-unit">곳</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       02 SECTION 01 : 시내버스 광고 (CORE PROMOTIONS & SEPARATED SEARCH)
+  ============================================ -->
+  <section class="am-section am-bg-slate" id="bus">
+    <div class="am-container">
+      
+      <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
+        <div class="ash-flex">
+          <div>
+            <span class="ash-kicker">01 / OOH BUS ADVERTISING</span>
+            <h2 class="ash-title">시내버스 광고</h2>
+            <p class="ash-desc">광주 시내버스 104개 전 노선 단독 배차. 일일 150만 시민의 눈높이에서 18시간 동안 반복 각인되는 움직이는 랜드마크입니다.</p>
+          </div>
+          <div class="ash-actions">
+            <button type="button" class="ash-guide-btn blue" id="btnOpenRouteSearchModal">
+              <span>광주 104개 노선 실시간 검색기 ↗</span>
+            </button>
+            <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideBus">
+              <span>시내버스 규격 가이드 ↗</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUS BLUEPRINT STUDIO CONSOLE -->
+      <div class="am-bus-console wow fadeInUp" data-wow-duration="0.8s">
+        
+        <div class="abc-chip-bar">
+          <button type="button" class="abc-chip bus-spot-btn on"
+                  data-name="차도면 대형 래핑"
+                  data-size="3,700 × 1,000 mm"
+                  data-target="왕복 6~8차선 반대편 차량 운전자 &amp; 보행자 시야 정면 100% 노출"
+                  data-material="LG 하우시스 최고급 내후성 정품 솔벤 시트 (1년 이상 변색 방지)"
+                  data-benefit="도심 간선도로 주행 중 가장 거대한 면적으로 브랜드 인지도를 각인시킵니다. 상무지구, 광천터미널 등 핵심 도로에서 3초 안에 시선을 장악합니다.">
+            차도면 (3,700×1,000)
+          </button>
+          <button type="button" class="abc-chip bus-spot-btn"
+                  data-name="인도면 표준 래핑"
+                  data-size="3,000 × 500 mm"
+                  data-target="버스 정류장 대기 승객 &amp; 인도 보행자 눈높이 1:1 밀착"
+                  data-material="LG 하우시스 최고급 내후성 정품 솔벤 시트"
+                  data-benefit="승객 탑승 시 눈높이 정면에 위치하여 전화번호, 진료과목, 핵심 진료 안내 등 상세 정보 전달에 가장 효과적인 밀착형 규격입니다.">
+            인도면 (3,000×500)
+          </button>
+          <button type="button" class="abc-chip bus-spot-btn"
+                  data-name="후면 번호판 상단 래핑"
+                  data-size="2,400 × 300 mm"
+                  data-target="신호 대기 및 도로 정체 시 후방 차량 운전자 3분 이상 강제 주시"
+                  data-material="LG 하우시스 정품 솔벤 반사 시트 지원"
+                  data-benefit="출퇴근 시간 및 교차로 신호 대기 중 뒤따르는 차량 운전자와 동승자 시선 정면에 장시간 강제 노출되는 가온엔 필수 패키지 면입니다.">
+            후면 (2,400×300)
+          </button>
+          <button type="button" class="abc-chip bus-spot-btn"
+                  data-name="사랑면 (승하차문 측면)"
+                  data-size="1,000 × 500 mm"
+                  data-target="승객 승하차 시 즉각적인 시선 유도"
+                  data-material="고접착 실사 솔벤 시트"
+                  data-benefit="하차문 바로 옆에 위치하여 탑승객이 내릴 때 100% 마주치게 되며, 보행자가 버스에 접근할 때 즉각적인 주목도를 형성합니다.">
+            사랑면 (1,000×500)
+          </button>
+          <button type="button" class="abc-chip bus-spot-btn"
+                  data-name="내부 중앙창문 포스터"
+                  data-size="1,100 × 500 mm"
+                  data-target="좌석 및 통로 탑승객 15~30분간 시선 독점"
+                  data-material="실내 고선명 페트(PET) 출력"
+                  data-benefit="목적지까지 이동하는 15~30분 동안 승객 시선 정면에 머물며 병원/학원의 세부 강점과 브랜드 스토리를 정독시키는 고밀도 매체입니다.">
+            내부 창문 (1,100×500)
+          </button>
+          <button type="button" class="abc-chip bus-spot-btn"
+                  data-name="정류소 음성 안내 방송"
+                  data-size="1회 7초 성우 음성"
+                  data-target="해당 정류소 도착 전 탑승 승객 전원 청각 100% 각인"
+                  data-material="전문 성우 육성 녹음 + 공식 오디오 마스터링"
+                  data-benefit="'이번 정류소는 ○○병원 앞입니다.' 정류소당 단 1개 광고주만 독점 송출되어 시각적 한계를 넘어 청각으로 확실하게 기억시킵니다.">
+            음성 안내 방송 (7초)
+          </button>
+        </div>
+
+        <div class="abc-stage-row">
+          <div class="abc-visual-viewport">
+            <div class="avv-frame">
+              <img src="/images/sample_bus.jpg" id="dynBusImg" alt="시내버스 광고 실사">
+              <div class="avv-marker" id="dvsMarker" style="top:35%; left:25%;"></div>
+            </div>
+          </div>
+
+          <div class="abc-brief-panel">
+            <div class="abp-badge" id="dynBusBadge">차도면 대형 래핑</div>
+            <h3 class="abp-title" id="dynBusSize">3,700 × 1,000 mm</h3>
+            
+            <div class="abp-field">
+              <span class="abp-lbl">노출 타깃</span>
+              <strong class="abp-val" id="dynBusTarget">왕복 6~8차선 반대편 차량 운전자 &amp; 보행자 시야 정면 100% 노출</strong>
+            </div>
+
+            <div class="abp-field">
+              <span class="abp-lbl">소재 및 재질</span>
+              <strong class="abp-val" id="dynBusMaterial">LG 하우시스 최고급 내후성 정품 솔벤 시트 (1년 이상 변색 방지)</strong>
+            </div>
+            
+            <div class="abp-field">
+              <span class="abp-lbl">상권 공략 전략</span>
+              <p class="abp-desc" id="dynBusBenefit">도심 간선도로 주행 중 가장 거대한 면적으로 브랜드 인지도를 각인시킵니다. 상무지구, 광천터미널 등 핵심 도로에서 3초 안에 시선을 장악합니다.</p>
+            </div>
+
+            <div class="abp-action">
+              <a href="/board/estmate/write.php" class="abp-btn">이 규격으로 맞춤 견적 신청 →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BUS PROMOTIONAL 3-PILLAR ADVANTAGES -->
+      <div class="am-bus-promo-grid wow fadeInUp" data-wow-duration="0.8s">
+        <div class="abp-promo-card">
+          <span class="apc-num">01</span>
+          <h3>광주 104개 전 노선 단독 직영 배차</h3>
+          <p>병원, 학원, 분양 홍보관의 주 타깃 고객이 밀집된 상무·수완·봉선·첨단 등 핵심 거점을 정확하게 관통하는 맞춤형 최적 노선을 단독 설계합니다.</p>
+          <div class="apc-stat">광주 5개 구 1,000대 시내버스 독점 운영</div>
+        </div>
+
+        <div class="abp-promo-card">
+          <span class="apc-num">02</span>
+          <h3>1일 18시간 · 일 150만 시민 눈높이 노출</h3>
+          <p>새벽 5시 30분부터 밤 12시까지 도심 주요 간선도로와 교차로를 쉼 없이 순환하며, 운전자와 보행자 시선 정면에 하루 150만 회 이상 강제 노출됩니다.</p>
+          <div class="apc-stat">차도면 3.7m + 인도면 3.0m + 후면 2.4m 3면 패키지</div>
+        </div>
+
+        <div class="abp-promo-card">
+          <span class="apc-num">03</span>
+          <h3>LG 하우시스 정품 솔벤 시트 &amp; 100% 직영 시공</h3>
+          <p>외주 하청 없는 10년 경력의 본사 전문 시공팀이 내후성 정품 솔벤 시트로 직접 출력 및 부착하며, 시공 직후 번호판 포함 4면 증빙 사진을 실시간 보고합니다.</p>
+          <div class="apc-stat">시공 직후 차량 4면 번호판 실사 즉시 전송</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
        03 SECTION 02 : 온라인 마케팅 (SENSUAL VISUAL SHOWCASE DECK)
   ============================================ -->
   <section class="am-section" id="online">
@@ -80,7 +362,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- SENSUAL 4-CHANNEL VISUAL SHOWCASE GRID (MINIMAL TEXT & HIGH-END MEDIA) -->
+      <!-- SENSUAL 4-CHANNEL VISUAL SHOWCASE GRID -->
       <div class="am-online-sensual-grid wow fadeInUp" data-wow-duration="0.8s">
         
         <!-- CARD 01: SMART PLACE #1 -->
