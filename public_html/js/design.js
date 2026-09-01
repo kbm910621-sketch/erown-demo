@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GAON-N 2026 DEEP EXPLANATION INTERACTION JS
+   GAON-N 2026 HARMONIZED INTERACTION JS
    ========================================================================== */
 $(function () {
   'use strict';
@@ -24,7 +24,7 @@ $(function () {
     });
   });
 
-  /* 02. BUS BLUEPRINT CHIP SWITCHER WITH RICH EXPLANATIONS */
+  /* 02. BUS BLUEPRINT CHIP SWITCHER */
   $(document).on('click', '.bus-spot-btn', function(e) {
     e.preventDefault();
     var $btn = $(this);
@@ -45,7 +45,6 @@ $(function () {
     }
     $('#dynBusBenefit').text(benefit);
 
-    // Marker positioning feedback
     var markerPos = [
       { top: '35%', left: '25%' },
       { top: '55%', left: '60%' },
@@ -58,19 +57,19 @@ $(function () {
     $('#dvsMarker').css(markerPos[idx]);
   });
 
-  /* 03. BUS ROUTE FILTER TABS */
-  $(document).on('click', '.drf-tab', function(e) {
+  /* 03. BUS DISTRICT ROUTE FILTER TABS */
+  $(document).on('click', '.adb-tab', function(e) {
     e.preventDefault();
-    var cat = $(this).attr('data-route-cat');
+    var district = $(this).attr('data-district');
 
-    $('.drf-tab').removeClass('on');
+    $('.adb-tab').removeClass('on');
     $(this).addClass('on');
 
-    if (cat === 'all') {
-      $('#dynRouteGrid .drg-card').fadeIn(200);
+    if (district === 'all') {
+      $('#districtRouteGrid .adg-card').fadeIn(200);
     } else {
-      $('#dynRouteGrid .drg-card').each(function() {
-        if ($(this).attr('data-cat') === cat) {
+      $('#districtRouteGrid .adg-card').each(function() {
+        if ($(this).attr('data-district') === district) {
           $(this).fadeIn(200);
         } else {
           $(this).hide();
@@ -80,7 +79,7 @@ $(function () {
   });
 
   /* 04. SEO KEYWORD COCKPIT INTERACTION */
-  $(document).on('click', '.dks-btn', function(e) {
+  $(document).on('click', '.akb-btn', function(e) {
     e.preventDefault();
     var $btn = $(this);
     var kw = $btn.attr('data-kw');
@@ -89,7 +88,7 @@ $(function () {
     var calls = $btn.attr('data-calls');
     var strategy = $btn.attr('data-strategy');
 
-    $('.dks-btn').removeClass('on');
+    $('.akb-btn').removeClass('on');
     $btn.addClass('on');
 
     $('#dynKwText').text(kw);
@@ -101,22 +100,22 @@ $(function () {
     }
   });
 
-  $(document).on('click', '.dstrat-card', function(e) {
+  $(document).on('click', '.ast-card', function(e) {
     e.preventDefault();
-    $('.dstrat-card').removeClass('on');
+    $('.ast-card').removeClass('on');
     $(this).addClass('on');
-    var body = $(this).attr('data-strat-body');
-    if (body) {
-      $('#dynStrategyDesc').text(body);
+    var desc = $(this).attr('data-strat-desc');
+    if (desc) {
+      $('#dynStrategyDesc').text(desc);
     }
   });
 
   /* 05. VIDEO FORMAT SWITCHER & PRODUCT CLICK */
-  $(document).on('click', '.dvc-mode-btn', function(e) {
+  $(document).on('click', '.avc-btn', function(e) {
     e.preventDefault();
     var mode = $(this).attr('data-video-mode');
 
-    $('.dvc-mode-btn').removeClass('on');
+    $('.avc-btn').removeClass('on');
     $(this).addClass('on');
 
     if (mode === 'shorts') {
@@ -132,37 +131,37 @@ $(function () {
     }
   });
 
-  $(document).on('click', '.dvp-item', function(e) {
+  $(document).on('click', '.avp-card', function(e) {
     e.preventDefault();
-    $('.dvp-item').removeClass('on');
+    $('.avp-card').removeClass('on');
     $(this).addClass('on');
     var targetMode = $(this).attr('data-target-mode');
     var vtitle = $(this).attr('data-vtitle');
     var vsub = $(this).attr('data-vsub');
 
-    $('.dvc-mode-btn[data-video-mode="' + targetMode + '"]').trigger('click');
+    $('.avc-btn[data-video-mode="' + targetMode + '"]').trigger('click');
     if (vtitle) $('#dynVideoTitle').text(vtitle);
     if (vsub) $('#dynVideoSub').text(vsub);
   });
 
   /* 06. OOH ACCORDION HOVER/CLICK */
-  $(document).on('mouseenter click', '.doa-card', function() {
-    $('.doa-card').removeClass('on');
+  $(document).on('mouseenter click', '.aoa-card', function() {
+    $('.aoa-card').removeClass('on');
     $(this).addClass('on');
   });
 
   /* 07. ALL-IN-ONE MASTER PORTFOLIO FILTER */
-  $(document).on('click', '.dfb-btn', function(e) {
+  $(document).on('click', '.afc-btn', function(e) {
     e.preventDefault();
     var filter = $(this).attr('data-filter');
 
-    $('.dfb-btn').removeClass('on');
+    $('.afc-btn').removeClass('on');
     $(this).addClass('on');
 
     if (filter === 'all') {
-      $('#masterPortGrid .dpg-card').fadeIn(200);
+      $('#masterPortGrid .apg-card').fadeIn(200);
     } else {
-      $('#masterPortGrid .dpg-card').each(function() {
+      $('#masterPortGrid .apg-card').each(function() {
         var cat = $(this).attr('data-cat');
         if (cat === filter) {
           $(this).fadeIn(200);
@@ -240,10 +239,10 @@ $(function () {
     }
   }
 
-  $(document).on('click', '.main-port-card, .dpg-card', function(e) {
+  $(document).on('click', '.main-port-card, .apg-card', function(e) {
     e.preventDefault();
-    var name = $(this).attr('data-name') || $(this).find('.dpg-title').text();
-    var cat = $(this).attr('data-cat') || $(this).find('.dpg-cat').text();
+    var name = $(this).attr('data-name') || $(this).find('.apg-title').text();
+    var cat = $(this).attr('data-cat') || $(this).find('.apg-cat').text();
     var id = $(this).attr('data-id') || '01';
     var img = $(this).find('img').attr('src');
     if (!img) {
