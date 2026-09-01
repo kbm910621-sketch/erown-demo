@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GAON-N 2026 GRAND PRIX BESPOKE INTERACTION JS
+   GAON-N 2026 CAPTIVATING ADVERTISING AGENCY INTERACTION JS
    ========================================================================== */
 $(function () {
   'use strict';
@@ -15,6 +15,7 @@ $(function () {
     var index = $tab.attr('data-index');
     var title = $tab.attr('data-title');
     var desc = $tab.attr('data-desc');
+    var target = $tab.attr('data-target-demo');
     var img = $tab.attr('data-image');
 
     $('.bus-service-tab').removeClass('on');
@@ -23,25 +24,28 @@ $(function () {
     $('#busStageIndex').text(index);
     $('#busStageTitle').text(title);
     $('#busStageDesc').text(desc);
+    if (target) {
+      $('#busStageTarget').text('타깃: ' + target);
+    }
 
     if (img && img.trim() !== '') {
       $('#busStageImg').attr('src', img).show();
-      $('.gpb-empty').hide();
+      $('.abs-empty').hide();
     }
   });
 
-  /* 02. OTHER MEDIA PORTFOLIO FILTER */
-  $(document).on('click', '.other-port-filter-btn', function(e) {
+  /* 02. ALL-IN-ONE MASTER PORTFOLIO FILTER */
+  $(document).on('click', '.amf-btn', function(e) {
     e.preventDefault();
     var filter = $(this).attr('data-filter');
 
-    $('.other-port-filter-btn').removeClass('on');
+    $('.amf-btn').removeClass('on');
     $(this).addClass('on');
 
     if (filter === 'all') {
-      $('#otherPortGrid .other-port-item').fadeIn(200);
+      $('#masterPortGrid .adv-port-card').fadeIn(200);
     } else {
-      $('#otherPortGrid .other-port-item').each(function() {
+      $('#masterPortGrid .adv-port-card').each(function() {
         var cat = $(this).attr('data-cat');
         if (cat === filter) {
           $(this).fadeIn(200);
@@ -119,10 +123,10 @@ $(function () {
     }
   }
 
-  $(document).on('click', '.main-port-card, .gp-card', function(e) {
+  $(document).on('click', '.main-port-card, .adv-port-card', function(e) {
     e.preventDefault();
-    var name = $(this).attr('data-name') || $(this).find('.gpc-title').text();
-    var cat = $(this).attr('data-cat') || $(this).find('.gpc-cat').text();
+    var name = $(this).attr('data-name') || $(this).find('.apc-title').text();
+    var cat = $(this).attr('data-cat') || $(this).find('.apc-cat').text();
     var id = $(this).attr('data-id') || '01';
     var img = $(this).find('img').attr('src');
     if (!img) {
