@@ -87,7 +87,15 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </video>
           <div class="main_hero_panel_dim"></div>
           <div class="main_hero_panel_overlay_text">
-            <h2>TOTAL MARKETING PARTNER GAON-N</h2>
+            <div class="mho-text-box">
+              <h2 class="mho-title">
+                보여주는 광고보다<br>
+                이해되는 광고를 만듭니다.
+              </h2>
+              <p class="mho-sub">
+                광주 시내버스 104개 노선 단독 직영 · 네이버 1위 마케팅 · 4K 시네마틱 프로덕션
+              </p>
+            </div>
           </div>
         </div>
       </div>

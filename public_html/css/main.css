@@ -6,21 +6,24 @@
 .agency-master-system { position:relative; width:100%; overflow-x:hidden; background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; -webkit-font-smoothing:antialiased; }
 .am-container { max-width:1420px; margin:0 auto; padding:0 36px; }
 
-/* MAIN_HERO GSAP SCROLL INTERACTION */
-.main_hero { position:relative; width:100%; height:100vh; min-height:760px; overflow:hidden; background:#f8fafc; display:flex; flex-direction:column; align-items:center; justify-content:center; }
-.main_hero_text_wrap { position:absolute; top:16%; left:50%; transform:translateX(-50%); text-align:center; z-index:5; width:100%; max-width:980px; pointer-events:auto; }
+/* MAIN_HERO GSAP SCROLL INTERACTION (100VH FULL EXPANSION) */
+.main_hero { position:relative; width:100%; height:100vh; overflow:hidden; background:#f8fafc; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.main_hero_text_wrap { position:absolute; top:14%; left:50%; transform:translateX(-50%); text-align:center; z-index:5; width:100%; max-width:980px; pointer-events:auto; }
 .main_hero_text { font-size:62px; font-weight:900; line-height:1.2; letter-spacing:-2.5px; color:#0f172a; margin:0 0 24px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
 .main_hero_keywords { display:flex; justify-content:center; align-items:center; gap:10px; flex-wrap:wrap; }
 .mhk-pill { padding:10px 22px; border-radius:100px; background:#0f274e; color:#ffffff; font-size:13.5px; font-weight:800; text-decoration:none; transition:all 0.2s; box-shadow:0 6px 18px rgba(15,39,78,0.2); }
 .mhk-pill:hover { background:#1855b7; color:#ffffff; }
 
-.main_hero_panel_wrap { position:absolute; left:50%; top:35%; transform:translateX(-50%); width:60%; height:80vh; max-height:680px; z-index:3; overflow:visible; }
-.main_hero_panel { position:relative; width:100%; height:100%; border-radius:42px; overflow:hidden; box-shadow:0 30px 90px rgba(15,23,42,0.2); background:#0f172a; }
+.main_hero_panel_wrap { position:absolute; left:50%; top:36%; transform:translateX(-50%); width:60%; height:62vh; z-index:3; overflow:visible; will-change:width,height,top,transform; }
+.main_hero_panel { position:relative; width:100%; height:100%; border-radius:42px; overflow:hidden; box-shadow:0 30px 90px rgba(15,23,42,0.2); background:#0f172a; will-change:border-radius,transform; }
 .main_hero_panel_video_wrap { position:relative; width:100%; height:100%; overflow:hidden; }
 .main_hero_panel_video { width:100%; height:100%; object-fit:cover; display:block; }
 .main_hero_panel_dim { position:absolute; inset:0; background:rgba(0,0,0,0); pointer-events:none; transition:background-color 0.4s; }
-.main_hero_panel_overlay_text { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; z-index:4; pointer-events:none; opacity:0; }
-.main_hero_panel_overlay_text h2 { font-size:36px; font-weight:900; color:#ffffff; letter-spacing:-1px; text-shadow:0 4px 20px rgba(0,0,0,0.5); font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
+.main_hero_panel_overlay_text { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; z-index:4; pointer-events:none; opacity:0; text-align:center; padding:0 24px; }
+.mho-text-box { max-width:900px; transform:scale(1.08); will-change:transform,opacity; }
+.mho-title { font-size:58px; font-weight:900; line-height:1.22; letter-spacing:-2px; color:#ffffff; margin:0 0 16px; text-shadow:0 4px 24px rgba(0,0,0,0.6); font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
+.mho-sub { font-size:17px; font-weight:600; color:rgba(255,255,255,0.9); margin:0; text-shadow:0 2px 12px rgba(0,0,0,0.5); letter-spacing:-0.4px; }
+
 
 
 

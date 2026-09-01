@@ -57,31 +57,34 @@ $(function() {
     var currentStep = 1;
     var scrollLocked = true;
 
+    
     /* REFRESH CHECK */
     if (hero.getBoundingClientRect().bottom < 0) {
       currentStep = 3;
       scrollLocked = false;
       window.dispatchEvent(new Event('heroUnlock'));
 
-      gsap.set(wrap, { width: '100%', top: '0%', left: '50%', xPercent: -50 });
+      gsap.set(wrap, { width: '100%', height: '100vh', top: '0%', left: '50%', xPercent: -50 });
       gsap.set(panel, { borderRadius: 0, y: 0, scale: 1 });
-      gsap.set(video, { scale: 1.08 });
-      gsap.set(dim, { backgroundColor: 'rgba(0,0,0,0.42)' });
+      gsap.set(video, { scale: 1.05 });
+      gsap.set(dim, { backgroundColor: 'rgba(0,0,0,0.48)' });
       gsap.set(title, { opacity: 0 });
-      gsap.set(overlay, { opacity: 1, y: 0 });
       gsap.set(keywords, { opacity: 0 });
+      gsap.set(overlay, { opacity: 1, y: 0 });
+      gsap.set('.mho-text-box', { scale: 1, opacity: 1 });
     } else {
       window.dispatchEvent(new Event('heroLock'));
-      gsap.set(wrap, { width: '60%', top: '35%', left: '50%', xPercent: -50 });
-      gsap.set(panel, { borderRadius: '42px', y: 70, scale: 0.86 });
+      gsap.set(wrap, { width: '60%', height: '62vh', top: '36%', left: '50%', xPercent: -50 });
+      gsap.set(panel, { borderRadius: '42px', y: 40, scale: 0.9 });
       gsap.set(video, { scale: 1 });
       gsap.set(dim, { backgroundColor: 'rgba(0,0,0,0)' });
       gsap.set(title, { opacity: 1 });
-      gsap.set(overlay, { opacity: 0, y: -20 });
       gsap.set(keywords, { opacity: 1 });
+      gsap.set(overlay, { opacity: 0, y: -20 });
+      gsap.set('.mho-text-box', { scale: 1.08, opacity: 0 });
     }
 
-    /* DOWN TIMELINE */
+    /* DOWN TIMELINE (EXPAND TO 100VH & SOFTLY SCALE DOWN WHITE TEXT) */
     var tlDown = gsap.timeline({
       paused: true,
       onStart: function() {
@@ -95,20 +98,21 @@ $(function() {
         setTimeout(function() {
           scrollLocked = false;
           window.dispatchEvent(new Event('heroUnlock'));
-        }, 500);
+        }, 400);
       }
     });
 
     tlDown
-      .to(title, { duration: 0.4, opacity: 0, ease: 'power2.out' })
+      .to(title, { duration: 0.35, opacity: 0, ease: 'power2.out' })
       .to(keywords, { duration: 0.3, opacity: 0, ease: 'power2.out' }, '<')
-      .to(wrap, { duration: 0.7, width: '100%', top: '0%', ease: 'power2.inOut' }, '-=0.1')
-      .to(panel, { duration: 0.7, borderRadius: 0, y: 0, scale: 1, ease: 'power2.inOut' }, '<')
-      .to(video, { duration: 0.7, scale: 1.08, ease: 'power2.inOut' }, '<')
-      .to(dim, { duration: 0.5, backgroundColor: 'rgba(0,0,0,0.42)', ease: 'power2.out' })
-      .to(overlay, { duration: 0.5, opacity: 1, y: 0, ease: 'power2.out' });
+      .to(wrap, { duration: 0.8, width: '100%', height: '100vh', top: '0%', ease: 'power2.inOut' }, '-=0.1')
+      .to(panel, { duration: 0.8, borderRadius: 0, y: 0, scale: 1, ease: 'power2.inOut' }, '<')
+      .to(video, { duration: 0.8, scale: 1.05, ease: 'power2.inOut' }, '<')
+      .to(dim, { duration: 0.6, backgroundColor: 'rgba(0,0,0,0.48)', ease: 'power2.out' }, '-=0.4')
+      .to(overlay, { duration: 0.6, opacity: 1, y: 0, ease: 'power2.out' }, '<')
+      .fromTo('.mho-text-box', { scale: 1.12, opacity: 0 }, { duration: 0.8, scale: 1, opacity: 1, ease: 'power2.out' }, '-=0.5');
 
-    /* UP TIMELINE */
+    /* UP TIMELINE (SHRINK BACK SMOOTHLY) */
     var tlUp = gsap.timeline({
       paused: true,
       onStart: function() {
@@ -125,13 +129,15 @@ $(function() {
     });
 
     tlUp
-      .to(overlay, { duration: 0.3, opacity: 0, y: -20, ease: 'power2.in' })
-      .to(dim, { duration: 0.4, backgroundColor: 'rgba(0,0,0,0)', ease: 'power2.out' })
-      .to(wrap, { duration: 0.7, width: '60%', top: '35%', ease: 'power2.inOut' }, '-=0.2')
-      .to(panel, { duration: 0.7, borderRadius: '42px', y: 70, scale: 0.86, ease: 'power2.inOut' }, '<')
-      .to(video, { duration: 0.7, scale: 1, ease: 'power2.inOut' }, '<')
-      .to(keywords, { duration: 0.4, opacity: 1, ease: 'power2.out' }, '-=0.3')
-      .to(title, { duration: 0.4, opacity: 1, ease: 'power2.out' }, '<');
+      .to('.mho-text-box', { duration: 0.35, scale: 1.1, opacity: 0, ease: 'power2.in' })
+      .to(overlay, { duration: 0.35, opacity: 0, y: -20, ease: 'power2.in' }, '<')
+      .to(dim, { duration: 0.4, backgroundColor: 'rgba(0,0,0,0)', ease: 'power2.out' }, '<')
+      .to(wrap, { duration: 0.8, width: '60%', height: '62vh', top: '36%', ease: 'power2.inOut' }, '-=0.2')
+      .to(panel, { duration: 0.8, borderRadius: '42px', y: 40, scale: 0.9, ease: 'power2.inOut' }, '<')
+      .to(video, { duration: 0.8, scale: 1, ease: 'power2.inOut' }, '<')
+      .to(keywords, { duration: 0.45, opacity: 1, ease: 'power2.out' }, '-=0.3')
+      .to(title, { duration: 0.45, opacity: 1, ease: 'power2.out' }, '<');
+
 
     function stepDown() {
       if (isAnimating || currentStep >= 3) return;
