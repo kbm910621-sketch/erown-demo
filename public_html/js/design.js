@@ -312,3 +312,25 @@ $(function () {
     }
   });
 });
+
+  /* 09. SCROLL INTERACTIVE HERO VIDEO SCALING */
+  var $heroVidFrame = $('#heroScrollVideoFrame');
+  if ($heroVidFrame.length) {
+    $(window).on('scroll', function() {
+      var st = $(window).scrollTop();
+      if (st < 400) {
+        var scale = 1 + (1 - (st / 400)) * 0.06;
+        var maxW = 1200 + (1 - (st / 400)) * 160;
+        var radius = 32 - (1 - (st / 400)) * 12;
+        $heroVidFrame.css({
+          'max-width': maxW + 'px',
+          'border-radius': radius + 'px'
+        });
+      } else {
+        $heroVidFrame.css({
+          'max-width': '1200px',
+          'border-radius': '32px'
+        });
+      }
+    });
+  }

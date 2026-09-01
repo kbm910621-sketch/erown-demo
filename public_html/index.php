@@ -62,50 +62,33 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/header.php";?>
   
   <!-- ============================================
-       01 HERO STAGE : KINETIC CINEMATIC BILLBOARD
+       01 HERO STAGE : SCREENSHOT 1:1 CLEAN HIGH-IMPACT HERO
   ============================================ -->
-  <section class="am-hero" id="hero">
+  <section class="am-hero-clean" id="hero">
     <div class="am-container">
       
-      <!-- TOP NAVIGATOR CHIPS -->
-      <div class="amh-top-row wow fadeInDown" data-wow-duration="0.6s">
-        <div class="amh-beacon">
-          <span class="amb-dot"></span>
-          <span>GAON-N TOTAL ADVERTISING GROUP 2026</span>
-        </div>
-        <div class="amh-nav-chips">
-          <a href="#bus" class="anc-chip">시내버스 광고</a>
-          <a href="#online" class="anc-chip">온라인 마케팅</a>
-          <a href="#video" class="anc-chip">영상제작</a>
-          <a href="#other" class="anc-chip">특화 옥외매체</a>
-          <a href="#process" class="anc-chip">마스터플랜</a>
-        </div>
-      </div>
-
-      <!-- HERO HEADLINE -->
-      <div class="amh-copy-block wow fadeInUp" data-wow-duration="0.8s">
-        <h1 class="amh-h1">
-          광주 시내버스 104개 노선 독점 직영,<br>
-          <span class="amh-gradient">옥외광고 · 온라인 마케팅 · 영상제작</span>
+      <!-- HERO HEADLINE (SCREENSHOT 1:1 MATCH) -->
+      <div class="amhc-title-box wow fadeInUp" data-wow-duration="0.8s">
+        <h1 class="amhc-h1">
+          보여주는 광고보다<br>
+          이해되는 광고를 만듭니다.
         </h1>
-        <p class="amh-desc">
-          광주 5개 구 1,000대 시내버스 래핑부터 네이버 1위 상위노출, 4K 시네마틱 영상제작까지 본사가 기획부터 시공까지 100% 직접 전담합니다.
-        </p>
       </div>
 
-      <!-- ACTION CTAS -->
-      <div class="amh-cta-row wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-        <a href="/board/estmate/write.php" class="amh-btn-primary">
-          <span>맞춤 노선 &amp; 견적 신청</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
-        <button type="button" class="amh-btn-secondary bus-guide-open" data-guide="guideBus">
-          <span>매체별 실측 가이드 확인 ↗</span>
-        </button>
+      <!-- 5 SLEEK NAVY PILL CHIPS (SCREENSHOT 1:1 MATCH) -->
+      <div class="amhc-pills-row wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+        <a href="#bus" class="amhc-pill-chip">버스 광고</a>
+        <a href="#other" class="amhc-pill-chip">택시 광고</a>
+        <a href="#online" class="amhc-pill-chip">온라인·SNS</a>
+        <a href="#video" class="amhc-pill-chip">영상제작</a>
+        <a href="#online" class="amhc-pill-chip">병원 마케팅</a>
       </div>
 
-      <!-- 21:9 CLEAN CINEMA FRAME -->
-      <div class="amh-cinema-frame wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.2s">
+    </div>
+
+    <!-- SCROLL-INTERACTIVE SCALING CINEMATIC VIDEO CONTAINER -->
+    <div class="amhc-video-stage-wrapper">
+      <div class="amhc-video-frame" id="heroScrollVideoFrame">
         <div class="acf-viewport">
           <video autoplay muted loop playsinline class="acf-video">
             <source src="/images/movie.mp4" type="video/mp4">
@@ -113,7 +96,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="acf-scrim"></div>
         </div>
       </div>
-
     </div>
   </section>
 
