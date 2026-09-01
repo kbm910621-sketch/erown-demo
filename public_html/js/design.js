@@ -334,3 +334,29 @@ $(function () {
       }
     });
   }
+
+  /* 09. DISTINCT SCROLL-DRIVEN HERO VIDEO SCALING */
+  var $heroVidFrame = $('#heroScrollVideoFrame');
+  if ($heroVidFrame.length) {
+    function updateHeroScrollScale() {
+      var st = $(window).scrollTop();
+      var maxScroll = 450;
+      var progress = Math.min(Math.max(st / maxScroll, 0), 1);
+      
+      // Interpolate from wide expansive (1500px / 12px radius) to centered compact (1180px / 36px radius)
+      var maxW = 1500 - (progress * 320);
+      var radius = 16 + (progress * 20);
+      var scale = 1.04 - (progress * 0.04);
+      var shadow = progress > 0.3 ? '0 30px 90px rgba(0,0,0,0.18)' : '0 10px 40px rgba(0,0,0,0.06)';
+
+      $heroVidFrame.css({
+        'max-width': maxW + 'px',
+        'border-radius': radius + 'px',
+        'transform': 'scale(' + scale + ')',
+        'box-shadow': shadow
+      });
+    }
+
+    $(window).on('scroll resize', updateHeroScrollScale);
+    updateHeroScrollScale();
+  }

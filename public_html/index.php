@@ -62,7 +62,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/header.php";?>
   
   <!-- ============================================
-       01 HERO STAGE : SCREENSHOT 1:1 CLEAN HIGH-IMPACT HERO
+       01 HERO STAGE : SCREENSHOT 1:1 HERO & SCROLL INTERACTIVE CINEMA
   ============================================ -->
   <section class="am-hero-clean" id="hero">
     <div class="am-container">
@@ -185,7 +185,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       02 SECTION 01 : 시내버스 광고 (CORE PROMOTIONS & SEPARATED SEARCH)
+       02 SECTION 01 : 시내버스 광고 (PICTOGRAM PROMO CARDS)
   ============================================ -->
   <section class="am-section am-bg-slate" id="bus">
     <div class="am-container">
@@ -297,28 +297,45 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <!-- BUS PROMOTIONAL 3-PILLAR ADVANTAGES -->
+      <!-- BUS PROMOTIONAL 3-PILLAR ADVANTAGES (WITH PURE VECTOR PICTOGRAMS) -->
       <div class="am-bus-promo-grid wow fadeInUp" data-wow-duration="0.8s">
+        
         <div class="abp-promo-card">
-          <span class="apc-num">01</span>
+          <div class="apc-top-row">
+            <div class="apc-picto-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/><path d="M7 3v7"/><path d="M17 3v7"/></svg>
+            </div>
+            <span class="apc-num">01</span>
+          </div>
           <h3>광주 104개 전 노선 단독 직영 배차</h3>
           <p>병원, 학원, 분양 홍보관의 주 타깃 고객이 밀집된 상무·수완·봉선·첨단 등 핵심 거점을 정확하게 관통하는 맞춤형 최적 노선을 단독 설계합니다.</p>
           <div class="apc-stat">광주 5개 구 1,000대 시내버스 독점 운영</div>
         </div>
 
         <div class="abp-promo-card">
-          <span class="apc-num">02</span>
+          <div class="apc-top-row">
+            <div class="apc-picto-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><path d="M22 12A10 10 0 0 0 12 2"/></svg>
+            </div>
+            <span class="apc-num">02</span>
+          </div>
           <h3>1일 18시간 · 일 150만 시민 눈높이 노출</h3>
           <p>새벽 5시 30분부터 밤 12시까지 도심 주요 간선도로와 교차로를 쉼 없이 순환하며, 운전자와 보행자 시선 정면에 하루 150만 회 이상 강제 노출됩니다.</p>
           <div class="apc-stat">차도면 3.7m + 인도면 3.0m + 후면 2.4m 3면 패키지</div>
         </div>
 
         <div class="abp-promo-card">
-          <span class="apc-num">03</span>
+          <div class="apc-top-row">
+            <div class="apc-picto-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            </div>
+            <span class="apc-num">03</span>
+          </div>
           <h3>LG 하우시스 정품 솔벤 시트 &amp; 100% 직영 시공</h3>
           <p>외주 하청 없는 10년 경력의 본사 전문 시공팀이 내후성 정품 솔벤 시트로 직접 출력 및 부착하며, 시공 직후 번호판 포함 4면 증빙 사진을 실시간 보고합니다.</p>
           <div class="apc-stat">시공 직후 차량 4면 번호판 실사 즉시 전송</div>
         </div>
+
       </div>
 
     </div>
@@ -334,7 +351,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
         <div class="ash-flex">
           <div>
-            <span class="ash-kicker">02 / DIGITAL MEDIA GROUP</span>
+            <span class="ash-kicker">02 / DIGITAL PERFORMANCE GROUP</span>
             <h2 class="ash-title">온라인 마케팅</h2>
             <p class="ash-desc">시내버스 옥외광고의 압도적 주목도를 실시간 네이버 1위 예약 및 매출 폭발로 연결하는 가온엔 디지털 솔루션입니다.</p>
           </div>
@@ -344,7 +361,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- SENSUAL 4-CHANNEL VISUAL SHOWCASE GRID -->
+      <!-- HIGH-IMPACT SENSATIONAL ONLINE VISUAL SHOWCASE GRID -->
       <div class="am-online-sensual-grid wow fadeInUp" data-wow-duration="0.8s">
         
         <!-- CARD 01: SMART PLACE #1 -->
@@ -467,10 +484,22 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       04 SECTION 03 : 영상제작 (BOLD GOTHIC NUMBERS & VECTOR PICTOGRAMS)
+       04 SECTION 03 : 영상제작 (SOFT AMBIENT GLOW & CINEMA WATERMARK)
   ============================================ -->
-  <section class="am-section am-bg-dark" id="video">
-    <div class="am-container">
+  <section class="am-section am-bg-dark am-video-ambient-sec" id="video">
+    <!-- SUBTLE CINEMA WATERMARK & GLOWING LIGHTS -->
+    <div class="avs-ambient-bg">
+      <div class="avs-glow glow-left"></div>
+      <div class="avs-glow glow-right"></div>
+      <svg class="avs-watermark-svg" viewBox="0 0 1400 800" fill="none">
+        <circle cx="200" cy="300" r="280" stroke="rgba(56,189,248,0.06)" stroke-width="1.5" />
+        <circle cx="200" cy="300" r="180" stroke="rgba(56,189,248,0.04)" stroke-width="1" stroke-dasharray="6 6" />
+        <circle cx="1200" cy="500" r="320" stroke="rgba(24,85,183,0.08)" stroke-width="1.5" />
+        <path d="M-100,500 C400,200 900,700 1500,300" stroke="rgba(255,255,255,0.04)" stroke-width="1.5" />
+      </svg>
+    </div>
+
+    <div class="am-container" style="position:relative; z-index:2;">
 
       <div class="am-sec-head dark-head wow fadeInUp" data-wow-duration="0.7s">
         <div class="ash-flex">

@@ -104,7 +104,19 @@
 .am-bus-promo-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:24px; }
 .abp-promo-card { padding:32px 28px; border-radius:20px; background:#ffffff; border:1px solid #e2e8f0; display:flex; flex-direction:column; transition:all 0.25s; box-shadow:0 8px 24px rgba(0,0,0,0.02); }
 .abp-promo-card:hover { transform:translateY(-4px); border-color:#93c5fd; box-shadow:0 16px 36px rgba(24,85,183,0.06); }
-.apc-num { font-size:18px; font-weight:900; color:#1855b7; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; margin-bottom:12px; }
+/* BUS PROMO CARDS WITH PURE VECTOR PICTOGRAMS */
+.apc-top-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; }
+.apc-picto-circle { width:48px; height:48px; border-radius:14px; background:#eff6ff; display:flex; align-items:center; justify-content:center; }
+.apc-num { font-size:18px; font-weight:900; color:#1855b7; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; margin-bottom:0; }
+
+/* VIDEO SECTION AMBIENT BACKGROUND GLOW & LENS WATERMARK */
+.am-video-ambient-sec { position:relative; overflow:hidden; background:#070d1e; }
+.avs-ambient-bg { position:absolute; inset:0; pointer-events:none; z-index:1; overflow:hidden; }
+.avs-glow { position:absolute; width:600px; height:600px; border-radius:50%; filter:blur(120px); opacity:0.18; }
+.avs-glow.glow-left { top:-100px; left:-100px; background:#1855b7; }
+.avs-glow.glow-right { bottom:-150px; right:-150px; background:#38bdf8; }
+.avs-watermark-svg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.8; }
+
 .abp-promo-card h3 { font-size:18px; font-weight:800; color:#0f172a; letter-spacing:-0.4px; margin:0 0 10px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
 .abp-promo-card p { font-size:13.5px; line-height:1.65; color:#64748b; margin:0 0 20px; flex:1; }
 .apc-stat { padding-top:14px; border-top:1px solid #f1f5f9; font-size:12.5px; font-weight:800; color:#1855b7; }
