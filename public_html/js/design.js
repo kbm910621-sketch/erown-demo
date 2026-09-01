@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GAON-N CLEAN LUXURY ROYAL BLUE INTERACTION JS
+   GAON-N 2026 GRAND PRIX AWARD-WINNING INTERACTION JS
    ========================================================================== */
 $(function () {
   'use strict';
@@ -26,7 +26,7 @@ $(function () {
 
     if (img && img.trim() !== '') {
       $('#busStageImg').attr('src', img).show();
-      $('.gpsv-placeholder').hide();
+      $('.msv-empty').hide();
     }
   });
 
@@ -151,10 +151,10 @@ $(function () {
     }
   }
 
-  $(document).on('click', '.main-port-card, .gp-card', function(e) {
+  $(document).on('click', '.main-port-card, .master-card', function(e) {
     e.preventDefault();
-    var name = $(this).attr('data-name') || $(this).find('.gpc-title').text();
-    var cat = $(this).attr('data-cat') || $(this).find('.gpc-cat').text();
+    var name = $(this).attr('data-name') || $(this).find('.mc-title').text();
+    var cat = $(this).attr('data-cat') || $(this).find('.mc-cat').text();
     var id = $(this).attr('data-id') || '01';
     var img = $(this).find('img').attr('src');
     if (!img) {
