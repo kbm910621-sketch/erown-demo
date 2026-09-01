@@ -418,3 +418,28 @@
 .asc-kicker.blue { color:#1855b7; }
 .asc-title { font-size:17px; font-weight:900; letter-spacing:-0.5px; color:#0f172a; margin:0; line-height:1.38; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
 .asc-desc { font-size:13px; line-height:1.6; color:#64748b; margin:0; }
+
+/* HIGH READABILITY SWISS SPECIFICATION MODAL */
+.lmg-page-header { margin-bottom:24px; padding-bottom:16px; border-bottom:1.5px solid #e2e8f0; display:flex; flex-direction:column; gap:4px; }
+.lmg-sec-title { font-size:20px; font-weight:900; color:#0f172a; margin:0; letter-spacing:-0.5px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
+.lmg-sec-sub { font-size:13px; font-weight:700; color:#1855b7; }
+
+.lmg-high-contrast-grid { display:flex; flex-direction:column; gap:16px; }
+.lhc-card { background:#ffffff; border-radius:18px; border:1.5px solid #e2e8f0; display:grid; grid-template-columns:220px 1fr; overflow:hidden; box-shadow:0 6px 20px rgba(15,23,42,0.02); transition:all 0.2s; }
+.lhc-card:hover { border-color:#93c5fd; box-shadow:0 12px 30px rgba(24,85,183,0.06); transform:translateY(-2px); }
+
+.lhc-side { background:#f8fafc; padding:24px; border-right:1.5px solid #e2e8f0; display:flex; flex-direction:column; justify-content:center; gap:6px; }
+.lhc-badge { font-size:10.5px; font-weight:900; letter-spacing:0.04em; padding:3px 8px; border-radius:4px; width:max-content; }
+.lhc-badge.blue { background:#eff6ff; color:#1855b7; }
+.lhc-badge.gold { background:#fefce8; color:#ca8a04; }
+.lhc-badge.green { background:#f0fdf4; color:#16a34a; }
+.lhc-size { font-size:19px; font-weight:900; color:#0f172a; letter-spacing:-0.5px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
+.lhc-aspect { font-size:10px; font-weight:800; color:#94a3b8; letter-spacing:0.06em; }
+
+.lhc-main { padding:24px 28px; display:flex; flex-direction:column; justify-content:center; gap:8px; }
+.lhc-title { font-size:18px; font-weight:900; color:#0f172a; margin:0; letter-spacing:-0.4px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
+.lhc-desc { font-size:13.5px; line-height:1.6; color:#475569; margin:0; }
+.lhc-spec-list { display:flex; gap:20px; flex-wrap:wrap; padding-top:8px; margin-top:4px; border-top:1px dashed #e2e8f0; }
+.lsl-item { display:flex; align-items:center; gap:6px; font-size:12.5px; }
+.lsl-k { color:#94a3b8; font-weight:700; }
+.lsl-v { color:#0f172a; font-weight:800; }
