@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GAON-N 2026 104 ROUTES & PRACTICAL MARKETING CSS (SINGLE-LINE RULE ENFORCED)
+   GAON-N 2026 STRUCTURED PROMOTIONS & LARGE VISUAL CSS (SINGLE-LINE RULE)
    ========================================================================== */
 @charset "utf-8";
 
@@ -46,6 +46,7 @@
 
 .am-sec-head { margin-bottom:44px; }
 .ash-flex { display:flex; justify-content:space-between; align-items:flex-end; gap:40px; flex-wrap:wrap; }
+.ash-actions { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
 .ash-kicker { display:block; font-size:11.5px; font-weight:800; letter-spacing:0.18em; color:#1855b7; margin-bottom:10px; }
 .ash-kicker.gold { color:#60a5fa; }
 .ash-title { font-size:40px; font-weight:900; line-height:1.2; letter-spacing:-1.6px; color:#0f172a; margin:0 0 12px; }
@@ -54,17 +55,19 @@
 .ash-desc.light { color:#94a3b8; }
 .ash-guide-btn { display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border-radius:100px; background:#ffffff; border:1px solid #cbd5e1; font-size:13.5px; font-weight:800; color:#0f172a; cursor:pointer; font-family:inherit; transition:all 0.2s; white-space:nowrap; }
 .ash-guide-btn:hover { background:#1855b7; border-color:#1855b7; color:#ffffff; transform:translateY(-2px); }
+.ash-guide-btn.blue { background:#eff6ff; border-color:#93c5fd; color:#1855b7; }
+.ash-guide-btn.blue:hover { background:#1855b7; border-color:#1855b7; color:#ffffff; }
 .ash-guide-btn.dark { background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.2); color:#ffffff; }
 .ash-guide-btn.dark:hover { background:#1855b7; border-color:#1855b7; color:#ffffff; }
 
-/* 02 BUS STUDIO & 104 ROUTES SEARCH */
-.am-bus-console { background:#ffffff; border-radius:24px; border:1px solid #e2e8f0; padding:32px; box-shadow:0 16px 40px rgba(0,0,0,0.04); }
+/* 02 BUS STUDIO & PROMO PILLARS */
+.am-bus-console { background:#ffffff; border-radius:24px; border:1px solid #e2e8f0; padding:32px; box-shadow:0 16px 40px rgba(0,0,0,0.04); margin-bottom:36px; }
 .abc-chip-bar { display:flex; gap:8px; overflow-x:auto; margin-bottom:28px; padding-bottom:4px; }
 .abc-chip { padding:10px 18px; border-radius:100px; background:#f8fafc; border:1px solid #cbd5e1; font-size:13px; font-weight:800; color:#475569; cursor:pointer; font-family:inherit; white-space:nowrap; transition:all 0.2s; }
 .abc-chip:hover { background:#eff6ff; color:#1855b7; border-color:#93c5fd; }
 .abc-chip.on { background:#1855b7; border-color:#1855b7; color:#ffffff; }
 
-.abc-stage-row { display:grid; grid-template-columns:1.35fr 1fr; gap:36px; align-items:center; margin-bottom:40px; }
+.abc-stage-row { display:grid; grid-template-columns:1.35fr 1fr; gap:36px; align-items:center; }
 .abc-visual-viewport { background:#0f172a; border-radius:20px; overflow:hidden; aspect-ratio:16/9; min-height:340px; position:relative; }
 .avv-frame { position:relative; width:100%; height:100%; }
 .avv-frame img { width:100%; height:100%; object-fit:cover; display:block; }
@@ -82,32 +85,25 @@
 .abp-btn { display:inline-flex; align-items:center; padding:12px 24px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:13.5px; font-weight:800; text-decoration:none; transition:all 0.2s; }
 .abp-btn:hover { background:#0f3f8c; }
 
-.abc-district-box { border-top:1px solid #e2e8f0; padding-top:28px; }
-.adb-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; flex-wrap:wrap; gap:16px; }
-.adb-search-wrap { display:flex; align-items:center; gap:8px; padding:10px 18px; border-radius:100px; background:#f8fafc; border:1px solid #cbd5e1; width:360px; max-width:100%; }
-.adb-search-wrap input { border:0; background:none; outline:none; font-size:13px; color:#0f172a; width:100%; font-family:inherit; }
+.am-bus-promo-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:24px; }
+.abp-promo-card { padding:32px 28px; border-radius:20px; background:#ffffff; border:1px solid #e2e8f0; display:flex; flex-direction:column; transition:all 0.25s; box-shadow:0 8px 24px rgba(0,0,0,0.02); }
+.abp-promo-card:hover { transform:translateY(-4px); border-color:#93c5fd; box-shadow:0 16px 36px rgba(24,85,183,0.06); }
+.apc-num { font-size:16px; font-weight:900; color:#1855b7; font-family:monospace; margin-bottom:12px; }
+.abp-promo-card h3 { font-size:18px; font-weight:800; color:#0f172a; letter-spacing:-0.4px; margin:0 0 10px; }
+.abp-promo-card p { font-size:13.5px; line-height:1.65; color:#64748b; margin:0 0 20px; flex:1; }
+.apc-stat { padding-top:14px; border-top:1px solid #f1f5f9; font-size:12.5px; font-weight:800; color:#1855b7; }
 
-.adb-tabs-row { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:20px; }
-.adb-tab { padding:7px 16px; border-radius:100px; background:#f1f5f9; border:0; font-size:12.5px; font-weight:700; color:#64748b; cursor:pointer; font-family:inherit; transition:all 0.2s; }
-.adb-tab:hover { color:#0f172a; background:#e2e8f0; }
-.adb-tab.on { background:#0f172a; color:#ffffff; }
+/* 03 LARGE ONLINE MARKETING FRAME & 4 PILLARS */
+.am-online-hero-frame { position:relative; width:100%; border-radius:24px; overflow:hidden; background:#0f172a; aspect-ratio:21/9; min-height:340px; margin-bottom:40px; box-shadow:0 20px 50px rgba(15,23,42,0.12); }
+.aoh-image-wrap { position:relative; width:100%; height:100%; }
+.aoh-image-wrap img { width:100%; height:100%; object-fit:cover; display:block; }
+.aoh-scrim { position:absolute; inset:0; background:linear-gradient(180deg, rgba(15,23,42,0.2) 0%, rgba(15,23,42,0.85) 100%); }
+.aoh-badge-float { position:absolute; left:36px; top:32px; z-index:2; display:inline-flex; align-items:center; gap:8px; padding:6px 14px; border-radius:100px; background:rgba(15,23,42,0.8); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.2); font-size:11px; font-weight:800; letter-spacing:0.12em; color:#93c5fd; }
+.abf-dot { width:6px; height:6px; border-radius:50%; background:#38bdf8; box-shadow:0 0 8px #38bdf8; }
+.aoh-content-bottom { position:absolute; left:36px; right:36px; bottom:32px; z-index:2; color:#ffffff; }
+.aoh-content-bottom h3 { font-size:32px; font-weight:900; letter-spacing:-1px; color:#ffffff; margin:0 0 8px; }
+.aoh-content-bottom p { font-size:15px; color:rgba(255,255,255,0.85); margin:0; }
 
-.adb-route-scroll-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:14px; max-height:420px; overflow-y:auto; padding-right:6px; }
-.adg-card { padding:16px 18px; border-radius:14px; background:#f8fafc; border:1px solid #e2e8f0; display:flex; flex-direction:column; gap:6px; transition:all 0.2s; }
-.adg-card:hover { background:#ffffff; border-color:#93c5fd; transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,0.04); }
-.adg-top { display:flex; align-items:center; gap:8px; }
-.adgc-tag { font-size:10px; font-weight:800; padding:2px 6px; border-radius:3px; }
-.adgc-tag.red { background:#fef2f2; color:#dc2626; }
-.adgc-tag.blue { background:#eff6ff; color:#1855b7; }
-.adgc-tag.green { background:#f0fdf4; color:#16a34a; }
-.adg-card strong { font-size:15px; font-weight:900; color:#0f172a; }
-.adg-card p { font-size:12px; line-height:1.55; color:#64748b; margin:0; }
-
-.adb-footer-notice { display:flex; justify-content:space-between; align-items:center; margin-top:20px; padding:16px 20px; border-radius:14px; background:#eff6ff; border:1px solid #bfdbfe; font-size:13px; font-weight:700; color:#1855b7; flex-wrap:wrap; gap:12px; }
-.afn-btn { display:inline-flex; align-items:center; padding:8px 18px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:12.5px; font-weight:800; text-decoration:none; transition:all 0.2s; }
-.afn-btn:hover { background:#0f3f8c; }
-
-/* 03 PRACTICAL ONLINE MARKETING */
 .am-online-practical-grid { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:24px; margin-bottom:32px; }
 .aop-card { padding:32px 26px; border-radius:20px; background:#f8fafc; border:1px solid #e2e8f0; display:flex; flex-direction:column; transition:all 0.25s; }
 .aop-card:hover { background:#ffffff; border-color:#93c5fd; transform:translateY(-4px); box-shadow:0 16px 36px rgba(24,85,183,0.06); }
@@ -229,7 +225,30 @@
 .act-btn { display:inline-flex; align-items:center; gap:8px; padding:16px 32px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:14.5px; font-weight:800; text-decoration:none; transition:all 0.25s; white-space:nowrap; }
 .act-btn:hover { background:#2563eb; transform:translateY(-2px); box-shadow:0 14px 30px rgba(37,99,235,0.35); }
 
-/* 10 SWISS-STYLE EDITORIAL PARAGRAPH SPEC MODAL */
+/* 10 SEPARATE 104 BUS ROUTES SEARCH MODAL */
+.route-search-modal-overlay { display:none; position:fixed; inset:0; z-index:9999; background:rgba(15,23,42,0.75); backdrop-filter:blur(12px); padding:40px 20px; overflow-y:auto; }
+.rsm-panel { max-width:1080px; margin:0 auto; background:#ffffff; border-radius:24px; box-shadow:0 30px 80px rgba(15,23,42,0.25); overflow:hidden; }
+.rsm-head { display:flex; justify-content:space-between; align-items:flex-start; padding:32px 40px 24px; border-bottom:1px solid #f1f5f9; }
+.rsm-kicker { font-size:11px; font-weight:800; letter-spacing:0.16em; color:#1855b7; }
+.rsm-title { font-size:22px; font-weight:900; letter-spacing:-0.5px; color:#0f172a; margin:4px 0 4px; }
+.rsm-desc { font-size:13px; color:#64748b; margin:0; }
+.rsm-close { width:36px; height:36px; border-radius:50%; background:#f1f5f9; border:0; font-size:14px; font-weight:700; color:#475569; cursor:pointer; transition:all 0.2s; }
+.rsm-close:hover { background:#0f172a; color:#ffffff; }
+
+.rsm-body { padding:32px 40px; }
+.rsm-search-bar { display:flex; align-items:center; gap:10px; padding:12px 20px; border-radius:100px; background:#f8fafc; border:1.5px solid #cbd5e1; margin-bottom:18px; }
+.rsm-search-bar input { border:0; background:none; outline:none; font-size:13.5px; color:#0f172a; width:100%; font-family:inherit; }
+.rsm-tabs-row { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:24px; }
+.rsm-tab { padding:7px 16px; border-radius:100px; background:#f1f5f9; border:0; font-size:12.5px; font-weight:700; color:#64748b; cursor:pointer; font-family:inherit; transition:all 0.2s; }
+.rsm-tab:hover { color:#0f172a; background:#e2e8f0; }
+.rsm-tab.on { background:#0f172a; color:#ffffff; }
+
+.rsm-routes-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:14px; max-height:460px; overflow-y:auto; padding-right:6px; }
+.rsm-foot { display:flex; justify-content:space-between; align-items:center; padding:18px 40px; background:#f8fafc; border-top:1px solid #e2e8f0; font-size:13px; font-weight:700; color:#1855b7; flex-wrap:wrap; gap:12px; }
+.rsm-foot-btn { display:inline-flex; align-items:center; padding:10px 22px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:13px; font-weight:800; text-decoration:none; transition:all 0.2s; }
+.rsm-foot-btn:hover { background:#0f3f8c; }
+
+/* 11 SWISS SPEC MODAL */
 .bus-guide-overlay { display:none; position:fixed; inset:0; z-index:9999; background:rgba(15,23,42,0.7); backdrop-filter:blur(12px); padding:40px 20px; overflow-y:auto; }
 .lux-modal-panel { max-width:1040px; margin:0 auto; background:#ffffff; border-radius:24px; box-shadow:0 30px 80px rgba(15,23,42,0.25); overflow:hidden; }
 .lux-modal-head { display:flex; justify-content:space-between; align-items:flex-start; padding:32px 40px 24px; border-bottom:1px solid #f1f5f9; }
@@ -266,7 +285,7 @@
 .lmf-btn { display:inline-flex; align-items:center; padding:12px 28px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:13.5px; font-weight:800; text-decoration:none; transition:all 0.2s; }
 .lmf-btn:hover { background:#0f3f8c; }
 
-/* 11 PORTFOLIO LIGHTBOX MODAL */
+/* 12 PORTFOLIO MODAL */
 .portfolio-modal-backdrop { display:none; position:fixed; inset:0; z-index:9999; background:rgba(15,23,42,0.75); backdrop-filter:blur(12px); padding:40px 20px; overflow-y:auto; }
 .portfolio-modal-box { position:relative; max-width:880px; margin:0 auto; background:#ffffff; border-radius:24px; box-shadow:0 30px 80px rgba(0,0,0,0.28); overflow:hidden; }
 .portfolio-modal-close { position:absolute; right:20px; top:20px; z-index:10; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.9); border:0; font-size:14px; font-weight:700; color:#0f172a; cursor:pointer; transition:all 0.2s; }

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GAON-N 2026 104 ROUTES & PRACTICAL MARKETING JS
+   GAON-N 2026 STRUCTURED PROMOTIONS & LARGE VISUAL JS
    ========================================================================== */
 $(function () {
   'use strict';
@@ -57,11 +57,11 @@ $(function () {
     $('#dvsMarker').css(markerPos[idx]);
   });
 
-  /* 03. 104 ALL BUS ROUTES DATABASE & RENDERING */
+  /* 03. 104 ALL BUS ROUTES DATABASE IN SEPARATE MODAL */
   var routesData = [{"num":"순환01","cat":"express","district":"seo","path":"상무지구 ↔ 광천터미널 ↔ 전남대 ↔ 조선대 ↔ 백운광장 ↔ 상무지구 (순환)"},{"num":"수완03","cat":"express","district":"gwangsan","path":"송원대 ↔ 상무역 ↔ 유스퀘어 ↔ 첨단2지구 ↔ 수완지구"},{"num":"첨단09","cat":"express","district":"buk","path":"첨단종점 ↔ 전남대 ↔ 법원 ↔ 조선대 ↔ 양림휴먼시아"},{"num":"매월06","cat":"express","district":"seo","path":"매월동 ↔ 풍암지구 ↔ 백운동 ↔ 충장로 ↔ 광주역"},{"num":"진월07","cat":"express","district":"nam","path":"송암공단 ↔ 대성여고 ↔ 백운광장 ↔ 동구청 ↔ 살레시오고"},{"num":"좌석02","cat":"express","district":"gwangsan","path":"무등산국립공원 ↔ 조선대 ↔ 유스퀘어 ↔ 광주송정역 ↔ 나주혁신도시"},{"num":"매월16","cat":"main","district":"seo","path":"매월동 ↔ 풍암지구 ↔ 상무지구 ↔ 광천터미널 ↔ 일곡지구"},{"num":"문흥18","cat":"main","district":"buk","path":"장등동 ↔ 문흥지구 ↔ 전남대 ↔ 광천터미널 ↔ 상무지구"},{"num":"봉선37","cat":"main","district":"nam","path":"송암공단 ↔ 봉선동 학원가 ↔ 조선대 ↔ 산수동 ↔ 살레시오여고"},{"num":"지원15","cat":"main","district":"nam","path":"월남동 ↔ 조선대 ↔ 충장로 ↔ 대인시장 ↔ 광주역 ↔ 효천지구"},{"num":"일곡28","cat":"main","district":"buk","path":"일곡지구 ↔ 양산지구 ↔ 광천터미널 ↔ 조선대 ↔ 매월동"},{"num":"첨단20","cat":"main","district":"gwangsan","path":"첨단종점 ↔ 신창지구 ↔ 광천터미널 ↔ 양동시장 ↔ 조선대"},{"num":"첨단30","cat":"main","district":"gwangsan","path":"첨단산단 ↔ 수완지구 ↔ 운남지구 ↔ 상무지구 ↔ 광천터미널"},{"num":"첨단40","cat":"main","district":"gwangsan","path":"비아동 ↔ 첨단2지구 ↔ 전남대 ↔ 광주역 ↔ 화순전남대병원"},{"num":"송정19","cat":"main","district":"gwangsan","path":"장등동 ↔ 광주역 ↔ 시청 ↔ 광주송정역 ↔ 도산동"},{"num":"송정29","cat":"main","district":"gwangsan","path":"도산동 ↔ 광주송정역 ↔ 우산동 ↔ 광천터미널 ↔ 살레시오여고"},{"num":"풍암16","cat":"main","district":"seo","path":"매월동 ↔ 풍암지구 ↔ 금호지구 ↔ 상무지구 ↔ 광천터미널"},{"num":"풍암26","cat":"main","district":"seo","path":"매월동 ↔ 서구청 ↔ 충장로 ↔ 조선대 ↔ 각화동"},{"num":"금호36","cat":"main","district":"seo","path":"서창동 ↔ 금호지구 ↔ 상무지구 ↔ 광주역 ↔ 장등동"},{"num":"금호46","cat":"main","district":"seo","path":"화순전남대병원 ↔ 소태역 ↔ 풍암지구 ↔ 상무지구"},{"num":"운림51","cat":"main","district":"dong","path":"무등산국립공원 ↔ 조선대 ↔ 충장로 ↔ 유스퀘어 ↔ 첨단산단"},{"num":"운림54","cat":"main","district":"dong","path":"무등산국립공원 ↔ 남광주역 ↔ 광주역 ↔ 양산지구"},{"num":"문흥39","cat":"main","district":"buk","path":"장등동 ↔ 문흥지구 ↔ 전남대 ↔ 광천터미널 ↔ 송암공단"},{"num":"문흥48","cat":"main","district":"buk","path":"장등동 ↔ 문흥지구 ↔ 법원 ↔ 조선대 ↔ 효천지구"},{"num":"지원25","cat":"main","district":"nam","path":"월남동 ↔ 봉선동 ↔ 백운광장 ↔ 양동시장 ↔ 서창동"},{"num":"지원56","cat":"main","district":"nam","path":"월남동 ↔ 소태역 ↔ 조선대 ↔ 충장로 ↔ 광주역"},{"num":"용봉83","cat":"main","district":"buk","path":"용봉동 ↔ 전남대후문 ↔ 산수오거리 ↔ 조선대 ↔ 학운동"},{"num":"대촌70","cat":"main","district":"nam","path":"칠석동 ↔ 대촌 ↔ 백운광장 ↔ 양동시장 ↔ 광천터미널"},{"num":"송암72","cat":"main","district":"nam","path":"송암공단 ↔ 진월지구 ↔ 백운동 ↔ 충장로 ↔ 수완지구"},{"num":"수완12","cat":"main","district":"gwangsan","path":"수완종점 ↔ 신가동 ↔ 운남지구 ↔ 상무지구 ↔ 광천터미널"},{"num":"수완49","cat":"feeder","district":"gwangsan","path":"수완지구 ↔ 신창동 ↔ 첨단병원 ↔ 비아동"},{"num":"첨단92","cat":"feeder","district":"gwangsan","path":"첨단산단 ↔ 비아 ↔ 첨단2지구 ↔ 양산동"},{"num":"첨단94","cat":"feeder","district":"gwangsan","path":"첨단종점 ↔ 과기원 ↔ 첨단병원 ↔ 서남해안고속"},{"num":"첨단95","cat":"feeder","district":"gwangsan","path":"첨단산단 ↔ 수완지구 ↔ 하남산단 ↔ 송정역"},{"num":"송정98","cat":"feeder","district":"gwangsan","path":"도산동 ↔ 송정역 ↔ 하남2지구 ↔ 수완지구 ↔ 첨단"},{"num":"송정100","cat":"feeder","district":"gwangsan","path":"송정역 ↔ 평동산단 ↔ 삼도 ↔ 본량 ↔ 용진"},{"num":"선운101","cat":"feeder","district":"gwangsan","path":"선운지구 ↔ 호남대 ↔ 송정역 ↔ 평동공단"},{"num":"봉선27","cat":"feeder","district":"nam","path":"용산지구 ↔ 봉선동 ↔ 백운광장 ↔ 양동시장"},{"num":"송암47","cat":"feeder","district":"nam","path":"송암공단 ↔ 주월동 ↔ 무등시장 ↔ 농성역 ↔ 시청"},{"num":"송암73","cat":"feeder","district":"nam","path":"송암공단 ↔ 대성여고 ↔ 남광주역 ↔ 조선대 ↔ 동림삼익"},{"num":"송암74","cat":"feeder","district":"nam","path":"송암공단 ↔ 효천역 ↔ 진월동 ↔ 백운광장 ↔ 상무역"},{"num":"대촌270","cat":"feeder","district":"nam","path":"매월유통단지 ↔ 서창 ↔ 대촌동 ↔ 포충사"},{"num":"임곡89","cat":"feeder","district":"gwangsan","path":"덕흥동 ↔ 유스퀘어 ↔ 시청 ↔ 하남 ↔ 임곡역"},{"num":"임곡290","cat":"feeder","district":"gwangsan","path":"광산구청 ↔ 송정역 ↔ 임곡동 ↔ 오룡"},{"num":"동곡73","cat":"feeder","district":"gwangsan","path":"도산동 ↔ 동곡동 ↔ 평동 ↔ 송정시장"},{"num":"평동700","cat":"feeder","district":"gwangsan","path":"평동산단 ↔ 평동역 ↔ 옥동 ↔ 송정역"},{"num":"상무62","cat":"feeder","district":"seo","path":"상무지구 ↔ 서구청 ↔ 양동시장 ↔ 광주역 ↔ 계림동"},{"num":"상무64","cat":"feeder","district":"seo","path":"세하동 ↔ 서창 ↔ 상무역 ↔ 유스퀘어 ↔ 광주역"},{"num":"유덕65","cat":"feeder","district":"seo","path":"유덕동 ↔ 버들마을 ↔ 광천터미널 ↔ 양동시장"},{"num":"518번","cat":"feeder","district":"seo","path":"상무지구 ↔ 5·18기념공원 ↔ 광천터미널 ↔ 전남대 ↔ 국립5·18묘지"},{"num":"용전84","cat":"feeder","district":"buk","path":"용전 ↔ 북구보건소 ↔ 전남대 ↔ 광주역 ↔ 대인시장"},{"num":"용전85","cat":"feeder","district":"buk","path":"용전 ↔ 건국동 ↔ 양산지구 ↔ 전남대 ↔ 충장로"},{"num":"용전86","cat":"feeder","district":"buk","path":"용전 ↔ 일곡지구 ↔ 문흥지구 ↔ 조선대 ↔ 학운동"},{"num":"용전184","cat":"feeder","district":"buk","path":"용전 ↔ 국립박물관 ↔ 비엔날레 ↔ 경신여고 ↔ 양동시장"},{"num":"석곡87","cat":"feeder","district":"buk","path":"망월동 ↔ 문흥지구 ↔ 산수오거리 ↔ 조선대"},{"num":"두암81","cat":"feeder","district":"buk","path":"장등동 ↔ 두암지구 ↔ 동구청 ↔ 남광주역 ↔ 봉선동"},{"num":"충효187","cat":"feeder","district":"dong","path":"장등동 ↔ 산수시장 ↔ 충장사 ↔ 원효사 (무등산)"},{"num":"지원150","cat":"feeder","district":"dong","path":"월남동 ↔ 소태역 ↔ 학동 ↔ 조선대 ↔ 광주역"},{"num":"지원151","cat":"feeder","district":"dong","path":"소태역 ↔ 화순 이양 ↔ 능주 ↔ 남광주시장"},{"num":"지원152","cat":"feeder","district":"dong","path":"소태역 ↔ 남평 ↔ 다도 ↔ 드들강 유원지"}];
 
-  function renderBusRoutes(filterCat, searchKeyword) {
-    var $grid = $('#busRouteFullGrid');
+  function renderModalBusRoutes(filterCat, searchKeyword) {
+    var $grid = $('#modalBusRouteFullGrid');
     $grid.empty();
 
     var filtered = routesData.filter(function(r) {
@@ -100,24 +100,44 @@ $(function () {
     });
   }
 
-  // Initial Render
-  renderBusRoutes('all', '');
-
-  // Tab Filter
-  $(document).on('click', '.adb-tab', function(e) {
+  // Open Route Search Modal
+  $(document).on('click', '#btnOpenRouteSearchModal', function(e) {
     e.preventDefault();
-    $('.adb-tab').removeClass('on');
-    $(this).addClass('on');
-    var cat = $(this).attr('data-filter-cat');
-    var kw = $('#busRouteSearchInput').val();
-    renderBusRoutes(cat, kw);
+    renderModalBusRoutes('all', '');
+    $('html, body').addClass('modal-open');
+    $('#routeSearchModal').fadeIn(200);
   });
 
-  // Search Input
-  $(document).on('input', '#busRouteSearchInput', function() {
+  $(document).on('click', '#btnCloseRouteSearch', function(e) {
+    e.preventDefault();
+    $('#routeSearchModal').fadeOut(200);
+    if (!$('#busGuideOverlay').is(':visible') && !$('#modalBackdrop').is(':visible')) {
+      $('html, body').removeClass('modal-open');
+    }
+  });
+
+  $(document).on('click', '#routeSearchModal', function(e) {
+    if (e.target === this) {
+      $('#routeSearchModal').fadeOut(200);
+      if (!$('#busGuideOverlay').is(':visible') && !$('#modalBackdrop').is(':visible')) {
+        $('html, body').removeClass('modal-open');
+      }
+    }
+  });
+
+  $(document).on('click', '.rsm-tab', function(e) {
+    e.preventDefault();
+    $('.rsm-tab').removeClass('on');
+    $(this).addClass('on');
+    var cat = $(this).attr('data-filter-cat');
+    var kw = $('#modalBusRouteSearchInput').val();
+    renderModalBusRoutes(cat, kw);
+  });
+
+  $(document).on('input', '#modalBusRouteSearchInput', function() {
     var kw = $(this).val();
-    var cat = $('.adb-tab.on').attr('data-filter-cat') || 'all';
-    renderBusRoutes(cat, kw);
+    var cat = $('.rsm-tab.on').attr('data-filter-cat') || 'all';
+    renderModalBusRoutes(cat, kw);
   });
 
   /* 04. VIDEO FORMAT SWITCHER & PRODUCT CLICK */
@@ -196,7 +216,7 @@ $(function () {
 
   function closeGuideModal() {
     $('#busGuideOverlay').fadeOut(200);
-    if (!$('#modalBackdrop').is(':visible')) {
+    if (!$('#modalBackdrop').is(':visible') && !$('#routeSearchModal').is(':visible')) {
       $('html, body').removeClass('modal-open');
     }
   }
@@ -244,7 +264,7 @@ $(function () {
 
   function closePortfolioModal() {
     $('#modalBackdrop').fadeOut(200);
-    if (!$('#busGuideOverlay').is(':visible')) {
+    if (!$('#busGuideOverlay').is(':visible') && !$('#routeSearchModal').is(':visible')) {
       $('html, body').removeClass('modal-open');
     }
   }
@@ -277,6 +297,8 @@ $(function () {
     if (e.key === 'Escape' || e.keyCode === 27) {
       closeGuideModal();
       closePortfolioModal();
+      $('#routeSearchModal').fadeOut(200);
+      $('html, body').removeClass('modal-open');
     }
   });
 });

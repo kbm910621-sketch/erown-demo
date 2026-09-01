@@ -138,7 +138,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       02 SECTION 01 : 시내버스 광고 (104 ALL ROUTES & INTERACTIVE STUDIO)
+       02 SECTION 01 : 시내버스 광고 (CORE PROMOTIONS & SEPARATED SEARCH)
   ============================================ -->
   <section class="am-section am-bg-slate" id="bus">
     <div class="am-container">
@@ -148,15 +148,20 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div>
             <span class="ash-kicker">01 / OOH BUS ADVERTISING</span>
             <h2 class="ash-title">시내버스 광고</h2>
-            <p class="ash-desc">광주 시내버스 104개 전 노선 단독 배차. 원하는 부착 부위와 노선을 실시간으로 확인하세요.</p>
+            <p class="ash-desc">광주 시내버스 104개 전 노선 단독 배차. 일일 150만 시민의 눈높이에서 18시간 동안 반복 각인되는 움직이는 랜드마크입니다.</p>
           </div>
-          <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideBus">
-            <span>시내버스 7대 규격 가이드 ↗</span>
-          </button>
+          <div class="ash-actions">
+            <button type="button" class="ash-guide-btn blue" id="btnOpenRouteSearchModal">
+              <span>광주 104개 노선 실시간 검색기 ↗</span>
+            </button>
+            <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideBus">
+              <span>시내버스 규격 가이드 ↗</span>
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- BUS STUDIO CONSOLE -->
+      <!-- BUS BLUEPRINT STUDIO CONSOLE -->
       <div class="am-bus-console wow fadeInUp" data-wow-duration="0.8s">
         
         <!-- STEP 1: DIMENSION CHIPS -->
@@ -247,40 +252,30 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         </div>
 
-        <!-- STEP 2: GWANGJU 104 ALL ROUTES LIVE SEARCH & FILTER -->
-        <div class="abc-district-box">
-          <div class="adb-header">
-            <div>
-              <h4>광주 시내버스 104개 전 노선 실시간 검색 &amp; 상권 조회</h4>
-              <p style="font-size:13px; color:#64748b; margin:4px 0 0;">노선 번호나 경유지를 검색하거나, 권역별 탭을 클릭하여 104개 전체 노선을 확인하세요.</p>
-            </div>
-            <div class="adb-search-wrap">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-              <input type="text" id="busRouteSearchInput" placeholder="노선번호 또는 경유지 검색 (예: 순환01, 상무지구, 봉선동)">
-            </div>
-          </div>
+      </div>
 
-          <div class="adb-tabs-row">
-            <button type="button" class="adb-tab on" data-filter-cat="all">전체 104개 노선</button>
-            <button type="button" class="adb-tab" data-filter-cat="express">급행 노선 (6)</button>
-            <button type="button" class="adb-tab" data-filter-cat="main">간선 노선 (24)</button>
-            <button type="button" class="adb-tab" data-filter-cat="feeder">지선 노선 (74)</button>
-            <button type="button" class="adb-tab" data-filter-cat="seo">서구 경유</button>
-            <button type="button" class="adb-tab" data-filter-cat="nam">남구 경유</button>
-            <button type="button" class="adb-tab" data-filter-cat="buk">북구 경유</button>
-            <button type="button" class="adb-tab" data-filter-cat="gwangsan">광산구 경유</button>
-          </div>
+      <!-- BUS PROMOTIONAL 3-PILLAR ADVANTAGES -->
+      <div class="am-bus-promo-grid wow fadeInUp" data-wow-duration="0.8s">
+        
+        <div class="abp-promo-card">
+          <span class="apc-num">01</span>
+          <h3>광주 104개 전 노선 단독 직영 배차</h3>
+          <p>병원, 학원, 분양 홍보관의 주 타깃 고객이 밀집된 상무·수완·봉선·첨단 등 핵심 거점을 정확하게 관통하는 맞춤형 최적 노선을 단독 설계합니다.</p>
+          <div class="apc-stat">광주 5개 구 1,000대 시내버스 독점 운영</div>
+        </div>
 
-          <div class="adb-route-scroll-grid" id="busRouteFullGrid">
-            <?php
-            // Route Card Template Generated
-            ?>
-          </div>
-          
-          <div class="adb-footer-notice">
-            <span>※ 광주광역시 104개 전 노선(급행/간선/지선) 실시간 배차 가능. 내 병원/매장 앞 통과 노선 무료 매칭을 지원합니다.</span>
-            <a href="/board/estmate/write.php" class="afn-btn">1:1 노선 무료 분석 신청 →</a>
-          </div>
+        <div class="abp-promo-card">
+          <span class="apc-num">02</span>
+          <h3>1일 18시간 · 일 150만 시민 눈높이 노출</h3>
+          <p>새벽 5시 30분부터 밤 12시까지 도심 주요 간선도로와 교차로를 쉼 없이 순환하며, 운전자와 보행자 시선 정면에 하루 150만 회 이상 강제 노출됩니다.</p>
+          <div class="apc-stat">차도면 3.7m + 인도면 3.0m + 후면 2.4m 3면 패키지</div>
+        </div>
+
+        <div class="abp-promo-card">
+          <span class="apc-num">03</span>
+          <h3>LG 하우시스 정품 솔벤 시트 &amp; 100% 직영 시공</h3>
+          <p>외주 하청 없는 10년 경력의 본사 전문 시공팀이 내후성 정품 솔벤 시트로 직접 출력 및 부착하며, 시공 직후 번호판 포함 4면 증빙 사진을 실시간 보고합니다.</p>
+          <div class="apc-stat">시공 직후 차량 4면 번호판 실사 즉시 전송</div>
         </div>
 
       </div>
@@ -290,7 +285,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       03 SECTION 02 : 온라인 마케팅 (PRACTICAL REAL-VALUE MARKETING)
+       03 SECTION 02 : 온라인 마케팅 (LARGE MEDIA FRAME & 4 PILLARS)
   ============================================ -->
   <section class="am-section" id="online">
     <div class="am-container">
@@ -300,11 +295,27 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div>
             <span class="ash-kicker">02 / INTEGRATED DIGITAL MARKETING</span>
             <h2 class="ash-title">온라인 마케팅</h2>
-            <p class="ash-desc">옥외광고를 본 잠재 고객이 네이버 검색 시 실제 내방 환자 및 결제 고객으로 전환되는 4대 실무 솔루션입니다.</p>
+            <p class="ash-desc">시내버스 옥외광고를 본 소비자가 네이버 검색 시 실제 내방 환자 및 결제 고객으로 전환되는 4대 실무 솔루션입니다.</p>
           </div>
           <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideOnline">
             <span>온라인 전략 가이드 ↗</span>
           </button>
+        </div>
+      </div>
+
+      <!-- LARGE HIGH-IMPACT VISUAL SHOWCASE FRAME -->
+      <div class="am-online-hero-frame wow fadeInUp" data-wow-duration="0.8s">
+        <div class="aoh-image-wrap">
+          <img src="/images/sub_bg_a.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="가온엔 통합 디지털 마케팅 센터">
+          <div class="aoh-scrim"></div>
+          <div class="aoh-badge-float">
+            <span class="abf-dot"></span>
+            <span>NAVER PLACE #1 &amp; C-RANK INTEGRATION</span>
+          </div>
+          <div class="aoh-content-bottom">
+            <h3>검색 1위 상위노출부터 의료법 안심 바이럴까지</h3>
+            <p>스마트플레이스 1위 세팅 + C-Rank 브랜드 블로그 + 광주 맘카페 입소문 + SNS 릴스 반경 타깃팅을 원스톱 통합 실행합니다.</p>
+          </div>
         </div>
       </div>
 
@@ -744,7 +755,51 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       10 SWISS-STYLE EDITORIAL PARAGRAPH SPECIFICATION MODAL (5 TABS)
+       10 SEPARATE 104 BUS ROUTES SEARCH MODAL
+  ============================================ -->
+  <div class="route-search-modal-overlay" id="routeSearchModal">
+    <div class="rsm-panel">
+      <div class="rsm-head">
+        <div>
+          <span class="rsm-kicker">GAON-N BUS ROUTE DIRECTORY</span>
+          <h3 class="rsm-title">광주 시내버스 104개 전 노선 실시간 검색기</h3>
+          <p class="rsm-desc">노선 번호나 경유지(예: 상무지구, 봉선동, 전남대, 수완)를 검색하시면 해당 노선의 전체 경로를 즉시 확인하실 수 있습니다.</p>
+        </div>
+        <button type="button" class="rsm-close" id="btnCloseRouteSearch">✕</button>
+      </div>
+
+      <div class="rsm-body">
+        <div class="rsm-search-bar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="modalBusRouteSearchInput" placeholder="노선 번호 또는 경유 상권 검색 (예: 순환01, 상무지구, 봉선동, 첨단)">
+        </div>
+
+        <div class="rsm-tabs-row">
+          <button type="button" class="rsm-tab on" data-filter-cat="all">전체 104개 노선</button>
+          <button type="button" class="rsm-tab" data-filter-cat="express">급행 노선 (6)</button>
+          <button type="button" class="rsm-tab" data-filter-cat="main">간선 노선 (24)</button>
+          <button type="button" class="rsm-tab" data-filter-cat="feeder">지선 노선 (74)</button>
+          <button type="button" class="rsm-tab" data-filter-cat="seo">서구 (상무·광천)</button>
+          <button type="button" class="rsm-tab" data-filter-cat="nam">남구 (봉선·풍암)</button>
+          <button type="button" class="rsm-tab" data-filter-cat="buk">북구 (용봉·일곡)</button>
+          <button type="button" class="rsm-tab" data-filter-cat="gwangsan">광산구 (수완·첨단)</button>
+        </div>
+
+        <div class="rsm-routes-grid" id="modalBusRouteFullGrid">
+          <!-- Dynamically Injected -->
+        </div>
+      </div>
+
+      <div class="rsm-foot">
+        <span>※ 내 병원/매장 앞 통과 노선 및 예산별 최적 배차 조합을 무료로 설계해 드립니다.</span>
+        <a href="/board/estmate/write.php" class="rsm-foot-btn">1:1 노선 무료 견적 문의하기 →</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================
+       11 SWISS-STYLE EDITORIAL PARAGRAPH SPECIFICATION MODAL (5 TABS)
   ============================================ -->
   <div class="bus-guide-overlay" id="busGuideOverlay">
     <div class="lux-modal-panel">
@@ -770,10 +825,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         
         <!-- 01 BUS (STRUCTURED PARAGRAPH CARDS) -->
         <div class="bus-guide-page on" id="guideBus">
-          
           <h4 class="lmg-sec-title">시내버스 외부 광고 4대 부착면 실측 규격</h4>
           <div class="lmg-card-grid">
-            
             <div class="lmg-card">
               <div class="lmc-head">
                 <span class="lmc-badge blue">차도면 대형</span>
@@ -825,39 +878,13 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 <span><strong>소재:</strong> 고접착 실사 솔벤 시트</span>
               </div>
             </div>
-
           </div>
-
-          <h4 class="lmg-sec-title" style="margin-top:40px;">시내버스 내부 광고 &amp; 멀티미디어 규격</h4>
-          <div class="lmg-card-grid">
-            
-            <div class="lmg-card">
-              <div class="lmc-head">
-                <span class="lmc-badge green">내부 창문</span>
-                <span class="lmc-dim">1,100 × 500 mm</span>
-              </div>
-              <strong class="lmc-name">내부 중앙창문 포스터</strong>
-              <p class="lmc-desc">승객 좌석 및 통로에서 15~30분간 시선이 가장 오래 머무는 프리미엄 부착면입니다.</p>
-            </div>
-
-            <div class="lmg-card">
-              <div class="lmc-head">
-                <span class="lmc-badge green">음성 방송</span>
-                <span class="lmc-dim">1회 7초</span>
-              </div>
-              <strong class="lmc-name">정류소 음성 안내 방송</strong>
-              <p class="lmc-desc">"이번 정류소는 ○○병원 앞입니다." 정류소당 1개 광고주 독점 방송으로 청각에 강력 각인됩니다.</p>
-            </div>
-
-          </div>
-
         </div>
 
         <!-- 02 TAXI & DELIVERY -->
         <div class="bus-guide-page" id="guideTaxiDelivery">
           <h4 class="lmg-sec-title">택시 &amp; 택배차량 래핑 실측 가이드</h4>
           <div class="lmg-card-grid">
-            
             <div class="lmg-card">
               <div class="lmc-head">
                 <span class="lmc-badge blue">택시 래핑</span>
@@ -866,7 +893,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <strong class="lmc-name">법인 · 개인택시 양측면 래핑</strong>
               <p class="lmc-desc">광주 전역 200여 대 차량이 주요 번화가와 골목길까지 24시간 연속 운행하며 보행자 눈높이에서 밀착 노출됩니다.</p>
             </div>
-
             <div class="lmg-card">
               <div class="lmc-head">
                 <span class="lmc-badge blue">택배 탑차</span>
@@ -875,7 +901,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <strong class="lmc-name">택배 탑차 3면 와이드 래핑</strong>
               <p class="lmc-desc">광주 5개 구 아파트 단지와 주택가 골목길에 매일 10시간 이상 머무는 움직이는 초대형 랜드마크 빌보드입니다.</p>
             </div>
-
           </div>
         </div>
 
@@ -883,7 +908,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <div class="bus-guide-page" id="guideMartDid">
           <h4 class="lmg-sec-title">대형마트 쇼핑카트 &amp; DID 전광판 규격</h4>
           <div class="lmg-card-grid">
-            
             <div class="lmg-card">
               <div class="lmc-head">
                 <span class="lmc-badge gold">쇼핑카트</span>
@@ -892,7 +916,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <strong class="lmc-name">대형마트 쇼핑카트 양면 플레이트</strong>
               <p class="lmc-desc">이마트, 롯데마트 1,000여 대 카트 손잡이 정면에 장착되어 60분 쇼핑 내내 3050 주부 및 가족 고객과 동행합니다.</p>
             </div>
-
             <div class="lmg-card">
               <div class="lmc-head">
                 <span class="lmc-badge gold">DID 전광판</span>
@@ -901,7 +924,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <strong class="lmc-name">DID 전자현수막 &amp; 도심 전광판</strong>
               <p class="lmc-desc">유스퀘어 터미널, 지하철 환승역, 관공서 로비에 고휘도 LED로 15~20초 영상이 일 100회 이상 연속 송출됩니다.</p>
             </div>
-
           </div>
         </div>
 
@@ -909,7 +931,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <div class="bus-guide-page" id="guideOnline">
           <h4 class="lmg-sec-title">가온엔 통합 온라인 마케팅 4대 핵심 전략</h4>
           <div class="lmg-card-grid">
-            
             <div class="lmg-card">
               <div class="lmc-head">
                 <span class="lmc-badge blue">01 플레이스</span>
@@ -918,7 +939,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <strong class="lmc-name">스마트플레이스 1위 SEO</strong>
               <p class="lmc-desc">광주 지역 고객이 '진료과목/업종+지역명' 검색 시 1페이지 지도 상위에 노출되도록 키워드 및 리뷰를 관리합니다.</p>
             </div>
-
             <div class="lmg-card">
               <div class="lmc-head">
                 <span class="lmc-badge blue">02 C-Rank</span>
@@ -927,7 +947,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <strong class="lmc-name">C-Rank 브랜드 블로그 &amp; 맘카페</strong>
               <p class="lmc-desc">의료법 100% 준수 가이드라인에 맞춘 고품질 정보성 칼럼을 네이버 알고리즘에 최적화하여 상위 노출합니다.</p>
             </div>
-
           </div>
         </div>
 
@@ -935,7 +954,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <div class="bus-guide-page" id="guideVideo">
           <h4 class="lmg-sec-title">4K 시네마틱 영상제작 &amp; SNS 숏폼 프로덕션</h4>
           <div class="lmg-card-grid">
-            
             <div class="lmg-card">
               <div class="lmc-head">
                 <span class="lmc-badge gold">브랜드 필름</span>
@@ -944,7 +962,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <strong class="lmc-name">기업 · 상급병원 브랜드 필름</strong>
               <p class="lmc-desc">Sony FX Cinema 풀프레임 + 4K 드론 항공촬영으로 최상의 품격을 완성하며 홈페이지 메인 및 TV CF에 최적화됩니다.</p>
             </div>
-
             <div class="lmg-card">
               <div class="lmc-head">
                 <span class="lmc-badge gold">모바일 숏폼</span>
@@ -953,7 +970,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <strong class="lmc-name">SNS 릴스 · 유튜브 쇼츠</strong>
               <p class="lmc-desc">첫 3초 만에 시선을 사로잡는 빠른 템포의 모바일 영상으로 수만 뷰 이상의 유기적 도달을 달성합니다.</p>
             </div>
-
           </div>
         </div>
 
@@ -968,7 +984,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       11 PORTFOLIO CINEMATIC LIGHTBOX MODAL
+       12 PORTFOLIO CINEMATIC LIGHTBOX MODAL
   ============================================ -->
   <div class="portfolio-modal-backdrop" id="modalBackdrop">
     <div class="portfolio-modal-box">
