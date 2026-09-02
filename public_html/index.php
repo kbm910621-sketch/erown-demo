@@ -310,7 +310,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="afv-overlay-content">
             <div class="afv-badge-row">
               <span class="afv-pill blue">01 / FLEET DIRECT</span>
-              <div class="afv-icon-badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/><path d="M7 3v7"/><path d="M17 3v7"/></svg></div>
+              <div class="afv-icon-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/><path d="M7 3v7"/><path d="M17 3v7"/></svg>
+              </div>
             </div>
             <h3 class="afv-title">광주 104개 전 노선 단독 직영 배차</h3>
             <p class="afv-desc">상무·수완·봉선·첨단 등 핵심 거점을 관통하는 맞춤형 최적 노선 단독 설계</p>
@@ -324,7 +326,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="afv-overlay-content">
             <div class="afv-badge-row">
               <span class="afv-pill blue">02 / 18H EXPOSURE</span>
-              <div class="afv-icon-badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><path d="M22 12A10 10 0 0 0 12 2"/></svg></div>
+              <div class="afv-icon-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><path d="M22 12A10 10 0 0 0 12 2"/></svg>
+              </div>
             </div>
             <h3 class="afv-title">1일 18시간 · 일 150만 시민 눈높이 노출</h3>
             <p class="afv-desc">도심 주요 간선도로와 교차로를 쉼 없이 순환하며 운전자와 보행자 시선 정면 강제 노출</p>
@@ -338,7 +342,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="afv-overlay-content">
             <div class="afv-badge-row">
               <span class="afv-pill blue">03 / PREMIUM PRINT</span>
-              <div class="afv-icon-badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
+              <div class="afv-icon-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              </div>
             </div>
             <h3 class="afv-title">LG 하우시스 정품 솔벤 &amp; 100% 직영 시공</h3>
             <p class="afv-desc">외주 없는 본사 10년 경력팀 직접 시공 및 시공 직후 번호판 4면 실사 즉시 보고</p>
@@ -931,20 +937,60 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       08 PARTNERS MARQUEE
+       08 GAON-N GET STARTED MASTER CTA STAGE (IMAGE MATCH 100%)
   ============================================ -->
-  <section class="am-partners-sec">
-    <div class="am-container">
-      <div class="apt-title">TRUSTED BY INDUSTRY LEADERS</div>
+  <section class="am-get-started-sec" id="getStarted">
+    <div class="ags-bg-watermark">GAON-N</div>
+    
+    <!-- 4 FLOATING AMBIENT PILLS MATCHING USER SCREENSHOT -->
+    <div class="ags-floating-pill pill-top-left wow fadeInLeft" data-wow-duration="0.8s">
+      <span class="afp-dot green"></span>
+      <span class="afp-text">지금 바로 상담해보세요</span>
     </div>
-    <div class="apt-marquee-box">
-      <div class="apt-track track-left">
-        <span class="apt-chip">전남대학교병원</span><span class="apt-chip">조선대학교병원</span><span class="apt-chip">광주안과</span><span class="apt-chip">센트럴치과병원</span><span class="apt-chip">이루다어학원</span><span class="apt-chip">중흥건설</span><span class="apt-chip">광주도시공사</span><span class="apt-chip">그린모빌리티</span>
-        <span class="apt-chip">전남대학교병원</span><span class="apt-chip">조선대학교병원</span><span class="apt-chip">광주안과</span><span class="apt-chip">센트럴치과병원</span><span class="apt-chip">이루다어학원</span><span class="apt-chip">중흥건설</span><span class="apt-chip">광주도시공사</span><span class="apt-chip">그린모빌리티</span>
+
+    <div class="ags-floating-pill pill-top-right wow fadeInRight" data-wow-duration="0.8s">
+      <span class="afp-dot yellow"></span>
+      <span class="afp-text">빠른 견적 안내 가능합니다</span>
+    </div>
+
+    <div class="ags-floating-pill pill-bottom-left wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.1s">
+      <span class="afp-icon-clock">⏱</span>
+      <span class="afp-text">광주 500+ 광주 신뢰</span>
+    </div>
+
+    <div class="ags-floating-pill pill-bottom-right wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">
+      <span class="afp-dot green"></span>
+      <span class="afp-text">오프라인 · 온라인 통합 운영</span>
+    </div>
+
+    <!-- CIRCULAR FLOATING CONTACT BADGE (RIGHT) -->
+    <div class="ags-floating-circle-badge">
+      <div class="afcb-inner">
+        <span class="afcb-text">CONTACT US</span>
+        <strong class="afcb-bold">광고<br>문의</strong>
       </div>
-      <div class="apt-track track-right">
-        <span class="apt-chip">원광대한방병원</span><span class="apt-chip">바른정형외과</span><span class="apt-chip">법무법인 광산</span><span class="apt-chip">드림공인중개사</span><span class="apt-chip">홀리데이호텔</span><span class="apt-chip">라붐웨딩홀</span><span class="apt-chip">베비에르</span><span class="apt-chip">봉선어학센터</span>
-        <span class="apt-chip">원광대한방병원</span><span class="apt-chip">바른정형외과</span><span class="apt-chip">법무법인 광산</span><span class="apt-chip">드림공인중개사</span><span class="apt-chip">홀리데이호텔</span><span class="apt-chip">라붐웨딩홀</span><span class="apt-chip">베비에르</span><span class="apt-chip">봉선어학센터</span>
+    </div>
+
+    <!-- CENTER HERO CONTENT -->
+    <div class="am-container" style="position:relative; z-index:5;">
+      <div class="ags-center-box wow fadeInUp" data-wow-duration="0.8s">
+        <span class="ags-kicker">GET STARTED</span>
+        <h2 class="ags-title">
+          광고, 이제<br>
+          <span class="ags-highlight">제대로 시작하세요.</span>
+        </h2>
+
+        <div class="ags-cta-wrap">
+          <a href="#consultation" class="ags-white-pill-btn">
+            <span class="awpb-text">맞춤 견적 상담받기</span>
+            <span class="awpb-arrow-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   </section>

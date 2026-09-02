@@ -515,3 +515,32 @@
 .asps-item-title.white { color:#ffffff; }
 .asps-item-loc { font-size:11.5px; color:#64748b; }
 .asps-item-loc.light { color:#94a3b8; }
+
+/* GAON-N GET STARTED MASTER CTA STAGE (IMAGE MATCH 100%) */
+.am-get-started-sec { position:relative; width:100%; min-height:480px; padding:110px 0 120px; background:#07152c; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+.ags-bg-watermark { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:clamp(80px, 16vw, 220px); font-weight:900; color:rgba(255,255,255,0.035); letter-spacing:0.06em; pointer-events:none; z-index:1; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; white-space:nowrap; user-select:none; }
+.ags-center-box { text-align:center; max-width:680px; margin:0 auto; }
+.ags-kicker { display:inline-block; font-size:12px; font-weight:800; letter-spacing:0.22em; color:rgba(255,255,255,0.45); margin-bottom:18px; text-transform:uppercase; font-family:"Pretendard", sans-serif; }
+.ags-title { font-size:clamp(32px, 4.2vw, 46px); font-weight:900; line-height:1.28; color:#ffffff; letter-spacing:-1px; margin:0 0 34px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; text-shadow:0 4px 20px rgba(0,0,0,0.5); }
+.ags-title .ags-highlight { color:rgba(255,255,255,0.75); }
+.ags-cta-wrap { display:flex; justify-content:center; margin-top:8px; }
+.ags-white-pill-btn { display:inline-flex; align-items:center; gap:16px; background:#ffffff; color:#07152c; padding:14px 28px 14px 34px; border-radius:100px; font-size:16px; font-weight:900; letter-spacing:-0.4px; text-decoration:none; box-shadow:0 12px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.2); transition:all 0.35s cubic-bezier(0.16, 1, 0.3, 1); cursor:pointer; }
+.ags-white-pill-btn:hover { transform:translateY(-4px) scale(1.03); box-shadow:0 20px 48px rgba(56,189,248,0.35); background:#ffffff; color:#1855b7; }
+.awpb-arrow-circle { width:36px; height:36px; border-radius:50%; background:#07152c; display:flex; align-items:center; justify-content:center; transition:transform 0.35s ease; }
+.ags-white-pill-btn:hover .awpb-arrow-circle { transform:translateX(4px); background:#1855b7; }
+.ags-floating-pill { position:absolute; z-index:3; display:inline-flex; align-items:center; gap:8px; padding:10px 20px; background:rgba(15,30,55,0.75); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.12); border-radius:100px; color:rgba(255,255,255,0.88); font-size:13px; font-weight:700; letter-spacing:-0.2px; box-shadow:0 8px 24px rgba(0,0,0,0.25); animation:floatPill 4s ease-in-out infinite alternate; pointer-events:none; }
+.ags-floating-pill.pill-top-left { top:16%; left:12%; animation-delay:0s; }
+.ags-floating-pill.pill-top-right { top:16%; right:14%; animation-delay:1.2s; }
+.ags-floating-pill.pill-bottom-left { bottom:18%; left:10%; animation-delay:0.6s; }
+.ags-floating-pill.pill-bottom-right { bottom:18%; right:12%; animation-delay:1.8s; }
+.afp-dot { width:7px; height:7px; border-radius:50%; display:inline-block; }
+.afp-dot.green { background:#10b981; box-shadow:0 0 8px #10b981; }
+.afp-dot.yellow { background:#f59e0b; box-shadow:0 0 8px #f59e0b; }
+.afp-icon-clock { font-size:13px; opacity:0.8; }
+.ags-floating-circle-badge { position:absolute; top:28%; right:3%; z-index:3; width:80px; height:80px; border-radius:50%; border:1px dashed rgba(255,255,255,0.22); background:rgba(15,30,55,0.6); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; text-align:center; animation:spinBadge 20s linear infinite; }
+.afcb-inner { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; }
+.afcb-text { font-size:8.5px; font-weight:800; letter-spacing:0.12em; color:rgba(255,255,255,0.45); }
+.afcb-bold { font-size:11px; font-weight:900; color:#38bdf8; line-height:1.2; letter-spacing:-0.2px; }
+@keyframes floatPill { 0% { transform:translateY(0px); } 100% { transform:translateY(-10px); } }
+@keyframes spinBadge { 0% { transform:rotate(0deg); } 100% { transform:rotate(360deg); } }
+@media(max-width:991px) { .ags-floating-pill { display:none; } .ags-floating-circle-badge { display:none; } .am-get-started-sec { padding:80px 0; min-height:auto; } }
