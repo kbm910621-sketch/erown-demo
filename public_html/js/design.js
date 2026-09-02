@@ -286,12 +286,14 @@ $(function() {
 
   function openRouteModal() {
     $('html, body').addClass('modal-lock');
-    $('#routeSearchModal').fadeIn(200).css('display', 'flex');
+    $('#routeSearchModal').fadeIn(200).css('display', 'block');
+    $('body').addClass('modal-lock');
     renderModalRoutes('', 'all');
   }
 
   function closeRouteModal() {
     $('#routeSearchModal').fadeOut(200);
+    $('body').removeClass('modal-lock');
     $('html, body').removeClass('modal-lock');
   }
 

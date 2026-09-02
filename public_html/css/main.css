@@ -273,47 +273,6 @@
 .act-btn:hover { background:#2563eb; transform:translateY(-2px); box-shadow:0 14px 30px rgba(37,99,235,0.35); }
 
 /* 10 104 BUS ROUTES MODAL */
-.route-search-modal-overlay { display:none; position:fixed; inset:0; z-index:9999; background:rgba(15,23,42,0.75); backdrop-filter:blur(12px); padding:40px 20px; overflow-y:auto; }
-.rsm-panel { max-width:1120px; margin:0 auto; background:#ffffff; border-radius:24px; box-shadow:0 30px 80px rgba(15,23,42,0.25); overflow:hidden; }
-.rsm-head { display:flex; justify-content:space-between; align-items:flex-start; padding:32px 40px 24px; border-bottom:1px solid #f1f5f9; }
-.rsm-kicker { font-size:11px; font-weight:800; letter-spacing:0.16em; color:#1855b7; }
-.rsm-title { font-size:24px; font-weight:900; letter-spacing:-0.5px; color:#0f172a; margin:4px 0 4px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
-.rsm-desc { font-size:13px; color:#64748b; margin:0; }
-.rsm-close { width:36px; height:36px; border-radius:50%; background:#f1f5f9; border:0; font-size:14px; font-weight:700; color:#475569; cursor:pointer; transition:all 0.2s; }
-.rsm-close:hover { background:#0f172a; color:#ffffff; }
-
-.rsm-body { padding:32px 40px; }
-.rsm-search-bar { display:flex; align-items:center; gap:10px; padding:14px 22px; border-radius:100px; background:#f8fafc; border:1.5px solid #cbd5e1; margin-bottom:18px; }
-.rsm-search-bar input { border:0; background:none; outline:none; font-size:14px; color:#0f172a; width:100%; font-family:inherit; }
-.rsm-tabs-row { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:24px; }
-.rsm-tab { padding:7px 16px; border-radius:100px; background:#f1f5f9; border:0; font-size:12.5px; font-weight:700; color:#64748b; cursor:pointer; font-family:inherit; transition:all 0.2s; }
-.rsm-tab:hover { color:#0f172a; background:#e2e8f0; }
-.rsm-tab.on { background:#0f172a; color:#ffffff; }
-
-.rsm-directory-list { display:flex; flex-direction:column; gap:10px; max-height:480px; overflow-y:auto; padding-right:8px; }
-.rsd-row { display:grid; grid-template-columns:130px 1fr 180px 140px; gap:16px; align-items:center; padding:16px 20px; border-radius:14px; background:#f8fafc; border:1px solid #e2e8f0; transition:all 0.15s; }
-.rsd-row:hover { background:#ffffff; border-color:#93c5fd; box-shadow:0 6px 18px rgba(0,0,0,0.03); transform:translateX(2px); }
-.rsd-badge-col { display:flex; align-items:center; gap:8px; }
-.rsd-tag { font-size:10.5px; font-weight:800; padding:3px 7px; border-radius:4px; }
-.rsd-tag.red { background:#fef2f2; color:#dc2626; }
-.rsd-tag.blue { background:#eff6ff; color:#1855b7; }
-.rsd-tag.green { background:#f0fdf4; color:#16a34a; }
-.rsd-num { font-size:16px; font-weight:900; color:#0f172a; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
-.rsd-desc-col { display:flex; flex-direction:column; gap:2px; }
-.rsd-path { font-size:13.5px; font-weight:800; color:#0f172a; }
-.rsd-target { font-size:12px; color:#64748b; }
-.rsd-fleet-col { display:flex; flex-direction:column; gap:2px; font-size:12px; color:#475569; }
-.rsd-fleet-col strong { color:#1855b7; font-weight:800; }
-.rsd-action-col { text-align:right; }
-.rsd-btn { display:inline-flex; align-items:center; padding:7px 14px; border-radius:100px; background:#ffffff; border:1px solid #cbd5e1; font-size:12px; font-weight:800; color:#1855b7; text-decoration:none; transition:all 0.2s; }
-.rsd-btn:hover { background:#1855b7; color:#ffffff; border-color:#1855b7; }
-
-.rsm-foot { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:#f8fafc; border-top:1px solid #e2e8f0; flex-wrap:wrap; gap:14px; }
-.rf-notice strong { font-size:13.5px; font-weight:800; color:#0f172a; display:block; margin-bottom:2px; }
-.rf-notice span { font-size:12.5px; color:#64748b; }
-.rsm-foot-btn { display:inline-flex; align-items:center; padding:11px 24px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:13.5px; font-weight:800; text-decoration:none; transition:all 0.2s; }
-.rsm-foot-btn:hover { background:#0f3f8c; }
-
 /* 11 SWISS SPEC MODAL */
  .lux-modal-head, .lux-modal-tabs, .lux-modal-body, .lux-modal-foot { padding-left:18px; padding-right:18px; } .lux-modal-panel { max-height:96vh; border-radius:18px; } }
 
@@ -622,19 +581,7 @@
 
 
 /* ROUTE SEARCH MODAL 2-COLUMN PERFECT ALIGNMENT */
-.rsm-directory-list { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; max-height:480px; overflow-y:auto; padding-right:8px; }
-.rsm-item-card { background:#f8fafc; border:1.5px solid #e2e8f0; border-radius:16px; padding:18px 20px; display:flex; flex-direction:column; justify-content:space-between; transition:all 0.25s ease; }
-.rsm-item-card:hover { background:#ffffff; border-color:#1855b7; box-shadow:0 8px 24px rgba(24,85,183,0.12); transform:translateY(-2px); }
-.ric-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid #eef2f6; }
-.ric-num { font-size:16px; font-weight:900; padding:4px 12px; border-radius:8px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; letter-spacing:-0.3px; }
-.ric-num.red { background:#fef2f2; color:#dc2626; border:1px solid rgba(220,38,38,0.2); }
-.ric-num.blue { background:#eff6ff; color:#1855b7; border:1px solid rgba(24,85,183,0.2); }
-.ric-num.green { background:#f0fdf4; color:#16a34a; border:1px solid rgba(22,163,74,0.2); }
-.ric-fleet { font-size:12.5px; font-weight:800; color:#475569; }
-.ric-desc { font-size:13.5px; font-weight:800; color:#0f172a; line-height:1.45; margin-bottom:8px; }
-.ric-target { font-size:12px; color:#64748b; line-height:1.4; background:#ffffff; padding:8px 12px; border-radius:8px; border:1px solid #f1f5f9; }
-.ric-target strong { color:#1855b7; font-weight:800; }
-@media(max-width:768px) { .rsm-directory-list { grid-template-columns:1fr; } .rsm-head, .rsm-body { padding:20px; } }
+
 
 
 
@@ -856,4 +803,35 @@ body.modal-lock { overflow:hidden !important; }
   .lhc-main { padding:18px 20px; }
   .lux-modal-foot { flex-direction:column; gap:12px; align-items:stretch; }
   .lux-modal-foot .am-more-btn { width:100%; justify-content:center; }
+}
+
+/* ROUTE SEARCH MODAL SILKY SMOOTH SCROLLING & LUXURY DESIGN */
+.route-search-modal-overlay { display:none; position:fixed; inset:0; z-index:9999; background:rgba(15,23,42,0.82); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); padding:40px 20px; overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch; }
+.rsm-panel { max-width:1120px; margin:0 auto; background:#ffffff; border-radius:26px; box-shadow:0 35px 100px rgba(15,23,42,0.35); display:flex; flex-direction:column; max-height:90vh; overflow:hidden; border:1px solid rgba(255,255,255,0.2); }
+.rsm-head { flex-shrink:0; background:linear-gradient(135deg, #0b1329 0%, #1e293b 100%); color:#ffffff; padding:30px 38px 24px; display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid #334155; }
+.rsm-kicker { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:900; letter-spacing:0.04em; color:#38bdf8; background:rgba(56,189,248,0.14); border:1px solid rgba(56,189,248,0.3); padding:4px 12px; border-radius:100px; margin-bottom:8px; }
+.rsm-title { font-size:24px; font-weight:900; letter-spacing:-0.5px; color:#ffffff; margin:0 0 6px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
+.rsm-desc { font-size:14px; color:#94a3b8; margin:0; line-height:1.55; }
+.rsm-close { width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#ffffff; display:inline-flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.25s ease; flex-shrink:0; }
+.rsm-close:hover { background:#ef4444; border-color:#ef4444; color:#ffffff; transform:rotate(90deg); }
+.rsm-body { padding:30px 38px; overflow-y:auto; flex-grow:1; -webkit-overflow-scrolling:touch; background:#f8fafc; }
+.rsm-search-bar { display:flex; align-items:center; gap:12px; padding:14px 22px; border-radius:100px; background:#ffffff; border:1.5px solid #cbd5e1; margin-bottom:18px; box-shadow:0 4px 12px rgba(15,23,42,0.03); }
+.rsm-search-bar input { border:0; background:none; outline:none; font-size:14.5px; color:#0f172a; width:100%; font-family:inherit; }
+.rsm-tabs-row { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px; }
+.rsm-tab { padding:9px 18px; border-radius:100px; background:#ffffff; border:1.5px solid #cbd5e1; font-size:13.5px; font-weight:800; color:#475569; cursor:pointer; font-family:inherit; transition:all 0.2s; white-space:nowrap; }
+.rsm-tab:hover { color:#1855b7; border-color:#1855b7; background:#f1f5f9; }
+.rsm-tab.on { background:#1855b7; border-color:#1855b7; color:#ffffff; box-shadow:0 4px 12px rgba(24,85,183,0.3); }
+.rsm-directory-list { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; }
+.rsm-item-card { background:#ffffff; border:1.5px solid #e2e8f0; border-radius:18px; padding:20px 22px; display:flex; flex-direction:column; justify-content:space-between; transition:all 0.25s ease; box-shadow:0 4px 14px rgba(15,23,42,0.02); }
+.rsm-item-card:hover { border-color:#1855b7; box-shadow:0 10px 28px rgba(24,85,183,0.12); transform:translateY(-2px); }
+.rsm-foot { flex-shrink:0; display:flex; justify-content:space-between; align-items:center; padding:20px 38px; background:#ffffff; border-top:1.5px solid #e2e8f0; flex-wrap:wrap; gap:14px; }
+.rsm-foot-btn { display:inline-flex; align-items:center; padding:12px 24px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:14px; font-weight:800; text-decoration:none; transition:all 0.2s; box-shadow:0 6px 16px rgba(24,85,183,0.3); }
+.rsm-foot-btn:hover { background:#0284c7; transform:translateY(-2px); color:#ffffff; }
+@media(max-width:768px) {
+  .route-search-modal-overlay { padding:12px; }
+  .rsm-head, .rsm-body, .rsm-foot { padding-left:18px; padding-right:18px; }
+  .rsm-panel { max-height:96vh; border-radius:18px; }
+  .rsm-directory-list { grid-template-columns:1fr; }
+  .rsm-foot { flex-direction:column; align-items:stretch; }
+  .rsm-foot-btn { width:100%; justify-content:center; }
 }
