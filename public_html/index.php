@@ -491,6 +491,153 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
+      <!-- ============================================
+           LIVE NAVER SEARCH & PLACE SIMULATION STAGE (DYNAMIC REAL EXPERIENCE)
+      ============================================ -->
+      <div class="am-live-search-sim-stage wow fadeInUp" data-wow-duration="0.8s">
+        <div class="alss-layout">
+          
+          <!-- LEFT: INTERACTIVE CONTROLLER & KEYWORD SWITCHER -->
+          <div class="alss-controller">
+            <div class="alss-head">
+              <span class="alss-kicker">LIVE SEARCH SIMULATION</span>
+              <h3 class="alss-title">실제 네이버 1위 검색 노출 시뮬레이션</h3>
+              <p class="alss-desc">소비자가 광주 주요 키워드를 검색했을 때, 가온엔의 1위 최적화 세팅이 화면 최상단을 어떻게 장악하는지 직접 클릭하여 실시간으로 확인해보세요.</p>
+            </div>
+
+            <div class="alss-keyword-tabs">
+              <button type="button" class="akt-tab on" data-key="skin">
+                <div class="akt-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </div>
+                <div class="akt-text">
+                  <strong>상무지구 피부과</strong>
+                  <span>스마트플레이스 1위 + 영수증 리뷰 + 24H 예약</span>
+                </div>
+              </button>
+
+              <button type="button" class="akt-tab" data-key="math">
+                <div class="akt-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </div>
+                <div class="akt-text">
+                  <strong>봉선동 수학학원</strong>
+                  <span>C-Rank 파워블로그 뷰탭 1위 칼럼 장악</span>
+                </div>
+              </button>
+
+              <button type="button" class="akt-tab" data-key="food">
+                <div class="akt-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </div>
+                <div class="akt-text">
+                  <strong>수완지구 맛집</strong>
+                  <span>광주 맘스홀릭 침투 &amp; 9:16 인스타 릴스</span>
+                </div>
+              </button>
+
+              <button type="button" class="akt-tab" data-key="busad">
+                <div class="akt-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </div>
+                <div class="akt-text">
+                  <strong>광주 시내버스 광고</strong>
+                  <span>가온엔 공식 104개 노선 1위 점유</span>
+                </div>
+              </button>
+            </div>
+
+            <div class="alss-action-box">
+              <span class="aab-text">우리 매장/병원도 네이버 검색 1위에 올리고 싶으신가요?</span>
+              <a href="/board/estmate/write.php" class="aab-btn">
+                <span>1위 세팅 1:1 맞춤 컨설팅 신청</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT: SMARTPHONE DEVICE UI WITH LIVE TYPING & SEARCH RESULTS -->
+          <div class="alss-device-wrap">
+            <div class="alss-phone-mockup">
+              
+              <!-- TOP BAR -->
+              <div class="apm-notch">
+                <span class="apm-time">12:30</span>
+                <div class="apm-island"></div>
+                <div class="apm-status">LTE 100%</div>
+              </div>
+
+              <!-- NAVER SEARCH APP HEADER -->
+              <div class="apm-naver-header">
+                <div class="anh-logo-row">
+                  <span class="anh-naver-logo">N</span>
+                  <div class="anh-search-box">
+                    <span class="anh-search-text" id="simSearchInput">상무지구 피부과</span>
+                    <span class="anh-cursor">|</span>
+                    <span class="anh-search-btn">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#03c75a" stroke-width="3"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="anh-tabs-nav">
+                  <span class="atn-item on">통합</span>
+                  <span class="atn-item">플레이스</span>
+                  <span class="atn-item">VIEW</span>
+                  <span class="atn-item">이미지</span>
+                  <span class="atn-item">지식iN</span>
+                </div>
+              </div>
+
+              <!-- SIMULATED RESULTS BODY -->
+              <div class="apm-results-body" id="simResultsContainer">
+                
+                <!-- PLACE 1ST RESULT CARD -->
+                <div class="anr-place-card">
+                  <div class="apc-top">
+                    <span class="apc-rank-badge">1위</span>
+                    <strong class="apc-name" id="simPlaceName">가온메디컬의원 상무본점</strong>
+                    <span class="apc-ad-tag">광고</span>
+                  </div>
+                  <div class="apc-rating-row">
+                    <span class="apc-stars">★ 4.96</span>
+                    <span class="apc-reviews" id="simPlaceReview">방문자 리뷰 1,420 · 블로그 리뷰 860</span>
+                  </div>
+                  <p class="apc-desc" id="simPlaceDesc">상무역 4번 출구 앞 도보 1분 · 피부과 전문의 1:1 맞춤 진료 · 야간진료</p>
+                  <div class="apc-btns-row">
+                    <button type="button" class="apc-btn call">📞 전화</button>
+                    <button type="button" class="apc-btn reserve">📅 네이버 예약</button>
+                    <button type="button" class="apc-btn talk">💬 톡톡 문의</button>
+                  </div>
+                </div>
+
+                <!-- C-RANK BLOG 1ST RESULT CARD -->
+                <div class="anr-blog-card">
+                  <span class="abc-channel">브랜드 블로그 공식 파워콘텐츠</span>
+                  <h5 class="abc-title" id="simBlogTitle">상무지구 피부과 전문의가 직접 알려주는 색소 치료 전 필수 체크 3가지</h5>
+                  <p class="abc-snippet" id="simBlogSnippet">로컬 1위 SEO 알고리즘 적용 및 의료법 제56조 100% 사전 법무 검수 완료 칼럼. 스마트블록 및 뷰탭 최상단 3개 영역 동시 점유 실사...</p>
+                  <div class="abc-footer">
+                    <span class="abc-author" id="simBlogAuthor">가온메디컬 공식블로그</span>
+                    <span class="abc-date">오늘 작성</span>
+                  </div>
+                </div>
+
+                <!-- VIRAL / SNS RESULT CARD -->
+                <div class="anr-buzz-card">
+                  <span class="abz-tag" id="simBuzzTag">맘카페 실사용자 추천 후기</span>
+                  <p class="abz-text" id="simBuzzText">"상무지구 피부과 여러 군데 다녀봤는데 여기가 제일 친절하고 꼼꼼하게 봐주시네요! 원장님 설명도 굿굿"</p>
+                  <div class="abz-meta">
+                    <span id="simBuzzMeta">광주맘스홀릭 추천수 48 · 댓글 22</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       <!-- 3-PILLAR TRUST STRIP -->
       <div class="am-online-guarantee-deck wow fadeInUp" data-wow-duration="0.8s">
         <div class="aog-card">

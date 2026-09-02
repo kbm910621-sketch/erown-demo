@@ -456,6 +456,85 @@ $(function() {
     }
   });
 
+  
+  /* 08. LIVE NAVER SEARCH SIMULATOR (OPTION B) */
+  var searchDataMap = {
+    skin: {
+      keyword: '상무지구 피부과',
+      placeName: '가온메디컬의원 상무본점',
+      reviews: '방문자 리뷰 1,420 · 블로그 리뷰 860',
+      desc: '상무역 4번 출구 앞 도보 1분 · 피부과 전문의 1:1 맞춤 진료 · 야간진료',
+      blogTitle: '상무지구 피부과 전문의가 직접 알려주는 색소 치료 전 필수 체크 3가지',
+      blogSnippet: '로컬 1위 SEO 알고리즘 적용 및 의료법 제56조 100% 사전 법무 검수 완료 칼럼. 스마트블록 및 뷰탭 최상단 3개 영역 동시 점유 실사...',
+      blogAuthor: '가온메디컬 공식블로그',
+      buzzTag: '광주 맘스홀릭 실사용자 추천',
+      buzzText: '"상무지구 피부과 여러 군데 다녀봤는데 여기가 제일 친절하고 꼼꼼하게 봐주시네요! 원장님 설명도 굿굿"',
+      buzzMeta: '광주맘스홀릭 추천수 48 · 댓글 22'
+    },
+    math: {
+      keyword: '봉선동 수학학원',
+      placeName: '가온에듀 봉선 프리미엄관',
+      reviews: '방문자 리뷰 980 · 학부모 평가 4.98',
+      desc: '봉선동 삼익사거리 학원가 · 광주 과고/의대 입시 전문반 · 주말 클리닉 운영',
+      blogTitle: '봉선동 수학학원 원장이 공개하는 고등 내신 1등급 심화 문제 접근법',
+      blogSnippet: '봉선동 학부모 타깃 C-Rank 파워블로그 전문 칼럼. 네이버 스마트블록 1위 등재로 월 문의 전화 180건 돌파...',
+      blogAuthor: '가온에듀 입시연구소',
+      buzzTag: '광주 학부모 맘카페 추천',
+      buzzText: '"봉선동에서 수학학원 고민이시면 여기 상담받아보세요. 원장님 피드백도 빠르고 성적 바로 올랐어요!"',
+      buzzMeta: '봉선맘카페 추천수 64 · 댓글 35'
+    },
+    food: {
+      keyword: '수완지구 맛집',
+      placeName: '가온다이닝 수완본점',
+      reviews: '방문자 리뷰 3,240 · 블로그 리뷰 1,890',
+      desc: '수완호수공원 앞 · 3050 주부모임 & 가족 외식 룸 완비 · 주차 100대 가능',
+      blogTitle: '수완지구 맛집 셰프가 직접 엄선한 제철 한우 코스 & 룸 예약 꿀팁',
+      blogSnippet: '수완지구 로컬 핫플레이스 스마트플레이스 1위 세팅 + 9:16 인스타그램 릴스 25만뷰 바이럴로 주말 예약 풀마감...',
+      blogAuthor: '가온다이닝 공식 인스타',
+      buzzTag: '인스타그램 릴스 & 맘스홀릭 핫이슈',
+      buzzText: '"수완지구 주말 모임 장소로 강력 추천! 분위기 좋고 플레이팅 예술이라 사진도 잘 나와요~"',
+      buzzMeta: '인스타 릴스 250,000회 재생 · 저장 4,200회'
+    },
+    busad: {
+      keyword: '광주 시내버스 광고',
+      placeName: '주식회사 가온엔 (본사)',
+      reviews: '광주 104개 노선 공식 원청 · 광고주 만족도 99.2%',
+      desc: '광주광역시 전역 시내버스 104개 노선 직영 시공 · 4면 실사 보고서 제공',
+      blogTitle: '광주 시내버스 광고 단가표 및 104개 노선별 황금 배차 믹스 전략',
+      blogSnippet: 'LG 하우시스 정품 솔벤 시트 본사 직영 출력 및 부착. 상무/수완/첨단 핵심 간선 축 광고 집행 가이드...',
+      blogAuthor: '가온엔 공식 미디어센터',
+      buzzTag: '광주 기업/병원 마케팅 담당자 후기',
+      buzzText: '"가온엔 통해서 버스 광고 집행하고 병원 인지도와 내방 환자 수가 확 늘었습니다. 번호판 실사 보고서도 꼼꼼해요!"',
+      buzzMeta: '광주 500+ 기업·병원 누적 집행 완료'
+    }
+  };
+
+  $(document).on('click', '.akt-tab', function() {
+    var key = $(this).data('key');
+    var d = searchDataMap[key];
+    if (!d) return;
+
+    $('.akt-tab').removeClass('on');
+    $(this).addClass('on');
+
+    $('#simSearchInput').text(d.keyword);
+
+    $('#simResultsContainer').css('opacity', '0.4');
+    setTimeout(function() {
+      $('#simPlaceName').text(d.placeName);
+      $('#simPlaceReview').text(d.reviews);
+      $('#simPlaceDesc').text(d.desc);
+      $('#simBlogTitle').text(d.blogTitle);
+      $('#simBlogSnippet').text(d.blogSnippet);
+      $('#simBlogAuthor').text(d.blogAuthor);
+      $('#simBuzzTag').text(d.buzzTag);
+      $('#simBuzzText').text(d.buzzText);
+      $('#simBuzzMeta').text(d.buzzMeta);
+      $('#simResultsContainer').css('opacity', '1');
+    }, 150);
+  });
+
+
   $(document).on('click', '.lmt-tab', function(e) {
     e.preventDefault();
     var target = $(this).data('target');
