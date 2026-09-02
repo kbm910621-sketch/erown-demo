@@ -1776,3 +1776,239 @@ body.modal-lock { overflow:hidden !important; }
   50% { transform: translateY(-17px); }
   100% { transform: translateY(-28px); }
 }
+
+
+/* ==========================================================================
+   SEALNPACK-STYLE DUAL VERTICAL STREAM ONLINE SECTION
+========================================================================== */
+.som-layout-stage {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 80px;
+  align-items: center;
+  padding: 40px 0;
+}
+
+/* LEFT EDITORIAL CONTENT */
+.som-left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.som-dot-title-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.som-accent-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #dc2626; /* SEALNPACK SIGNATURE RED ACCENT DOT */
+  display: inline-block;
+  margin-bottom: 4px;
+  box-shadow: 0 0 12px rgba(220, 38, 38, 0.4);
+}
+
+.som-main-title {
+  font-size: 52px;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin: 0;
+  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
+}
+
+.som-en-sub {
+  font-size: 32px;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: -0.5px;
+  font-family: "Poppins", "Pretendard", sans-serif;
+}
+
+.som-desc {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0;
+  font-weight: 500;
+  word-break: keep-all;
+}
+
+/* SEALNPACK STYLE VIEW MORE CAPSULE + ARROW BUTTON */
+.som-guide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  margin-top: 10px;
+  width: max-content;
+}
+
+.sgb-txt {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 28px;
+  border-radius: 100px;
+  border: 1.5px solid #0f172a;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 800;
+  transition: all 0.25s ease;
+}
+
+.sgb-arrow {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid #0f172a;
+  background: #ffffff;
+  color: #0f172a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.som-guide-btn:hover .sgb-txt {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.som-guide-btn:hover .sgb-arrow {
+  background: #1855b7;
+  border-color: #1855b7;
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+/* RIGHT DUAL VERTICAL STREAM (시간차 독립 유영) */
+.som-right-stream-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  height: 620px;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.som-stream-col {
+  overflow: hidden;
+  position: relative;
+}
+
+.som-stream-track {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.track-1 {
+  animation: somStreamFlow1 22s linear infinite;
+}
+
+.track-2 {
+  animation: somStreamFlow2 28s linear infinite;
+  animation-delay: -7s; /* STAGGERED TIME DELAY OFFSET */
+}
+
+.som-right-stream-wrap:hover .som-stream-track {
+  animation-play-state: paused;
+}
+
+.som-stream-card {
+  position: relative;
+  width: 100%;
+  height: 270px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #0f172a;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.som-stream-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 45px rgba(24, 85, 183, 0.2);
+}
+
+.som-stream-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.som-stream-card:hover img {
+  transform: scale(1.08);
+}
+
+.som-card-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.2) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.som-card-txt {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  right: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 2;
+}
+
+.sct-kicker {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #38bdf8;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sct-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: -0.3px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* KEYFRAMES FOR CONTINUOUS VERTICAL STREAM */
+@keyframes somStreamFlow1 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(calc(-50% - 12px)); }
+}
+
+@keyframes somStreamFlow2 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(calc(-50% - 12px)); }
+}
+
+@media(max-width:1200px) {
+  .som-layout-stage { grid-template-columns: 1fr; gap: 40px; }
+  .som-right-stream-wrap { height: 480px; }
+}
+@media(max-width:640px) {
+  .som-main-title { font-size: 36px; }
+  .som-en-sub { font-size: 22px; }
+  .som-right-stream-wrap { grid-template-columns: 1fr; height: 400px; }
+  .som-col-2 { display: none; }
+}
