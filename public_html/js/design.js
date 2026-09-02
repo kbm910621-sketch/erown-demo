@@ -438,19 +438,19 @@ $(function() {
     e.preventDefault();
     var guideTarget = $(this).data('guide') || 'guideBusOut';
     $('#busGuideOverlay').fadeIn(200).css('display', 'block');
-    $('html, body').addClass('modal-lock');
+    $('body').addClass('modal-lock');
     $('.lmt-tab[data-target="' + guideTarget + '"]').trigger('click');
   });
 
   $(document).on('click', '#btnCloseBusGuide', function() {
     $('#busGuideOverlay').fadeOut(200);
-    $('html, body').removeClass('modal-lock');
+    $('body').removeClass('modal-lock');
   });
 
   $(document).on('click', '#busGuideOverlay', function(e) {
     if (e.target === this) {
       $('#busGuideOverlay').fadeOut(200);
-      $('html, body').removeClass('modal-lock');
+      $('body').removeClass('modal-lock');
     }
   });
 
@@ -464,16 +464,3 @@ $(function() {
   });
 
 });
-
-
-  /* 07. PROPOSAL CENTER MODAL */
-  $(document).on('click', '#btnOpenProposalCenter, .btn-open-proposal-center', function(e) {
-    e.preventDefault();
-    $('#modalProposalCenter').fadeIn(200);
-    $('body').css('overflow', 'hidden');
-  });
-
-  $(document).on('click', '#btnCloseProposalModal', function() {
-    $('#modalProposalCenter').fadeOut(200);
-    $('body').css('overflow', '');
-  });

@@ -1055,51 +1055,62 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   </div>
 
 
-  <!-- ============================================
-       11 HIGH-END 3-COLUMN MASTER SPECIFICATION MODAL
+    <!-- ============================================
+       11 HIGH-END 6-CATEGORY MASTER SPECIFICATION & PROPOSAL MODAL
   ============================================ -->
   <div class="bus-guide-overlay" id="busGuideOverlay">
     <div class="lux-modal-panel">
       
       <div class="lux-modal-head">
         <div>
-          <span class="lmh-label">GAON-N OFFICIAL SPECIFICATION MASTER DECK</span>
-          <h3 class="lmh-title">가온엔 통합 미디어 공식 규격 &amp; 마케팅 가이드</h3>
-          <p class="lmh-desc">광주 104개 시내버스 7대 규격부터 온라인 6대 채널, 4K 영상 프로덕션, 특화 옥외매체 공식 실측표입니다.</p>
+          <span class="lmh-label">가온엔 공식 매체 규격 &amp; 제안서 다운로드</span>
+          <h3 class="lmh-title">가온엔 통합 매체 공식 규격 및 제안서</h3>
+          <p class="lmh-desc">광주 104개 시내버스 외부·내부 규격부터 온라인 5대 채널, 4K 영상, 인쇄물 규격과 공식 PDF 제안서입니다.</p>
         </div>
         <button type="button" class="lux-modal-close" id="btnCloseBusGuide">✕</button>
       </div>
 
-            <div class="lux-modal-tabs">
-        <button type="button" class="lmt-tab on" data-target="guideBus">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/><path d="M7 3v7"/><path d="M17 3v7"/></svg>
-          <span>시내버스 광고</span>
+      <div class="lux-modal-tabs">
+        <button type="button" class="lmt-tab on" data-target="guideBusOut">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/></svg>
+          <span>버스 외부광고</span>
+        </button>
+        <button type="button" class="lmt-tab" data-target="guideBusIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          <span>버스 내부·음성</span>
+        </button>
+        <button type="button" class="lmt-tab" data-target="guideTaxiSpec">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+          <span>택시·특화매체</span>
         </button>
         <button type="button" class="lmt-tab" data-target="guideOnline">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2.5"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2.5"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
           <span>온라인 마케팅</span>
         </button>
         <button type="button" class="lmt-tab" data-target="guideVideo">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2"/></svg>
           <span>4K 영상제작</span>
         </button>
-        <button type="button" class="lmt-tab" data-target="guideTaxiDelivery">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
-          <span>택시 · 택배차량</span>
-        </button>
-        <button type="button" class="lmt-tab" data-target="guideMartDid">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="15" x="2" y="3" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
-          <span>대형마트 · DID</span>
+        <button type="button" class="lmt-tab" data-target="guidePrint">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>인쇄물·현수막</span>
         </button>
       </div>
 
       <div class="lux-modal-body">
         
-        <!-- 01 BUS GUIDE -->
-        <div class="bus-guide-page on" id="guideBus">
-          <div class="lmg-page-header">
-            <h4 class="lmg-sec-title">시내버스 외부 광고 4대 부착면 및 내부 매체 공식 실측 규격</h4>
-            <span class="lmg-sec-sub">LG 하우시스 정품 솔벤 시트 100% 본사 직영 시공 (차량 번호판 포함 4면 실사 즉시 보고)</span>
+        <!-- 01 BUS OUTSIDE GUIDE -->
+        <div class="bus-guide-page on" id="guideBusOut">
+          <div class="lmg-download-banner">
+            <div class="ldb-info">
+              <span class="ldb-badge">OFFICIAL PDF</span>
+              <strong class="ldb-title">광주 시내버스 외부광고 공식 제안서</strong>
+              <span class="ldb-meta">차도면·인도면·후면 실측 도면 및 104개 노선 단가표 수록 (PDF)</span>
+            </div>
+            <a href="/pdf/gaon_bus_outside.pdf" download="가온엔_시내버스_외부광고_공식제안서.pdf" class="ldb-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>외부광고 제안서 다운로드</span>
+            </a>
           </div>
 
           <div class="lmg-high-contrast-grid">
@@ -1110,11 +1121,11 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 <span class="lhc-aspect">DRIVER SIDE WIDE</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">차도면 대형 래핑 광고</h5>
+                <h5 class="lhc-title">차도면 대형 래핑 광고 (좌측면)</h5>
                 <p class="lhc-desc">왕복 6~8차선 반대편 차량 운전자와 인도 보행자의 시야 정면에 노출되는 가장 거대한 랜드마크 규격입니다.</p>
                 <div class="lhc-spec-list">
-                  <div class="lsl-item"><span class="lsl-k">핵심 타깃</span><strong class="lsl-v">도심 간선도로 운전자 &amp; 반대편 보행자</strong></div>
-                  <div class="lsl-item"><span class="lsl-k">원단 소재</span><strong class="lsl-v">LG 하우시스 최고급 내후성 정품 솔벤 시트</strong></div>
+                  <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">도심 간선도로 운전자 &amp; 보행자</strong></div>
+                  <div class="lsl-item"><span class="lsl-k">원단 소재 :</span><strong class="lsl-v">LG 하우시스 최고급 정품 솔벤 시트</strong></div>
                 </div>
               </div>
             </div>
@@ -1126,11 +1137,11 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 <span class="lhc-aspect">CURB SIDE STANDARD</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">인도면 표준 래핑 광고</h5>
-                <p class="lhc-desc">버스 정류장 대기 승객 및 인도 보행자의 눈높이와 1:1로 밀착되어 상세 진료 과목과 전화번호 전달에 최적입니다.</p>
+                <h5 class="lhc-title">인도면 표준 래핑 광고 (우측면)</h5>
+                <p class="lhc-desc">버스 정류장 대기 승객 및 인도 보행자의 눈높이와 1:1로 밀착되어 상세 진료 과목, 상호, 전화번호 전달에 최적입니다.</p>
                 <div class="lhc-spec-list">
-                  <div class="lsl-item"><span class="lsl-k">핵심 타깃</span><strong class="lsl-v">정류소 탑승 대기 승객 &amp; 인도 보행자</strong></div>
-                  <div class="lsl-item"><span class="lsl-k">원단 소재</span><strong class="lsl-v">LG 하우시스 최고급 내후성 정품 솔벤 시트</strong></div>
+                  <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">정류소 탑승 대기 승객 &amp; 인도 보행자</strong></div>
+                  <div class="lsl-item"><span class="lsl-k">원단 소재 :</span><strong class="lsl-v">LG 하우시스 최고급 내후성 솔벤 시트</strong></div>
                 </div>
               </div>
             </div>
@@ -1145,37 +1156,177 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 <h5 class="lhc-title">후면 번호판 상단 래핑 광고</h5>
                 <p class="lhc-desc">교차로 신호 대기 및 출퇴근 도로 정체 시 후방 차량 운전자에게 3분 이상 강제 주시되는 필수 패키지 면입니다.</p>
                 <div class="lhc-spec-list">
-                  <div class="lsl-item"><span class="lsl-k">핵심 타깃</span><strong class="lsl-v">신호 대기 후방 정체 차량 운전자 전원</strong></div>
-                  <div class="lsl-item"><span class="lsl-k">원단 소재</span><strong class="lsl-v">LG 하우시스 정품 솔벤 반사 시트 지원</strong></div>
+                  <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">신호 대기 후방 정체 차량 운전자 전원</strong></div>
+                  <div class="lsl-item"><span class="lsl-k">원단 소재 :</span><strong class="lsl-v">LG 하우시스 정품 솔벤 반사 시트 지원</strong></div>
                 </div>
               </div>
             </div>
 
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge blue">사랑면</span>
-                <strong class="lhc-size">1,000 × 500 mm</strong>
-                <span class="lhc-aspect">DOOR SIDE IMPACT</span>
+                <span class="lhc-badge purple">나주 광역</span>
+                <strong class="lhc-size">2,000 × 400 mm</strong>
+                <span class="lhc-aspect">NAJU INTERCITY REAR</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">사랑면 승하차문 보조 광고</h5>
-                <p class="lhc-desc">승객이 승하차할 때 100% 마주치는 하차문 측면에 위치하여 접근하는 보행자에게 즉각적인 시선을 유도합니다.</p>
+                <h5 class="lhc-title">나주 시내버스 후면 와이드 래핑</h5>
+                <p class="lhc-desc">광주-나주 혁신도시를 왕복 운행하는 광역 간선버스 후면에 단독 부착되어 혁신도시 공공기관 임직원 타깃에 특화됩니다.</p>
                 <div class="lhc-spec-list">
-                  <div class="lsl-item"><span class="lsl-k">핵심 타깃</span><strong class="lsl-v">승하차 승객 및 버스 접근 보행자</strong></div>
-                  <div class="lsl-item"><span class="lsl-k">원단 소재</span><strong class="lsl-v">고접착 실사 솔벤 시트 (방수/내후성)</strong></div>
+                  <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">나주 혁신도시 공공기관 임직원 &amp; 출퇴근 차량</strong></div>
+                  <div class="lsl-item"><span class="lsl-k">원단 소재 :</span><strong class="lsl-v">고접착 실사 솔벤 시트</strong></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 02 ONLINE GUIDE -->
-        <div class="bus-guide-page" id="guideOnline">
-          <div class="lmg-page-header">
-            <h4 class="lmg-sec-title">가온엔 통합 온라인 마케팅 6대 채널 세부 실행 가이드</h4>
-            <span class="lmg-sec-sub">의료법 100% 사전 법무 검수 통과 + 주간 순위 리포트 투명 제공</span>
+        <!-- 02 BUS INSIDE & VOICE GUIDE -->
+        <div class="bus-guide-page" id="guideBusIn">
+          <div class="lmg-download-banner">
+            <div class="ldb-info">
+              <span class="ldb-badge">OFFICIAL PDF</span>
+              <strong class="ldb-title">광주 시내버스 내부광고 &amp; 음성안내 제안서</strong>
+              <span class="ldb-meta">중앙창문, 하차문 사랑면, 시트커버 및 7초 성우 음성안내 단가표 (PDF)</span>
+            </div>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <a href="/pdf/gaon_bus_inside.pdf" download="가온엔_시내버스_내부광고_공식제안서.pdf" class="ldb-btn">
+                <span>내부광고 제안서 📥</span>
+              </a>
+              <a href="/pdf/gaon_bus_voice.pdf" download="가온엔_시내버스_음성광고_공식제안서.pdf" class="ldb-btn" style="background:#0f274e;">
+                <span>음성광고 제안서 📥</span>
+              </a>
+            </div>
           </div>
 
+          <div class="lmg-high-contrast-grid">
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge blue">중앙창문</span>
+                <strong class="lhc-size">1,100 × 500 mm</strong>
+                <span class="lhc-aspect">CENTER WINDOW (2매/대)</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">중앙창문 대형 포스터 광고</h5>
+                <p class="lhc-desc">차량 내부 좌석 및 입석 승객의 눈높이 정면에 위치하며, 차량 1대당 2매가 부착되어 높은 가독성을 제공합니다.</p>
+              </div>
+            </div>
+
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge blue">사랑면(하차문)</span>
+                <strong class="lhc-size">1,000 × 500 mm</strong>
+                <span class="lhc-aspect">EXIT DOOR SIDE</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">하차문 측면 사랑면 광고</h5>
+                <p class="lhc-desc">승객이 하차하기 위해 대기하는 동안 100% 시선이 머무는 하차문 옆 핵심 골든존 위치입니다.</p>
+              </div>
+            </div>
+
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge blue">하차문 유리</span>
+                <strong class="lhc-size">700 × 400 mm</strong>
+                <span class="lhc-aspect">DOOR GLASS POSTER</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">하차문 유리창 포스터 광고</h5>
+                <p class="lhc-desc">하차문 투명 유리면에 직접 부착되어 문이 열리고 닫힐 때마다 승객 시야에 자연스럽게 노출됩니다.</p>
+              </div>
+            </div>
+
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge blue">시트커버</span>
+                <strong class="lhc-size">240 × 120 mm</strong>
+                <span class="lhc-aspect">SEAT COVER (20매/대)</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">좌석 등받이 시트커버 광고</h5>
+                <p class="lhc-desc">차량 1대당 18~22개 좌석 등받이에 부착되어 착석 승객이 이동 내내 1:1로 밀착 주시합니다.</p>
+              </div>
+            </div>
+
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge gold">음성안내</span>
+                <strong class="lhc-size">7초 이내 (56자)</strong>
+                <span class="lhc-aspect">VOICE BROADCASTING</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">시내버스 정류소 음성안내 방송 광고</h5>
+                <p class="lhc-desc">정류소 도착 전 전문 성우 음성으로 브랜드 및 위치가 7초간 자동 송출되어 청각을 완벽 장악합니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 TAXI & SPECIALIZED OOH GUIDE -->
+        <div class="bus-guide-page" id="guideTaxiSpec">
+          <div class="lmg-download-banner">
+            <div class="ldb-info">
+              <span class="ldb-badge">OFFICIAL PDF</span>
+              <strong class="ldb-title">광주 택시 래핑 광고 공식 제안서</strong>
+              <span class="ldb-meta">법인·개인택시 200대 양측면 래핑 규격 및 운영 가이드 (PDF)</span>
+            </div>
+            <a href="/pdf/gaon_taxi_ad.pdf" download="가온엔_택시광고_공식제안서.pdf" class="ldb-btn">
+              <span>택시광고 제안서 다운로드 📥</span>
+            </a>
+          </div>
+
+          <div class="lmg-high-contrast-grid">
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge blue">택시 래핑</span>
+                <strong class="lhc-size">2,000 × 370 mm</strong>
+                <span class="lhc-aspect">TAXI 2-SIDE WRAP</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">법인 · 개인택시 양측면 래핑 광고</h5>
+                <p class="lhc-desc">광주 전역 200여 대 차량이 1일 24시간, 일 평균 400km를 주행하며 유흥가, 상업지구, 주택가 구석구석을 누빕니다.</p>
+              </div>
+            </div>
+
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge blue">택배 탑차</span>
+                <strong class="lhc-size">3,000 × 1,500 mm</strong>
+                <span class="lhc-aspect">3-SIDE TRUCK BILLBOARD</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">택배 탑차 3면 와이드 래핑 광고</h5>
+                <p class="lhc-desc">광주 5개 구 아파트 단지와 빌라촌 골목길에 매일 10시간 이상 머무르며 거주민 눈높이에서 3면으로 노출됩니다.</p>
+              </div>
+            </div>
+
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge gold">쇼핑카트</span>
+                <strong class="lhc-size">280 × 160 mm</strong>
+                <span class="lhc-aspect">MART CART PLATE</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">이마트 · 롯데마트 쇼핑카트 양면 광고</h5>
+                <p class="lhc-desc">1,000여 대 쇼핑카트 손잡이 정면에 위치하여 실질적 구매력을 갖춘 3050 주부 고객과 60분간 동행합니다.</p>
+              </div>
+            </div>
+
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge purple">DID 전광판</span>
+                <strong class="lhc-size">55 ~ 85" UHD</strong>
+                <span class="lhc-aspect">100+ DAILY PLAYS</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">유스퀘어 터미널 &amp; 지하철 환승역 DID 전광판</h5>
+                <p class="lhc-desc">고휘도 UHD 스크린으로 15초 영상이 하루 100회 이상 연속 송출되어 유동 인구의 시선을 압도합니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 ONLINE MARKETING GUIDE -->
+        <div class="bus-guide-page" id="guideOnline">
           <div class="lmg-high-contrast-grid">
             <div class="lhc-card">
               <div class="lhc-side">
@@ -1184,7 +1335,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 <span class="lhc-aspect">LOCAL SEARCH SEO</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">네이버 스마트플레이스 1위 세팅 &amp; SEO</h5>
+                <h5 class="lhc-title">네이버 스마트플레이스 1위 세팅 &amp; 관리</h5>
                 <p class="lhc-desc">로컬 1위 SEO 알고리즘 8대 평가 요소 세팅, 영수증 리뷰 빌드업, 24시간 네이버 예약/톡톡 연동으로 유입 콜 수를 극대화합니다.</p>
               </div>
             </div>
@@ -1196,7 +1347,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 <span class="lhc-aspect">MEDICAL LAW PASS</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">C-Rank 브랜드 블로그 파워콘텐츠</h5>
+                <h5 class="lhc-title">C-Rank 브랜드 블로그 전문 칼럼 발행</h5>
                 <p class="lhc-desc">의료법 제56조 100% 사전 법무 검수로 행정처분 위험 0%. 원장님 진료 철학 기반 월 8~12편 전문 칼럼으로 스마트블록과 뷰탭을 점유합니다.</p>
               </div>
             </div>
@@ -1239,13 +1390,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
         </div>
 
-        <!-- 03 VIDEO GUIDE -->
+        <!-- 05 VIDEO PRODUCTION GUIDE -->
         <div class="bus-guide-page" id="guideVideo">
-          <div class="lmg-page-header">
-            <h4 class="lmg-sec-title">4K 시네마틱 영상제작 &amp; SNS 숏폼 제작 가이드</h4>
-            <span class="lmg-sec-sub">Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 녹음</span>
-          </div>
-
           <div class="lmg-high-contrast-grid">
             <div class="lhc-card">
               <div class="lhc-side">
@@ -1258,6 +1404,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 <p class="lhc-desc">Sony FX 풀프레임 카메라와 국토부 승인 4K 항공 드론으로 완성하는 최고급 영화급 홍보영상으로 홈페이지 메인 및 TV CF에 최적화됩니다.</p>
               </div>
             </div>
+
             <div class="lhc-card">
               <div class="lhc-side">
                 <span class="lhc-badge gold">모바일 숏폼</span>
@@ -1272,67 +1419,42 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
         </div>
 
-        <!-- 04 TAXI & DELIVERY GUIDE -->
-        <div class="bus-guide-page" id="guideTaxiDelivery">
-          <div class="lmg-page-header">
-            <h4 class="lmg-sec-title">택시 &amp; 택배차량 래핑 공식 실측 가이드</h4>
-            <span class="lmg-sec-sub">광주 전역 200대 택시 24시간 운행 &amp; 택배 탑차 3면 와이드 빌보드</span>
-          </div>
-
+        <!-- 06 PRINT & BANNER GUIDE -->
+        <div class="bus-guide-page" id="guidePrint">
           <div class="lmg-high-contrast-grid">
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge blue">택시 래핑</span>
-                <strong class="lhc-size">2,100 × 320 mm</strong>
-                <span class="lhc-aspect">24H URBAN RUN</span>
+                <span class="lhc-badge blue">차량 래핑 시트</span>
+                <strong class="lhc-size">LG 하우시스 정품</strong>
+                <span class="lhc-aspect">SOLVENT WRAP FILM</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">법인 · 개인택시 양측면 래핑 광고</h5>
-                <p class="lhc-desc">광주 전역 200여 대 차량이 주요 번화가와 골목길까지 24시간 365일 연속 운행하며 보행자 눈높이에서 밀착 노출됩니다.</p>
+                <h5 class="lhc-title">차량 전용 최고급 내후성 솔벤 점착 시트</h5>
+                <p class="lhc-desc">비바람과 자외선에 1년 이상 색 바램이 없는 내후성 UV 코팅 처리와 제거 시 차량 도장 손상이 없는 그레이 점착제를 사용합니다.</p>
               </div>
             </div>
-            <div class="lhc-card">
-              <div class="lhc-side">
-                <span class="lhc-badge blue">택배 탑차</span>
-                <strong class="lhc-size">3,000 × 1,500 mm</strong>
-                <span class="lhc-aspect">3-SIDE BILLBOARD</span>
-              </div>
-              <div class="lhc-main">
-                <h5 class="lhc-title">택배 탑차 3면 와이드 래핑 광고</h5>
-                <p class="lhc-desc">광주 5개 구 아파트 단지와 주택가 골목길에 매일 10시간 이상 머무는 움직이는 초대형 랜드마크 빌보드입니다.</p>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- 05 MART & DID GUIDE -->
-        <div class="bus-guide-page" id="guideMartDid">
-          <div class="lmg-page-header">
-            <h4 class="lmg-sec-title">대형마트 쇼핑카트 &amp; DID 디지털 전광판 규격</h4>
-            <span class="lmg-sec-sub">이마트/롯데마트 1,000대 카트 &amp; 유스퀘어 터미널 고휘도 LED</span>
-          </div>
-
-          <div class="lmg-high-contrast-grid">
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge gold">쇼핑카트</span>
-                <strong class="lhc-size">280 × 160 mm</strong>
-                <span class="lhc-aspect">60 MIN ACCOMPANY</span>
+                <span class="lhc-badge blue">대형 현수막</span>
+                <strong class="lhc-size">지정게시대 / 게릴라</strong>
+                <span class="lhc-aspect">OUTDOOR BANNER</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">대형마트 쇼핑카트 양면 플레이트 광고</h5>
-                <p class="lhc-desc">이마트, 롯데마트 1,000여 대 카트 손잡이 정면에 장착되어 60분 쇼핑 내내 3050 주부 및 가족 고객과 1:1로 동행합니다.</p>
+                <h5 class="lhc-title">구청 지정게시대 &amp; 대형 건물 분양 현수막</h5>
+                <p class="lhc-desc">광주 5개 구청 지정게시대 추첨 대행부터 텐트천 대형 현수막, 게릴라 현수막 제작·시공을 신속하게 집행합니다.</p>
               </div>
             </div>
+
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge gold">DID 전광판</span>
-                <strong class="lhc-size">55 ~ 85" UHD</strong>
-                <span class="lhc-aspect">100+ DAILY PLAYS</span>
+                <span class="lhc-badge purple">리플렛/브로슈어</span>
+                <strong class="lhc-size">A4 3단 접지 / 카탈로그</strong>
+                <span class="lhc-aspect">PREMIUM PRINT</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">DID 전자현수막 &amp; 도심 전광판</h5>
-                <p class="lhc-desc">유스퀘어 터미널, 지하철 환승역, 관공서 로비에 고휘도 LED로 15~20초 영상이 일 100회 이상 연속 송출됩니다.</p>
+                <h5 class="lhc-title">병원 안내 리플렛 · 기업 브로슈어 인쇄</h5>
+                <p class="lhc-desc">랑데뷰, 스노우 200g 고급 용지 사용 및 부분 에폭시, 금박/은박 후가공으로 최고급 홍보물을 제작 납품합니다.</p>
               </div>
             </div>
           </div>
@@ -1340,17 +1462,15 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <div class="lux-modal-foot">
-        <a href="/board/estmate/write.php" class="lmf-btn" onclick="closeGuideModal();">원하는 매체 &amp; 마케팅 맞춤 견적 문의하기 →</a>
+      <div class="lux-modal-foot" style="display:flex; justify-content:space-between; align-items:center;">
+        <span style="font-size:13.5px; color:#64748b; font-weight:700;">상세 단가표 및 맞춤 노선 믹스는 1:1 온라인 견적 상담을 통해 즉시 제공됩니다.</span>
+        <a href="/board/estmate/write.php" class="am-more-btn" style="padding:11px 22px; font-size:13.5px;">
+          <span>1:1 맞춤 견적 신청하기 ↗</span>
+        </a>
       </div>
-
     </div>
   </div>
 
-
-  <!-- ============================================
-       12 PORTFOLIO CINEMATIC LIGHTBOX MODAL
-  ============================================ -->
   <div class="portfolio-modal-backdrop" id="modalBackdrop">
     <div class="portfolio-modal-box">
       <button type="button" class="portfolio-modal-close" id="modalClose">✕</button>
