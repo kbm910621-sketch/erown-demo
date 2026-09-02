@@ -29,6 +29,19 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 $total = count($list);
 
+// Category-Specific Filtered Arrays
+$portBus = array();
+$portOnline = array();
+$portVideo = array();
+$portOther = array();
+
+foreach ($list as $item) {
+  if ($item['category'] == 'bus') $portBus[] = $item;
+  if ($item['category'] == 'online' || $item['category'] == 'web') $portOnline[] = $item;
+  if ($item['category'] == 'video') $portVideo[] = $item;
+  if (in_array($item['category'], array('taxi','mart','did','print'))) $portOther[] = $item;
+}
+
 if($totals>0){
 	$sql = "SELECT * FROM popup WHERE pop_status='1' ORDER BY pop_order ASC";
 	$result = mysqli_query($conn, $sql);
@@ -188,7 +201,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       02 SECTION 01 : 시내버스 광고 (PICTOGRAM PROMO CARDS)
+       02 SECTION 01 : 시내버스 광고 + [하단 시내버스 포트폴리오 쇼케이스]
   ============================================ -->
   <section class="am-section am-bg-slate" id="bus">
     <div class="am-container">
@@ -293,21 +306,18 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             </div>
 
             <div class="abp-action">
-              <a href="/board/estmate/write.php" class="abp-btn">이 규격으로 맞춤 견적 신청 →</a>
+              <a href="#consultation" class="abp-btn">이 규격으로 맞춤 견적 신청 →</a>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- BUS PROMOTIONAL 3-PILLAR ADVANTAGES (WITH PURE VECTOR PICTOGRAMS) -->
+      <!-- BUS PROMOTIONAL 3-PILLAR ADVANTAGES -->
       <div class="am-bus-promo-grid wow fadeInUp" data-wow-duration="0.8s">
-        
         <div class="abp-promo-card">
           <div class="apc-top-row">
-            <div class="apc-picto-circle">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/><path d="M7 3v7"/><path d="M17 3v7"/></svg>
-            </div>
+            <div class="apc-picto-circle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/><path d="M7 3v7"/><path d="M17 3v7"/></svg></div>
             <span class="apc-num">01</span>
           </div>
           <h3>광주 104개 전 노선 단독 직영 배차</h3>
@@ -317,9 +327,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         <div class="abp-promo-card">
           <div class="apc-top-row">
-            <div class="apc-picto-circle">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><path d="M22 12A10 10 0 0 0 12 2"/></svg>
-            </div>
+            <div class="apc-picto-circle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><path d="M22 12A10 10 0 0 0 12 2"/></svg></div>
             <span class="apc-num">02</span>
           </div>
           <h3>1일 18시간 · 일 150만 시민 눈높이 노출</h3>
@@ -329,16 +337,42 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         <div class="abp-promo-card">
           <div class="apc-top-row">
-            <div class="apc-picto-circle">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-            </div>
+            <div class="apc-picto-circle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
             <span class="apc-num">03</span>
           </div>
           <h3>LG 하우시스 정품 솔벤 시트 &amp; 100% 직영 시공</h3>
           <p>외주 하청 없는 10년 경력의 본사 전문 시공팀이 내후성 정품 솔벤 시트로 직접 출력 및 부착하며, 시공 직후 번호판 포함 4면 증빙 사진을 실시간 보고합니다.</p>
           <div class="apc-stat">시공 직후 차량 4면 번호판 실사 즉시 전송</div>
         </div>
+      </div>
 
+      <!-- [NEW] SECTION 01 : RECENT BUS PORTFOLIO SHOWCASE STRIP -->
+      <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s">
+        <div class="asps-head">
+          <div class="asps-title-wrap">
+            <span class="asps-kicker">BUS PORTFOLIO</span>
+            <h4 class="asps-title">최근 시내버스 광고 집행 실사 포트폴리오</h4>
+          </div>
+          <a href="/portfolio.php" class="asps-more-link">버스 광고 실사 전체보기 ↗</a>
+        </div>
+        <div class="asps-grid">
+          <?php 
+          $busItems = !empty($portBus) ? array_slice($portBus, 0, 4) : array_slice($list, 0, 4);
+          foreach ($busItems as $bItem): 
+          ?>
+          <div class="asps-card main-port-card" data-cat="<?php echo htmlspecialchars($bItem['category']); ?>" data-id="<?php echo (int)$bItem['id']; ?>" data-name="<?php echo htmlspecialchars($bItem['title']); ?>">
+            <div class="asps-thumb">
+              <img src="<?php echo !empty($bItem['thumb']) ? htmlspecialchars($bItem['thumb']) : '/images/sample_bus.jpg'; ?>" alt="<?php echo htmlspecialchars($bItem['title']); ?>">
+              <span class="asps-badge">시내버스</span>
+              <div class="asps-hover-overlay">상세보기 ↗</div>
+            </div>
+            <div class="asps-info">
+              <strong class="asps-item-title"><?php echo htmlspecialchars($bItem['title']); ?></strong>
+              <span class="asps-item-loc">광주 104개 노선 단독 직영 시공</span>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
       </div>
 
     </div>
@@ -346,7 +380,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       03 SECTION 02 : 20-YEAR CREATIVE DIRECTOR BENTO ONLINE MARKETING
+       03 SECTION 02 : 온라인 마케팅 + [하단 온라인 마케팅 포트폴리오 쇼케이스]
   ============================================ -->
   <section class="am-section" id="online">
     <div class="am-container">
@@ -373,7 +407,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <img src="/images/sub_bg_a.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="네이버 1위 마케팅">
             <div class="ahc-gradient-scrim"></div>
             
-            <!-- LIVE HUD SIMULATION BADGES -->
             <div class="ahc-hud-top">
               <div class="ahc-live-pill"><span class="ahc-dot"></span> NAVER PLACE TOP 3 LOCKED</div>
               <div class="ahc-cert-pill">의료법 100% 사전 법무 검수 통과</div>
@@ -411,10 +444,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
         </div>
 
-        <!-- BENTO SIDE 3 STACK CARDS (INCL. INSTAGRAM REELS + GOOGLE/TIKTOK VIRAL) -->
+        <!-- BENTO SIDE 3 STACK CARDS -->
         <div class="abog-side-stack">
           
-          <!-- CARD 01: MOM CAFE & DAANGN VIRAL -->
           <div class="as-card">
             <div class="asc-media-box">
               <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="맘카페 및 당근 바이럴">
@@ -428,7 +460,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             </div>
           </div>
 
-          <!-- CARD 02: SNS REELS & SPONSORED -->
           <div class="as-card">
             <div class="asc-media-box">
               <img src="/images/sub_bg_e.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="SNS 릴스 스폰서드">
@@ -442,7 +473,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             </div>
           </div>
 
-          <!-- CARD 03 (NEW): GOOGLE GDN & YOUTUBE / TIKTOK RETARGETING -->
           <div class="as-card">
             <div class="asc-media-box">
               <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="구글 검색 및 유튜브 GDN">
@@ -463,9 +493,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <!-- 3-PILLAR LUXURY TRUST METRICS -->
       <div class="am-online-guarantee-deck wow fadeInUp" data-wow-duration="0.8s">
         <div class="aog-card">
-          <div class="aog-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-          </div>
+          <div class="aog-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
           <div class="aog-body">
             <strong>의료법 100% 준수 보증</strong>
             <span>과장 광고 및 불법 표현을 원천 차단하여 보건소 행정처분 리스크 0%</span>
@@ -473,9 +501,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
 
         <div class="aog-card">
-          <div class="aog-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          </div>
+          <div class="aog-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
           <div class="aog-body">
             <strong>주간 순위 투명 리포트</strong>
             <span>플레이스 노출 순위, 유입 키워드, 광고 클릭률(CTR)을 매주 투명하게 보고</span>
@@ -483,13 +509,40 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
 
         <div class="aog-card">
-          <div class="aog-icon-box">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
-          </div>
+          <div class="aog-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div>
           <div class="aog-body">
             <strong>1:1 전담 마케팅 디렉터</strong>
             <span>하청 외주 없는 본사 인하우스 전담팀이 24시간 실시간 피드백을 지원</span>
           </div>
+        </div>
+      </div>
+
+      <!-- [NEW] SECTION 02 : RECENT ONLINE MARKETING PORTFOLIO SHOWCASE STRIP -->
+      <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s">
+        <div class="asps-head">
+          <div class="asps-title-wrap">
+            <span class="asps-kicker green">DIGITAL MARKETING PORTFOLIO</span>
+            <h4 class="asps-title">온라인 마케팅 &amp; 스마트플레이스 1위 집행 실적</h4>
+          </div>
+          <a href="/portfolio.php" class="asps-more-link">온라인 사례 전체보기 ↗</a>
+        </div>
+        <div class="asps-grid">
+          <?php 
+          $onlineItems = !empty($portOnline) ? array_slice($portOnline, 0, 4) : array_slice($list, 0, 4);
+          foreach ($onlineItems as $oItem): 
+          ?>
+          <div class="asps-card main-port-card" data-cat="<?php echo htmlspecialchars($oItem['category']); ?>" data-id="<?php echo (int)$oItem['id']; ?>" data-name="<?php echo htmlspecialchars($oItem['title']); ?>">
+            <div class="asps-thumb">
+              <img src="<?php echo !empty($oItem['thumb']) ? htmlspecialchars($oItem['thumb']) : '/images/sub_bg_a.jpg'; ?>" alt="<?php echo htmlspecialchars($oItem['title']); ?>">
+              <span class="asps-badge green">온라인마케팅</span>
+              <div class="asps-hover-overlay">상세보기 ↗</div>
+            </div>
+            <div class="asps-info">
+              <strong class="asps-item-title"><?php echo htmlspecialchars($oItem['title']); ?></strong>
+              <span class="asps-item-loc">플레이스 1위 &amp; 블로그 상위 노출</span>
+            </div>
+          </div>
+          <?php endforeach; ?>
         </div>
       </div>
 
@@ -498,10 +551,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       04 SECTION 03 : 영상제작 (SOFT AMBIENT GLOW & CINEMA WATERMARK)
+       04 SECTION 03 : 영상제작 + [하단 4K 영상 포트폴리오 쇼케이스]
   ============================================ -->
   <section class="am-section am-bg-dark am-video-ambient-sec" id="video">
-    <!-- SUBTLE CINEMA WATERMARK & GLOWING LIGHTS -->
     <div class="avs-ambient-bg">
       <div class="avs-glow glow-left"></div>
       <div class="avs-glow glow-right"></div>
@@ -551,9 +603,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             </div>
           </div>
 
-          <!-- 4 DELIVERABLES (BOLD GOTHIC WATERMARK NUMBERS 01~04) -->
+          <!-- 4 DELIVERABLES -->
           <div class="avc-products-col">
-            
             <div class="avp-card on" data-target-mode="wide"
                  data-vtitle="기업 · 상급병원 4K 시네마틱 브랜드 필름"
                  data-vsub="Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 더빙">
@@ -593,18 +644,15 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 <p>유스퀘어 터미널, 지하철역, 관공서 로비 등의 고휘도 LED 전광판 환경에서 1초 만에 읽히는 고시인성 모션</p>
               </div>
             </div>
-
           </div>
 
         </div>
 
-        <!-- 14-DAY PRODUCTION WORKFLOW WITH VECTOR PICTOGRAMS -->
+        <!-- 14-DAY WORKFLOW -->
         <div class="am-video-big-workflow">
           <div class="avbw-card">
             <div class="avbw-top">
-              <div class="avbw-picto-box">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
-              </div>
+              <div class="avbw-picto-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div>
               <span class="avbw-day">D+3</span>
             </div>
             <span class="avbw-step">STEP 01</span>
@@ -614,9 +662,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
           <div class="avbw-card">
             <div class="avbw-top">
-              <div class="avbw-picto-box">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/><circle cx="8.5" cy="12" r="2.5"/></svg>
-              </div>
+              <div class="avbw-picto-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/><circle cx="8.5" cy="12" r="2.5"/></svg></div>
               <span class="avbw-day">D+7</span>
             </div>
             <span class="avbw-step">STEP 02</span>
@@ -626,9 +672,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
           <div class="avbw-card">
             <div class="avbw-top">
-              <div class="avbw-picto-box">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="13" x2="9" y2="15"/><line x1="15" y1="12" x2="15" y2="16"/></svg>
-              </div>
+              <div class="avbw-picto-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="13" x2="9" y2="15"/><line x1="15" y1="12" x2="15" y2="16"/></svg></div>
               <span class="avbw-day">D+10</span>
             </div>
             <span class="avbw-step">STEP 03</span>
@@ -638,9 +682,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
           <div class="avbw-card highlight">
             <div class="avbw-top">
-              <div class="avbw-picto-box gold">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
-              </div>
+              <div class="avbw-picto-box gold"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
               <span class="avbw-day gold">D+14</span>
             </div>
             <span class="avbw-step">STEP 04</span>
@@ -651,12 +693,41 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
+      <!-- [NEW] SECTION 03 : RECENT 4K VIDEO PORTFOLIO SHOWCASE STRIP (DARK THEME) -->
+      <div class="am-sub-port-strip dark wow fadeInUp" data-wow-duration="0.8s">
+        <div class="asps-head">
+          <div class="asps-title-wrap">
+            <span class="asps-kicker gold">CINEMA REEL PORTFOLIO</span>
+            <h4 class="asps-title white">최근 4K 브랜드 필름 &amp; 숏폼 영상 제작 실적</h4>
+          </div>
+          <a href="/portfolio.php" class="asps-more-link gold">영상 포트폴리오 전체보기 ↗</a>
+        </div>
+        <div class="asps-grid">
+          <?php 
+          $videoItems = !empty($portVideo) ? array_slice($portVideo, 0, 4) : array_slice($list, 0, 4);
+          foreach ($videoItems as $vItem): 
+          ?>
+          <div class="asps-card dark main-port-card" data-cat="<?php echo htmlspecialchars($vItem['category']); ?>" data-id="<?php echo (int)$vItem['id']; ?>" data-name="<?php echo htmlspecialchars($vItem['title']); ?>">
+            <div class="asps-thumb">
+              <img src="<?php echo !empty($vItem['thumb']) ? htmlspecialchars($vItem['thumb']) : '/images/sub_bg_d.jpg'; ?>" alt="<?php echo htmlspecialchars($vItem['title']); ?>">
+              <span class="asps-badge gold">영상제작</span>
+              <div class="asps-hover-overlay dark">영상 재생 &amp; 상세보기 ↗</div>
+            </div>
+            <div class="asps-info">
+              <strong class="asps-item-title white"><?php echo htmlspecialchars($vItem['title']); ?></strong>
+              <span class="asps-item-loc light">4K UHD 시네마틱 &amp; 숏폼 제작</span>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
     </div>
   </section>
 
 
   <!-- ============================================
-       05 SECTION 04 : 특화 옥외매체 (CLEAN ELLIPSIS OVERFLOW ... PREVENT CUTOFF)
+       05 SECTION 04 : 특화 옥외매체 + [하단 특화매체 포트폴리오 쇼케이스]
   ============================================ -->
   <section class="am-section" id="other">
     <div class="am-container">
@@ -723,12 +794,41 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
+      <!-- [NEW] SECTION 04 : RECENT SPECIALIZED OOH PORTFOLIO SHOWCASE STRIP -->
+      <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s">
+        <div class="asps-head">
+          <div class="asps-title-wrap">
+            <span class="asps-kicker purple">SPECIALIZED OOH PORTFOLIO</span>
+            <h4 class="asps-title">택시 · 택배 · 마트 · DID 특화 매체 집행 실적</h4>
+          </div>
+          <a href="/portfolio.php" class="asps-more-link purple">특화 매체 사례 전체보기 ↗</a>
+        </div>
+        <div class="asps-grid">
+          <?php 
+          $otherItems = !empty($portOther) ? array_slice($portOther, 0, 4) : array_slice($list, 0, 4);
+          foreach ($otherItems as $otItem): 
+          ?>
+          <div class="asps-card main-port-card" data-cat="<?php echo htmlspecialchars($otItem['category']); ?>" data-id="<?php echo (int)$otItem['id']; ?>" data-name="<?php echo htmlspecialchars($otItem['title']); ?>">
+            <div class="asps-thumb">
+              <img src="<?php echo !empty($otItem['thumb']) ? htmlspecialchars($otItem['thumb']) : '/images/sub_bg_b.jpg'; ?>" alt="<?php echo htmlspecialchars($otItem['title']); ?>">
+              <span class="asps-badge purple"><?php echo isset($categories[$otItem['category']]) ? $categories[$otItem['category']] : '특화매체'; ?></span>
+              <div class="asps-hover-overlay">상세보기 ↗</div>
+            </div>
+            <div class="asps-info">
+              <strong class="asps-item-title"><?php echo htmlspecialchars($otItem['title']); ?></strong>
+              <span class="asps-item-loc">도심 밀착 타깃 옥외매체 시공</span>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
     </div>
   </section>
 
 
   <!-- ============================================
-       06 SECTION 05 : 성공 사례
+       06 SECTION 05 : 성공 사례 (전체 통합 아카이브)
   ============================================ -->
   <section class="am-section am-bg-slate" id="archive">
     <div class="am-container">
@@ -737,7 +837,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <div class="ash-flex">
           <div>
             <span class="ash-kicker">PORTFOLIO ARCHIVE</span>
-            <h2 class="ash-title">성공 사례</h2>
+            <h2 class="ash-title">전체 성공 사례 아카이브</h2>
             <p class="ash-desc">카테고리 탭을 클릭하여 고화질 실사 사례를 확인하고, 즉시 1:1 맞춤 견적을 문의하세요.</p>
           </div>
           <div class="am-filter-chips">
@@ -785,7 +885,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       07 SECTION 06 : 마스터플랜 (BOLD BORDER & SOFT GOTHIC NUMBERS PIPELINE)
+       07 SECTION 06 : 마스터플랜
   ============================================ -->
   <section class="am-section" id="process">
     <div class="am-container">
@@ -795,7 +895,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <p class="ash-desc" style="margin:0 auto;">외주 없는 100% 본사 인하우스 전문팀이 기획부터 시공, 보고까지 완벽히 책임지는 4단계 마스터플랜입니다.</p>
       </div>
 
-      <!-- VISUAL PROCESS PIPELINE (THICK SOFT LINES & BOLD GOTHIC NUMBERS) -->
+      <!-- VISUAL PROCESS PIPELINE -->
       <div class="am-pipeline-grid wow fadeInUp" data-wow-duration="0.8s">
         
         <div class="apg-step-card">
@@ -803,9 +903,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <span class="apg-huge-gothic-num">01</span>
             <span class="apg-day-pill">D+1 DAY</span>
           </div>
-          <div class="apg-icon-circle">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-          </div>
+          <div class="apg-icon-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
           <h3 class="apg-step-title">상권 분석 &amp; 노선 믹스</h3>
           <p class="apg-step-sub">타깃 상권 빅데이터 분석 및 온·오프라인 최적 미디어 믹스 설계</p>
           <div class="apg-deliverable-box">
@@ -819,9 +917,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <span class="apg-huge-gothic-num">02</span>
             <span class="apg-day-pill">D+3 DAY</span>
           </div>
-          <div class="apg-icon-circle">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.67-.75 1.67-1.67 0-.42-.17-.83-.42-1.17-.25-.33-.42-.75-.42-1.16 0-.92.75-1.67 1.67-1.67h1.92c3.08 0 5.58-2.5 5.58-5.58 0-4.83-4.42-8.75-9.42-8.75z"/><circle cx="7.5" cy="11.5" r="1.5"/><circle cx="12" cy="7.5" r="1.5"/><circle cx="16.5" cy="11.5" r="1.5"/></svg>
-          </div>
+          <div class="apg-icon-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.67-.75 1.67-1.67 0-.42-.17-.83-.42-1.17-.25-.33-.42-.75-.42-1.16 0-.92.75-1.67 1.67-1.67h1.92c3.08 0 5.58-2.5 5.58-5.58 0-4.83-4.42-8.75-9.42-8.75z"/><circle cx="7.5" cy="11.5" r="1.5"/><circle cx="12" cy="7.5" r="1.5"/><circle cx="16.5" cy="11.5" r="1.5"/></svg></div>
           <h3 class="apg-step-title">1:1 디자인 시안 기획</h3>
           <p class="apg-step-sub">도심 속에서 3초 안에 읽히는 실사 래핑 및 영상 스토리보드 제작</p>
           <div class="apg-deliverable-box">
@@ -835,9 +931,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <span class="apg-huge-gothic-num">03</span>
             <span class="apg-day-pill">D+7 DAY</span>
           </div>
-          <div class="apg-icon-circle">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-          </div>
+          <div class="apg-icon-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
           <h3 class="apg-step-title">직영 출력 &amp; 책임 시공</h3>
           <p class="apg-step-sub">LG 하우시스 정품 솔벤 시트 자체 출력과 본사 10년 경력팀 직접 시공</p>
           <div class="apg-deliverable-box">
@@ -851,9 +945,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <span class="apg-huge-gothic-num blue">04</span>
             <span class="apg-day-pill gold">D+14 DAY</span>
           </div>
-          <div class="apg-icon-circle blue">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f3f8c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
-          </div>
+          <div class="apg-icon-circle blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f3f8c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg></div>
           <h3 class="apg-step-title">실시간 증빙 &amp; 리포트</h3>
           <p class="apg-step-sub">시공 직후 차량 4면 번호판 실사 촬영본 전송 및 주간 순위 투명 보고</p>
           <div class="apg-deliverable-box blue">
@@ -888,13 +980,12 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       09 ONE-STOP 1:1 CONSULTATION STUDIO FORM (PREMIUM REDESIGN)
+       09 ONE-STOP 1:1 CONSULTATION STUDIO FORM
   ============================================ -->
   <section class="am-consultation-studio-sec" id="consultation">
     <div class="am-container">
       <div class="acs-card-grid wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- LEFT BRAND INFORMATION & DIRECT HOTLINE -->
         <div class="acs-info-col">
           <span class="acs-kicker">START YOUR GROWTH WITH GAON-N</span>
           <h2 class="acs-title">
@@ -922,7 +1013,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
         </div>
 
-        <!-- RIGHT INTERACTIVE CONSULTATION FORM -->
         <div class="acs-form-col">
           <form name="frm" method="post" action="/board/estmate/write_ok.php" class="acs-form-box">
             <h3 class="afb-title">1:1 맞춤 견적 &amp; 노선 분석 무료 신청</h3>
@@ -949,7 +1039,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
             </div>
 
-            <!-- AD TYPES CHECKBOXES -->
             <div class="afb-checks-group">
               <label class="afb-lbl">관심 광고 매체 (중복 선택 가능) <span class="req">*</span></label>
               <div class="afb-checks-row">
@@ -976,7 +1065,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
             </div>
 
-            <!-- PRIVACY AGREEMENT & SUBMIT -->
             <div class="afb-bottom-row">
               <label class="afb-agree-item">
                 <input type="checkbox" id="agree" name="agree" checked>
@@ -1044,7 +1132,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       11 HIGH-END 3-COLUMN MASTER SPECIFICATION MODAL (IMPROVED READABILITY)
+       11 HIGH-END 3-COLUMN MASTER SPECIFICATION MODAL
   ============================================ -->
   <div class="bus-guide-overlay" id="busGuideOverlay">
     <div class="lux-modal-panel">
@@ -1076,7 +1164,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
 
           <div class="lmg-high-contrast-grid">
-            
             <div class="lhc-card">
               <div class="lhc-side">
                 <span class="lhc-badge blue">차도면 대형</span>
@@ -1140,7 +1227,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -1152,7 +1238,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
 
           <div class="lmg-high-contrast-grid">
-            
             <div class="lhc-card">
               <div class="lhc-side">
                 <span class="lhc-badge blue">01 플레이스</span>
@@ -1212,7 +1297,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 <p class="lhc-desc">구글 검색 키워드 타깃팅과 유튜브/언론사 제휴 배너 네트워크(GDN)를 통해 관심 고객에게 지속적인 리타깃팅을 집행합니다.</p>
               </div>
             </div>
-
           </div>
         </div>
 
