@@ -544,7 +544,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-sec-head dark-head text-center wow fadeInUp" data-wow-duration="0.7s">
         <span class="ash-kicker gold">03 / 4K CINEMATIC &amp; SHORTS PRODUCTION</span>
         <h2 class="ash-title white">영상제작 솔루션</h2>
-        <p class="ash-desc light" style="margin:0 auto;">기업·상급병원 4K 브랜드 필름부터 9:16 모바일 릴스까지 인하우스 프로덕션이 14일 Fast-Track으로 완성합니다.</p>
+        <p class="ash-desc light" style="margin:0 auto;">기업·상급병원 4K 브랜드 필름부터 9:16 모바일 릴스까지 인하우스 프로덕션이 맞춤 제작합니다.</p>
       </div>
 
       <!-- VIDEO PRODUCTION VISUAL CENTER STAGE -->
@@ -613,30 +613,30 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         </div>
 
-        <!-- 4 CLEAN VISUAL DELIVERABLE SELECTORS -->
+        <!-- 4 CLEAN VISUAL DELIVERABLE SELECTORS (BIG & BOLD) -->
         <div class="avh-selectors-grid">
           <div class="avs-item-card on" data-target-mode="wide"
                data-title="기업 · 상급병원 4K 시네마틱 브랜드 필름"
                data-sub="Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 더빙">
             <span class="avs-badge">01 / BRAND FILM</span>
-            <strong class="avs-title">기업·병원 브랜드 필름 (3~5분)</strong>
-            <span class="avs-sub">4K UHD 풀프레임 시네마</span>
+            <strong class="avs-title">기업 · 상급병원 브랜드 필름</strong>
+            <span class="avs-sub">4K UHD 풀프레임 시네마 (3~5분)</span>
           </div>
 
           <div class="avs-item-card" data-target-mode="wide"
                data-title="TV CF &amp; 극장 스크린 광고 (15초 / 30초)"
                data-sub="15초/30초 고임팩트 스토리텔링 + 2D/3D 모션그래픽">
             <span class="avs-badge">02 / TV CF · THEATER</span>
-            <strong class="avs-title">TV CF · 극장 광고 (15초/30초)</strong>
-            <span class="avs-sub">초압축 임팩트 스토리텔링</span>
+            <strong class="avs-title">TV CF · 극장 스크린 광고</strong>
+            <span class="avs-sub">15초/30초 초압축 임팩트 스토리텔링</span>
           </div>
 
           <div class="avs-item-card" data-target-mode="shorts"
                data-title="SNS 릴스 · 유튜브 쇼츠 바이럴 (9:16 세로형)"
                data-sub="인스타그램 릴스 + 유튜브 쇼츠 + 틱톡 최적화 숏폼">
             <span class="avs-badge gold">03 / SNS SHORTS</span>
-            <strong class="avs-title">인스타그램 릴스 (9:16 모바일)</strong>
-            <span class="avs-sub">3초 후킹 &amp; 알고리즘 바이럴</span>
+            <strong class="avs-title">SNS 릴스 · 유튜브 숏폼</strong>
+            <span class="avs-sub">9:16 모바일 세로형 바이럴 영상</span>
           </div>
 
           <div class="avs-item-card" data-target-mode="wide"
@@ -644,30 +644,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                data-sub="옥외 고휘도 스크린 전용 15초 풀HD 고시인성 모션">
             <span class="avs-badge">04 / DIGITAL SIGNAGE</span>
             <strong class="avs-title">DID 전광판 모션그래픽</strong>
-            <span class="avs-sub">터미널·역사 고휘도 LED 송출</span>
-          </div>
-        </div>
-
-        <!-- 14-DAY WORKFLOW CHIPS -->
-        <div class="avh-workflow-strip">
-          <div class="aws-chip">
-            <span class="aws-day">D+3</span>
-            <strong class="aws-step">01 콘티 기획</strong>
-          </div>
-          <div class="aws-arrow">→</div>
-          <div class="aws-chip">
-            <span class="aws-day">D+7</span>
-            <strong class="aws-step">02 4K 본촬영</strong>
-          </div>
-          <div class="aws-arrow">→</div>
-          <div class="aws-chip">
-            <span class="aws-day">D+10</span>
-            <strong class="aws-step">03 편집 &amp; 더빙</strong>
-          </div>
-          <div class="aws-arrow">→</div>
-          <div class="aws-chip highlight">
-            <span class="aws-day gold">D+14</span>
-            <strong class="aws-step gold">04 최종 납품</strong>
+            <span class="avs-sub">터미널·역사 고휘도 LED 송출 (15초)</span>
           </div>
         </div>
 
@@ -1206,7 +1183,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <!-- 03 VIDEO GUIDE -->
         <div class="bus-guide-page" id="guideVideo">
           <div class="lmg-page-header">
-            <h4 class="lmg-sec-title">4K 시네마틱 영상제작 &amp; SNS 숏폼 14일 Fast-Track 공정 가이드</h4>
+            <h4 class="lmg-sec-title">4K 시네마틱 영상제작 &amp; SNS 숏폼 제작 가이드</h4>
             <span class="lmg-sec-sub">Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 녹음</span>
           </div>
 
