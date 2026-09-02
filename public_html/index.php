@@ -116,7 +116,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       01-B ABOUT STATS SECTION
+       01-B ABOUT STATS SECTION (CLEAN LIGHT BACKGROUND)
   ============================================ -->
   <section class="am-about-stats-sec">
     <div class="aas-silk-canvas">
@@ -131,7 +131,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <div class="aas-headline-col">
           <div class="aas-kicker-line">
             <span class="akl-dash"></span>
-            <span class="akl-text">ABOUT</span>
+            <span class="akl-text">ABOUT GAON-N</span>
           </div>
           <h2 class="aas-main-title">
             우리는 광고의<br>
@@ -189,7 +189,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       02 SECTION 01 : 시내버스 광고
+       02 SECTION 01 : 시내버스 광고 (BIG FULL-IMAGE VISUAL CARDS)
   ============================================ -->
   <section class="am-section am-bg-slate" id="bus">
     <div class="am-container">
@@ -301,37 +301,51 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <!-- BUS PROMOTIONAL 3-PILLAR ADVANTAGES -->
-      <div class="am-bus-promo-grid wow fadeInUp" data-wow-duration="0.8s">
-        <div class="abp-promo-card">
-          <div class="apc-top-row">
-            <div class="apc-picto-circle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/><path d="M7 3v7"/><path d="M17 3v7"/></svg></div>
-            <span class="apc-num">01</span>
+      <!-- 3 BIG FULL-IMAGE PANORAMIC CARDS -->
+      <div class="am-full-visual-grid-3 wow fadeInUp" data-wow-duration="0.8s">
+        
+        <div class="afv-card">
+          <img src="/images/sample_bus.jpg" alt="104개 노선 단독 직영">
+          <div class="afv-scrim"></div>
+          <div class="afv-overlay-content">
+            <div class="afv-badge-row">
+              <span class="afv-pill blue">01 / FLEET DIRECT</span>
+              <div class="afv-icon-badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/><path d="M7 3v7"/><path d="M17 3v7"/></svg></div>
+            </div>
+            <h3 class="afv-title">광주 104개 전 노선 단독 직영 배차</h3>
+            <p class="afv-desc">상무·수완·봉선·첨단 등 핵심 거점을 관통하는 맞춤형 최적 노선 단독 설계</p>
+            <div class="afv-footer-stat">광주 5개 구 1,000대 시내버스 독점 운영</div>
           </div>
-          <h3>광주 104개 전 노선 단독 직영 배차</h3>
-          <p>병원, 학원, 분양 홍보관의 주 타깃 고객이 밀집된 상무·수완·봉선·첨단 등 핵심 거점을 정확하게 관통하는 맞춤형 최적 노선을 단독 설계합니다.</p>
-          <div class="apc-stat">광주 5개 구 1,000대 시내버스 독점 운영</div>
         </div>
 
-        <div class="abp-promo-card">
-          <div class="apc-top-row">
-            <div class="apc-picto-circle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><path d="M22 12A10 10 0 0 0 12 2"/></svg></div>
-            <span class="apc-num">02</span>
+        <div class="afv-card">
+          <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="1일 18시간 노출">
+          <div class="afv-scrim"></div>
+          <div class="afv-overlay-content">
+            <div class="afv-badge-row">
+              <span class="afv-pill blue">02 / 18H EXPOSURE</span>
+              <div class="afv-icon-badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><path d="M22 12A10 10 0 0 0 12 2"/></svg></div>
+            </div>
+            <h3 class="afv-title">1일 18시간 · 일 150만 시민 눈높이 노출</h3>
+            <p class="afv-desc">도심 주요 간선도로와 교차로를 쉼 없이 순환하며 운전자와 보행자 시선 정면 강제 노출</p>
+            <div class="afv-footer-stat">차도면 3.7m + 인도면 3.0m + 후면 2.4m 3면 패키지</div>
           </div>
-          <h3>1일 18시간 · 일 150만 시민 눈높이 노출</h3>
-          <p>새벽 5시 30분부터 밤 12시까지 도심 주요 간선도로와 교차로를 쉼 없이 순환하며, 운전자와 보행자 시선 정면에 하루 150만 회 이상 강제 노출됩니다.</p>
-          <div class="apc-stat">차도면 3.7m + 인도면 3.0m + 후면 2.4m 3면 패키지</div>
         </div>
 
-        <div class="abp-promo-card">
-          <div class="apc-top-row">
-            <div class="apc-picto-circle"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
-            <span class="apc-num">03</span>
+        <div class="afv-card">
+          <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="LG 정품 솔벤 시공">
+          <div class="afv-scrim"></div>
+          <div class="afv-overlay-content">
+            <div class="afv-badge-row">
+              <span class="afv-pill blue">03 / PREMIUM PRINT</span>
+              <div class="afv-icon-badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
+            </div>
+            <h3 class="afv-title">LG 하우시스 정품 솔벤 &amp; 100% 직영 시공</h3>
+            <p class="afv-desc">외주 없는 본사 10년 경력팀 직접 시공 및 시공 직후 번호판 4면 실사 즉시 보고</p>
+            <div class="afv-footer-stat">시공 직후 차량 4면 번호판 실사 즉시 전송</div>
           </div>
-          <h3>LG 하우시스 정품 솔벤 시트 &amp; 100% 직영 시공</h3>
-          <p>외주 하청 없는 10년 경력의 본사 전문 시공팀이 내후성 정품 솔벤 시트로 직접 출력 및 부착하며, 시공 직후 번호판 포함 4면 증빙 사진을 실시간 보고합니다.</p>
-          <div class="apc-stat">시공 직후 차량 4면 번호판 실사 즉시 전송</div>
         </div>
+
       </div>
 
       <!-- SECTION 01 : RECENT BUS PORTFOLIO SHOWCASE STRIP -->
@@ -368,7 +382,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       03 SECTION 02 : 온라인 마케팅 (REAL AGENCY TONE & MANNER)
+       03 SECTION 02 : 온라인 마케팅 (BIG FULL-IMAGE SCREEN CAPTURE SHOWCASE)
   ============================================ -->
   <section class="am-section" id="online">
     <div class="am-container">
@@ -377,7 +391,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <div class="ash-flex">
           <div>
             <span class="ash-kicker">02 / DIGITAL MARKETING</span>
-            <h2 class="ash-title">온라인 마케팅</h2>
+            <h2 class="ash-title">온라인 마케팅 솔루션</h2>
             <p class="ash-desc">시내버스 옥외광고로 형성된 브랜드 인지도를 실제 검색과 네이버 예약, 매장 방문 매출로 즉각 전환시키는 통합 디지털 솔루션입니다.</p>
           </div>
           <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideOnline">
@@ -386,94 +400,71 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- AUTHENTIC AGENCY BENTO GRID -->
-      <div class="am-bento-online-grid wow fadeInUp" data-wow-duration="0.8s">
+      <!-- 4 BIG FULL-IMAGE CAPTURE VISUAL CARDS -->
+      <div class="am-online-visual-grid-4 wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- CARD 01 : NAVER PLACE & BRAND BLOG -->
-        <div class="abog-hero-card">
-          <div class="ahc-media-layer">
-            <img src="/images/sub_bg_a.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="네이버 마케팅">
-            <div class="ahc-gradient-scrim"></div>
-            
-            <div class="ahc-hud-bottom">
-              <div class="ahc-stat-group">
-                <div class="asg-item">
-                  <span class="asg-label">광주 주요 상권 키워드</span>
-                  <strong class="asg-val">지도 상단 최적화</strong>
-                </div>
-                <div class="asg-divider"></div>
-                <div class="asg-item">
-                  <span class="asg-label">브랜드 맞춤 칼럼</span>
-                  <strong class="asg-val">월 8 ~ 12편 정기 발행</strong>
-                </div>
-                <div class="asg-divider"></div>
-                <div class="asg-item">
-                  <span class="asg-label">전환 관리</span>
-                  <strong class="asg-val">24시간 예약 연동</strong>
-                </div>
-              </div>
+        <!-- CARD 01 : SMART PLACE & BLOG -->
+        <div class="aov-card wide">
+          <img src="/images/sub_bg_a.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="네이버 스마트플레이스 1위">
+          <div class="aov-scrim"></div>
+          <div class="aov-overlay">
+            <span class="aov-pill blue">01 / NAVER SEARCH &amp; PLACE</span>
+            <h3 class="aov-title">네이버 스마트플레이스 1위 세팅 &amp; C-Rank 브랜드 블로그</h3>
+            <p class="aov-desc">광주 로컬 키워드 1페이지 지도 최상단 노출 + 24시간 네이버 예약 연동 + 의료법 준수 전문 칼럼 정기 발행</p>
+            <div class="aov-metrics-row">
+              <div class="amr-tag">상권 키워드 지도 상위 노출</div>
+              <div class="amr-tag">월 8~12편 전문 칼럼</div>
+              <div class="amr-tag">네이버 예약 연동</div>
             </div>
-          </div>
-
-          <div class="ahc-content-box">
-            <div class="ahc-tag-row">
-              <span class="ahc-kicker blue">NAVER SEARCH &amp; PLACE</span>
-              <span class="ahc-subtag">스마트플레이스 + C-Rank 브랜드 블로그</span>
-            </div>
-            <h3 class="ahc-title">네이버 스마트플레이스 세팅 &amp; 브랜드 블로그 운영</h3>
-            <p class="ahc-desc">
-              광주 로컬 키워드 검색 시 1페이지 지도 최상단 노출 세팅 및 24시간 네이버 예약·톡톡 연동. 의료법 및 과장광고 가이드라인을 철저히 준수한 원장님 전문 칼럼으로 스마트블록과 뷰탭을 신뢰도 높게 점유합니다.
-            </p>
           </div>
         </div>
 
-        <!-- SIDE 3 STACK CARDS -->
-        <div class="abog-side-stack">
-          
-          <div class="as-card">
-            <div class="asc-media-box">
-              <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="맘카페 및 당근 바이럴">
-              <div class="asc-scrim"></div>
-              <span class="asc-badge gold">LOCAL VIRAL</span>
-            </div>
-            <div class="asc-text-wrap">
-              <span class="asc-kicker green">02 / LOCAL COMMUNITY</span>
-              <h4 class="asc-title">광주 맘카페 &amp; 당근마켓 바이럴</h4>
-              <p class="asc-desc">광주맘스홀릭 등 지역 대표 맘카페 및 당근마켓 동네생활 실사용자 기반의 자연스러운 방문 후기 여론을 형성합니다.</p>
+        <!-- CARD 02 : MOM CAFE -->
+        <div class="aov-card">
+          <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="맘카페 바이럴">
+          <div class="aov-scrim"></div>
+          <div class="aov-overlay">
+            <span class="aov-pill green">02 / LOCAL COMMUNITY</span>
+            <h3 class="aov-title">광주 대표 맘카페 &amp; 당근마켓 바이럴</h3>
+            <p class="aov-desc">광주맘스홀릭 및 당근 동네생활 실사용자 기반 자연스러운 방문 후기 여론 형성</p>
+            <div class="aov-metrics-row">
+              <div class="amr-tag">3050 주부 신뢰 확보</div>
             </div>
           </div>
+        </div>
 
-          <div class="as-card">
-            <div class="asc-media-box">
-              <img src="/images/sub_bg_e.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="인스타그램 릴스">
-              <div class="asc-scrim"></div>
-              <span class="asc-badge cyan">GEO-TARGETING</span>
-            </div>
-            <div class="asc-text-wrap">
-              <span class="asc-kicker blue">03 / SNS PERFORMANCE</span>
-              <h4 class="asc-title">인스타그램 릴스 &amp; 반경 타깃 광고</h4>
-              <p class="asc-desc">사업장 반경 1~3km 내 실제 거주·활동 고객만을 타깃팅하여 9:16 모바일 숏폼 영상으로 방문과 문의를 유도합니다.</p>
+        <!-- CARD 03 : INSTAGRAM REELS -->
+        <div class="aov-card">
+          <img src="/images/sub_bg_e.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="인스타그램 릴스">
+          <div class="aov-scrim"></div>
+          <div class="aov-overlay">
+            <span class="aov-pill cyan">03 / SNS PERFORMANCE</span>
+            <h3 class="aov-title">인스타그램 릴스 &amp; 반경 타깃 광고</h3>
+            <p class="aov-desc">사업장 반경 1~3km 내 거주 고객 집중 타깃팅 + 9:16 모바일 숏폼 영상 제작</p>
+            <div class="aov-metrics-row">
+              <div class="amr-tag">반경 1~3km 정밀 노출</div>
             </div>
           </div>
+        </div>
 
-          <div class="as-card">
-            <div class="asc-media-box">
-              <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="구글 검색광고">
-              <div class="asc-scrim"></div>
-              <span class="asc-badge purple">RETARGETING</span>
-            </div>
-            <div class="asc-text-wrap">
-              <span class="asc-kicker purple">04 / SEARCH &amp; DISPLAY</span>
-              <h4 class="asc-title">구글 검색광고 &amp; 유튜브 배너 리타깃팅</h4>
-              <p class="asc-desc">키워드 검색 고객과 제휴 언론사 배너 네트워크를 결합하여 이탈한 잠재 고객을 지속적으로 재유입시키는 고효율 광고입니다.</p>
+        <!-- CARD 04 : GOOGLE GDN -->
+        <div class="aov-card wide">
+          <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="구글 검색 & GDN">
+          <div class="aov-scrim"></div>
+          <div class="aov-overlay">
+            <span class="aov-pill purple">04 / GOOGLE RETARGETING</span>
+            <h3 class="aov-title">구글 검색광고 &amp; 유튜브 GDN 리타깃팅</h3>
+            <p class="aov-desc">키워드 검색 고객과 제휴 언론사 배너 네트워크를 결합하여 이탈 고객을 24시간 재유입</p>
+            <div class="aov-metrics-row">
+              <div class="amr-tag">구글 검색 키워드</div>
+              <div class="amr-tag">유튜브 배너 네트워크</div>
             </div>
           </div>
-
         </div>
 
       </div>
 
-      <!-- 3-PILLAR TRUST METRICS -->
+      <!-- 3-PILLAR TRUST STRIP -->
       <div class="am-online-guarantee-deck wow fadeInUp" data-wow-duration="0.8s">
         <div class="aog-card">
           <div class="aog-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
@@ -534,7 +525,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       04 SECTION 03 : 영상제작
+       04 SECTION 03 : 영상제작 (KEPT IN DARK NAVY THEME)
   ============================================ -->
   <section class="am-section am-bg-dark am-video-ambient-sec" id="video">
     <div class="avs-ambient-bg">
@@ -710,7 +701,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       05 SECTION 04 : 특화 옥외매체
+       05 SECTION 04 : 특화 옥외매체 (BIG FULL-IMAGE ACCORDION)
   ============================================ -->
   <section class="am-section" id="other">
     <div class="am-container">
