@@ -414,10 +414,10 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   <section class="am-section am-bg-white" id="online">
     <div class="am-container">
       
-      <!-- MAIN SEALNPACK LAYOUT: LEFT TEXT & RIGHT DUAL VERTICAL STREAM -->
+      <!-- MAIN SEALNPACK TALL PORTRAIT LAYOUT -->
       <div class="som-layout-stage wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- LEFT: CLEAN EDITORIAL BRAND HEADLINE & GUIDE BUTTON -->
+        <!-- LEFT: CLEAN EDITORIAL BRAND HEADLINE & CONCISE BUTTON (NO EXTRA ARROW, NO FILLER) -->
         <div class="som-left-content">
           <div class="som-title-wrap">
             <span class="ash-kicker">DIGITAL MARKETING</span>
@@ -425,150 +425,275 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
 
           <p class="som-desc">
-            시내버스 옥외광고로 형성된 강력한 브랜드 인지도를 
-            네이버 스마트플레이스 1위 세팅, C-Rank 브랜드 블로그, 맘카페 및 인스타그램 타깃 광고와 결합하여 
-            실제 검색과 네이버 예약, 매장 방문 매출로 즉각 전환시키는 통합 디지털 솔루션입니다.
+            네이버 스마트플레이스 1위 세팅부터 C-Rank 브랜드 블로그, 맘카페 바이럴, 인스타그램 스폰서 광고까지 가온엔 본사 인하우스 전문팀이 직접 운영합니다.
           </p>
 
           <button type="button" class="som-guide-btn bus-guide-open" data-guide="guideOnline">
-            <span class="sgb-txt">온라인 가이드 더보기</span>
-            <span class="sgb-arrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </span>
+            <span class="sgb-txt">온라인 채널 가이드</span>
           </button>
         </div>
 
-        <!-- RIGHT: DUAL VERTICAL MARQUEE STREAMS (8대 전 채널 고유 콘텐츠 시간차 유영) -->
+        <!-- RIGHT: DUAL VERTICAL MARQUEE STREAMS (SEAMLESS 50% TRANSFORM LOOP & TALL PORTRAIT CARDS) -->
         <div class="som-right-stream-wrap">
           
-          <!-- STREAM COLUMN 1 (4 DISTINCT CHANNELS + LOOP CLONES) -->
+          <!-- STREAM COLUMN 1 (4 DISTINCT ITEMS + 4 EXACT CLONES) -->
           <div class="som-stream-col som-col-1">
             <div class="som-stream-track track-1">
               
-              <!-- ITEM 01: NAVER PLACE -->
+              <!-- ITEM 01 -->
               <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_13.jpg" alt="네이버 스마트플레이스 1위 세팅">
+                <img src="/images/bs_ad/baro_14.jpg" alt="블로그 상위 노출 & C-Rank 브랜딩">
                 <div class="som-card-scrim"></div>
-                <div class="som-card-txt">
-                  <span class="sct-kicker">PLACE SEO 1위</span>
-                  <strong class="sct-title">스마트플레이스 상위 노출 &amp; 예약 연동</strong>
-                </div>
-              </div>
-
-              <!-- ITEM 02: C-RANK BRAND BLOG -->
-              <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_14.jpg" alt="C-Rank 병원 브랜드 블로그">
-                <div class="som-card-scrim"></div>
-                <div class="som-card-txt">
+                <div class="som-default-txt">
                   <span class="sct-kicker">C-Rank Blog</span>
-                  <strong class="sct-title">병원·의원 전문 브랜드 블로그 칼럼</strong>
+                  <strong class="sct-title">블로그 상위 노출 &amp; C-Rank 브랜딩</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">C-Rank Blog</span>
+                  <strong class="shd-title">블로그 상위 노출 &amp; C-Rank 브랜딩</strong>
+                  <p class="shd-desc">상무·수완·봉선 주요 상권 키워드 점유. 전문 에디터의 1:1 맞춤 기획으로 독보적인 브랜드 신뢰도를 구축합니다.</p>
+                  <span class="shd-tag">전문 칼럼 정기 발행</span>
                 </div>
               </div>
 
-              <!-- ITEM 03: MOM CAFE & KARROT VIRAL -->
+              <!-- ITEM 02 -->
               <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_15.jpg" alt="광주 맘카페 & 당근마켓 바이럴">
+                <img src="/images/bs_ad/baro_15.jpg" alt="맘카페 & 당근마켓 침투 바이럴">
                 <div class="som-card-scrim"></div>
-                <div class="som-card-txt">
+                <div class="som-default-txt">
                   <span class="sct-kicker">Viral Marketing</span>
-                  <strong class="sct-title">광주 맘카페 &amp; 당근 동네생활 바이럴</strong>
+                  <strong class="sct-title">맘카페 &amp; 당근마켓 침투 바이럴</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Viral Marketing</span>
+                  <strong class="shd-title">맘카페 &amp; 당근마켓 침투 바이럴</strong>
+                  <p class="shd-desc">광주맘스홀릭 및 당근 동네생활 실사용자 기반 자연스러운 방문 후기 여론 형성과 3050 주부 타깃 신뢰 확보.</p>
+                  <span class="shd-tag">광주 맘카페 여론 형성</span>
                 </div>
               </div>
 
-              <!-- ITEM 04: INSTAGRAM REELS RADIUS TARGET -->
+              <!-- ITEM 03 -->
               <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_16.jpg" alt="인스타그램 릴스 타깃 광고">
+                <img src="/images/bs_ad/baro_13.jpg" alt="스마트플레이스 1위 세팅 & 예약 연동">
                 <div class="som-card-scrim"></div>
-                <div class="som-card-txt">
+                <div class="som-default-txt">
+                  <span class="sct-kicker">Place SEO</span>
+                  <strong class="sct-title">스마트플레이스 1위 &amp; 예약 연동</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Place SEO</span>
+                  <strong class="shd-title">스마트플레이스 1위 &amp; 예약 연동</strong>
+                  <p class="shd-desc">네이버 지도 1페이지 상단 고정 최적화 및 24시간 네이버 스마트콜/예약 시스템 실시간 매출 연동.</p>
+                  <span class="shd-tag">로컬 지도 상위 노출</span>
+                </div>
+              </div>
+
+              <!-- ITEM 04 -->
+              <div class="som-stream-card">
+                <img src="/images/bs_ad/baro_16.jpg" alt="인스타그램 릴스 & 모바일 스폰서 광고">
+                <div class="som-card-scrim"></div>
+                <div class="som-default-txt">
                   <span class="sct-kicker">Meta Ads</span>
-                  <strong class="sct-title">인스타그램 릴스 &amp; 반경 1~3km 타깃</strong>
+                  <strong class="sct-title">인스타그램 릴스 &amp; 스폰서 광고</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Meta Ads</span>
+                  <strong class="shd-title">인스타그램 릴스 &amp; 스폰서 광고</strong>
+                  <p class="shd-desc">사업장 반경 1~3km 내 핵심 타깃 정밀 송출 및 첫 3초 시선을 사로잡는 9:16 모바일 숏폼 영상 제작.</p>
+                  <span class="shd-tag">반경 1~3km 정밀 노출</span>
                 </div>
               </div>
 
-              <!-- LOOP CLONES FOR COLUMN 1 -->
+              <!-- EXACT 4 CLONES FOR SEAMLESS 50% LOOP -->
               <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_13.jpg" alt="네이버 스마트플레이스 1위 세팅">
+                <img src="/images/bs_ad/baro_14.jpg" alt="블로그 상위 노출 & C-Rank 브랜딩">
                 <div class="som-card-scrim"></div>
-                <div class="som-card-txt">
-                  <span class="sct-kicker">PLACE SEO 1위</span>
-                  <strong class="sct-title">스마트플레이스 상위 노출 &amp; 예약 연동</strong>
-                </div>
-              </div>
-
-              <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_14.jpg" alt="C-Rank 병원 브랜드 블로그">
-                <div class="som-card-scrim"></div>
-                <div class="som-card-txt">
+                <div class="som-default-txt">
                   <span class="sct-kicker">C-Rank Blog</span>
-                  <strong class="sct-title">병원·의원 전문 브랜드 블로그 칼럼</strong>
+                  <strong class="sct-title">블로그 상위 노출 &amp; C-Rank 브랜딩</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">C-Rank Blog</span>
+                  <strong class="shd-title">블로그 상위 노출 &amp; C-Rank 브랜딩</strong>
+                  <p class="shd-desc">상무·수완·봉선 주요 상권 키워드 점유. 전문 에디터의 1:1 맞춤 기획으로 독보적인 브랜드 신뢰도를 구축합니다.</p>
+                  <span class="shd-tag">전문 칼럼 정기 발행</span>
+                </div>
+              </div>
+
+              <div class="som-stream-card">
+                <img src="/images/bs_ad/baro_15.jpg" alt="맘카페 & 당근마켓 침투 바이럴">
+                <div class="som-card-scrim"></div>
+                <div class="som-default-txt">
+                  <span class="sct-kicker">Viral Marketing</span>
+                  <strong class="sct-title">맘카페 &amp; 당근마켓 침투 바이럴</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Viral Marketing</span>
+                  <strong class="shd-title">맘카페 &amp; 당근마켓 침투 바이럴</strong>
+                  <p class="shd-desc">광주맘스홀릭 및 당근 동네생활 실사용자 기반 자연스러운 방문 후기 여론 형성과 3050 주부 타깃 신뢰 확보.</p>
+                  <span class="shd-tag">광주 맘카페 여론 형성</span>
+                </div>
+              </div>
+
+              <div class="som-stream-card">
+                <img src="/images/bs_ad/baro_13.jpg" alt="스마트플레이스 1위 세팅 & 예약 연동">
+                <div class="som-card-scrim"></div>
+                <div class="som-default-txt">
+                  <span class="sct-kicker">Place SEO</span>
+                  <strong class="sct-title">스마트플레이스 1위 &amp; 예약 연동</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Place SEO</span>
+                  <strong class="shd-title">스마트플레이스 1위 &amp; 예약 연동</strong>
+                  <p class="shd-desc">네이버 지도 1페이지 상단 고정 최적화 및 24시간 네이버 스마트콜/예약 시스템 실시간 매출 연동.</p>
+                  <span class="shd-tag">로컬 지도 상위 노출</span>
+                </div>
+              </div>
+
+              <div class="som-stream-card">
+                <img src="/images/bs_ad/baro_16.jpg" alt="인스타그램 릴스 & 모바일 스폰서 광고">
+                <div class="som-card-scrim"></div>
+                <div class="som-default-txt">
+                  <span class="sct-kicker">Meta Ads</span>
+                  <strong class="sct-title">인스타그램 릴스 &amp; 스폰서 광고</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Meta Ads</span>
+                  <strong class="shd-title">인스타그램 릴스 &amp; 스폰서 광고</strong>
+                  <p class="shd-desc">사업장 반경 1~3km 내 핵심 타깃 정밀 송출 및 첫 3초 시선을 사로잡는 9:16 모바일 숏폼 영상 제작.</p>
+                  <span class="shd-tag">반경 1~3km 정밀 노출</span>
                 </div>
               </div>
 
             </div>
           </div>
 
-          <!-- STREAM COLUMN 2 (4 COMPLETELY DIFFERENT CHANNELS + LOOP CLONES) -->
+          <!-- STREAM COLUMN 2 (4 DIFFERENT ITEMS + 4 EXACT CLONES) -->
           <div class="som-stream-col som-col-2">
             <div class="som-stream-track track-2">
               
-              <!-- ITEM 05: NAVER SEARCH ADS (POWERLINK) -->
+              <!-- ITEM 05 -->
               <div class="som-stream-card">
-                <img src="/images/sub_bg_a.jpg" alt="네이버 파워링크 검색광고">
+                <img src="/images/sub_bg_h.jpg" alt="구글 검색광고 & 유튜브 GDN 리타깃팅">
                 <div class="som-card-scrim"></div>
-                <div class="som-card-txt">
-                  <span class="sct-kicker">Search Ads</span>
-                  <strong class="sct-title">네이버 파워링크 검색광고 (SA)</strong>
-                </div>
-              </div>
-
-              <!-- ITEM 06: GOOGLE SEARCH & YOUTUBE GDN -->
-              <div class="som-stream-card">
-                <img src="/images/sub_bg_h.jpg" alt="구글 검색 & 유튜브 GDN 리타깃팅">
-                <div class="som-card-scrim"></div>
-                <div class="som-card-txt">
+                <div class="som-default-txt">
                   <span class="sct-kicker">Google &amp; GDN</span>
                   <strong class="sct-title">구글 검색 &amp; 유튜브 GDN 리타깃팅</strong>
                 </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Google &amp; GDN</span>
+                  <strong class="shd-title">구글 검색 &amp; 유튜브 GDN 리타깃팅</strong>
+                  <p class="shd-desc">키워드 검색 고객과 언론사 배너 네트워크를 결합하여 이탈 고객을 24시간 추적 및 재유입시키는 고효율 배너.</p>
+                  <span class="shd-tag">24시간 리타깃팅 배너</span>
+                </div>
               </div>
 
-              <!-- ITEM 07: INFLUENCER & REVIEWERS -->
+              <!-- ITEM 06 -->
               <div class="som-stream-card">
-                <img src="/images/sub_bg_g.jpg" alt="블로그 체험단 & 인플루언서 마케팅">
+                <img src="/images/sub_bg_a.jpg" alt="네이버 파워링크 검색광고 (SA) 세팅">
                 <div class="som-card-scrim"></div>
-                <div class="som-card-txt">
+                <div class="som-default-txt">
+                  <span class="sct-kicker">Search Ads</span>
+                  <strong class="sct-title">네이버 파워링크 검색광고 세팅</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Search Ads</span>
+                  <strong class="shd-title">네이버 파워링크 검색광고 세팅</strong>
+                  <p class="shd-desc">광주 주요 상권 황금 키워드 선점과 클릭률을 극대화하는 소재 최적화 및 ROAS 중심 예산 관리.</p>
+                  <span class="shd-tag">키워드 상위 선점</span>
+                </div>
+              </div>
+
+              <!-- ITEM 07 -->
+              <div class="som-stream-card">
+                <img src="/images/sub_bg_g.jpg" alt="블로그 체험단 & 인플루언서 섭외">
+                <div class="som-card-scrim"></div>
+                <div class="som-default-txt">
                   <span class="sct-kicker">Influencer</span>
-                  <strong class="sct-title">블로그 체험단 &amp; 인플루언서 섭외</strong>
+                  <strong class="sct-title">체험단 &amp; 인플루언서 섭외</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Influencer</span>
+                  <strong class="shd-title">체험단 &amp; 인플루언서 섭외</strong>
+                  <p class="shd-desc">실제 방문형 인플루언서와 고품질 블로거를 엄선 섭외하여 네이버 스마트블록 검색 노출을 극대화합니다.</p>
+                  <span class="shd-tag">고품질 리뷰어 매칭</span>
                 </div>
               </div>
 
-              <!-- ITEM 08: HIGH-CONVERTING LANDING PAGE & WEB -->
+              <!-- ITEM 08 -->
               <div class="som-stream-card">
-                <img src="/images/sub_bg_e.jpg" alt="모바일 고전환 랜딩페이지 제작">
+                <img src="/images/sub_bg_e.jpg" alt="모바일 고전환 웹사이트 & 랜딩페이지">
                 <div class="som-card-scrim"></div>
-                <div class="som-card-txt">
-                  <span class="sct-kicker">Landing Page</span>
-                  <strong class="sct-title">모바일 반응형 고전환 웹사이트 제작</strong>
+                <div class="som-default-txt">
+                  <span class="sct-kicker">Web &amp; Landing</span>
+                  <strong class="sct-title">고전환 웹사이트 &amp; 랜딩페이지</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Web &amp; Landing</span>
+                  <strong class="shd-title">고전환 웹사이트 &amp; 랜딩페이지</strong>
+                  <p class="shd-desc">광고 클릭 후 즉각적인 전화/예약 전환을 유도하는 최적의 UI/UX 반응형 모바일 랜딩페이지 제작.</p>
+                  <span class="shd-tag">모바일 전환율 극대화</span>
                 </div>
               </div>
 
-              <!-- LOOP CLONES FOR COLUMN 2 -->
+              <!-- EXACT 4 CLONES FOR SEAMLESS 50% LOOP -->
               <div class="som-stream-card">
-                <img src="/images/sub_bg_a.jpg" alt="네이버 파워링크 검색광고">
+                <img src="/images/sub_bg_h.jpg" alt="구글 검색광고 & 유튜브 GDN 리타깃팅">
                 <div class="som-card-scrim"></div>
-                <div class="som-card-txt">
-                  <span class="sct-kicker">Search Ads</span>
-                  <strong class="sct-title">네이버 파워링크 검색광고 (SA)</strong>
-                </div>
-              </div>
-
-              <div class="som-stream-card">
-                <img src="/images/sub_bg_h.jpg" alt="구글 검색 & 유튜브 GDN 리타깃팅">
-                <div class="som-card-scrim"></div>
-                <div class="som-card-txt">
+                <div class="som-default-txt">
                   <span class="sct-kicker">Google &amp; GDN</span>
                   <strong class="sct-title">구글 검색 &amp; 유튜브 GDN 리타깃팅</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Google &amp; GDN</span>
+                  <strong class="shd-title">구글 검색 &amp; 유튜브 GDN 리타깃팅</strong>
+                  <p class="shd-desc">키워드 검색 고객과 언론사 배너 네트워크를 결합하여 이탈 고객을 24시간 추적 및 재유입시키는 고효율 배너.</p>
+                  <span class="shd-tag">24시간 리타깃팅 배너</span>
+                </div>
+              </div>
+
+              <div class="som-stream-card">
+                <img src="/images/sub_bg_a.jpg" alt="네이버 파워링크 검색광고 (SA) 세팅">
+                <div class="som-card-scrim"></div>
+                <div class="som-default-txt">
+                  <span class="sct-kicker">Search Ads</span>
+                  <strong class="sct-title">네이버 파워링크 검색광고 세팅</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Search Ads</span>
+                  <strong class="shd-title">네이버 파워링크 검색광고 세팅</strong>
+                  <p class="shd-desc">광주 주요 상권 황금 키워드 선점과 클릭률을 극대화하는 소재 최적화 및 ROAS 중심 예산 관리.</p>
+                  <span class="shd-tag">키워드 상위 선점</span>
+                </div>
+              </div>
+
+              <div class="som-stream-card">
+                <img src="/images/sub_bg_g.jpg" alt="블로그 체험단 & 인플루언서 섭외">
+                <div class="som-card-scrim"></div>
+                <div class="som-default-txt">
+                  <span class="sct-kicker">Influencer</span>
+                  <strong class="sct-title">체험단 &amp; 인플루언서 섭외</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Influencer</span>
+                  <strong class="shd-title">체험단 &amp; 인플루언서 섭외</strong>
+                  <p class="shd-desc">실제 방문형 인플루언서와 고품질 블로거를 엄선 섭외하여 네이버 스마트블록 검색 노출을 극대화합니다.</p>
+                  <span class="shd-tag">고품질 리뷰어 매칭</span>
+                </div>
+              </div>
+
+              <div class="som-stream-card">
+                <img src="/images/sub_bg_e.jpg" alt="모바일 고전환 웹사이트 & 랜딩페이지">
+                <div class="som-card-scrim"></div>
+                <div class="som-default-txt">
+                  <span class="sct-kicker">Web &amp; Landing</span>
+                  <strong class="sct-title">고전환 웹사이트 &amp; 랜딩페이지</strong>
+                </div>
+                <div class="som-hover-detail">
+                  <span class="shd-kicker">Web &amp; Landing</span>
+                  <strong class="shd-title">고전환 웹사이트 &amp; 랜딩페이지</strong>
+                  <p class="shd-desc">광고 클릭 후 즉각적인 전화/예약 전환을 유도하는 최적의 UI/UX 반응형 모바일 랜딩페이지 제작.</p>
+                  <span class="shd-tag">모바일 전환율 극대화</span>
                 </div>
               </div>
 
