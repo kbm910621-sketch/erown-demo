@@ -998,7 +998,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   <!-- ============================================
        06 SECTION 05 : 성공 사례 (EXACT SCREENSHOT REPLICA: WIDE 4-COLUMN & HUGE TYPO TABS)
   ============================================ -->
-  <section class="am-section am-bg-white" id="archive">
+  <section class="am-section am-bg-slate" id="archive">
     <div class="am-container-wide">
 
       <!-- TOP THIN DIVIDER LINE & RESULTS META -->

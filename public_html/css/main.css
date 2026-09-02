@@ -2157,3 +2157,52 @@ body.modal-lock { overflow:hidden !important; }
   .som-stream-card { height: 380px !important; }
   .asc-num { font-size: 44px !important; }
 }
+
+
+/* ==========================================================================
+   PORTFOLIO ARCHIVE SECTION DISTINCT BACKGROUND (#F8FAFC)
+========================================================================== */
+#archive.am-section,
+#archive.am-bg-slate {
+  background: #f8fafc !important;
+  border-top: 1.5px solid #e2e8f0 !important;
+  border-bottom: 1.5px solid #e2e8f0 !important;
+  padding: 130px 0 140px !important;
+}
+
+#archive .ms-card {
+  background: #ffffff !important;
+  border: 1.5px solid #e2e8f0 !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05) !important;
+}
+#archive .ms-card:hover {
+  border-color: #1855b7 !important;
+  box-shadow: 0 24px 55px rgba(24, 85, 183, 0.14) !important;
+}
+
+/* ==========================================================================
+   MODAL CLOSE BUTTONS 100% RELIABLE POINTER EVENTS & Z-INDEX
+========================================================================== */
+.rsm-close,
+.lux-modal-close,
+.pm-close-btn,
+#btnCloseRouteSearch,
+#btnCloseBusGuide,
+#modalClose {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  z-index: 9999999 !important;
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.rsm-close *,
+.lux-modal-close *,
+.pm-close-btn *,
+#btnCloseRouteSearch *,
+#btnCloseBusGuide *,
+#modalClose * {
+  pointer-events: none !important;
+}

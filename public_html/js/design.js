@@ -605,3 +605,34 @@ $(function() {
       $('.ms-all-text').text(tabLabel || 'Filtered');
     }
   });
+
+
+  /* UNIFIED MODAL MANAGER & ESC KEY SUPPORT */
+  function closeAllModals() {
+    $('#routeSearchModal').removeClass('open').fadeOut(150).css('display', 'none');
+    $('#busGuideOverlay').removeClass('open').fadeOut(150).css('display', 'none');
+    $('#modalBackdrop').removeClass('open').fadeOut(150).css('display', 'none');
+    $('html, body').removeClass('modal-lock');
+    $('body').removeClass('modal-lock');
+  }
+
+  $(document).on('click', '#btnCloseRouteSearch, #btnCloseBusGuide, #modalClose, .lux-modal-close, .rsm-close, .pm-close-btn', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    closeAllModals();
+  });
+
+  $(document).on('click', '#routeSearchModal, #busGuideOverlay, #modalBackdrop', function(e) {
+    if ($(e.target).is('#routeSearchModal, #busGuideOverlay, #modalBackdrop') || 
+        $(e.target).hasClass('route-search-modal-overlay') || 
+        $(e.target).hasClass('bus-guide-overlay') || 
+        $(e.target).hasClass('portfolio-modal-backdrop')) {
+      closeAllModals();
+    }
+  });
+
+  $(document).on('keydown', function(e) {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      closeAllModals();
+    }
+  });
