@@ -62,7 +62,6 @@ if (empty($list)) {
     array('id'=>20, 'category'=>'did', 'title'=>'광천터미널 & 지하철 환승역 고휘도 DID 전자현수막', 'thumb'=>'/images/bs_ad/did_02.jpg')
   );
 }
-}
 
 $total = count($list);
 
