@@ -73,8 +73,123 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/header.php";?>
   
-    <!-- ============================================
-       02 SECTION 01 : 시내버스 광고 (VISUAL 3-SIDE WIDE SHOWCASE)
+  <!-- ============================================
+       01 HERO STAGE : GSAP 1.2S SYMMETRIC SILKY SCROLL HERO
+  ============================================ -->
+  <section class="main_hero" id="hero">
+    <div class="main_hero_text_wrap">
+      <h1 class="main_hero_text">
+        보여주는 광고보다<br>
+        이해되는 광고를 만듭니다.
+      </h1>
+      <div class="main_hero_keywords">
+        <a href="#bus" class="mhk-pill">버스 광고</a>
+        <a href="#other" class="mhk-pill">택시 광고</a>
+        <a href="#online" class="mhk-pill">온라인·SNS</a>
+        <a href="#video" class="mhk-pill">영상제작</a>
+        <a href="#online" class="mhk-pill">병원 마케팅</a>
+      </div>
+    </div>
+
+    <div class="main_hero_panel_wrap">
+      <div class="main_hero_panel">
+        <div class="main_hero_panel_video_wrap">
+          <video autoplay muted loop playsinline class="main_hero_panel_video">
+            <source src="/images/movie.mp4" type="video/mp4">
+          </video>
+          <div class="main_hero_panel_dim"></div>
+          <div class="main_hero_panel_overlay_text">
+            <div class="mho-text-box">
+              <h2 class="mho-title">
+                보여주는 광고보다<br>
+                이해되는 광고를 만듭니다.
+              </h2>
+              <p class="mho-sub">
+                광주 시내버스 104개 전 노선 맞춤 배차 · 네이버 1위 마케팅 · 4K 시네마틱 프로덕션
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       01-B ABOUT STATS SECTION (CLEAN LIGHT BACKGROUND)
+  ============================================ -->
+  <section class="am-about-stats-sec">
+    <div class="aas-silk-canvas">
+      <svg class="aas-silk-svg" viewBox="0 0 1600 600" fill="none" preserveAspectRatio="none">
+        <path class="silk-line line-1" d="M-100,220 C350,60 700,380 1150,140 C1400,-20 1550,220 1750,160" stroke="#e8edf4" stroke-width="1.1" stroke-linecap="round" />
+        <path class="silk-line line-2" d="M-80,360 C320,180 780,460 1180,240 C1420,80 1560,340 1780,260" stroke="#edf2f7" stroke-width="0.9" stroke-linecap="round" />
+      </svg>
+    </div>
+
+    <div class="am-container" style="position:relative; z-index:2;">
+      <div class="aas-top-row wow fadeInUp" data-wow-duration="0.8s">
+        <div class="aas-headline-col">
+          <div class="aas-kicker-line">
+            <span class="akl-dash"></span>
+            <span class="akl-text">ABOUT GAON-N</span>
+          </div>
+          <h2 class="aas-main-title">
+            우리는 광고의<br>
+            <span class="aas-blue-highlight">오프라인과 온라인을 잇는</span><br>
+            통합 마케팅 파트너입니다.
+          </h2>
+        </div>
+
+        <div class="aas-watermark-col">
+          <div class="awc-huge-text">BUS</div>
+          <div class="awc-huge-text">TAXI</div>
+          <div class="awc-huge-text bold">ONLINE</div>
+        </div>
+      </div>
+
+      <div class="aas-cards-grid wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.15s">
+        <div class="aas-stat-card">
+          <span class="asc-label">누적 광고 집행</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="500">500</strong><span class="asc-plus">+</span>
+          </div>
+          <span class="asc-unit">건</span>
+        </div>
+        <div class="aas-stat-card">
+          <span class="asc-label">운행 광고 차량</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="200">200</strong><span class="asc-plus">+</span>
+          </div>
+          <span class="asc-unit">대</span>
+        </div>
+        <div class="aas-stat-card">
+          <span class="asc-label">광주 지역 서비스</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="10">10</strong>
+          </div>
+          <span class="asc-unit">년</span>
+        </div>
+        <div class="aas-stat-card">
+          <span class="asc-label">고객 재계약률</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="98">98</strong>
+          </div>
+          <span class="asc-unit">%</span>
+        </div>
+        <div class="aas-stat-card">
+          <span class="asc-label">협력 매체사</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="50">50</strong><span class="asc-plus">+</span>
+          </div>
+          <span class="asc-unit">곳</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       02 SECTION 01 : 시내버스 광고 (ADVANTAGES FIRST + 3-SIDE SHOWCASE + ROUTE CHIPS)
   ============================================ -->
   <section class="am-section am-bg-slate" id="bus">
     <div class="am-container">
@@ -97,7 +212,60 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- 1. VISUAL 3-SIDE WIDE SHOWCASE CONSOLE -->
+      <!-- 1. [핵심 장점 우선 배치] 3대 직영 가치 벤토 카드 (ADVANTAGES FIRST) -->
+      <div class="am-full-visual-grid-3 wow fadeInUp" data-wow-duration="0.8s" style="margin-bottom:32px;">
+        
+        <div class="afv-card">
+          <img src="/images/sample_bus.jpg" alt="104개 노선 맞춤 배차">
+          <div class="afv-scrim"></div>
+          <div class="afv-overlay-content">
+            <div class="afv-badge-row">
+              <span class="afv-pill blue">01 / FLEET DIRECT</span>
+              <div class="afv-icon-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/><path d="M7 3v7"/><path d="M17 3v7"/></svg>
+              </div>
+            </div>
+            <h3 class="afv-title">광주 104개 전 노선 맞춤 직영 배차</h3>
+            <p class="afv-desc">상무·수완·봉선·첨단 등 사업장 타깃 상권을 관통하는 최적의 노선 믹스 설계</p>
+            <div class="afv-footer-stat">광주 5개 구 1,000여 대 시내버스 네트워크 운영</div>
+          </div>
+        </div>
+
+        <div class="afv-card">
+          <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="1일 18시간 노출">
+          <div class="afv-scrim"></div>
+          <div class="afv-overlay-content">
+            <div class="afv-badge-row">
+              <span class="afv-pill blue">02 / 18H EXPOSURE</span>
+              <div class="afv-icon-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><path d="M22 12A10 10 0 0 0 12 2"/></svg>
+              </div>
+            </div>
+            <h3 class="afv-title">1일 18시간 · 일 150만 시민 눈높이 노출</h3>
+            <p class="afv-desc">도심 주요 간선도로와 교차로를 쉼 없이 순환하며 운전자와 보행자 시선 정면 강제 노출</p>
+            <div class="afv-footer-stat">차도면 3.7m + 인도면 3.0m + 후면 2.4m 3면 패키지</div>
+          </div>
+        </div>
+
+        <div class="afv-card">
+          <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="LG 정품 솔벤 시공">
+          <div class="afv-scrim"></div>
+          <div class="afv-overlay-content">
+            <div class="afv-badge-row">
+              <span class="afv-pill blue">03 / PREMIUM PRINT</span>
+              <div class="afv-icon-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              </div>
+            </div>
+            <h3 class="afv-title">LG 하우시스 정품 솔벤 &amp; 100% 직영 시공</h3>
+            <p class="afv-desc">외주 없는 본사 10년 경력팀 직접 시공 및 시공 직후 번호판 4면 실사 즉시 보고</p>
+            <div class="afv-footer-stat">시공 직후 차량 4면 번호판 실사 즉시 전송</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 2. 3-SIDE WIDE PHOTOGRAPHIC SHOWCASE -->
       <div class="am-bus-wide-showcase wow fadeInUp" data-wow-duration="0.8s">
         
         <!-- SPEC SELECTION TABS -->
@@ -192,7 +360,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <!-- 2. GWANGJU 4 MAJOR DISTRICT GOLDEN ROUTE CHIPS -->
+      <!-- 3. GWANGJU 4 MAJOR DISTRICT GOLDEN ROUTE CHIPS -->
       <div class="am-district-chips-deck wow fadeInUp" data-wow-duration="0.8s">
         <div class="adc-title-wrap">
           <span class="adc-kicker">TARGET DISTRICT</span>
@@ -237,59 +405,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- 3. 3-PILLAR GAON-N VALUE BENTO CARDS -->
-      <div class="am-full-visual-grid-3 wow fadeInUp" data-wow-duration="0.8s">
-        
-        <div class="afv-card">
-          <img src="/images/sample_bus.jpg" alt="104개 노선 맞춤 배차">
-          <div class="afv-scrim"></div>
-          <div class="afv-overlay-content">
-            <div class="afv-badge-row">
-              <span class="afv-pill blue">01 / FLEET DIRECT</span>
-              <div class="afv-icon-badge">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/><path d="M7 3v7"/><path d="M17 3v7"/></svg>
-              </div>
-            </div>
-            <h3 class="afv-title">광주 104개 전 노선 맞춤 직영 배차</h3>
-            <p class="afv-desc">상무·수완·봉선·첨단 등 사업장 타깃 상권을 관통하는 최적의 노선 믹스 설계</p>
-            <div class="afv-footer-stat">광주 5개 구 1,000여 대 시내버스 네트워크 운영</div>
-          </div>
-        </div>
-
-        <div class="afv-card">
-          <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="1일 18시간 노출">
-          <div class="afv-scrim"></div>
-          <div class="afv-overlay-content">
-            <div class="afv-badge-row">
-              <span class="afv-pill blue">02 / 18H EXPOSURE</span>
-              <div class="afv-icon-badge">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><path d="M22 12A10 10 0 0 0 12 2"/></svg>
-              </div>
-            </div>
-            <h3 class="afv-title">1일 18시간 · 일 150만 시민 눈높이 노출</h3>
-            <p class="afv-desc">도심 주요 간선도로와 교차로를 쉼 없이 순환하며 운전자와 보행자 시선 정면 강제 노출</p>
-            <div class="afv-footer-stat">차도면 3.7m + 인도면 3.0m + 후면 2.4m 3면 패키지</div>
-          </div>
-        </div>
-
-        <div class="afv-card">
-          <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="LG 정품 솔벤 시공">
-          <div class="afv-scrim"></div>
-          <div class="afv-overlay-content">
-            <div class="afv-badge-row">
-              <span class="afv-pill blue">03 / PREMIUM PRINT</span>
-              <div class="afv-icon-badge">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-              </div>
-            </div>
-            <h3 class="afv-title">LG 하우시스 정품 솔벤 &amp; 100% 직영 시공</h3>
-            <p class="afv-desc">외주 없는 본사 10년 경력팀 직접 시공 및 시공 직후 번호판 4면 실사 즉시 보고</p>
-            <div class="afv-footer-stat">시공 직후 차량 4면 번호판 실사 즉시 전송</div>
-          </div>
-        </div>
-
-      </div>
-
       <!-- 4. RECENT BUS PORTFOLIO SHOWCASE STRIP -->
       <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s">
         <div class="asps-head">
@@ -322,7 +437,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </section>
 
-  <!-- ============================================ 
+
+  <!-- ============================================
        03 SECTION 02 : 온라인 마케팅 (BIG FULL-IMAGE SCREEN CAPTURE SHOWCASE)
   ============================================ -->
   <section class="am-section" id="online">
@@ -466,7 +582,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       04 SECTION 03 : 영상제작 (SMARTPHONE MOCKUP & CINEMA CENTER STAGE)
+       04 SECTION 03 : 영상제작 (SMARTPHONE MOCKUP & CINEMA VIEWFINDER)
   ============================================ -->
   <section class="am-section am-bg-dark am-video-ambient-sec" id="video">
     <div class="avs-ambient-bg">
@@ -479,15 +595,13 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-sec-head dark-head text-center wow fadeInUp" data-wow-duration="0.7s">
         <span class="ash-kicker gold">03 / 4K CINEMATIC &amp; SHORTS PRODUCTION</span>
         <h2 class="ash-title white">영상제작 솔루션</h2>
-        <p class="ash-desc light" style="margin:0 auto;">기업·상급병원 4K 브랜드 필름부터 9:16 모바일 릴스까지 인하우스 프로덕션이 맞춤 제작합니다.</p>
+        <p class="ash-desc light" style="margin:0 auto;">기업·상급병원 4K 브랜드 필름부터 9:16 모바일 릴스까지 인하우스 프로덕션이 기획·촬영·편집을 원스톱으로 제작합니다.</p>
       </div>
 
       <!-- VIDEO PRODUCTION VISUAL CENTER STAGE -->
       <div class="am-video-hero-stage wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- MODE SWITCHER TABS -->
-                <!-- HIGH-END SVG PICTOGRAM SEGMENT SWITCHER -->
-                <!-- HIGH-END SVG PICTOGRAM SEGMENT SWITCHER (CENTERED) -->
+        <!-- HIGH-END SVG PICTOGRAM SEGMENT SWITCHER (CENTERED) -->
         <div class="avh-switcher-center-box">
           <div class="avh-mode-switcher">
             <button type="button" class="avh-mode-btn on" data-video-mode="wide">
@@ -859,11 +973,11 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       08 GAON-N GET STARTED MASTER CTA STAGE (CLEAN STATIC)
+       08 GAON-N GET STARTED MASTER CTA STAGE (CLEAN STATIC & VIBRANT FLOAT)
   ============================================ -->
   <section class="am-get-started-sec" id="getStarted">
     
-    <!-- 4 STATIC AMBIENT PILLS (NO HEADACHE / NO FAST BOUNCING) -->
+    <!-- 4 VIBRANT AMBIENT PILLS (BIGGER & CLOSER TO CENTER) -->
     <div class="ags-floating-pill pill-top-left">
       <span class="afp-dot green"></span>
       <span class="afp-text">지금 바로 상담해보세요</span>
@@ -876,7 +990,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
     <div class="ags-floating-pill pill-bottom-left">
       <span class="afp-icon-clock">⏱</span>
-      <span class="afp-text">광주 500+ 광주 신뢰</span>
+      <span class="afp-text">광주 500+ 신뢰 대행사</span>
     </div>
 
     <div class="ags-floating-pill pill-bottom-right">
@@ -910,7 +1024,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       10 LUXURY DIRECTORY: 104 BUS ROUTES SEARCH MODAL
+       10 LUXURY DIRECTORY: 104 BUS ROUTES SEARCH MODAL (CLEAN 2-COLUMN ALIGNMENT)
   ============================================ -->
   <div class="route-search-modal-overlay" id="routeSearchModal">
     <div class="rsm-panel">
@@ -925,7 +1039,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       <div class="rsm-body">
         <div class="rsm-search-bar">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           <input type="text" id="modalBusRouteSearchInput" placeholder="노선 번호 또는 경유 상권 검색 (예: 순환01, 상무지구, 봉선동, 첨단, 수완, 전남대)">
         </div>
 
@@ -941,7 +1055,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
 
         <div class="rsm-directory-list" id="modalBusRouteFullGrid">
-          <!-- Injected dynamically with rich directory styling -->
+          <!-- Injected dynamically with 2-column rich directory styling -->
         </div>
       </div>
 
