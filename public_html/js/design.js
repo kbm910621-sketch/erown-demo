@@ -579,20 +579,29 @@ $(function() {
   });
 
 
-  /* EXACT SCREENSHOT REPLICA TAB FILTER */
+  
+
+  /* EXACT SCREENSHOT REPLICA TAB FILTER & REALTIME DYNAMIC RESULTS COUNT */
   $(document).on('click', '.ms-tab', function() {
     $('.ms-tab').removeClass('on');
     $(this).addClass('on');
     var filter = $(this).data('filter');
     if (filter === 'all') {
-      $('.ms-card').fadeIn(250);
+      $('.ms-card').fadeIn(200);
+      $('#dynResultCount').text($('.ms-card').length);
+      $('.ms-all-text').text('All');
     } else {
+      var count = 0;
       $('.ms-card').each(function() {
         if ($(this).data('cat') === filter) {
-          $(this).fadeIn(250);
+          $(this).fadeIn(200);
+          count++;
         } else {
           $(this).hide();
         }
       });
+      $('#dynResultCount').text(count);
+      var tabLabel = $(this).contents().filter(function() { return this.nodeType === 3; }).text().trim();
+      $('.ms-all-text').text(tabLabel || 'Filtered');
     }
   });

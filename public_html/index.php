@@ -957,7 +957,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       <!-- TOP THIN DIVIDER LINE & RESULTS META -->
       <div class="ms-meta-bar wow fadeInUp" data-wow-duration="0.6s">
-        <span class="ms-results-count"><strong>104</strong> Results</span>
+        <span class="ms-results-count"><strong id="dynResultCount"><?php echo !empty($displayItems) ? count($displayItems) : 8; ?></strong> Results</span>
         <span class="ms-all-text">All</span>
       </div>
 
