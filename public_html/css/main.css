@@ -1532,3 +1532,138 @@ body.modal-lock { overflow:hidden !important; }
     padding: 0 20px !important;
   }
 }
+
+
+/* ==========================================================================
+   MASTER GET STARTED CTA SECTION (RICH DEEP NAVY BLUE BACKGROUND)
+========================================================================== */
+.am-get-started-sec {
+  position: relative !important;
+  width: 100% !important;
+  min-height: 500px !important;
+  padding: 120px 0 130px !important;
+  background: radial-gradient(circle at 50% 50%, #0d214a 0%, #071329 100%) !important;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.08) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.ags-center-box {
+  text-align: center !important;
+  max-width: 680px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+.ags-kicker {
+  display: inline-block !important;
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.18em !important;
+  color: #38bdf8 !important;
+  margin-bottom: 16px !important;
+  text-transform: uppercase !important;
+  font-family: "Poppins", "Pretendard", sans-serif !important;
+}
+
+.ags-title {
+  font-size: 42px !important;
+  font-weight: 900 !important;
+  line-height: 1.3 !important;
+  color: #ffffff !important;
+  letter-spacing: -1px !important;
+  margin: 0 0 32px !important;
+  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif !important;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
+}
+
+.ags-title .ags-highlight {
+  color: #38bdf8 !important;
+}
+
+.ags-cta-wrap {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 8px !important;
+}
+
+.ags-white-pill-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  background: #ffffff !important;
+  color: #07152c !important;
+  padding: 15px 32px 15px 36px !important;
+  border-radius: 100px !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.4px !important;
+  text-decoration: none !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.2) !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
+}
+
+.ags-white-pill-btn:hover {
+  transform: translateY(-4px) scale(1.03) !important;
+  box-shadow: 0 20px 48px rgba(56,189,248,0.35) !important;
+  background: #ffffff !important;
+  color: #1855b7 !important;
+}
+
+.awpb-arrow-circle {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  background: #07152c !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.35s ease !important;
+}
+
+.ags-white-pill-btn:hover .awpb-arrow-circle {
+  transform: translateX(4px) !important;
+  background: #1855b7 !important;
+}
+
+/* 4 VIBRANT FLOATING PILLS ON DEEP NAVY */
+.ags-floating-pill {
+  position: absolute !important;
+  z-index: 3 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  padding: 11px 22px !important;
+  background: rgba(15, 30, 58, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 100px !important;
+  color: #ffffff !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.2px !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.3) !important;
+  animation: floatPill 4s ease-in-out infinite alternate !important;
+  pointer-events: none !important;
+}
+
+.ags-floating-pill.pill-top-left { top: 18% !important; left: 10% !important; animation-delay: 0s !important; }
+.ags-floating-pill.pill-top-right { top: 18% !important; right: 10% !important; animation-delay: 1.2s !important; }
+.ags-floating-pill.pill-bottom-left { bottom: 18% !important; left: 8% !important; animation-delay: 0.6s !important; }
+.ags-floating-pill.pill-bottom-right { bottom: 18% !important; right: 8% !important; animation-delay: 1.8s !important; }
+
+.afp-dot { width: 8px !important; height: 8px !important; border-radius: 50% !important; display: inline-block !important; }
+.afp-dot.green { background: #10b981 !important; box-shadow: 0 0 10px #10b981 !important; }
+.afp-dot.yellow { background: #f59e0b !important; box-shadow: 0 0 10px #f59e0b !important; }
+
+@media(max-width:991px) {
+  .ags-floating-pill { display: none !important; }
+  .am-get-started-sec { padding: 80px 0 !important; min-height: auto !important; }
+  .ags-title { font-size: 30px !important; }
+}
