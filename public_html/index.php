@@ -806,7 +806,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <!-- RIGHT: STICKY BIG PREVIEW VIEWFINDER -->
         <div class="ais-preview-col">
           <div class="ais-sticky-box">
-            <div class="ais-photo-frame main-port-card" id="splitPreviewCard" data-cat="<?php echo htmlspecialchars($list[0]['category'] ?? 'bus'); ?>" data-id="<?php echo $initialHeroId; ?>" data-name="<?php echo htmlspecialchars($initialHeroTitle); ?>">
+            <div class="ais-photo-frame main-port-card" id="splitPreviewCard" data-cat="<?php echo htmlspecialchars(isset($list[0]['category']) ? $list[0]['category'] : 'bus'); ?>" data-id="<?php echo $initialHeroId; ?>" data-name="<?php echo htmlspecialchars($initialHeroTitle); ?>">
               <img src="<?php echo htmlspecialchars($initialHeroImg); ?>" id="dynSplitImg" alt="프로젝트 실사 프리뷰">
               <div class="ais-photo-scrim"></div>
               
