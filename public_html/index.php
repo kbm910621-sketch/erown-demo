@@ -279,6 +279,10 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideBus">
               <span>시내버스 규격 가이드 ↗</span>
             </button>
+            <a href="/pdf/버스외부광고-제안서.pdf" download class="ash-guide-btn pdf-btn" title="시내버스 외부광고 제안서 다운로드">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>버스 제안서(PDF) 📥</span>
+            </a>
           </div>
         </div>
       </div>
@@ -1369,6 +1373,96 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/footer.php";?>
 
 </div>
+
+
+  <!-- ============================================
+       PROPOSAL DOWNLOAD CENTER MODAL
+  ============================================ -->
+  <div class="am-modal-backdrop" id="modalProposalCenter">
+    <div class="am-modal-box am-modal-lg">
+      <div class="am-modal-head">
+        <div class="amh-title-wrap">
+          <span class="amh-kicker">MEDIA KIT &amp; PROPOSAL</span>
+          <h3 class="amh-title">가온엔 공식 매체소개서 &amp; 제안서 다운로드</h3>
+          <p class="amh-sub">광주 시내버스, 택시, 음성방송 등 가온엔의 2026 공식 매체 제안서(PDF)를 다운로드하세요.</p>
+        </div>
+        <button type="button" class="am-modal-close" id="btnCloseProposalModal">✕</button>
+      </div>
+
+      <div class="am-modal-body">
+        <div class="amp-proposal-grid">
+          
+          <div class="amp-card">
+            <div class="amp-icon-box">🚌</div>
+            <div class="amp-info">
+              <span class="amp-tag">시내버스</span>
+              <strong class="amp-title">시내버스 외부광고 제안서</strong>
+              <p class="amp-desc">차도면(3.7m)·인도면(3.0m)·후면(2.4m) 실측 규격 및 노선별 배차 안내</p>
+            </div>
+            <a href="/pdf/버스외부광고-제안서.pdf" download class="amp-down-btn">
+              <span>PDF 다운로드 📥</span>
+            </a>
+          </div>
+
+          <div class="amp-card">
+            <div class="amp-icon-box">🪟</div>
+            <div class="amp-info">
+              <span class="amp-tag">시내버스</span>
+              <strong class="amp-title">시내버스 내부광고 제안서</strong>
+              <p class="amp-desc">중앙창문, 하차문 사랑면, 천정 및 시트커버 포스터 규격 및 단가표</p>
+            </div>
+            <a href="/pdf/버스내부광고-제안서.pdf" download class="amp-down-btn">
+              <span>PDF 다운로드 📥</span>
+            </a>
+          </div>
+
+          <div class="amp-card">
+            <div class="amp-icon-box">🎙️</div>
+            <div class="amp-info">
+              <span class="amp-tag">음성안내</span>
+              <strong class="amp-title">시내버스 음성광고 제안서</strong>
+              <p class="amp-desc">정류소 도착 전 성우 더빙 음성 송출(7초/56자) 운영 가이드 및 노선 목록</p>
+            </div>
+            <a href="/pdf/버스음성광고-제안서.pdf" download class="amp-down-btn">
+              <span>PDF 다운로드 📥</span>
+            </a>
+          </div>
+
+          <div class="amp-card">
+            <div class="amp-icon-box">🚕</div>
+            <div class="amp-info">
+              <span class="amp-tag">특화매체</span>
+              <strong class="amp-title">광주 택시광고 제안서</strong>
+              <p class="amp-desc">법인·개인택시 양측면 래핑 규격(2,000×370mm) 및 일 24시간 도심 노출 효과</p>
+            </div>
+            <a href="/pdf/택시광고제안서.pdf" download class="amp-down-btn">
+              <span>PDF 다운로드 📥</span>
+            </a>
+          </div>
+
+          <div class="amp-card">
+            <div class="amp-icon-box">🚍</div>
+            <div class="amp-info">
+              <span class="amp-tag">시외·후면</span>
+              <strong class="amp-title">나주 시내버스 후면광고 제안서</strong>
+              <p class="amp-desc">혁신도시 및 나주-광주 광역 간선버스 후면 와이드 래핑 단독 패키지</p>
+            </div>
+            <a href="/pdf/나주후면광고-제안서.pdf" download class="amp-down-btn">
+              <span>PDF 다운로드 📥</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="am-modal-foot" style="display:flex; justify-content:space-between; align-items:center;">
+        <span style="font-size:13.5px; color:#64748b; font-weight:700;">맞춤형 통합 패키지 제안서 및 단가 견적은 온라인 상담을 통해 즉시 발송해 드립니다.</span>
+        <a href="/board/estmate/write.php" class="am-more-btn" style="padding:10px 20px; font-size:13.5px;">
+          <span>1:1 맞춤 견적 신청하기 ↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

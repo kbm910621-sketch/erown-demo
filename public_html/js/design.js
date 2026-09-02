@@ -457,3 +457,16 @@ $(function() {
   });
 
 });
+
+
+  /* 07. PROPOSAL CENTER MODAL */
+  $(document).on('click', '#btnOpenProposalCenter, .btn-open-proposal-center', function(e) {
+    e.preventDefault();
+    $('#modalProposalCenter').fadeIn(200);
+    $('body').css('overflow', 'hidden');
+  });
+
+  $(document).on('click', '#btnCloseProposalModal', function() {
+    $('#modalProposalCenter').fadeOut(200);
+    $('body').css('overflow', '');
+  });
