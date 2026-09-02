@@ -1712,3 +1712,55 @@ body.modal-lock { overflow:hidden !important; }
   .ags-cta-wrap { flex-direction: column !important; width: 100% !important; }
   .ags-white-pill-btn, .ags-call-outline-btn { width: 100% !important; justify-content: center !important; }
 }
+
+
+/* ==========================================================================
+   DYNAMIC HIGH-AMPLITUDE UP & DOWN FLOATING PILLS MOTION (상하 진폭 대폭 강화)
+========================================================================== */
+.ags-floating-pill.pill-top-left {
+  top: 15% !important;
+  left: 6% !important;
+  animation: floatPill1 3.6s ease-in-out infinite alternate !important;
+}
+
+.ags-floating-pill.pill-top-right {
+  top: 15% !important;
+  right: 6% !important;
+  animation: floatPill2 4.2s ease-in-out infinite alternate !important;
+}
+
+.ags-floating-pill.pill-bottom-left {
+  bottom: 15% !important;
+  left: 6% !important;
+  animation: floatPill3 3.9s ease-in-out infinite alternate !important;
+}
+
+.ags-floating-pill.pill-bottom-right {
+  bottom: 15% !important;
+  right: 6% !important;
+  animation: floatPill4 4.5s ease-in-out infinite alternate !important;
+}
+
+@keyframes floatPill1 {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(-1deg); }
+  100% { transform: translateY(-24px) rotate(-2deg); }
+}
+
+@keyframes floatPill2 {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-16px) rotate(1.2deg); }
+  100% { transform: translateY(-26px) rotate(2deg); }
+}
+
+@keyframes floatPill3 {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+  100% { transform: translateY(-22px) rotate(1.8deg); }
+}
+
+@keyframes floatPill4 {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(-1deg); }
+  100% { transform: translateY(-25px) rotate(-1.8deg); }
+}
