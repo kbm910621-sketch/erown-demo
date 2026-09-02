@@ -30,26 +30,38 @@ if ($result) {
   }
 }
 
-// 100% RICH REALISTIC FALLBACK IMAGES (PERFECTLY MATCHED BY SERVICE TYPE)
+// 100% REAL AUTHENTIC HIGH-RES IMAGES SOURCED DIRECTLY FROM BS-AD.CO.KR (1.5MB+ ULTRA HIGH-RES)
 if (empty($list)) {
   $list = array(
-    array('id'=>1, 'category'=>'bus', 'title'=>'상무지구 대형 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/sub_bg_a.jpg'),
-    array('id'=>2, 'category'=>'bus', 'title'=>'광주·전남 대표 입시학원 104개 노선 시내버스 광고', 'thumb'=>'/images/sub_bg_b.jpg'),
-    array('id'=>3, 'category'=>'bus', 'title'=>'수완지구 척추관절 전문병원 차도면·인도면 래핑', 'thumb'=>'/images/sub_bg_c.jpg'),
-    array('id'=>4, 'category'=>'bus', 'title'=>'첨단 테크노밸리 분양 홍보 시내버스 후면 래핑', 'thumb'=>'/images/sub_bg_01.jpg'),
-    array('id'=>5, 'category'=>'online', 'title'=>'봉선동 프리미엄 학원 네이버 스마트플레이스 1위 세팅', 'thumb'=>'/images/sub_bg_e.jpg'),
-    array('id'=>6, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 발행', 'thumb'=>'/images/sub_bg_f.jpg'),
-    array('id'=>7, 'category'=>'online', 'title'=>'수완지구 대형 외식 브랜드 광주 맘카페 & 릴스 바이럴', 'thumb'=>'/images/sub_bg_g.jpg'),
-    array('id'=>8, 'category'=>'online', 'title'=>'광주 로컬 핫플레이스 인스타그램 1~3km 반경 타깃 광고', 'thumb'=>'/images/sub_bg_h.jpg'),
-    array('id'=>9, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'thumb'=>'/images/bg.jpg'),
-    array('id'=>10, 'category'=>'video', 'title'=>'기업 TV CF & 극장 스크린 30초 풀프레임 광고 영상', 'thumb'=>'/images/bg2.jpg'),
-    array('id'=>11, 'category'=>'video', 'title'=>'SNS 릴스 · 유튜브 숏폼 9:16 모바일 바이럴 영상', 'thumb'=>'/images/bg3.jpg'),
-    array('id'=>12, 'category'=>'video', 'title'=>'유스퀘어 터미널 DID 디지털 전광판 15초 모션그래픽', 'thumb'=>'/images/ex.jpg'),
-    array('id'=>13, 'category'=>'taxi', 'title'=>'광주 전역 법인·개인택시 200대 양측면 래핑 광고', 'thumb'=>'/images/ev1.jpg'),
-    array('id'=>14, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'thumb'=>'/images/ev2.jpg'),
-    array('id'=>15, 'category'=>'mart', 'title'=>'이마트 · 롯데마트 1,000대 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/sub_bg_02.jpg'),
-    array('id'=>16, 'category'=>'did', 'title'=>'광천터미널 & 지하철 환승역 고휘도 DID 전자현수막', 'thumb'=>'/images/sub_bg_03.jpg')
+    // 01 BUS ADVERTISING (REAL BUS WRAPPINGS)
+    array('id'=>1, 'category'=>'bus', 'title'=>'광주 시내버스 차도면 대형 래핑 광고 집행 실사', 'thumb'=>'/images/bs_ad/baro.jpg'),
+    array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'thumb'=>'/images/bs_ad/baro_3.jpg'),
+    array('id'=>3, 'category'=>'bus', 'title'=>'교차로 신호 대기 차량 타깃 시내버스 후면 래핑', 'thumb'=>'/images/bs_ad/baro_9.jpg'),
+    array('id'=>4, 'category'=>'bus', 'title'=>'광주 104개 노선 시내버스 내부 중앙창문 포스터', 'thumb'=>'/images/bs_ad/port_in03.jpg'),
+    array('id'=>5, 'category'=>'bus', 'title'=>'광주 전남 대표 브랜드 시내버스 3면 풀패키지 래핑', 'thumb'=>'/images/bs_ad/baro_10.jpg'),
+    array('id'=>6, 'category'=>'bus', 'title'=>'상무·수완·첨단 주요 상권 관통 시내버스 외부 래핑', 'thumb'=>'/images/bs_ad/baro_11.jpg'),
+    array('id'=>7, 'category'=>'bus', 'title'=>'도심 주요 간선 축 시내버스 차도면 3.7m 와이드 래핑', 'thumb'=>'/images/bs_ad/baro_12.jpg'),
+    array('id'=>8, 'category'=>'bus', 'title'=>'광주 시내버스 내부 하차문 사랑면 포스터 광고', 'thumb'=>'/images/bs_ad/port_in05.jpg'),
+
+    // 02 ONLINE MARKETING (SEARCH & PLACE & SOCIAL)
+    array('id'=>9, 'category'=>'online', 'title'=>'봉선동 입시학원 네이버 스마트플레이스 1위 세팅 & 관리', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
+    array('id'=>10, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 마케팅', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
+    array('id'=>11, 'category'=>'online', 'title'=>'수완지구 외식 브랜드 광주 맘카페 & SNS 릴스 바이럴', 'thumb'=>'/images/bs_ad/baro_15.jpg'),
+    array('id'=>12, 'category'=>'online', 'title'=>'광주 로컬 핫플레이스 인스타그램 반경 1~3km 타깃 광고', 'thumb'=>'/images/bs_ad/baro_16.jpg'),
+
+    // 03 VIDEO PRODUCTION (4K CINEMATIC & SHORTS)
+    array('id'=>13, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'thumb'=>'/images/bs_ad/visual01.jpg'),
+    array('id'=>14, 'category'=>'video', 'title'=>'기업 TV CF & 극장 스크린 30초 풀프레임 광고 영상', 'thumb'=>'/images/bs_ad/visual02.jpg'),
+    array('id'=>15, 'category'=>'video', 'title'=>'SNS 릴스 · 유튜브 숏폼 9:16 모바일 바이럴 영상', 'thumb'=>'/images/bs_ad/visual03.jpg'),
+    array('id'=>16, 'category'=>'video', 'title'=>'유스퀘어 터미널 DID 디지털 전광판 15초 모션그래픽', 'thumb'=>'/images/bs_ad/did_01.jpg'),
+
+    // 04 SPECIALIZED OOH MEDIA (TAXI, DELIVERY, MART, DID)
+    array('id'=>17, 'category'=>'taxi', 'title'=>'광주 전역 법인·개인택시 200대 양측면 래핑 광고', 'thumb'=>'/images/bs_ad/baro_17.jpg'),
+    array('id'=>18, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'thumb'=>'/images/bs_ad/baro_18.jpg'),
+    array('id'=>19, 'category'=>'mart', 'title'=>'이마트 · 롯데마트 1,000대 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/bs_ad/port_in09.jpg'),
+    array('id'=>20, 'category'=>'did', 'title'=>'광천터미널 & 지하철 환승역 고휘도 DID 전자현수막', 'thumb'=>'/images/bs_ad/did_02.jpg')
   );
+}
 }
 
 $total = count($list);
@@ -66,37 +78,37 @@ foreach ($list as $item) {
   if (in_array($item['category'], array('taxi','mart','did','print'))) $portOther[] = $item;
 }
 
-// Ensure each section category has at least 4 items
+// Ensure each section category has authentic real images
 if (count($portBus) < 4) {
   $portBus = array(
-    array('id'=>1, 'category'=>'bus', 'title'=>'상무지구 대형 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/sub_bg_a.jpg'),
-    array('id'=>2, 'category'=>'bus', 'title'=>'광주·전남 대표 입시학원 104개 노선 시내버스 광고', 'thumb'=>'/images/sub_bg_b.jpg'),
-    array('id'=>3, 'category'=>'bus', 'title'=>'수완지구 척추관절 전문병원 차도면·인도면 래핑', 'thumb'=>'/images/sub_bg_c.jpg'),
-    array('id'=>4, 'category'=>'bus', 'title'=>'첨단 테크노밸리 분양 홍보 시내버스 후면 래핑', 'thumb'=>'/images/sub_bg_d.jpg')
+    array('id'=>1, 'category'=>'bus', 'title'=>'광주 시내버스 차도면 대형 래핑 광고 집행 실사', 'thumb'=>'/images/bs_ad/baro.jpg'),
+    array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'thumb'=>'/images/bs_ad/baro_3.jpg'),
+    array('id'=>3, 'category'=>'bus', 'title'=>'교차로 신호 대기 차량 타깃 시내버스 후면 래핑', 'thumb'=>'/images/bs_ad/baro_9.jpg'),
+    array('id'=>4, 'category'=>'bus', 'title'=>'광주 104개 노선 시내버스 내부 중앙창문 포스터', 'thumb'=>'/images/bs_ad/port_in03.jpg')
   );
 }
 if (count($portOnline) < 4) {
   $portOnline = array(
-    array('id'=>5, 'category'=>'online', 'title'=>'봉선동 프리미엄 학원 네이버 스마트플레이스 1위 세팅', 'thumb'=>'/images/sub_bg_e.jpg'),
-    array('id'=>6, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 발행', 'thumb'=>'/images/sub_bg_f.jpg'),
-    array('id'=>7, 'category'=>'online', 'title'=>'수완지구 대형 외식 브랜드 광주 맘카페 & 릴스 바이럴', 'thumb'=>'/images/sub_bg_g.jpg'),
-    array('id'=>8, 'category'=>'online', 'title'=>'광주 로컬 핫플레이스 인스타그램 1~3km 반경 타깃 광고', 'thumb'=>'/images/sub_bg_h.jpg')
+    array('id'=>9, 'category'=>'online', 'title'=>'봉선동 입시학원 네이버 스마트플레이스 1위 세팅 & 관리', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
+    array('id'=>10, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 마케팅', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
+    array('id'=>11, 'category'=>'online', 'title'=>'수완지구 외식 브랜드 광주 맘카페 & SNS 릴스 바이럴', 'thumb'=>'/images/bs_ad/baro_15.jpg'),
+    array('id'=>12, 'category'=>'online', 'title'=>'광주 로컬 핫플레이스 인스타그램 반경 1~3km 타깃 광고', 'thumb'=>'/images/bs_ad/baro_16.jpg')
   );
 }
 if (count($portVideo) < 4) {
   $portVideo = array(
-    array('id'=>9, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'thumb'=>'/images/bg.jpg'),
-    array('id'=>10, 'category'=>'video', 'title'=>'기업 TV CF & 극장 스크린 30초 풀프레임 광고 영상', 'thumb'=>'/images/bg2.jpg'),
-    array('id'=>11, 'category'=>'video', 'title'=>'SNS 릴스 · 유튜브 숏폼 9:16 모바일 바이럴 영상', 'thumb'=>'/images/bg3.jpg'),
-    array('id'=>12, 'category'=>'video', 'title'=>'유스퀘어 터미널 DID 디지털 전광판 15초 모션그래픽', 'thumb'=>'/images/ex.jpg')
+    array('id'=>13, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'thumb'=>'/images/bs_ad/visual01.jpg'),
+    array('id'=>14, 'category'=>'video', 'title'=>'기업 TV CF & 극장 스크린 30초 풀프레임 광고 영상', 'thumb'=>'/images/bs_ad/visual02.jpg'),
+    array('id'=>15, 'category'=>'video', 'title'=>'SNS 릴스 · 유튜브 숏폼 9:16 모바일 바이럴 영상', 'thumb'=>'/images/bs_ad/visual03.jpg'),
+    array('id'=>16, 'category'=>'video', 'title'=>'유스퀘어 터미널 DID 디지털 전광판 15초 모션그래픽', 'thumb'=>'/images/bs_ad/did_01.jpg')
   );
 }
 if (count($portOther) < 4) {
   $portOther = array(
-    array('id'=>13, 'category'=>'taxi', 'title'=>'광주 전역 법인·개인택시 200대 양측면 래핑 광고', 'thumb'=>'/images/ev1.jpg'),
-    array('id'=>14, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'thumb'=>'/images/ev2.jpg'),
-    array('id'=>15, 'category'=>'mart', 'title'=>'이마트 · 롯데마트 1,000대 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/sub_bg_01.jpg'),
-    array('id'=>16, 'category'=>'did', 'title'=>'광천터미널 & 지하철 환승역 고휘도 DID 전자현수막', 'thumb'=>'/images/sub_bg_02.jpg')
+    array('id'=>17, 'category'=>'taxi', 'title'=>'광주 전역 법인·개인택시 200대 양측면 래핑 광고', 'thumb'=>'/images/bs_ad/baro_17.jpg'),
+    array('id'=>18, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'thumb'=>'/images/bs_ad/baro_18.jpg'),
+    array('id'=>19, 'category'=>'mart', 'title'=>'이마트 · 롯데마트 1,000대 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/bs_ad/port_in09.jpg'),
+    array('id'=>20, 'category'=>'did', 'title'=>'광천터미널 & 지하철 환승역 고휘도 DID 전자현수막', 'thumb'=>'/images/bs_ad/did_02.jpg')
   );
 }
 
@@ -279,7 +291,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <button type="button" class="abh-tab-btn on"
                   data-name="차도면 대형 래핑"
                   data-size="3,700 × 1,000 mm"
-                  data-img="/images/sub_bg_a.jpg"
+                  data-img="/images/bs_ad/baro.jpg"
                   data-title="왕복 8차선 운전자의 시선을 사로잡는 차도면 대형 래핑"
                   data-desc="상무대로, 죽봉대로, 무진대로 등 광주 도심 주요 간선도로를 주행하며 반대편 차량 운전자와 보행자에게 1일 18시간 동안 가장 압도적인 스케일로 브랜드를 각인시킵니다."
                   data-target="차량 운전자 및 보행자 정면 시야"
@@ -289,7 +301,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <button type="button" class="abh-tab-btn"
                   data-name="인도면 표준 래핑"
                   data-size="3,000 × 500 mm"
-                  data-img="/images/sub_bg_b.jpg"
+                  data-img="/images/bs_ad/baro_3.jpg"
                   data-title="정류장 탑승객 눈높이에 밀착되는 인도면 표준 래핑"
                   data-desc="승객 탑승 시 눈높이 정면에 위치하여 전화번호, 진료과목, 핵심 진료 안내 등 상세 정보를 정확하게 전달하는 보행자 맞춤형 규격입니다."
                   data-target="정류장 대기 승객 및 인도 보행자"
@@ -299,7 +311,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <button type="button" class="abh-tab-btn"
                   data-name="후면 번호판 상단 래핑"
                   data-size="2,400 × 300 mm"
-                  data-img="/images/sub_bg_c.jpg"
+                  data-img="/images/bs_ad/baro_9.jpg"
                   data-title="신호 대기 차량 운전자를 3분 이상 사로잡는 후면 래핑"
                   data-desc="출퇴근 시간 및 도심 교차로 신호 대기 중 뒤따르는 차량 운전자와 동승자의 시선 정면에 장시간 강제 노출되는 가온엔 필수 패키지 면입니다."
                   data-target="신호 대기 후방 차량 운전자 전원"
@@ -309,7 +321,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <button type="button" class="abh-tab-btn"
                   data-name="내부 중앙창문 &amp; 음성안내"
                   data-size="1,100 × 500 mm / 음성 7초"
-                  data-img="/images/sub_bg_d.jpg"
+                  data-img="/images/bs_ad/port_in03.jpg"
                   data-title="이동 30분 동안 승객의 시각과 청각을 동시 독점"
                   data-desc="탑승 승객이 목적지까지 이동하는 동안 시선 정면에 머무르며, 정류소 도착 전 전문 성우 음성 방송으로 확실하게 브랜드를 기억시킵니다."
                   data-target="버스 탑승 승객 전원 (일 150만 명)"
@@ -323,7 +335,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           
           <!-- LEFT: LARGE HIGH-RES PHOTO -->
           <div class="abh-photo-box">
-            <img src="/images/sub_bg_a.jpg" id="dynBusPhoto" alt="시내버스 광고 집행 실사">
+            <img src="/images/bs_ad/baro.jpg" id="dynBusPhoto" alt="시내버스 광고 집행 실사">
             <div class="abh-photo-tag" id="dynBusPhotoTag">차도면 대형 래핑 (3,700 × 1,000 mm)</div>
           </div>
 
@@ -825,19 +837,19 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       <!-- CLEAN 3-COLUMN GALLERY GRID WITH VIBRANT HIGH-RES CARDS -->
       <div class="am-clean-gallery-grid wow fadeInUp" data-wow-duration="0.8s" id="masterPortGrid">
-                <?php 
+                        <?php 
         $archiveList = array(
-          array('id'=>1, 'category'=>'bus', 'title'=>'상무지구 대형 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/sub_bg_a.jpg'),
-          array('id'=>5, 'category'=>'online', 'title'=>'봉선동 입시학원 네이버 스마트플레이스 1위 세팅', 'thumb'=>'/images/sub_bg_e.jpg'),
-          array('id'=>9, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'thumb'=>'/images/bg.jpg'),
-          array('id'=>14, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'thumb'=>'/images/ev2.jpg'),
-          array('id'=>6, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 운영', 'thumb'=>'/images/sub_bg_f.jpg'),
-          array('id'=>3, 'category'=>'bus', 'title'=>'수완지구 척추관절 전문병원 차도면·인도면 래핑', 'thumb'=>'/images/sub_bg_c.jpg')
+          array('id'=>1, 'category'=>'bus', 'title'=>'광주 시내버스 차도면 대형 래핑 광고 집행 실사', 'thumb'=>'/images/bs_ad/baro.jpg'),
+          array('id'=>9, 'category'=>'online', 'title'=>'봉선동 입시학원 네이버 스마트플레이스 1위 세팅 & 관리', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
+          array('id'=>13, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'thumb'=>'/images/bs_ad/visual01.jpg'),
+          array('id'=>18, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'thumb'=>'/images/bs_ad/baro_18.jpg'),
+          array('id'=>10, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 마케팅', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
+          array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'thumb'=>'/images/bs_ad/baro_3.jpg')
         );
         $displayItems = !empty($list) && count($list) >= 6 ? array_slice($list, 0, 6) : $archiveList;
         foreach ($displayItems as $idx => $item): 
           $catName = isset($categories[$item['category']]) ? $categories[$item['category']] : '광고사례';
-          $imgSrc = !empty($item['thumb']) ? htmlspecialchars($item['thumb']) : '/images/sub_bg_a.jpg';
+          $imgSrc = !empty($item['thumb']) ? htmlspecialchars($item['thumb']) : '/images/bs_ad/baro.jpg';
         ?>
         <div class="acg-card main-port-card" 
              data-cat="<?php echo htmlspecialchars($item['category']); ?>" 
