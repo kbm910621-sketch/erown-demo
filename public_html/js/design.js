@@ -427,10 +427,10 @@ $(function() {
     }
   });
 
-  /* 07. MASTER SPECIFICATION MODAL TABS */
+    /* 07. MASTER SPECIFICATION MODAL TABS */
   $(document).on('click', '.bus-guide-open', function(e) {
     e.preventDefault();
-    var guideTarget = $(this).data('guide') || 'guideBus';
+    var guideTarget = $(this).data('guide') || 'guideBusOut';
     $('#busGuideOverlay').fadeIn(200).css('display', 'block');
     $('body').addClass('modal-lock');
     $('.lmt-tab[data-target="' + guideTarget + '"]').trigger('click');
@@ -448,12 +448,13 @@ $(function() {
     }
   });
 
-  $(document).on('click', '.lmt-tab', function() {
+  $(document).on('click', '.lmt-tab', function(e) {
+    e.preventDefault();
+    var target = $(this).data('target');
     $('.lmt-tab').removeClass('on');
     $(this).addClass('on');
-    var target = $(this).data('target');
-    $('.bus-guide-page').removeClass('on');
-    $('#' + target).addClass('on');
+    $('.bus-guide-page').removeClass('on').hide();
+    $('#' + target).fadeIn(150).addClass('on');
   });
 
 });
