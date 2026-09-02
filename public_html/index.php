@@ -1103,41 +1103,68 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       08 GAON-N GET STARTED MASTER CTA (CLEAN WHITE EDITORIAL & GROUNDED NAVY FOOTER)
+       08 GAON-N GET STARTED MASTER CTA (SOLID NAVY ROUNDED BOX & 4 FLOATING PILLS)
   ============================================ -->
-  <section class="am-get-started-sec am-bg-white" id="getStarted">
+  <section class="am-get-started-sec" id="getStarted">
     <div class="am-container">
-      <div class="ags-clean-box wow fadeInUp" data-wow-duration="0.8s">
+      
+      <!-- SOLID NAVY ROUNDED BOX WITH NICE OUTER MARGINS -->
+      <div class="ags-solid-box wow fadeInUp" data-wow-duration="0.8s">
         
-        <span class="ags-kicker-pill">GET STARTED</span>
-        
-        <h2 class="ags-clean-title">
-          광고, 이제<br>
-          <span class="ags-title-blue">제대로 시작하세요.</span>
-        </h2>
-        
-        <p class="ags-clean-desc">
-          광주 104개 시내버스부터 네이버 스마트플레이스, 4K 시네마 영상까지<br class="pc-only">
-          외주 없는 100% 인하우스 전문팀이 가장 확실한 맞춤 미디어 믹스를 제안해 드립니다.
-        </p>
+        <!-- 4 FLOATING PILLS (둥둥 떠다니는 알약 4종) -->
+        <div class="ags-floating-pill pill-top-left">
+          <span class="afp-dot green"></span>
+          <span class="afp-text">지금 바로 상담해보세요</span>
+        </div>
 
-        <div class="ags-clean-btn-group">
-          <a href="/board/estmate/write.php" class="ags-btn-blue">
-            <span>맞춤 견적 상담받기</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-          <a href="tel:062-381-1350" class="ags-btn-outline">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            <span>직통 전화 062-381-1350</span>
-          </a>
+        <div class="ags-floating-pill pill-top-right">
+          <span class="afp-dot yellow"></span>
+          <span class="afp-text">빠른 견적 안내 가능합니다</span>
+        </div>
+
+        <div class="ags-floating-pill pill-bottom-left">
+          <span class="afp-icon-clock">⏱</span>
+          <span class="afp-text">광주 500+ 신뢰 대행사</span>
+        </div>
+
+        <div class="ags-floating-pill pill-bottom-right">
+          <span class="afp-dot green"></span>
+          <span class="afp-text">오프라인 · 온라인 통합 운영</span>
+        </div>
+
+        <!-- CENTER HEADLINE & CTA -->
+        <div class="ags-center-box">
+          <span class="ags-kicker">GET STARTED</span>
+          <h2 class="ags-title">
+            광고, 이제<br>
+            <span class="ags-highlight">제대로 시작하세요.</span>
+          </h2>
+          <p class="ags-desc">
+            광주 104개 시내버스부터 네이버 스마트플레이스, 4K 시네마 영상까지<br class="pc-only">
+            외주 없는 100% 인하우스 전문팀이 가장 확실한 맞춤 미디어 믹스를 제안해 드립니다.
+          </p>
+
+          <div class="ags-cta-wrap">
+            <a href="/board/estmate/write.php" class="ags-white-pill-btn">
+              <span class="awpb-text">맞춤 견적 상담받기</span>
+              <span class="awpb-arrow-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </a>
+            <a href="tel:062-381-1350" class="ags-call-outline-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>직통 전화 062-381-1350</span>
+            </a>
+          </div>
         </div>
 
       </div>
+
     </div>
   </section>
 

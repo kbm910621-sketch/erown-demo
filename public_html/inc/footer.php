@@ -44,7 +44,7 @@
       </div>
       <div class="foot_right">
         <div class="foot_logo">
-          <img src="/images/logo_w.png" alt="가온엔 로고">
+          <img src="/images/logo.png" alt="가온엔 로고">
         </div>
         <div class="foot_sns">
           <a href="https://www.instagram.com/gaon_n_official/" target="_blank" rel="noopener">인스타그램</a>

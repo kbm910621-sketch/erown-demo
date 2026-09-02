@@ -360,47 +360,55 @@ body { background:#f2f2f4}
 
 
 
+
+
 /* ==========================================================================
-   SOLID DEEP NAVY FOOTER (#0B1736) WITH CRISP RECTANGULAR BUTTONS
+   CLEAN WHITE / LIGHT FOOTER (NO HEAVY DARK TINT)
 ========================================================================== */
 #footer {
-  background: #0b1736 !important;
-  border-top: 1.5px solid rgba(255, 255, 255, 0.08) !important;
-  padding: 75px 0 45px !important;
+  background: #ffffff !important;
+  border-top: 1.5px solid #e2e8f0 !important;
+  padding: 60px 0 40px !important;
+}
+
+#footer .foot_top {
+  border-bottom: 1px solid #f1f5f9 !important;
+  padding-bottom: 30px !important;
 }
 
 #footer .foot_brand {
-  color: #ffffff !important;
-  font-size: 24px !important;
+  color: #0f172a !important;
+  font-size: 22px !important;
   font-weight: 900 !important;
   letter-spacing: -0.5px !important;
+  margin-bottom: 16px !important;
 }
 
 #footer .foot_info span {
-  color: #94a3b8 !important;
+  color: #64748b !important;
   font-size: 14.5px !important;
   line-height: 1.7 !important;
 }
 #footer .foot_info span em {
-  color: #cbd5e1 !important;
+  color: #0f172a !important;
   font-weight: 700 !important;
   margin-right: 6px !important;
 }
 
 #footer .foot_sns {
   display: flex !important;
-  gap: 12px !important;
+  gap: 10px !important;
 }
 
 #footer .foot_sns a {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 10px 20px !important;
-  background: rgba(255, 255, 255, 0.06) !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.18) !important;
+  padding: 9px 18px !important;
+  background: #f8fafc !important;
+  border: 1.5px solid #e2e8f0 !important;
   border-radius: 10px !important;
-  color: #ffffff !important;
+  color: #334155 !important;
   font-size: 13.5px !important;
   font-weight: 800 !important;
   text-decoration: none !important;
@@ -409,12 +417,13 @@ body { background:#f2f2f4}
 
 #footer .foot_sns a:hover {
   background: #1855b7 !important;
-  border-color: #3b82f6 !important;
+  border-color: #1855b7 !important;
+  color: #ffffff !important;
   transform: translateY(-2px) !important;
 }
 
 #footer .copy {
-  color: #64748b !important;
+  color: #94a3b8 !important;
   font-size: 13.5px !important;
 }
 
@@ -423,5 +432,5 @@ body { background:#f2f2f4}
   font-size: 13.5px !important;
 }
 #footer .foot_legal a:hover {
-  color: #ffffff !important;
+  color: #1855b7 !important;
 }
