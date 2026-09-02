@@ -769,17 +769,18 @@
 @media(max-width:576px) { .am-clean-gallery-grid { grid-template-columns:1fr; } }
 
 
-/* PROPOSAL DOWNLOAD BUTTONS & MODAL */
-.ash-guide-btn.pdf-btn { background:#0f172a; border-color:#0f172a; color:#ffffff; }
-.ash-guide-btn.pdf-btn:hover { background:#1855b7; border-color:#1855b7; color:#ffffff; transform:translateY(-2px); }
-.amp-proposal-grid { display:flex; flex-direction:column; gap:14px; }
-.amp-card { display:flex; align-items:center; justify-content:space-between; padding:18px 22px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:18px; transition:all 0.25s ease; gap:16px; }
-.amp-card:hover { background:#ffffff; border-color:#1855b7; box-shadow:0 10px 24px rgba(24,85,183,0.12); transform:translateX(4px); }
-.amp-icon-box { font-size:28px; width:52px; height:52px; display:flex; align-items:center; justify-content:center; background:#ffffff; border-radius:14px; border:1px solid #e2e8f0; flex-shrink:0; }
-.amp-info { display:flex; flex-direction:column; gap:3px; flex-grow:1; }
-.amp-tag { font-size:11px; font-weight:900; color:#1855b7; letter-spacing:0.04em; }
-.amp-title { font-size:16px; font-weight:900; color:#0f172a; letter-spacing:-0.3px; margin:0; }
-.amp-desc { font-size:12.5px; color:#64748b; margin:0; }
-.amp-down-btn { display:inline-flex; align-items:center; gap:6px; padding:10px 18px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:12.5px; font-weight:800; text-decoration:none; transition:all 0.25s ease; flex-shrink:0; box-shadow:0 4px 12px rgba(24,85,183,0.25); }
-.amp-down-btn:hover { background:#0f3f8c; transform:translateY(-2px); color:#ffffff; }
-@media(max-width:768px) { .amp-card { flex-direction:column; align-items:flex-start; } .amp-down-btn { width:100%; justify-content:center; } }
+ .amp-down-btn { width:100%; justify-content:center; } }
+
+
+ .ldb-btn { width:100%; justify-content:center; } }
+
+
+/* MODAL IN-TAB PDF DOWNLOAD BANNER */
+.lmg-download-banner { background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius:16px; padding:18px 22px; margin-bottom:24px; display:flex; justify-content:space-between; align-items:center; border:1px solid #334155; box-shadow:0 10px 25px rgba(15,23,42,0.15); gap:16px; }
+.ldb-info { display:flex; flex-direction:column; gap:4px; }
+.ldb-badge { font-size:10.5px; font-weight:900; color:#38bdf8; background:rgba(56,189,248,0.15); border:1px solid rgba(56,189,248,0.3); padding:3px 10px; border-radius:100px; width:max-content; letter-spacing:0.04em; }
+.ldb-title { font-size:16.5px; font-weight:900; color:#ffffff; letter-spacing:-0.4px; }
+.ldb-meta { font-size:12.5px; color:#94a3b8; }
+.ldb-btn { display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:13px; font-weight:800; text-decoration:none; transition:all 0.25s ease; flex-shrink:0; box-shadow:0 6px 16px rgba(24,85,183,0.35); }
+.ldb-btn:hover { background:#0284c7; transform:translateY(-2px); color:#ffffff; }
+@media(max-width:768px) { .lmg-download-banner { flex-direction:column; align-items:flex-start; } .ldb-btn { width:100%; justify-content:center; } }
