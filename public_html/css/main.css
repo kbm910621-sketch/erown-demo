@@ -1714,53 +1714,65 @@ body.modal-lock { overflow:hidden !important; }
 }
 
 
+
+
 /* ==========================================================================
-   DYNAMIC HIGH-AMPLITUDE UP & DOWN FLOATING PILLS MOTION (상하 진폭 대폭 강화)
+   NATURAL STAGGERED FLOATING PILLS (NO ROTATE / PURE LEVEL VERTICAL MOTION)
 ========================================================================== */
+/* 1. NATURAL ASYMMETRICAL POSITIONING (가로 세로 열 맞추지 않고 자연스럽게 비대칭 배치) */
 .ags-floating-pill.pill-top-left {
-  top: 15% !important;
-  left: 6% !important;
-  animation: floatPill1 3.6s ease-in-out infinite alternate !important;
+  top: 14% !important;
+  left: 8% !important;
+  right: auto !important;
+  bottom: auto !important;
+  animation: floatPillClean1 3.5s ease-in-out infinite alternate !important;
 }
 
 .ags-floating-pill.pill-top-right {
-  top: 15% !important;
-  right: 6% !important;
-  animation: floatPill2 4.2s ease-in-out infinite alternate !important;
+  top: 24% !important;
+  right: 9% !important;
+  left: auto !important;
+  bottom: auto !important;
+  animation: floatPillClean2 4.3s ease-in-out infinite alternate !important;
 }
 
 .ags-floating-pill.pill-bottom-left {
-  bottom: 15% !important;
-  left: 6% !important;
-  animation: floatPill3 3.9s ease-in-out infinite alternate !important;
+  bottom: 22% !important;
+  left: 12% !important;
+  right: auto !important;
+  top: auto !important;
+  animation: floatPillClean3 3.9s ease-in-out infinite alternate !important;
 }
 
 .ags-floating-pill.pill-bottom-right {
-  bottom: 15% !important;
-  right: 6% !important;
-  animation: floatPill4 4.5s ease-in-out infinite alternate !important;
+  bottom: 14% !important;
+  right: 7% !important;
+  left: auto !important;
+  top: auto !important;
+  animation: floatPillClean4 4.6s ease-in-out infinite alternate !important;
 }
 
-@keyframes floatPill1 {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-14px) rotate(-1deg); }
-  100% { transform: translateY(-24px) rotate(-2deg); }
+/* 2. PURE VERTICAL MOTION WITHOUT ANY ROTATION (절대 휘어지지 않고 수평 유지) */
+@keyframes floatPillClean1 {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-16px); }
+  100% { transform: translateY(-28px); }
 }
 
-@keyframes floatPill2 {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-16px) rotate(1.2deg); }
-  100% { transform: translateY(-26px) rotate(2deg); }
+@keyframes floatPillClean2 {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(-30px); }
 }
 
-@keyframes floatPill3 {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(1deg); }
-  100% { transform: translateY(-22px) rotate(1.8deg); }
+@keyframes floatPillClean3 {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(-26px); }
 }
 
-@keyframes floatPill4 {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(-1deg); }
-  100% { transform: translateY(-25px) rotate(-1.8deg); }
+@keyframes floatPillClean4 {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-17px); }
+  100% { transform: translateY(-28px); }
 }
