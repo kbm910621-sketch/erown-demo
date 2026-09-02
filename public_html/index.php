@@ -1150,12 +1150,17 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   <div class="route-search-modal-overlay" id="routeSearchModal">
     <div class="rsm-panel">
       <div class="rsm-head">
-        <div>
-          <span class="rsm-kicker">GAON-N BUS ROUTE DIRECTORY 2026</span>
-          <h3 class="rsm-title">광주 시내버스 104개 전 노선 실시간 검색 디렉토리</h3>
-          <p class="rsm-desc">광주광역시 104개 전체 노선(급행/간선/지선)의 주요 경유 상권, 운행 대수, 배차 간격 및 타깃을 실시간으로 확인하세요.</p>
+        <div class="rsm-content-wrap">
+          <div class="rsm-kicker-row">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <span class="rsm-kicker-text">광주 시내버스 104개 전 노선 실시간 검색</span>
+          </div>
+          <h3 class="rsm-title">광주 시내버스 104개 전 노선 디렉토리</h3>
+          <p class="rsm-desc">광주광역시 104개 전체 노선(급행/간선/지선)의 주요 경유 상권, 운행 대수, 배차 간격 및 타깃 정보입니다.</p>
         </div>
-        <button type="button" class="rsm-close" id="btnCloseRouteSearch">✕</button>
+        <button type="button" class="rsm-close" id="btnCloseRouteSearch" aria-label="닫기">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
       </div>
 
       <div class="rsm-body">
