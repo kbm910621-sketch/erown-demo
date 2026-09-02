@@ -190,29 +190,31 @@ $(function() {
   $(window).on('scroll', startCounters);
   startCounters();
 
-    /* 02. BUS WIDE SHOWCASE CONSOLE INTERACTION */
-  $(document).on('click', '.abw-tab-btn', function(e) {
+      /* 02. NATURAL BUS STAGE INTERACTION */
+  $(document).on('click', '.abh-tab-btn', function(e) {
     e.preventDefault();
     var $btn = $(this);
-    $('.abw-tab-btn').removeClass('on');
+    $('.abh-tab-btn').removeClass('on');
     $btn.addClass('on');
 
     var name = $btn.data('name');
     var size = $btn.data('size');
     var img = $btn.data('img');
+    var title = $btn.data('title');
+    var desc = $btn.data('desc');
     var target = $btn.data('target');
     var material = $btn.data('material');
-    var benefit = $btn.data('benefit');
 
-    $('#dynBusTitle').text(size);
-    $('#dynBusSubBadge').text(name);
-    $('#dynBusBadgeText').text(name + ' (' + size + ')');
+    $('#dynBusTitle').text(title);
+    $('#dynBusDesc').text(desc);
+    $('#dynBusSize').text(size);
     $('#dynBusTarget').text(target);
     $('#dynBusMaterial').text(material);
-    $('#dynBusBenefit').text(benefit);
+    $('#dynBusPhotoTag').text(name + ' (' + size + ')');
+
     if (img) {
-      $('#dynBusPhoto').fadeOut(150, function() {
-        $(this).attr('src', img).fadeIn(200);
+      $('#dynBusPhoto').fadeOut(120, function() {
+        $(this).attr('src', img).fadeIn(180);
       });
     }
   });

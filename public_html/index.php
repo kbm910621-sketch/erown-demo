@@ -189,7 +189,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       02 SECTION 01 : 시내버스 광고 (CLEAN VISUAL 3-SIDE SHOWCASE HERO)
+       02 SECTION 01 : 시내버스 광고 (HUMAN CRAFTED CLEAN STAGE)
   ============================================ -->
   <section class="am-section am-bg-slate" id="bus">
     <div class="am-container">
@@ -197,7 +197,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
         <div class="ash-flex">
           <div>
-            <span class="ash-kicker">01 / BUS ADVERTISING</span>
+            <span class="ash-kicker">BUS ADVERTISING</span>
             <h2 class="ash-title">시내버스 광고</h2>
             <p class="ash-desc">광주 104개 전 노선 맞춤 배차. 일일 150만 시민의 눈높이에서 1일 18시간 동안 반복 각인되는 움직이는 랜드마크 빌보드입니다.</p>
           </div>
@@ -212,93 +212,90 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- 1. 3-SIDE WIDE PHOTOGRAPHIC SHOWCASE (MAIN PROMINENT STAGE) -->
-      <div class="am-bus-wide-showcase wow fadeInUp" data-wow-duration="0.8s">
+      <!-- 1. NATURAL AGENCY SHOWCASE STAGE -->
+      <div class="am-bus-human-showcase wow fadeInUp" data-wow-duration="0.8s">
         
         <!-- SPEC SELECTION TABS -->
-        <div class="abw-tabs-bar">
-          <button type="button" class="abw-tab-btn on"
+        <div class="abh-tabs-row">
+          <button type="button" class="abh-tab-btn on"
                   data-name="차도면 대형 래핑"
                   data-size="3,700 × 1,000 mm"
-                  data-img="/images/sample_bus.jpg"
-                  data-target="왕복 6~8차선 반대편 차량 운전자 &amp; 보행자 시야 정면 100% 노출"
-                  data-material="LG 하우시스 최고급 내후성 정품 솔벤 시트 (1년 이상 변색 방지)"
-                  data-benefit="도심 간선도로 주행 중 가장 거대한 면적으로 브랜드 인지도를 각인시킵니다. 상무지구, 광천터미널 등 핵심 도로에서 3초 안에 시선을 장악합니다.">
+                  data-img="/images/sub_bg_a.jpg"
+                  data-title="왕복 8차선 운전자의 시선을 사로잡는 차도면 대형 래핑"
+                  data-desc="상무대로, 죽봉대로, 무진대로 등 광주 도심 주요 간선도로를 주행하며 반대편 차량 운전자와 보행자에게 1일 18시간 동안 가장 압도적인 스케일로 브랜드를 각인시킵니다."
+                  data-target="차량 운전자 및 보행자 정면 시야"
+                  data-material="LG 하우시스 최고급 내후성 정품 솔벤 시트">
             <span>차도면 (3,700×1,000)</span>
           </button>
-          <button type="button" class="abw-tab-btn"
+          <button type="button" class="abh-tab-btn"
                   data-name="인도면 표준 래핑"
                   data-size="3,000 × 500 mm"
                   data-img="/images/sub_bg_b.jpg"
-                  data-target="버스 정류장 대기 승객 &amp; 인도 보행자 눈높이 1:1 밀착"
-                  data-material="LG 하우시스 최고급 내후성 정품 솔벤 시트"
-                  data-benefit="승객 탑승 시 눈높이 정면에 위치하여 전화번호, 진료과목, 핵심 진료 안내 등 상세 정보 전달에 가장 효과적인 밀착형 규격입니다.">
+                  data-title="정류장 탑승객 눈높이에 밀착되는 인도면 표준 래핑"
+                  data-desc="승객 탑승 시 눈높이 정면에 위치하여 전화번호, 진료과목, 핵심 진료 안내 등 상세 정보를 정확하게 전달하는 보행자 맞춤형 규격입니다."
+                  data-target="정류장 대기 승객 및 인도 보행자"
+                  data-material="LG 하우시스 최고급 내후성 정품 솔벤 시트">
             <span>인도면 (3,000×500)</span>
           </button>
-          <button type="button" class="abw-tab-btn"
+          <button type="button" class="abh-tab-btn"
                   data-name="후면 번호판 상단 래핑"
                   data-size="2,400 × 300 mm"
                   data-img="/images/sub_bg_c.jpg"
-                  data-target="신호 대기 및 도로 정체 시 후방 차량 운전자 3분 이상 강제 주시"
-                  data-material="LG 하우시스 정품 솔벤 반사 시트 지원"
-                  data-benefit="출퇴근 시간 및 교차로 신호 대기 중 뒤따르는 차량 운전자와 동승자 시선 정면에 장시간 강제 노출되는 가온엔 필수 패키지 면입니다.">
+                  data-title="신호 대기 차량 운전자를 3분 이상 사로잡는 후면 래핑"
+                  data-desc="출퇴근 시간 및 도심 교차로 신호 대기 중 뒤따르는 차량 운전자와 동승자의 시선 정면에 장시간 강제 노출되는 가온엔 필수 패키지 면입니다."
+                  data-target="신호 대기 후방 차량 운전자 전원"
+                  data-material="LG 하우시스 정품 솔벤 반사 시트 지원">
             <span>후면 (2,400×300)</span>
           </button>
-          <button type="button" class="abw-tab-btn"
+          <button type="button" class="abh-tab-btn"
                   data-name="내부 중앙창문 &amp; 음성안내"
                   data-size="1,100 × 500 mm / 음성 7초"
                   data-img="/images/sub_bg_d.jpg"
-                  data-target="목적지 이동 15~30분간 승객 시각·청각 독점"
-                  data-material="실내 고선명 PET 출력 + 전문 성우 더빙 음성"
-                  data-benefit="탑승 승객이 목적지까지 이동하는 동안 시선 정면에 머무르며, 정류소 도착 전 성우 음성 방송으로 확실하게 브랜드를 기억시킵니다.">
+                  data-title="이동 30분 동안 승객의 시각과 청각을 동시 독점"
+                  data-desc="탑승 승객이 목적지까지 이동하는 동안 시선 정면에 머무르며, 정류소 도착 전 전문 성우 음성 방송으로 확실하게 브랜드를 기억시킵니다."
+                  data-target="버스 탑승 승객 전원 (일 150만 명)"
+                  data-material="실내 고선명 PET 출력 + 성우 음성 더빙">
             <span>내부 창문 &amp; 음성방송</span>
           </button>
         </div>
 
-        <!-- STAGE ROW -->
-        <div class="abw-stage-row">
+        <!-- STAGE CONTENT GRID -->
+        <div class="abh-stage-body">
           
-          <!-- LEFT: 16:9 WIDE PHOTOGRAPHIC VIEWFINDER -->
-          <div class="abw-photo-viewport">
-            <div class="abw-photo-frame">
-              <img src="/images/sample_bus.jpg" id="dynBusPhoto" alt="시내버스 실제 광고 집행 실사">
-              <div class="abw-photo-scrim"></div>
-              <div class="abw-photo-tag-box">
-                <span class="abw-live-pill">🔴 ACTUAL FLEET LIVE</span>
-                <strong class="abw-spec-badge" id="dynBusBadgeText">차도면 대형 래핑 (3,700 × 1,000 mm)</strong>
-              </div>
-            </div>
+          <!-- LEFT: LARGE HIGH-RES PHOTO -->
+          <div class="abh-photo-box">
+            <img src="/images/sub_bg_a.jpg" id="dynBusPhoto" alt="시내버스 광고 집행 실사">
+            <div class="abh-photo-tag" id="dynBusPhotoTag">차도면 대형 래핑 (3,700 × 1,000 mm)</div>
           </div>
 
-          <!-- RIGHT: EXECUTIVE STRATEGY BRIEF -->
-          <div class="abw-brief-box">
-            <div class="abb-header">
-              <span class="abb-kicker">SPECIFICATION BRIEF</span>
-              <h3 class="abb-title" id="dynBusTitle">3,700 × 1,000 mm</h3>
-              <p class="abb-sub-badge" id="dynBusSubBadge">차도면 대형 래핑</p>
+          <!-- RIGHT: NATURAL HUMAN AGENCY BRIEF -->
+          <div class="abh-text-box">
+            <span class="abh-sub-badge" id="dynBusSubBadge">광주 시내버스 외부 광고</span>
+            <h3 class="abh-title" id="dynBusTitle">왕복 8차선 운전자의 시선을 사로잡는 차도면 대형 래핑</h3>
+            <p class="abh-desc" id="dynBusDesc">상무대로, 죽봉대로, 무진대로 등 광주 도심 주요 간선도로를 주행하며 반대편 차량 운전자와 보행자에게 1일 18시간 동안 가장 압도적인 스케일로 브랜드를 각인시킵니다.</p>
+
+            <div class="abh-points-list">
+              <div class="apl-item">
+                <span class="apl-dot"></span>
+                <span class="apl-label">실측 규격 :</span>
+                <strong class="apl-val" id="dynBusSize">3,700 × 1,000 mm</strong>
+              </div>
+              <div class="apl-item">
+                <span class="apl-dot"></span>
+                <span class="apl-label">주요 타깃 :</span>
+                <strong class="apl-val" id="dynBusTarget">차량 운전자 및 보행자 정면 시야</strong>
+              </div>
+              <div class="apl-item">
+                <span class="apl-dot"></span>
+                <span class="apl-label">원단 소재 :</span>
+                <strong class="apl-val" id="dynBusMaterial">LG 하우시스 최고급 내후성 정품 솔벤 시트</strong>
+              </div>
             </div>
 
-            <div class="abb-body">
-              <div class="abb-field">
-                <span class="abb-label">노출 타깃</span>
-                <strong class="abb-val" id="dynBusTarget">왕복 6~8차선 반대편 차량 운전자 &amp; 보행자 시야 정면 100% 노출</strong>
-              </div>
-
-              <div class="abb-field">
-                <span class="abb-label">소재 및 원단</span>
-                <strong class="abb-val" id="dynBusMaterial">LG 하우시스 최고급 내후성 정품 솔벤 시트 (1년 이상 변색 방지)</strong>
-              </div>
-
-              <div class="abb-field">
-                <span class="abb-label">상권 공략 포인트</span>
-                <p class="abb-desc" id="dynBusBenefit">도심 간선도로 주행 중 가장 거대한 면적으로 브랜드 인지도를 각인시킵니다. 상무지구, 광천터미널 등 핵심 도로에서 3초 안에 시선을 장악합니다.</p>
-              </div>
-            </div>
-
-            <div class="abb-action">
-              <a href="/board/estmate/write.php" class="abb-cta-btn">
-                <span>이 규격으로 1:1 맞춤 견적 신청</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <div class="abh-cta-box">
+              <a href="/board/estmate/write.php" class="abh-cta-btn">
+                <span>이 규격으로 시내버스 견적 문의하기</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
             </div>
           </div>
@@ -323,7 +320,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           ?>
           <div class="asps-card main-port-card" data-cat="<?php echo htmlspecialchars($bItem['category']); ?>" data-id="<?php echo (int)$bItem['id']; ?>" data-name="<?php echo htmlspecialchars($bItem['title']); ?>">
             <div class="asps-thumb">
-              <img src="<?php echo !empty($bItem['thumb']) ? htmlspecialchars($bItem['thumb']) : '/images/sample_bus.jpg'; ?>" alt="<?php echo htmlspecialchars($bItem['title']); ?>">
+              <img src="<?php echo !empty($bItem['thumb']) ? htmlspecialchars($bItem['thumb']) : '/images/sub_bg_a.jpg'; ?>" alt="<?php echo htmlspecialchars($bItem['title']); ?>">
               <span class="asps-badge">시내버스</span>
               <div class="asps-hover-overlay">상세보기 ↗</div>
             </div>
@@ -745,7 +742,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       06 SECTION 05 : 성공 사례 (INTEGRATED INTERACTIVE SPLIT SHOWCASE)
+       06 SECTION 05 : 성공 사례 (CLEAN 3-COLUMN AGENCY PORTFOLIO GALLERY)
   ============================================ -->
   <section class="am-section am-bg-slate" id="archive">
     <div class="am-container">
@@ -753,12 +750,12 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
         <div class="ash-flex">
           <div>
-            <span class="ash-kicker">SUCCESS CASE ARCHIVE</span>
+            <span class="ash-kicker">SUCCESS PORTFOLIO</span>
             <h2 class="ash-title">전체 성공 사례 아카이브</h2>
-            <p class="ash-desc">시내버스, 온라인 마케팅, 4K 영상제작, 특화매체까지 가온엔이 집행한 대표 실적을 확인하세요.</p>
+            <p class="ash-desc">시내버스, 온라인 마케팅, 4K 영상제작, 특화매체까지 가온엔이 집행한 대표 광고 실적입니다.</p>
           </div>
           <div class="am-filter-chips">
-            <button type="button" class="afc-btn on" data-filter="all">전체 매체</button>
+            <button type="button" class="afc-btn on" data-filter="all">전체보기</button>
             <button type="button" class="afc-btn" data-filter="bus">시내버스</button>
             <button type="button" class="afc-btn" data-filter="online">온라인 마케팅</button>
             <button type="button" class="afc-btn" data-filter="video">영상제작</button>
@@ -767,64 +764,34 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- SPLIT INTERACTIVE DIRECTORY & BIG PREVIEW STAGE -->
-      <div class="am-interactive-split-stage wow fadeInUp" data-wow-duration="0.8s">
-        
-        <!-- LEFT: INTEGRATED PROJECT LIST -->
-        <div class="ais-list-col">
-          <?php 
-          $initialHeroImg = !empty($list[0]['thumb']) ? $list[0]['thumb'] : '/images/sample_bus.jpg';
-          $initialHeroTitle = !empty($list[0]['title']) ? $list[0]['title'] : '대표 프로젝트';
-          $initialHeroCat = !empty($list[0]['category']) && isset($categories[$list[0]['category']]) ? $categories[$list[0]['category']] : '통합 마케팅';
-          $initialHeroId = !empty($list[0]['id']) ? (int)$list[0]['id'] : 1;
-
-          foreach (array_slice($list, 0, 6) as $idx => $item): 
-            $catLabel = isset($categories[$item['category']]) ? $categories[$item['category']] : '광고사례';
-            $thumbUrl = !empty($item['thumb']) ? htmlspecialchars($item['thumb']) : '/images/sample_bus.jpg';
-            $isActive = ($idx === 0) ? 'on' : '';
-          ?>
-          <div class="ais-project-item <?php echo $isActive; ?> main-port-card-trigger"
-               data-cat="<?php echo htmlspecialchars($item['category']); ?>"
-               data-id="<?php echo (int)$item['id']; ?>"
-               data-name="<?php echo htmlspecialchars($item['title']); ?>"
-               data-img="<?php echo $thumbUrl; ?>"
-               data-cat-label="<?php echo $catLabel; ?>">
-            <div class="api-left">
-              <span class="api-index">#0<?php echo $idx + 1; ?></span>
-              <div class="api-meta">
-                <span class="api-cat-badge"><?php echo $catLabel; ?></span>
-                <strong class="api-title"><?php echo htmlspecialchars($item['title']); ?></strong>
-              </div>
-            </div>
-            <div class="api-right">
-              <span class="api-arrow">상세보기 ↗</span>
+      <!-- CLEAN 3-COLUMN GALLERY GRID WITH VIBRANT HIGH-RES CARDS -->
+      <div class="am-clean-gallery-grid wow fadeInUp" data-wow-duration="0.8s" id="masterPortGrid">
+        <?php 
+        $demoImages = array('/images/sub_bg_a.jpg', '/images/sub_bg_b.jpg', '/images/sub_bg_c.jpg', '/images/sub_bg_d.jpg', '/images/sub_bg_e.jpg', '/images/sub_bg_f.jpg', '/images/sub_bg_g.jpg', '/images/sub_bg_h.jpg');
+        foreach (array_slice($list, 0, 6) as $idx => $item): 
+          $catName = isset($categories[$item['category']]) ? $categories[$item['category']] : '광고사례';
+          $imgSrc = !empty($item['thumb']) ? htmlspecialchars($item['thumb']) : $demoImages[$idx % count($demoImages)];
+        ?>
+        <div class="acg-card main-port-card" 
+             data-cat="<?php echo htmlspecialchars($item['category']); ?>" 
+             data-id="<?php echo (int)$item['id']; ?>" 
+             data-name="<?php echo htmlspecialchars($item['title']); ?>">
+          <div class="acg-media-wrap">
+            <img src="<?php echo $imgSrc; ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+            <span class="acg-badge"><?php echo $catName; ?></span>
+            <div class="acg-overlay-btn">
+              <span>상세보기 &amp; 견적조회 ↗</span>
             </div>
           </div>
-          <?php endforeach; ?>
-        </div>
-
-        <!-- RIGHT: STICKY BIG PREVIEW VIEWFINDER -->
-        <div class="ais-preview-col">
-          <div class="ais-sticky-box">
-            <div class="ais-photo-frame main-port-card" id="splitPreviewCard" data-cat="<?php echo htmlspecialchars(isset($list[0]['category']) ? $list[0]['category'] : 'bus'); ?>" data-id="<?php echo $initialHeroId; ?>" data-name="<?php echo htmlspecialchars($initialHeroTitle); ?>">
-              <img src="<?php echo htmlspecialchars($initialHeroImg); ?>" id="dynSplitImg" alt="프로젝트 실사 프리뷰">
-              <div class="ais-photo-scrim"></div>
-              
-              <div class="ais-floating-meta">
-                <span class="ais-badge-pill" id="dynSplitCat"><?php echo htmlspecialchars($initialHeroCat); ?></span>
-                <strong class="ais-title-text" id="dynSplitTitle"><?php echo htmlspecialchars($initialHeroTitle); ?></strong>
-                <p class="ais-desc-text">가온엔 인하우스 기획 및 직영 시공 집행 실적</p>
-                <div class="ais-view-btn">
-                  <span>실사 크게보기 &amp; 맞춤 견적 ↗</span>
-                </div>
-              </div>
-            </div>
+          <div class="acg-body">
+            <span class="acg-sub-text">가온엔 공식 집행 프로젝트</span>
+            <strong class="acg-title"><?php echo htmlspecialchars($item['title']); ?></strong>
           </div>
         </div>
-
+        <?php endforeach; ?>
       </div>
 
-      <div class="am-more-box" style="margin-top:40px;">
+      <div class="am-more-box" style="margin-top:44px;">
         <a href="/portfolio.php" class="am-more-btn">
           <span>포트폴리오 전체 100+ 사례 더보기</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
