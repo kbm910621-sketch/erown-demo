@@ -559,3 +559,21 @@ $(function() {
   });
 
 });
+
+  /* MASSTIGE INSIGHTS-STYLE HUGE TYPOGRAPHIC TAB FILTERING */
+  $(document).on('click', '.mai-tab', function() {
+    $('.mai-tab').removeClass('on');
+    $(this).addClass('on');
+    var filter = $(this).data('filter');
+    if (filter === 'all') {
+      $('.mai-card').fadeIn(250);
+    } else {
+      $('.mai-card').each(function() {
+        if ($(this).data('cat') === filter) {
+          $(this).fadeIn(250);
+        } else {
+          $(this).hide();
+        }
+      });
+    }
+  });

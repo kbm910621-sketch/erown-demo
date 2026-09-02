@@ -1009,3 +1009,211 @@ body.modal-lock { overflow:hidden !important; }
   .ahbs-blog-mockup { width:100%; max-width:480px; }
   .am-online-guarantee-deck { grid-template-columns:1fr; gap:16px; }
 }
+
+
+/* ==========================================================================
+   MASSTIGE INSIGHTS-STYLE HUGE TYPO TABS & 4-COLUMN GRID (ARCHIVE ONLY)
+========================================================================== */
+.mai-meta-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-bottom:18px;
+  border-bottom:1.5px solid #e2e8f0;
+  margin-bottom:30px;
+}
+.mai-total-results {
+  font-size:14px;
+  color:#64748b;
+  font-weight:700;
+}
+.mai-total-results strong {
+  color:#0f172a;
+}
+.mai-all-label {
+  font-size:14px;
+  font-weight:700;
+  color:#94a3b8;
+}
+
+/* HUGE BOLD TYPOGRAPHIC TABS */
+.mai-huge-tabs-row {
+  display:flex;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-bottom:44px;
+}
+.mai-tab {
+  background:none;
+  border:0;
+  padding:0;
+  font-size:36px;
+  font-weight:900;
+  color:#94a3b8;
+  cursor:pointer;
+  transition:all 0.25s ease;
+  font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif;
+  letter-spacing:-1px;
+  display:inline-flex;
+  align-items:baseline;
+  gap:8px;
+}
+.mai-tab .mai-en {
+  font-size:22px;
+  font-weight:700;
+  color:#cbd5e1;
+  transition:all 0.25s ease;
+}
+.mai-tab:hover {
+  color:#0f172a;
+}
+.mai-tab:hover .mai-en {
+  color:#64748b;
+}
+.mai-tab.on {
+  color:#1855b7 !important;
+}
+.mai-tab.on .mai-en {
+  color:#3b82f6 !important;
+}
+
+/* 4-COLUMN RECTANGLE CARDS GRID */
+.mai-4col-grid {
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:24px;
+}
+.mai-card {
+  background:#ffffff;
+  border:1.5px solid #e2e8f0;
+  border-radius:22px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 6px 20px rgba(15,23,42,0.03);
+  transition:all 0.3s cubic-bezier(0.16,1,0.3,1);
+  cursor:pointer;
+}
+.mai-card:hover {
+  border-color:#1855b7;
+  transform:translateY(-8px);
+  box-shadow:0 20px 45px rgba(24,85,183,0.12);
+}
+
+.mai-thumb-wrap {
+  position:relative;
+  width:100%;
+  height:240px;
+  overflow:hidden;
+  background:#0f172a;
+  border-radius:18px 18px 0 0;
+}
+.mai-thumb-wrap img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 0.45s ease;
+}
+.mai-card:hover .mai-thumb-wrap img {
+  transform:scale(1.08);
+}
+.mai-badge {
+  position:absolute;
+  top:14px;
+  left:14px;
+  background:rgba(15,23,42,0.75);
+  backdrop-filter:blur(6px);
+  color:#ffffff;
+  font-size:11px;
+  font-weight:800;
+  padding:4px 10px;
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+.mai-card-body {
+  padding:20px 18px 22px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  flex-grow:1;
+  justify-content:space-between;
+}
+.mai-title-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:10px;
+}
+.mai-title {
+  font-size:15.5px;
+  font-weight:800;
+  color:#0f172a;
+  line-height:1.42;
+  margin:0;
+  letter-spacing:-0.4px;
+}
+.mai-arrow {
+  font-size:16px;
+  font-weight:900;
+  color:#64748b;
+  flex-shrink:0;
+  transition:all 0.25s;
+}
+.mai-card:hover .mai-arrow {
+  color:#1855b7;
+  transform:translate(2px, -2px);
+}
+
+.mai-meta-row-card {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-top:12px;
+  border-top:1px solid #f1f5f9;
+}
+.mai-cat-name {
+  font-size:12px;
+  font-weight:800;
+  color:#1855b7;
+}
+.mai-date {
+  font-size:12px;
+  font-weight:600;
+  color:#94a3b8;
+}
+
+/* ==========================================================================
+   VIDEO PRODUCTION BOX FONT REDUCTION (상자 안 글씨 축소)
+========================================================================== */
+.avs-item-card {
+  padding:15px 18px !important;
+}
+.avs-title {
+  font-size:14.5px !important;
+  font-weight:800 !important;
+  line-height:1.35 !important;
+  margin:3px 0 2px 0 !important;
+}
+.avs-sub {
+  font-size:12px !important;
+  line-height:1.45 !important;
+  color:#94a3b8 !important;
+}
+.avs-badge {
+  font-size:10.5px !important;
+  padding:2px 7px !important;
+}
+
+@media(max-width:1200px) {
+  .mai-4col-grid { grid-template-columns:repeat(2, 1fr); }
+  .mai-tab { font-size:28px; }
+  .mai-tab .mai-en { font-size:18px; }
+}
+@media(max-width:640px) {
+  .mai-4col-grid { grid-template-columns:1fr; }
+  .mai-huge-tabs-row { gap:20px; }
+  .mai-tab { font-size:22px; }
+  .mai-tab .mai-en { font-size:15px; }
+}
