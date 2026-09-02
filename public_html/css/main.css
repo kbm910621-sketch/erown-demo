@@ -615,3 +615,30 @@
 .avh-mode-btn.on { background:linear-gradient(135deg, #1855b7 0%, #0284c7 100%); color:#ffffff; box-shadow:0 8px 24px rgba(24,85,183,0.5); }
 .avh-btn-icon { width:18px; height:18px; stroke:currentColor; transition:all 0.3s ease; }
 .avh-mode-btn.on .avh-btn-icon { stroke:#ffffff; filter:drop-shadow(0 0 6px rgba(56,189,248,0.8)); }
+
+
+/* CENTERED SWITCHER BOX */
+.avh-switcher-center-box { display:flex; justify-content:center; align-items:center; width:100%; margin-bottom:34px; }
+.avh-mode-switcher { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:6px; background:rgba(15,23,42,0.88); border:1.5px solid rgba(255,255,255,0.18); border-radius:100px; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); box-shadow:0 12px 36px rgba(0,0,0,0.4); margin:0 auto; }
+.avh-mode-btn { display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:100px; border:none; background:transparent; color:rgba(255,255,255,0.75); font-size:14.5px; font-weight:800; letter-spacing:-0.3px; cursor:pointer; transition:all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+.avh-mode-btn:hover { color:#ffffff; background:rgba(255,255,255,0.08); }
+.avh-mode-btn.on { background:linear-gradient(135deg, #1855b7 0%, #0284c7 100%); color:#ffffff; box-shadow:0 8px 24px rgba(24,85,183,0.5); }
+.avh-btn-icon { width:18px; height:18px; stroke:currentColor; transition:all 0.3s ease; }
+.avh-mode-btn.on .avh-btn-icon { stroke:#ffffff; filter:drop-shadow(0 0 6px rgba(56,189,248,0.8)); }
+
+/* HIGH-IMPACT VIBRANT GET STARTED PILLS (BIG, CLOSE TO CENTER, FAST SILKY FLOAT) */
+.ags-floating-pill { position:absolute; z-index:4; display:inline-flex; align-items:center; gap:11px; padding:15px 30px; background:rgba(10,25,52,0.96); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:2px solid rgba(56,189,248,0.4); border-radius:100px; color:#ffffff; font-size:16.5px; font-weight:900; letter-spacing:-0.3px; box-shadow:0 14px 36px rgba(0,0,0,0.5), 0 0 20px rgba(56,189,248,0.15); transition:all 0.3s ease; text-shadow:0 1px 3px rgba(0,0,0,0.6); }
+.pill-top-left { top:13%; left:28%; animation:vibrantFloatA 2.6s ease-in-out infinite; }
+.pill-top-right { top:13%; right:28%; animation:vibrantFloatB 2.8s ease-in-out infinite; }
+.pill-bottom-left { bottom:15%; left:30%; animation:vibrantFloatB 2.5s ease-in-out infinite; }
+.pill-bottom-right { bottom:15%; right:30%; animation:vibrantFloatA 2.7s ease-in-out infinite; }
+.afp-dot { width:11px; height:11px; border-radius:50%; display:inline-block; }
+.afp-dot.green { background:#10b981; box-shadow:0 0 12px #10b981, 0 0 20px rgba(16,185,129,0.8); }
+.afp-dot.yellow { background:#f59e0b; box-shadow:0 0 12px #f59e0b, 0 0 20px rgba(245,158,11,0.8); }
+.afp-icon-clock { font-size:17px; }
+.afp-text { font-size:16.5px; font-weight:900; color:#ffffff; }
+@keyframes vibrantFloatA { 0%, 100% { transform:translateY(0px); } 50% { transform:translateY(-11px); } }
+@keyframes vibrantFloatB { 0%, 100% { transform:translateY(0px); } 50% { transform:translateY(11px); } }
+@media(max-width:1500px) { .pill-top-left { left:22%; } .pill-top-right { right:22%; } .pill-bottom-left { left:24%; } .pill-bottom-right { right:24%; } }
+@media(max-width:1200px) { .pill-top-left { left:12%; } .pill-top-right { right:12%; } .pill-bottom-left { left:14%; } .pill-bottom-right { right:14%; } }
+@media(max-width:991px) { .ags-floating-pill { position:static; margin:8px; font-size:14.5px; padding:12px 22px; } .am-get-started-sec { display:flex; flex-direction:column; align-items:center; } }

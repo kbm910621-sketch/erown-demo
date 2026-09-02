@@ -552,19 +552,22 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         
         <!-- MODE SWITCHER TABS -->
                 <!-- HIGH-END SVG PICTOGRAM SEGMENT SWITCHER -->
-        <div class="avh-mode-switcher">
-          <button type="button" class="avh-mode-btn on" data-video-mode="wide">
-            <svg class="avh-btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-            </svg>
-            <span>16:9 와이드 시네마</span>
-          </button>
-          <button type="button" class="avh-mode-btn" data-video-mode="shorts">
-            <svg class="avh-btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="14" height="20" x="5" y="2" rx="2.5"/><line x1="12" y1="18" x2="12" y2="18.01"/>
-            </svg>
-            <span>9:16 모바일 릴스·숏폼</span>
-          </button>
+                <!-- HIGH-END SVG PICTOGRAM SEGMENT SWITCHER (CENTERED) -->
+        <div class="avh-switcher-center-box">
+          <div class="avh-mode-switcher">
+            <button type="button" class="avh-mode-btn on" data-video-mode="wide">
+              <svg class="avh-btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+              <span>16:9 와이드 시네마</span>
+            </button>
+            <button type="button" class="avh-mode-btn" data-video-mode="shorts">
+              <svg class="avh-btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="14" height="20" x="5" y="2" rx="2.5"/><line x1="12" y1="18" x2="12" y2="18.01"/>
+              </svg>
+              <span>9:16 모바일 릴스·숏폼</span>
+            </button>
+          </div>
         </div>
 
         <!-- MAIN STAGE DISPLAY (CINEMA & PHONE MOCKUP) -->
