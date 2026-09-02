@@ -431,8 +431,10 @@ $(function() {
   });
 
     /* 07. MASTER SPECIFICATION MODAL TABS */
-    /* PREVENT OUTER WINDOW SCROLL WHEN MODAL IS OPEN */
-  $(document).on('wheel', '.bus-guide-overlay, .rsm-backdrop, .am-modal-backdrop', function(e) {
+    
+
+    /* STOP WHEEL BUBBLING TO OUTER WINDOW WHILE ALLOWING INNER SCROLL */
+  $(document).on('wheel', '.route-search-modal-overlay, .bus-guide-overlay, .portfolio-modal-backdrop', function(e) {
     e.stopPropagation();
   });
 

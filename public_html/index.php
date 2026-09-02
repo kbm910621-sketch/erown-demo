@@ -451,7 +451,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <img src="/images/sub_bg_g.jpg" alt="맘카페 바이럴">
           <div class="aov-scrim"></div>
           <div class="aov-overlay">
-            <span class="aov-pill green">02 / LOCAL COMMUNITY</span>
+            <span class="aov-pill green">02. 맘카페 &amp; 동네생활</span>
             <h3 class="aov-title">광주 대표 맘카페 &amp; 당근마켓 바이럴</h3>
             <p class="aov-desc">광주맘스홀릭 및 당근 동네생활 실사용자 기반 자연스러운 방문 후기 여론 형성</p>
             <div class="aov-metrics-row">
@@ -465,7 +465,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <img src="/images/sub_bg_e.jpg" alt="인스타그램 릴스">
           <div class="aov-scrim"></div>
           <div class="aov-overlay">
-            <span class="aov-pill cyan">03 / SNS PERFORMANCE</span>
+            <span class="aov-pill blue">03. 인스타그램 릴스 타깃</span>
             <h3 class="aov-title">인스타그램 릴스 &amp; 반경 타깃 광고</h3>
             <p class="aov-desc">사업장 반경 1~3km 내 거주 고객 집중 타깃팅 + 9:16 모바일 숏폼 영상 제작</p>
             <div class="aov-metrics-row">
@@ -479,7 +479,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <img src="/images/sub_bg_h.jpg" alt="구글 검색 & GDN">
           <div class="aov-scrim"></div>
           <div class="aov-overlay">
-            <span class="aov-pill purple">04 / GOOGLE RETARGETING</span>
+            <span class="aov-pill purple">04. 구글 &amp; 유튜브 리타깃팅</span>
             <h3 class="aov-title">구글 검색광고 &amp; 유튜브 GDN 리타깃팅</h3>
             <p class="aov-desc">키워드 검색 고객과 제휴 언론사 배너 네트워크를 결합하여 이탈 고객을 24시간 재유입</p>
             <div class="aov-metrics-row">
