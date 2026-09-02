@@ -512,7 +512,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 </div>
                 <div class="asb-text">
                   <strong>피부과 · 리프팅</strong>
-                  <span>울쎄라 vs 써마지 전문의 1:1 비교 분석 칼럼</span>
+                  <span>울쎄라 vs 써마지 1:1 비교 분석 칼럼</span>
                 </div>
               </button>
 
@@ -570,11 +570,11 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="abm-post-body" id="simBlogPostContainer">
                 
                 <div class="apb-category-row">
-                  <span class="apb-cat" id="simPostCat">피부과 전문의 의학 칼럼</span>
+                  <span class="apb-cat" id="simPostCat">피부과 원장 칼럼</span>
                   <span class="apb-date">오늘 작성 · 5분 읽기</span>
                 </div>
 
-                <h4 class="apb-title" id="simPostTitle">울쎄라 vs 써마지 차이점, 피부과 전문의가 직접 명확하게 비교해 드립니다</h4>
+                <h4 class="apb-title" id="simPostTitle">울쎄라 vs 써마지 차이점, 원장님이 직접 명확하게 비교해 드립니다</h4>
 
                 <div class="apb-author-profile">
                   <div class="aap-avatar">
@@ -582,7 +582,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                   </div>
                   <div class="aap-info">
                     <strong class="aap-name" id="simAuthorName">대표원장 의학박사 직접 집필</strong>
-                    <span class="aap-desc" id="simAuthorDesc">광주 상무지구 피부과 전문의 진료 15년</span>
+                    <span class="aap-desc" id="simAuthorDesc">광주 상무지구 진료 15년</span>
                   </div>
                 </div>
 
@@ -593,11 +593,11 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
                 <!-- 3-POINT MEDICAL HIGHLIGHT -->
                 <div class="apb-point-card">
-                  <strong class="apc-point-title" id="simPointTitle">전문의가 짚어주는 3대 핵심 요약</strong>
+                  <strong class="apc-point-title" id="simPointTitle">원장님이 짚어주는 3대 핵심 요약</strong>
                   <ul class="apc-point-list" id="simPointList">
                     <li><strong>01. 초음파 vs 고주파 :</strong> 울쎄라는 SMAS 근막층, 써마지는 진피층 콜라겐을 타깃합니다.</li>
                     <li><strong>02. 피부 두께 측정 :</strong> 볼 꺼짐 부작용을 방지하기 위해 1:1 초음파 정밀 진단이 필수입니다.</li>
-                    <li><strong>03. 정품 팁 인증 :</strong> 시술 직후 정품 팁 시리얼 넘버 및 정품 인증서를 제공합니다.</li>
+                    <li><strong>03. 시술 팁 관리 :</strong> 시술 직후 인증된 시리얼 넘버 및 확인서를 제공합니다.</li>
                   </ul>
                 </div>
 

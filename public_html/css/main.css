@@ -970,3 +970,23 @@ body.modal-lock { overflow:hidden !important; }
   .ags-cta-group { flex-direction:column; width:100%; }
   .ags-btn-primary, .ags-btn-secondary { width:100%; justify-content:center; }
 }
+
+
+/* HIGH CONTRAST GUIDE MODAL TEXT & COMFORTABLE VERTICAL SPACING */
+.lhc-size { font-size:22px; font-weight:900; color:#0f172a; letter-spacing:-0.5px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; line-height:1.25; }
+.lhc-aspect { font-size:13px; font-weight:700; color:#334155; }
+.lhc-title { font-size:19px; font-weight:900; color:#0f172a; margin:0 0 6px; letter-spacing:-0.4px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
+.lhc-desc { font-size:15px; line-height:1.68; color:#1e293b; margin:0; font-weight:500; }
+.lsl-item { display:flex; align-items:center; gap:8px; font-size:14px; }
+.lsl-k { color:#475569; font-weight:700; }
+.lsl-v { color:#0f172a; font-weight:900; }
+
+/* GLOBAL HEADINGS & PARAGRAPH VERTICAL MARGINS (BREATHING ROOM) */
+.ash-title { margin:8px 0 10px; font-size:36px; line-height:1.28; }
+.ash-desc { margin:0 0 16px; font-size:16px; line-height:1.7; color:#475569; }
+.aov-title { margin:6px 0 8px; font-size:22px; line-height:1.3; }
+.aov-desc { margin:0 0 12px; font-size:14.5px; line-height:1.65; }
+.avs-title { margin:8px 0 12px; font-size:36px; line-height:1.28; }
+.avs-desc { margin:0 0 18px; font-size:16px; line-height:1.7; }
+.ags-title { margin:10px 0 14px; font-size:38px; line-height:1.3; }
+.ags-desc { margin:0 0 20px; font-size:16.5px; line-height:1.75; }
