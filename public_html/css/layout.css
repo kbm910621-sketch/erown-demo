@@ -437,3 +437,39 @@ body { background:#f2f2f4}
 .cta-btn_m-ring {
   display: none !important; /* REMOVE CIRCLE RING */
 }
+
+
+/* ==========================================================================
+   HEADER & FOOTER 1650PX UNIFIED WIDTH
+========================================================================== */
+#header .inner,
+.header .inner,
+.header_wrap,
+#footer .inner,
+.footer .inner {
+  width: 100% !important;
+  max-width: 1650px !important;
+  margin: 0 auto !important;
+  padding: 0 40px !important;
+  box-sizing: border-box !important;
+}
+
+@media(max-width:1680px) {
+  #header .inner,
+  .header .inner,
+  .header_wrap,
+  #footer .inner,
+  .footer .inner {
+    padding: 0 30px !important;
+  }
+}
+
+@media(max-width:768px) {
+  #header .inner,
+  .header .inner,
+  .header_wrap,
+  #footer .inner,
+  .footer .inner {
+    padding: 0 20px !important;
+  }
+}
