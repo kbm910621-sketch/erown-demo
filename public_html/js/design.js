@@ -286,7 +286,7 @@ $(function() {
 
   function openRouteModal() {
     $('html, body').addClass('modal-lock');
-    $('#routeSearchModal').fadeIn(200).css('display', 'block');
+    $('#routeSearchModal').addClass('open').fadeIn(200).css('display', 'block');
     $('body').addClass('modal-lock');
     renderModalRoutes('', 'all');
   }
@@ -441,14 +441,14 @@ $(function() {
   $(document).on('click', '.bus-guide-open', function(e) {
     e.preventDefault();
     var guideTarget = $(this).data('guide') || 'guideBusOut';
-    $('#busGuideOverlay').fadeIn(200).css('display', 'block');
-    $('body').addClass('modal-lock');
+    $('#busGuideOverlay').addClass('open').fadeIn(200).css('display', 'block');
+    $('html, body').addClass('modal-lock');
     $('.lmt-tab[data-target="' + guideTarget + '"]').trigger('click');
   });
 
   $(document).on('click', '#btnCloseBusGuide', function() {
-    $('#busGuideOverlay').fadeOut(200);
-    $('body').removeClass('modal-lock');
+    $('#busGuideOverlay').removeClass('open').fadeOut(200);
+    $('html, body').removeClass('modal-lock');
   });
 
   $(document).on('click', '#busGuideOverlay', function(e) {

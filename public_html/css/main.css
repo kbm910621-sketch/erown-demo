@@ -2046,3 +2046,114 @@ body.modal-lock { overflow:hidden !important; }
   .som-col-2 { display: none; }
   .som-stream-card { height: 340px; }
 }
+
+
+/* ==========================================================================
+   HUGE ABOUT STATS NUMBERS (500건, 200대, 10년, 98% 58PX 대형화)
+========================================================================== */
+.aas-stat-card {
+  padding: 28px 24px !important;
+}
+
+.asc-label {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: #475569 !important;
+  margin-bottom: 10px !important;
+  display: block !important;
+}
+
+.asc-value-row {
+  display: inline-flex !important;
+  align-items: baseline !important;
+  gap: 2px !important;
+}
+
+.asc-num {
+  font-size: 60px !important; /* HUGE IMPACTFUL NUMBER */
+  font-weight: 900 !important;
+  color: #1855b7 !important;
+  line-height: 1 !important;
+  letter-spacing: -2px !important;
+  font-family: "Poppins", "Pretendard", sans-serif !important;
+}
+
+.asc-plus {
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  color: #3b82f6 !important;
+  margin-left: 2px !important;
+}
+
+.asc-unit {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  margin-left: 4px !important;
+}
+
+/* ==========================================================================
+   EXTRA TALL PORTRAIT ONLINE STREAM CARDS (HEIGHT: 460PX, CONTAINER: 960PX)
+========================================================================== */
+.som-right-stream-wrap {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 28px !important;
+  height: 960px !important; /* EXTRA TALL STAGE */
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.som-stream-card {
+  position: relative !important;
+  width: 100% !important;
+  height: 460px !important; /* EXTRA TALL PORTRAIT CARD */
+  border-radius: 30px !important;
+  overflow: hidden !important;
+  background: #0f172a !important;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08) !important;
+  cursor: pointer !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  flex-shrink: 0 !important;
+}
+
+.track-1 {
+  animation: somStreamFlow1 28s linear infinite !important;
+}
+
+.track-2 {
+  animation: somStreamFlow2 34s linear infinite !important;
+  animation-delay: -9s !important;
+}
+
+/* ==========================================================================
+   RELIABLE MODAL OVERLAY STYLING (ZERO BLOCKING / 100% WORKING OPEN)
+========================================================================== */
+.route-search-modal-overlay,
+.bus-guide-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 999999 !important;
+  background: rgba(15, 23, 42, 0.78) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  padding: 40px 20px !important;
+  overflow-y: auto !important;
+  box-sizing: border-box !important;
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+@media(max-width:1200px) {
+  .som-right-stream-wrap { height: 720px !important; }
+  .som-stream-card { height: 380px !important; }
+}
+@media(max-width:640px) {
+  .som-right-stream-wrap { grid-template-columns: 1fr !important; height: 580px !important; }
+  .som-col-2 { display: none !important; }
+  .som-stream-card { height: 380px !important; }
+  .asc-num { font-size: 44px !important; }
+}
