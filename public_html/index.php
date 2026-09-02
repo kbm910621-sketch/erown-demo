@@ -417,7 +417,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <!-- MAIN SEALNPACK TALL PORTRAIT LAYOUT -->
       <div class="som-layout-stage wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- LEFT: CLEAN EDITORIAL BRAND HEADLINE & CONCISE BUTTON (NO EXTRA ARROW, NO FILLER) -->
+        <!-- LEFT: CLEAN EDITORIAL BRAND HEADLINE & CONCISE BUTTON -->
         <div class="som-left-content">
           <div class="som-title-wrap">
             <span class="ash-kicker">DIGITAL MARKETING</span>
@@ -433,16 +433,16 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </button>
         </div>
 
-        <!-- RIGHT: DUAL VERTICAL MARQUEE STREAMS (SEAMLESS 50% TRANSFORM LOOP & TALL PORTRAIT CARDS) -->
+        <!-- RIGHT: DUAL VERTICAL MARQUEE STREAMS (8 HIGH-RES TOPIC MATCHED IMAGES) -->
         <div class="som-right-stream-wrap">
           
           <!-- STREAM COLUMN 1 (4 DISTINCT ITEMS + 4 EXACT CLONES) -->
           <div class="som-stream-col som-col-1">
             <div class="som-stream-track track-1">
               
-              <!-- ITEM 01 -->
+              <!-- ITEM 01 : BLOG -->
               <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_14.jpg" alt="블로그 상위 노출 & C-Rank 브랜딩">
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" alt="블로그 상위 노출 & C-Rank 브랜딩">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">C-Rank Blog</span>
@@ -456,9 +456,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 </div>
               </div>
 
-              <!-- ITEM 02 -->
+              <!-- ITEM 02 : MOM CAFE -->
               <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_15.jpg" alt="맘카페 & 당근마켓 침투 바이럴">
+                <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=800&q=80" alt="맘카페 & 당근마켓 침투 바이럴">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Viral Marketing</span>
@@ -472,9 +472,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 </div>
               </div>
 
-              <!-- ITEM 03 -->
+              <!-- ITEM 03 : SMART PLACE -->
               <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_13.jpg" alt="스마트플레이스 1위 세팅 & 예약 연동">
+                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="스마트플레이스 1위 세팅 & 예약 연동">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Place SEO</span>
@@ -488,9 +488,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 </div>
               </div>
 
-              <!-- ITEM 04 -->
+              <!-- ITEM 04 : INSTAGRAM -->
               <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_16.jpg" alt="인스타그램 릴스 & 모바일 스폰서 광고">
+                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="인스타그램 릴스 & 모바일 스폰서 광고">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Meta Ads</span>
@@ -506,7 +506,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
               <!-- EXACT 4 CLONES FOR SEAMLESS 50% LOOP -->
               <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_14.jpg" alt="블로그 상위 노출 & C-Rank 브랜딩">
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" alt="블로그 상위 노출 & C-Rank 브랜딩">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">C-Rank Blog</span>
@@ -521,7 +521,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
 
               <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_15.jpg" alt="맘카페 & 당근마켓 침투 바이럴">
+                <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=800&q=80" alt="맘카페 & 당근마켓 침투 바이럴">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Viral Marketing</span>
@@ -536,7 +536,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
 
               <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_13.jpg" alt="스마트플레이스 1위 세팅 & 예약 연동">
+                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="스마트플레이스 1위 세팅 & 예약 연동">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Place SEO</span>
@@ -551,7 +551,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
 
               <div class="som-stream-card">
-                <img src="/images/bs_ad/baro_16.jpg" alt="인스타그램 릴스 & 모바일 스폰서 광고">
+                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="인스타그램 릴스 & 모바일 스폰서 광고">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Meta Ads</span>
@@ -572,9 +572,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="som-stream-col som-col-2">
             <div class="som-stream-track track-2">
               
-              <!-- ITEM 05 -->
+              <!-- ITEM 05 : GOOGLE & GDN -->
               <div class="som-stream-card">
-                <img src="/images/sub_bg_h.jpg" alt="구글 검색광고 & 유튜브 GDN 리타깃팅">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="구글 검색광고 & 유튜브 GDN 리타깃팅">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Google &amp; GDN</span>
@@ -588,9 +588,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 </div>
               </div>
 
-              <!-- ITEM 06 -->
+              <!-- ITEM 06 : SEARCH ADS -->
               <div class="som-stream-card">
-                <img src="/images/sub_bg_a.jpg" alt="네이버 파워링크 검색광고 (SA) 세팅">
+                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="네이버 파워링크 검색광고 (SA) 세팅">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Search Ads</span>
@@ -604,9 +604,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 </div>
               </div>
 
-              <!-- ITEM 07 -->
+              <!-- ITEM 07 : INFLUENCER -->
               <div class="som-stream-card">
-                <img src="/images/sub_bg_g.jpg" alt="블로그 체험단 & 인플루언서 섭외">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="블로그 체험단 & 인플루언서 섭외">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Influencer</span>
@@ -620,9 +620,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 </div>
               </div>
 
-              <!-- ITEM 08 -->
+              <!-- ITEM 08 : WEB LANDING -->
               <div class="som-stream-card">
-                <img src="/images/sub_bg_e.jpg" alt="모바일 고전환 웹사이트 & 랜딩페이지">
+                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80" alt="모바일 고전환 웹사이트 & 랜딩페이지">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Web &amp; Landing</span>
@@ -638,7 +638,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
               <!-- EXACT 4 CLONES FOR SEAMLESS 50% LOOP -->
               <div class="som-stream-card">
-                <img src="/images/sub_bg_h.jpg" alt="구글 검색광고 & 유튜브 GDN 리타깃팅">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="구글 검색광고 & 유튜브 GDN 리타깃팅">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Google &amp; GDN</span>
@@ -653,7 +653,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
 
               <div class="som-stream-card">
-                <img src="/images/sub_bg_a.jpg" alt="네이버 파워링크 검색광고 (SA) 세팅">
+                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="네이버 파워링크 검색광고 (SA) 세팅">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Search Ads</span>
@@ -668,7 +668,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
 
               <div class="som-stream-card">
-                <img src="/images/sub_bg_g.jpg" alt="블로그 체험단 & 인플루언서 섭외">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="블로그 체험단 & 인플루언서 섭외">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Influencer</span>
@@ -683,7 +683,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
 
               <div class="som-stream-card">
-                <img src="/images/sub_bg_e.jpg" alt="모바일 고전환 웹사이트 & 랜딩페이지">
+                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80" alt="모바일 고전환 웹사이트 & 랜딩페이지">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
                   <span class="sct-kicker">Web &amp; Landing</span>
