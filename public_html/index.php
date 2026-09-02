@@ -30,13 +30,13 @@ if ($result) {
   }
 }
 
-// 100% RICH REALISTIC FALLBACK IMAGES (ALWAYS POPULATED WITH GORGEOUS HIGH-RES PHOTOS)
+// 100% RICH REALISTIC FALLBACK IMAGES (PERFECTLY MATCHED BY SERVICE TYPE)
 if (empty($list)) {
   $list = array(
     array('id'=>1, 'category'=>'bus', 'title'=>'상무지구 대형 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/sub_bg_a.jpg'),
     array('id'=>2, 'category'=>'bus', 'title'=>'광주·전남 대표 입시학원 104개 노선 시내버스 광고', 'thumb'=>'/images/sub_bg_b.jpg'),
     array('id'=>3, 'category'=>'bus', 'title'=>'수완지구 척추관절 전문병원 차도면·인도면 래핑', 'thumb'=>'/images/sub_bg_c.jpg'),
-    array('id'=>4, 'category'=>'bus', 'title'=>'첨단 테크노밸리 분양 홍보 시내버스 후면 래핑', 'thumb'=>'/images/sub_bg_d.jpg'),
+    array('id'=>4, 'category'=>'bus', 'title'=>'첨단 테크노밸리 분양 홍보 시내버스 후면 래핑', 'thumb'=>'/images/sub_bg_01.jpg'),
     array('id'=>5, 'category'=>'online', 'title'=>'봉선동 프리미엄 학원 네이버 스마트플레이스 1위 세팅', 'thumb'=>'/images/sub_bg_e.jpg'),
     array('id'=>6, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 발행', 'thumb'=>'/images/sub_bg_f.jpg'),
     array('id'=>7, 'category'=>'online', 'title'=>'수완지구 대형 외식 브랜드 광주 맘카페 & 릴스 바이럴', 'thumb'=>'/images/sub_bg_g.jpg'),
@@ -47,8 +47,8 @@ if (empty($list)) {
     array('id'=>12, 'category'=>'video', 'title'=>'유스퀘어 터미널 DID 디지털 전광판 15초 모션그래픽', 'thumb'=>'/images/ex.jpg'),
     array('id'=>13, 'category'=>'taxi', 'title'=>'광주 전역 법인·개인택시 200대 양측면 래핑 광고', 'thumb'=>'/images/ev1.jpg'),
     array('id'=>14, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'thumb'=>'/images/ev2.jpg'),
-    array('id'=>15, 'category'=>'mart', 'title'=>'이마트 · 롯데마트 1,000대 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/sub_bg_01.jpg'),
-    array('id'=>16, 'category'=>'did', 'title'=>'광천터미널 & 지하철 환승역 고휘도 DID 전자현수막', 'thumb'=>'/images/sub_bg_02.jpg')
+    array('id'=>15, 'category'=>'mart', 'title'=>'이마트 · 롯데마트 1,000대 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/sub_bg_02.jpg'),
+    array('id'=>16, 'category'=>'did', 'title'=>'광천터미널 & 지하철 환승역 고휘도 DID 전자현수막', 'thumb'=>'/images/sub_bg_03.jpg')
   );
 }
 
@@ -419,7 +419,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         
         <!-- CARD 01 : SMART PLACE & BLOG -->
         <div class="aov-card wide">
-          <img src="/images/sub_bg_a.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="네이버 스마트플레이스 1위">
+          <img src="/images/sub_bg_f.jpg" alt="네이버 스마트플레이스 1위">
           <div class="aov-scrim"></div>
           <div class="aov-overlay">
             <span class="aov-pill blue">01 / NAVER SEARCH &amp; PLACE</span>
@@ -435,7 +435,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         <!-- CARD 02 : MOM CAFE -->
         <div class="aov-card">
-          <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="맘카페 바이럴">
+          <img src="/images/sub_bg_g.jpg" alt="맘카페 바이럴">
           <div class="aov-scrim"></div>
           <div class="aov-overlay">
             <span class="aov-pill green">02 / LOCAL COMMUNITY</span>
@@ -449,7 +449,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         <!-- CARD 03 : INSTAGRAM REELS -->
         <div class="aov-card">
-          <img src="/images/sub_bg_e.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="인스타그램 릴스">
+          <img src="/images/sub_bg_e.jpg" alt="인스타그램 릴스">
           <div class="aov-scrim"></div>
           <div class="aov-overlay">
             <span class="aov-pill cyan">03 / SNS PERFORMANCE</span>
@@ -463,7 +463,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
         <!-- CARD 04 : GOOGLE GDN -->
         <div class="aov-card wide">
-          <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="구글 검색 & GDN">
+          <img src="/images/sub_bg_h.jpg" alt="구글 검색 & GDN">
           <div class="aov-scrim"></div>
           <div class="aov-overlay">
             <span class="aov-pill purple">04 / GOOGLE RETARGETING</span>
@@ -722,7 +722,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-ooh-accordion wow fadeInUp" data-wow-duration="0.8s">
         
         <div class="aoa-card on">
-          <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="택시 래핑 광고">
+          <img src="/images/ev1.jpg" alt="택시 래핑 광고">
           <div class="aoa-scrim"></div>
           <div class="aoa-content">
             <span class="aoa-kicker">01 / URBAN MOBILITY</span>
@@ -733,7 +733,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
 
         <div class="aoa-card">
-          <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="택배차량 래핑 광고">
+          <img src="/images/ev2.jpg" alt="택배차량 래핑 광고">
           <div class="aoa-scrim"></div>
           <div class="aoa-content">
             <span class="aoa-kicker">02 / LOGISTICS BILLBOARD</span>
@@ -744,7 +744,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
 
         <div class="aoa-card">
-          <img src="/images/sub_bg_d.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="대형마트 쇼핑카트">
+          <img src="/images/sub_bg_02.jpg" alt="대형마트 쇼핑카트">
           <div class="aoa-scrim"></div>
           <div class="aoa-content">
             <span class="aoa-kicker">03 / RETAIL PURCHASE POINT</span>
@@ -755,7 +755,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
 
         <div class="aoa-card">
-          <img src="/images/sub_bg_e.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="DID 디지털 전광판">
+          <img src="/images/sub_bg_03.jpg" alt="DID 디지털 전광판">
           <div class="aoa-scrim"></div>
           <div class="aoa-content">
             <span class="aoa-kicker">04 / DIGITAL SMART SIGNAGE</span>
@@ -825,11 +825,19 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       <!-- CLEAN 3-COLUMN GALLERY GRID WITH VIBRANT HIGH-RES CARDS -->
       <div class="am-clean-gallery-grid wow fadeInUp" data-wow-duration="0.8s" id="masterPortGrid">
-        <?php 
-        $demoImages = array('/images/sub_bg_a.jpg', '/images/sub_bg_b.jpg', '/images/sub_bg_c.jpg', '/images/sub_bg_d.jpg', '/images/sub_bg_e.jpg', '/images/sub_bg_f.jpg', '/images/sub_bg_g.jpg', '/images/sub_bg_h.jpg');
-        foreach (array_slice($list, 0, 6) as $idx => $item): 
+                <?php 
+        $archiveList = array(
+          array('id'=>1, 'category'=>'bus', 'title'=>'상무지구 대형 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/sub_bg_a.jpg'),
+          array('id'=>5, 'category'=>'online', 'title'=>'봉선동 입시학원 네이버 스마트플레이스 1위 세팅', 'thumb'=>'/images/sub_bg_e.jpg'),
+          array('id'=>9, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'thumb'=>'/images/bg.jpg'),
+          array('id'=>14, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'thumb'=>'/images/ev2.jpg'),
+          array('id'=>6, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 운영', 'thumb'=>'/images/sub_bg_f.jpg'),
+          array('id'=>3, 'category'=>'bus', 'title'=>'수완지구 척추관절 전문병원 차도면·인도면 래핑', 'thumb'=>'/images/sub_bg_c.jpg')
+        );
+        $displayItems = !empty($list) && count($list) >= 6 ? array_slice($list, 0, 6) : $archiveList;
+        foreach ($displayItems as $idx => $item): 
           $catName = isset($categories[$item['category']]) ? $categories[$item['category']] : '광고사례';
-          $imgSrc = !empty($item['thumb']) ? htmlspecialchars($item['thumb']) : $demoImages[$idx % count($demoImages)];
+          $imgSrc = !empty($item['thumb']) ? htmlspecialchars($item['thumb']) : '/images/sub_bg_a.jpg';
         ?>
         <div class="acg-card main-port-card" 
              data-cat="<?php echo htmlspecialchars($item['category']); ?>" 
