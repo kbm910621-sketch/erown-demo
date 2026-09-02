@@ -212,55 +212,52 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- 1. [핵심 장점 우선 배치] 3대 직영 가치 벤토 카드 (ADVANTAGES FIRST) -->
-      <div class="am-full-visual-grid-3 wow fadeInUp" data-wow-duration="0.8s" style="margin-bottom:32px;">
+            <!-- 1. [BUS 3 ADVANTAGES: ASYMMETRIC INFOGRAPHIC BENTO] -->
+      <div class="am-bus-advantages-bento wow fadeInUp" data-wow-duration="0.8s">
         
-        <div class="afv-card">
-          <img src="/images/sample_bus.jpg" alt="104개 노선 맞춤 배차">
-          <div class="afv-scrim"></div>
-          <div class="afv-overlay-content">
-            <div class="afv-badge-row">
-              <span class="afv-pill blue">01 / FLEET DIRECT</span>
-              <div class="afv-icon-badge">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/><path d="M7 3v7"/><path d="M17 3v7"/></svg>
+        <!-- CARD 1: MAIN HERO BENTO (WIDE) -->
+        <div class="abb-card main-feature">
+          <div class="abb-inner">
+            <div class="abb-content-col">
+              <span class="abb-tag blue">01 / ROUTE OPTIMIZATION</span>
+              <h3 class="abb-heading">광주 104개 노선 1:1 맞춤 노선 설계</h3>
+              <p class="abb-desc">병원, 학원, 매장의 핵심 타깃 고객이 밀집된 아파트 단지와 주요 상권을 관통하는 최적의 버스 노선 믹스를 상권 데이터 기반으로 정밀 설계합니다.</p>
+              <div class="abb-data-pills">
+                <span class="adp-item">📍 광주 5개 구 1,000여 대 네트워크</span>
+                <span class="adp-item">🎯 사업장 맞춤 노선 믹스</span>
               </div>
             </div>
-            <h3 class="afv-title">광주 104개 전 노선 맞춤 직영 배차</h3>
-            <p class="afv-desc">상무·수완·봉선·첨단 등 사업장 타깃 상권을 관통하는 최적의 노선 믹스 설계</p>
-            <div class="afv-footer-stat">광주 5개 구 1,000여 대 시내버스 네트워크 운영</div>
+            <div class="abb-visual-col">
+              <div class="abb-graphic-badge">
+                <span class="agb-num">104</span>
+                <span class="agb-sub">TOTAL ROUTES</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="afv-card">
-          <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="1일 18시간 노출">
-          <div class="afv-scrim"></div>
-          <div class="afv-overlay-content">
-            <div class="afv-badge-row">
-              <span class="afv-pill blue">02 / 18H EXPOSURE</span>
-              <div class="afv-icon-badge">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><path d="M22 12A10 10 0 0 0 12 2"/></svg>
-              </div>
+        <!-- CARD 2: EXPOSURE IMPACT (METRIC BENTO) -->
+        <div class="abb-card metric-card">
+          <div class="abb-metric-header">
+            <span class="abb-tag green">02 / 18H EXPOSURE</span>
+            <div class="abb-huge-stat">
+              <strong>18</strong><span class="ahs-unit">H/DAY</span>
             </div>
-            <h3 class="afv-title">1일 18시간 · 일 150만 시민 눈높이 노출</h3>
-            <p class="afv-desc">도심 주요 간선도로와 교차로를 쉼 없이 순환하며 운전자와 보행자 시선 정면 강제 노출</p>
-            <div class="afv-footer-stat">차도면 3.7m + 인도면 3.0m + 후면 2.4m 3면 패키지</div>
           </div>
+          <h4 class="abb-sub-heading">일 150만 시민 3面 눈높이 반복 각인</h4>
+          <p class="abb-sub-desc">차도면 3.7m + 인도면 3.0m + 후면 2.4m 3면 동시 래핑으로 도심 간선도로 운전자와 보행자 시야를 1일 18시간 동안 쉼 없이 장악합니다.</p>
         </div>
 
-        <div class="afv-card">
-          <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="LG 정품 솔벤 시공">
-          <div class="afv-scrim"></div>
-          <div class="afv-overlay-content">
-            <div class="afv-badge-row">
-              <span class="afv-pill blue">03 / PREMIUM PRINT</span>
-              <div class="afv-icon-badge">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-              </div>
+        <!-- CARD 3: REAL PROOF & MAINTENANCE (MANAGEMENT BENTO) -->
+        <div class="abb-card proof-card">
+          <div class="abb-metric-header">
+            <span class="abb-tag cyan">03 / LIVE PROOF &amp; CARE</span>
+            <div class="abb-icon-emblem">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m9 15 2 2 4-4"></path></svg>
             </div>
-            <h3 class="afv-title">LG 하우시스 정품 솔벤 &amp; 100% 직영 시공</h3>
-            <p class="afv-desc">외주 없는 본사 10년 경력팀 직접 시공 및 시공 직후 번호판 4면 실사 즉시 보고</p>
-            <div class="afv-footer-stat">시공 직후 차량 4면 번호판 실사 즉시 전송</div>
           </div>
+          <h4 class="abb-sub-heading">실시간 번호판 실사 증빙 &amp; 철저한 사후관리</h4>
+          <p class="abb-sub-desc">부착 즉시 차량 4면 번호판 실사 촬영본을 광고주께 전송 보고하며, 계약 기간 동안 파손 및 훼손 시 무상 보수 등 철저한 사후관리를 책임집니다.</p>
         </div>
 
       </div>
@@ -360,52 +357,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <!-- 3. GWANGJU 4 MAJOR DISTRICT GOLDEN ROUTE CHIPS -->
-      <div class="am-district-chips-deck wow fadeInUp" data-wow-duration="0.8s">
-        <div class="adc-title-wrap">
-          <span class="adc-kicker">TARGET DISTRICT</span>
-          <strong class="adc-title">광주 4대 핵심 상권 골든 노선</strong>
-        </div>
-        <div class="adc-chips-grid">
-          <div class="adc-chip-card" onclick="$('#btnOpenRouteSearchModal').click();">
-            <div class="acc-top">
-              <span class="acc-badge blue">서구 상권</span>
-              <span class="acc-arrow">노선 검색 ↗</span>
-            </div>
-            <strong>상무지구 · 광천터미널</strong>
-            <p>순환01, 매월16, 풍암16 등 행정·상업 핵심축</p>
-          </div>
-
-          <div class="adc-chip-card" onclick="$('#btnOpenRouteSearchModal').click();">
-            <div class="acc-top">
-              <span class="acc-badge green">남구 상권</span>
-              <span class="acc-arrow">노선 검색 ↗</span>
-            </div>
-            <strong>봉선동 · 진월동 학원가</strong>
-            <p>봉선37, 진월07, 송암72 등 학부모·학생 밀집</p>
-          </div>
-
-          <div class="adc-chip-card" onclick="$('#btnOpenRouteSearchModal').click();">
-            <div class="acc-top">
-              <span class="acc-badge cyan">광산구 상권</span>
-              <span class="acc-arrow">노선 검색 ↗</span>
-            </div>
-            <strong>수완지구 · 첨단산단</strong>
-            <p>수완03, 첨단09, 첨단30 등 3040 거주·테크 거점</p>
-          </div>
-
-          <div class="adc-chip-card" onclick="$('#btnOpenRouteSearchModal').click();">
-            <div class="acc-top">
-              <span class="acc-badge purple">북구 상권</span>
-              <span class="acc-arrow">노선 검색 ↗</span>
-            </div>
-            <strong>전남대 · 일곡·양산지구</strong>
-            <p>문흥18, 일곡28, 용봉83 등 대학가 및 대단지 아파트</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. RECENT BUS PORTFOLIO SHOWCASE STRIP -->
+      <!-- 3. RECENT BUS PORTFOLIO SHOWCASE STRIP -->
       <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s">
         <div class="asps-head">
           <div class="asps-title-wrap">
@@ -1085,12 +1037,27 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <button type="button" class="lux-modal-close" id="btnCloseBusGuide">✕</button>
       </div>
 
-      <div class="lux-modal-tabs">
-        <button type="button" class="lmt-tab on" data-target="guideBus">🚌 시내버스 광고</button>
-        <button type="button" class="lmt-tab" data-target="guideOnline">📱 온라인 통합 마케팅</button>
-        <button type="button" class="lmt-tab" data-target="guideVideo">🎬 4K 영상제작</button>
-        <button type="button" class="lmt-tab" data-target="guideTaxiDelivery">🚕 택시 · 택배차량</button>
-        <button type="button" class="lmt-tab" data-target="guideMartDid">🏢 대형마트 · DID</button>
+            <div class="lux-modal-tabs">
+        <button type="button" class="lmt-tab on" data-target="guideBus">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/><path d="M7 3v7"/><path d="M17 3v7"/></svg>
+          <span>시내버스 광고</span>
+        </button>
+        <button type="button" class="lmt-tab" data-target="guideOnline">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2.5"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+          <span>온라인 마케팅</span>
+        </button>
+        <button type="button" class="lmt-tab" data-target="guideVideo">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2"/></svg>
+          <span>4K 영상제작</span>
+        </button>
+        <button type="button" class="lmt-tab" data-target="guideTaxiDelivery">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+          <span>택시 · 택배차량</span>
+        </button>
+        <button type="button" class="lmt-tab" data-target="guideMartDid">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="15" x="2" y="3" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+          <span>대형마트 · DID</span>
+        </button>
       </div>
 
       <div class="lux-modal-body">
