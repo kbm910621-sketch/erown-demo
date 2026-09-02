@@ -364,21 +364,41 @@ $(function() {
     $(this).addClass('on');
   });
 
-  /* 06. PORTFOLIO FILTER & LIGHTBOX MODAL */
+    /* 06. SPLIT INTERACTIVE CASE STUDY PREVIEW */
+  $(document).on('mouseenter click', '.ais-project-item', function() {
+    var $this = $(this);
+    $('.ais-project-item').removeClass('on');
+    $this.addClass('on');
+
+    var img = $this.data('img');
+    var title = $this.data('name');
+    var catLabel = $this.data('cat-label');
+    var id = $this.data('id');
+    var cat = $this.data('cat');
+
+    $('#dynSplitImg').attr('src', img);
+    $('#dynSplitTitle').text(title);
+    $('#dynSplitCat').text(catLabel);
+
+    $('#splitPreviewCard').data('id', id).data('name', title).data('cat', cat);
+  });
+
   $(document).on('click', '.afc-btn', function() {
     $('.afc-btn').removeClass('on');
     $(this).addClass('on');
     var filter = $(this).data('filter');
     if (filter === 'all') {
-      $('.main-port-card').fadeIn(200);
+      $('.ais-project-item').fadeIn(200);
+      $('.ais-project-item:visible').first().trigger('click');
     } else {
-      $('.main-port-card').each(function() {
+      $('.ais-project-item').each(function() {
         if ($(this).data('cat') === filter) {
           $(this).fadeIn(200);
         } else {
           $(this).hide();
         }
       });
+      $('.ais-project-item:visible').first().trigger('click');
     }
   });
 

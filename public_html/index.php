@@ -189,7 +189,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       02 SECTION 01 : 시내버스 광고 (ADVANTAGES FIRST + 3-SIDE SHOWCASE + ROUTE CHIPS)
+       02 SECTION 01 : 시내버스 광고 (CLEAN VISUAL 3-SIDE SHOWCASE HERO)
   ============================================ -->
   <section class="am-section am-bg-slate" id="bus">
     <div class="am-container">
@@ -212,57 +212,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-            <!-- 1. [BUS 3 ADVANTAGES: ASYMMETRIC INFOGRAPHIC BENTO] -->
-      <div class="am-bus-advantages-bento wow fadeInUp" data-wow-duration="0.8s">
-        
-        <!-- CARD 1: MAIN HERO BENTO (WIDE) -->
-        <div class="abb-card main-feature">
-          <div class="abb-inner">
-            <div class="abb-content-col">
-              <span class="abb-tag blue">01 / ROUTE OPTIMIZATION</span>
-              <h3 class="abb-heading">광주 104개 노선 1:1 맞춤 노선 설계</h3>
-              <p class="abb-desc">병원, 학원, 매장의 핵심 타깃 고객이 밀집된 아파트 단지와 주요 상권을 관통하는 최적의 버스 노선 믹스를 상권 데이터 기반으로 정밀 설계합니다.</p>
-              <div class="abb-data-pills">
-                <span class="adp-item">📍 광주 5개 구 1,000여 대 네트워크</span>
-                <span class="adp-item">🎯 사업장 맞춤 노선 믹스</span>
-              </div>
-            </div>
-            <div class="abb-visual-col">
-              <div class="abb-graphic-badge">
-                <span class="agb-num">104</span>
-                <span class="agb-sub">TOTAL ROUTES</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 2: EXPOSURE IMPACT (METRIC BENTO) -->
-        <div class="abb-card metric-card">
-          <div class="abb-metric-header">
-            <span class="abb-tag green">02 / 18H EXPOSURE</span>
-            <div class="abb-huge-stat">
-              <strong>18</strong><span class="ahs-unit">H/DAY</span>
-            </div>
-          </div>
-          <h4 class="abb-sub-heading">일 150만 시민 3面 눈높이 반복 각인</h4>
-          <p class="abb-sub-desc">차도면 3.7m + 인도면 3.0m + 후면 2.4m 3면 동시 래핑으로 도심 간선도로 운전자와 보행자 시야를 1일 18시간 동안 쉼 없이 장악합니다.</p>
-        </div>
-
-        <!-- CARD 3: REAL PROOF & MAINTENANCE (MANAGEMENT BENTO) -->
-        <div class="abb-card proof-card">
-          <div class="abb-metric-header">
-            <span class="abb-tag cyan">03 / LIVE PROOF &amp; CARE</span>
-            <div class="abb-icon-emblem">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m9 15 2 2 4-4"></path></svg>
-            </div>
-          </div>
-          <h4 class="abb-sub-heading">실시간 번호판 실사 증빙 &amp; 철저한 사후관리</h4>
-          <p class="abb-sub-desc">부착 즉시 차량 4면 번호판 실사 촬영본을 광고주께 전송 보고하며, 계약 기간 동안 파손 및 훼손 시 무상 보수 등 철저한 사후관리를 책임집니다.</p>
-        </div>
-
-      </div>
-
-      <!-- 2. 3-SIDE WIDE PHOTOGRAPHIC SHOWCASE -->
+      <!-- 1. 3-SIDE WIDE PHOTOGRAPHIC SHOWCASE (MAIN PROMINENT STAGE) -->
       <div class="am-bus-wide-showcase wow fadeInUp" data-wow-duration="0.8s">
         
         <!-- SPEC SELECTION TABS -->
@@ -357,7 +307,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <!-- 3. RECENT BUS PORTFOLIO SHOWCASE STRIP -->
+      <!-- 2. RECENT BUS PORTFOLIO SHOWCASE STRIP -->
       <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s">
         <div class="asps-head">
           <div class="asps-title-wrap">
@@ -388,7 +338,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
     </div>
   </section>
-
 
   <!-- ============================================
        03 SECTION 02 : 온라인 마케팅 (BIG FULL-IMAGE SCREEN CAPTURE SHOWCASE)
@@ -796,7 +745,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       06 SECTION 05 : 성공 사례 (DISTINCT HIGH-END PORTFOLIO SHOWCASE)
+       06 SECTION 05 : 성공 사례 (INTEGRATED INTERACTIVE SPLIT SHOWCASE)
   ============================================ -->
   <section class="am-section am-bg-slate" id="archive">
     <div class="am-container">
@@ -804,12 +753,12 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
         <div class="ash-flex">
           <div>
-            <span class="ash-kicker">PORTFOLIO ARCHIVE</span>
+            <span class="ash-kicker">SUCCESS CASE ARCHIVE</span>
             <h2 class="ash-title">전체 성공 사례 아카이브</h2>
-            <p class="ash-desc">시내버스부터 온라인, 영상, 특화매체까지 가온엔이 집행한 실제 포트폴리오를 매체별로 확인하세요.</p>
+            <p class="ash-desc">시내버스, 온라인 마케팅, 4K 영상제작, 특화매체까지 가온엔이 집행한 대표 실적을 확인하세요.</p>
           </div>
           <div class="am-filter-chips">
-            <button type="button" class="afc-btn on" data-filter="all">전체보기</button>
+            <button type="button" class="afc-btn on" data-filter="all">전체 매체</button>
             <button type="button" class="afc-btn" data-filter="bus">시내버스</button>
             <button type="button" class="afc-btn" data-filter="online">온라인 마케팅</button>
             <button type="button" class="afc-btn" data-filter="video">영상제작</button>
@@ -818,38 +767,61 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- DISTINCT DYNAMIC PORTFOLIO TILES (DIFFERENT FROM 4-STRIPS) -->
-      <div class="am-distinct-port-showcase wow fadeInUp" data-wow-duration="0.8s" id="masterPortGrid">
-        <?php foreach (array_slice($list, 0, 7) as $idx => $item): 
-          $isHero = ($idx === 0);
-        ?>
-        <div class="adp-tile main-port-card <?php echo $isHero ? 'adp-tile-featured' : ''; ?>" 
-             data-cat="<?php echo htmlspecialchars($item['category']); ?>" 
-             data-id="<?php echo (int)$item['id']; ?>" 
-             data-name="<?php echo htmlspecialchars($item['title']); ?>">
-          <div class="adp-thumb-box">
-            <?php if (!empty($item['thumb'])): ?>
-            <img src="<?php echo htmlspecialchars($item['thumb']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
-            <?php else: ?>
-            <img src="/images/sample_bus.jpg" alt="<?php echo htmlspecialchars($item['title']); ?>">
-            <?php endif; ?>
-            <div class="adp-scrim"></div>
-            
-            <div class="adp-top-tags">
-              <span class="adp-cat-tag"><?php echo isset($categories[$item['category']]) ? $categories[$item['category']] : '광고사례'; ?></span>
-              <span class="adp-num-tag">#0<?php echo $idx + 1; ?></span>
-            </div>
+      <!-- SPLIT INTERACTIVE DIRECTORY & BIG PREVIEW STAGE -->
+      <div class="am-interactive-split-stage wow fadeInUp" data-wow-duration="0.8s">
+        
+        <!-- LEFT: INTEGRATED PROJECT LIST -->
+        <div class="ais-list-col">
+          <?php 
+          $initialHeroImg = !empty($list[0]['thumb']) ? $list[0]['thumb'] : '/images/sample_bus.jpg';
+          $initialHeroTitle = !empty($list[0]['title']) ? $list[0]['title'] : '대표 프로젝트';
+          $initialHeroCat = !empty($list[0]['category']) && isset($categories[$list[0]['category']]) ? $categories[$list[0]['category']] : '통합 마케팅';
+          $initialHeroId = !empty($list[0]['id']) ? (int)$list[0]['id'] : 1;
 
-            <div class="adp-bottom-info">
-              <strong class="adp-item-title"><?php echo htmlspecialchars($item['title']); ?></strong>
-              <p class="adp-item-desc">가온엔 기획·시공 포트폴리오</p>
-              <div class="adp-hover-pill">
-                <span>상세보기 &amp; 견적조회 ↗</span>
+          foreach (array_slice($list, 0, 6) as $idx => $item): 
+            $catLabel = isset($categories[$item['category']]) ? $categories[$item['category']] : '광고사례';
+            $thumbUrl = !empty($item['thumb']) ? htmlspecialchars($item['thumb']) : '/images/sample_bus.jpg';
+            $isActive = ($idx === 0) ? 'on' : '';
+          ?>
+          <div class="ais-project-item <?php echo $isActive; ?> main-port-card-trigger"
+               data-cat="<?php echo htmlspecialchars($item['category']); ?>"
+               data-id="<?php echo (int)$item['id']; ?>"
+               data-name="<?php echo htmlspecialchars($item['title']); ?>"
+               data-img="<?php echo $thumbUrl; ?>"
+               data-cat-label="<?php echo $catLabel; ?>">
+            <div class="api-left">
+              <span class="api-index">#0<?php echo $idx + 1; ?></span>
+              <div class="api-meta">
+                <span class="api-cat-badge"><?php echo $catLabel; ?></span>
+                <strong class="api-title"><?php echo htmlspecialchars($item['title']); ?></strong>
+              </div>
+            </div>
+            <div class="api-right">
+              <span class="api-arrow">상세보기 ↗</span>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+
+        <!-- RIGHT: STICKY BIG PREVIEW VIEWFINDER -->
+        <div class="ais-preview-col">
+          <div class="ais-sticky-box">
+            <div class="ais-photo-frame main-port-card" id="splitPreviewCard" data-cat="<?php echo htmlspecialchars($list[0]['category'] ?? 'bus'); ?>" data-id="<?php echo $initialHeroId; ?>" data-name="<?php echo htmlspecialchars($initialHeroTitle); ?>">
+              <img src="<?php echo htmlspecialchars($initialHeroImg); ?>" id="dynSplitImg" alt="프로젝트 실사 프리뷰">
+              <div class="ais-photo-scrim"></div>
+              
+              <div class="ais-floating-meta">
+                <span class="ais-badge-pill" id="dynSplitCat"><?php echo htmlspecialchars($initialHeroCat); ?></span>
+                <strong class="ais-title-text" id="dynSplitTitle"><?php echo htmlspecialchars($initialHeroTitle); ?></strong>
+                <p class="ais-desc-text">가온엔 인하우스 기획 및 직영 시공 집행 실적</p>
+                <div class="ais-view-btn">
+                  <span>실사 크게보기 &amp; 맞춤 견적 ↗</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <?php endforeach; ?>
+
       </div>
 
       <div class="am-more-box" style="margin-top:40px;">
@@ -861,7 +833,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
     </div>
   </section>
-
 
   <!-- ============================================
        07 SECTION 06 : 마스터플랜
