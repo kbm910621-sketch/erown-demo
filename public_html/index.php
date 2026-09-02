@@ -437,7 +437,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="aov-overlay">
             <span class="aov-pill blue">01 / NAVER SEARCH &amp; PLACE</span>
             <h3 class="aov-title">네이버 스마트플레이스 1위 세팅 &amp; C-Rank 브랜드 블로그</h3>
-            <p class="aov-desc">광주 로컬 키워드 1페이지 지도 최상단 노출 + 24시간 네이버 예약 연동 + 의료법 준수 전문 칼럼 정기 발행</p>
+            <p class="aov-desc">광주 로컬 키워드 1페이지 지도 최상단 노출 + 24시간 네이버 예약 연동 + 고품격 브랜드 칼럼 정기 발행</p>
             <div class="aov-metrics-row">
               <div class="amr-tag">상권 키워드 지도 상위 노출</div>
               <div class="amr-tag">월 8~12편 전문 칼럼</div>
@@ -502,7 +502,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <div class="ahbs-head">
               <span class="ahbs-kicker">HOSPITAL BRAND BLOG STUDIO</span>
               <h3 class="ahbs-title">병원·의원 전문 브랜드 블로그 칼럼 라이브 뷰</h3>
-              <p class="ahbs-desc">단순 홍보글이 아닌 원장님의 진료 철학과 의학 지식을 담아 환자의 내방 결정을 이끌어냅니다. <strong>의료법 제56조 100% 사전 법무 검수</strong>를 거친 고품격 칼럼을 직접 확인해보세요.</p>
+              <p class="ahbs-desc">단순 홍보글이 아닌 원장님의 진료 철학과 전문 지식을 진정성 있게 담아 환자의 내방 결정을 이끌어내는 고품격 브랜드 블로그 실전 칼럼입니다.</p>
             </div>
 
             <div class="ahbs-subject-tabs">
@@ -549,7 +549,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
             <div class="ahbs-audit-note">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span>가온엔은 과장 광고 및 전후 사진 위반을 배제하고 의료법을 100% 준수합니다.</span>
+              <span>가온엔은 인위적인 어뷰징 없이 신뢰도 높은 정통 브랜드 콘텐츠만을 기획·발행합니다.</span>
             </div>
           </div>
 
@@ -604,7 +604,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 <!-- MEDICAL LAW COMPLIANCE BADGE -->
                 <div class="apb-law-badge">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-                  <span>보건복지부 의료법 제56조 사전 법무 검수 완료 (행정처분 리스크 0%)</span>
+                  <span>가온엔 본사 전문 에디터 팀 1:1 맞춤 기획 및 전수 검수 완료</span>
                 </div>
 
                 <!-- CTA BUTTONS -->
@@ -628,8 +628,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
           <div class="aog-body">
-            <strong>의료법 및 광고 심의 준수</strong>
-            <span>과장 광고 및 불법 표현을 원천 차단하여 보건소 행정처분 및 제재 리스크 0%</span>
+            <strong>광고 심의 및 신뢰성 검수</strong>
+            <span>과장되거나 자극적인 표현을 배제하고 브랜드 신뢰도를 극대화하는 정직하고 안전한 콘텐츠</span>
           </div>
         </div>
 
@@ -983,7 +983,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           array('id'=>9, 'category'=>'online', 'title'=>'봉선동 대표 입시학원 네이버 스마트플레이스 1위 세팅', 'loc'=>'로컬 1위 SEO & 예약 연동', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
           array('id'=>13, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'loc'=>'Sony FX 풀프레임 + 드론', 'thumb'=>'/images/bs_ad/visual01.jpg'),
           array('id'=>18, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'loc'=>'도심 주거지 밀착 노출', 'thumb'=>'/images/bs_ad/baro_18.jpg'),
-          array('id'=>10, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 발행', 'loc'=>'의료법 100% 사전 검수', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
+          array('id'=>10, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 발행', 'loc'=>'전문 에디터 1:1 맞춤 기획', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
           array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'loc'=>'정류장 승객 눈높이 밀착', 'thumb'=>'/images/bs_ad/baro_3.jpg')
         );
         $displayItems = !empty($list) && count($list) >= 6 ? array_slice($list, 0, 6) : $archiveList;
@@ -1491,11 +1491,11 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">02 C-Rank 블로그</span>
                 <strong class="lhc-size">월 8~12편 칼럼</strong>
-                <span class="lhc-aspect">의료법 100% 사전 검수</span>
+                <span class="lhc-aspect">전문 에디터 1:1 맞춤 기획</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">C-Rank 브랜드 블로그 전문 칼럼 발행</h5>
-                <p class="lhc-desc">의료법 제56조 100% 사전 법무 검수로 행정처분 위험 0%. 원장님 진료 철학 기반 월 8~12편 전문 칼럼으로 스마트블록과 뷰탭을 점유합니다.</p>
+                <p class="lhc-desc">원장님과 대표님의 진료·경영 철학을 바탕으로 월 8~12편 고품격 전문 칼럼을 기획하여 스마트블록과 뷰탭을 안정적으로 점유합니다.</p>
               </div>
             </div>
 
