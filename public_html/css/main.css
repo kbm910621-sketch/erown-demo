@@ -869,78 +869,73 @@ body.modal-lock { overflow:hidden !important; }
 .ric-target strong { color:#0f172a; font-weight:800; }
 
 
-/* LIVE NAVER SEARCH & PLACE SIMULATION STAGE */
-.am-live-search-sim-stage { background:#ffffff; border-radius:28px; padding:48px; border:1.5px solid #e2e8f0; box-shadow:0 20px 60px rgba(15,23,42,0.06); margin:50px 0; }
-.alss-layout { display:grid; grid-template-columns:1fr 400px; gap:48px; align-items:center; }
 
-.alss-controller { display:flex; flex-direction:column; gap:24px; }
-.alss-kicker { font-size:12px; font-weight:900; color:#1855b7; background:#eff6ff; border:1px solid #bfdbfe; padding:4px 14px; border-radius:100px; width:max-content; letter-spacing:0.04em; }
-.alss-title { font-size:28px; font-weight:900; color:#0f172a; margin:0; letter-spacing:-0.6px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; line-height:1.25; }
-.alss-desc { font-size:15px; line-height:1.65; color:#64748b; margin:0; }
-
-.alss-keyword-tabs { display:flex; flex-direction:column; gap:12px; }
-.akt-tab { display:flex; align-items:center; gap:16px; padding:18px 22px; border-radius:18px; background:#f8fafc; border:1.5px solid #e2e8f0; cursor:pointer; text-align:left; transition:all 0.25s ease; width:100%; }
-.akt-tab:hover { background:#f0f7ff; border-color:#93c5fd; transform:translateX(4px); }
-.akt-tab.on { background:#eff6ff; border-color:#1855b7; box-shadow:0 8px 24px rgba(24,85,183,0.12); transform:translateX(6px); }
-.akt-icon { width:38px; height:38px; border-radius:12px; background:#ffffff; display:flex; align-items:center; justify-content:center; flex-shrink:0; border:1px solid #e2e8f0; }
-.akt-tab.on .akt-icon { background:#1855b7; border-color:#1855b7; }
-.akt-tab.on .akt-icon svg { stroke:#ffffff; }
-.akt-text { display:flex; flex-direction:column; gap:3px; }
-.akt-text strong { font-size:16.5px; font-weight:900; color:#0f172a; letter-spacing:-0.3px; }
-.akt-text span { font-size:13px; color:#64748b; font-weight:600; }
-.akt-tab.on .akt-text strong { color:#1855b7; }
-
-.alss-action-box { background:#f1f5f9; border-radius:16px; padding:18px 22px; display:flex; justify-content:space-between; align-items:center; border:1px solid #e2e8f0; gap:14px; }
-.aab-text { font-size:13.5px; font-weight:800; color:#334155; }
-.aab-btn { display:inline-flex; align-items:center; gap:6px; padding:10px 18px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:13px; font-weight:800; text-decoration:none; transition:all 0.2s; flex-shrink:0; }
-.aab-btn:hover { background:#0284c7; }
-
-/* PHONE MOCKUP UI */
-.alss-device-wrap { display:flex; justify-content:center; }
-.alss-phone-mockup { width:380px; background:#ffffff; border-radius:40px; border:10px solid #0f172a; box-shadow:0 25px 60px rgba(15,23,42,0.25); overflow:hidden; display:flex; flex-direction:column; }
-.apm-notch { background:#0f172a; color:#ffffff; padding:10px 24px 6px; display:flex; justify-content:space-between; align-items:center; font-size:11px; font-weight:800; }
-.apm-island { width:90px; height:18px; background:#000000; border-radius:100px; }
-.apm-status { font-size:10px; color:#94a3b8; }
-
-.apm-naver-header { background:#ffffff; border-bottom:1px solid #e2e8f0; padding:12px 16px 0; }
-.anh-logo-row { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
-.anh-naver-logo { width:26px; height:26px; background:#03c75a; color:#ffffff; font-size:15px; font-weight:900; border-radius:6px; display:flex; align-items:center; justify-content:center; }
-.anh-search-box { flex-grow:1; display:flex; align-items:center; justify-content:space-between; border:2px solid #03c75a; border-radius:100px; padding:6px 14px; background:#ffffff; }
-.anh-search-text { font-size:13.5px; font-weight:800; color:#0f172a; }
-.anh-cursor { font-weight:300; color:#03c75a; animation:cursorBlink 1s infinite; }
-@keyframes cursorBlink { 0%, 100% { opacity:1; } 50% { opacity:0; } }
-.anh-tabs-nav { display:flex; gap:14px; overflow-x:auto; font-size:13px; font-weight:700; color:#64748b; padding-bottom:8px; }
-.atn-item.on { color:#03c75a; font-weight:900; border-bottom:2px solid #03c75a; padding-bottom:4px; }
-
-.apm-results-body { padding:14px 16px; background:#f4f6f8; display:flex; flex-direction:column; gap:12px; max-height:420px; overflow-y:auto; }
-
-.anr-place-card { background:#ffffff; border-radius:16px; padding:16px; border:1px solid #e2e8f0; box-shadow:0 4px 12px rgba(0,0,0,0.03); display:flex; flex-direction:column; gap:8px; }
-.apc-top { display:flex; align-items:center; gap:8px; }
-.apc-rank-badge { background:#03c75a; color:#ffffff; font-size:11px; font-weight:900; padding:2px 8px; border-radius:4px; }
-.apc-name { font-size:15.5px; font-weight:900; color:#0f172a; }
-.apc-ad-tag { font-size:10px; color:#94a3b8; border:1px solid #cbd5e1; padding:1px 4px; border-radius:3px; margin-left:auto; }
-.apc-rating-row { display:flex; gap:8px; font-size:12px; }
-.apc-stars { color:#f59e0b; font-weight:900; }
-.apc-reviews { color:#64748b; }
-.apc-desc { font-size:12px; color:#475569; margin:0; line-height:1.4; }
-.apc-btns-row { display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; margin-top:4px; }
-.apc-btn { border:1px solid #e2e8f0; background:#f8fafc; border-radius:8px; padding:7px 0; font-size:11.5px; font-weight:800; color:#334155; cursor:pointer; }
-.apc-btn.reserve { background:#03c75a; color:#ffffff; border-color:#03c75a; }
-
-.anr-blog-card { background:#ffffff; border-radius:16px; padding:14px; border:1px solid #e2e8f0; box-shadow:0 4px 12px rgba(0,0,0,0.03); display:flex; flex-direction:column; gap:6px; }
-.abc-channel { font-size:10.5px; font-weight:900; color:#1855b7; }
-.abc-title { font-size:13.5px; font-weight:900; color:#0f172a; margin:0; line-height:1.35; }
-.abc-snippet { font-size:11.5px; color:#64748b; line-height:1.4; margin:0; }
-.abc-footer { display:flex; justify-content:space-between; font-size:11px; color:#94a3b8; margin-top:2px; }
-
-.anr-buzz-card { background:#ffffff; border-radius:16px; padding:12px 14px; border:1px solid #e2e8f0; box-shadow:0 4px 12px rgba(0,0,0,0.03); display:flex; flex-direction:column; gap:4px; }
-.abz-tag { font-size:10.5px; font-weight:900; color:#16a34a; }
-.abz-text { font-size:12px; color:#334155; margin:0; line-height:1.4; font-style:italic; }
-.abz-meta { font-size:10.5px; color:#94a3b8; }
-
-@media(max-width:991px) {
-  .alss-layout { grid-template-columns:1fr; }
   .am-live-search-sim-stage { padding:24px; }
   .alss-phone-mockup { width:100%; max-width:380px; }
   .alss-action-box { flex-direction:column; align-items:flex-start; }
+}
+
+
+/* HOSPITAL MEDICAL BRAND BLOG & COLUMN STUDIO */
+.am-hospital-blog-sim-stage { background:#ffffff; border-radius:28px; padding:48px; border:1.5px solid #e2e8f0; box-shadow:0 20px 60px rgba(15,23,42,0.06); margin:50px 0; }
+.ahbs-layout { display:grid; grid-template-columns:1fr 440px; gap:48px; align-items:flex-start; }
+
+.ahbs-controller { display:flex; flex-direction:column; gap:22px; }
+.ahbs-kicker { font-size:12px; font-weight:900; color:#1855b7; background:#eff6ff; border:1px solid #bfdbfe; padding:4px 14px; border-radius:100px; width:max-content; letter-spacing:0.04em; }
+.ahbs-title { font-size:28px; font-weight:900; color:#0f172a; margin:0; letter-spacing:-0.6px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; line-height:1.25; }
+.ahbs-desc { font-size:15px; line-height:1.65; color:#64748b; margin:0; }
+
+.ahbs-subject-tabs { display:flex; flex-direction:column; gap:12px; }
+.asb-tab { display:flex; align-items:center; gap:16px; padding:18px 22px; border-radius:18px; background:#f8fafc; border:1.5px solid #e2e8f0; cursor:pointer; text-align:left; transition:all 0.25s ease; width:100%; }
+.asb-tab:hover { background:#f0f7ff; border-color:#93c5fd; transform:translateX(4px); }
+.asb-tab.on { background:#eff6ff; border-color:#1855b7; box-shadow:0 8px 24px rgba(24,85,183,0.12); transform:translateX(6px); }
+.asb-icon-badge { width:42px; height:42px; border-radius:12px; background:#ffffff; display:flex; align-items:center; justify-content:center; flex-shrink:0; border:1px solid #cbd5e1; }
+.asb-tab.on .asb-icon-badge { background:#1855b7; border-color:#1855b7; }
+.asb-tab.on .asb-icon-badge svg { stroke:#ffffff; }
+.asb-text { display:flex; flex-direction:column; gap:3px; }
+.asb-text strong { font-size:16.5px; font-weight:900; color:#0f172a; letter-spacing:-0.3px; }
+.asb-text span { font-size:13.5px; color:#64748b; font-weight:600; }
+.asb-tab.on .asb-text strong { color:#1855b7; }
+
+.ahbs-audit-note { display:flex; align-items:center; gap:8px; background:#f0fdf4; border:1px solid #bbf7d0; padding:12px 18px; border-radius:12px; font-size:13px; font-weight:700; color:#15803d; }
+
+/* MEDICAL BLOG MOCKUP UI */
+.ahbs-blog-mockup-wrap { display:flex; justify-content:center; }
+.ahbs-blog-mockup { width:440px; background:#ffffff; border-radius:24px; border:2px solid #cbd5e1; box-shadow:0 25px 60px rgba(15,23,42,0.15); overflow:hidden; display:flex; flex-direction:column; }
+.abm-header { background:#1e293b; color:#ffffff; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #334155; }
+.abh-brand-info { display:flex; flex-direction:column; gap:2px; }
+.abh-blog-name { font-size:14.5px; font-weight:900; color:#ffffff; }
+.abh-blog-stats { font-size:11.5px; color:#94a3b8; }
+.abh-follow-btn { font-size:11.5px; font-weight:800; color:#03c75a; background:rgba(3,199,90,0.15); border:1px solid rgba(3,199,90,0.3); padding:4px 10px; border-radius:100px; }
+
+.abm-post-body { padding:24px; display:flex; flex-direction:column; gap:14px; background:#ffffff; transition:opacity 0.2s ease; }
+.apb-category-row { display:flex; justify-content:space-between; font-size:12px; font-weight:800; color:#1855b7; border-bottom:1px solid #f1f5f9; padding-bottom:8px; }
+.apb-date { color:#94a3b8; font-weight:600; }
+.apb-title { font-size:17.5px; font-weight:900; color:#0f172a; line-height:1.35; margin:0; letter-spacing:-0.4px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
+
+.apb-author-profile { display:flex; align-items:center; gap:10px; background:#f8fafc; padding:10px 14px; border-radius:12px; border:1px solid #e2e8f0; }
+.aap-avatar { width:34px; height:34px; border-radius:50%; background:#eff6ff; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.aap-info { display:flex; flex-direction:column; }
+.aap-name { font-size:12.5px; font-weight:900; color:#0f172a; }
+.aap-desc { font-size:11px; color:#64748b; }
+
+.apb-lead-box { font-size:13.5px; line-height:1.65; color:#334155; background:#f0f7ff; padding:14px 16px; border-radius:12px; border-left:3.5px solid #1855b7; font-weight:500; }
+.apb-point-card { background:#ffffff; border:1.5px solid #e2e8f0; border-radius:14px; padding:14px 16px; display:flex; flex-direction:column; gap:8px; }
+.apc-point-title { font-size:13.5px; font-weight:900; color:#1855b7; }
+.apc-point-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:#475569; line-height:1.5; }
+.apc-point-list li strong { color:#0f172a; }
+
+.apb-law-badge { display:flex; align-items:center; gap:6px; background:#f0fdf4; border:1px solid #bbf7d0; padding:8px 12px; border-radius:8px; font-size:11.5px; font-weight:800; color:#16a34a; }
+.apb-action-row { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:4px; }
+.apb-btn { display:inline-flex; align-items:center; justify-content:center; padding:10px 0; border-radius:8px; font-size:12px; font-weight:800; text-decoration:none; text-align:center; transition:all 0.2s; }
+.apb-btn.call { background:#f1f5f9; color:#334155; border:1px solid #cbd5e1; }
+.apb-btn.reserve { background:#03c75a; color:#ffffff; border:1px solid #03c75a; }
+
+/* 3-PILLAR GUARANTEE ICON BOXES */
+.aog-icon-box { width:58px; height:58px; border-radius:16px; background:#eff6ff; border:1.5px solid #bfdbfe; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+
+@media(max-width:991px) {
+  .ahbs-layout { grid-template-columns:1fr; }
+  .am-hospital-blog-sim-stage { padding:24px; }
+  .ahbs-blog-mockup { width:100%; max-width:440px; }
 }

@@ -457,80 +457,92 @@ $(function() {
   });
 
   
-  /* 08. LIVE NAVER SEARCH SIMULATOR (OPTION B) */
-  var searchDataMap = {
+  
+  /* 08. HOSPITAL MEDICAL BRAND BLOG SIMULATOR */
+  var medicalDataMap = {
     skin: {
-      keyword: '상무지구 피부과',
-      placeName: '가온메디컬의원 상무본점',
-      reviews: '방문자 리뷰 1,420 · 블로그 리뷰 860',
-      desc: '상무역 4번 출구 앞 도보 1분 · 피부과 전문의 1:1 맞춤 진료 · 야간진료',
-      blogTitle: '상무지구 피부과 전문의가 직접 알려주는 색소 치료 전 필수 체크 3가지',
-      blogSnippet: '로컬 1위 SEO 알고리즘 적용 및 의료법 제56조 100% 사전 법무 검수 완료 칼럼. 스마트블록 및 뷰탭 최상단 3개 영역 동시 점유 실사...',
-      blogAuthor: '가온메디컬 공식블로그',
-      buzzTag: '광주 맘스홀릭 실사용자 추천',
-      buzzText: '"상무지구 피부과 여러 군데 다녀봤는데 여기가 제일 친절하고 꼼꼼하게 봐주시네요! 원장님 설명도 굿굿"',
-      buzzMeta: '광주맘스홀릭 추천수 48 · 댓글 22'
+      brand: '가온메디컬 피부과 공식 의학 매거진',
+      cat: '피부과 전문의 의학 칼럼',
+      title: '울쎄라 vs 써마지 차이점, 피부과 전문의가 직접 명확하게 비교해 드립니다',
+      author: '대표원장 의학박사 직접 집필',
+      authorDesc: '광주 상무지구 피부과 전문의 진료 15년',
+      lead: '"안녕하세요. 상무지구에서 15년간 피부 진료를 이어오고 있는 대표원장입니다. 많은 환자분들이 내원하셔서 \'원장님, 저한테는 울쎄라가 맞나요, 써마지가 맞나요?\'라는 질문을 가장 많이 하십니다. 결론부터 말씀드리면 두 시술은 타깃하는 피부 층이 완전히 다릅니다..."',
+      pointTitle: '전문의가 짚어주는 3대 핵심 요약',
+      points: [
+        '<strong>01. 초음파 vs 고주파 :</strong> 울쎄라는 SMAS 근막층, 써마지는 진피층 콜라겐을 타깃합니다.',
+        '<strong>02. 피부 두께 측정 :</strong> 볼 꺼짐 부작용을 방지하기 위해 1:1 초음파 정밀 진단이 필수입니다.',
+        '<strong>03. 정품 팁 인증 :</strong> 시술 직후 정품 팁 시리얼 넘버 및 정품 인증서를 제공합니다.'
+      ]
     },
-    math: {
-      keyword: '봉선동 수학학원',
-      placeName: '가온에듀 봉선 프리미엄관',
-      reviews: '방문자 리뷰 980 · 학부모 평가 4.98',
-      desc: '봉선동 삼익사거리 학원가 · 광주 과고/의대 입시 전문반 · 주말 클리닉 운영',
-      blogTitle: '봉선동 수학학원 원장이 공개하는 고등 내신 1등급 심화 문제 접근법',
-      blogSnippet: '봉선동 학부모 타깃 C-Rank 파워블로그 전문 칼럼. 네이버 스마트블록 1위 등재로 월 문의 전화 180건 돌파...',
-      blogAuthor: '가온에듀 입시연구소',
-      buzzTag: '광주 학부모 맘카페 추천',
-      buzzText: '"봉선동에서 수학학원 고민이시면 여기 상담받아보세요. 원장님 피드백도 빠르고 성적 바로 올랐어요!"',
-      buzzMeta: '봉선맘카페 추천수 64 · 댓글 35'
+    dental: {
+      brand: '가온플란트 치과 공식 의학 매거진',
+      cat: '구강악안면외과 전문의 칼럼',
+      title: '뼈이식 임플란트, 재수술 없는 3가지 식립 기준과 정품 보증제도',
+      author: '구강악안면외과 전문의 직접 집필',
+      authorDesc: '광주 수완지구 고난도 임플란트 10,000례 집도',
+      lead: '"임플란트 수술 후 잇몸뼈 흡수로 고생하시는 분들이 많습니다. 상악동 거상술과 자가골 이식은 의료진의 해부학적 이해도가 성패를 좌우합니다. 뼈이식이 왜 필요한지, 어떤 재료를 써야 오래 유지되는지 설명해 드립니다..."',
+      pointTitle: '임플란트 수술 전 3대 필수 확인',
+      points: [
+        '<strong>01. 3D CT 정밀 진단 :</strong> 신경관과의 거리 0.1mm 오차 없는 식립 경로 설계',
+        '<strong>02. 정품 골이식재 :</strong> 생체 친화성이 검증된 FDA 승인 정품 이식재 사용',
+        '<strong>03. 평생 보증 시스템 :</strong> 1:1 전담 위생사 배정 및 연 2회 정기 사후관리'
+      ]
     },
-    food: {
-      keyword: '수완지구 맛집',
-      placeName: '가온다이닝 수완본점',
-      reviews: '방문자 리뷰 3,240 · 블로그 리뷰 1,890',
-      desc: '수완호수공원 앞 · 3050 주부모임 & 가족 외식 룸 완비 · 주차 100대 가능',
-      blogTitle: '수완지구 맛집 셰프가 직접 엄선한 제철 한우 코스 & 룸 예약 꿀팁',
-      blogSnippet: '수완지구 로컬 핫플레이스 스마트플레이스 1위 세팅 + 9:16 인스타그램 릴스 25만뷰 바이럴로 주말 예약 풀마감...',
-      blogAuthor: '가온다이닝 공식 인스타',
-      buzzTag: '인스타그램 릴스 & 맘스홀릭 핫이슈',
-      buzzText: '"수완지구 주말 모임 장소로 강력 추천! 분위기 좋고 플레이팅 예술이라 사진도 잘 나와요~"',
-      buzzMeta: '인스타 릴스 250,000회 재생 · 저장 4,200회'
+    ortho: {
+      brand: '가온정형외과 관절·척추 매거진',
+      cat: '정형외과 전문의 의학 칼럼',
+      title: '허리 디스크, 수술 없이 비수술 도수·신경차단술로 호전되는 원리',
+      author: '척추관절 전문의 직접 집필',
+      authorDesc: '광주 첨단지구 비수술 척추 클리닉 운영',
+      lead: '"허리 통증으로 걷기조차 힘들 때 당장 수술해야 하는 건 아닌지 불안해하시는 분들이 많습니다. 하지만 85% 이상의 디스크 환자는 정밀 신경차단술과 도수재활 치료로 충분히 정상 생활로 복귀할 수 있습니다..."',
+      pointTitle: '비수술 척추 치료 3대 핵심 원칙',
+      points: [
+        '<strong>01. C-arm 실시간 영상유도 :</strong> 통증 원인 부위 1mm 정밀 타깃 주사',
+        '<strong>02. 1:1 전담 도수치료 :</strong> 척추 정렬 교정 및 코어 근육 강화 재활',
+        '<strong>03. 생활 습관 교정 :</strong> 재발 방지를 위한 자세 분석 및 맞춤 스트레칭 지도'
+      ]
     },
-    busad: {
-      keyword: '광주 시내버스 광고',
-      placeName: '주식회사 가온엔 (본사)',
-      reviews: '광주 104개 노선 공식 원청 · 광고주 만족도 99.2%',
-      desc: '광주광역시 전역 시내버스 104개 노선 직영 시공 · 4면 실사 보고서 제공',
-      blogTitle: '광주 시내버스 광고 단가표 및 104개 노선별 황금 배차 믹스 전략',
-      blogSnippet: 'LG 하우시스 정품 솔벤 시트 본사 직영 출력 및 부착. 상무/수완/첨단 핵심 간선 축 광고 집행 가이드...',
-      blogAuthor: '가온엔 공식 미디어센터',
-      buzzTag: '광주 기업/병원 마케팅 담당자 후기',
-      buzzText: '"가온엔 통해서 버스 광고 집행하고 병원 인지도와 내방 환자 수가 확 늘었습니다. 번호판 실사 보고서도 꼼꼼해요!"',
-      buzzMeta: '광주 500+ 기업·병원 누적 집행 완료'
+    korean: {
+      brand: '가온한방병원 공식 건강 매거진',
+      cat: '한방재활의학과 전문의 칼럼',
+      title: '교통사고 후유증, 사고 직후 3일 골든타임 입원 집중 치료의 중요성',
+      author: '한방재활의학과 전문의 직접 집필',
+      authorDesc: '광주 봉선동 40병상 입원실 완비 한방병원',
+      lead: '"교통사고 당시에는 별다른 통증이 없다가 2~3일 후 목과 어깨, 허리가 굳어오는 경우가 많습니다. X-ray 상 골절이 없더라도 미세 어혈과 근육 긴장을 초기에 다스려야 만성 통증으로 번지지 않습니다..."',
+      pointTitle: '교통사고 후유증 3대 치료 프로그램',
+      points: [
+        '<strong>01. 추나요법 :</strong> 사고 충격으로 틀어진 경추 및 척추 관절 교정',
+        '<strong>02. 어혈 한약 & 약침 :</strong> 손상된 근육과 인대 염증 즉각 완화',
+        '<strong>03. 쾌적한 1·2인 입원실 :</strong> 자동차보험 100% 적용 집중 휴식 치료'
+      ]
     }
   };
 
-  $(document).on('click', '.akt-tab', function() {
-    var key = $(this).data('key');
-    var d = searchDataMap[key];
+  $(document).on('click', '.asb-tab', function() {
+    var dept = $(this).data('dept');
+    var d = medicalDataMap[dept];
     if (!d) return;
 
-    $('.akt-tab').removeClass('on');
+    $('.asb-tab').removeClass('on');
     $(this).addClass('on');
 
-    $('#simSearchInput').text(d.keyword);
-
-    $('#simResultsContainer').css('opacity', '0.4');
+    $('#simBlogPostContainer').css('opacity', '0.3');
     setTimeout(function() {
-      $('#simPlaceName').text(d.placeName);
-      $('#simPlaceReview').text(d.reviews);
-      $('#simPlaceDesc').text(d.desc);
-      $('#simBlogTitle').text(d.blogTitle);
-      $('#simBlogSnippet').text(d.blogSnippet);
-      $('#simBlogAuthor').text(d.blogAuthor);
-      $('#simBuzzTag').text(d.buzzTag);
-      $('#simBuzzText').text(d.buzzText);
-      $('#simBuzzMeta').text(d.buzzMeta);
-      $('#simResultsContainer').css('opacity', '1');
+      $('#simBlogBrand').text(d.brand);
+      $('#simPostCat').text(d.cat);
+      $('#simPostTitle').text(d.title);
+      $('#simAuthorName').text(d.author);
+      $('#simAuthorDesc').text(d.authorDesc);
+      $('#simLeadBox').html(d.lead);
+      $('#simPointTitle').text(d.pointTitle);
+      
+      var pointsHtml = '';
+      d.points.forEach(function(p) {
+        pointsHtml += '<li>' + p + '</li>';
+      });
+      $('#simPointList').html(pointsHtml);
+
+      $('#simBlogPostContainer').css('opacity', '1');
     }, 150);
   });
 

@@ -492,142 +492,125 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       </div>
 
       <!-- ============================================
-           LIVE NAVER SEARCH & PLACE SIMULATION STAGE (DYNAMIC REAL EXPERIENCE)
+           HOSPITAL MEDICAL BRAND BLOG & COLUMN STUDIO (DYNAMIC REAL EXPERIENCE)
       ============================================ -->
-      <div class="am-live-search-sim-stage wow fadeInUp" data-wow-duration="0.8s">
-        <div class="alss-layout">
+      <div class="am-hospital-blog-sim-stage wow fadeInUp" data-wow-duration="0.8s">
+        <div class="ahbs-layout">
           
-          <!-- LEFT: INTERACTIVE CONTROLLER & KEYWORD SWITCHER -->
-          <div class="alss-controller">
-            <div class="alss-head">
-              <span class="alss-kicker">LIVE SEARCH SIMULATION</span>
-              <h3 class="alss-title">실제 네이버 1위 검색 노출 시뮬레이션</h3>
-              <p class="alss-desc">소비자가 광주 주요 키워드를 검색했을 때, 가온엔의 1위 최적화 세팅이 화면 최상단을 어떻게 장악하는지 직접 클릭하여 실시간으로 확인해보세요.</p>
+          <!-- LEFT: MEDICAL SUBJECT SWITCHER & AUDIENCE -->
+          <div class="ahbs-controller">
+            <div class="ahbs-head">
+              <span class="ahbs-kicker">HOSPITAL BRAND BLOG STUDIO</span>
+              <h3 class="ahbs-title">병원·의원 전문 브랜드 블로그 칼럼 라이브 뷰</h3>
+              <p class="ahbs-desc">단순 홍보글이 아닌 원장님의 진료 철학과 의학 지식을 담아 환자의 내방 결정을 이끌어냅니다. <strong>의료법 제56조 100% 사전 법무 검수</strong>를 거친 고품격 칼럼을 직접 확인해보세요.</p>
             </div>
 
-            <div class="alss-keyword-tabs">
-              <button type="button" class="akt-tab on" data-key="skin">
-                <div class="akt-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <div class="ahbs-subject-tabs">
+              <button type="button" class="asb-tab on" data-dept="skin">
+                <div class="asb-icon-badge">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                 </div>
-                <div class="akt-text">
-                  <strong>상무지구 피부과</strong>
-                  <span>스마트플레이스 1위 + 영수증 리뷰 + 24H 예약</span>
-                </div>
-              </button>
-
-              <button type="button" class="akt-tab" data-key="math">
-                <div class="akt-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                </div>
-                <div class="akt-text">
-                  <strong>봉선동 수학학원</strong>
-                  <span>C-Rank 파워블로그 뷰탭 1위 칼럼 장악</span>
+                <div class="asb-text">
+                  <strong>피부과 · 리프팅</strong>
+                  <span>울쎄라 vs 써마지 전문의 1:1 비교 분석 칼럼</span>
                 </div>
               </button>
 
-              <button type="button" class="akt-tab" data-key="food">
-                <div class="akt-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <button type="button" class="asb-tab" data-dept="dental">
+                <div class="asb-icon-badge">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 </div>
-                <div class="akt-text">
-                  <strong>수완지구 맛집</strong>
-                  <span>광주 맘스홀릭 침투 &amp; 9:16 인스타 릴스</span>
+                <div class="asb-text">
+                  <strong>치과 · 임플란트</strong>
+                  <span>뼈이식 임플란트 실패 없는 3가지 수술 기준</span>
                 </div>
               </button>
 
-              <button type="button" class="akt-tab" data-key="busad">
-                <div class="akt-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <button type="button" class="asb-tab" data-dept="ortho">
+                <div class="asb-icon-badge">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>
                 </div>
-                <div class="akt-text">
-                  <strong>광주 시내버스 광고</strong>
-                  <span>가온엔 공식 104개 노선 1위 점유</span>
+                <div class="asb-text">
+                  <strong>정형외과 · 통증</strong>
+                  <span>허리 디스크 비수술 도수·주사 치료 호전 원리</span>
+                </div>
+              </button>
+
+              <button type="button" class="asb-tab" data-dept="korean">
+                <div class="asb-icon-badge">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7M9 9l3-7 3 7M9 9h6M4 22h16"/></svg>
+                </div>
+                <div class="asb-text">
+                  <strong>한방병원 · 교통사고</strong>
+                  <span>교통사고 후유증 3일 골든타임 입원 치료 가이드</span>
                 </div>
               </button>
             </div>
 
-            <div class="alss-action-box">
-              <span class="aab-text">우리 매장/병원도 네이버 검색 1위에 올리고 싶으신가요?</span>
-              <a href="/board/estmate/write.php" class="aab-btn">
-                <span>1위 세팅 1:1 맞춤 컨설팅 신청</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
+            <div class="ahbs-audit-note">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>가온엔은 과장 광고 및 전후 사진 위반을 배제하고 의료법을 100% 준수합니다.</span>
             </div>
           </div>
 
-          <!-- RIGHT: SMARTPHONE DEVICE UI WITH LIVE TYPING & SEARCH RESULTS -->
-          <div class="alss-device-wrap">
-            <div class="alss-phone-mockup">
+          <!-- RIGHT: NAVER SMART EDITOR ONE MEDICAL BLOG VIEW -->
+          <div class="ahbs-blog-mockup-wrap">
+            <div class="ahbs-blog-mockup">
               
-              <!-- TOP BAR -->
-              <div class="apm-notch">
-                <span class="apm-time">12:30</span>
-                <div class="apm-island"></div>
-                <div class="apm-status">LTE 100%</div>
+              <!-- BLOG TOP BRAND HEADER -->
+              <div class="abm-header">
+                <div class="abh-brand-info">
+                  <span class="abh-blog-name" id="simBlogBrand">가온메디컬 공식 의학 매거진</span>
+                  <span class="abh-blog-stats">이웃 4,820명 · 일 방문 2,500+</span>
+                </div>
+                <span class="abh-follow-btn">+ 이웃추가</span>
               </div>
 
-              <!-- NAVER SEARCH APP HEADER -->
-              <div class="apm-naver-header">
-                <div class="anh-logo-row">
-                  <span class="anh-naver-logo">N</span>
-                  <div class="anh-search-box">
-                    <span class="anh-search-text" id="simSearchInput">상무지구 피부과</span>
-                    <span class="anh-cursor">|</span>
-                    <span class="anh-search-btn">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#03c75a" stroke-width="3"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    </span>
-                  </div>
-                </div>
-                <div class="anh-tabs-nav">
-                  <span class="atn-item on">통합</span>
-                  <span class="atn-item">플레이스</span>
-                  <span class="atn-item">VIEW</span>
-                  <span class="atn-item">이미지</span>
-                  <span class="atn-item">지식iN</span>
-                </div>
-              </div>
-
-              <!-- SIMULATED RESULTS BODY -->
-              <div class="apm-results-body" id="simResultsContainer">
+              <!-- BLOG POSTING CONTAINER -->
+              <div class="abm-post-body" id="simBlogPostContainer">
                 
-                <!-- PLACE 1ST RESULT CARD -->
-                <div class="anr-place-card">
-                  <div class="apc-top">
-                    <span class="apc-rank-badge">1위</span>
-                    <strong class="apc-name" id="simPlaceName">가온메디컬의원 상무본점</strong>
-                    <span class="apc-ad-tag">광고</span>
+                <div class="apb-category-row">
+                  <span class="apb-cat" id="simPostCat">피부과 전문의 의학 칼럼</span>
+                  <span class="apb-date">오늘 작성 · 5분 읽기</span>
+                </div>
+
+                <h4 class="apb-title" id="simPostTitle">울쎄라 vs 써마지 차이점, 피부과 전문의가 직접 명확하게 비교해 드립니다</h4>
+
+                <div class="apb-author-profile">
+                  <div class="aap-avatar">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                   </div>
-                  <div class="apc-rating-row">
-                    <span class="apc-stars">★ 4.96</span>
-                    <span class="apc-reviews" id="simPlaceReview">방문자 리뷰 1,420 · 블로그 리뷰 860</span>
-                  </div>
-                  <p class="apc-desc" id="simPlaceDesc">상무역 4번 출구 앞 도보 1분 · 피부과 전문의 1:1 맞춤 진료 · 야간진료</p>
-                  <div class="apc-btns-row">
-                    <button type="button" class="apc-btn call">📞 전화</button>
-                    <button type="button" class="apc-btn reserve">📅 네이버 예약</button>
-                    <button type="button" class="apc-btn talk">💬 톡톡 문의</button>
+                  <div class="aap-info">
+                    <strong class="aap-name" id="simAuthorName">대표원장 의학박사 직접 집필</strong>
+                    <span class="aap-desc" id="simAuthorDesc">광주 상무지구 피부과 전문의 진료 15년</span>
                   </div>
                 </div>
 
-                <!-- C-RANK BLOG 1ST RESULT CARD -->
-                <div class="anr-blog-card">
-                  <span class="abc-channel">브랜드 블로그 공식 파워콘텐츠</span>
-                  <h5 class="abc-title" id="simBlogTitle">상무지구 피부과 전문의가 직접 알려주는 색소 치료 전 필수 체크 3가지</h5>
-                  <p class="abc-snippet" id="simBlogSnippet">로컬 1위 SEO 알고리즘 적용 및 의료법 제56조 100% 사전 법무 검수 완료 칼럼. 스마트블록 및 뷰탭 최상단 3개 영역 동시 점유 실사...</p>
-                  <div class="abc-footer">
-                    <span class="abc-author" id="simBlogAuthor">가온메디컬 공식블로그</span>
-                    <span class="abc-date">오늘 작성</span>
-                  </div>
+                <!-- MEDICAL LEAD CONTENT BOX -->
+                <div class="apb-lead-box" id="simLeadBox">
+                  "안녕하세요. 상무지구에서 15년간 피부 진료를 이어오고 있는 대표원장입니다. 많은 환자분들이 내원하셔서 '원장님, 저한테는 울쎄라가 맞나요, 써마지가 맞나요?'라는 질문을 가장 많이 하십니다. 결론부터 말씀드리면 두 시술은 타깃하는 피부 층이 완전히 다릅니다..."
                 </div>
 
-                <!-- VIRAL / SNS RESULT CARD -->
-                <div class="anr-buzz-card">
-                  <span class="abz-tag" id="simBuzzTag">맘카페 실사용자 추천 후기</span>
-                  <p class="abz-text" id="simBuzzText">"상무지구 피부과 여러 군데 다녀봤는데 여기가 제일 친절하고 꼼꼼하게 봐주시네요! 원장님 설명도 굿굿"</p>
-                  <div class="abz-meta">
-                    <span id="simBuzzMeta">광주맘스홀릭 추천수 48 · 댓글 22</span>
-                  </div>
+                <!-- 3-POINT MEDICAL HIGHLIGHT -->
+                <div class="apb-point-card">
+                  <strong class="apc-point-title" id="simPointTitle">전문의가 짚어주는 3대 핵심 요약</strong>
+                  <ul class="apc-point-list" id="simPointList">
+                    <li><strong>01. 초음파 vs 고주파 :</strong> 울쎄라는 SMAS 근막층, 써마지는 진피층 콜라겐을 타깃합니다.</li>
+                    <li><strong>02. 피부 두께 측정 :</strong> 볼 꺼짐 부작용을 방지하기 위해 1:1 초음파 정밀 진단이 필수입니다.</li>
+                    <li><strong>03. 정품 팁 인증 :</strong> 시술 직후 정품 팁 시리얼 넘버 및 정품 인증서를 제공합니다.</li>
+                  </ul>
+                </div>
+
+                <!-- MEDICAL LAW COMPLIANCE BADGE -->
+                <div class="apb-law-badge">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                  <span>보건복지부 의료법 제56조 사전 법무 검수 완료 (행정처분 리스크 0%)</span>
+                </div>
+
+                <!-- CTA BUTTONS -->
+                <div class="apb-action-row">
+                  <a href="/board/estmate/write.php" class="apb-btn call">📞 병원 1:1 전화 상담</a>
+                  <a href="/board/estmate/write.php" class="apb-btn reserve">📅 네이버 진료 예약</a>
                 </div>
 
               </div>
@@ -641,7 +624,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <!-- 3-PILLAR TRUST STRIP -->
       <div class="am-online-guarantee-deck wow fadeInUp" data-wow-duration="0.8s">
         <div class="aog-card">
-          <div class="aog-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <div class="aog-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
           <div class="aog-body">
             <strong>의료법 및 광고 심의 준수</strong>
             <span>과장 광고 및 불법 표현을 원천 차단하여 보건소 행정처분 및 제재 리스크 0%</span>
@@ -649,18 +634,22 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
 
         <div class="aog-card">
-          <div class="aog-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <div class="aog-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><polyline points="2 6 12 2 22 6"/></svg>
+          </div>
           <div class="aog-body">
             <strong>주간 노출 순위 투명 보고</strong>
-            <span>플레이스 노출 순위, 유입 키워드, 광고 클릭 현황을 매주 데이터 기반으로 보고</span>
+            <span>스마트블록 노출 순위, 유입 키워드, 광고 클릭 현황을 매주 데이터 기반으로 보고</span>
           </div>
         </div>
 
         <div class="aog-card">
-          <div class="aog-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div>
+          <div class="aog-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
           <div class="aog-body">
             <strong>인하우스 1:1 전담 디렉터 배정</strong>
-            <span>외주 하청 없는 가온엔 본사 전문 디렉터가 광고 집행 전 과정을 전담 관리</span>
+            <span>외주 하청 없는 가온엔 본사 전문 디렉터가 병원 홍보 전 과정을 1:1 전담 관리</span>
           </div>
         </div>
       </div>
