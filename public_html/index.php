@@ -1103,43 +1103,33 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       08 GAON-N GET STARTED MASTER CTA STAGE (OPTION 1: 1650PX LUXURY INSET CARD BANNER)
+       08 GAON-N GET STARTED MASTER CTA (CLEAN WHITE EDITORIAL & GROUNDED NAVY FOOTER)
   ============================================ -->
-  <section class="am-get-started-sec am-bg-slate" id="getStarted">
+  <section class="am-get-started-sec am-bg-white" id="getStarted">
     <div class="am-container">
-      
-      <!-- 1650PX LUXURY ROUNDED INSET CARD BANNER -->
-      <div class="aib-card wow fadeInUp" data-wow-duration="0.8s">
+      <div class="ags-clean-box wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- AMBIENT LIGHT GLOW EFFECTS -->
-        <div class="aib-glow aib-glow-1"></div>
-        <div class="aib-glow aib-glow-2"></div>
-
-        <!-- TOP LIVE CONSULTING BADGE -->
-        <div class="aib-kicker-pill">
-          <span class="aib-pulse-dot"></span>
-          <span class="aib-kicker-txt">1:1 맞춤 미디어 믹스 무료 컨설팅</span>
-        </div>
-
-        <!-- CENTER HEADLINE -->
-        <h2 class="aib-title">
-          광고, 이제 <span class="aib-highlight">가온엔과 제대로</span> 시작하세요.
+        <span class="ags-kicker-pill">GET STARTED</span>
+        
+        <h2 class="ags-clean-title">
+          광고, 이제<br>
+          <span class="ags-title-blue">제대로 시작하세요.</span>
         </h2>
-        <p class="aib-desc">
-          시내버스 104개 전 노선부터 네이버 상위 세팅, 4K 시네마 영상까지<br class="pc-only">
-          외주 없이 100% 본사 직영 인하우스 팀이 가장 확실한 매출 성장을 만들어 드립니다.
+        
+        <p class="ags-clean-desc">
+          광주 104개 시내버스부터 네이버 스마트플레이스, 4K 시네마 영상까지<br class="pc-only">
+          외주 없는 100% 인하우스 전문팀이 가장 확실한 맞춤 미디어 믹스를 제안해 드립니다.
         </p>
 
-        <!-- CTA BUTTONS ROW -->
-        <div class="aib-btn-group">
-          <a href="/board/estmate/write.php" class="aib-btn-primary">
-            <span>맞춤 견적 상담 신청하기</span>
+        <div class="ags-clean-btn-group">
+          <a href="/board/estmate/write.php" class="ags-btn-blue">
+            <span>맞춤 견적 상담받기</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
-          <a href="tel:062-381-1350" class="aib-btn-secondary">
+          <a href="tel:062-381-1350" class="ags-btn-outline">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
             </svg>
@@ -1147,31 +1137,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </a>
         </div>
 
-        <!-- INTEGRATED 4-PILLAR TRUST METRICS (HORIZONTAL DOCK) -->
-        <div class="aib-trust-dock">
-          <div class="aib-trust-item">
-            <strong class="aib-t-val">104개</strong>
-            <span class="aib-t-name">광주 전 노선 직영 배차</span>
-          </div>
-          <div class="aib-t-sep"></div>
-          <div class="aib-trust-item">
-            <strong class="aib-t-val">500+</strong>
-            <span class="aib-t-name">누적 집행 파트너사</span>
-          </div>
-          <div class="aib-t-sep"></div>
-          <div class="aib-trust-item">
-            <strong class="aib-t-val">100%</strong>
-            <span class="aib-t-name">외주 없는 인하우스</span>
-          </div>
-          <div class="aib-t-sep"></div>
-          <div class="aib-trust-item">
-            <strong class="aib-t-val">1:1</strong>
-            <span class="aib-t-name">전담 매니저 밀착 관리</span>
-          </div>
-        </div>
-
       </div>
-
     </div>
   </section>
 

@@ -358,18 +358,20 @@ body { background:#f2f2f4}
 /*************** //responsive ***************/
 
 
+
+
 /* ==========================================================================
-   SOLID DEEP NAVY FOOTER & SQUARE RECTANGULAR BUTTONS
+   SOLID DEEP NAVY FOOTER (#0B1736) WITH CRISP RECTANGULAR BUTTONS
 ========================================================================== */
 #footer {
   background: #0b1736 !important;
   border-top: 1.5px solid rgba(255, 255, 255, 0.08) !important;
-  padding: 70px 0 40px !important;
+  padding: 75px 0 45px !important;
 }
 
 #footer .foot_brand {
   color: #ffffff !important;
-  font-size: 22px !important;
+  font-size: 24px !important;
   font-weight: 900 !important;
   letter-spacing: -0.5px !important;
 }
@@ -396,8 +398,8 @@ body { background:#f2f2f4}
   justify-content: center !important;
   padding: 10px 20px !important;
   background: rgba(255, 255, 255, 0.06) !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.16) !important;
-  border-radius: 10px !important; /* SQUARE RECTANGLE WITH SLIGHT RADIUS */
+  border: 1.5px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 10px !important;
   color: #ffffff !important;
   font-size: 13.5px !important;
   font-weight: 800 !important;
@@ -422,54 +424,4 @@ body { background:#f2f2f4}
 }
 #footer .foot_legal a:hover {
   color: #ffffff !important;
-}
-
-/* FLOATING RECTANGULAR CONTACT BUTTON (SQUARE / RECTANGLE) */
-.cta-btn_m {
-  border-radius: 16px !important;
-  overflow: hidden !important;
-}
-.cta-btn_m-circle {
-  border-radius: 14px !important; /* SQUARE RECTANGLE */
-  background: #1855b7 !important;
-  box-shadow: 0 8px 24px rgba(24, 85, 183, 0.4) !important;
-}
-.cta-btn_m-ring {
-  display: none !important; /* REMOVE CIRCLE RING */
-}
-
-
-/* ==========================================================================
-   HEADER & FOOTER 1650PX UNIFIED WIDTH
-========================================================================== */
-#header .inner,
-.header .inner,
-.header_wrap,
-#footer .inner,
-.footer .inner {
-  width: 100% !important;
-  max-width: 1650px !important;
-  margin: 0 auto !important;
-  padding: 0 40px !important;
-  box-sizing: border-box !important;
-}
-
-@media(max-width:1680px) {
-  #header .inner,
-  .header .inner,
-  .header_wrap,
-  #footer .inner,
-  .footer .inner {
-    padding: 0 30px !important;
-  }
-}
-
-@media(max-width:768px) {
-  #header .inner,
-  .header .inner,
-  .header_wrap,
-  #footer .inner,
-  .footer .inner {
-    padding: 0 20px !important;
-  }
 }
