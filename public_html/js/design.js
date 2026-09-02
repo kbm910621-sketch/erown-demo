@@ -190,35 +190,30 @@ $(function() {
   $(window).on('scroll', startCounters);
   startCounters();
 
-  /* 02. BUS BLUEPRINT CONSOLE INTERACTION */
-  $(document).on('click', '.bus-spot-btn', function(e) {
+    /* 02. BUS WIDE SHOWCASE CONSOLE INTERACTION */
+  $(document).on('click', '.abw-tab-btn', function(e) {
     e.preventDefault();
     var $btn = $(this);
-    $('.bus-spot-btn').removeClass('on');
+    $('.abw-tab-btn').removeClass('on');
     $btn.addClass('on');
 
     var name = $btn.data('name');
     var size = $btn.data('size');
+    var img = $btn.data('img');
     var target = $btn.data('target');
     var material = $btn.data('material');
     var benefit = $btn.data('benefit');
 
-    $('#dynBusBadge').text(name);
-    $('#dynBusSize').text(size);
+    $('#dynBusTitle').text(size);
+    $('#dynBusSubBadge').text(name);
+    $('#dynBusBadgeText').text(name + ' (' + size + ')');
     $('#dynBusTarget').text(target);
     $('#dynBusMaterial').text(material);
     $('#dynBusBenefit').text(benefit);
-
-    var markers = {
-      '차도면 대형 래핑': { top: '35%', left: '25%' },
-      '인도면 표준 래핑': { top: '45%', left: '70%' },
-      '후면 번호판 상단 래핑': { top: '55%', left: '88%' },
-      '사랑면 (승하차문 측면)': { top: '50%', left: '60%' },
-      '내부 중앙창문 포스터': { top: '30%', left: '48%' },
-      '정류소 음성 안내 방송': { top: '20%', left: '15%' }
-    };
-    if (markers[name]) {
-      $('#dvsMarker').css(markers[name]);
+    if (img) {
+      $('#dynBusPhoto').fadeOut(150, function() {
+        $(this).attr('src', img).fadeIn(200);
+      });
     }
   });
 
