@@ -1103,57 +1103,79 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       08 GAON-N GET STARTED MASTER CTA STAGE (CLEAN STATIC & VIBRANT FLOAT)
+       08 GAON-N GET STARTED MASTER CTA STAGE (OPTION 1: 1650PX LUXURY INSET CARD BANNER)
   ============================================ -->
-  <section class="am-get-started-sec" id="getStarted">
-    
-    <!-- 4 VIBRANT AMBIENT PILLS (BIGGER & CLOSER TO CENTER) -->
-    <div class="ags-floating-pill pill-top-left">
-      <span class="afp-dot green"></span>
-      <span class="afp-text">지금 바로 상담해보세요</span>
-    </div>
+  <section class="am-get-started-sec am-bg-slate" id="getStarted">
+    <div class="am-container">
+      
+      <!-- 1650PX LUXURY ROUNDED INSET CARD BANNER -->
+      <div class="aib-card wow fadeInUp" data-wow-duration="0.8s">
+        
+        <!-- AMBIENT LIGHT GLOW EFFECTS -->
+        <div class="aib-glow aib-glow-1"></div>
+        <div class="aib-glow aib-glow-2"></div>
 
-    <div class="ags-floating-pill pill-top-right">
-      <span class="afp-dot yellow"></span>
-      <span class="afp-text">빠른 견적 안내 가능합니다</span>
-    </div>
+        <!-- TOP LIVE CONSULTING BADGE -->
+        <div class="aib-kicker-pill">
+          <span class="aib-pulse-dot"></span>
+          <span class="aib-kicker-txt">1:1 맞춤 미디어 믹스 무료 컨설팅</span>
+        </div>
 
-    <div class="ags-floating-pill pill-bottom-left">
-      <span class="afp-icon-clock">⏱</span>
-      <span class="afp-text">광주 500+ 신뢰 대행사</span>
-    </div>
-
-    <div class="ags-floating-pill pill-bottom-right">
-      <span class="afp-dot green"></span>
-      <span class="afp-text">오프라인 · 온라인 통합 운영</span>
-    </div>
-
-    <!-- CENTER HERO CONTENT -->
-    <div class="am-container" style="position:relative; z-index:5;">
-      <div class="ags-center-box wow fadeInUp" data-wow-duration="0.8s">
-        <span class="ags-kicker">GET STARTED</span>
-        <h2 class="ags-title">
-          광고, 이제<br>
-          <span class="ags-highlight">제대로 시작하세요.</span>
+        <!-- CENTER HEADLINE -->
+        <h2 class="aib-title">
+          광고, 이제 <span class="aib-highlight">가온엔과 제대로</span> 시작하세요.
         </h2>
+        <p class="aib-desc">
+          시내버스 104개 전 노선부터 네이버 상위 세팅, 4K 시네마 영상까지<br class="pc-only">
+          외주 없이 100% 본사 직영 인하우스 팀이 가장 확실한 매출 성장을 만들어 드립니다.
+        </p>
 
-        <div class="ags-cta-wrap">
-          <a href="/board/estmate/write.php" class="ags-white-pill-btn">
-            <span class="awpb-text">맞춤 견적 상담받기</span>
-            <span class="awpb-arrow-circle">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </span>
+        <!-- CTA BUTTONS ROW -->
+        <div class="aib-btn-group">
+          <a href="/board/estmate/write.php" class="aib-btn-primary">
+            <span>맞춤 견적 상담 신청하기</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="tel:062-381-1350" class="aib-btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>직통 전화 062-381-1350</span>
           </a>
         </div>
+
+        <!-- INTEGRATED 4-PILLAR TRUST METRICS (HORIZONTAL DOCK) -->
+        <div class="aib-trust-dock">
+          <div class="aib-trust-item">
+            <strong class="aib-t-val">104개</strong>
+            <span class="aib-t-name">광주 전 노선 직영 배차</span>
+          </div>
+          <div class="aib-t-sep"></div>
+          <div class="aib-trust-item">
+            <strong class="aib-t-val">500+</strong>
+            <span class="aib-t-name">누적 집행 파트너사</span>
+          </div>
+          <div class="aib-t-sep"></div>
+          <div class="aib-trust-item">
+            <strong class="aib-t-val">100%</strong>
+            <span class="aib-t-name">외주 없는 인하우스</span>
+          </div>
+          <div class="aib-t-sep"></div>
+          <div class="aib-trust-item">
+            <strong class="aib-t-val">1:1</strong>
+            <span class="aib-t-name">전담 매니저 밀착 관리</span>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </section>
 
-
-  <!-- ============================================
+    <!-- ============================================
        10 LUXURY DIRECTORY: 104 BUS ROUTES SEARCH MODAL (CLEAN 2-COLUMN ALIGNMENT)
   ============================================ -->
   <div class="route-search-modal-overlay" id="routeSearchModal" style="display:none !important;">
