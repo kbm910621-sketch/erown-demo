@@ -496,3 +496,47 @@ $(function() {
   });
 
 });
+
+
+  /* 08. CONSULTATION FORM SUBMISSION VALIDATION */
+  $('#btn_submit').on('click', function(e) {
+    e.preventDefault();
+    var company = $('#in_company').val().trim();
+    var name = $('#in_name').val().trim();
+    var tel = $('#in_tel').val().trim();
+    var email = $('#in_email').val().trim();
+    var adTypeCount = $('input[name="in_ad_type[]"]:checked').length;
+    var agree = $('#agree').is(':checked');
+
+    if (!company) {
+      alert('회사명 또는 병의원명을 입력해주세요.');
+      $('#in_company').focus();
+      return;
+    }
+    if (!name) {
+      alert('담당자명을 입력해주세요.');
+      $('#in_name').focus();
+      return;
+    }
+    if (!tel) {
+      alert('연락처를 입력해주세요.');
+      $('#in_tel').focus();
+      return;
+    }
+    if (!email) {
+      alert('이메일 주소를 입력해주세요.');
+      $('#in_email').focus();
+      return;
+    }
+    if (adTypeCount === 0) {
+      alert('관심 있는 광고 매체를 최소 1개 이상 선택해주세요.');
+      return;
+    }
+    if (!agree) {
+      alert('개인정보 수집 및 이용에 동의해주세요.');
+      $('#agree').focus();
+      return;
+    }
+
+    $('form[name="frm"]').submit();
+  });

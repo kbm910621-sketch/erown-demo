@@ -62,7 +62,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/header.php";?>
   
   <!-- ============================================
-       01 HERO STAGE : GSAP SCROLL STEP HERO (ORIGINAL INTERACTION)
+       01 HERO STAGE : GSAP SCROLL STEP HERO
   ============================================ -->
   <section class="main_hero" id="hero">
     <div class="main_hero_text_wrap">
@@ -411,7 +411,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
         </div>
 
-        <!-- BENTO SIDE 2 STACK CARDS -->
+        <!-- BENTO SIDE 3 STACK CARDS (INCL. INSTAGRAM REELS + GOOGLE/TIKTOK VIRAL) -->
         <div class="abog-side-stack">
           
           <!-- CARD 01: MOM CAFE & DAANGN VIRAL -->
@@ -439,6 +439,20 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <span class="asc-kicker blue">03 / SNS PERFORMANCE AD</span>
               <h4 class="asc-title">인스타그램 릴스 &amp; 초정밀 반경 스폰서드</h4>
               <p class="asc-desc">병원/매장 반경 1~3km 내 실제 거주 세대원만을 정밀 타깃팅하여 9:16 숏폼 영상으로 문의 전화를 즉각 폭발시킵니다.</p>
+            </div>
+          </div>
+
+          <!-- CARD 03 (NEW): GOOGLE GDN & YOUTUBE / TIKTOK RETARGETING -->
+          <div class="as-card">
+            <div class="asc-media-box">
+              <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="구글 검색 및 유튜브 GDN">
+              <div class="asc-scrim"></div>
+              <span class="asc-badge purple">SEARCH &amp; RETARGETING</span>
+            </div>
+            <div class="asc-text-wrap">
+              <span class="asc-kicker purple">04 / GOOGLE SEARCH &amp; GDN</span>
+              <h4 class="asc-title">구글 검색광고 &amp; 유튜브 GDN 리타깃팅</h4>
+              <p class="asc-desc">키워드 검색 고객과 언론사 제휴 배너 네트워크(GDN)를 결합하여 이탈 고객을 24시간 재유입시키는 고효율 퍼포먼스 광고입니다.</p>
             </div>
           </div>
 
@@ -874,22 +888,109 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       09 STUDIO CONSULTATION CTA
+       09 ONE-STOP 1:1 CONSULTATION STUDIO FORM (PREMIUM REDESIGN)
   ============================================ -->
-  <section class="am-cta-sec">
+  <section class="am-consultation-studio-sec" id="consultation">
     <div class="am-container">
-      <div class="act-box wow fadeInUp" data-wow-duration="0.8s">
-        <div class="act-left">
-          <span class="act-kicker">START YOUR CAMPAIGN</span>
-          <h2 class="act-headline">광고, 이제<br><em>가온엔과 함께 제대로</em> 시작하세요.</h2>
-          <p class="act-sub">시내버스 옥외광고부터 스마트플레이스 SEO 검색 마케팅까지, 1:1 맞춤 견적을 신속하게 안내해 드립니다.</p>
+      <div class="acs-card-grid wow fadeInUp" data-wow-duration="0.8s">
+        
+        <!-- LEFT BRAND INFORMATION & DIRECT HOTLINE -->
+        <div class="acs-info-col">
+          <span class="acs-kicker">START YOUR GROWTH WITH GAON-N</span>
+          <h2 class="acs-title">
+            광고, 이제<br>
+            <span class="acs-highlight">가온엔과 함께 제대로</span><br>
+            시작하세요.
+          </h2>
+          <p class="acs-desc">
+            광주 104개 시내버스 래핑 광고부터 스마트플레이스 1위 세팅, 4K 시네마틱 홍보영상까지 전문 디렉터가 1:1 맞춤 플랜과 투명한 공식 견적을 신속하게 안내해 드립니다.
+          </p>
+
+          <div class="acs-direct-box">
+            <div class="adb-row">
+              <span class="adb-label">대표 상담 직통</span>
+              <strong class="adb-val">062-375-1215</strong>
+            </div>
+            <div class="adb-row">
+              <span class="adb-label">본사 위치 안내</span>
+              <span class="adb-text">광주광역시 서구 상무중앙로 78, 5층 (치평동)</span>
+            </div>
+            <div class="adb-row">
+              <span class="adb-label">운영 시간</span>
+              <span class="adb-text">평일 09:00 ~ 18:00 (온라인 문의 24시간 접수)</span>
+            </div>
+          </div>
         </div>
-        <div class="act-right">
-          <a href="/board/estmate/write.php" class="act-btn">
-            <span>맞춤 견적 상담 신청</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
+
+        <!-- RIGHT INTERACTIVE CONSULTATION FORM -->
+        <div class="acs-form-col">
+          <form name="frm" method="post" action="/board/estmate/write_ok.php" class="acs-form-box">
+            <h3 class="afb-title">1:1 맞춤 견적 &amp; 노선 분석 무료 신청</h3>
+            
+            <div class="afb-fields-grid">
+              <div class="afb-field">
+                <label for="in_company" class="afb-lbl">회사명 / 병의원명 <span class="req">*</span></label>
+                <input type="text" id="in_company" name="in_company" placeholder="예: 가온메디컬의원" class="afb-input">
+              </div>
+
+              <div class="afb-field">
+                <label for="in_name" class="afb-lbl">담당자명 / 직책 <span class="req">*</span></label>
+                <input type="text" id="in_name" name="in_name" placeholder="예: 홍길동 팀장" class="afb-input">
+              </div>
+
+              <div class="afb-field">
+                <label for="in_tel" class="afb-lbl">연락처 <span class="req">*</span></label>
+                <input type="text" id="in_tel" name="in_tel" placeholder="예: 010-1234-5678" class="afb-input">
+              </div>
+
+              <div class="afb-field">
+                <label for="in_email" class="afb-lbl">이메일 <span class="req">*</span></label>
+                <input type="email" id="in_email" name="in_email" placeholder="예: contact@domain.com" class="afb-input">
+              </div>
+            </div>
+
+            <!-- AD TYPES CHECKBOXES -->
+            <div class="afb-checks-group">
+              <label class="afb-lbl">관심 광고 매체 (중복 선택 가능) <span class="req">*</span></label>
+              <div class="afb-checks-row">
+                <label class="afb-check-item">
+                  <input type="checkbox" name="in_ad_type[]" value="시내버스 광고" checked>
+                  <span class="aci-btn">시내버스 광고</span>
+                </label>
+                <label class="afb-check-item">
+                  <input type="checkbox" name="in_ad_type[]" value="온라인 마케팅">
+                  <span class="aci-btn">온라인 마케팅</span>
+                </label>
+                <label class="afb-check-item">
+                  <input type="checkbox" name="in_ad_type[]" value="4K 영상제작">
+                  <span class="aci-btn">4K 영상제작</span>
+                </label>
+                <label class="afb-check-item">
+                  <input type="checkbox" name="in_ad_type[]" value="택시·택배">
+                  <span class="aci-btn">택시·택배</span>
+                </label>
+                <label class="afb-check-item">
+                  <input type="checkbox" name="in_ad_type[]" value="마트·DID">
+                  <span class="aci-btn">마트·DID</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- PRIVACY AGREEMENT & SUBMIT -->
+            <div class="afb-bottom-row">
+              <label class="afb-agree-item">
+                <input type="checkbox" id="agree" name="agree" checked>
+                <span>개인정보 수집 및 이용에 동의합니다.</span>
+              </label>
+
+              <button type="button" id="btn_submit" class="afb-submit-btn">
+                <span>1:1 맞춤 상담 신청하기</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </form>
         </div>
+
       </div>
     </div>
   </section>
@@ -936,14 +1037,14 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <strong>※ 병원 / 학원 / 매장 앞 통과 노선 무료 매칭 서비스</strong>
           <span>광고주님의 사업장 위치를 알려주시면 가장 노출 빈도가 높은 골든 노선 조합을 1:1 무료 컨설팅해 드립니다.</span>
         </div>
-        <a href="/board/estmate/write.php" class="rsm-foot-btn">1:1 노선 무료 분석 신청 →</a>
+        <a href="#consultation" class="rsm-foot-btn" onclick="closeRouteModal();">1:1 노선 무료 분석 신청 →</a>
       </div>
     </div>
   </div>
 
 
   <!-- ============================================
-       11 HIGH-END SWISS EDITORIAL SPECIFICATION MODAL (HIGH READABILITY)
+       11 HIGH-END 3-COLUMN MASTER SPECIFICATION MODAL (IMPROVED READABILITY)
   ============================================ -->
   <div class="bus-guide-overlay" id="busGuideOverlay">
     <div class="lux-modal-panel">
@@ -951,7 +1052,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="lux-modal-head">
         <div>
           <span class="lmh-label">GAON-N OFFICIAL SPECIFICATION MASTER DECK</span>
-          <h3 class="lmh-title">가온엔 통합 미디어 실측 규격 &amp; 마케팅 종합 가이드</h3>
+          <h3 class="lmh-title">가온엔 통합 미디어 공식 규격 &amp; 마케팅 가이드</h3>
           <p class="lmh-desc">광주 104개 시내버스 7대 규격부터 온라인 6대 채널, 4K 영상 프로덕션, 특화 옥외매체 공식 실측표입니다.</p>
         </div>
         <button type="button" class="lux-modal-close" id="btnCloseBusGuide">✕</button>
@@ -967,7 +1068,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       <div class="lux-modal-body">
         
-        <!-- 01 BUS GUIDE (HIGH CONTRAST & STRUCTURED SWISS TABLE CARDS) -->
+        <!-- 01 BUS GUIDE -->
         <div class="bus-guide-page on" id="guideBus">
           <div class="lmg-page-header">
             <h4 class="lmg-sec-title">시내버스 외부 광고 4대 부착면 및 내부 매체 공식 실측 규격</h4>
@@ -1100,6 +1201,18 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
             </div>
 
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge purple">05 구글 GDN</span>
+                <strong class="lhc-size">검색 &amp; 배너</strong>
+                <span class="lhc-aspect">GOOGLE RETARGETING</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">구글 검색광고 &amp; 유튜브 GDN 리타깃팅</h5>
+                <p class="lhc-desc">구글 검색 키워드 타깃팅과 유튜브/언론사 제휴 배너 네트워크(GDN)를 통해 관심 고객에게 지속적인 리타깃팅을 집행합니다.</p>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -1205,7 +1318,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       </div>
 
       <div class="lux-modal-foot">
-        <a href="/board/estmate/write.php" class="lmf-btn">원하는 매체 &amp; 마케팅 맞춤 견적 문의하기 →</a>
+        <a href="#consultation" class="lmf-btn" onclick="closeGuideModal();">원하는 매체 &amp; 마케팅 맞춤 견적 문의하기 →</a>
       </div>
 
     </div>
@@ -1229,7 +1342,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <h3 class="pmb-title" id="modalTitle">광고 프로젝트명</h3>
         <p class="pmb-desc" id="modalDesc">가온엔이 기획·시공한 대표 광고 집행 사례입니다. 업종별 최적화된 노선과 미디어 믹스로 최고의 브랜드 노출 및 매출 전환 성과를 달성했습니다.</p>
         <div class="pmb-action">
-          <a href="/board/estmate/write.php" class="pmb-cta-btn">이와 같은 광고 견적 문의하기 →</a>
+          <a href="#consultation" class="pmb-cta-btn" onclick="$('#modalClose').click();">이와 같은 광고 견적 문의하기 →</a>
         </div>
       </div>
     </div>
