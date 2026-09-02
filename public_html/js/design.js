@@ -84,7 +84,7 @@ $(function() {
       gsap.set('.mho-text-box', { scale: 1.08, opacity: 0 });
     }
 
-    /* DOWN TIMELINE (EXPAND TO 100VH & SOFTLY SCALE DOWN WHITE TEXT) */
+        /* DOWN TIMELINE (SYMMETRICAL 1.2S SILKY EXPANSION) */
     var tlDown = gsap.timeline({
       paused: true,
       onStart: function() {
@@ -98,21 +98,21 @@ $(function() {
         setTimeout(function() {
           scrollLocked = false;
           window.dispatchEvent(new Event('heroUnlock'));
-        }, 400);
+        }, 300);
       }
     });
 
     tlDown
-      .to(title, { duration: 0.35, opacity: 0, ease: 'power2.out' })
-      .to(keywords, { duration: 0.3, opacity: 0, ease: 'power2.out' }, '<')
-      .to(wrap, { duration: 0.8, width: '100%', height: '100vh', top: '0%', ease: 'power2.inOut' }, '-=0.1')
-      .to(panel, { duration: 0.8, borderRadius: 0, y: 0, scale: 1, ease: 'power2.inOut' }, '<')
-      .to(video, { duration: 0.8, scale: 1.05, ease: 'power2.inOut' }, '<')
-      .to(dim, { duration: 0.6, backgroundColor: 'rgba(0,0,0,0.48)', ease: 'power2.out' }, '-=0.4')
-      .to(overlay, { duration: 0.6, opacity: 1, y: 0, ease: 'power2.out' }, '<')
-      .fromTo('.mho-text-box', { scale: 1.12, opacity: 0 }, { duration: 0.8, scale: 1, opacity: 1, ease: 'power2.out' }, '-=0.5');
+      .to(title, { duration: 0.45, opacity: 0, ease: 'power2.out' })
+      .to(keywords, { duration: 0.4, opacity: 0, ease: 'power2.out' }, '<')
+      .to(wrap, { duration: 1.2, width: '100%', height: '100vh', top: '0%', ease: 'power3.inOut' }, '-=0.2')
+      .to(panel, { duration: 1.2, borderRadius: 0, y: 0, scale: 1, ease: 'power3.inOut' }, '<')
+      .to(video, { duration: 1.2, scale: 1.05, ease: 'power3.inOut' }, '<')
+      .to(dim, { duration: 0.8, backgroundColor: 'rgba(0,0,0,0.48)', ease: 'power2.out' }, '-=0.6')
+      .to(overlay, { duration: 0.8, opacity: 1, y: 0, ease: 'power2.out' }, '<')
+      .fromTo('.mho-text-box', { scale: 1.1, opacity: 0 }, { duration: 1.0, scale: 1, opacity: 1, ease: 'power2.out' }, '-=0.7');
 
-        /* UP TIMELINE (SLOWER, SILKY SMOOTH 1.2S WEIGHTLESS INERTIA) */
+    /* UP TIMELINE (SYMMETRICAL 1.2S SILKY CONTRACTION) */
     var tlUp = gsap.timeline({
       paused: true,
       onStart: function() {

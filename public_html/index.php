@@ -29,7 +29,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 $total = count($list);
 
-// Category-Specific Filtered Arrays
 $portBus = array();
 $portOnline = array();
 $portVideo = array();
@@ -75,7 +74,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/header.php";?>
   
   <!-- ============================================
-       01 HERO STAGE : GSAP SCROLL STEP HERO
+       01 HERO STAGE : GSAP 1.2S SYMMETRIC SILKY SCROLL HERO
   ============================================ -->
   <section class="main_hero" id="hero">
     <div class="main_hero_text_wrap">
@@ -117,10 +116,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       01-B ABOUT STATS SECTION (SCREENSHOT 1:1 MATCH & WIDE BREATHING GAPS)
+       01-B ABOUT STATS SECTION
   ============================================ -->
   <section class="am-about-stats-sec">
-    <!-- ULTRA-SUBTLE SMOOTH CONTINUOUS WAVE LINES -->
     <div class="aas-silk-canvas">
       <svg class="aas-silk-svg" viewBox="0 0 1600 600" fill="none" preserveAspectRatio="none">
         <path class="silk-line line-1" d="M-100,220 C350,60 700,380 1150,140 C1400,-20 1550,220 1750,160" stroke="#e8edf4" stroke-width="1.1" stroke-linecap="round" />
@@ -129,8 +127,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
 
     <div class="am-container" style="position:relative; z-index:2;">
-      
-      <!-- TOP COPY & WATERMARK BRANDING -->
       <div class="aas-top-row wow fadeInUp" data-wow-duration="0.8s">
         <div class="aas-headline-col">
           <div class="aas-kicker-line">
@@ -151,9 +147,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- 5 CLEAN WHITE SQUARE CARDS (70PX WIDE GAP & PADDING) -->
       <div class="aas-cards-grid wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.15s">
-        
         <div class="aas-stat-card">
           <span class="asc-label">누적 광고 집행</span>
           <div class="asc-value-row">
@@ -161,7 +155,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <span class="asc-unit">건</span>
         </div>
-
         <div class="aas-stat-card">
           <span class="asc-label">운행 광고 차량</span>
           <div class="asc-value-row">
@@ -169,7 +162,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <span class="asc-unit">대</span>
         </div>
-
         <div class="aas-stat-card">
           <span class="asc-label">광주 지역 서비스</span>
           <div class="asc-value-row">
@@ -177,7 +169,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <span class="asc-unit">년</span>
         </div>
-
         <div class="aas-stat-card">
           <span class="asc-label">고객 재계약률</span>
           <div class="asc-value-row">
@@ -185,7 +176,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <span class="asc-unit">%</span>
         </div>
-
         <div class="aas-stat-card">
           <span class="asc-label">협력 매체사</span>
           <div class="asc-value-row">
@@ -193,15 +183,13 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <span class="asc-unit">곳</span>
         </div>
-
       </div>
-
     </div>
   </section>
 
 
   <!-- ============================================
-       02 SECTION 01 : 시내버스 광고 + [하단 시내버스 포트폴리오 쇼케이스]
+       02 SECTION 01 : 시내버스 광고
   ============================================ -->
   <section class="am-section am-bg-slate" id="bus">
     <div class="am-container">
@@ -209,7 +197,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
         <div class="ash-flex">
           <div>
-            <span class="ash-kicker">01 / OOH BUS ADVERTISING</span>
+            <span class="ash-kicker">01 / BUS ADVERTISING</span>
             <h2 class="ash-title">시내버스 광고</h2>
             <p class="ash-desc">광주 시내버스 104개 전 노선 단독 배차. 일일 150만 시민의 눈높이에서 18시간 동안 반복 각인되는 움직이는 랜드마크입니다.</p>
           </div>
@@ -346,7 +334,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- [NEW] SECTION 01 : RECENT BUS PORTFOLIO SHOWCASE STRIP -->
+      <!-- SECTION 01 : RECENT BUS PORTFOLIO SHOWCASE STRIP -->
       <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s">
         <div class="asps-head">
           <div class="asps-title-wrap">
@@ -380,7 +368,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       03 SECTION 02 : 온라인 마케팅 + [하단 온라인 마케팅 포트폴리오 쇼케이스]
+       03 SECTION 02 : 온라인 마케팅 (REAL AGENCY TONE & MANNER)
   ============================================ -->
   <section class="am-section" id="online">
     <div class="am-container">
@@ -388,45 +376,40 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
         <div class="ash-flex">
           <div>
-            <span class="ash-kicker">02 / INTEGRATED DIGITAL PERFORMANCE</span>
-            <h2 class="ash-title">온라인 마케팅 솔루션</h2>
-            <p class="ash-desc">시내버스 옥외광고의 압도적 각인 효과를 실시간 네이버 1위 예약 및 폭발적 매출로 직결시키는 가온엔 인하우스 디지털 솔루션입니다.</p>
+            <span class="ash-kicker">02 / DIGITAL MARKETING</span>
+            <h2 class="ash-title">온라인 마케팅</h2>
+            <p class="ash-desc">시내버스 옥외광고로 형성된 브랜드 인지도를 실제 검색과 네이버 예약, 매장 방문 매출로 즉각 전환시키는 통합 디지털 솔루션입니다.</p>
           </div>
           <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideOnline">
-            <span>온라인 6대 채널 종합 가이드 ↗</span>
+            <span>온라인 채널 가이드 ↗</span>
           </button>
         </div>
       </div>
 
-      <!-- 20-YEAR CREATIVE DIRECTOR BENTO GRID -->
+      <!-- AUTHENTIC AGENCY BENTO GRID -->
       <div class="am-bento-online-grid wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- BENTO HERO CARD : NAVER SMART PLACE 1위 & C-RANK BLOG ENGINE -->
+        <!-- CARD 01 : NAVER PLACE & BRAND BLOG -->
         <div class="abog-hero-card">
           <div class="ahc-media-layer">
-            <img src="/images/sub_bg_a.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="네이버 1위 마케팅">
+            <img src="/images/sub_bg_a.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="네이버 마케팅">
             <div class="ahc-gradient-scrim"></div>
             
-            <div class="ahc-hud-top">
-              <div class="ahc-live-pill"><span class="ahc-dot"></span> NAVER PLACE TOP 3 LOCKED</div>
-              <div class="ahc-cert-pill">의료법 100% 사전 법무 검수 통과</div>
-            </div>
-
             <div class="ahc-hud-bottom">
               <div class="ahc-stat-group">
                 <div class="asg-item">
-                  <span class="asg-label">광주 지역 키워드 점유율</span>
-                  <strong class="asg-val">94.8%</strong>
+                  <span class="asg-label">광주 주요 상권 키워드</span>
+                  <strong class="asg-val">지도 상단 최적화</strong>
                 </div>
                 <div class="asg-divider"></div>
                 <div class="asg-item">
-                  <span class="asg-label">월간 전문 칼럼 발행</span>
-                  <strong class="asg-val">8 ~ 12편</strong>
+                  <span class="asg-label">브랜드 맞춤 칼럼</span>
+                  <strong class="asg-val">월 8 ~ 12편 정기 발행</strong>
                 </div>
                 <div class="asg-divider"></div>
                 <div class="asg-item">
-                  <span class="asg-label">네이버 예약 전환율</span>
-                  <strong class="asg-val">+340%</strong>
+                  <span class="asg-label">전환 관리</span>
+                  <strong class="asg-val">24시간 예약 연동</strong>
                 </div>
               </div>
             </div>
@@ -434,55 +417,55 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
           <div class="ahc-content-box">
             <div class="ahc-tag-row">
-              <span class="ahc-kicker blue">SEARCH &amp; PLACE SEO</span>
-              <span class="ahc-subtag">네이버 지도 1위 + C-Rank 블로그</span>
+              <span class="ahc-kicker blue">NAVER SEARCH &amp; PLACE</span>
+              <span class="ahc-subtag">스마트플레이스 + C-Rank 브랜드 블로그</span>
             </div>
-            <h3 class="ahc-title">스마트플레이스 1위 세팅 &amp; C-Rank 브랜드 블로그</h3>
+            <h3 class="ahc-title">네이버 스마트플레이스 세팅 &amp; 브랜드 블로그 운영</h3>
             <p class="ahc-desc">
-              광주 로컬 키워드 검색 시 1페이지 지도 최상단 안착 및 24시간 네이버 예약 연동. 보건소 행정처분 위험 0%의 철저한 사전 법무 검수를 거친 원장님 전문 칼럼으로 스마트블록과 뷰탭을 완벽히 점유합니다.
+              광주 로컬 키워드 검색 시 1페이지 지도 최상단 노출 세팅 및 24시간 네이버 예약·톡톡 연동. 의료법 및 과장광고 가이드라인을 철저히 준수한 원장님 전문 칼럼으로 스마트블록과 뷰탭을 신뢰도 높게 점유합니다.
             </p>
           </div>
         </div>
 
-        <!-- BENTO SIDE 3 STACK CARDS -->
+        <!-- SIDE 3 STACK CARDS -->
         <div class="abog-side-stack">
           
           <div class="as-card">
             <div class="asc-media-box">
               <img src="/images/sub_bg_b.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="맘카페 및 당근 바이럴">
               <div class="asc-scrim"></div>
-              <span class="asc-badge gold">LOCAL COMMUNITY BUZZ</span>
+              <span class="asc-badge gold">LOCAL VIRAL</span>
             </div>
             <div class="asc-text-wrap">
-              <span class="asc-kicker green">02 / LOCAL COMMUNITY VIRAL</span>
-              <h4 class="asc-title">광주 대표 맘카페 &amp; 당근마켓 바이럴</h4>
-              <p class="asc-desc">광주맘스홀릭, 맘수다방 및 당근마켓 동네생활 실유저 침투로 3050 주부 신뢰 100% 내방 후기 여론을 형성합니다.</p>
+              <span class="asc-kicker green">02 / LOCAL COMMUNITY</span>
+              <h4 class="asc-title">광주 맘카페 &amp; 당근마켓 바이럴</h4>
+              <p class="asc-desc">광주맘스홀릭 등 지역 대표 맘카페 및 당근마켓 동네생활 실사용자 기반의 자연스러운 방문 후기 여론을 형성합니다.</p>
             </div>
           </div>
 
           <div class="as-card">
             <div class="asc-media-box">
-              <img src="/images/sub_bg_e.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="SNS 릴스 스폰서드">
+              <img src="/images/sub_bg_e.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="인스타그램 릴스">
               <div class="asc-scrim"></div>
-              <span class="asc-badge cyan">1~3KM TARGETING</span>
+              <span class="asc-badge cyan">GEO-TARGETING</span>
             </div>
             <div class="asc-text-wrap">
-              <span class="asc-kicker blue">03 / SNS PERFORMANCE AD</span>
-              <h4 class="asc-title">인스타그램 릴스 &amp; 초정밀 반경 스폰서드</h4>
-              <p class="asc-desc">병원/매장 반경 1~3km 내 실제 거주 세대원만을 정밀 타깃팅하여 9:16 숏폼 영상으로 문의 전화를 즉각 폭발시킵니다.</p>
+              <span class="asc-kicker blue">03 / SNS PERFORMANCE</span>
+              <h4 class="asc-title">인스타그램 릴스 &amp; 반경 타깃 광고</h4>
+              <p class="asc-desc">사업장 반경 1~3km 내 실제 거주·활동 고객만을 타깃팅하여 9:16 모바일 숏폼 영상으로 방문과 문의를 유도합니다.</p>
             </div>
           </div>
 
           <div class="as-card">
             <div class="asc-media-box">
-              <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="구글 검색 및 유튜브 GDN">
+              <img src="/images/sub_bg_c.jpg" onerror="this.src='/images/sample_bus.jpg';" alt="구글 검색광고">
               <div class="asc-scrim"></div>
-              <span class="asc-badge purple">SEARCH &amp; RETARGETING</span>
+              <span class="asc-badge purple">RETARGETING</span>
             </div>
             <div class="asc-text-wrap">
-              <span class="asc-kicker purple">04 / GOOGLE SEARCH &amp; GDN</span>
-              <h4 class="asc-title">구글 검색광고 &amp; 유튜브 GDN 리타깃팅</h4>
-              <p class="asc-desc">키워드 검색 고객과 언론사 제휴 배너 네트워크(GDN)를 결합하여 이탈 고객을 24시간 재유입시키는 고효율 퍼포먼스 광고입니다.</p>
+              <span class="asc-kicker purple">04 / SEARCH &amp; DISPLAY</span>
+              <h4 class="asc-title">구글 검색광고 &amp; 유튜브 배너 리타깃팅</h4>
+              <p class="asc-desc">키워드 검색 고객과 제휴 언론사 배너 네트워크를 결합하여 이탈한 잠재 고객을 지속적으로 재유입시키는 고효율 광고입니다.</p>
             </div>
           </div>
 
@@ -490,34 +473,34 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <!-- 3-PILLAR LUXURY TRUST METRICS -->
+      <!-- 3-PILLAR TRUST METRICS -->
       <div class="am-online-guarantee-deck wow fadeInUp" data-wow-duration="0.8s">
         <div class="aog-card">
           <div class="aog-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
           <div class="aog-body">
-            <strong>의료법 100% 준수 보증</strong>
-            <span>과장 광고 및 불법 표현을 원천 차단하여 보건소 행정처분 리스크 0%</span>
+            <strong>의료법 및 광고 심의 준수</strong>
+            <span>과장 광고 및 불법 표현을 원천 차단하여 보건소 행정처분 및 제재 리스크 0%</span>
           </div>
         </div>
 
         <div class="aog-card">
           <div class="aog-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
           <div class="aog-body">
-            <strong>주간 순위 투명 리포트</strong>
-            <span>플레이스 노출 순위, 유입 키워드, 광고 클릭률(CTR)을 매주 투명하게 보고</span>
+            <strong>주간 노출 순위 투명 보고</strong>
+            <span>플레이스 노출 순위, 유입 키워드, 광고 클릭 현황을 매주 데이터 기반으로 보고</span>
           </div>
         </div>
 
         <div class="aog-card">
           <div class="aog-icon-box"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div>
           <div class="aog-body">
-            <strong>1:1 전담 마케팅 디렉터</strong>
-            <span>하청 외주 없는 본사 인하우스 전담팀이 24시간 실시간 피드백을 지원</span>
+            <strong>인하우스 1:1 전담 디렉터 배정</strong>
+            <span>외주 하청 없는 가온엔 본사 전문 디렉터가 광고 집행 전 과정을 전담 관리</span>
           </div>
         </div>
       </div>
 
-      <!-- [NEW] SECTION 02 : RECENT ONLINE MARKETING PORTFOLIO SHOWCASE STRIP -->
+      <!-- SECTION 02 : RECENT ONLINE MARKETING PORTFOLIO SHOWCASE STRIP -->
       <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s">
         <div class="asps-head">
           <div class="asps-title-wrap">
@@ -551,7 +534,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       04 SECTION 03 : 영상제작 + [하단 4K 영상 포트폴리오 쇼케이스]
+       04 SECTION 03 : 영상제작
   ============================================ -->
   <section class="am-section am-bg-dark am-video-ambient-sec" id="video">
     <div class="avs-ambient-bg">
@@ -693,7 +676,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <!-- [NEW] SECTION 03 : RECENT 4K VIDEO PORTFOLIO SHOWCASE STRIP (DARK THEME) -->
+      <!-- SECTION 03 : RECENT 4K VIDEO PORTFOLIO SHOWCASE STRIP -->
       <div class="am-sub-port-strip dark wow fadeInUp" data-wow-duration="0.8s">
         <div class="asps-head">
           <div class="asps-title-wrap">
@@ -727,7 +710,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       05 SECTION 04 : 특화 옥외매체 + [하단 특화매체 포트폴리오 쇼케이스]
+       05 SECTION 04 : 특화 옥외매체
   ============================================ -->
   <section class="am-section" id="other">
     <div class="am-container">
@@ -794,7 +777,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <!-- [NEW] SECTION 04 : RECENT SPECIALIZED OOH PORTFOLIO SHOWCASE STRIP -->
+      <!-- SECTION 04 : RECENT SPECIALIZED OOH PORTFOLIO SHOWCASE STRIP -->
       <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s">
         <div class="asps-head">
           <div class="asps-title-wrap">
@@ -828,7 +811,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       06 SECTION 05 : 성공 사례 (전체 통합 아카이브)
+       06 SECTION 05 : 성공 사례
   ============================================ -->
   <section class="am-section am-bg-slate" id="archive">
     <div class="am-container">
@@ -895,9 +878,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <p class="ash-desc" style="margin:0 auto;">외주 없는 100% 본사 인하우스 전문팀이 기획부터 시공, 보고까지 완벽히 책임지는 4단계 마스터플랜입니다.</p>
       </div>
 
-      <!-- VISUAL PROCESS PIPELINE -->
       <div class="am-pipeline-grid wow fadeInUp" data-wow-duration="0.8s">
-        
         <div class="apg-step-card">
           <div class="apg-step-header">
             <span class="apg-huge-gothic-num">01</span>
@@ -953,7 +934,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <strong>차량 4면 실사 증빙철 &amp; 주간 리포트</strong>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -980,51 +960,60 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       09 ONE-STOP 1:1 CONSULTATION STUDIO FORM
+       09 AUTHENTIC AGENCY 1:1 CONSULTATION & QUOTE FORM
   ============================================ -->
   <section class="am-consultation-studio-sec" id="consultation">
     <div class="am-container">
       <div class="acs-card-grid wow fadeInUp" data-wow-duration="0.8s">
         
+        <!-- LEFT: REAL AGENCY CONTACT & COMPANY INFO -->
         <div class="acs-info-col">
-          <span class="acs-kicker">START YOUR GROWTH WITH GAON-N</span>
+          <span class="acs-kicker">CONTACT &amp; ESTIMATE</span>
           <h2 class="acs-title">
-            광고, 이제<br>
-            <span class="acs-highlight">가온엔과 함께 제대로</span><br>
-            시작하세요.
+            광고 집행 문의 &amp;<br>
+            <span class="acs-highlight">1:1 맞춤 견적 상담</span>
           </h2>
           <p class="acs-desc">
-            광주 104개 시내버스 래핑 광고부터 스마트플레이스 1위 세팅, 4K 시네마틱 홍보영상까지 전문 디렉터가 1:1 맞춤 플랜과 투명한 공식 견적을 신속하게 안내해 드립니다.
+            업종과 상권에 최적화된 시내버스 노선 매칭부터 온라인 검색 마케팅, 영상제작까지 가온엔 전문 디렉터가 신속하고 정확하게 안내해 드립니다.
           </p>
 
           <div class="acs-direct-box">
             <div class="adb-row">
-              <span class="adb-label">대표 상담 직통</span>
+              <span class="adb-label">대표 전화</span>
               <strong class="adb-val">062-375-1215</strong>
             </div>
             <div class="adb-row">
-              <span class="adb-label">본사 위치 안내</span>
+              <span class="adb-label">팩스 번호</span>
+              <span class="adb-text">062-375-1216</span>
+            </div>
+            <div class="adb-row">
+              <span class="adb-label">공식 이메일</span>
+              <span class="adb-text">gaon_ad@naver.com</span>
+            </div>
+            <div class="adb-row">
+              <span class="adb-label">본사 주소</span>
               <span class="adb-text">광주광역시 서구 상무중앙로 78, 5층 (치평동)</span>
             </div>
             <div class="adb-row">
-              <span class="adb-label">운영 시간</span>
-              <span class="adb-text">평일 09:00 ~ 18:00 (온라인 문의 24시간 접수)</span>
+              <span class="adb-label">상담 시간</span>
+              <span class="adb-text">평일 09:00 ~ 18:00 (온라인 문의 상시 접수)</span>
             </div>
           </div>
         </div>
 
+        <!-- RIGHT: PRACTICAL CORPORATE ESTIMATE FORM -->
         <div class="acs-form-col">
           <form name="frm" method="post" action="/board/estmate/write_ok.php" class="acs-form-box">
-            <h3 class="afb-title">1:1 맞춤 견적 &amp; 노선 분석 무료 신청</h3>
+            <h3 class="afb-title">광고 문의 및 견적 요청서</h3>
             
             <div class="afb-fields-grid">
               <div class="afb-field">
-                <label for="in_company" class="afb-lbl">회사명 / 병의원명 <span class="req">*</span></label>
-                <input type="text" id="in_company" name="in_company" placeholder="예: 가온메디컬의원" class="afb-input">
+                <label for="in_company" class="afb-lbl">회사명 / 상호 <span class="req">*</span></label>
+                <input type="text" id="in_company" name="in_company" placeholder="예: (주)가온메디컬" class="afb-input">
               </div>
 
               <div class="afb-field">
-                <label for="in_name" class="afb-lbl">담당자명 / 직책 <span class="req">*</span></label>
+                <label for="in_name" class="afb-lbl">담당자 성함 <span class="req">*</span></label>
                 <input type="text" id="in_name" name="in_name" placeholder="예: 홍길동 팀장" class="afb-input">
               </div>
 
@@ -1034,11 +1023,12 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
 
               <div class="afb-field">
-                <label for="in_email" class="afb-lbl">이메일 <span class="req">*</span></label>
+                <label for="in_email" class="afb-lbl">이메일 주소 <span class="req">*</span></label>
                 <input type="email" id="in_email" name="in_email" placeholder="예: contact@domain.com" class="afb-input">
               </div>
             </div>
 
+            <!-- AD TYPES CHECKBOXES -->
             <div class="afb-checks-group">
               <label class="afb-lbl">관심 광고 매체 (중복 선택 가능) <span class="req">*</span></label>
               <div class="afb-checks-row">
@@ -1065,6 +1055,13 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
             </div>
 
+            <!-- INQUIRY CONTENT TEXTAREA -->
+            <div class="afb-textarea-group">
+              <label for="in_content" class="afb-lbl">문의 내용 / 희망 지역 / 예산 (선택)</label>
+              <textarea id="in_content" name="in_content" rows="3" placeholder="희망하시는 집행 시기, 주요 타깃 지역(예: 상무지구, 수완지구 등), 예산 또는 문의사항을 남겨주시면 더욱 정확한 제안서를 준비해 드립니다." class="afb-textarea"></textarea>
+            </div>
+
+            <!-- PRIVACY AGREEMENT & SUBMIT BUTTON -->
             <div class="afb-bottom-row">
               <label class="afb-agree-item">
                 <input type="checkbox" id="agree" name="agree" checked>
@@ -1072,7 +1069,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </label>
 
               <button type="button" id="btn_submit" class="afb-submit-btn">
-                <span>1:1 맞춤 상담 신청하기</span>
+                <span>견적 및 상담 신청하기</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
             </div>

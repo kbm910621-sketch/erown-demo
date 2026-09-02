@@ -444,16 +444,16 @@
 .lsl-k { color:#94a3b8; font-weight:700; }
 .lsl-v { color:#0f172a; font-weight:800; }
 
-/* ONE-STOP 1:1 CONSULTATION STUDIO FORM (PREMIUM) */
+/* REAL AGENCY CONSULTATION STUDIO & ESTIMATE FORM */
 .am-consultation-studio-sec { padding:100px 0; background:#0f172a; position:relative; overflow:hidden; }
-.acs-card-grid { display:grid; grid-template-columns:1fr 1.25fr; gap:50px; align-items:center; }
+.acs-card-grid { display:grid; grid-template-columns:1fr 1.3fr; gap:50px; align-items:flex-start; }
 .acs-info-col { display:flex; flex-direction:column; gap:16px; }
 .acs-kicker { font-size:11.5px; font-weight:900; letter-spacing:0.16em; color:#38bdf8; }
-.acs-title { font-size:42px; font-weight:900; line-height:1.24; letter-spacing:-1.5px; color:#ffffff; margin:0; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
+.acs-title { font-size:40px; font-weight:900; line-height:1.24; letter-spacing:-1.5px; color:#ffffff; margin:0; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
 .acs-highlight { color:#38bdf8; }
 .acs-desc { font-size:15px; line-height:1.7; color:#94a3b8; margin:0 0 10px; }
 
-.acs-direct-box { padding:24px; border-radius:20px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); display:flex; flex-direction:column; gap:12px; }
+.acs-direct-box { padding:26px; border-radius:20px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); display:flex; flex-direction:column; gap:12px; }
 .adb-row { display:flex; align-items:center; justify-content:space-between; gap:12px; }
 .adb-label { font-size:12.5px; font-weight:700; color:#64748b; }
 .adb-val { font-size:22px; font-weight:900; color:#38bdf8; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; letter-spacing:-0.5px; }
@@ -469,16 +469,21 @@
 .afb-input { width:100%; height:46px; border-radius:12px; border:1.5px solid #e2e8f0; padding:0 14px; font-size:13.5px; color:#0f172a; font-family:inherit; outline:none; transition:border-color 0.2s; box-sizing:border-box; background:#f8fafc; }
 .afb-input:focus { border-color:#1855b7; background:#ffffff; }
 
-.afb-checks-group { margin-bottom:20px; display:flex; flex-direction:column; gap:8px; }
+.afb-checks-group { margin-bottom:18px; display:flex; flex-direction:column; gap:8px; }
 .afb-checks-row { display:flex; flex-wrap:wrap; gap:8px; }
 .afb-check-item input { display:none; }
 .aci-btn { display:inline-flex; align-items:center; padding:8px 16px; border-radius:100px; background:#f1f5f9; border:1px solid #cbd5e1; font-size:12.5px; font-weight:800; color:#475569; cursor:pointer; transition:all 0.2s; }
 .afb-check-item input:checked + .aci-btn { background:#1855b7; border-color:#1855b7; color:#ffffff; box-shadow:0 4px 12px rgba(24,85,183,0.25); }
 
+.afb-textarea-group { margin-bottom:20px; display:flex; flex-direction:column; gap:6px; }
+.afb-textarea { width:100%; border-radius:12px; border:1.5px solid #e2e8f0; padding:12px 14px; font-size:13px; color:#0f172a; font-family:inherit; outline:none; transition:border-color 0.2s; box-sizing:border-box; background:#f8fafc; resize:vertical; line-height:1.6; }
+.afb-textarea:focus { border-color:#1855b7; background:#ffffff; }
+
 .afb-bottom-row { display:flex; justify-content:space-between; align-items:center; gap:16px; padding-top:16px; border-top:1px solid #f1f5f9; }
 .afb-agree-item { display:flex; align-items:center; gap:8px; font-size:12.5px; color:#64748b; font-weight:600; cursor:pointer; }
 .afb-submit-btn { display:inline-flex; align-items:center; gap:10px; padding:14px 28px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:14px; font-weight:900; border:0; cursor:pointer; font-family:inherit; transition:all 0.2s; box-shadow:0 8px 24px rgba(24,85,183,0.3); }
 .afb-submit-btn:hover { background:#0f3f8c; transform:translateY(-2px); box-shadow:0 12px 30px rgba(24,85,183,0.4); }
+
 
 .asc-badge.purple { background:rgba(147,51,234,0.85); }
 .asc-kicker.purple { color:#9333ea; }
