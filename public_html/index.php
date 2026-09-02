@@ -531,143 +531,143 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       04 SECTION 03 : 영상제작 (KEPT IN DARK NAVY THEME)
+       04 SECTION 03 : 영상제작 (SMARTPHONE MOCKUP & CINEMA CENTER STAGE)
   ============================================ -->
   <section class="am-section am-bg-dark am-video-ambient-sec" id="video">
     <div class="avs-ambient-bg">
       <div class="avs-glow glow-left"></div>
       <div class="avs-glow glow-right"></div>
-      <svg class="avs-watermark-svg" viewBox="0 0 1400 800" fill="none">
-        <circle cx="200" cy="300" r="280" stroke="rgba(56,189,248,0.06)" stroke-width="1.5" />
-        <circle cx="200" cy="300" r="180" stroke="rgba(56,189,248,0.04)" stroke-width="1" stroke-dasharray="6 6" />
-        <circle cx="1200" cy="500" r="320" stroke="rgba(24,85,183,0.08)" stroke-width="1.5" />
-        <path d="M-100,500 C400,200 900,700 1500,300" stroke="rgba(255,255,255,0.04)" stroke-width="1.5" />
-      </svg>
     </div>
 
     <div class="am-container" style="position:relative; z-index:2;">
 
-      <div class="am-sec-head dark-head wow fadeInUp" data-wow-duration="0.7s">
-        <div class="ash-flex">
-          <div>
-            <span class="ash-kicker gold">03 / 4K CINEMATIC PRODUCTION</span>
-            <h2 class="ash-title white">영상제작</h2>
-            <p class="ash-desc light">기업·상급병원 브랜드 필름부터 TV CF, 9:16 모바일 숏폼, 옥외 DID 모션까지 인하우스 프로덕션이 14일 Fast-Track으로 제작합니다.</p>
-          </div>
-          <button type="button" class="ash-guide-btn dark bus-guide-open" data-guide="guideVideo">
-            <span>영상제작 공정 가이드 ↗</span>
-          </button>
-        </div>
+      <div class="am-sec-head dark-head text-center wow fadeInUp" data-wow-duration="0.7s">
+        <span class="ash-kicker gold">03 / 4K CINEMATIC &amp; SHORTS PRODUCTION</span>
+        <h2 class="ash-title white">영상제작 솔루션</h2>
+        <p class="ash-desc light" style="margin:0 auto;">기업·상급병원 4K 브랜드 필름부터 9:16 모바일 릴스까지 인하우스 프로덕션이 14일 Fast-Track으로 완성합니다.</p>
       </div>
 
-      <!-- DARK VIDEO CONSOLE -->
-      <div class="am-video-console wow fadeInUp" data-wow-duration="0.8s">
+      <!-- VIDEO PRODUCTION VISUAL CENTER STAGE -->
+      <div class="am-video-hero-stage wow fadeInUp" data-wow-duration="0.8s">
         
-        <div class="avc-mode-bar">
-          <button type="button" class="avc-btn on" data-video-mode="wide">16:9 와이드 시네마 모드</button>
-          <button type="button" class="avc-btn" data-video-mode="shorts">9:16 SNS 릴스/숏폼 모드</button>
+        <!-- MODE SWITCHER TABS -->
+        <div class="avh-mode-switcher">
+          <button type="button" class="avh-mode-btn on" data-video-mode="wide">
+            <span>🎬 16:9 와이드 시네마 모드</span>
+          </button>
+          <button type="button" class="avh-mode-btn" data-video-mode="shorts">
+            <span>📱 9:16 모바일 릴스·숏폼 모드</span>
+          </button>
         </div>
 
-        <div class="avc-grid">
+        <!-- MAIN STAGE DISPLAY (CINEMA & PHONE MOCKUP) -->
+        <div class="avh-display-arena" id="avhDisplayArena">
           
-          <div class="avc-player-frame" id="dynVideoFrame">
-            <video autoplay muted loop playsinline class="avc-video" id="dynMainVideo">
-              <source src="/images/movie.mp4" type="video/mp4">
-            </video>
-            <div class="avc-scrim"></div>
-            
-            <div class="avc-caption">
-              <span class="avc-badge gold" id="dynVideoTag">16:9 4K BRAND FILM</span>
-              <h3 id="dynVideoTitle">기업 · 상급병원 4K 시네마틱 브랜드 필름</h3>
-              <p id="dynVideoSub">Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 더빙</p>
+          <!-- 16:9 CINEMA FRAME -->
+          <div class="avh-cinema-frame on" id="cinemaFrame">
+            <div class="acf-bezel">
+              <video autoplay muted loop playsinline class="acf-video">
+                <source src="/images/movie.mp4" type="video/mp4">
+              </video>
+              <div class="acf-scrim"></div>
+              <div class="acf-overlay-info">
+                <span class="acf-tag gold">4K CINEMATIC PRODUCTION</span>
+                <h3 class="acf-title" id="dynCinemaTitle">기업 · 상급병원 4K 시네마틱 브랜드 필름</h3>
+                <p class="acf-sub" id="dynCinemaSub">Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 더빙</p>
+              </div>
             </div>
           </div>
 
-          <!-- 4 DELIVERABLES -->
-          <div class="avc-products-col">
-            <div class="avp-card on" data-target-mode="wide"
-                 data-vtitle="기업 · 상급병원 4K 시네마틱 브랜드 필름"
-                 data-vsub="Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 더빙">
-              <span class="avp-watermark-num">01</span>
-              <div class="avp-text-box">
-                <strong class="avp-big-title">기업 · 상급병원 브랜드 필름 (3~5분)</strong>
-                <p>Sony FX Cinema 풀프레임 카메라와 국토부 승인 4K 항공 드론으로 완성하는 최고급 영화급 홍보영상</p>
+          <!-- 9:16 SMARTPHONE MOCKUP FRAME -->
+          <div class="avh-phone-mockup" id="phoneMockup">
+            <div class="apm-device">
+              <!-- SMARTPHONE NOTCH / DYNAMIC ISLAND -->
+              <div class="apm-dynamic-island">
+                <span class="apm-camera"></span>
+                <span class="apm-speaker"></span>
               </div>
-            </div>
+              
+              <!-- PHONE SCREEN WITH 9:16 VIDEO -->
+              <div class="apm-screen">
+                <video autoplay muted loop playsinline class="apm-video">
+                  <source src="/images/movie.mp4" type="video/mp4">
+                </video>
+                <div class="apm-reels-ui">
+                  <div class="aru-right-actions">
+                    <div class="aru-action-btn">❤️<span>2.4k</span></div>
+                    <div class="aru-action-btn">💬<span>184</span></div>
+                    <div class="aru-action-btn">↗️<span>공유</span></div>
+                  </div>
+                  <div class="aru-bottom-info">
+                    <span class="aru-brand-tag">@GAON_N_OFFICIAL</span>
+                    <h4 class="aru-title">SNS 릴스 · 틱톡 바이럴 숏폼</h4>
+                    <p class="aru-desc">첫 3초 만에 시선을 사로잡는 빠른 컷 전환 &amp; 모션그래픽</p>
+                  </div>
+                </div>
+              </div>
 
-            <div class="avp-card" data-target-mode="wide"
-                 data-vtitle="TV CF & 극장 스크린 광고 (15초 / 30초)"
-                 data-vsub="15초/30초 고임팩트 스토리텔링 + 2D/3D 모션그래픽">
-              <span class="avp-watermark-num">02</span>
-              <div class="avp-text-box">
-                <strong class="avp-big-title">TV CF · 극장 광고 (15초 / 30초)</strong>
-                <p>지상파/케이블 TV 및 CGV/메가박스 스크린에 송출되는 15초/30초 초압축 임팩트 스토리텔링</p>
-              </div>
-            </div>
-
-            <div class="avp-card" data-target-mode="shorts"
-                 data-vtitle="SNS 모바일 숏폼 바이럴 (9:16 세로형)"
-                 data-vsub="인스타그램 릴스 + 유튜브 쇼츠 + 틱톡 최적화 바이럴">
-              <span class="avp-watermark-num">03</span>
-              <div class="avp-text-box">
-                <strong class="avp-big-title">SNS 릴스 · 틱톡 숏폼 (9:16 세로형)</strong>
-                <p>첫 3초 만에 시선을 사로잡는 빠른 컷 전환과 자막 모션그래픽으로 수만~수십만 뷰의 유기적 알고리즘 도달</p>
-              </div>
-            </div>
-
-            <div class="avp-card" data-target-mode="wide"
-                 data-vtitle="DID 디지털 전광판 모션그래픽 (15초 풀HD)"
-                 data-vsub="옥외 고휘도 스크린 전용 15초 풀HD 고시인성 모션">
-              <span class="avp-watermark-num">04</span>
-              <div class="avp-text-box">
-                <strong class="avp-big-title">DID 전광판 모션그래픽 (15초 풀HD)</strong>
-                <p>유스퀘어 터미널, 지하철역, 관공서 로비 등의 고휘도 LED 전광판 환경에서 1초 만에 읽히는 고시인성 모션</p>
-              </div>
+              <!-- PHONE HOME INDICATOR BAR -->
+              <div class="apm-home-bar"></div>
             </div>
           </div>
 
         </div>
 
-        <!-- 14-DAY WORKFLOW -->
-        <div class="am-video-big-workflow">
-          <div class="avbw-card">
-            <div class="avbw-top">
-              <div class="avbw-picto-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div>
-              <span class="avbw-day">D+3</span>
-            </div>
-            <span class="avbw-step">STEP 01</span>
-            <strong>콘티 기획</strong>
-            <p>1:1 맞춤형 스토리보드 및 연출 콘티 확정</p>
+        <!-- 4 CLEAN VISUAL DELIVERABLE SELECTORS -->
+        <div class="avh-selectors-grid">
+          <div class="avs-item-card on" data-target-mode="wide"
+               data-title="기업 · 상급병원 4K 시네마틱 브랜드 필름"
+               data-sub="Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 더빙">
+            <span class="avs-badge">01 / BRAND FILM</span>
+            <strong class="avs-title">기업·병원 브랜드 필름 (3~5분)</strong>
+            <span class="avs-sub">4K UHD 풀프레임 시네마</span>
           </div>
 
-          <div class="avbw-card">
-            <div class="avbw-top">
-              <div class="avbw-picto-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/><circle cx="8.5" cy="12" r="2.5"/></svg></div>
-              <span class="avbw-day">D+7</span>
-            </div>
-            <span class="avbw-step">STEP 02</span>
-            <strong>4K 본촬영</strong>
-            <p>Sony FX 풀프레임 시네마 + 4K 드론 항공촬영</p>
+          <div class="avs-item-card" data-target-mode="wide"
+               data-title="TV CF &amp; 극장 스크린 광고 (15초 / 30초)"
+               data-sub="15초/30초 고임팩트 스토리텔링 + 2D/3D 모션그래픽">
+            <span class="avs-badge">02 / TV CF · THEATER</span>
+            <strong class="avs-title">TV CF · 극장 광고 (15초/30초)</strong>
+            <span class="avs-sub">초압축 임팩트 스토리텔링</span>
           </div>
 
-          <div class="avbw-card">
-            <div class="avbw-top">
-              <div class="avbw-picto-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="13" x2="9" y2="15"/><line x1="15" y1="12" x2="15" y2="16"/></svg></div>
-              <span class="avbw-day">D+10</span>
-            </div>
-            <span class="avbw-step">STEP 03</span>
-            <strong>편집 &amp; 더빙</strong>
-            <p>전문 성우 내레이션 녹음, BGM 믹싱, 색보정</p>
+          <div class="avs-item-card" data-target-mode="shorts"
+               data-title="SNS 릴스 · 유튜브 쇼츠 바이럴 (9:16 세로형)"
+               data-sub="인스타그램 릴스 + 유튜브 쇼츠 + 틱톡 최적화 숏폼">
+            <span class="avs-badge gold">03 / SNS SHORTS</span>
+            <strong class="avs-title">인스타그램 릴스 (9:16 모바일)</strong>
+            <span class="avs-sub">3초 후킹 &amp; 알고리즘 바이럴</span>
           </div>
 
-          <div class="avbw-card highlight">
-            <div class="avbw-top">
-              <div class="avbw-picto-box gold"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
-              <span class="avbw-day gold">D+14</span>
-            </div>
-            <span class="avbw-step">STEP 04</span>
-            <strong>최종 납품</strong>
-            <p>14일 내 멀티 포맷(16:9 / 9:16) 완성본 납품</p>
+          <div class="avs-item-card" data-target-mode="wide"
+               data-title="DID 디지털 전광판 모션그래픽 (15초 풀HD)"
+               data-sub="옥외 고휘도 스크린 전용 15초 풀HD 고시인성 모션">
+            <span class="avs-badge">04 / DIGITAL SIGNAGE</span>
+            <strong class="avs-title">DID 전광판 모션그래픽</strong>
+            <span class="avs-sub">터미널·역사 고휘도 LED 송출</span>
+          </div>
+        </div>
+
+        <!-- 14-DAY WORKFLOW CHIPS -->
+        <div class="avh-workflow-strip">
+          <div class="aws-chip">
+            <span class="aws-day">D+3</span>
+            <strong class="aws-step">01 콘티 기획</strong>
+          </div>
+          <div class="aws-arrow">→</div>
+          <div class="aws-chip">
+            <span class="aws-day">D+7</span>
+            <strong class="aws-step">02 4K 본촬영</strong>
+          </div>
+          <div class="aws-arrow">→</div>
+          <div class="aws-chip">
+            <span class="aws-day">D+10</span>
+            <strong class="aws-step">03 편집 &amp; 더빙</strong>
+          </div>
+          <div class="aws-arrow">→</div>
+          <div class="aws-chip highlight">
+            <span class="aws-day gold">D+14</span>
+            <strong class="aws-step gold">04 최종 납품</strong>
           </div>
         </div>
 
@@ -937,39 +937,30 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       08 GAON-N GET STARTED MASTER CTA STAGE (IMAGE MATCH 100%)
+       08 GAON-N GET STARTED MASTER CTA STAGE (CLEAN STATIC)
   ============================================ -->
   <section class="am-get-started-sec" id="getStarted">
-    <div class="ags-bg-watermark">GAON-N</div>
     
-    <!-- 4 FLOATING AMBIENT PILLS MATCHING USER SCREENSHOT -->
-    <div class="ags-floating-pill pill-top-left wow fadeInLeft" data-wow-duration="0.8s">
+    <!-- 4 STATIC AMBIENT PILLS (NO HEADACHE / NO FAST BOUNCING) -->
+    <div class="ags-floating-pill pill-top-left">
       <span class="afp-dot green"></span>
       <span class="afp-text">지금 바로 상담해보세요</span>
     </div>
 
-    <div class="ags-floating-pill pill-top-right wow fadeInRight" data-wow-duration="0.8s">
+    <div class="ags-floating-pill pill-top-right">
       <span class="afp-dot yellow"></span>
       <span class="afp-text">빠른 견적 안내 가능합니다</span>
     </div>
 
-    <div class="ags-floating-pill pill-bottom-left wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.1s">
+    <div class="ags-floating-pill pill-bottom-left">
       <span class="afp-icon-clock">⏱</span>
       <span class="afp-text">광주 500+ 광주 신뢰</span>
     </div>
 
-    <div class="ags-floating-pill pill-bottom-right wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">
+    <div class="ags-floating-pill pill-bottom-right">
       <span class="afp-dot green"></span>
       <span class="afp-text">오프라인 · 온라인 통합 운영</span>
     </div>
-
-    <!-- CIRCULAR FLOATING CONTACT BADGE (RIGHT) -->
-    <a href="/board/estmate/write.php" class="ags-floating-circle-badge">
-      <div class="afcb-inner">
-        <span class="afcb-text">CONTACT US</span>
-        <strong class="afcb-bold">광고<br>문의</strong>
-      </div>
-    </a>
 
     <!-- CENTER HERO CONTENT -->
     <div class="am-container" style="position:relative; z-index:5;">

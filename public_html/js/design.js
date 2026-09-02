@@ -368,37 +368,40 @@ $(function() {
     renderModalRoutes(kw, cat);
   });
 
-  /* 04. VIDEO PRODUCTION CONSOLE INTERACTION */
-  $(document).on('click', '.avc-btn', function() {
-    $('.avc-btn').removeClass('on');
+    /* 04. VIDEO PRODUCTION CINEMA & SMARTPHONE MOCKUP INTERACTION */
+  $(document).on('click', '.avh-mode-btn', function() {
+    $('.avh-mode-btn').removeClass('on');
     $(this).addClass('on');
     var mode = $(this).data('video-mode');
     if (mode === 'shorts') {
-      $('#dynVideoFrame').addClass('shorts-mode');
-      $('.avp-card[data-target-mode="shorts"]').first().trigger('click');
+      $('#cinemaFrame').removeClass('on');
+      $('#phoneMockup').addClass('on');
+      $('.avs-item-card[data-target-mode="shorts"]').first().addClass('on').siblings().removeClass('on');
     } else {
-      $('#dynVideoFrame').removeClass('shorts-mode');
-      $('.avp-card[data-target-mode="wide"]').first().trigger('click');
+      $('#phoneMockup').removeClass('on');
+      $('#cinemaFrame').addClass('on');
+      $('.avs-item-card[data-target-mode="wide"]').first().addClass('on').siblings().removeClass('on');
     }
   });
 
-  $(document).on('click', '.avp-card', function() {
-    $('.avp-card').removeClass('on');
+  $(document).on('click', '.avs-item-card', function() {
+    $('.avs-item-card').removeClass('on');
     $(this).addClass('on');
-    var title = $(this).data('vtitle');
-    var sub = $(this).data('vsub');
+    var title = $(this).data('title');
+    var sub = $(this).data('sub');
     var mode = $(this).data('target-mode');
 
-    $('#dynVideoTitle').text(title);
-    $('#dynVideoSub').text(sub);
-    $('#dynVideoTag').text(mode === 'shorts' ? '9:16 SNS SHORTS' : '16:9 4K BRAND FILM');
+    $('#dynCinemaTitle').text(title);
+    $('#dynCinemaSub').text(sub);
 
     if (mode === 'shorts') {
-      $('#dynVideoFrame').addClass('shorts-mode');
-      $('.avc-btn[data-video-mode="shorts"]').addClass('on').siblings().removeClass('on');
+      $('#cinemaFrame').removeClass('on');
+      $('#phoneMockup').addClass('on');
+      $('.avh-mode-btn[data-video-mode="shorts"]').addClass('on').siblings().removeClass('on');
     } else {
-      $('#dynVideoFrame').removeClass('shorts-mode');
-      $('.avc-btn[data-video-mode="wide"]').addClass('on').siblings().removeClass('on');
+      $('#phoneMockup').removeClass('on');
+      $('#cinemaFrame').addClass('on');
+      $('.avh-mode-btn[data-video-mode="wide"]').addClass('on').siblings().removeClass('on');
     }
   });
 
