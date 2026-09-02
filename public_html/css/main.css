@@ -606,3 +606,12 @@
 .avs-sub { font-size:13.5px; color:rgba(255,255,255,0.8); display:block; line-height:1.4; }
 @media(max-width:991px) { .avh-selectors-grid { grid-template-columns:repeat(2, minmax(0, 1fr)); gap:16px; } }
 @media(max-width:576px) { .avh-selectors-grid { grid-template-columns:1fr; } }
+
+
+/* HIGH-END SVG PICTOGRAM SEGMENT SWITCHER */
+.avh-mode-switcher { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:6px; background:rgba(15,23,42,0.85); border:1.5px solid rgba(255,255,255,0.14); border-radius:100px; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); box-shadow:0 12px 36px rgba(0,0,0,0.4); margin:0 auto 36px; }
+.avh-mode-btn { display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:100px; border:none; background:transparent; color:rgba(255,255,255,0.7); font-size:14.5px; font-weight:800; letter-spacing:-0.3px; cursor:pointer; transition:all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+.avh-mode-btn:hover { color:#ffffff; background:rgba(255,255,255,0.06); }
+.avh-mode-btn.on { background:linear-gradient(135deg, #1855b7 0%, #0284c7 100%); color:#ffffff; box-shadow:0 8px 24px rgba(24,85,183,0.5); }
+.avh-btn-icon { width:18px; height:18px; stroke:currentColor; transition:all 0.3s ease; }
+.avh-mode-btn.on .avh-btn-icon { stroke:#ffffff; filter:drop-shadow(0 0 6px rgba(56,189,248,0.8)); }

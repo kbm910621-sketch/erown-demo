@@ -1,7 +1,7 @@
 $(function() {
 
   /* COMMON */
-  $windowWid = window.innerWidth;
+  var $windowWid = window.innerWidth;
 
   if (typeof WOW !== 'undefined') {
     var wow = new WOW({
@@ -31,14 +31,11 @@ $(function() {
     lenis.on('scroll', function() { if (typeof wow !== 'undefined') wow.sync(); });
 
     /* HERO SCROLL LOCK / UNLOCK */
-    if (document.querySelector('.main_hero')) {
-      lenis.stop();
-      window.addEventListener('heroUnlock', function() { lenis.start(); });
-      window.addEventListener('heroLock', function() { lenis.stop(); });
-    }
+    window.addEventListener('heroUnlock', function() { lenis.start(); });
+    window.addEventListener('heroLock', function() { lenis.stop(); });
   }
 
-  /* GSAP SCROLL STEP HERO INTERACTION */
+  /* GSAP SINGLE MASTER TIMELINE (100% PERFECT BI-DIRECTIONAL SYMMETRY) */
   var hero = document.querySelector('.main_hero');
   if (hero && typeof gsap !== 'undefined') {
     if (typeof ScrollTrigger !== 'undefined') {
@@ -54,154 +51,115 @@ $(function() {
     var keywords = hero.querySelector('.main_hero_keywords');
 
     var isAnimating = false;
-    var currentStep = 1;
-    var scrollLocked = true;
+    var currentStep = 1; // 1: small hero, 2: animating, 3: full screen
+    var scrollLocked = false;
 
-    
-    /* REFRESH CHECK */
-    if (hero.getBoundingClientRect().bottom < 0) {
-      currentStep = 3;
-      scrollLocked = false;
-      window.dispatchEvent(new Event('heroUnlock'));
-
-      gsap.set(wrap, { width: '100%', height: '100vh', top: '0%', left: '50%', xPercent: -50 });
-      gsap.set(panel, { borderRadius: 0, y: 0, scale: 1 });
-      gsap.set(video, { scale: 1.05 });
-      gsap.set(dim, { backgroundColor: 'rgba(0,0,0,0.48)' });
-      gsap.set(title, { opacity: 0 });
-      gsap.set(keywords, { opacity: 0 });
-      gsap.set(overlay, { opacity: 1, y: 0 });
-      gsap.set('.mho-text-box', { scale: 1, opacity: 1 });
-    } else {
-      window.dispatchEvent(new Event('heroLock'));
-      gsap.set(wrap, { width: '60%', height: '62vh', top: '36%', left: '50%', xPercent: -50 });
-      gsap.set(panel, { borderRadius: '42px', y: 40, scale: 0.9 });
-      gsap.set(video, { scale: 1 });
-      gsap.set(dim, { backgroundColor: 'rgba(0,0,0,0)' });
-      gsap.set(title, { opacity: 1 });
-      gsap.set(keywords, { opacity: 1 });
-      gsap.set(overlay, { opacity: 0, y: -20 });
-      gsap.set('.mho-text-box', { scale: 1.08, opacity: 0 });
-    }
-
-        /* DOWN TIMELINE (SYMMETRICAL 1.2S SILKY EXPANSION) */
-    var tlDown = gsap.timeline({
+    /* MASTER TIMELINE DEFINITION (EXACT CHOREOGRAPHY)
+       - 커질 때: 글자 없어지고 -> 화면 커지고 -> 오버레이 자막 등장
+       - 작아질 때: 오버레이 자막 사라지고 -> 화면 작아지고 -> 원래 글자 생성!
+    */
+    var tlHero = gsap.timeline({
       paused: true,
+      defaults: { ease: 'power3.inOut' },
       onStart: function() {
         isAnimating = true;
         scrollLocked = true;
-        window.dispatchEvent(new Event('heroLock'));
+        if (lenis) lenis.stop();
       },
       onComplete: function() {
         isAnimating = false;
         currentStep = 3;
-        setTimeout(function() {
-          scrollLocked = false;
-          window.dispatchEvent(new Event('heroUnlock'));
-        }, 300);
-      }
-    });
-
-    tlDown
-      .to(title, { duration: 0.45, opacity: 0, ease: 'power2.out' })
-      .to(keywords, { duration: 0.4, opacity: 0, ease: 'power2.out' }, '<')
-      .to(wrap, { duration: 1.2, width: '100%', height: '100vh', top: '0%', ease: 'power3.inOut' }, '-=0.2')
-      .to(panel, { duration: 1.2, borderRadius: 0, y: 0, scale: 1, ease: 'power3.inOut' }, '<')
-      .to(video, { duration: 1.2, scale: 1.05, ease: 'power3.inOut' }, '<')
-      .to(dim, { duration: 0.8, backgroundColor: 'rgba(0,0,0,0.48)', ease: 'power2.out' }, '-=0.6')
-      .to(overlay, { duration: 0.8, opacity: 1, y: 0, ease: 'power2.out' }, '<')
-      .fromTo('.mho-text-box', { scale: 1.1, opacity: 0 }, { duration: 1.0, scale: 1, opacity: 1, ease: 'power2.out' }, '-=0.7');
-
-    /* UP TIMELINE (SYMMETRICAL 1.2S SILKY CONTRACTION) */
-    var tlUp = gsap.timeline({
-      paused: true,
-      onStart: function() {
-        isAnimating = true;
-        scrollLocked = true;
-        window.dispatchEvent(new Event('heroLock'));
+        scrollLocked = false;
+        if (lenis) lenis.start();
       },
-      onComplete: function() {
+      onReverseComplete: function() {
         isAnimating = false;
         currentStep = 1;
-        scrollLocked = false;
-        window.dispatchEvent(new Event('heroLock'));
+        scrollLocked = true;
+        if (lenis) lenis.stop();
       }
     });
 
-    tlUp
-      .to('.mho-text-box', { duration: 0.45, scale: 1.08, opacity: 0, ease: 'power2.inOut' })
-      .to(overlay, { duration: 0.45, opacity: 0, y: -15, ease: 'power2.inOut' }, '<')
-      .to(dim, { duration: 0.6, backgroundColor: 'rgba(0,0,0,0)', ease: 'power2.out' }, '<')
-      .to(wrap, { duration: 1.2, width: '60%', height: '62vh', top: '36%', ease: 'power3.inOut' }, '-=0.3')
-      .to(panel, { duration: 1.2, borderRadius: '42px', y: 40, scale: 0.9, ease: 'power3.inOut' }, '<')
-      .to(video, { duration: 1.2, scale: 1, ease: 'power3.inOut' }, '<')
-      .to(keywords, { duration: 0.6, opacity: 1, ease: 'power2.out' }, '-=0.4')
-      .to(title, { duration: 0.6, opacity: 1, ease: 'power2.out' }, '<');
+    // Step 1 -> Step 3 (Forward Progression)
+    tlHero
+      // 1. 글자 없어짐
+      .to(title, { duration: 0.4, opacity: 0, y: -25, ease: 'power2.out' }, 0)
+      .to(keywords, { duration: 0.35, opacity: 0, y: -15, ease: 'power2.out' }, 0)
+      // 2. 화면이 전체화면으로 커짐
+      .to(wrap, { duration: 1.2, width: '100%', height: '100vh', top: '0%', ease: 'power3.inOut' }, 0.1)
+      .to(panel, { duration: 1.2, borderRadius: 0, y: 0, scale: 1, ease: 'power3.inOut' }, 0.1)
+      .to(video, { duration: 1.2, scale: 1.05, ease: 'power3.inOut' }, 0.1)
+      // 3. 딤 및 오버레이 글자 등장
+      .to(dim, { duration: 0.8, backgroundColor: 'rgba(0,0,0,0.48)', ease: 'power2.out' }, 0.45)
+      .to(overlay, { duration: 0.8, opacity: 1, y: 0, ease: 'power2.out' }, 0.45)
+      .fromTo('.mho-text-box', { scale: 1.08, opacity: 0 }, { duration: 0.8, scale: 1, opacity: 1, ease: 'power2.out' }, 0.5);
 
-
-    function stepDown() {
-      if (isAnimating || currentStep >= 3) return;
-      currentStep = 2;
-      tlUp.pause(0);
-      tlDown.restart();
+    /* REFRESH (F5) CHECK: If user is down the page, immediately set to completed full state */
+    var initialScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if (initialScrollY > 50) {
+      tlHero.progress(1);
+      currentStep = 3;
+      scrollLocked = false;
+      if (lenis) lenis.start();
+    } else {
+      tlHero.progress(0);
+      currentStep = 1;
+      scrollLocked = true;
+      if (lenis) lenis.stop();
     }
 
-    function stepUp() {
-      if (isAnimating || currentStep <= 1) return;
-      currentStep = 2;
-      tlDown.pause(0);
-      tlUp.restart();
-    }
-
-    /* WHEEL */
+    /* WHEEL EVENT LISTENER (BULLETPROOF) */
     window.addEventListener('wheel', function(e) {
-      if (currentStep === 3 && !scrollLocked && e.deltaY > 0) return;
+      var scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
 
-      if (currentStep === 3 && e.deltaY < 0) {
-        var videoWrap = hero.querySelector('.main_hero_panel_video_wrap');
-        var videoTop = videoWrap.getBoundingClientRect().top;
-        if (videoTop >= 0) {
-          e.preventDefault();
-          stepUp();
-          return;
-        }
+      // 1. While animating, block wheel
+      if (isAnimating) {
+        e.preventDefault();
         return;
       }
 
-      if (e.deltaY > 0 && currentStep < 3) {
+      // 2. When at Step 1 (top of hero) and scrolling DOWN -> Play Expansion
+      if (currentStep === 1 && e.deltaY > 0) {
         e.preventDefault();
-        stepDown();
+        tlHero.play();
         return;
       }
 
-      if (currentStep === 3 && scrollLocked) {
+      // 3. When at Step 3 (expanded) and scrolling UP -> Only Reverse when at the very top of page!
+      if (currentStep === 3 && e.deltaY < 0 && scrollY <= 5) {
         e.preventDefault();
+        tlHero.reverse();
+        return;
       }
     }, { passive: false });
 
-    /* KEYBOARD */
+    /* KEYBOARD LISTENER */
     $(window).on('keydown', function(e) {
-      if ((e.keyCode === 40 || e.keyCode === 34 || e.keyCode === 32) && currentStep < 3) {
+      var scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+      if (isAnimating) { e.preventDefault(); return; }
+      if ((e.keyCode === 40 || e.keyCode === 34 || e.keyCode === 32) && currentStep === 1) {
         e.preventDefault();
-        stepDown();
+        tlHero.play();
       }
-      if ((e.keyCode === 38 || e.keyCode === 33) && currentStep > 1) {
+      if ((e.keyCode === 38 || e.keyCode === 33) && currentStep === 3 && scrollY <= 5) {
         e.preventDefault();
-        stepUp();
+        tlHero.reverse();
       }
     });
 
-    /* TOUCH */
+    /* TOUCH LISTENER */
     var touchStartY = 0;
     hero.addEventListener('touchstart', function(e) {
       touchStartY = e.touches[0].clientY;
     }, { passive: true });
 
     hero.addEventListener('touchend', function(e) {
+      var scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+      if (isAnimating) return;
       var diff = touchStartY - e.changedTouches[0].clientY;
       if (Math.abs(diff) < 30) return;
-      if (diff > 0) stepDown();
-      else stepUp();
+      if (diff > 0 && currentStep === 1) tlHero.play();
+      else if (diff < 0 && currentStep === 3 && scrollY <= 5) tlHero.reverse();
     }, { passive: true });
   }
 
@@ -368,7 +326,7 @@ $(function() {
     renderModalRoutes(kw, cat);
   });
 
-    /* 04. VIDEO PRODUCTION CINEMA & SMARTPHONE MOCKUP INTERACTION */
+  /* 04. VIDEO PRODUCTION CINEMA & SMARTPHONE MOCKUP INTERACTION */
   $(document).on('click', '.avh-mode-btn', function() {
     $('.avh-mode-btn').removeClass('on');
     $(this).addClass('on');
@@ -433,7 +391,7 @@ $(function() {
     var $img = $(this).find('img');
     var src = $img.attr('src');
     var title = $(this).data('name') || $img.attr('alt') || '프로젝트';
-    var cat = $(this).find('.apg-tag').text() || '광고사례';
+    var cat = $(this).find('.apg-tag, .asps-badge').first().text() || '광고사례';
     var id = $(this).data('id') || '01';
 
     $('#modalImg').attr('src', src);
@@ -452,94 +410,33 @@ $(function() {
     }
   });
 
-  /* 07. SPECIFICATION GUIDE MODAL */
-  function openGuideModal(targetTab) {
-    var target = targetTab || 'guideBus';
-    $('body').addClass('modal-lock');
-    $('#busGuideOverlay').addClass('on').fadeIn(200);
-    $('.lmt-tab').removeClass('on');
-    $('.lmt-tab[data-target="' + target + '"]').addClass('on');
-    $('.bus-guide-page').removeClass('on').hide();
-    $('#' + target).addClass('on').show();
-  }
-
-  function closeGuideModal() {
-    $('#busGuideOverlay').removeClass('on').fadeOut(200);
-    $('body').removeClass('modal-lock');
-  }
-
+  /* 07. MASTER SPECIFICATION MODAL TABS */
   $(document).on('click', '.bus-guide-open', function(e) {
     e.preventDefault();
-    var guide = $(this).data('guide') || 'guideBus';
-    openGuideModal(guide);
+    var guideTarget = $(this).data('guide') || 'guideBus';
+    $('#busGuideOverlay').fadeIn(200).css('display', 'flex');
+    $('body').addClass('modal-lock');
+    $('.lmt-tab[data-target="' + guideTarget + '"]').trigger('click');
   });
 
-  $(document).on('click', '#btnCloseBusGuide, #busGuideOverlay', function(e) {
-    if (e.target === this || $(e.target).is('#btnCloseBusGuide')) {
-      closeGuideModal();
-    }
+  $(document).on('click', '#btnCloseBusGuide', function() {
+    $('#busGuideOverlay').fadeOut(200);
+    $('body').removeClass('modal-lock');
   });
 
-  $(document).on('click', '.lmt-tab', function() {
-    var target = $(this).data('target');
-    $('.lmt-tab').removeClass('on');
-    $(this).addClass('on');
-    $('.bus-guide-page').removeClass('on').hide();
-    $('#' + target).addClass('on').show();
-  });
-
-  /* ESC KEY */
-  $(document).on('keydown', function(e) {
-    if (e.key === 'Escape') {
-      closeRouteModal();
-      closeGuideModal();
-      $('#modalBackdrop').removeClass('open').fadeOut(200);
+  $(document).on('click', '#busGuideOverlay', function(e) {
+    if (e.target === this) {
+      $('#busGuideOverlay').fadeOut(200);
       $('body').removeClass('modal-lock');
     }
   });
 
-});
-
-
-  /* 08. CONSULTATION FORM SUBMISSION VALIDATION */
-  $('#btn_submit').on('click', function(e) {
-    e.preventDefault();
-    var company = $('#in_company').val().trim();
-    var name = $('#in_name').val().trim();
-    var tel = $('#in_tel').val().trim();
-    var email = $('#in_email').val().trim();
-    var adTypeCount = $('input[name="in_ad_type[]"]:checked').length;
-    var agree = $('#agree').is(':checked');
-
-    if (!company) {
-      alert('회사명 또는 병의원명을 입력해주세요.');
-      $('#in_company').focus();
-      return;
-    }
-    if (!name) {
-      alert('담당자명을 입력해주세요.');
-      $('#in_name').focus();
-      return;
-    }
-    if (!tel) {
-      alert('연락처를 입력해주세요.');
-      $('#in_tel').focus();
-      return;
-    }
-    if (!email) {
-      alert('이메일 주소를 입력해주세요.');
-      $('#in_email').focus();
-      return;
-    }
-    if (adTypeCount === 0) {
-      alert('관심 있는 광고 매체를 최소 1개 이상 선택해주세요.');
-      return;
-    }
-    if (!agree) {
-      alert('개인정보 수집 및 이용에 동의해주세요.');
-      $('#agree').focus();
-      return;
-    }
-
-    $('form[name="frm"]').submit();
+  $(document).on('click', '.lmt-tab', function() {
+    $('.lmt-tab').removeClass('on');
+    $(this).addClass('on');
+    var target = $(this).data('target');
+    $('.bus-guide-page').removeClass('on');
+    $('#' + target).addClass('on');
   });
+
+});
