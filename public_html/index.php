@@ -269,7 +269,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div>
             <span class="ash-kicker">BUS ADVERTISING</span>
             <h2 class="ash-title">시내버스 광고</h2>
-            <p class="ash-desc">광주 104개 전 노선 맞춤 배차. 일일 150만 시민의 눈높이에서 1일 18시간 동안 반복 각인되는 움직이는 랜드마크 빌보드입니다.</p>
+            <p class="ash-desc">광주 104개 전 노선 맞춤 배차. 1일 18시간 동안 반복 각인되는 움직이는 랜드마크 빌보드입니다.</p>
           </div>
           <div class="ash-actions">
             <button type="button" class="ash-guide-btn blue" id="btnOpenRouteSearchModal">
@@ -417,9 +417,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
         <div class="ash-flex">
           <div>
-            <span class="ash-kicker">02 / DIGITAL MARKETING</span>
-            <h2 class="ash-title">온라인 마케팅 솔루션</h2>
-            <p class="ash-desc">시내버스 옥외광고로 형성된 브랜드 인지도를 실제 검색과 네이버 예약, 매장 방문 매출로 즉각 전환시키는 통합 디지털 솔루션입니다.</p>
+            <span class="ash-kicker">DIGITAL MARKETING</span>
+            <h2 class="ash-title">온라인 마케팅</h2>
+            <p class="ash-desc">네이버 스마트플레이스 1위 세팅부터 C-Rank 브랜드 블로그, 맘카페 바이럴까지 통합 운영합니다.</p>
           </div>
           <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideOnline">
             <span>온라인 채널 가이드 ↗</span>
@@ -857,9 +857,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
         <div class="ash-flex">
           <div>
-            <span class="ash-kicker">04 / SPECIALIZED OOH MEDIA</span>
+            <span class="ash-kicker">SPECIALIZED OOH MEDIA</span>
             <h2 class="ash-title">특화 옥외매체</h2>
-            <p class="ash-desc">각 매체 카드를 클릭하시면 상세한 실측 규격, 운영 시간, 최적의 타깃 분석을 확인하실 수 있습니다.</p>
+            <p class="ash-desc">택시 양측면 래핑, 택배 탑차 3면 래핑, 대형마트 카트, DID 디지털 전광판을 맞춤 집행합니다.</p>
           </div>
           <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideTaxiDelivery">
             <span>특화 매체 실측표 가이드 ↗</span>
@@ -1156,7 +1156,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   <!-- ============================================
        10 LUXURY DIRECTORY: 104 BUS ROUTES SEARCH MODAL (CLEAN 2-COLUMN ALIGNMENT)
   ============================================ -->
-  <div class="route-search-modal-overlay" id="routeSearchModal">
+  <div class="route-search-modal-overlay" id="routeSearchModal" style="display:none !important;">
     <div class="rsm-panel">
       <div class="rsm-head">
         <div class="rsm-content-wrap">
@@ -1208,7 +1208,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <!-- ============================================
        11 HIGH-END 6-CATEGORY MASTER SPECIFICATION & PROPOSAL MODAL (CLEAN WHITE EXECUTIVE DESIGN)
   ============================================ -->
-  <div class="bus-guide-overlay" id="busGuideOverlay">
+  <div class="bus-guide-overlay" id="busGuideOverlay" style="display:none !important;">
     <div class="lux-modal-panel">
       
       <!-- CLEAN WHITE EXECUTIVE HEADER (NO HEAVY DARK TINT) -->

@@ -1446,3 +1446,59 @@ body.modal-lock { overflow:hidden !important; }
   .ms-tab .ms-sub { font-size: 15px !important; }
   .ms-card-thumb { height: 240px !important; }
 }
+
+
+/* ==========================================================================
+   UNIFIED SECTION HEADER TYPOGRAPHY (44PX HUGE TITLE + SOFT ENGLISH KICKER)
+========================================================================== */
+.ash-kicker {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #94a3b8 !important; /* SOFT LIGHT MUTED ENGLISH */
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 6px !important;
+  display: inline-block !important;
+  font-family: "Poppins", "Pretendard", sans-serif !important;
+}
+
+.ash-title {
+  font-size: 44px !important; /* HUGE BOLD TITLE MATCHING SECTION 05 */
+  font-weight: 900 !important;
+  color: #0f172a !important;
+  line-height: 1.22 !important;
+  margin: 6px 0 10px 0 !important;
+  letter-spacing: -1px !important;
+  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif !important;
+}
+
+.ash-title.white {
+  color: #ffffff !important;
+}
+
+.ash-desc {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  color: #64748b !important;
+  margin: 0 0 18px 0 !important;
+  font-weight: 500 !important;
+}
+
+.ash-desc.light {
+  color: #94a3b8 !important;
+}
+
+/* ENSURE MODALS ARE 100% CONCEALED WHEN NOT ACTIVE */
+.route-search-modal-overlay:not(.open),
+.bus-guide-overlay:not(.open) {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.route-search-modal-overlay.open,
+.bus-guide-overlay.open {
+  display: block !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
