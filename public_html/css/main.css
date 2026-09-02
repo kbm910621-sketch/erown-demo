@@ -1778,8 +1778,10 @@ body.modal-lock { overflow:hidden !important; }
 }
 
 
+
+
 /* ==========================================================================
-   SEALNPACK-STYLE DUAL VERTICAL STREAM ONLINE SECTION
+   SEALNPACK-STYLE DUAL VERTICAL STREAM ONLINE SECTION (8 DISTINCT CHANNELS)
 ========================================================================== */
 .som-layout-stage {
   display: grid;
@@ -1789,46 +1791,17 @@ body.modal-lock { overflow:hidden !important; }
   padding: 40px 0;
 }
 
-/* LEFT EDITORIAL CONTENT */
+/* LEFT EDITORIAL CONTENT (UNIFIED WITH GLOBAL HEADINGS) */
 .som-left-content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
-.som-dot-title-wrap {
-  position: relative;
+.som-title-wrap {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-}
-
-.som-accent-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #dc2626; /* SEALNPACK SIGNATURE RED ACCENT DOT */
-  display: inline-block;
-  margin-bottom: 4px;
-  box-shadow: 0 0 12px rgba(220, 38, 38, 0.4);
-}
-
-.som-main-title {
-  font-size: 52px;
-  font-weight: 900;
-  color: #0f172a;
-  line-height: 1.15;
-  letter-spacing: -1.5px;
-  margin: 0;
-  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
-}
-
-.som-en-sub {
-  font-size: 32px;
-  font-weight: 800;
-  color: #64748b;
-  letter-spacing: -0.5px;
-  font-family: "Poppins", "Pretendard", sans-serif;
+  gap: 4px;
 }
 
 .som-desc {
@@ -1849,26 +1822,26 @@ body.modal-lock { overflow:hidden !important; }
   border: 0;
   padding: 0;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 14px;
   width: max-content;
 }
 
 .sgb-txt {
   display: inline-flex;
   align-items: center;
-  padding: 13px 28px;
+  padding: 14px 30px;
   border-radius: 100px;
   border: 1.5px solid #0f172a;
   background: #ffffff;
   color: #0f172a;
-  font-size: 15px;
+  font-size: 15.5px;
   font-weight: 800;
   transition: all 0.25s ease;
 }
 
 .sgb-arrow {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   border: 1.5px solid #0f172a;
   background: #ffffff;
@@ -1891,16 +1864,16 @@ body.modal-lock { overflow:hidden !important; }
   transform: translateX(4px);
 }
 
-/* RIGHT DUAL VERTICAL STREAM (시간차 독립 유영) */
+/* RIGHT DUAL VERTICAL STREAM (8 DISTINCT CHANNELS STAGGERED) */
 .som-right-stream-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
-  height: 620px;
+  height: 640px;
   overflow: hidden;
   position: relative;
-  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
 .som-stream-col {
@@ -1958,7 +1931,7 @@ body.modal-lock { overflow:hidden !important; }
 .som-card-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.2) 50%, transparent 100%);
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.25) 50%, transparent 100%);
   pointer-events: none;
 }
 
@@ -1982,7 +1955,7 @@ body.modal-lock { overflow:hidden !important; }
 }
 
 .sct-title {
-  font-size: 17px;
+  font-size: 16.5px;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.35;
@@ -2004,11 +1977,9 @@ body.modal-lock { overflow:hidden !important; }
 
 @media(max-width:1200px) {
   .som-layout-stage { grid-template-columns: 1fr; gap: 40px; }
-  .som-right-stream-wrap { height: 480px; }
+  .som-right-stream-wrap { height: 500px; }
 }
 @media(max-width:640px) {
-  .som-main-title { font-size: 36px; }
-  .som-en-sub { font-size: 22px; }
-  .som-right-stream-wrap { grid-template-columns: 1fr; height: 400px; }
+  .som-right-stream-wrap { grid-template-columns: 1fr; height: 420px; }
   .som-col-2 { display: none; }
 }
