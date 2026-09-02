@@ -796,7 +796,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       06 SECTION 05 : 성공 사례
+       06 SECTION 05 : 성공 사례 (DISTINCT HIGH-END PORTFOLIO SHOWCASE)
   ============================================ -->
   <section class="am-section am-bg-slate" id="archive">
     <div class="am-container">
@@ -806,42 +806,53 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div>
             <span class="ash-kicker">PORTFOLIO ARCHIVE</span>
             <h2 class="ash-title">전체 성공 사례 아카이브</h2>
-            <p class="ash-desc">카테고리 탭을 클릭하여 고화질 실사 사례를 확인하고, 즉시 1:1 맞춤 견적을 문의하세요.</p>
+            <p class="ash-desc">시내버스부터 온라인, 영상, 특화매체까지 가온엔이 집행한 실제 포트폴리오를 매체별로 확인하세요.</p>
           </div>
           <div class="am-filter-chips">
             <button type="button" class="afc-btn on" data-filter="all">전체보기</button>
             <button type="button" class="afc-btn" data-filter="bus">시내버스</button>
             <button type="button" class="afc-btn" data-filter="online">온라인 마케팅</button>
             <button type="button" class="afc-btn" data-filter="video">영상제작</button>
-            <button type="button" class="afc-btn" data-filter="taxi">택시·택배</button>
-            <button type="button" class="afc-btn" data-filter="mart">마트·DID</button>
+            <button type="button" class="afc-btn" data-filter="taxi">택시·특화매체</button>
           </div>
         </div>
       </div>
 
-      <!-- MASTER GRID -->
-      <div class="am-port-grid wow fadeInUp" data-wow-duration="0.8s" id="masterPortGrid">
-        <?php foreach (array_slice($list, 0, 8) as $item): ?>
-        <div class="apg-card main-port-card" data-cat="<?php echo htmlspecialchars($item['category']); ?>" data-id="<?php echo (int)$item['id']; ?>" data-name="<?php echo htmlspecialchars($item['title']); ?>">
-          <div class="apg-thumb">
+      <!-- DISTINCT DYNAMIC PORTFOLIO TILES (DIFFERENT FROM 4-STRIPS) -->
+      <div class="am-distinct-port-showcase wow fadeInUp" data-wow-duration="0.8s" id="masterPortGrid">
+        <?php foreach (array_slice($list, 0, 7) as $idx => $item): 
+          $isHero = ($idx === 0);
+        ?>
+        <div class="adp-tile main-port-card <?php echo $isHero ? 'adp-tile-featured' : ''; ?>" 
+             data-cat="<?php echo htmlspecialchars($item['category']); ?>" 
+             data-id="<?php echo (int)$item['id']; ?>" 
+             data-name="<?php echo htmlspecialchars($item['title']); ?>">
+          <div class="adp-thumb-box">
             <?php if (!empty($item['thumb'])): ?>
             <img src="<?php echo htmlspecialchars($item['thumb']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
             <?php else: ?>
-            <div class="apg-empty">이미지 준비 중</div>
+            <img src="/images/sample_bus.jpg" alt="<?php echo htmlspecialchars($item['title']); ?>">
             <?php endif; ?>
-            <div class="apg-scrim"></div>
-            <span class="apg-tag"><?php echo isset($categories[$item['category']]) ? $categories[$item['category']] : '광고사례'; ?></span>
-            <div class="apg-hover-btn">상세보기 &amp; 견적조회 ↗</div>
-          </div>
-          <div class="apg-info">
-            <span class="apg-cat"><?php echo isset($categories[$item['category']]) ? $categories[$item['category']] : '광고집행'; ?></span>
-            <strong class="apg-title"><?php echo htmlspecialchars($item['title']); ?></strong>
+            <div class="adp-scrim"></div>
+            
+            <div class="adp-top-tags">
+              <span class="adp-cat-tag"><?php echo isset($categories[$item['category']]) ? $categories[$item['category']] : '광고사례'; ?></span>
+              <span class="adp-num-tag">#0<?php echo $idx + 1; ?></span>
+            </div>
+
+            <div class="adp-bottom-info">
+              <strong class="adp-item-title"><?php echo htmlspecialchars($item['title']); ?></strong>
+              <p class="adp-item-desc">가온엔 기획·시공 포트폴리오</p>
+              <div class="adp-hover-pill">
+                <span>상세보기 &amp; 견적조회 ↗</span>
+              </div>
+            </div>
           </div>
         </div>
         <?php endforeach; ?>
       </div>
 
-      <div class="am-more-box">
+      <div class="am-more-box" style="margin-top:40px;">
         <a href="/portfolio.php" class="am-more-btn">
           <span>포트폴리오 전체 100+ 사례 더보기</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
