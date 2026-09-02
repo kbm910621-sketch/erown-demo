@@ -950,68 +950,77 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
-       06 SECTION 05 : 성공 사례 (CLEAN 3-COLUMN AGENCY PORTFOLIO GALLERY)
+       06 SECTION 05 : 성공 사례 (EXACT SCREENSHOT REPLICA: WIDE 4-COLUMN & HUGE TYPO TABS)
   ============================================ -->
-    <!-- ============================================
-       06 SECTION 05 : 성공 사례 (PREMIUM CLEAN EDITORIAL GALLERY)
-  ============================================ -->
-  <section class="am-section am-bg-slate" id="archive">
-    <div class="am-container">
+  <section class="am-section am-bg-white" id="archive">
+    <div class="am-container-wide">
 
-      <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
-        <div class="ash-flex">
-          <div>
-            <span class="ash-kicker">SUCCESS CASES</span>
-            <h2 class="ash-title">전체 성공 사례 아카이브</h2>
-            <p class="ash-desc">시내버스, 온라인 마케팅, 4K 영상, 특화매체까지 가온엔이 직접 기획·시공한 대표 집행 실적입니다.</p>
-          </div>
-          <div class="am-filter-chips">
-            <button type="button" class="afc-btn on" data-filter="all">전체보기</button>
-            <button type="button" class="afc-btn" data-filter="bus">시내버스</button>
-            <button type="button" class="afc-btn" data-filter="online">온라인 마케팅</button>
-            <button type="button" class="afc-btn" data-filter="video">영상제작</button>
-            <button type="button" class="afc-btn" data-filter="taxi">택시·특화매체</button>
-          </div>
-        </div>
+      <!-- TOP THIN DIVIDER LINE & RESULTS META -->
+      <div class="ms-meta-bar wow fadeInUp" data-wow-duration="0.6s">
+        <span class="ms-results-count"><strong>104</strong> Results</span>
+        <span class="ms-all-text">All</span>
       </div>
 
-      <!-- CLEAN EDITORIAL GALLERY GRID (NO FORCED DARK TINTS, CRISP HUMAN DESIGN) -->
-      <div class="am-editorial-gallery-grid wow fadeInUp" data-wow-duration="0.8s" id="masterPortGrid">
+      <!-- HUGE BOLD TYPOGRAPHIC CATEGORY TABS (All / Events / Story / Thinking STYLE) -->
+      <div class="ms-huge-tabs wow fadeInUp" data-wow-duration="0.7s">
+        <button type="button" class="ms-tab on" data-filter="all">All</button>
+        <button type="button" class="ms-tab" data-filter="bus">시내버스 <span class="ms-sub">Bus</span></button>
+        <button type="button" class="ms-tab" data-filter="online">온라인 <span class="ms-sub">Online</span></button>
+        <button type="button" class="ms-tab" data-filter="video">영상제작 <span class="ms-sub">Video</span></button>
+        <button type="button" class="ms-tab" data-filter="taxi">특화매체 <span class="ms-sub">Special</span></button>
+      </div>
+
+      <!-- 4-COLUMN WIDE SQUARE-RECTANGLE CARDS GRID (EXACT SCREENSHOT CARD RATIO & DETAILS) -->
+      <div class="ms-cards-grid-4 wow fadeInUp" data-wow-duration="0.8s" id="masterPortGrid">
         <?php 
         $archiveList = array(
-          array('id'=>1, 'category'=>'bus', 'title'=>'상무지구 대형 메디컬센터 시내버스 3면 풀래핑 광고', 'loc'=>'상무대로·무진대로 집중 배차', 'thumb'=>'/images/bs_ad/baro.jpg'),
-          array('id'=>9, 'category'=>'online', 'title'=>'봉선동 대표 입시학원 네이버 스마트플레이스 1위 세팅', 'loc'=>'로컬 1위 SEO & 예약 연동', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
-          array('id'=>13, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'loc'=>'Sony FX 풀프레임 + 드론', 'thumb'=>'/images/bs_ad/visual01.jpg'),
-          array('id'=>18, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'loc'=>'도심 주거지 밀착 노출', 'thumb'=>'/images/bs_ad/baro_18.jpg'),
-          array('id'=>10, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 발행', 'loc'=>'전문 에디터 1:1 맞춤 기획', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
-          array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'loc'=>'정류장 승객 눈높이 밀착', 'thumb'=>'/images/bs_ad/baro_3.jpg')
+          array('id'=>1, 'category'=>'bus', 'badge'=>'BUS·AD', 'title'=>'상무지구 대형 메디컬센터 시내버스 3면 풀래핑 광고', 'tag'=>'BUS-AD', 'date'=>'26·09·01', 'thumb'=>'/images/bs_ad/baro.jpg'),
+          array('id'=>9, 'category'=>'online', 'badge'=>'AEO·GEO', 'title'=>'봉선동 대표 입시학원 네이버 스마트플레이스 1위 세팅', 'tag'=>'ONLINE', 'date'=>'26·09·01', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
+          array('id'=>13, 'category'=>'video', 'badge'=>'CINEMA 4K', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'tag'=>'VIDEO', 'date'=>'26·08·28', 'thumb'=>'/images/bs_ad/visual01.jpg'),
+          array('id'=>18, 'category'=>'taxi', 'badge'=>'OOH WRAP', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'tag'=>'SPECIAL', 'date'=>'26·08·25', 'thumb'=>'/images/bs_ad/baro_18.jpg'),
+          array('id'=>10, 'category'=>'online', 'badge'=>'C-RANK BLOG', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 발행', 'tag'=>'ONLINE', 'date'=>'26·08·20', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
+          array('id'=>2, 'category'=>'bus', 'badge'=>'BUS·AD', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑 광고', 'tag'=>'BUS-AD', 'date'=>'26·08·15', 'thumb'=>'/images/bs_ad/baro_3.jpg'),
+          array('id'=>15, 'category'=>'video', 'badge'=>'SNS REELS', 'title'=>'인스타그램 릴스 & 유튜브 숏폼 모바일 9:16 바이럴', 'tag'=>'VIDEO', 'date'=>'26·08·10', 'thumb'=>'/images/bs_ad/visual03.jpg'),
+          array('id'=>3, 'category'=>'bus', 'badge'=>'BUS·AD', 'title'=>'교차로 신호 대기 차량 타깃 시내버스 후면 래핑 광고', 'tag'=>'BUS-AD', 'date'=>'26·08·05', 'thumb'=>'/images/bs_ad/baro_9.jpg')
         );
-        $displayItems = !empty($list) && count($list) >= 6 ? array_slice($list, 0, 6) : $archiveList;
+        $displayItems = !empty($list) && count($list) >= 8 ? array_slice($list, 0, 8) : $archiveList;
         foreach ($displayItems as $idx => $item): 
-          $catName = isset($categories[$item['category']]) ? $categories[$item['category']] : '광고사례';
+          $badgeText = !empty($item['badge']) ? htmlspecialchars($item['badge']) : 'GAON-N';
+          $tagText = !empty($item['tag']) ? htmlspecialchars($item['tag']) : 'MEDIA';
           $imgSrc = !empty($item['thumb']) ? htmlspecialchars($item['thumb']) : '/images/bs_ad/baro.jpg';
-          $locText = !empty($item['loc']) ? htmlspecialchars($item['loc']) : '가온엔 본사 직영 집행 실적';
+          $dateText = !empty($item['date']) ? htmlspecialchars($item['date']) : '26·09·01';
         ?>
-        <div class="aeg-card main-port-card" 
+        <div class="ms-card main-port-card" 
              data-cat="<?php echo htmlspecialchars($item['category']); ?>" 
              data-id="<?php echo (int)$item['id']; ?>" 
              data-name="<?php echo htmlspecialchars($item['title']); ?>">
-          <div class="aeg-thumb-frame">
+          
+          <!-- UPPER THUMBNAIL (ROUNDED TOP WITH INNER BADGE) -->
+          <div class="ms-card-thumb">
             <img src="<?php echo $imgSrc; ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
-            <span class="aeg-cat-badge"><?php echo $catName; ?></span>
-            <div class="aeg-hover-action">
-              <span>실사 크게보기 ↗</span>
+            <span class="ms-badge-pill"><?php echo $badgeText; ?></span>
+          </div>
+
+          <!-- LOWER WHITE BODY (TITLE + ARROW + BOTTOM META) -->
+          <div class="ms-card-body">
+            <div class="ms-body-top">
+              <h4 class="ms-card-title"><?php echo htmlspecialchars($item['title']); ?></h4>
+              <div class="ms-arrow-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+            
+            <div class="ms-body-bottom">
+              <span class="ms-tag"><?php echo $tagText; ?></span>
+              <span class="ms-date"><?php echo $dateText; ?></span>
             </div>
           </div>
-          <div class="aeg-info-box">
-            <span class="aeg-loc-tag"><?php echo $locText; ?></span>
-            <strong class="aeg-item-title"><?php echo htmlspecialchars($item['title']); ?></strong>
-          </div>
+
         </div>
         <?php endforeach; ?>
       </div>
 
-      <div class="am-more-box" style="margin-top:44px;">
+      <div class="am-more-box" style="margin-top:60px;">
         <a href="/contents/a_type/a_1.php" class="am-more-btn">
           <span>포트폴리오 전체 100+ 사례 더보기</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -1021,7 +1030,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </section>
 
-  <!-- ============================================
+    <!-- ============================================
        07 SECTION 06 : 마스터플랜
   ============================================ -->
   <section class="am-section" id="process">

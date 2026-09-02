@@ -577,3 +577,22 @@ $(function() {
       });
     }
   });
+
+
+  /* EXACT SCREENSHOT REPLICA TAB FILTER */
+  $(document).on('click', '.ms-tab', function() {
+    $('.ms-tab').removeClass('on');
+    $(this).addClass('on');
+    var filter = $(this).data('filter');
+    if (filter === 'all') {
+      $('.ms-card').fadeIn(250);
+    } else {
+      $('.ms-card').each(function() {
+        if ($(this).data('cat') === filter) {
+          $(this).fadeIn(250);
+        } else {
+          $(this).hide();
+        }
+      });
+    }
+  });
