@@ -795,3 +795,10 @@
 .am-sub-kicker { display:inline-block; font-size:12px; font-weight:900; color:#1855b7; background:#e0f2fe; padding:5px 14px; border-radius:100px; margin-bottom:12px; letter-spacing:0.04em; }
 .cf-submit-btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:18px; background:linear-gradient(135deg, #1855b7 0%, #0f274e 100%); color:#ffffff; font-size:16px; font-weight:900; border-radius:16px; border:0; cursor:pointer; transition:all 0.3s ease; box-shadow:0 10px 25px rgba(24,85,183,0.3); }
 .cf-submit-btn:hover { background:linear-gradient(135deg, #0284c7 0%, #1855b7 100%); transform:translateY(-2px); box-shadow:0 16px 35px rgba(24,85,183,0.4); color:#ffffff; }
+
+
+/* MODAL BACKGROUND SCROLL LOCK & OVERSCROLL CONTAINMENT */
+html.modal-lock, body.modal-lock { overflow:hidden !important; height:100vh !important; touch-action:none; }
+.bus-guide-overlay { display:none; position:fixed; inset:0; z-index:9999; background:rgba(15,23,42,0.78); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); padding:30px 20px; overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch; }
+.rsm-backdrop { overscroll-behavior:contain; }
+.am-modal-backdrop { overscroll-behavior:contain; }

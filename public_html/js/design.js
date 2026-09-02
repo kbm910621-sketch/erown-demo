@@ -285,14 +285,14 @@ $(function() {
   }
 
   function openRouteModal() {
-    $('body').addClass('modal-lock');
+    $('html, body').addClass('modal-lock');
     $('#routeSearchModal').fadeIn(200).css('display', 'flex');
     renderModalRoutes('', 'all');
   }
 
   function closeRouteModal() {
     $('#routeSearchModal').fadeOut(200);
-    $('body').removeClass('modal-lock');
+    $('html, body').removeClass('modal-lock');
   }
 
   $(document).on('click', '#btnOpenRouteSearchModal, #btnHeadRouteSearch', function(e) {
@@ -417,34 +417,39 @@ $(function() {
     $('#modalId').text('#' + id);
 
     $('#modalBackdrop').addClass('open').fadeIn(200);
-    $('body').addClass('modal-lock');
+    $('html, body').addClass('modal-lock');
   });
 
   $(document).on('click', '#modalClose, #modalBackdrop', function(e) {
     if (e.target === this || $(e.target).is('#modalClose')) {
       $('#modalBackdrop').removeClass('open').fadeOut(200);
-      $('body').removeClass('modal-lock');
+      $('html, body').removeClass('modal-lock');
     }
   });
 
     /* 07. MASTER SPECIFICATION MODAL TABS */
+    /* PREVENT OUTER WINDOW SCROLL WHEN MODAL IS OPEN */
+  $(document).on('wheel', '.bus-guide-overlay, .rsm-backdrop, .am-modal-backdrop', function(e) {
+    e.stopPropagation();
+  });
+
   $(document).on('click', '.bus-guide-open', function(e) {
     e.preventDefault();
     var guideTarget = $(this).data('guide') || 'guideBusOut';
     $('#busGuideOverlay').fadeIn(200).css('display', 'block');
-    $('body').addClass('modal-lock');
+    $('html, body').addClass('modal-lock');
     $('.lmt-tab[data-target="' + guideTarget + '"]').trigger('click');
   });
 
   $(document).on('click', '#btnCloseBusGuide', function() {
     $('#busGuideOverlay').fadeOut(200);
-    $('body').removeClass('modal-lock');
+    $('html, body').removeClass('modal-lock');
   });
 
   $(document).on('click', '#busGuideOverlay', function(e) {
     if (e.target === this) {
       $('#busGuideOverlay').fadeOut(200);
-      $('body').removeClass('modal-lock');
+      $('html, body').removeClass('modal-lock');
     }
   });
 
