@@ -816,15 +816,18 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   <!-- ============================================
        06 SECTION 05 : 성공 사례 (CLEAN 3-COLUMN AGENCY PORTFOLIO GALLERY)
   ============================================ -->
+    <!-- ============================================
+       06 SECTION 05 : 성공 사례 (PREMIUM CLEAN EDITORIAL GALLERY)
+  ============================================ -->
   <section class="am-section am-bg-slate" id="archive">
     <div class="am-container">
 
       <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
         <div class="ash-flex">
           <div>
-            <span class="ash-kicker">SUCCESS PORTFOLIO</span>
+            <span class="ash-kicker">SUCCESS CASES</span>
             <h2 class="ash-title">전체 성공 사례 아카이브</h2>
-            <p class="ash-desc">시내버스, 온라인 마케팅, 4K 영상제작, 특화매체까지 가온엔이 집행한 대표 광고 실적입니다.</p>
+            <p class="ash-desc">시내버스, 온라인 마케팅, 4K 영상, 특화매체까지 가온엔이 직접 기획·시공한 대표 집행 실적입니다.</p>
           </div>
           <div class="am-filter-chips">
             <button type="button" class="afc-btn on" data-filter="all">전체보기</button>
@@ -836,43 +839,44 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
       </div>
 
-      <!-- CLEAN 3-COLUMN GALLERY GRID WITH VIBRANT HIGH-RES CARDS -->
-      <div class="am-clean-gallery-grid wow fadeInUp" data-wow-duration="0.8s" id="masterPortGrid">
-                        <?php 
+      <!-- CLEAN EDITORIAL GALLERY GRID (NO FORCED DARK TINTS, CRISP HUMAN DESIGN) -->
+      <div class="am-editorial-gallery-grid wow fadeInUp" data-wow-duration="0.8s" id="masterPortGrid">
+        <?php 
         $archiveList = array(
-          array('id'=>1, 'category'=>'bus', 'title'=>'광주 시내버스 차도면 대형 래핑 광고 집행 실사', 'thumb'=>'/images/bs_ad/baro.jpg'),
-          array('id'=>9, 'category'=>'online', 'title'=>'봉선동 입시학원 네이버 스마트플레이스 1위 세팅 & 관리', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
-          array('id'=>13, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'thumb'=>'/images/bs_ad/visual01.jpg'),
-          array('id'=>18, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'thumb'=>'/images/bs_ad/baro_18.jpg'),
-          array('id'=>10, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 마케팅', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
-          array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'thumb'=>'/images/bs_ad/baro_3.jpg')
+          array('id'=>1, 'category'=>'bus', 'title'=>'상무지구 대형 메디컬센터 시내버스 3면 풀래핑 광고', 'loc'=>'상무대로·무진대로 집중 배차', 'thumb'=>'/images/bs_ad/baro.jpg'),
+          array('id'=>9, 'category'=>'online', 'title'=>'봉선동 대표 입시학원 네이버 스마트플레이스 1위 세팅', 'loc'=>'로컬 1위 SEO & 예약 연동', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
+          array('id'=>13, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'loc'=>'Sony FX 풀프레임 + 드론', 'thumb'=>'/images/bs_ad/visual01.jpg'),
+          array('id'=>18, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'loc'=>'도심 주거지 밀착 노출', 'thumb'=>'/images/bs_ad/baro_18.jpg'),
+          array('id'=>10, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 발행', 'loc'=>'의료법 100% 사전 검수', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
+          array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'loc'=>'정류장 승객 눈높이 밀착', 'thumb'=>'/images/bs_ad/baro_3.jpg')
         );
         $displayItems = !empty($list) && count($list) >= 6 ? array_slice($list, 0, 6) : $archiveList;
         foreach ($displayItems as $idx => $item): 
           $catName = isset($categories[$item['category']]) ? $categories[$item['category']] : '광고사례';
           $imgSrc = !empty($item['thumb']) ? htmlspecialchars($item['thumb']) : '/images/bs_ad/baro.jpg';
+          $locText = !empty($item['loc']) ? htmlspecialchars($item['loc']) : '가온엔 본사 직영 집행 실적';
         ?>
-        <div class="acg-card main-port-card" 
+        <div class="aeg-card main-port-card" 
              data-cat="<?php echo htmlspecialchars($item['category']); ?>" 
              data-id="<?php echo (int)$item['id']; ?>" 
              data-name="<?php echo htmlspecialchars($item['title']); ?>">
-          <div class="acg-media-wrap">
+          <div class="aeg-thumb-frame">
             <img src="<?php echo $imgSrc; ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
-            <span class="acg-badge"><?php echo $catName; ?></span>
-            <div class="acg-overlay-btn">
-              <span>상세보기 &amp; 견적조회 ↗</span>
+            <span class="aeg-cat-badge"><?php echo $catName; ?></span>
+            <div class="aeg-hover-action">
+              <span>실사 크게보기 ↗</span>
             </div>
           </div>
-          <div class="acg-body">
-            <span class="acg-sub-text">가온엔 공식 집행 프로젝트</span>
-            <strong class="acg-title"><?php echo htmlspecialchars($item['title']); ?></strong>
+          <div class="aeg-info-box">
+            <span class="aeg-loc-tag"><?php echo $locText; ?></span>
+            <strong class="aeg-item-title"><?php echo htmlspecialchars($item['title']); ?></strong>
           </div>
         </div>
         <?php endforeach; ?>
       </div>
 
       <div class="am-more-box" style="margin-top:44px;">
-        <a href="/portfolio.php" class="am-more-btn">
+        <a href="/contents/a_type/a_1.php" class="am-more-btn">
           <span>포트폴리오 전체 100+ 사례 더보기</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>

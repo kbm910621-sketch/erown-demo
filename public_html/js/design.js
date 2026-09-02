@@ -404,11 +404,12 @@ $(function() {
     }
   });
 
-  $(document).on('click', '.main-port-card', function() {
+    $(document).on('click', '.main-port-card', function(e) {
+    e.preventDefault();
     var $img = $(this).find('img');
     var src = $img.attr('src');
     var title = $(this).data('name') || $img.attr('alt') || '프로젝트';
-    var cat = $(this).find('.apg-tag, .asps-badge').first().text() || '광고사례';
+    var cat = $(this).find('.aeg-cat-badge, .apg-tag, .asps-badge').first().text() || '광고사례';
     var id = $(this).data('id') || '01';
 
     $('#modalImg').attr('src', src);
@@ -417,13 +418,13 @@ $(function() {
     $('#modalId').text('#' + id);
 
     $('#modalBackdrop').addClass('open').fadeIn(200);
-    $('html, body').addClass('modal-lock');
+    $('body').addClass('modal-lock');
   });
 
   $(document).on('click', '#modalClose, #modalBackdrop', function(e) {
     if (e.target === this || $(e.target).is('#modalClose')) {
       $('#modalBackdrop').removeClass('open').fadeOut(200);
-      $('html, body').removeClass('modal-lock');
+      $('body').removeClass('modal-lock');
     }
   });
 
