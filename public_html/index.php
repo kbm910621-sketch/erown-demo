@@ -1055,48 +1055,56 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   </div>
 
 
-    <!-- ============================================
-       11 HIGH-END 6-CATEGORY MASTER SPECIFICATION & PROPOSAL MODAL
+      <!-- ============================================
+       11 HIGH-END 6-CATEGORY MASTER SPECIFICATION & PROPOSAL MODAL (CLEAN SOLID HEADER & SVG PICTOGRAMS)
   ============================================ -->
   <div class="bus-guide-overlay" id="busGuideOverlay">
     <div class="lux-modal-panel">
       
+      <!-- SOLID HIGH-END MODAL HEADER -->
       <div class="lux-modal-head">
-        <div>
-          <span class="lmh-label">가온엔 공식 매체 규격 &amp; 제안서 다운로드</span>
+        <div class="lmh-content-wrap">
+          <div class="lmh-kicker-row">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <span class="lmh-label">가온엔 공식 매체 규격 &amp; 제안서 다운로드</span>
+          </div>
           <h3 class="lmh-title">가온엔 통합 매체 공식 규격 및 제안서</h3>
-          <p class="lmh-desc">광주 104개 시내버스 외부·내부 규격부터 온라인 5대 채널, 4K 영상, 인쇄물 규격과 공식 PDF 제안서입니다.</p>
+          <p class="lmh-desc">광주 104개 시내버스 외부·내부 규격부터 택시, 온라인 5대 채널, 4K 영상, 인쇄물 규격과 공식 PDF 제안서입니다.</p>
         </div>
-        <button type="button" class="lux-modal-close" id="btnCloseBusGuide">✕</button>
+        <button type="button" class="lux-modal-close" id="btnCloseBusGuide" aria-label="닫기">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
       </div>
 
+      <!-- 6-CATEGORY TAB NAVIGATION -->
       <div class="lux-modal-tabs">
         <button type="button" class="lmt-tab on" data-target="guideBusOut">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="3" rx="2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><path d="M3 10h18"/></svg>
           <span>버스 외부광고</span>
         </button>
         <button type="button" class="lmt-tab" data-target="guideBusIn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
           <span>버스 내부·음성</span>
         </button>
         <button type="button" class="lmt-tab" data-target="guideTaxiSpec">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
           <span>택시·특화매체</span>
         </button>
         <button type="button" class="lmt-tab" data-target="guideOnline">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2.5"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2.5"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
           <span>온라인 마케팅</span>
         </button>
         <button type="button" class="lmt-tab" data-target="guideVideo">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2"/></svg>
           <span>4K 영상제작</span>
         </button>
         <button type="button" class="lmt-tab" data-target="guidePrint">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
           <span>인쇄물·현수막</span>
         </button>
       </div>
 
+      <!-- MODAL BODY -->
       <div class="lux-modal-body">
         
         <!-- 01 BUS OUTSIDE GUIDE -->
@@ -1108,7 +1116,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <span class="ldb-meta">차도면·인도면·후면 실측 도면 및 104개 노선 단가표 수록 (PDF)</span>
             </div>
             <a href="/pdf/gaon_bus_outside.pdf" download="가온엔_시내버스_외부광고_공식제안서.pdf" class="ldb-btn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               <span>외부광고 제안서 다운로드</span>
             </a>
           </div>
@@ -1118,13 +1126,13 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">차도면 대형</span>
                 <strong class="lhc-size">3,700 × 1,000 mm</strong>
-                <span class="lhc-aspect">DRIVER SIDE WIDE</span>
+                <span class="lhc-aspect">운전자 시야 정면 노출</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">차도면 대형 래핑 광고 (좌측면)</h5>
                 <p class="lhc-desc">왕복 6~8차선 반대편 차량 운전자와 인도 보행자의 시야 정면에 노출되는 가장 거대한 랜드마크 규격입니다.</p>
                 <div class="lhc-spec-list">
-                  <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">도심 간선도로 운전자 &amp; 보행자</strong></div>
+                  <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">도심 간선도로 운전자 &amp; 반대편 보행자</strong></div>
                   <div class="lsl-item"><span class="lsl-k">원단 소재 :</span><strong class="lsl-v">LG 하우시스 최고급 정품 솔벤 시트</strong></div>
                 </div>
               </div>
@@ -1134,7 +1142,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">인도면 표준</span>
                 <strong class="lhc-size">3,000 × 500 mm</strong>
-                <span class="lhc-aspect">CURB SIDE STANDARD</span>
+                <span class="lhc-aspect">보행자 눈높이 1:1 밀착</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">인도면 표준 래핑 광고 (우측면)</h5>
@@ -1150,7 +1158,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">후면 보조</span>
                 <strong class="lhc-size">2,400 × 300 mm</strong>
-                <span class="lhc-aspect">REAR LICENSE TOP</span>
+                <span class="lhc-aspect">신호대기 3분 강제 주시</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">후면 번호판 상단 래핑 광고</h5>
@@ -1166,7 +1174,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge purple">나주 광역</span>
                 <strong class="lhc-size">2,000 × 400 mm</strong>
-                <span class="lhc-aspect">NAJU INTERCITY REAR</span>
+                <span class="lhc-aspect">혁신도시 공공기관 특화</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">나주 시내버스 후면 와이드 래핑</h5>
@@ -1188,12 +1196,14 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <strong class="ldb-title">광주 시내버스 내부광고 &amp; 음성안내 제안서</strong>
               <span class="ldb-meta">중앙창문, 하차문 사랑면, 시트커버 및 7초 성우 음성안내 단가표 (PDF)</span>
             </div>
-            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
               <a href="/pdf/gaon_bus_inside.pdf" download="가온엔_시내버스_내부광고_공식제안서.pdf" class="ldb-btn">
-                <span>내부광고 제안서 📥</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>내부광고 제안서 다운로드</span>
               </a>
               <a href="/pdf/gaon_bus_voice.pdf" download="가온엔_시내버스_음성광고_공식제안서.pdf" class="ldb-btn" style="background:#0f274e;">
-                <span>음성광고 제안서 📥</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>음성광고 제안서 다운로드</span>
               </a>
             </div>
           </div>
@@ -1203,7 +1213,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">중앙창문</span>
                 <strong class="lhc-size">1,100 × 500 mm</strong>
-                <span class="lhc-aspect">CENTER WINDOW (2매/대)</span>
+                <span class="lhc-aspect">차량 1대당 2매 부착</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">중앙창문 대형 포스터 광고</h5>
@@ -1215,7 +1225,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">사랑면(하차문)</span>
                 <strong class="lhc-size">1,000 × 500 mm</strong>
-                <span class="lhc-aspect">EXIT DOOR SIDE</span>
+                <span class="lhc-aspect">하차 대기 승객 100% 접촉</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">하차문 측면 사랑면 광고</h5>
@@ -1227,7 +1237,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">하차문 유리</span>
                 <strong class="lhc-size">700 × 400 mm</strong>
-                <span class="lhc-aspect">DOOR GLASS POSTER</span>
+                <span class="lhc-aspect">투명 유리면 직부착</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">하차문 유리창 포스터 광고</h5>
@@ -1239,7 +1249,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">시트커버</span>
                 <strong class="lhc-size">240 × 120 mm</strong>
-                <span class="lhc-aspect">SEAT COVER (20매/대)</span>
+                <span class="lhc-aspect">좌석 20매 전면 부착</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">좌석 등받이 시트커버 광고</h5>
@@ -1249,9 +1259,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge gold">음성안내</span>
+                <span class="lhc-badge gold">음성안내 방송</span>
                 <strong class="lhc-size">7초 이내 (56자)</strong>
-                <span class="lhc-aspect">VOICE BROADCASTING</span>
+                <span class="lhc-aspect">정류소 도착 전 성우 음성</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">시내버스 정류소 음성안내 방송 광고</h5>
@@ -1270,7 +1280,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <span class="ldb-meta">법인·개인택시 200대 양측면 래핑 규격 및 운영 가이드 (PDF)</span>
             </div>
             <a href="/pdf/gaon_taxi_ad.pdf" download="가온엔_택시광고_공식제안서.pdf" class="ldb-btn">
-              <span>택시광고 제안서 다운로드 📥</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>택시광고 제안서 다운로드</span>
             </a>
           </div>
 
@@ -1279,7 +1290,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">택시 래핑</span>
                 <strong class="lhc-size">2,000 × 370 mm</strong>
-                <span class="lhc-aspect">TAXI 2-SIDE WRAP</span>
+                <span class="lhc-aspect">24시간 도심 주행</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">법인 · 개인택시 양측면 래핑 광고</h5>
@@ -1291,7 +1302,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">택배 탑차</span>
                 <strong class="lhc-size">3,000 × 1,500 mm</strong>
-                <span class="lhc-aspect">3-SIDE TRUCK BILLBOARD</span>
+                <span class="lhc-aspect">아파트 단지 10시간 체류</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">택배 탑차 3면 와이드 래핑 광고</h5>
@@ -1303,7 +1314,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge gold">쇼핑카트</span>
                 <strong class="lhc-size">280 × 160 mm</strong>
-                <span class="lhc-aspect">MART CART PLATE</span>
+                <span class="lhc-aspect">3050 주부 60분 동행</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">이마트 · 롯데마트 쇼핑카트 양면 광고</h5>
@@ -1315,7 +1326,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge purple">DID 전광판</span>
                 <strong class="lhc-size">55 ~ 85" UHD</strong>
-                <span class="lhc-aspect">100+ DAILY PLAYS</span>
+                <span class="lhc-aspect">일 100회 이상 연속 송출</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">유스퀘어 터미널 &amp; 지하철 환승역 DID 전광판</h5>
@@ -1332,7 +1343,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">01 플레이스</span>
                 <strong class="lhc-size">지도 1위 세팅</strong>
-                <span class="lhc-aspect">LOCAL SEARCH SEO</span>
+                <span class="lhc-aspect">로컬 상권 검색 장악</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">네이버 스마트플레이스 1위 세팅 &amp; 관리</h5>
@@ -1344,7 +1355,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">02 C-Rank 블로그</span>
                 <strong class="lhc-size">월 8~12편 칼럼</strong>
-                <span class="lhc-aspect">MEDICAL LAW PASS</span>
+                <span class="lhc-aspect">의료법 100% 사전 검수</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">C-Rank 브랜드 블로그 전문 칼럼 발행</h5>
@@ -1356,7 +1367,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge green">03 맘카페 바이럴</span>
                 <strong class="lhc-size">광주 맘스홀릭</strong>
-                <span class="lhc-aspect">COMMUNITY BUZZ</span>
+                <span class="lhc-aspect">실유저 후기 침투</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">광주 대표 맘카페 &amp; 동네생활 바이럴</h5>
@@ -1368,7 +1379,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge gold">04 SNS 릴스</span>
                 <strong class="lhc-size">반경 1~3km</strong>
-                <span class="lhc-aspect">GEO-TARGET SPONSORED</span>
+                <span class="lhc-aspect">초정밀 지역 스폰서드</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">인스타그램 릴스 &amp; 초정밀 반경 스폰서드</h5>
@@ -1380,7 +1391,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge purple">05 구글 GDN</span>
                 <strong class="lhc-size">검색 &amp; 배너</strong>
-                <span class="lhc-aspect">GOOGLE RETARGETING</span>
+                <span class="lhc-aspect">24시간 리타깃팅</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">구글 검색광고 &amp; 유튜브 GDN 리타깃팅</h5>
@@ -1397,7 +1408,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge gold">브랜드 필름</span>
                 <strong class="lhc-size">4K UHD 풀프레임</strong>
-                <span class="lhc-aspect">CINEMA PRODUCTION</span>
+                <span class="lhc-aspect">영화급 시네마 영상</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">기업 · 상급병원 4K 시네마틱 브랜드 필름</h5>
@@ -1409,7 +1420,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge gold">모바일 숏폼</span>
                 <strong class="lhc-size">9:16 FHD 세로형</strong>
-                <span class="lhc-aspect">VIRAL SHORTS</span>
+                <span class="lhc-aspect">알고리즘 바이럴</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">SNS 릴스 · 유튜브 쇼츠 · 틱톡 숏폼</h5>
@@ -1426,7 +1437,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">차량 래핑 시트</span>
                 <strong class="lhc-size">LG 하우시스 정품</strong>
-                <span class="lhc-aspect">SOLVENT WRAP FILM</span>
+                <span class="lhc-aspect">자외선 변색방지 UV코팅</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">차량 전용 최고급 내후성 솔벤 점착 시트</h5>
@@ -1438,7 +1449,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">대형 현수막</span>
                 <strong class="lhc-size">지정게시대 / 게릴라</strong>
-                <span class="lhc-aspect">OUTDOOR BANNER</span>
+                <span class="lhc-aspect">구청 추첨 대행</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">구청 지정게시대 &amp; 대형 건물 분양 현수막</h5>
@@ -1450,7 +1461,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge purple">리플렛/브로슈어</span>
                 <strong class="lhc-size">A4 3단 접지 / 카탈로그</strong>
-                <span class="lhc-aspect">PREMIUM PRINT</span>
+                <span class="lhc-aspect">고급 후가공 인쇄</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">병원 안내 리플렛 · 기업 브로슈어 인쇄</h5>
@@ -1462,10 +1473,12 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <div class="lux-modal-foot" style="display:flex; justify-content:space-between; align-items:center;">
-        <span style="font-size:13.5px; color:#64748b; font-weight:700;">상세 단가표 및 맞춤 노선 믹스는 1:1 온라인 견적 상담을 통해 즉시 제공됩니다.</span>
-        <a href="/board/estmate/write.php" class="am-more-btn" style="padding:11px 22px; font-size:13.5px;">
-          <span>1:1 맞춤 견적 신청하기 ↗</span>
+      <!-- SOLID MODAL FOOTER -->
+      <div class="lux-modal-foot">
+        <span class="lmf-info-text">상세 단가표 및 맞춤 노선 믹스는 1:1 온라인 견적 상담을 통해 즉시 제공됩니다.</span>
+        <a href="/board/estmate/write.php" class="am-more-btn" style="padding:13px 26px; font-size:14.5px;">
+          <span>1:1 맞춤 견적 신청하기</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
       </div>
     </div>
