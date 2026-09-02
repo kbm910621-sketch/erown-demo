@@ -431,7 +431,7 @@ $(function() {
   $(document).on('click', '.bus-guide-open', function(e) {
     e.preventDefault();
     var guideTarget = $(this).data('guide') || 'guideBus';
-    $('#busGuideOverlay').fadeIn(200).css('display', 'flex');
+    $('#busGuideOverlay').fadeIn(200).css('display', 'block');
     $('body').addClass('modal-lock');
     $('.lmt-tab[data-target="' + guideTarget + '"]').trigger('click');
   });
