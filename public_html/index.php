@@ -411,251 +411,176 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   <!-- ============================================
        03 SECTION 02 : 온라인 마케팅 (BIG FULL-IMAGE SCREEN CAPTURE SHOWCASE)
   ============================================ -->
-  <section class="am-section" id="online">
+  <section class="am-section am-bg-white" id="online">
     <div class="am-container">
-
-      <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
-        <div class="ash-flex">
-          <div>
+      
+      <!-- MAIN SEALNPACK LAYOUT: LEFT TEXT & RIGHT DUAL VERTICAL STREAM -->
+      <div class="som-layout-stage wow fadeInUp" data-wow-duration="0.8s">
+        
+        <!-- LEFT: CLEAN EDITORIAL BRAND HEADLINE & GUIDE BUTTON -->
+        <div class="som-left-content">
+          <div class="som-title-wrap">
             <span class="ash-kicker">DIGITAL MARKETING</span>
             <h2 class="ash-title">온라인 마케팅</h2>
-            <p class="ash-desc">네이버 스마트플레이스 1위 세팅부터 C-Rank 브랜드 블로그, 맘카페 바이럴까지 통합 운영합니다.</p>
           </div>
-          <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideOnline">
-            <span>온라인 채널 가이드 ↗</span>
+
+          <p class="som-desc">
+            시내버스 옥외광고로 형성된 강력한 브랜드 인지도를 
+            네이버 스마트플레이스 1위 세팅, C-Rank 브랜드 블로그, 맘카페 및 인스타그램 타깃 광고와 결합하여 
+            실제 검색과 네이버 예약, 매장 방문 매출로 즉각 전환시키는 통합 디지털 솔루션입니다.
+          </p>
+
+          <button type="button" class="som-guide-btn bus-guide-open" data-guide="guideOnline">
+            <span class="sgb-txt">온라인 가이드 더보기</span>
+            <span class="sgb-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </span>
           </button>
         </div>
-      </div>
 
-      <!-- 4 BIG FULL-IMAGE CAPTURE VISUAL CARDS -->
-      <div class="am-online-visual-grid-4 wow fadeInUp" data-wow-duration="0.8s">
-        
-        <!-- CARD 01 : SMART PLACE & BLOG -->
-        <div class="aov-card wide">
-          <img src="/images/sub_bg_f.jpg" alt="네이버 스마트플레이스 1위">
-          <div class="aov-scrim"></div>
-          <div class="aov-overlay">
-            <span class="aov-pill blue">01 / NAVER SEARCH &amp; PLACE</span>
-            <h3 class="aov-title">네이버 스마트플레이스 1위 세팅 &amp; C-Rank 브랜드 블로그</h3>
-            <p class="aov-desc">광주 로컬 키워드 1페이지 지도 최상단 노출 + 24시간 네이버 예약 연동 + 고품격 브랜드 칼럼 정기 발행</p>
-            <div class="aov-metrics-row">
-              <div class="amr-tag">상권 키워드 지도 상위 노출</div>
-              <div class="amr-tag">월 8~12편 전문 칼럼</div>
-              <div class="amr-tag">네이버 예약 연동</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 02 : MOM CAFE -->
-        <div class="aov-card">
-          <img src="/images/sub_bg_g.jpg" alt="맘카페 바이럴">
-          <div class="aov-scrim"></div>
-          <div class="aov-overlay">
-            <span class="aov-pill green">02. 맘카페 &amp; 동네생활</span>
-            <h3 class="aov-title">광주 대표 맘카페 &amp; 당근마켓 바이럴</h3>
-            <p class="aov-desc">광주맘스홀릭 및 당근 동네생활 실사용자 기반 자연스러운 방문 후기 여론 형성</p>
-            <div class="aov-metrics-row">
-              <div class="amr-tag">3050 주부 신뢰 확보</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 03 : INSTAGRAM REELS -->
-        <div class="aov-card">
-          <img src="/images/sub_bg_e.jpg" alt="인스타그램 릴스">
-          <div class="aov-scrim"></div>
-          <div class="aov-overlay">
-            <span class="aov-pill blue">03. 인스타그램 릴스 타깃</span>
-            <h3 class="aov-title">인스타그램 릴스 &amp; 반경 타깃 광고</h3>
-            <p class="aov-desc">사업장 반경 1~3km 내 거주 고객 집중 타깃팅 + 9:16 모바일 숏폼 영상 제작</p>
-            <div class="aov-metrics-row">
-              <div class="amr-tag">반경 1~3km 정밀 노출</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 04 : GOOGLE GDN -->
-        <div class="aov-card wide">
-          <img src="/images/sub_bg_h.jpg" alt="구글 검색 & GDN">
-          <div class="aov-scrim"></div>
-          <div class="aov-overlay">
-            <span class="aov-pill purple">04. 구글 &amp; 유튜브 리타깃팅</span>
-            <h3 class="aov-title">구글 검색광고 &amp; 유튜브 GDN 리타깃팅</h3>
-            <p class="aov-desc">키워드 검색 고객과 제휴 언론사 배너 네트워크를 결합하여 이탈 고객을 24시간 재유입</p>
-            <div class="aov-metrics-row">
-              <div class="amr-tag">구글 검색 키워드</div>
-              <div class="amr-tag">유튜브 배너 네트워크</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- ============================================
-           HOSPITAL MEDICAL BRAND BLOG & COLUMN STUDIO (DYNAMIC REAL EXPERIENCE)
-      ============================================ -->
-      <div class="am-hospital-blog-sim-stage wow fadeInUp" data-wow-duration="0.8s">
-        <div class="ahbs-layout">
+        <!-- RIGHT: DUAL VERTICAL MARQUEE STREAMS (8대 전 채널 고유 콘텐츠 시간차 유영) -->
+        <div class="som-right-stream-wrap">
           
-          <!-- LEFT: MEDICAL SUBJECT SWITCHER & AUDIENCE -->
-          <div class="ahbs-controller">
-            <div class="ahbs-head">
-              <span class="ahbs-kicker">HOSPITAL BRAND BLOG STUDIO</span>
-              <h3 class="ahbs-title">병원·의원 전문 브랜드 블로그 칼럼 라이브 뷰</h3>
-              <p class="ahbs-desc">단순 홍보글이 아닌 원장님의 진료 철학과 전문 지식을 진정성 있게 담아 환자의 내방 결정을 이끌어내는 고품격 브랜드 블로그 실전 칼럼입니다.</p>
-            </div>
-
-            <div class="ahbs-subject-tabs">
-              <button type="button" class="asb-tab on" data-dept="skin">
-                <div class="asb-icon-badge">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                </div>
-                <div class="asb-text">
-                  <strong>피부과 · 리프팅</strong>
-                  <span>울쎄라 vs 써마지 1:1 비교 분석 칼럼</span>
-                </div>
-              </button>
-
-              <button type="button" class="asb-tab" data-dept="dental">
-                <div class="asb-icon-badge">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div class="asb-text">
-                  <strong>치과 · 임플란트</strong>
-                  <span>뼈이식 임플란트 실패 없는 3가지 수술 기준</span>
-                </div>
-              </button>
-
-              <button type="button" class="asb-tab" data-dept="ortho">
-                <div class="asb-icon-badge">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>
-                </div>
-                <div class="asb-text">
-                  <strong>정형외과 · 통증</strong>
-                  <span>허리 디스크 비수술 도수·주사 치료 호전 원리</span>
-                </div>
-              </button>
-
-              <button type="button" class="asb-tab" data-dept="korean">
-                <div class="asb-icon-badge">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7M9 9l3-7 3 7M9 9h6M4 22h16"/></svg>
-                </div>
-                <div class="asb-text">
-                  <strong>한방병원 · 교통사고</strong>
-                  <span>교통사고 후유증 3일 골든타임 입원 치료 가이드</span>
-                </div>
-              </button>
-            </div>
-
-            <div class="ahbs-audit-note">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <span>가온엔은 인위적인 어뷰징 없이 신뢰도 높은 정통 브랜드 콘텐츠만을 기획·발행합니다.</span>
-            </div>
-          </div>
-
-          <!-- RIGHT: NAVER SMART EDITOR ONE MEDICAL BLOG VIEW -->
-          <div class="ahbs-blog-mockup-wrap">
-            <div class="ahbs-blog-mockup">
+          <!-- STREAM COLUMN 1 (4 DISTINCT CHANNELS + LOOP CLONES) -->
+          <div class="som-stream-col som-col-1">
+            <div class="som-stream-track track-1">
               
-              <!-- BLOG TOP BRAND HEADER -->
-              <div class="abm-header">
-                <div class="abh-brand-info">
-                  <span class="abh-blog-name" id="simBlogBrand">가온메디컬 공식 의학 매거진</span>
-                  <span class="abh-blog-stats">이웃 4,820명 · 일 방문 2,500+</span>
+              <!-- ITEM 01: NAVER PLACE -->
+              <div class="som-stream-card">
+                <img src="/images/bs_ad/baro_13.jpg" alt="네이버 스마트플레이스 1위 세팅">
+                <div class="som-card-scrim"></div>
+                <div class="som-card-txt">
+                  <span class="sct-kicker">PLACE SEO 1위</span>
+                  <strong class="sct-title">스마트플레이스 상위 노출 &amp; 예약 연동</strong>
                 </div>
-                <span class="abh-follow-btn">+ 이웃추가</span>
               </div>
 
-              <!-- BLOG POSTING CONTAINER -->
-              <div class="abm-post-body" id="simBlogPostContainer">
-                
-                <div class="apb-category-row">
-                  <span class="apb-cat" id="simPostCat">피부과 원장 칼럼</span>
-                  <span class="apb-date">오늘 작성 · 5분 읽기</span>
+              <!-- ITEM 02: C-RANK BRAND BLOG -->
+              <div class="som-stream-card">
+                <img src="/images/bs_ad/baro_14.jpg" alt="C-Rank 병원 브랜드 블로그">
+                <div class="som-card-scrim"></div>
+                <div class="som-card-txt">
+                  <span class="sct-kicker">C-Rank Blog</span>
+                  <strong class="sct-title">병원·의원 전문 브랜드 블로그 칼럼</strong>
                 </div>
+              </div>
 
-                <h4 class="apb-title" id="simPostTitle">울쎄라 vs 써마지 차이점, 원장님이 직접 명확하게 비교해 드립니다</h4>
-
-                <div class="apb-author-profile">
-                  <div class="aap-avatar">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                  </div>
-                  <div class="aap-info">
-                    <strong class="aap-name" id="simAuthorName">대표원장 의학박사 직접 집필</strong>
-                    <span class="aap-desc" id="simAuthorDesc">광주 상무지구 진료 15년</span>
-                  </div>
+              <!-- ITEM 03: MOM CAFE & KARROT VIRAL -->
+              <div class="som-stream-card">
+                <img src="/images/bs_ad/baro_15.jpg" alt="광주 맘카페 & 당근마켓 바이럴">
+                <div class="som-card-scrim"></div>
+                <div class="som-card-txt">
+                  <span class="sct-kicker">Viral Marketing</span>
+                  <strong class="sct-title">광주 맘카페 &amp; 당근 동네생활 바이럴</strong>
                 </div>
+              </div>
 
-                <!-- MEDICAL LEAD CONTENT BOX -->
-                <div class="apb-lead-box" id="simLeadBox">
-                  "안녕하세요. 상무지구에서 15년간 피부 진료를 이어오고 있는 대표원장입니다. 많은 환자분들이 내원하셔서 '원장님, 저한테는 울쎄라가 맞나요, 써마지가 맞나요?'라는 질문을 가장 많이 하십니다. 결론부터 말씀드리면 두 시술은 타깃하는 피부 층이 완전히 다릅니다..."
+              <!-- ITEM 04: INSTAGRAM REELS RADIUS TARGET -->
+              <div class="som-stream-card">
+                <img src="/images/bs_ad/baro_16.jpg" alt="인스타그램 릴스 타깃 광고">
+                <div class="som-card-scrim"></div>
+                <div class="som-card-txt">
+                  <span class="sct-kicker">Meta Ads</span>
+                  <strong class="sct-title">인스타그램 릴스 &amp; 반경 1~3km 타깃</strong>
                 </div>
+              </div>
 
-                <!-- 3-POINT MEDICAL HIGHLIGHT -->
-                <div class="apb-point-card">
-                  <strong class="apc-point-title" id="simPointTitle">원장님이 짚어주는 3대 핵심 요약</strong>
-                  <ul class="apc-point-list" id="simPointList">
-                    <li><strong>01. 초음파 vs 고주파 :</strong> 울쎄라는 SMAS 근막층, 써마지는 진피층 콜라겐을 타깃합니다.</li>
-                    <li><strong>02. 피부 두께 측정 :</strong> 볼 꺼짐 부작용을 방지하기 위해 1:1 초음파 정밀 진단이 필수입니다.</li>
-                    <li><strong>03. 시술 팁 관리 :</strong> 시술 직후 인증된 시리얼 넘버 및 확인서를 제공합니다.</li>
-                  </ul>
+              <!-- LOOP CLONES FOR COLUMN 1 -->
+              <div class="som-stream-card">
+                <img src="/images/bs_ad/baro_13.jpg" alt="네이버 스마트플레이스 1위 세팅">
+                <div class="som-card-scrim"></div>
+                <div class="som-card-txt">
+                  <span class="sct-kicker">PLACE SEO 1위</span>
+                  <strong class="sct-title">스마트플레이스 상위 노출 &amp; 예약 연동</strong>
                 </div>
+              </div>
 
-                <!-- MEDICAL LAW COMPLIANCE BADGE -->
-                <div class="apb-law-badge">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-                  <span>가온엔 본사 전문 에디터 팀 1:1 맞춤 기획 및 전수 검수 완료</span>
+              <div class="som-stream-card">
+                <img src="/images/bs_ad/baro_14.jpg" alt="C-Rank 병원 브랜드 블로그">
+                <div class="som-card-scrim"></div>
+                <div class="som-card-txt">
+                  <span class="sct-kicker">C-Rank Blog</span>
+                  <strong class="sct-title">병원·의원 전문 브랜드 블로그 칼럼</strong>
                 </div>
+              </div>
 
-                <!-- CTA BUTTONS -->
-                <div class="apb-action-row">
-                  <a href="/board/estmate/write.php" class="apb-btn call">📞 병원 1:1 전화 상담</a>
-                  <a href="/board/estmate/write.php" class="apb-btn reserve">📅 네이버 진료 예약</a>
+            </div>
+          </div>
+
+          <!-- STREAM COLUMN 2 (4 COMPLETELY DIFFERENT CHANNELS + LOOP CLONES) -->
+          <div class="som-stream-col som-col-2">
+            <div class="som-stream-track track-2">
+              
+              <!-- ITEM 05: NAVER SEARCH ADS (POWERLINK) -->
+              <div class="som-stream-card">
+                <img src="/images/sub_bg_a.jpg" alt="네이버 파워링크 검색광고">
+                <div class="som-card-scrim"></div>
+                <div class="som-card-txt">
+                  <span class="sct-kicker">Search Ads</span>
+                  <strong class="sct-title">네이버 파워링크 검색광고 (SA)</strong>
                 </div>
+              </div>
 
+              <!-- ITEM 06: GOOGLE SEARCH & YOUTUBE GDN -->
+              <div class="som-stream-card">
+                <img src="/images/sub_bg_h.jpg" alt="구글 검색 & 유튜브 GDN 리타깃팅">
+                <div class="som-card-scrim"></div>
+                <div class="som-card-txt">
+                  <span class="sct-kicker">Google &amp; GDN</span>
+                  <strong class="sct-title">구글 검색 &amp; 유튜브 GDN 리타깃팅</strong>
+                </div>
+              </div>
+
+              <!-- ITEM 07: INFLUENCER & REVIEWERS -->
+              <div class="som-stream-card">
+                <img src="/images/sub_bg_g.jpg" alt="블로그 체험단 & 인플루언서 마케팅">
+                <div class="som-card-scrim"></div>
+                <div class="som-card-txt">
+                  <span class="sct-kicker">Influencer</span>
+                  <strong class="sct-title">블로그 체험단 &amp; 인플루언서 섭외</strong>
+                </div>
+              </div>
+
+              <!-- ITEM 08: HIGH-CONVERTING LANDING PAGE & WEB -->
+              <div class="som-stream-card">
+                <img src="/images/sub_bg_e.jpg" alt="모바일 고전환 랜딩페이지 제작">
+                <div class="som-card-scrim"></div>
+                <div class="som-card-txt">
+                  <span class="sct-kicker">Landing Page</span>
+                  <strong class="sct-title">모바일 반응형 고전환 웹사이트 제작</strong>
+                </div>
+              </div>
+
+              <!-- LOOP CLONES FOR COLUMN 2 -->
+              <div class="som-stream-card">
+                <img src="/images/sub_bg_a.jpg" alt="네이버 파워링크 검색광고">
+                <div class="som-card-scrim"></div>
+                <div class="som-card-txt">
+                  <span class="sct-kicker">Search Ads</span>
+                  <strong class="sct-title">네이버 파워링크 검색광고 (SA)</strong>
+                </div>
+              </div>
+
+              <div class="som-stream-card">
+                <img src="/images/sub_bg_h.jpg" alt="구글 검색 & 유튜브 GDN 리타깃팅">
+                <div class="som-card-scrim"></div>
+                <div class="som-card-txt">
+                  <span class="sct-kicker">Google &amp; GDN</span>
+                  <strong class="sct-title">구글 검색 &amp; 유튜브 GDN 리타깃팅</strong>
+                </div>
               </div>
 
             </div>
           </div>
 
         </div>
-      </div>
 
-      <!-- 3-PILLAR TRUST STRIP -->
-      <div class="am-online-guarantee-deck wow fadeInUp" data-wow-duration="0.8s">
-        <div class="aog-card">
-          <div class="aog-icon-box">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-          </div>
-          <div class="aog-body">
-            <strong>광고 심의 및 신뢰성 검수</strong>
-            <span>과장되거나 자극적인 표현을 배제하고 브랜드 신뢰도를 극대화하는 정직하고 안전한 콘텐츠</span>
-          </div>
-        </div>
-
-        <div class="aog-card">
-          <div class="aog-icon-box">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><polyline points="2 6 12 2 22 6"/></svg>
-          </div>
-          <div class="aog-body">
-            <strong>주간 노출 순위 투명 보고</strong>
-            <span>스마트블록 노출 순위, 유입 키워드, 광고 클릭 현황을 매주 데이터 기반으로 보고</span>
-          </div>
-        </div>
-
-        <div class="aog-card">
-          <div class="aog-icon-box">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <div class="aog-body">
-            <strong>인하우스 1:1 전담 디렉터 배정</strong>
-            <span>외주 하청 없는 가온엔 본사 전문 디렉터가 병원 홍보 전 과정을 1:1 전담 관리</span>
-          </div>
-        </div>
       </div>
 
       <!-- SECTION 02 : RECENT ONLINE MARKETING PORTFOLIO SHOWCASE STRIP -->
-      <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s">
+      <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s" style="margin-top:60px;">
         <div class="asps-head">
           <div class="asps-title-wrap">
             <span class="asps-kicker green">DIGITAL MARKETING PORTFOLIO</span>
@@ -686,10 +611,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </section>
 
-
-  <!-- ============================================
-       04 SECTION 03 : 영상제작 (SMARTPHONE MOCKUP & CINEMA VIEWFINDER)
-  ============================================ -->
   <section class="am-section am-bg-dark am-video-ambient-sec" id="video">
     <div class="avs-ambient-bg">
       <div class="avs-glow glow-left"></div>
