@@ -835,3 +835,35 @@ body.modal-lock { overflow:hidden !important; }
   .rsm-foot { flex-direction:column; align-items:stretch; }
   .rsm-foot-btn { width:100%; justify-content:center; }
 }
+
+/* CLEAN WHITE EXECUTIVE MODAL HEADER */
+.lux-modal-head { background:#ffffff; padding:32px 40px 24px; display:flex; justify-content:space-between; align-items:flex-start; flex-shrink:0; border-bottom:1.5px solid #e2e8f0; }
+.lmh-content-wrap { display:flex; flex-direction:column; gap:8px; }
+.lmh-kicker-row { display:inline-flex; align-items:center; gap:8px; background:#eff6ff; border:1px solid #bfdbfe; padding:5px 14px; border-radius:100px; width:max-content; }
+.lmh-label { font-size:13px; font-weight:800; color:#1855b7; letter-spacing:0.02em; }
+.lmh-title { font-size:26px; font-weight:900; color:#0f172a; margin:0; letter-spacing:-0.5px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; line-height:1.25; }
+.lmh-desc { font-size:15px; line-height:1.6; color:#64748b; margin:0; }
+.lux-modal-close { width:42px; height:42px; border-radius:50%; background:#f1f5f9; border:1.5px solid #e2e8f0; color:#475569; display:inline-flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.25s ease; flex-shrink:0; }
+.lux-modal-close:hover { background:#0f172a; border-color:#0f172a; color:#ffffff; transform:rotate(90deg); }
+
+/* CLEAN BLUE-TINT PROPOSAL DOWNLOAD CARD */
+.lmg-download-banner { background:#f0f7ff; border-radius:18px; padding:24px 28px; margin-bottom:28px; display:flex; justify-content:space-between; align-items:center; border:1.5px solid #bfdbfe; box-shadow:0 8px 24px rgba(24,85,183,0.06); gap:20px; }
+.ldb-info { display:flex; flex-direction:column; gap:6px; }
+.ldb-badge { font-size:11.5px; font-weight:900; color:#1855b7; background:#ffffff; border:1px solid #93c5fd; padding:3px 10px; border-radius:6px; width:max-content; letter-spacing:0.04em; }
+.ldb-title { font-size:18.5px; font-weight:900; color:#0f172a; letter-spacing:-0.4px; margin:0; }
+.ldb-meta { font-size:15px; color:#334155; font-weight:600; margin:0; line-height:1.5; }
+.ldb-btn { display:inline-flex; align-items:center; gap:8px; padding:13px 22px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:14.5px; font-weight:800; text-decoration:none; transition:all 0.25s ease; flex-shrink:0; box-shadow:0 6px 16px rgba(24,85,183,0.25); }
+.ldb-btn:hover { background:#0284c7; transform:translateY(-2px); color:#ffffff; }
+
+/* REAL BUS ROUTE COLOR PLATES (RED / BLUE / GREEN) */
+.rsm-item-card { background:#ffffff; border:1.5px solid #e2e8f0; border-radius:18px; padding:22px 24px; display:flex; flex-direction:column; gap:12px; transition:all 0.25s ease; box-shadow:0 4px 14px rgba(15,23,42,0.02); }
+.rsm-item-card:hover { border-color:#1855b7; box-shadow:0 10px 28px rgba(24,85,183,0.12); transform:translateY(-2px); }
+.ric-head { display:flex; justify-content:space-between; align-items:center; }
+.ric-num { font-size:17px; font-weight:900; padding:5px 14px; border-radius:8px; letter-spacing:-0.3px; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; }
+.ric-num.red { background:#fef2f2; color:#dc2626; border:1.5px solid #fca5a5; }
+.ric-num.blue { background:#eff6ff; color:#1855b7; border:1.5px solid #93c5fd; }
+.ric-num.green { background:#f0fdf4; color:#16a34a; border:1.5px solid #86efac; }
+.ric-fleet { font-size:13.5px; font-weight:800; color:#64748b; background:#f1f5f9; padding:4px 10px; border-radius:6px; }
+.ric-desc { font-size:14.5px; font-weight:600; color:#1e293b; line-height:1.5; padding:6px 0; border-top:1px dashed #e2e8f0; border-bottom:1px dashed #e2e8f0; }
+.ric-target { font-size:13.5px; color:#64748b; }
+.ric-target strong { color:#0f172a; font-weight:800; }

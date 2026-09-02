@@ -1055,17 +1055,17 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   </div>
 
 
-      <!-- ============================================
-       11 HIGH-END 6-CATEGORY MASTER SPECIFICATION & PROPOSAL MODAL (CLEAN SOLID HEADER & SVG PICTOGRAMS)
+        <!-- ============================================
+       11 HIGH-END 6-CATEGORY MASTER SPECIFICATION & PROPOSAL MODAL (CLEAN WHITE EXECUTIVE DESIGN)
   ============================================ -->
   <div class="bus-guide-overlay" id="busGuideOverlay">
     <div class="lux-modal-panel">
       
-      <!-- SOLID HIGH-END MODAL HEADER -->
+      <!-- CLEAN WHITE EXECUTIVE HEADER (NO HEAVY DARK TINT) -->
       <div class="lux-modal-head">
         <div class="lmh-content-wrap">
           <div class="lmh-kicker-row">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
             <span class="lmh-label">가온엔 공식 매체 규격 &amp; 제안서 다운로드</span>
           </div>
           <h3 class="lmh-title">가온엔 통합 매체 공식 규격 및 제안서</h3>
@@ -1112,11 +1112,11 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="lmg-download-banner">
             <div class="ldb-info">
               <span class="ldb-badge">OFFICIAL PDF</span>
-              <strong class="ldb-title">광주 시내버스 외부광고 공식 제안서</strong>
-              <span class="ldb-meta">차도면·인도면·후면 실측 도면 및 104개 노선 단가표 수록 (PDF)</span>
+              <strong class="ldb-title">광주 시내버스 외부광고 공식 제안서 및 단가표 (PDF)</strong>
+              <p class="ldb-meta">차도면·인도면·후면 실측 도면 및 광주 104개 노선별 집행 단가표 수록 (PDF)</p>
             </div>
             <a href="/pdf/gaon_bus_outside.pdf" download="가온엔_시내버스_외부광고_공식제안서.pdf" class="ldb-btn">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               <span>외부광고 제안서 다운로드</span>
             </a>
           </div>
@@ -1193,16 +1193,16 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="lmg-download-banner">
             <div class="ldb-info">
               <span class="ldb-badge">OFFICIAL PDF</span>
-              <strong class="ldb-title">광주 시내버스 내부광고 &amp; 음성안내 제안서</strong>
-              <span class="ldb-meta">중앙창문, 하차문 사랑면, 시트커버 및 7초 성우 음성안내 단가표 (PDF)</span>
+              <strong class="ldb-title">광주 시내버스 내부광고 &amp; 음성안내 제안서 및 단가표 (PDF)</strong>
+              <p class="ldb-meta">중앙창문, 하차문 사랑면, 시트커버 및 7초 성우 음성안내 노선 단가표 수록 (PDF)</p>
             </div>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
               <a href="/pdf/gaon_bus_inside.pdf" download="가온엔_시내버스_내부광고_공식제안서.pdf" class="ldb-btn">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 <span>내부광고 제안서 다운로드</span>
               </a>
               <a href="/pdf/gaon_bus_voice.pdf" download="가온엔_시내버스_음성광고_공식제안서.pdf" class="ldb-btn" style="background:#0f274e;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 <span>음성광고 제안서 다운로드</span>
               </a>
             </div>
@@ -1276,11 +1276,11 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="lmg-download-banner">
             <div class="ldb-info">
               <span class="ldb-badge">OFFICIAL PDF</span>
-              <strong class="ldb-title">광주 택시 래핑 광고 공식 제안서</strong>
-              <span class="ldb-meta">법인·개인택시 200대 양측면 래핑 규격 및 운영 가이드 (PDF)</span>
+              <strong class="ldb-title">광주 택시 래핑 광고 공식 제안서 및 단가표 (PDF)</strong>
+              <p class="ldb-meta">법인·개인택시 200대 양측면 래핑 규격 및 운영 가이드 단가표 수록 (PDF)</p>
             </div>
             <a href="/pdf/gaon_taxi_ad.pdf" download="가온엔_택시광고_공식제안서.pdf" class="ldb-btn">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               <span>택시광고 제안서 다운로드</span>
             </a>
           </div>
