@@ -537,7 +537,7 @@
 .afp-dot.green { background:#10b981; box-shadow:0 0 8px #10b981; }
 .afp-dot.yellow { background:#f59e0b; box-shadow:0 0 8px #f59e0b; }
 .afp-icon-clock { font-size:13px; opacity:0.8; }
-.ags-floating-circle-badge { position:absolute; top:28%; right:3%; z-index:3; width:80px; height:80px; border-radius:50%; border:1px dashed rgba(255,255,255,0.22); background:rgba(15,30,55,0.6); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; text-align:center; animation:spinBadge 20s linear infinite; }
+.ags-floating-circle-badge { position:absolute; top:28%; right:3%; z-index:10; width:84px; height:84px; border-radius:50%; border:1.5px dashed rgba(56,189,248,0.4); background:rgba(15,30,55,0.75); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; text-align:center; text-decoration:none; transition:all 0.35s ease; cursor:pointer; box-shadow:0 8px 24px rgba(0,0,0,0.3); } .ags-floating-circle-badge:hover { transform:scale(1.1) rotate(15deg); border-color:#38bdf8; background:rgba(24,85,183,0.9); }
 .afcb-inner { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; }
 .afcb-text { font-size:8.5px; font-weight:800; letter-spacing:0.12em; color:rgba(255,255,255,0.45); }
 .afcb-bold { font-size:11px; font-weight:900; color:#38bdf8; line-height:1.2; letter-spacing:-0.2px; }

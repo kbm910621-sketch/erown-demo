@@ -294,7 +294,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             </div>
 
             <div class="abp-action">
-              <a href="#consultation" class="abp-btn">이 규격으로 맞춤 견적 신청 →</a>
+              <a href="/board/estmate/write.php" class="abp-btn">이 규격으로 맞춤 견적 신청 →</a>
             </div>
           </div>
         </div>
@@ -964,12 +964,12 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
 
     <!-- CIRCULAR FLOATING CONTACT BADGE (RIGHT) -->
-    <div class="ags-floating-circle-badge">
+    <a href="/board/estmate/write.php" class="ags-floating-circle-badge">
       <div class="afcb-inner">
         <span class="afcb-text">CONTACT US</span>
         <strong class="afcb-bold">광고<br>문의</strong>
       </div>
-    </div>
+    </a>
 
     <!-- CENTER HERO CONTENT -->
     <div class="am-container" style="position:relative; z-index:5;">
@@ -981,7 +981,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </h2>
 
         <div class="ags-cta-wrap">
-          <a href="#consultation" class="ags-white-pill-btn">
+          <a href="/board/estmate/write.php" class="ags-white-pill-btn">
             <span class="awpb-text">맞춤 견적 상담받기</span>
             <span class="awpb-arrow-circle">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -991,128 +991,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             </span>
           </a>
         </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================
-       09 AUTHENTIC AGENCY 1:1 CONSULTATION & QUOTE FORM
-  ============================================ -->
-  <section class="am-consultation-studio-sec" id="consultation">
-    <div class="am-container">
-      <div class="acs-card-grid wow fadeInUp" data-wow-duration="0.8s">
-        
-        <!-- LEFT: REAL AGENCY CONTACT & COMPANY INFO -->
-        <div class="acs-info-col">
-          <span class="acs-kicker">CONTACT &amp; ESTIMATE</span>
-          <h2 class="acs-title">
-            광고 집행 문의 &amp;<br>
-            <span class="acs-highlight">1:1 맞춤 견적 상담</span>
-          </h2>
-          <p class="acs-desc">
-            업종과 상권에 최적화된 시내버스 노선 매칭부터 온라인 검색 마케팅, 영상제작까지 가온엔 전문 디렉터가 신속하고 정확하게 안내해 드립니다.
-          </p>
-
-          <div class="acs-direct-box">
-            <div class="adb-row">
-              <span class="adb-label">대표 전화</span>
-              <strong class="adb-val">062-375-1215</strong>
-            </div>
-            <div class="adb-row">
-              <span class="adb-label">팩스 번호</span>
-              <span class="adb-text">062-375-1216</span>
-            </div>
-            <div class="adb-row">
-              <span class="adb-label">공식 이메일</span>
-              <span class="adb-text">gaon_ad@naver.com</span>
-            </div>
-            <div class="adb-row">
-              <span class="adb-label">본사 주소</span>
-              <span class="adb-text">광주광역시 서구 상무중앙로 78, 5층 (치평동)</span>
-            </div>
-            <div class="adb-row">
-              <span class="adb-label">상담 시간</span>
-              <span class="adb-text">평일 09:00 ~ 18:00 (온라인 문의 상시 접수)</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- RIGHT: PRACTICAL CORPORATE ESTIMATE FORM -->
-        <div class="acs-form-col">
-          <form name="frm" method="post" action="/board/estmate/write_ok.php" class="acs-form-box">
-            <h3 class="afb-title">광고 문의 및 견적 요청서</h3>
-            
-            <div class="afb-fields-grid">
-              <div class="afb-field">
-                <label for="in_company" class="afb-lbl">회사명 / 상호 <span class="req">*</span></label>
-                <input type="text" id="in_company" name="in_company" placeholder="예: (주)가온메디컬" class="afb-input">
-              </div>
-
-              <div class="afb-field">
-                <label for="in_name" class="afb-lbl">담당자 성함 <span class="req">*</span></label>
-                <input type="text" id="in_name" name="in_name" placeholder="예: 홍길동 팀장" class="afb-input">
-              </div>
-
-              <div class="afb-field">
-                <label for="in_tel" class="afb-lbl">연락처 <span class="req">*</span></label>
-                <input type="text" id="in_tel" name="in_tel" placeholder="예: 010-1234-5678" class="afb-input">
-              </div>
-
-              <div class="afb-field">
-                <label for="in_email" class="afb-lbl">이메일 주소 <span class="req">*</span></label>
-                <input type="email" id="in_email" name="in_email" placeholder="예: contact@domain.com" class="afb-input">
-              </div>
-            </div>
-
-            <!-- AD TYPES CHECKBOXES -->
-            <div class="afb-checks-group">
-              <label class="afb-lbl">관심 광고 매체 (중복 선택 가능) <span class="req">*</span></label>
-              <div class="afb-checks-row">
-                <label class="afb-check-item">
-                  <input type="checkbox" name="in_ad_type[]" value="시내버스 광고" checked>
-                  <span class="aci-btn">시내버스 광고</span>
-                </label>
-                <label class="afb-check-item">
-                  <input type="checkbox" name="in_ad_type[]" value="온라인 마케팅">
-                  <span class="aci-btn">온라인 마케팅</span>
-                </label>
-                <label class="afb-check-item">
-                  <input type="checkbox" name="in_ad_type[]" value="4K 영상제작">
-                  <span class="aci-btn">4K 영상제작</span>
-                </label>
-                <label class="afb-check-item">
-                  <input type="checkbox" name="in_ad_type[]" value="택시·택배">
-                  <span class="aci-btn">택시·택배</span>
-                </label>
-                <label class="afb-check-item">
-                  <input type="checkbox" name="in_ad_type[]" value="마트·DID">
-                  <span class="aci-btn">마트·DID</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- INQUIRY CONTENT TEXTAREA -->
-            <div class="afb-textarea-group">
-              <label for="in_content" class="afb-lbl">문의 내용 / 희망 지역 / 예산 (선택)</label>
-              <textarea id="in_content" name="in_content" rows="3" placeholder="희망하시는 집행 시기, 주요 타깃 지역(예: 상무지구, 수완지구 등), 예산 또는 문의사항을 남겨주시면 더욱 정확한 제안서를 준비해 드립니다." class="afb-textarea"></textarea>
-            </div>
-
-            <!-- PRIVACY AGREEMENT & SUBMIT BUTTON -->
-            <div class="afb-bottom-row">
-              <label class="afb-agree-item">
-                <input type="checkbox" id="agree" name="agree" checked>
-                <span>개인정보 수집 및 이용에 동의합니다.</span>
-              </label>
-
-              <button type="button" id="btn_submit" class="afb-submit-btn">
-                <span>견적 및 상담 신청하기</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </button>
-            </div>
-          </form>
-        </div>
-
       </div>
     </div>
   </section>
@@ -1159,7 +1037,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <strong>※ 병원 / 학원 / 매장 앞 통과 노선 무료 매칭 서비스</strong>
           <span>광고주님의 사업장 위치를 알려주시면 가장 노출 빈도가 높은 골든 노선 조합을 1:1 무료 컨설팅해 드립니다.</span>
         </div>
-        <a href="#consultation" class="rsm-foot-btn" onclick="closeRouteModal();">1:1 노선 무료 분석 신청 →</a>
+        <a href="/board/estmate/write.php" class="rsm-foot-btn" onclick="closeRouteModal();">1:1 노선 무료 분석 신청 →</a>
       </div>
     </div>
   </div>
@@ -1436,7 +1314,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       </div>
 
       <div class="lux-modal-foot">
-        <a href="#consultation" class="lmf-btn" onclick="closeGuideModal();">원하는 매체 &amp; 마케팅 맞춤 견적 문의하기 →</a>
+        <a href="/board/estmate/write.php" class="lmf-btn" onclick="closeGuideModal();">원하는 매체 &amp; 마케팅 맞춤 견적 문의하기 →</a>
       </div>
 
     </div>
@@ -1460,7 +1338,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <h3 class="pmb-title" id="modalTitle">광고 프로젝트명</h3>
         <p class="pmb-desc" id="modalDesc">가온엔이 기획·시공한 대표 광고 집행 사례입니다. 업종별 최적화된 노선과 미디어 믹스로 최고의 브랜드 노출 및 매출 전환 성과를 달성했습니다.</p>
         <div class="pmb-action">
-          <a href="#consultation" class="pmb-cta-btn" onclick="$('#modalClose').click();">이와 같은 광고 견적 문의하기 →</a>
+          <a href="/board/estmate/write.php" class="pmb-cta-btn">이와 같은 광고 견적 문의하기 →</a>
         </div>
       </div>
     </div>
