@@ -1182,129 +1182,101 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </section>
 
-          <!-- ============================================
-       08 GAON-N SIGNATURE ROUNDED INLINE ESTIMATE CARD (가온엔 시그니처 둥근 사각형 카드)
+            <!-- ============================================
+       08 GAON-N ALL-IN-ONE INLINE ESTIMATE FOOTER (media_1788420698073.png 100% 일치 구성)
   ============================================ -->
   <section class="am-master-conversion-section wow fadeInUp" data-wow-duration="0.8s" id="contact">
     <div class="am-container">
-      <div class="mcf-card-box">
+      <div class="masstige-agency-box">
         
-        <div class="mcf-grid-layout">
-          
-          <!-- LEFT BRANDING & VALUE PROPS -->
-          <div class="mcf-brand-col">
-            <div class="mcf-head-box">
-              <span class="mcf-sub-kicker">ESTIMATE &amp; CONSULTING</span>
-              <h2 class="mcf-title">
-                옥외광고부터 온라인까지,<br>
-                <span class="mcf-hl">가온엔이 확실한 답을 드립니다.</span>
-              </h2>
-              <p class="mcf-desc">
-                예산과 상권에 최적화된 온·오프라인 믹스 미디어 플랜을 1:1 무료 컨설팅해 드립니다.
-              </p>
-            </div>
-
-            <div class="mcf-phone-card">
-              <div class="mpc-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <div class="mpc-info">
-                <span class="mpc-lbl">직통 상담 전화 (월~금 09:30 - 18:30)</span>
-                <a href="tel:062-385-0110" class="mpc-num">062-385-0110</a>
-              </div>
-            </div>
-
-            <div class="mcf-trust-points">
-              <div class="mtp-item">
-                <span class="mtp-check">✓</span>
-                <span class="mtp-txt">광주 104개 시내버스 &amp; 택시 100% 직영 시공</span>
-              </div>
-              <div class="mtp-item">
-                <span class="mtp-check">✓</span>
-                <span class="mtp-txt">스마트플레이스 1위 &amp; 브랜드 블로그 본사 전담 운영</span>
-              </div>
-              <div class="mtp-item">
-                <span class="mtp-check">✓</span>
-                <span class="mtp-txt">견적 문의 접수 시 1시간 이내 전문 매니저 1:1 맞춤 회신</span>
-              </div>
-            </div>
+        <!-- LEFT COLUMN -->
+        <div class="masstige-left-col">
+          <div class="masstige-left-top">
+            <h3 class="masstige-main-title">가온엔과<br>성공적인 협력을<br>시작해 보세요.</h3>
+            <a href="tel:062-385-0110" class="masstige-main-phone">062-385-0110</a>
           </div>
 
-          <!-- RIGHT HUMAN-CRAFTED DIRECT FORM -->
-          <div class="mcf-form-col">
-            <form id="quickEstimateForm" class="mcf-form-box" method="post">
-              
-              <!-- 4 ESSENTIAL INPUTS -->
-              <div class="mcf-grid-row">
-                <div class="mcf-field-group">
-                  <label for="qe_company" class="mcf-field-label">회사명 / 상호 <span class="req">*</span></label>
-                  <input type="text" name="in_company" id="qe_company" class="mcf-field-input" placeholder="예: 가온메디컬의원" required>
-                </div>
-                <div class="mcf-field-group">
-                  <label for="qe_name" class="mcf-field-label">담당자 성함 <span class="req">*</span></label>
-                  <input type="text" name="in_name" id="qe_name" class="mcf-field-input" placeholder="담당자 성함 입력" required>
-                </div>
-              </div>
+          <div class="masstige-left-bottom">
+            <p class="masstige-corp-tagline">
+              <strong>GAON-N®</strong> is an integrated creative advertising agency driven by data, execution, and trust.
+            </p>
+            <p class="masstige-corp-addr">주소: 광주광역시 서구 상무버들로 28 재민빌딩 2층 (주)가온엔</p>
+            <div class="masstige-sns-row">
+              <a href="https://blog.naver.com/bsad550" target="_blank" rel="noopener" class="masstige-sns-icon" aria-label="블로그">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM9 16.5H6.5v-9H9v9zm8.5 0h-2.5v-4.5c0-1.1-.9-2-2-2s-2 .9-2 2v4.5H8.5v-9H11v1.2c.7-.9 1.8-1.5 3-1.5 2.2 0 4 1.8 4 4v5.3z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/gaon_n_official/" target="_blank" rel="noopener" class="masstige-sns-icon" aria-label="인스타그램">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <a href="/board/estmate/write.php" class="masstige-download-link">회사소개서 다운로드</a>
+            </div>
+          </div>
+        </div>
 
-              <div class="mcf-grid-row">
-                <div class="mcf-field-group">
-                  <label for="qe_tel" class="mcf-field-label">연락처 <span class="req">*</span></label>
-                  <input type="text" name="in_tel" id="qe_tel" class="mcf-field-input" placeholder="010-0000-0000" maxlength="13" onkeyup="this.value=this.value.replace(/[^0-9-]/g,'')" required>
-                </div>
-                <div class="mcf-field-group">
-                  <label for="qe_email" class="mcf-field-label">이메일 <span class="req">*</span></label>
-                  <input type="email" name="in_email" id="qe_email" class="mcf-field-input" placeholder="example@naver.com" required>
-                </div>
+        <!-- RIGHT COLUMN -->
+        <div class="masstige-right-col">
+          <form id="quickEstimateForm" class="masstige-form-wrap" method="post">
+            
+            <div class="masstige-input-grid">
+              <div class="masstige-field-pill">
+                <span class="mfp-label">회사명</span>
+                <input type="text" name="in_company" id="qe_company" class="mfp-input" placeholder="회사명을 입력해주세요." required>
               </div>
-
-              <!-- INTEREST MEDIA CHIPS -->
-              <div class="mcf-field-group">
-                <label class="mcf-field-label">희망 매체 선택 (중복 가능)</label>
-                <div class="mcf-media-chips">
-                  <label class="mcf-chip-lbl">
-                    <input type="checkbox" name="in_ad_type[]" value="시내버스·택시 옥외광고" checked>
-                    <span>버스·택시 광고</span>
-                  </label>
-                  <label class="mcf-chip-lbl">
-                    <input type="checkbox" name="in_ad_type[]" value="온라인·스마트플레이스" checked>
-                    <span>온라인 마케팅</span>
-                  </label>
-                  <label class="mcf-chip-lbl">
-                    <input type="checkbox" name="in_ad_type[]" value="4K 영상·릴스">
-                    <span>4K 영상제작</span>
-                  </label>
-                  <label class="mcf-chip-lbl">
-                    <input type="checkbox" name="in_ad_type[]" value="종합 미디어 믹스">
-                    <span>종합 미디어 플랜</span>
-                  </label>
-                </div>
+              <div class="masstige-field-pill">
+                <span class="mfp-label">담당자</span>
+                <input type="text" name="in_name" id="qe_name" class="mfp-input" placeholder="담당자를 입력해주세요." required>
               </div>
+            </div>
 
-              <!-- TEXTAREA -->
-              <div class="mcf-field-group">
-                <label for="qe_memo" class="mcf-field-label">문의 내용 <span class="req">*</span></label>
-                <textarea name="in_memo" id="qe_memo" class="mcf-field-textarea" placeholder="광고 집행 희망 지역(상무, 수완, 첨단 등) 또는 예산, 궁금하신 점을 남겨주시면 더욱 정확한 견적서가 제공됩니다." rows="3" required></textarea>
+            <div class="masstige-input-grid">
+              <div class="masstige-field-pill">
+                <span class="mfp-label">이메일</span>
+                <input type="email" name="in_email" id="qe_email" class="mfp-input" placeholder="이메일 주소를 입력해주세요." required>
               </div>
+              <div class="masstige-field-pill">
+                <span class="mfp-label">연락처</span>
+                <input type="text" name="in_tel" id="qe_tel" class="mfp-input" placeholder="연락처를 입력해주세요." required>
+              </div>
+            </div>
 
-              <!-- BOTTOM ACTION -->
-              <div class="mcf-action-row">
-                <label class="mcf-privacy-label">
-                  <input type="checkbox" name="agree_privacy" id="qe_privacy" class="mcf-chk" checked required>
-                  <span class="mcf-privacy-txt">개인정보수집 및 이용동의</span>
-                  <a href="/contents/email.php" target="_blank" class="mcf-privacy-btn">전문보기</a>
+            <div class="masstige-textarea-pill">
+              <span class="mfp-label-top">문의내용</span>
+              <textarea name="in_memo" id="qe_memo" class="mfp-textarea" placeholder="희망 광고 매체(버스, 택시, 온라인, 영상 등) 및 문의 내용을 입력해주세요." rows="4" required></textarea>
+            </div>
+
+            <div class="masstige-action-row">
+              <div class="masstige-privacy-group">
+                <label class="masstige-chk-label">
+                  <input type="checkbox" name="agree_privacy" id="qe_privacy" class="masstige-native-chk" checked required>
+                  <span class="masstige-custom-dot"></span>
+                  <span class="masstige-privacy-text">개인정보수집 및 이용에 동의합니다.</span>
                 </label>
-
-                <button type="submit" class="mcf-submit-btn" id="btnQuickSubmit">
-                  <span>1:1 견적 상담 신청하기</span>
-                  <div class="msb-arrow">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </div>
-                </button>
+                <a href="/contents/email.php" target="_blank" class="masstige-privacy-badge">전문보기</a>
               </div>
 
-            </form>
-          </div>
+              <button type="submit" class="masstige-submit-btn" id="btnQuickSubmit">
+                <span class="msb-label">문의하기</span>
+                <span class="msb-circle">
+                  <span class="msb-dot"></span>
+                </span>
+              </button>
+            </div>
 
+            <!-- RIGHT FOOTER LEGAL META -->
+            <div class="masstige-legal-meta">
+              <div class="mlm-line">
+                <span>상호: (주)가온엔</span>
+                <span>대표자명: 김창현</span>
+                <span>사업자등록번호: 137-87-02335</span>
+              </div>
+              <div class="mlm-line">
+                <span>대표전화: 062-385-0110</span>
+                <span>이메일: lgmo123@naver.com</span>
+              </div>
+              <p class="mlm-copy">© 2004–2026 GAON-N</p>
+            </div>
+
+          </form>
         </div>
 
       </div>
