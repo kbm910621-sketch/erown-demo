@@ -2206,3 +2206,256 @@ body.modal-lock { overflow:hidden !important; }
 #modalClose * {
   pointer-events: none !important;
 }
+
+
+/* ==========================================================================
+   MASSTIGE.IO STYLE BENTO GRID (OUR OOH SERVICES)
+========================================================================== */
+.mob-bento-stage {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.mob-bento-card {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  background: #0f172a;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.mob-bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 55px rgba(24, 85, 183, 0.16);
+}
+
+.mob-hero-card {
+  min-height: 560px;
+  display: flex;
+}
+
+.mob-bento-side-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mob-sub-card {
+  height: 268px;
+}
+
+.mob-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mob-bento-card:hover .mob-bg-img {
+  transform: scale(1.05);
+}
+
+.mob-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 18, 40, 0.95) 0%, rgba(10, 18, 40, 0.65) 50%, rgba(10, 18, 40, 0.3) 100%);
+  pointer-events: none;
+}
+
+.mob-scrim.sub {
+  background: linear-gradient(to top, rgba(10, 18, 40, 0.94) 0%, rgba(10, 18, 40, 0.6) 60%, rgba(10, 18, 40, 0.3) 100%);
+}
+
+.mob-card-body {
+  position: relative;
+  z-index: 2;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mob-card-body.sub {
+  padding: 30px 32px;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.mob-top-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mob-step-badge {
+  font-size: 12px;
+  font-weight: 800;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  padding: 6px 14px;
+  border-radius: 100px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mob-step-badge.green {
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.15);
+  border-color: rgba(52, 211, 153, 0.35);
+}
+
+.mob-step-badge.purple {
+  color: #c084fc;
+  background: rgba(192, 132, 252, 0.15);
+  border-color: rgba(192, 132, 252, 0.35);
+}
+
+.mob-status-pill {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+  padding: 6px 14px;
+  border-radius: 100px;
+}
+
+.mob-hero-title {
+  font-size: 32px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+  margin: 18px 0 12px;
+}
+
+.mob-hero-desc {
+  font-size: 15.5px;
+  line-height: 1.68;
+  color: #cbd5e1;
+  margin: 0 0 24px;
+  font-weight: 500;
+  word-break: keep-all;
+}
+
+.mob-specs-pills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.msp-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  padding: 12px 14px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.msp-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.msp-val {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.mob-hero-action-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mob-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 100px;
+  font-size: 14.5px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 0;
+}
+
+.mob-action-btn.primary {
+  background: #1855b7;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(24, 85, 183, 0.4);
+}
+.mob-action-btn.primary:hover {
+  background: #134494;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(24, 85, 183, 0.5);
+}
+
+.mob-action-btn.secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.mob-action-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.mob-sub-title {
+  font-size: 20px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.3;
+  margin: 6px 0 4px;
+  letter-spacing: -0.4px;
+}
+
+.mob-sub-desc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #cbd5e1;
+  margin: 0;
+  font-weight: 500;
+  word-break: keep-all;
+}
+
+.mob-sub-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-top: 6px;
+}
+
+@media(max-width:1200px) {
+  .mob-bento-stage { grid-template-columns: 1fr; }
+  .mob-specs-pills { grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width:640px) {
+  .mob-hero-title { font-size: 24px; }
+  .mob-card-body { padding: 28px 22px; }
+  .mob-specs-pills { grid-template-columns: 1fr 1fr; }
+  .mob-hero-action-row { flex-direction: column; width: 100%; }
+  .mob-action-btn { width: 100%; }
+}

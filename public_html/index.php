@@ -264,12 +264,13 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   <section class="am-section am-bg-slate" id="bus">
     <div class="am-container">
       
+      <!-- SECTION HEAD -->
       <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
         <div class="ash-flex">
           <div>
-            <span class="ash-kicker">BUS ADVERTISING</span>
-            <h2 class="ash-title">시내버스 광고</h2>
-            <p class="ash-desc">광주 104개 전 노선 맞춤 배차. 1일 18시간 동안 반복 각인되는 움직이는 랜드마크 빌보드입니다.</p>
+            <span class="ash-kicker">OOH MEDIA SERVICES</span>
+            <h2 class="ash-title">옥외광고 솔루션</h2>
+            <p class="ash-desc">광주 104개 전 노선 시내버스부터 택시 랩핑, 유스퀘어 터미널 및 대형 DID 전광판까지 도심을 24시간 장악하는 통합 옥외 미디어 솔루션입니다.</p>
           </div>
           <div class="ash-actions">
             <button type="button" class="ash-guide-btn blue" id="btnOpenRouteSearchModal">
@@ -278,97 +279,99 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             </button>
             <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideBusOut">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              <span>규격 가이드 &amp; 제안서(PDF) ↗</span>
+              <span>옥외매체 규격서 &amp; 제안서(PDF) ↗</span>
             </button>
           </div>
         </div>
       </div>
 
-      <!-- 1. NATURAL AGENCY SHOWCASE STAGE -->
-      <div class="am-bus-human-showcase wow fadeInUp" data-wow-duration="0.8s">
+      <!-- MASSTIGE.IO STYLE BENTO GRID STAGE -->
+      <div class="mob-bento-stage wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- SPEC SELECTION TABS -->
-        <div class="abh-tabs-row">
-          <button type="button" class="abh-tab-btn on"
-                  data-name="차도면 대형 래핑"
-                  data-size="3,700 × 1,000 mm"
-                  data-img="/images/bs_ad/baro.jpg"
-                  data-title="왕복 8차선 운전자의 시선을 사로잡는 차도면 대형 래핑"
-                  data-desc="상무대로, 죽봉대로, 무진대로 등 광주 도심 주요 간선도로를 주행하며 반대편 차량 운전자와 보행자에게 1일 18시간 동안 가장 압도적인 스케일로 브랜드를 각인시킵니다."
-                  data-target="차량 운전자 및 보행자 정면 시야"
-                  data-material="LG 하우시스 최고급 내후성 정품 솔벤 시트">
-            <span>차도면 (3,700×1,000)</span>
-          </button>
-          <button type="button" class="abh-tab-btn"
-                  data-name="인도면 표준 래핑"
-                  data-size="3,000 × 500 mm"
-                  data-img="/images/bs_ad/baro_3.jpg"
-                  data-title="정류장 탑승객 눈높이에 밀착되는 인도면 표준 래핑"
-                  data-desc="승객 탑승 시 눈높이 정면에 위치하여 전화번호, 진료과목, 핵심 진료 안내 등 상세 정보를 정확하게 전달하는 보행자 맞춤형 규격입니다."
-                  data-target="정류장 대기 승객 및 인도 보행자"
-                  data-material="LG 하우시스 최고급 내후성 정품 솔벤 시트">
-            <span>인도면 (3,000×500)</span>
-          </button>
-          <button type="button" class="abh-tab-btn"
-                  data-name="후면 번호판 상단 래핑"
-                  data-size="2,400 × 300 mm"
-                  data-img="/images/bs_ad/baro_9.jpg"
-                  data-title="신호 대기 차량 운전자를 3분 이상 사로잡는 후면 래핑"
-                  data-desc="출퇴근 시간 및 도심 교차로 신호 대기 중 뒤따르는 차량 운전자와 동승자의 시선 정면에 장시간 강제 노출되는 가온엔 필수 패키지 면입니다."
-                  data-target="신호 대기 후방 차량 운전자 전원"
-                  data-material="LG 하우시스 정품 솔벤 반사 시트 지원">
-            <span>후면 (2,400×300)</span>
-          </button>
-          <button type="button" class="abh-tab-btn"
-                  data-name="내부 중앙창문 &amp; 음성안내"
-                  data-size="1,100 × 500 mm / 음성 7초"
-                  data-img="/images/bs_ad/port_in03.jpg"
-                  data-title="이동 30분 동안 승객의 시각과 청각을 동시 독점"
-                  data-desc="탑승 승객이 목적지까지 이동하는 동안 시선 정면에 머무르며, 정류소 도착 전 전문 성우 음성 방송으로 확실하게 브랜드를 기억시킵니다."
-                  data-target="버스 탑승 승객 전원 (일 150만 명)"
-                  data-material="실내 고선명 PET 출력 + 성우 음성 더빙">
-            <span>내부 창문 &amp; 음성방송</span>
-          </button>
-        </div>
-
-        <!-- STAGE CONTENT GRID -->
-        <div class="abh-stage-body">
+        <!-- 1. LEFT HERO BENTO CARD (BUS 104 ROUTES) -->
+        <div class="mob-bento-card mob-hero-card">
+          <img src="/images/bs_ad/main_sec02_img.jpg" alt="광주 시내버스 104개 전 노선 광고" class="mob-bg-img">
+          <div class="mob-scrim"></div>
           
-          <!-- LEFT: LARGE HIGH-RES PHOTO -->
-          <div class="abh-photo-box">
-            <img src="/images/bs_ad/baro.jpg" id="dynBusPhoto" alt="시내버스 광고 집행 실사">
-            <div class="abh-photo-tag" id="dynBusPhotoTag">차도면 대형 래핑 (3,700 × 1,000 mm)</div>
-          </div>
-
-          <!-- RIGHT: NATURAL HUMAN AGENCY BRIEF -->
-          <div class="abh-text-box">
-            <span class="abh-sub-badge" id="dynBusSubBadge">광주 시내버스 외부 광고</span>
-            <h3 class="abh-title" id="dynBusTitle">왕복 8차선 운전자의 시선을 사로잡는 차도면 대형 래핑</h3>
-            <p class="abh-desc" id="dynBusDesc">상무대로, 죽봉대로, 무진대로 등 광주 도심 주요 간선도로를 주행하며 반대편 차량 운전자와 보행자에게 1일 18시간 동안 가장 압도적인 스케일로 브랜드를 각인시킵니다.</p>
-
-            <div class="abh-points-list">
-              <div class="apl-item">
-                <span class="apl-dot"></span>
-                <span class="apl-label">실측 규격 :</span>
-                <strong class="apl-val" id="dynBusSize">3,700 × 1,000 mm</strong>
-              </div>
-              <div class="apl-item">
-                <span class="apl-dot"></span>
-                <span class="apl-label">주요 타깃 :</span>
-                <strong class="apl-val" id="dynBusTarget">차량 운전자 및 보행자 정면 시야</strong>
-              </div>
-              <div class="apl-item">
-                <span class="apl-dot"></span>
-                <span class="apl-label">원단 소재 :</span>
-                <strong class="apl-val" id="dynBusMaterial">LG 하우시스 최고급 내후성 정품 솔벤 시트</strong>
-              </div>
+          <div class="mob-card-body">
+            <div class="mob-top-badge-row">
+              <span class="mob-step-badge">STEP 01 · 광주 대표 교통매체</span>
+              <span class="mob-status-pill">광주 104개 노선 98% 배차</span>
             </div>
 
-            <div class="abh-cta-box">
-              <a href="/board/estmate/write.php" class="abh-cta-btn">
-                <span>이 규격으로 시내버스 견적 문의하기</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
+            <div class="mob-main-content">
+              <h3 class="mob-hero-title">광주 시내버스 104개 전 노선 맞춤 래핑</h3>
+              <p class="mob-hero-desc">
+                광주 전역을 1일 18시간 동안 반복 주행하며 상무대로·무진대로·금남로 등 주요 간선도로 운전자와 보행자의 시선을 압도하는 광주 1등 랜드마크 빌보드입니다.
+              </p>
+
+              <!-- SPECS GRID -->
+              <div class="mob-specs-pills">
+                <div class="msp-pill">
+                  <span class="msp-label">차도면 대형</span>
+                  <strong class="msp-val">3,700 × 1,000 mm</strong>
+                </div>
+                <div class="msp-pill">
+                  <span class="msp-label">인도면 표준</span>
+                  <strong class="msp-val">3,000 × 500 mm</strong>
+                </div>
+                <div class="msp-pill">
+                  <span class="msp-label">후면 번호판</span>
+                  <strong class="msp-val">2,400 × 300 mm</strong>
+                </div>
+                <div class="msp-pill">
+                  <span class="msp-label">운행 시간</span>
+                  <strong class="msp-val">1일 18시간 연속</strong>
+                </div>
+              </div>
+
+              <!-- ACTION ROW -->
+              <div class="mob-hero-action-row">
+                <button type="button" class="mob-action-btn primary" id="btnOpenRouteSearchModal2" onclick="$('#btnOpenRouteSearchModal').trigger('click');">
+                  <span>104개 노선 검색기 열기 ↗</span>
+                </button>
+                <a href="/board/estmate/write.php" class="mob-action-btn secondary">
+                  <span>버스광고 1:1 맞춤 견적</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. RIGHT STACK (SUB 02 & SUB 03) -->
+        <div class="mob-bento-side-stack">
+          
+          <!-- SUB CARD 02: TAXI WRAPPING -->
+          <div class="mob-bento-card mob-sub-card">
+            <img src="/images/ev1.jpg" alt="광주 전역 택시 래핑 광고" class="mob-bg-img">
+            <div class="mob-scrim sub"></div>
+            <div class="mob-card-body sub">
+              <div class="mob-top-badge-row">
+                <span class="mob-step-badge green">STEP 02 · 24시간 상권 밀착</span>
+              </div>
+              <h4 class="mob-sub-title">광주 전역 법인·개인택시 래핑</h4>
+              <p class="mob-sub-desc">주요 번화가와 골목상권을 24시간 누비며 보행자 눈높이에서 가장 친근하게 브랜드를 각인시킵니다.</p>
+              <div class="mob-sub-meta">
+                <span>규격: 2,100 × 320 mm</span>
+                <span>24시간 상시 운행</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUB CARD 03: TERMINAL & DID SIGNAGE -->
+          <div class="mob-bento-card mob-sub-card">
+            <img src="/images/bs_ad/did_01.jpg" alt="유스퀘어 터미널 & 대형 DID 전광판" class="mob-bg-img">
+            <div class="mob-scrim sub"></div>
+            <div class="mob-card-body sub">
+              <div class="mob-top-badge-row">
+                <span class="mob-step-badge purple">STEP 03 · 랜드마크 사이니지</span>
+              </div>
+              <h4 class="mob-sub-title">유스퀘어 터미널 &amp; 대형 DID 전광판</h4>
+              <p class="mob-sub-desc">일일 유동인구 10만 명 광주종합버스터미널 및 상무지구 핵심 교차로 4K 초고화질 디지털 사이니지 송출.</p>
+              <div class="mob-sub-meta">
+                <span>4K 고휘도 LED</span>
+                <span>일 100회 이상 연속 송출</span>
+              </div>
             </div>
           </div>
 
@@ -376,14 +379,14 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <!-- 2. RECENT BUS PORTFOLIO SHOWCASE STRIP -->
-      <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s">
+      <!-- RECENT OOH PORTFOLIO SHOWCASE STRIP -->
+      <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s" style="margin-top:50px;">
         <div class="asps-head">
           <div class="asps-title-wrap">
-            <span class="asps-kicker">BUS PORTFOLIO</span>
-            <h4 class="asps-title">최근 시내버스 광고 집행 실사 포트폴리오</h4>
+            <span class="asps-kicker">OOH PORTFOLIO</span>
+            <h4 class="asps-title">최근 옥외광고 &amp; 시내버스 직영 시공 실적</h4>
           </div>
-          <a href="/portfolio.php" class="asps-more-link">버스 광고 실사 전체보기 ↗</a>
+          <a href="/portfolio.php" class="asps-more-link">옥외 사례 전체보기 ↗</a>
         </div>
         <div class="asps-grid">
           <?php 
@@ -393,7 +396,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="asps-card main-port-card" data-cat="<?php echo htmlspecialchars($bItem['category']); ?>" data-id="<?php echo (int)$bItem['id']; ?>" data-name="<?php echo htmlspecialchars($bItem['title']); ?>">
             <div class="asps-thumb">
               <img src="<?php echo !empty($bItem['thumb']) ? htmlspecialchars($bItem['thumb']) : '/images/sub_bg_a.jpg'; ?>" alt="<?php echo htmlspecialchars($bItem['title']); ?>">
-              <span class="asps-badge">시내버스</span>
+              <span class="asps-badge">옥외매체</span>
               <div class="asps-hover-overlay">상세보기 ↗</div>
             </div>
             <div class="asps-info">
@@ -408,9 +411,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </section>
 
-  <!-- ============================================
-       03 SECTION 02 : 온라인 마케팅 (BIG FULL-IMAGE SCREEN CAPTURE SHOWCASE)
-  ============================================ -->
   <section class="am-section am-bg-white" id="online">
     <div class="am-container">
       
@@ -894,111 +894,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   </section>
 
 
-  <!-- ============================================
-       05 SECTION 04 : 특화 옥외매체 (BIG FULL-IMAGE ACCORDION)
-  ============================================ -->
-  <section class="am-section" id="other">
-    <div class="am-container">
-
-      <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
-        <div class="ash-flex">
-          <div>
-            <span class="ash-kicker">SPECIALIZED OOH MEDIA</span>
-            <h2 class="ash-title">특화 옥외매체</h2>
-            <p class="ash-desc">택시 양측면 래핑, 택배 탑차 3면 래핑, 대형마트 카트, DID 디지털 전광판을 맞춤 집행합니다.</p>
-          </div>
-          <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideTaxiDelivery">
-            <span>특화 매체 실측표 가이드 ↗</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- DYNAMIC ACCORDION WITH CLEAN ELLIPSIS -->
-      <div class="am-ooh-accordion wow fadeInUp" data-wow-duration="0.8s">
-        
-        <div class="aoa-card on">
-          <img src="/images/ev1.jpg" alt="택시 래핑 광고">
-          <div class="aoa-scrim"></div>
-          <div class="aoa-content">
-            <span class="aoa-kicker">01 / URBAN MOBILITY</span>
-            <h3 class="aoa-title-ellipsis">법인 · 개인택시 양측면 래핑</h3>
-            <p class="aoa-desc-ellipsis">광주 전역 200여 대 차량이 주요 번화가와 골목길을 24시간 365일 상시 운행하며, 보행자 눈높이에서 밀착 노출되어 높은 주목도를 발휘합니다.</p>
-            <div class="doa-spec">실측 규격: 2,100 × 320 mm | 24시간 365일 연속 운행</div>
-          </div>
-        </div>
-
-        <div class="aoa-card">
-          <img src="/images/ev2.jpg" alt="택배차량 래핑 광고">
-          <div class="aoa-scrim"></div>
-          <div class="aoa-content">
-            <span class="aoa-kicker">02 / LOGISTICS BILLBOARD</span>
-            <h3 class="aoa-title-ellipsis">택배 탑차 3면 와이드 래핑</h3>
-            <p class="aoa-desc-ellipsis">광주 5개 구 대규모 아파트 단지와 주택가 골목길에 매일 10시간 이상 머무는 움직이는 초대형 랜드마크 빌보드로 주민 일상에 자연스럽게 각인됩니다.</p>
-            <div class="doa-spec">실측 규격: 양면 3,000×1,500 + 후면 | 1일 10시간 체류</div>
-          </div>
-        </div>
-
-        <div class="aoa-card">
-          <img src="/images/sub_bg_02.jpg" alt="대형마트 쇼핑카트">
-          <div class="aoa-scrim"></div>
-          <div class="aoa-content">
-            <span class="aoa-kicker">03 / RETAIL PURCHASE POINT</span>
-            <h3 class="aoa-title-ellipsis">대형마트 쇼핑카트 &amp; 무빙워크</h3>
-            <p class="aoa-desc-ellipsis">이마트, 롯데마트 1,000여 대 카트 손잡이 정면에 위치하여 실질적 구매권을 가진 3050 주부 및 가족 고객과 60분간 1:1로 동행합니다.</p>
-            <div class="doa-spec">실측 규격: 280 × 160 mm | 쇼핑 1회당 60분 연속 주시</div>
-          </div>
-        </div>
-
-        <div class="aoa-card">
-          <img src="/images/sub_bg_03.jpg" alt="DID 디지털 전광판">
-          <div class="aoa-scrim"></div>
-          <div class="aoa-content">
-            <span class="aoa-kicker">04 / DIGITAL SMART SIGNAGE</span>
-            <h3 class="aoa-title-ellipsis">DID 디지털 전광판 &amp; 전자현수막</h3>
-            <p class="aoa-desc-ellipsis">유스퀘어 터미널, 지하철 환승역, 관공서 로비에 고휘도 55~85" UHD 스크린으로 15초 영상을 하루 100회 이상 연속 송출합니다.</p>
-            <div class="doa-spec">실측 규격: 55~85" UHD 패널 | 일 100회 이상 송출</div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- SECTION 04 : RECENT SPECIALIZED OOH PORTFOLIO SHOWCASE STRIP -->
-      <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s">
-        <div class="asps-head">
-          <div class="asps-title-wrap">
-            <span class="asps-kicker purple">SPECIALIZED OOH PORTFOLIO</span>
-            <h4 class="asps-title">택시 · 택배 · 마트 · DID 특화 매체 집행 실적</h4>
-          </div>
-          <a href="/portfolio.php" class="asps-more-link purple">특화 매체 사례 전체보기 ↗</a>
-        </div>
-        <div class="asps-grid">
-          <?php 
-          $otherItems = !empty($portOther) ? array_slice($portOther, 0, 4) : array_slice($list, 0, 4);
-          foreach ($otherItems as $otItem): 
-          ?>
-          <div class="asps-card main-port-card" data-cat="<?php echo htmlspecialchars($otItem['category']); ?>" data-id="<?php echo (int)$otItem['id']; ?>" data-name="<?php echo htmlspecialchars($otItem['title']); ?>">
-            <div class="asps-thumb">
-              <img src="<?php echo !empty($otItem['thumb']) ? htmlspecialchars($otItem['thumb']) : '/images/sub_bg_b.jpg'; ?>" alt="<?php echo htmlspecialchars($otItem['title']); ?>">
-              <span class="asps-badge purple"><?php echo isset($categories[$otItem['category']]) ? $categories[$otItem['category']] : '특화매체'; ?></span>
-              <div class="asps-hover-overlay">상세보기 ↗</div>
-            </div>
-            <div class="asps-info">
-              <strong class="asps-item-title"><?php echo htmlspecialchars($otItem['title']); ?></strong>
-              <span class="asps-item-loc">도심 밀착 타깃 옥외매체 시공</span>
-            </div>
-          </div>
-          <?php endforeach; ?>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================
-       06 SECTION 05 : 성공 사례 (EXACT SCREENSHOT REPLICA: WIDE 4-COLUMN & HUGE TYPO TABS)
-  ============================================ -->
-  <section class="am-section am-bg-slate" id="archive">
+<section class="am-section am-bg-slate" id="archive">
     <div class="am-container-wide">
 
       <!-- TOP THIN DIVIDER LINE & RESULTS META -->
