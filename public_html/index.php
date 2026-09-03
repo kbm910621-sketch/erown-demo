@@ -1064,7 +1064,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="asps-info">
                 <div class="asps-title-row">
                   <strong class="asps-item-title white"><?php echo htmlspecialchars($vItem['title']); ?></strong>
-                  <span class="asps-title-arrow" style="color:#38bdf8;">↗</span>
+                  <span class="asps-title-arrow" style="color:#ffffff;">↗</span>
                 </div>
                 <span class="asps-item-loc light">4K UHD 시네마틱 &amp; 숏폼 제작</span>
               </div>
