@@ -14,7 +14,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
 
     <section class="content contact-page">
 
-            <!-- SUBPAGE HEADER -->
+      <!-- SUBPAGE HEADER -->
       <div class="estimate-page-header wow fadeInUp" data-wow-duration="0.6s">
         <span class="eph-kicker">GAON-N 1:1 CONSULTING &amp; ESTIMATE</span>
         <h1 class="eph-title">1:1 맞춤 <span>견적 상담 신청</span></h1>
@@ -22,19 +22,42 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
           광주 104개 시내버스부터 스마트플레이스, 4K 시네마 영상까지 외주 없는 본사 전문팀이 최적의 미디어 플랜을 제안해 드립니다.
         </p>
       </div>
-              <div class="cf-field anim">
-                <label>직급</label>
-                <select name="in_position" id="in_position" class="cf-select cf-select-sm">
-                  <option value="">직급을 선택하세요</option>
-                  <option value="대표">대표</option>
-                  <option value="원장">원장</option>
-                  <option value="이사">이사</option>
-                  <option value="부장">부장</option>
-                  <option value="팀장">팀장</option>
-                  <option value="과장">과장</option>
-                  <option value="대리">대리</option>
-                  <option value="담당자">담당자</option>
-                </select>
+
+      <!-- CONSULT SECTION: 럭셔리 폼 컨테이너 -->
+      <div class="contact-consult-wrap wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.15s">
+        <div class="contact-consult-section">
+
+          <div class="consult-right">
+            <form name="frm" id="contactForm" method="post" action="process_write.php">
+
+              <!-- 01 광고주 정보 -->
+              <div class="cf-section-head first anim">
+                <span class="cf-num">01</span>
+                <span class="cf-stitle">광고주 및 담당자 정보</span>
+              </div>
+              <div class="cf-row anim">
+                <div class="cf-field">
+                  <label>회사명 / 상호 <span class="req">*</span></label>
+                  <input type="text" name="in_company" id="in_company" class="cf-input" placeholder="예: 가온메디컬의원 / 가온학원" required>
+                </div>
+                <div class="cf-field">
+                  <label>담당자명 <span class="req">*</span></label>
+                  <input type="text" name="in_name" id="in_name" class="cf-input" placeholder="담당자 성함을 입력하세요" required>
+                </div>
+                <div class="cf-field cf-field-sm">
+                  <label>직급</label>
+                  <select name="in_position" id="in_position" class="cf-select cf-select-sm">
+                    <option value="">선택</option>
+                    <option value="대표">대표</option>
+                    <option value="원장">원장</option>
+                    <option value="이사">이사</option>
+                    <option value="부장">부장</option>
+                    <option value="팀장">팀장</option>
+                    <option value="과장">과장</option>
+                    <option value="대리">대리</option>
+                    <option value="담당자">담당자</option>
+                  </select>
+                </div>
               </div>
 
               <!-- 02 연락처 정보 -->
@@ -44,11 +67,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
               </div>
               <div class="cf-row anim">
                 <div class="cf-field">
-                  <label>연락처 <span>*</span></label>
+                  <label>연락처 <span class="req">*</span></label>
                   <input type="text" name="in_tel" id="in_tel" class="cf-input" placeholder="010-0000-0000" maxlength="13" onkeyup="this.value=this.value.replace(/[^0-9-]/g,'')" required>
                 </div>
                 <div class="cf-field">
-                  <label>이메일 (견적서 수신) <span>*</span></label>
+                  <label>이메일 (견적서 수신) <span class="req">*</span></label>
                   <input type="email" name="in_email" id="in_email" class="cf-input" placeholder="example@naver.com" required>
                 </div>
               </div>
@@ -59,7 +82,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
                 <span class="cf-stitle">희망 광고 매체 및 상담 내용 (중복 선택 가능)</span>
               </div>
               <div class="cf-field anim">
-                <label>관심 매체 선택 <span>*</span></label>
+                <label>관심 매체 선택 <span class="req">*</span></label>
                 <div class="cf-checks">
                   <input type="checkbox" class="cf-chk" name="in_ad_type[]" id="t1" value="시내버스 외부 광고" checked><label for="t1">시내버스 외부 광고</label>
                   <input type="checkbox" class="cf-chk" name="in_ad_type[]" id="t2" value="시내버스 내부·음성"><label for="t2">시내버스 내부·음성</label>
@@ -105,7 +128,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
                 <label for="agree">개인정보 수집 및 이용에 동의합니다. (상담 및 견적 안내 목적)</label>
               </div>
 
-                            <div class="cf-btn-wrap anim">
+              <div class="cf-btn-wrap anim">
                 <button type="submit" class="cf-luxury-submit-btn" id="btnSubmitEstimate">
                   <span>1:1 맞춤 견적 및 제안서 신청하기</span>
                   <div class="clsb-circle">
