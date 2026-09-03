@@ -906,3 +906,67 @@ $(function() {
   $(document).ready(function() {
     initSubPortfolioSwipers();
   });
+
+
+  /* SUB-PORTFOLIO 3-SECTION SWIPER INITIALIZATION (Bus, Online, Video) */
+  function initAllSubPortfolioSwipers() {
+    if (typeof Swiper === 'undefined') return;
+
+    // 01 Bus Swiper (8 Items)
+    new Swiper('.asps-swiper-bus', {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      rewind: true,
+      navigation: {
+        prevEl: '.asps-prev-bus',
+        nextEl: '.asps-next-bus'
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 4,
+          spaceBetween: 22,
+          slidesPerGroup: 2
+        }
+      }
+    });
+
+    // 02 Online Swiper (8 Items)
+    new Swiper('.asps-swiper-online', {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      rewind: true,
+      navigation: {
+        prevEl: '.asps-prev-online',
+        nextEl: '.asps-next-online'
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 4,
+          spaceBetween: 22,
+          slidesPerGroup: 2
+        }
+      }
+    });
+
+    // 03 Video Swiper (8 Items)
+    new Swiper('.asps-swiper-video', {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      rewind: true,
+      navigation: {
+        prevEl: '.asps-prev-video',
+        nextEl: '.asps-next-video'
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 4,
+          spaceBetween: 22,
+          slidesPerGroup: 2
+        }
+      }
+    });
+  }
+
+  $(document).ready(function() {
+    initAllSubPortfolioSwipers();
+  });

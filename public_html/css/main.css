@@ -4464,3 +4464,189 @@ body.modal-lock { overflow:hidden !important; }
   overflow: hidden !important;
   border: 1px solid #e2e8f0 !important;
 }
+
+
+/* ==========================================================================
+   HIGH-END LUXURY ARROWS & PORTFOLIO CASE CARDS (세련된 모던 화살표 시스템)
+========================================================================== */
+
+/* 1. TOP NAV CONTROLS */
+.asps-nav-controls {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.asps-arrow-btn {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: #ffffff !important;
+  border: 1.5px solid #e2e8f0 !important;
+  color: #334155 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+  padding: 0 !important;
+}
+
+.asps-arrow-btn:hover {
+  background: #1855b7 !important;
+  border-color: #1855b7 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(24, 85, 183, 0.3) !important;
+}
+
+.asps-arrow-btn.light {
+  background: rgba(30, 41, 59, 0.8) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+.asps-arrow-btn.light:hover {
+  background: #fbbf24 !important;
+  border-color: #fbbf24 !important;
+  color: #0f172a !important;
+  box-shadow: 0 6px 16px rgba(251, 191, 36, 0.35) !important;
+}
+
+.asps-more-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 16px !important;
+  border-radius: 100px !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  color: #1855b7 !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+  margin-left: 6px !important;
+}
+.asps-more-link:hover {
+  background: #1855b7 !important;
+  color: #ffffff !important;
+  border-color: #1855b7 !important;
+  transform: translateY(-2px) !important;
+}
+.asps-more-link.green { color: #16a34a !important; }
+.asps-more-link.green:hover { background: #16a34a !important; color: #ffffff !important; border-color: #16a34a !important; }
+.asps-more-link.gold {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #fbbf24 !important;
+}
+.asps-more-link.gold:hover { background: #fbbf24 !important; color: #0f172a !important; border-color: #fbbf24 !important; }
+
+/* 2. CARD ARROW BADGE (사례 카드 우측 상단 플로팅 화살표 뱃지) */
+.asps-thumb {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 11 !important;
+  overflow: hidden !important;
+  background: #0f172a !important;
+}
+
+.asps-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.asps-card:hover .asps-thumb img {
+  transform: scale(1.06) !important;
+}
+
+.asps-arrow-badge {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important;
+  background: rgba(15, 23, 42, 0.65) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  z-index: 5 !important;
+}
+
+.asps-card:hover .asps-arrow-badge {
+  background: #1855b7 !important;
+  border-color: #1855b7 !important;
+  transform: scale(1.12) rotate(45deg) !important;
+  box-shadow: 0 4px 14px rgba(24, 85, 183, 0.5) !important;
+}
+
+.asps-card.dark:hover .asps-arrow-badge {
+  background: #fbbf24 !important;
+  border-color: #fbbf24 !important;
+  color: #0f172a !important;
+}
+
+/* 3. CARD TITLE & DIAGONAL ARROW */
+.asps-info {
+  padding: 18px 20px !important;
+  background: #ffffff !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+.asps-card.dark .asps-info {
+  background: #1e293b !important;
+}
+
+.asps-title-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+}
+
+.asps-item-title {
+  font-size: 15.5px !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  line-height: 1.4 !important;
+  letter-spacing: -0.4px !important;
+  margin: 0 !important;
+}
+.asps-card.dark .asps-item-title {
+  color: #ffffff !important;
+}
+
+.asps-title-arrow {
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  color: #94a3b8 !important;
+  transition: all 0.25s ease !important;
+  line-height: 1 !important;
+}
+
+.asps-card:hover .asps-title-arrow {
+  color: #1855b7 !important;
+  transform: translate(3px, -3px) !important;
+}
+.asps-card.dark:hover .asps-title-arrow {
+  color: #fbbf24 !important;
+}
+
+.asps-item-loc {
+  font-size: 13px !important;
+  color: #64748b !important;
+}
+.asps-item-loc.light {
+  color: #94a3b8 !important;
+}

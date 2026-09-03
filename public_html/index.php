@@ -838,35 +838,49 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <!-- SECTION 02 : RECENT ONLINE MARKETING PORTFOLIO SHOWCASE STRIP -->
+            <!-- SECTION 02 : RECENT ONLINE MARKETING PORTFOLIO SHOWCASE STRIP (HIGH-END MODERN ARROWS) -->
       <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s" style="margin-top:60px;">
         <div class="asps-head">
           <div class="asps-title-wrap">
             <span class="asps-kicker green">DIGITAL MARKETING PORTFOLIO</span>
             <h4 class="asps-title">온라인 마케팅 &amp; 스마트플레이스 1위 집행 실적</h4>
           </div>
-          <a href="/portfolio.php" class="asps-more-link">온라인 사례 전체보기 ↗</a>
-        </div>
-        <div class="asps-grid">
-          <?php 
-          $onlineItems = !empty($portOnline) ? array_slice($portOnline, 0, 4) : array_slice($list, 0, 4);
-          foreach ($onlineItems as $oItem): 
-          ?>
-          <div class="asps-card main-port-card" data-cat="<?php echo htmlspecialchars($oItem['category']); ?>" data-id="<?php echo (int)$oItem['id']; ?>" data-name="<?php echo htmlspecialchars($oItem['title']); ?>">
-            <div class="asps-thumb">
-              <img src="<?php echo !empty($oItem['thumb']) ? htmlspecialchars($oItem['thumb']) : '/images/sub_bg_a.jpg'; ?>" alt="<?php echo htmlspecialchars($oItem['title']); ?>">
-              <span class="asps-badge green">온라인마케팅</span>
-              <div class="asps-hover-overlay">상세보기 ↗</div>
-            </div>
-            <div class="asps-info">
-              <strong class="asps-item-title"><?php echo htmlspecialchars($oItem['title']); ?></strong>
-              <span class="asps-item-loc">플레이스 1위 &amp; 블로그 상위 노출</span>
-            </div>
+          <div class="asps-nav-controls">
+            <button type="button" class="asps-arrow-btn asps-prev-online" aria-label="이전 사례">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="asps-arrow-btn asps-next-online" aria-label="다음 사례">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <a href="/contents/a_type/a_1.php?category=online" class="asps-more-link green">
+              <span>온라인 사례 전체보기</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
           </div>
-          <?php endforeach; ?>
+        </div>
+        <div class="swiper asps-swiper asps-swiper-online">
+          <div class="swiper-wrapper">
+            <?php foreach ($portOnline as $oItem): ?>
+            <div class="swiper-slide asps-card main-port-card" data-cat="<?php echo htmlspecialchars($oItem['category']); ?>" data-id="<?php echo (int)$oItem['id']; ?>" data-name="<?php echo htmlspecialchars($oItem['title']); ?>" data-img="<?php echo htmlspecialchars($oItem['thumb']); ?>" data-tag="온라인마케팅">
+              <div class="asps-thumb">
+                <img src="<?php echo htmlspecialchars($oItem['thumb']); ?>" alt="<?php echo htmlspecialchars($oItem['title']); ?>" loading="lazy">
+                <span class="asps-badge green">온라인마케팅</span>
+                <div class="asps-arrow-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </div>
+              </div>
+              <div class="asps-info">
+                <div class="asps-title-row">
+                  <strong class="asps-item-title"><?php echo htmlspecialchars($oItem['title']); ?></strong>
+                  <span class="asps-title-arrow">↗</span>
+                </div>
+                <span class="asps-item-loc">플레이스 1위 &amp; 블로그 상위 노출</span>
+              </div>
+            </div>
+            <?php endforeach; ?>
+          </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -995,40 +1009,53 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <!-- SECTION 03 : RECENT 4K VIDEO PORTFOLIO SHOWCASE STRIP -->
-      <div class="am-sub-port-strip dark wow fadeInUp" data-wow-duration="0.8s">
+            <!-- SECTION 03 : RECENT 4K VIDEO PORTFOLIO SHOWCASE STRIP (HIGH-END MODERN ARROWS) -->
+      <div class="am-sub-port-strip dark wow fadeInUp" data-wow-duration="0.8s" style="margin-top:60px;">
         <div class="asps-head">
           <div class="asps-title-wrap">
             <span class="asps-kicker gold">CINEMA REEL PORTFOLIO</span>
             <h4 class="asps-title white">최근 4K 브랜드 필름 &amp; 숏폼 영상 제작 실적</h4>
           </div>
-          <a href="/portfolio.php" class="asps-more-link gold">영상 포트폴리오 전체보기 ↗</a>
-        </div>
-        <div class="asps-grid">
-          <?php 
-          $videoItems = !empty($portVideo) ? array_slice($portVideo, 0, 4) : array_slice($list, 0, 4);
-          foreach ($videoItems as $vItem): 
-          ?>
-          <div class="asps-card dark main-port-card" data-cat="<?php echo htmlspecialchars($vItem['category']); ?>" data-id="<?php echo (int)$vItem['id']; ?>" data-name="<?php echo htmlspecialchars($vItem['title']); ?>">
-            <div class="asps-thumb">
-              <img src="<?php echo !empty($vItem['thumb']) ? htmlspecialchars($vItem['thumb']) : '/images/sub_bg_d.jpg'; ?>" alt="<?php echo htmlspecialchars($vItem['title']); ?>">
-              <span class="asps-badge gold">영상제작</span>
-              <div class="asps-hover-overlay dark">영상 재생 &amp; 상세보기 ↗</div>
-            </div>
-            <div class="asps-info">
-              <strong class="asps-item-title white"><?php echo htmlspecialchars($vItem['title']); ?></strong>
-              <span class="asps-item-loc light">4K UHD 시네마틱 &amp; 숏폼 제작</span>
-            </div>
+          <div class="asps-nav-controls">
+            <button type="button" class="asps-arrow-btn light asps-prev-video" aria-label="이전 사례">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="asps-arrow-btn light asps-next-video" aria-label="다음 사례">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <a href="/contents/a_type/a_1.php?category=video" class="asps-more-link gold">
+              <span>영상 사례 전체보기</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
           </div>
-          <?php endforeach; ?>
+        </div>
+        <div class="swiper asps-swiper asps-swiper-video">
+          <div class="swiper-wrapper">
+            <?php foreach ($portVideo as $vItem): ?>
+            <div class="swiper-slide asps-card dark main-port-card" data-cat="<?php echo htmlspecialchars($vItem['category']); ?>" data-id="<?php echo (int)$vItem['id']; ?>" data-name="<?php echo htmlspecialchars($vItem['title']); ?>" data-img="<?php echo htmlspecialchars($vItem['thumb']); ?>" data-tag="영상제작">
+              <div class="asps-thumb">
+                <img src="<?php echo htmlspecialchars($vItem['thumb']); ?>" alt="<?php echo htmlspecialchars($vItem['title']); ?>" loading="lazy">
+                <span class="asps-badge gold">영상제작</span>
+                <div class="asps-arrow-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </div>
+              </div>
+              <div class="asps-info">
+                <div class="asps-title-row">
+                  <strong class="asps-item-title white"><?php echo htmlspecialchars($vItem['title']); ?></strong>
+                  <span class="asps-title-arrow" style="color:#fbbf24;">↗</span>
+                </div>
+                <span class="asps-item-loc light">4K UHD 시네마틱 &amp; 숏폼 제작</span>
+              </div>
+            </div>
+            <?php endforeach; ?>
+          </div>
         </div>
       </div>
-
     </div>
   </section>
 
-
-<section class="am-section" id="process">
+  <section class="am-section" id="process">
     <div class="am-container">
       
       <!-- UNIFIED SECTION HEAD -->
