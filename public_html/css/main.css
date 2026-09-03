@@ -4062,7 +4062,7 @@ body.modal-lock { overflow:hidden !important; }
   .gnb_nav_list {
     display: flex !important;
     flex-direction: column !important;
-    gap: 14px !important;
+    gap: 10px !important;
     list-style: none !important;
     padding: 0 !important;
     margin: 0 0 28px !important;
@@ -4070,7 +4070,7 @@ body.modal-lock { overflow:hidden !important; }
 
   .gnb_nav_list li {
     border-bottom: 1px solid #f1f5f9 !important;
-    padding-bottom: 14px !important;
+    padding-bottom: 8px !important;
   }
 
   .gnb_nav_list li a {
@@ -4081,16 +4081,31 @@ body.modal-lock { overflow:hidden !important; }
     align-items: center !important;
     justify-content: space-between !important;
     text-decoration: none !important;
-    transition: color 0.2s ease !important;
+    padding: 8px 12px !important;
+    border-radius: 10px !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
-  .gnb_nav_list li a:hover {
-    color: #1855b7 !important;
+
+  /* 메뉴 호버/터치 시 소프트 블루 틴트 배경 & 텍스트 색상 전환 & 마이크로 무브 */
+  .gnb_nav_list li a:hover,
+  .gnb_nav_list li a:active,
+  .gnb_nav_list li.on a {
+    color: #1855b7 !important; /* 선명한 로열블루로 전환 */
+    background: #eff6ff !important; /* 은은하고 산뜻한 아이스 블루 틴트 */
+    transform: translateX(4px) !important;
   }
+
+  .gnb_nav_list li a:hover .gnb-sub,
+  .gnb_nav_list li a:active .gnb-sub {
+    color: #0284c7 !important;
+  }
+
   .gnb_nav_list .gnb-sub {
     font-size: 12px !important;
     color: #1855b7 !important; /* 신뢰감 있는 가온엔 로열블루 */
     font-weight: 700 !important;
     text-transform: uppercase !important;
+    transition: all 0.2s ease !important;
   }
 
   /* DRAWER FOOTER */
