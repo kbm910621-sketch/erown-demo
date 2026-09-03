@@ -1711,6 +1711,39 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </div>
 
+      <!-- ============================================
+       ONLINE MARKETING CARD DETAIL MODAL (SVG 픽토그램 & PC 호버 내용 100% 연동 모달)
+  ============================================ -->
+  <div class="online-card-modal-overlay" id="onlineCardModal">
+    <div class="ocm-panel">
+      <button type="button" class="ocm-close-btn" id="btnCloseOnlineCardModal" aria-label="닫기">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="ocm-image-box">
+        <img id="ocmModalImg" src="" alt="온라인 마케팅 솔루션">
+        <div class="ocm-img-scrim"></div>
+        <div class="ocm-kicker-badge-wrap">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span class="ocm-kicker-badge" id="ocmModalKicker"></span>
+        </div>
+      </div>
+      <div class="ocm-body">
+        <h3 class="ocm-title" id="ocmModalTitle"></h3>
+        <p class="ocm-desc" id="ocmModalDesc"></p>
+        <div class="ocm-tag-box">
+          <div class="ocm-feature-tag-wrap">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="ocm-feature-tag" id="ocmModalTag"></span>
+          </div>
+        </div>
+        <a href="/board/estmate/write.php" class="ocm-cta-btn">
+          <span>온라인 마케팅 1:1 상담 신청</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
     <!-- PORTFOLIO LIGHTBOX MODAL (오른쪽 위 안쪽 닫기 버튼 탑재) -->
   <div class="portfolio-modal-backdrop" id="modalBackdrop">
     <div class="pm-modal-box">
