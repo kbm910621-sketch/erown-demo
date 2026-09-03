@@ -5878,10 +5878,12 @@ body.menu-open {
   background: #ffffff !important; /* 어색한 그레이 배경 완전 제거 ➔ 순백색 */
 }
 
+/* Match exact standard container width of upper section cards */
 .am-master-conversion-section .am-container {
-  max-width: 1440px !important; /* 가로폭 시원하게 와이드 확장 */
   width: 100% !important;
-  padding: 0 24px !important;
+  max-width: 1650px !important;
+  margin: 0 auto !important;
+  padding: 0 40px !important;
   box-sizing: border-box !important;
 }
 
@@ -6262,9 +6264,14 @@ body.menu-open {
   .am-master-conversion-section {
     padding: 20px 0 60px !important;
   }
-  .am-master-conversion-section .am-container {
-    padding: 0 12px !important;
-  }
+  /* Match exact standard container width of upper section cards */
+.am-master-conversion-section .am-container {
+  width: 100% !important;
+  max-width: 1650px !important;
+  margin: 0 auto !important;
+  padding: 0 40px !important;
+  box-sizing: border-box !important;
+}
   .masstige-agency-box {
     margin: 0;
     padding: 34px 18px 28px;
