@@ -265,16 +265,23 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     <div class="am-container">
       
       <!-- TOP HEADER (EXACT MASSTIGE.IO TOP ROW) -->
-      <div class="mos-top-header wow fadeInUp" data-wow-duration="0.7s">
-        <div class="mos-title-wrap">
-          <h2 class="mos-main-title">
-            옥외광고 <span class="mos-title-circle"></span>
-          </h2>
-          <span class="mos-sub-kicker">OOH MEDIA SOLUTIONS</span>
-        </div>
-        <div class="mos-top-process-note">
-          시내버스 ➔ 택시 래핑 ➔ 터미널 DID ➔ 특화 매체. 광주 5개 구 도심을 24시간 장악하는<br>
-          가온엔만의 1:1 맞춤형 옥외 미디어 믹스 솔루션입니다.
+      <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
+        <div class="ash-flex">
+          <div>
+            <span class="ash-kicker">01 / OOH MEDIA SOLUTIONS</span>
+            <h2 class="ash-title">옥외광고 솔루션</h2>
+            <p class="ash-desc">광주 104개 전 노선 시내버스부터 택시 랩핑, 유스퀘어 터미널 및 대형 DID 전광판까지 도심을 24시간 장악하는 통합 옥외 미디어 믹스입니다.</p>
+          </div>
+          <div class="ash-actions">
+            <button type="button" class="ash-guide-btn blue" id="btnHeadRouteSearch" onclick="openRouteModal();">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>104개 노선 실시간 검색기</span>
+            </button>
+            <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideBusOut">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span>옥외매체 규격서 &amp; 제안서(PDF) ↗</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -487,7 +494,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <!-- LEFT: CLEAN EDITORIAL BRAND HEADLINE & CONCISE BUTTON -->
         <div class="som-left-content">
           <div class="som-title-wrap">
-            <span class="ash-kicker">DIGITAL MARKETING</span>
+            <span class="ash-kicker">02 / DIGITAL MARKETING</span>
             <h2 class="ash-title">온라인 마케팅</h2>
           </div>
 
@@ -963,6 +970,20 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 <section class="am-section am-bg-slate" id="archive">
     <div class="am-container-wide">
+      
+      <!-- UNIFIED ARCHIVE HEADER -->
+      <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s" style="margin-bottom:30px;">
+        <div class="ash-flex">
+          <div>
+            <span class="ash-kicker">04 / SUCCESS ARCHIVE</span>
+            <h2 class="ash-title">성공 사례</h2>
+            <p class="ash-desc">시내버스 옥외광고, 온라인 마케팅, 4K 브랜드 영상까지 가온엔이 직접 기획·집행한 실제 성공 실적입니다.</p>
+          </div>
+          <a href="/portfolio.php" class="ash-guide-btn">
+            <span>사례 전체 아카이브 바로가기 ↗</span>
+          </a>
+        </div>
+      </div>
 
       <!-- TOP THIN DIVIDER LINE & RESULTS META -->
       <div class="ms-meta-bar wow fadeInUp" data-wow-duration="0.6s">

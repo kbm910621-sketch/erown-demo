@@ -2441,3 +2441,197 @@ body.modal-lock { overflow:hidden !important; }
   .mos-huge-action-bar { flex-direction: column; }
   .mos-huge-btn { width: 100%; padding: 16px 24px; font-size: 15px; }
 }
+
+
+/* ==========================================================================
+   GAON-N MASTER UNIFIED DESIGN SYSTEM (통일된 폰트, 여백, 컬러, 버튼 룰)
+========================================================================== */
+
+/* 1. UNIFIED SECTION SPACING & CONTAINER */
+.am-section {
+  padding: 130px 0 !important;
+  position: relative !important;
+}
+
+.am-container {
+  max-width: 1650px !important;
+  margin: 0 auto !important;
+  padding: 0 40px !important;
+}
+
+.am-container-wide {
+  max-width: 1650px !important;
+  margin: 0 auto !important;
+  padding: 0 40px !important;
+}
+
+/* 2. UNIFIED SECTION HEADERS (전 섹션 100% 동일한 헤더 룰) */
+.am-sec-head {
+  margin-bottom: 50px !important;
+}
+
+.ash-flex {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  gap: 30px !important;
+}
+
+.ash-kicker {
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  color: #1855b7 !important; /* GAON-N ROYAL BLUE */
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+  font-family: "Poppins", "Pretendard", sans-serif !important;
+}
+
+.ash-kicker.gold {
+  color: #fbbf24 !important;
+}
+
+.ash-title {
+  font-size: 46px !important; /* 46PX UNIFIED BOLD TITLE */
+  font-weight: 900 !important;
+  color: #0f172a !important;
+  line-height: 1.18 !important;
+  letter-spacing: -1.4px !important;
+  margin: 0 0 14px !important;
+  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif !important;
+}
+
+.ash-title.white {
+  color: #ffffff !important;
+}
+
+.ash-desc {
+  font-size: 16.5px !important;
+  line-height: 1.7 !important;
+  color: #475569 !important;
+  margin: 0 !important;
+  font-weight: 500 !important;
+  word-break: keep-all !important;
+  max-width: 780px !important;
+}
+
+.ash-desc.light {
+  color: #94a3b8 !important;
+}
+
+/* 3. UNIFIED ACTION BUTTONS (28PX ROUNDED CAPSULE) */
+.ash-guide-btn,
+.mos-huge-btn,
+.som-guide-btn .sgb-txt,
+.abh-cta-btn {
+  border-radius: 100px !important;
+  font-weight: 800 !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.ash-guide-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 13px 26px !important;
+  font-size: 14.5px !important;
+  border-radius: 100px !important;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1.5px solid #cbd5e1 !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04) !important;
+}
+
+.ash-guide-btn:hover {
+  background: #0f172a !important;
+  border-color: #0f172a !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15) !important;
+}
+
+.ash-guide-btn.blue {
+  background: #1855b7 !important;
+  color: #ffffff !important;
+  border-color: #1855b7 !important;
+  box-shadow: 0 4px 15px rgba(24, 85, 183, 0.3) !important;
+}
+.ash-guide-btn.blue:hover {
+  background: #134494 !important;
+  border-color: #134494 !important;
+  box-shadow: 0 8px 25px rgba(24, 85, 183, 0.45) !important;
+}
+
+/* 4. SECTION 01 OOH TABBED INTEGRATION */
+.mos-stage-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.mos-nav-col {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.mos-nav-item.on {
+  background: #1855b7 !important;
+}
+
+.mos-hero-banner {
+  height: 480px !important;
+  border-radius: 28px !important;
+}
+
+/* 5. SUB PORTFOLIO STRIPS UNIFIED */
+.am-sub-port-strip {
+  margin-top: 60px !important;
+  padding-top: 50px !important;
+  border-top: 1.5px solid #e2e8f0 !important;
+}
+
+.asps-head {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  margin-bottom: 24px !important;
+}
+
+.asps-kicker {
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
+  color: #1855b7 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+.asps-title {
+  font-size: 24px !important;
+  font-weight: 900 !important;
+  color: #0f172a !important;
+  margin: 4px 0 0 !important;
+  letter-spacing: -0.5px !important;
+}
+
+.asps-more-link {
+  font-size: 14.5px !important;
+  font-weight: 800 !important;
+  color: #1855b7 !important;
+  text-decoration: none !important;
+}
+.asps-more-link:hover {
+  text-decoration: underline !important;
+}
+
+@media(max-width:1200px) {
+  .ash-flex { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .ash-title { font-size: 36px !important; }
+  .mos-stage-layout { grid-template-columns: 1fr; }
+}
