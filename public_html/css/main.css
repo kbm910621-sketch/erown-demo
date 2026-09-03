@@ -2844,3 +2844,46 @@ span.mdt-pill,
   margin: 0 0 20px !important;
   word-break: keep-all !important;
 }
+
+
+/* ==========================================================================
+   PORTFOLIO SUBPAGE LUXURY SEARCH & FILTERING BAR
+========================================================================== */
+.sub-port-search-box {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 100px;
+  padding: 6px 18px;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+}
+
+.sub-port-search-box input {
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  width: 100%;
+}
+
+.sub-port-search-box button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sub-port-search-box button:hover {
+  color: #1855b7;
+}
+
+.port-sub-container {
+  background: #f8fafc;
+  min-height: 80vh;
+}
