@@ -3698,12 +3698,18 @@ body.modal-lock { overflow:hidden !important; }
     line-height: 1.35 !important;
   }
 
-  /* SUB-PORTFOLIO 2 CARDS PER VIEW ON MOBILE */
+  /* SUB-PORTFOLIO MOBILE PEEK (1번 75% + 다음 사진 15% 빼꼼 peek) */
   .asps-swiper {
+    overflow: visible !important;
     padding-bottom: 10px !important;
+    padding-right: 0 !important;
   }
-  .asps-card {
-    width: 100% !important;
+  .asps-swiper .swiper-wrapper {
+    display: flex !important;
+  }
+  .asps-swiper .asps-card {
+    height: auto !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -5597,5 +5603,29 @@ body.menu-open {
   }
   .ags-call-outline-btn:active {
     background: rgba(255, 255, 255, 0.15) !important;
+  }
+}
+
+
+/* ==========================================================================
+   SUB-PORTFOLIO MOBILE PEEK OVERRIDE (옥외/온라인/영상 1번 75% + 2번 15% 빼꼼)
+========================================================================== */
+@media (max-width: 768px) {
+  .am-sub-port-strip {
+    overflow: hidden !important;
+    padding: 0 !important;
+  }
+  .asps-swiper {
+    width: 100% !important;
+    overflow: visible !important;
+    padding-bottom: 14px !important;
+  }
+  .asps-swiper .swiper-wrapper {
+    display: flex !important;
+  }
+  .asps-swiper .asps-card,
+  .asps-swiper .swiper-slide {
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
   }
 }

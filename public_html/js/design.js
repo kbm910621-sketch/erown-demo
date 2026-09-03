@@ -910,67 +910,43 @@ $(function() {
 
   
 
-  /* SUB-PORTFOLIO 3-SECTION SWIPER INITIALIZATION (Bus, Online, Video) */
+  
+  /* SUB-PORTFOLIO 3-SECTION SWIPER (모바일 1번 75% 메인 + 2번 15% 빼꼼 peek & 1칸씩 회전) */
   function initAllSubPortfolioSwipers() {
     if (typeof Swiper === 'undefined') return;
 
-    // 01 Bus Swiper (8 Items: 모바일 1.35개 노출 & 화살표 클릭 시 1칸씩 슬라이딩)
-    new Swiper('.asps-swiper-bus', {
-      slidesPerView: 1.35,
-      spaceBetween: 14,
+    var swiperConfig = {
+      slidesPerView: 1.25, /* 1번 사진 75~80% + 2번 사진 15~20% 빼꼼 */
+      spaceBetween: 12,
       slidesPerGroup: 1,
+      centeredSlides: false,
       rewind: true,
-      navigation: {
-        prevEl: '.asps-prev-bus',
-        nextEl: '.asps-next-bus'
-      },
       breakpoints: {
         769: {
           slidesPerView: 4,
           spaceBetween: 22,
-          slidesPerGroup: 1
+          slidesPerGroup: 1,
+          rewind: true
         }
       }
-    });
+    };
 
-    // 02 Online Swiper (8 Items: 모바일 1.35개 노출 & 화살표 클릭 시 1칸씩 슬라이딩)
-    new Swiper('.asps-swiper-online', {
-      slidesPerView: 1.35,
-      spaceBetween: 14,
-      slidesPerGroup: 1,
-      rewind: true,
-      navigation: {
-        prevEl: '.asps-prev-online',
-        nextEl: '.asps-next-online'
-      },
-      breakpoints: {
-        769: {
-          slidesPerView: 4,
-          spaceBetween: 22,
-          slidesPerGroup: 1
-        }
-      }
-    });
+    // 01 옥외광고 사례
+    new Swiper('.asps-swiper-bus', Object.assign({}, swiperConfig, {
+      navigation: { prevEl: '.asps-prev-bus', nextEl: '.asps-next-bus' }
+    }));
 
-    // 03 Video Swiper (8 Items: 모바일 1.35개 노출 & 화살표 클릭 시 1칸씩 슬라이딩)
-    new Swiper('.asps-swiper-video', {
-      slidesPerView: 1.35,
-      spaceBetween: 14,
-      slidesPerGroup: 1,
-      rewind: true,
-      navigation: {
-        prevEl: '.asps-prev-video',
-        nextEl: '.asps-next-video'
-      },
-      breakpoints: {
-        769: {
-          slidesPerView: 4,
-          spaceBetween: 22,
-          slidesPerGroup: 1
-        }
-      }
-    });
+    // 02 온라인마케팅 사례
+    new Swiper('.asps-swiper-online', Object.assign({}, swiperConfig, {
+      navigation: { prevEl: '.asps-prev-online', nextEl: '.asps-next-online' }
+    }));
+
+    // 03 영상제작 사례
+    new Swiper('.asps-swiper-video', Object.assign({}, swiperConfig, {
+      navigation: { prevEl: '.asps-prev-video', nextEl: '.asps-next-video' }
+    }));
   }
+
 
   $(document).ready(function() {
     initAllSubPortfolioSwipers();
