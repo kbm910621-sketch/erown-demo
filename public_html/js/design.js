@@ -642,10 +642,12 @@ $(function() {
 
   
 
-  /* MASSTIGE.IO OUR SERVICES TAB SWITCHER & CASCADE REVEAL MOTION */
+  
+
+  /* MASSTIGE.IO OUR SERVICES TAB SWITCHER & 0.65S SMOOTH GLIDE REVEAL */
   $(document).on('click mouseenter', '.mos-nav-item', function() {
     var $this = $(this);
-    if ($this.hasClass('on') && $('.mos-content-col').hasClass('cascade-in')) return;
+    if ($this.hasClass('on')) return;
     
     $('.mos-nav-item').removeClass('on');
     $this.addClass('on');
@@ -675,7 +677,7 @@ $(function() {
     }
     $('#mosDynTags').html(tagsHtml);
 
-    // CASCADE REVEAL TRIGGER (위에서부터 차르르 내려오는 효과)
+    // SMOOTH GLIDE REVEAL (0.65s 천천히 슥 내려오는 고급 모션)
     var $content = $('.mos-content-col');
     $content.removeClass('cascade-in');
     void $content[0].offsetWidth; // force reflow
