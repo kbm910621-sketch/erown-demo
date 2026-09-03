@@ -511,34 +511,37 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       </div>
 
       <!-- RECENT OOH PORTFOLIO SHOWCASE STRIP -->
+            <!-- RECENT OOH PORTFOLIO SHOWCASE STRIP (SWIPER ARROWS: PC 4개 / 모바일 2개) -->
       <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s" style="margin-top:60px;">
         <div class="asps-head">
           <div class="asps-title-wrap">
             <span class="asps-kicker">OOH PORTFOLIO</span>
             <h4 class="asps-title">최근 옥외광고 &amp; 시내버스 직영 시공 실적</h4>
           </div>
-          <a href="/portfolio.php" class="asps-more-link">옥외 사례 전체보기 ↗</a>
-        </div>
-        <div class="asps-grid">
-          <?php 
-          $busItems = !empty($portBus) ? array_slice($portBus, 0, 4) : array_slice($list, 0, 4);
-          foreach ($busItems as $bItem): 
-          ?>
-          <div class="asps-card main-port-card" data-cat="<?php echo htmlspecialchars($bItem['category']); ?>" data-id="<?php echo (int)$bItem['id']; ?>" data-name="<?php echo htmlspecialchars($bItem['title']); ?>">
-            <div class="asps-thumb">
-              <img src="<?php echo !empty($bItem['thumb']) ? htmlspecialchars($bItem['thumb']) : '/images/sub_bg_a.jpg'; ?>" alt="<?php echo htmlspecialchars($bItem['title']); ?>">
-              <span class="asps-badge">옥외매체</span>
-              <div class="asps-hover-overlay">상세보기 ↗</div>
-            </div>
-            <div class="asps-info">
-              <strong class="asps-item-title"><?php echo htmlspecialchars($bItem['title']); ?></strong>
-              <span class="asps-item-loc">광주 104개 노선 맞춤 직영 시공</span>
-            </div>
+          <div class="asps-nav-controls">
+            <button type="button" class="asps-arrow-btn asps-prev-bus" aria-label="이전 사례">‹</button>
+            <button type="button" class="asps-arrow-btn asps-next-bus" aria-label="다음 사례">›</button>
+            <a href="/contents/a_type/a_1.php?category=bus" class="asps-more-link">옥외 사례 전체보기 ↗</a>
           </div>
-          <?php endforeach; ?>
+        </div>
+        <div class="swiper asps-swiper asps-swiper-bus">
+          <div class="swiper-wrapper">
+            <?php foreach ($portBus as $bItem): ?>
+            <div class="swiper-slide asps-card main-port-card" data-cat="<?php echo htmlspecialchars($bItem['category']); ?>" data-id="<?php echo (int)$bItem['id']; ?>" data-name="<?php echo htmlspecialchars($bItem['title']); ?>" data-img="<?php echo htmlspecialchars($bItem['thumb']); ?>" data-tag="옥외광고">
+              <div class="asps-thumb">
+                <img src="<?php echo htmlspecialchars($bItem['thumb']); ?>" alt="<?php echo htmlspecialchars($bItem['title']); ?>" loading="lazy">
+                <span class="asps-badge">옥외매체</span>
+                <div class="asps-hover-overlay">상세보기 ↗</div>
+              </div>
+              <div class="asps-info">
+                <strong class="asps-item-title"><?php echo htmlspecialchars($bItem['title']); ?></strong>
+                <span class="asps-item-loc">광주 104개 노선 맞춤 직영 시공</span>
+              </div>
+            </div>
+            <?php endforeach; ?>
+          </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -1660,27 +1663,25 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </div>
 
+    <!-- PORTFOLIO LIGHTBOX MODAL (오른쪽 위 안쪽 닫기 버튼 탑재) -->
   <div class="portfolio-modal-backdrop" id="modalBackdrop">
-    <div class="portfolio-modal-box">
-      <button type="button" class="portfolio-modal-close" id="modalClose">✕</button>
-      <div class="pmb-media">
-        <img src="" id="modalImg" alt="포트폴리오 상세 이미지">
+    <div class="pm-modal-box">
+      <button type="button" class="pm-close-btn" id="modalClose" aria-label="팝업 닫기">✕</button>
+      <div class="pm-img-wrap">
+        <img src="" id="modalImg" alt="포트폴리오 상세 실사">
       </div>
-      <div class="pmb-info">
-        <div class="pmb-tags">
-          <span class="pmb-cat" id="modalCat">광고 집행 사례</span>
-          <span class="pmb-id" id="modalId">#01</span>
-        </div>
-        <h3 class="pmb-title" id="modalTitle">광고 프로젝트명</h3>
-        <p class="pmb-desc" id="modalDesc">가온엔이 기획·시공한 대표 광고 집행 사례입니다. 업종별 최적화된 노선과 미디어 믹스로 최고의 브랜드 노출 및 매출 전환 성과를 달성했습니다.</p>
-        <div class="pmb-action">
-          <a href="/board/estmate/write.php" class="pmb-cta-btn">이와 같은 광고 견적 문의하기 →</a>
+      <div class="pm-info-wrap">
+        <span class="pm-cat-badge" id="modalCat">광고사례</span>
+        <h3 class="pm-title" id="modalTitle">프로젝트명</h3>
+        <p class="pm-loc" id="modalLoc">광주 주요 상권 직영 시공</p>
+        <div class="pm-action-row">
+          <a href="/board/estmate/write.php" class="pm-cta-btn">이 광고 집행 견적 문의 ➔</a>
         </div>
       </div>
     </div>
   </div>
 
-	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/footer.php";?>
+  <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/footer.php";?>
 
 </div>
 

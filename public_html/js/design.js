@@ -824,3 +824,85 @@ $(function() {
       '-webkit-animation-play-state': 'running'
     });
   });
+
+
+  /* SWIPER INITIALIZATION FOR SUB-PORTFOLIOS (PC 4개, 모바일 2개 회전) */
+  function initSubPortfolioSwipers() {
+    if (typeof Swiper === 'undefined') return;
+
+    new Swiper('.asps-swiper-bus', {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      rewind: true,
+      navigation: {
+        prevEl: '.asps-prev-bus',
+        nextEl: '.asps-next-bus'
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 4,
+          spaceBetween: 22,
+          slidesPerGroup: 2
+        }
+      }
+    });
+
+    new Swiper('.asps-swiper-online', {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      rewind: true,
+      navigation: {
+        prevEl: '.asps-prev-online',
+        nextEl: '.asps-next-online'
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 4,
+          spaceBetween: 22,
+          slidesPerGroup: 2
+        }
+      }
+    });
+
+    new Swiper('.asps-swiper-video', {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      rewind: true,
+      navigation: {
+        prevEl: '.asps-prev-video',
+        nextEl: '.asps-next-video'
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 4,
+          spaceBetween: 22,
+          slidesPerGroup: 2
+        }
+      }
+    });
+  }
+
+  // Bind Click on any portfolio card to open Lightbox Modal
+  $(document).on('click', '.main-port-card, .asps-card', function(e) {
+    e.preventDefault();
+    var title = $(this).data('name') || $(this).find('.asps-item-title, h5').text().trim();
+    var img = $(this).data('img') || $(this).find('img').attr('src');
+    var tag = $(this).data('tag') || '광고사례';
+
+    $('#modalTitle').text(title);
+    $('#modalImg').attr('src', img);
+    $('#modalCat').text(tag);
+    $('#modalLoc').text('광주 주요 상권 직영 시공 사례');
+    $('#modalBackdrop').addClass('open');
+  });
+
+  // Modal Close Handlers
+  $(document).on('click', '#modalClose, .portfolio-modal-backdrop', function(e) {
+    if (e.target === this || $(this).attr('id') === 'modalClose') {
+      $('#modalBackdrop').removeClass('open');
+    }
+  });
+
+  $(document).ready(function() {
+    initSubPortfolioSwipers();
+  });
