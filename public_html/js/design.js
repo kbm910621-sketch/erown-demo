@@ -717,206 +717,16 @@ $(function() {
   
 
   /* SUB-PORTFOLIO STRIP SWIPER INITIALIZATION (PC 4열, 모바일 2열 회전) */
-  function initSubPortfolioSwipers() {
-    if (typeof Swiper === 'undefined') return;
-
-    // Bus Sub Swiper (8 Items)
-    new Swiper('.asps-swiper-bus', {
-      slidesPerView: 2,
-      spaceBetween: 12,
-      rewind: true,
-      navigation: {
-        prevEl: '.asps-prev-bus',
-        nextEl: '.asps-next-bus'
-      },
-      breakpoints: {
-        769: {
-          slidesPerView: 4,
-          spaceBetween: 24,
-          slidesPerGroup: 2
-        }
-      }
-    });
-
-    // Online Sub Swiper (8 Items)
-    new Swiper('.asps-swiper-online', {
-      slidesPerView: 2,
-      spaceBetween: 12,
-      rewind: true,
-      navigation: {
-        prevEl: '.asps-prev-online',
-        nextEl: '.asps-next-online'
-      },
-      breakpoints: {
-        769: {
-          slidesPerView: 4,
-          spaceBetween: 24,
-          slidesPerGroup: 2
-        }
-      }
-    });
-
-    // Video Sub Swiper (8 Items)
-    new Swiper('.asps-swiper-video', {
-      slidesPerView: 2,
-      spaceBetween: 12,
-      rewind: true,
-      navigation: {
-        prevEl: '.asps-prev-video',
-        nextEl: '.asps-next-video'
-      },
-      breakpoints: {
-        769: {
-          slidesPerView: 4,
-          spaceBetween: 24,
-          slidesPerGroup: 2
-        }
-      }
-    });
-  }
-
-  $(document).ready(function() {
-    initSubPortfolioSwipers();
-  });
-
-
-  /* LUXURY MOBILE GNB DRAWER TOGGLE & ANCHOR NAVIGATION */
-  function openMobileGnb() {
-    $('#gnb').addClass('is-mobile-open');
-    $('#gnbDim').addClass('is-active');
-    $('body').css('overflow', 'hidden');
-  }
-
-  function closeMobileGnb() {
-    $('#gnb').removeClass('is-mobile-open');
-    $('#gnbDim').removeClass('is-active');
-    $('body').css('overflow', '');
-  }
-
-  $(document).on('click', '#gnbOpenBtn, .gnb_open', function(e) {
-    e.preventDefault();
-    openMobileGnb();
-  });
-
-  $(document).on('click', '#gnbCloseBtn, #gnbDim', function(e) {
-    e.preventDefault();
-    closeMobileGnb();
-  });
-
-  $(document).on('click', '.gnb_anchor_link, #gnb a', function() {
-    closeMobileGnb();
-  });
-
-  $(document).on('keydown', function(e) {
-    if (e.key === 'Escape') closeMobileGnb();
-  });
-
-
-  /* ONLINE MARKETING HOVER & TOUCH PAUSE HANDLERS */
-  $(document).on('mouseenter', '.som-stream-stage, .som-stream-track-wrap, .som-card-item, .som-stag-card, .som-col', function() {
-    $('.som-stream-track').css({
-      'animation-play-state': 'paused',
-      '-webkit-animation-play-state': 'paused'
-    });
-  }).on('mouseleave', '.som-stream-stage, .som-stream-track-wrap, .som-card-item, .som-stag-card, .som-col', function() {
-    $('.som-stream-track').css({
-      'animation-play-state': 'running',
-      '-webkit-animation-play-state': 'running'
-    });
-  });
-
-
-  /* SWIPER INITIALIZATION FOR SUB-PORTFOLIOS (PC 4개, 모바일 2개 회전) */
-  function initSubPortfolioSwipers() {
-    if (typeof Swiper === 'undefined') return;
-
-    new Swiper('.asps-swiper-bus', {
-      slidesPerView: 2,
-      spaceBetween: 12,
-      rewind: true,
-      navigation: {
-        prevEl: '.asps-prev-bus',
-        nextEl: '.asps-next-bus'
-      },
-      breakpoints: {
-        769: {
-          slidesPerView: 4,
-          spaceBetween: 22,
-          slidesPerGroup: 2
-        }
-      }
-    });
-
-    new Swiper('.asps-swiper-online', {
-      slidesPerView: 2,
-      spaceBetween: 12,
-      rewind: true,
-      navigation: {
-        prevEl: '.asps-prev-online',
-        nextEl: '.asps-next-online'
-      },
-      breakpoints: {
-        769: {
-          slidesPerView: 4,
-          spaceBetween: 22,
-          slidesPerGroup: 2
-        }
-      }
-    });
-
-    new Swiper('.asps-swiper-video', {
-      slidesPerView: 2,
-      spaceBetween: 12,
-      rewind: true,
-      navigation: {
-        prevEl: '.asps-prev-video',
-        nextEl: '.asps-next-video'
-      },
-      breakpoints: {
-        769: {
-          slidesPerView: 4,
-          spaceBetween: 22,
-          slidesPerGroup: 2
-        }
-      }
-    });
-  }
-
-  // Bind Click on any portfolio card to open Lightbox Modal
-  $(document).on('click', '.main-port-card, .asps-card', function(e) {
-    e.preventDefault();
-    var title = $(this).data('name') || $(this).find('.asps-item-title, h5').text().trim();
-    var img = $(this).data('img') || $(this).find('img').attr('src');
-    var tag = $(this).data('tag') || '광고사례';
-
-    $('#modalTitle').text(title);
-    $('#modalImg').attr('src', img);
-    $('#modalCat').text(tag);
-    $('#modalLoc').text('광주 주요 상권 직영 시공 사례');
-    $('#modalBackdrop').addClass('open');
-  });
-
-  // Modal Close Handlers
-  $(document).on('click', '#modalClose, .portfolio-modal-backdrop', function(e) {
-    if (e.target === this || $(this).attr('id') === 'modalClose') {
-      $('#modalBackdrop').removeClass('open');
-    }
-  });
-
-  $(document).ready(function() {
-    initSubPortfolioSwipers();
-  });
-
-
   
 
-  
-  /* SUB-PORTFOLIO 3-SECTION SWIPER (모바일 1번 75% 메인 + 2번 15% 빼꼼 peek & 1칸씩 회전) */
+  /* ==========================================================================
+     SUB-PORTFOLIO 3-SECTION SWIPER (모바일 1번 75% + 2번 15% 빼꼼 peek & 1칸씩 슬라이딩)
+  ========================================================================== */
   function initAllSubPortfolioSwipers() {
     if (typeof Swiper === 'undefined') return;
 
     var swiperConfig = {
-      slidesPerView: 1.25, /* 1번 사진 75~80% + 2번 사진 15~20% 빼꼼 */
+      slidesPerView: 1.25, /* 모바일: 1번 75~80% 메인 + 2번 15~20% 빼꼼 */
       spaceBetween: 12,
       slidesPerGroup: 1,
       centeredSlides: false,
@@ -932,82 +742,53 @@ $(function() {
     };
 
     // 01 옥외광고 사례
-    new Swiper('.asps-swiper-bus', Object.assign({}, swiperConfig, {
-      navigation: { prevEl: '.asps-prev-bus', nextEl: '.asps-next-bus' }
-    }));
+    try {
+      new Swiper('.asps-swiper-bus', Object.assign({}, swiperConfig, {
+        navigation: { prevEl: '.asps-prev-bus', nextEl: '.asps-next-bus' }
+      }));
+    } catch(e) {}
 
     // 02 온라인마케팅 사례
-    new Swiper('.asps-swiper-online', Object.assign({}, swiperConfig, {
-      navigation: { prevEl: '.asps-prev-online', nextEl: '.asps-next-online' }
-    }));
+    try {
+      new Swiper('.asps-swiper-online', Object.assign({}, swiperConfig, {
+        navigation: { prevEl: '.asps-prev-online', nextEl: '.asps-next-online' }
+      }));
+    } catch(e) {}
 
     // 03 영상제작 사례
-    new Swiper('.asps-swiper-video', Object.assign({}, swiperConfig, {
-      navigation: { prevEl: '.asps-prev-video', nextEl: '.asps-next-video' }
-    }));
+    try {
+      new Swiper('.asps-swiper-video', Object.assign({}, swiperConfig, {
+        navigation: { prevEl: '.asps-prev-video', nextEl: '.asps-next-video' }
+      }));
+    } catch(e) {}
   }
 
-
-  $(document).ready(function() {
-    initAllSubPortfolioSwipers();
-  });
-
-
-    $(document).on('click', '#gnbCloseBtn, .gnb_close_btn, #gnbDim, .gnb_anchor_link', function(e) {
-    $('#gnb').removeClass('is-mobile-open on');
-    $('#gnbDim').fadeOut(200);
-    $('body').removeClass('menu-open');
-  });
-
-
-  /* MOBILE HAMBURGER MENU & COMPLETE BACKGROUND SCROLL LOCK */
-  $(document).on('click', '#gnbOpenBtn, .gnb_open', function(e) {
+  /* ==========================================================================
+     PORTFOLIO LIGHTBOX MODAL (포트폴리오 사례 클릭 시 팝업 오픈)
+  ========================================================================== */
+  $(document).on('click', '.main-port-card, .asps-card', function(e) {
     e.preventDefault();
-    $('#gnb').addClass('is-mobile-open on');
-    $('#gnbDim').fadeIn(200);
-    $('body').addClass('menu-open');
-    if (window.lenis) {
-      try { window.lenis.stop(); } catch(err) {}
+    var title = $(this).data('name') || $(this).find('.asps-item-title, h5').text().trim();
+    var img = $(this).data('img') || $(this).find('img').attr('src');
+    var tag = $(this).data('tag') || '광고사례';
+
+    $('#modalTitle').text(title);
+    $('#modalImg').attr('src', img);
+    $('#modalCat').text(tag);
+    $('#modalLoc').text('광주 주요 상권 직영 시공 사례');
+    $('#modalBackdrop').addClass('open').fadeIn(200);
+  });
+
+  $(document).on('click', '#modalClose, .portfolio-modal-backdrop', function(e) {
+    if (e.target === this || $(this).attr('id') === 'modalClose' || $(this).closest('#modalClose').length) {
+      e.preventDefault();
+      $('#modalBackdrop').removeClass('open').fadeOut(200);
     }
   });
 
-  $(document).on('click', '#gnbCloseBtn, .gnb_close_btn, #gnbDim, .gnb_anchor_link', function(e) {
-    $('#gnb').removeClass('is-mobile-open on');
-    $('#gnbDim').fadeOut(200);
-    $('body').removeClass('menu-open');
-    if (window.lenis) {
-      try { window.lenis.start(); } catch(err) {}
-    }
-  });
-
-  // Prevent wheel / touchmove leak to background body
-  $('#gnb').on('wheel touchmove', function(e) {
-    e.stopPropagation();
-  });
-
-
-        $('#ocmModalImg').attr('src', imgSrc);
-      $('#ocmModalKicker').text(kicker);
-      $('#ocmModalTitle').text(title);
-      $('#ocmModalDesc').text(desc);
-      $('#ocmModalTag').text(tag);
-
-      $('#onlineCardModal').fadeIn(200).css('display', 'flex');
-      $('body').addClass('menu-open');
-      if (window.lenis) { try { window.lenis.stop(); } catch(err){} }
-    }
-  });
-
-  $(document).on('click', '#btnCloseOnlineCardModal, #onlineCardModal', function(e) {
-    if (e.target === this || $(this).is('#btnCloseOnlineCardModal')) {
-      $('#onlineCardModal').fadeOut(200);
-      $('body').removeClass('menu-open');
-      if (window.lenis) { try { window.lenis.start(); } catch(err){} }
-    }
-  });
-
-
-  /* ONLINE MARKETING MOBILE CARD DETAIL POPUP (스크롤 튐 100% 방지) */
+  /* ==========================================================================
+     ONLINE MARKETING CARD DETAIL POPUP (모바일 온라인 카드 클릭 시 팝업 오픈)
+  ========================================================================== */
   $(document).on('click', '.som-stream-card', function(e) {
     if ($(window).width() <= 768) {
       e.preventDefault();
@@ -1035,3 +816,35 @@ $(function() {
       $('#onlineCardModal').removeClass('open').fadeOut(200);
     }
   });
+
+  /* ==========================================================================
+     MOBILE HAMBURGER MENU & SCROLL CONTROL
+  ========================================================================== */
+  $(document).on('click', '#gnbOpenBtn, .gnb_open', function(e) {
+    e.preventDefault();
+    $('#gnb').addClass('is-mobile-open on');
+    $('#gnbDim').fadeIn(200);
+    $('body').addClass('menu-open');
+    if (window.lenis) {
+      try { window.lenis.stop(); } catch(err) {}
+    }
+  });
+
+  $(document).on('click', '#gnbCloseBtn, .gnb_close_btn, #gnbDim, .gnb_anchor_link', function(e) {
+    $('#gnb').removeClass('is-mobile-open on');
+    $('#gnbDim').fadeOut(200);
+    $('body').removeClass('menu-open');
+    if (window.lenis) {
+      try { window.lenis.start(); } catch(err) {}
+    }
+  });
+
+  $('#gnb').on('wheel touchmove', function(e) {
+    e.stopPropagation();
+  });
+
+  /* INITIALIZATION */
+  $(document).ready(function() {
+    initAllSubPortfolioSwipers();
+  });
+
