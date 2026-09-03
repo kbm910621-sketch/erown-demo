@@ -1065,74 +1065,93 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   ============================================ -->
   <section class="am-section" id="process">
     <div class="am-container">
+      
+      <!-- UNIFIED SECTION HEAD -->
       <div class="am-sec-head text-center wow fadeInUp" data-wow-duration="0.7s">
         <span class="ash-kicker">WORKFLOW PIPELINE</span>
         <h2 class="ash-title">마스터플랜</h2>
-        <p class="ash-desc" style="margin:0 auto;">외주 없는 100% 본사 인하우스 전문팀이 기획부터 시공, 보고까지 완벽히 책임지는 4단계 마스터플랜입니다.</p>
+        <p class="ash-desc" style="margin: 0 auto; max-width: 780px;">
+          외주 하청 없는 100% 본사 인하우스 전문팀이 상권 분석부터 출력, 시공, 사후 보고까지 전 과정을 직접 책임집니다.
+        </p>
       </div>
 
+      <!-- HUMAN CRAFTED 4-STEP MASTERPLAN GRID -->
       <div class="am-pipeline-grid wow fadeInUp" data-wow-duration="0.8s">
+        
+        <!-- STEP 01 -->
         <div class="apg-step-card">
           <div class="apg-step-header">
             <span class="apg-huge-gothic-num">01</span>
-            <span class="apg-day-pill">D+1 DAY</span>
+            <span class="apg-status-badge">상권 최적화</span>
           </div>
-          <div class="apg-icon-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
-          <h3 class="apg-step-title">상권 분석 &amp; 노선 믹스</h3>
-          <p class="apg-step-sub">타깃 상권 빅데이터 분석 및 온·오프라인 최적 미디어 믹스 설계</p>
+          <div class="apg-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          </div>
+          <h3 class="apg-step-title">상권 분석 &amp; 노선 설계</h3>
+          <p class="apg-step-sub">상무·수완·봉선·첨단 등 목표 고객의 실제 이동 동선을 분석하여 가장 효과적인 104개 버스 노선과 미디어를 믹스합니다.</p>
           <div class="apg-deliverable-box">
-            <span>핵심 산출물:</span>
-            <strong>상권 분석 보고서 &amp; 최적 노선 믹스</strong>
+            <span>실무 지원:</span>
+            <strong>상권 타깃 분석 &amp; 골든 노선 추천</strong>
           </div>
         </div>
 
+        <!-- STEP 02 -->
         <div class="apg-step-card">
           <div class="apg-step-header">
             <span class="apg-huge-gothic-num">02</span>
-            <span class="apg-day-pill">D+3 DAY</span>
+            <span class="apg-status-badge">맞춤 시안</span>
           </div>
-          <div class="apg-icon-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.67-.75 1.67-1.67 0-.42-.17-.83-.42-1.17-.25-.33-.42-.75-.42-1.16 0-.92.75-1.67 1.67-1.67h1.92c3.08 0 5.58-2.5 5.58-5.58 0-4.83-4.42-8.75-9.42-8.75z"/><circle cx="7.5" cy="11.5" r="1.5"/><circle cx="12" cy="7.5" r="1.5"/><circle cx="16.5" cy="11.5" r="1.5"/></svg></div>
-          <h3 class="apg-step-title">1:1 디자인 시안 기획</h3>
-          <p class="apg-step-sub">도심 속에서 3초 안에 읽히는 실사 래핑 및 영상 스토리보드 제작</p>
+          <div class="apg-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.67-.75 1.67-1.67 0-.42-.17-.83-.42-1.17-.25-.33-.42-.75-.42-1.16 0-.92.75-1.67 1.67-1.67h1.92c3.08 0 5.58-2.5 5.58-5.58 0-4.83-4.42-8.75-9.42-8.75z"/><circle cx="7.5" cy="11.5" r="1.5"/><circle cx="12" cy="7.5" r="1.5"/><circle cx="16.5" cy="11.5" r="1.5"/></svg>
+          </div>
+          <h3 class="apg-step-title">3면 실측 1:1 디자인 기획</h3>
+          <p class="apg-step-sub">도심 주행 중 3초 안에 브랜드가 각인되도록 차도면(3.7m), 인도면(3m), 후면 규격에 맞춘 전담 디자이너 1:1 시안을 기획합니다.</p>
           <div class="apg-deliverable-box">
-            <span>핵심 산출물:</span>
-            <strong>3면 실측 1:1 맞춤 디자인 시안 3종</strong>
+            <span>실무 지원:</span>
+            <strong>3면 실측 고시인성 시안 3종 제공</strong>
           </div>
         </div>
 
+        <!-- STEP 03 -->
         <div class="apg-step-card">
           <div class="apg-step-header">
             <span class="apg-huge-gothic-num">03</span>
-            <span class="apg-day-pill">D+7 DAY</span>
+            <span class="apg-status-badge">본사 직영</span>
           </div>
-          <div class="apg-icon-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
-          <h3 class="apg-step-title">직영 출력 &amp; 책임 시공</h3>
-          <p class="apg-step-sub">LG 하우시스 정품 솔벤 시트 자체 출력과 본사 10년 경력팀 직접 시공</p>
+          <div class="apg-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          </div>
+          <h3 class="apg-step-title">정품 출력 &amp; 책임 시공</h3>
+          <p class="apg-step-sub">LG 하우시스 최고급 내후성 정품 솔벤 시트를 자체 출력실에서 출력하고, 본사 10년 경력 시공팀이 들뜸 없이 직접 시공합니다.</p>
           <div class="apg-deliverable-box">
-            <span>핵심 산출물:</span>
-            <strong>LG 하우시스 최고급 내후성 시공</strong>
+            <span>실무 지원:</span>
+            <strong>LG 정품 시트 직영 출력 및 완벽 부착</strong>
           </div>
         </div>
 
+        <!-- STEP 04 -->
         <div class="apg-step-card highlight">
           <div class="apg-step-header">
             <span class="apg-huge-gothic-num blue">04</span>
-            <span class="apg-day-pill gold">D+14 DAY</span>
+            <span class="apg-status-badge blue">투명 증빙</span>
           </div>
-          <div class="apg-icon-circle blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f3f8c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg></div>
-          <h3 class="apg-step-title">실시간 증빙 &amp; 리포트</h3>
-          <p class="apg-step-sub">시공 직후 차량 4면 번호판 실사 촬영본 전송 및 주간 순위 투명 보고</p>
+          <div class="apg-icon-circle blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f3f8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
+          </div>
+          <h3 class="apg-step-title">4면 실사 증빙 &amp; 사후 관리</h3>
+          <p class="apg-step-sub">시공 직후 차량 4면 번호판 실사 촬영본을 즉시 전송해 드리며, 계약 기간 동안 훼손 관리 및 주간 순위 리포트를 투명하게 보고합니다.</p>
           <div class="apg-deliverable-box blue">
-            <span>핵심 산출물:</span>
-            <strong>차량 4면 실사 증빙철 &amp; 주간 리포트</strong>
+            <span>실무 지원:</span>
+            <strong>차량 4면 실사 증빙철 &amp; 1:1 전담 관리</strong>
           </div>
         </div>
+
       </div>
+
     </div>
   </section>
 
-
-  <!-- ============================================
+    <!-- ============================================
        08 GAON-N GET STARTED MASTER CTA (SOLID NAVY ROUNDED BOX & 4 FLOATING PILLS)
   ============================================ -->
   <section class="am-get-started-sec" id="getStarted">

@@ -2802,3 +2802,45 @@ span.mdt-pill,
   text-shadow: 0 3px 14px rgba(0, 0, 0, 0.85) !important;
   word-break: keep-all !important;
 }
+
+
+/* ==========================================================================
+   HUMANIZED MASTERPLAN WORKFLOW PIPELINE STYLING
+========================================================================== */
+.apg-status-badge {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  color: #475569 !important;
+  background: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  padding: 5px 12px !important;
+  border-radius: 100px !important;
+  letter-spacing: -0.2px !important;
+}
+
+.apg-status-badge.blue {
+  color: #1855b7 !important;
+  background: #eef4ff !important;
+  border-color: rgba(24, 85, 183, 0.25) !important;
+}
+
+.apg-step-card {
+  padding: 34px 28px !important;
+  border-radius: 28px !important;
+}
+
+.apg-step-title {
+  font-size: 20px !important;
+  font-weight: 900 !important;
+  color: #0f172a !important;
+  margin: 14px 0 8px !important;
+  letter-spacing: -0.4px !important;
+}
+
+.apg-step-sub {
+  font-size: 14.5px !important;
+  line-height: 1.65 !important;
+  color: #64748b !important;
+  margin: 0 0 20px !important;
+  word-break: keep-all !important;
+}
