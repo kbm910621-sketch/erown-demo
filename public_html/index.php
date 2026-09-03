@@ -294,13 +294,14 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         
         <!-- LEFT COLUMN: VERTICAL SERVICE NAVIGATION LIST -->
         <div class="mos-nav-col">
-          <ul class="mos-nav-list" id="mosNavList">
+                    <ul class="mos-nav-list" id="mosNavList">
             
+            <!-- 01. 시내버스 104개 전 노선 -->
             <li class="mos-nav-item on" 
                 data-id="bus_all"
                 data-kicker="OOH 01 · 광주 대표 교통매체"
                 data-lead="광주 전역을 1일 18시간 동안 반복 주행하며 상무대로·무진대로·금남로 등 주요 간선도로 운전자와 보행자의 시선을 압도하는 광주 1등 랜드마크 빌보드입니다."
-                data-tags="광주 104개 전 노선,1일 18시간 운행,배차 점유율 98%,직영 시공 관리"
+                data-tags="광주 104개 전 노선,1일 18시간 운행,배차 점유율 98%,본사 직영 시공"
                 data-banner-title="광주 104개 전 노선, 1일 18시간 움직이는 랜드마크"
                 data-banner-bg="#0f172a"
                 data-banner-img="/images/bs_ad/main_sec02_img.jpg"
@@ -310,6 +311,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <span class="mni-arrow">›</span>
             </li>
 
+            <!-- 02. 버스 차도면 대형 래핑 -->
             <li class="mos-nav-item" 
                 data-id="bus_road"
                 data-kicker="OOH 02 · 왕복 8차선 압도"
@@ -324,6 +326,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <span class="mni-arrow">›</span>
             </li>
 
+            <!-- 03. 버스 인도면 표준 래핑 -->
             <li class="mos-nav-item" 
                 data-id="bus_side"
                 data-kicker="OOH 03 · 정류장 승객 밀착"
@@ -338,6 +341,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <span class="mni-arrow">›</span>
             </li>
 
+            <!-- 04. 버스 후면 번호판 래핑 -->
             <li class="mos-nav-item" 
                 data-id="bus_back"
                 data-kicker="OOH 04 · 신호 대기 강제 노출"
@@ -352,23 +356,40 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <span class="mni-arrow">›</span>
             </li>
 
+            <!-- 05. 버스 내부창문 포스터 (따로 분리) -->
             <li class="mos-nav-item" 
-                data-id="bus_in"
-                data-kicker="OOH 05 · 시청각 동시 독점"
-                data-lead="목적지까지 이동하는 30분간 승객 정면에 머무는 중앙창문 포스터와 정류소 도착 직전 전문 성우 음성안내 방송을 결합한 실내 미디어입니다."
-                data-tags="중앙창문 1100×500mm,성우 7초 음성방송,탑승객 100% 도달,시청각 독점"
-                data-banner-title="탑승 30분간 승객의 시각과 청각을 동시 독점"
+                data-id="bus_in_window"
+                data-kicker="OOH 05 · 탑승객 시선 독점"
+                data-lead="버스 내부 좌석 및 입석 승객의 시선 정면에 위치하여 이동 시간 30분 동안 자연스럽게 내용을 정독시키는 고밀도 정보 전달 매체입니다."
+                data-tags="중앙창문 1100×500mm,하차문 포스터,탑승객 100% 강제 노출,정독률 1위"
+                data-banner-title="탑승 30분간 승객 눈높이 정면에 머무는 중앙창문 포스터"
                 data-banner-bg="#0d9488"
                 data-banner-img="/images/bs_ad/port_in03.jpg"
                 data-guide="guideBusIn"
-                data-spec="창문 1,100×500mm / 음성 7초">
-              <span class="mni-txt">버스 내부 창문 &amp; 음성방송</span>
+                data-spec="실측 규격: 1,100 × 500 mm">
+              <span class="mni-txt">버스 내부창문 포스터 (중앙창·하차문)</span>
               <span class="mni-arrow">›</span>
             </li>
 
+            <!-- 06. 버스 음성안내 방송 (따로 분리) -->
+            <li class="mos-nav-item" 
+                data-id="bus_voice"
+                data-kicker="OOH 06 · 청각 100% 독점"
+                data-lead="주요 정류소 도착 직전 차내 전체에 송출되는 전문 성우 음성 방송으로, 시각적 피로 없이 청각을 통해 확실한 브랜드 네이밍을 각인시킵니다."
+                data-tags="전문 성우 녹음,7초 음성방송(45자 이내),정류소 도착 전 송출,청각 100% 독점"
+                data-banner-title="정류소 도착 직전 전문 성우 7초 음성안내 방송"
+                data-banner-bg="#0891b2"
+                data-banner-img="/images/bs_ad/port_in01.jpg"
+                data-guide="guideBusIn"
+                data-spec="송출 시간: 7초 (성우 음성 45자 이내)">
+              <span class="mni-txt">버스 음성안내 방송 (전문 성우 7초)</span>
+              <span class="mni-arrow">›</span>
+            </li>
+
+            <!-- 07. 광주 전역 택시 래핑 -->
             <li class="mos-nav-item" 
                 data-id="taxi"
-                data-kicker="OOH 06 · 24시간 골목 밀착"
+                data-kicker="OOH 07 · 24시간 골목 밀착"
                 data-lead="광주 전역 200여 대 법인·개인택시가 주요 번화가와 골목길을 24시간 365일 쉼 없이 기동하며 보행자 눈높이에서 밀착 노출됩니다."
                 data-tags="택시 양측면 2100×320mm,24시간 365일 기동,골목상권 침투,광주 전역 배차"
                 data-banner-title="골목상권부터 번화가까지 24시간 달리는 택시 래핑"
@@ -376,42 +397,74 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 data-banner-img="/images/ev1.jpg"
                 data-guide="guideTaxiDelivery"
                 data-spec="실측 규격: 2,100 × 320 mm">
-              <span class="mni-txt">광주 전역 택시 양측면 래핑</span>
+              <span class="mni-txt">광주 전역 택시 래핑 광고</span>
               <span class="mni-arrow">›</span>
             </li>
 
+            <!-- 08. 아파트 택배차 3면 래핑 (택배차광고 신설) -->
             <li class="mos-nav-item" 
-                data-id="did"
-                data-kicker="OOH 07 · 랜드마크 사이니지"
-                data-lead="일일 유동인구 10만 명의 광주종합버스터미널(유스퀘어) 및 상무지구 핵심 교차로 4K 고휘도 LED 전광판에 15초 영상을 하루 100회 이상 연속 송출합니다."
-                data-tags="55~85인치 4K UHD,일 100회 이상 송출,유스퀘어 터미널,고휘도 LED"
-                data-banner-title="유스퀘어 터미널 &amp; 상무지구 대형 4K DID 전광판"
+                data-id="delivery"
+                data-kicker="OOH 08 · 주거 밀착 래핑"
+                data-lead="아파트 단지와 주택가 골목길 안쪽까지 깊숙이 진입하여 주민들의 일상 동선 정면에 3면 와이드 스케일로 장시간 노출되는 주거 상권 1등 매체입니다."
+                data-tags="택배차 3면 풀래핑,차도·인도·후면 3면,아파트 단지 주거 밀착,CJ·한진·로젠 연계"
+                data-banner-title="5개 구 아파트 단지 주거 밀착 택배 탑차 3면 래핑"
+                data-banner-bg="#ea580c"
+                data-banner-img="/images/bs_ad/baro_18.jpg"
+                data-guide="guideTaxiDelivery"
+                data-spec="측면 2,800×1,400mm / 후면 1,400×1,400mm">
+              <span class="mni-txt">아파트 택배차 3면 래핑 광고</span>
+              <span class="mni-arrow">›</span>
+            </li>
+
+            <!-- 09. 유스퀘어 광천터미널 (쉘터광고 제외) -->
+            <li class="mos-nav-item" 
+                data-id="usquare"
+                data-kicker="OOH 09 · 호남 최대 허브"
+                data-lead="호남 최대 교통 허브인 유스퀘어 광천터미널 내 대합실, 승하차장, 주요 통로의 대형 조명 라이트박스로 광주 전역 및 외지 유입 인구를 압도합니다."
+                data-tags="유스퀘어 광천터미널,대합실 와이드 조명,승하차장 라이트박스,일 10만 유동인구"
+                data-banner-title="일 유동인구 10만 명 유스퀘어 터미널 대합실 &amp; 와이드 조명"
                 data-banner-bg="#7e22ce"
                 data-banner-img="/images/bs_ad/did_01.jpg"
                 data-guide="guideSubwayCart"
-                data-spec="55~85인치 4K UHD LED">
-              <span class="mni-txt">유스퀘어 터미널 &amp; 대형 DID 전광판</span>
+                data-spec="터미널 내부 와이드 라이트박스">
+              <span class="mni-txt">유스퀘어 광천터미널 광고</span>
               <span class="mni-arrow">›</span>
             </li>
 
+            <!-- 10. DID 디지털 전광판 (따로 분리) -->
+            <li class="mos-nav-item" 
+                data-id="did_screen"
+                data-kicker="OOH 10 · 4K UHD LED"
+                data-lead="상무지구 핵심 교차로 빌딩 옥외 LED 및 지하철 환승역사 내 고휘도 DID 스크린을 통해 15초 풀HD/4K 모션그래픽 영상을 하루 100회 이상 연속 송출합니다."
+                data-tags="55~85인치 4K UHD LED,15초 모션영상 송출,일 100회 이상 반복,상무지구 전광판"
+                data-banner-title="도심 핵심 교차로 &amp; 역사 내 4K UHD 초고화질 DID 전광판"
+                data-banner-bg="#6b21a8"
+                data-banner-img="/images/bs_ad/did_02.jpg"
+                data-guide="guideSubwayCart"
+                data-spec="55~85인치 4K UHD 고휘도 LED">
+              <span class="mni-txt">DID 디지털 전광판</span>
+              <span class="mni-arrow">›</span>
+            </li>
+
+            <!-- 11. 대형마트 쇼핑카트 (무빙워크 제외) -->
             <li class="mos-nav-item" 
                 data-id="cart"
-                data-kicker="OOH 08 · 실구매 3050 주부"
-                data-lead="이마트·롯데마트 쇼핑카트 손잡이에 부착되어 실질적인 구매 결정권을 가진 3050 가족 고객과 60분간 1:1로 동행하며 높은 구매 전환을 유도합니다."
-                data-tags="쇼핑카트 280×160mm,마트 무빙워크,3050 주부 타깃,60분 연속 주시"
-                data-banner-title="마트 쇼핑카트 1,000대, 60분간 고객과 1:1 동행"
+                data-kicker="OOH 11 · 3050 주부 타깃"
+                data-lead="광주 전역 이마트, 롯데마트 쇼핑카트 전면 플레이트에 부착되어 실질적인 가계 구매력을 가진 3050 주부 고객과 1시간 이상 1:1로 밀착 동행합니다."
+                data-tags="쇼핑카트 280×160mm,이마트·롯데마트 1000대,3050 주부 타깃,60분 밀착 노출"
+                data-banner-title="이마트·롯데마트 쇼핑카트 1,000대, 60분간 고객과 1:1 동행"
                 data-banner-bg="#b91c1c"
                 data-banner-img="/images/sub_bg_02.jpg"
                 data-guide="guideSubwayCart"
                 data-spec="실측 규격: 280 × 160 mm">
-              <span class="mni-txt">대형마트 쇼핑카트 &amp; 무빙워크</span>
+              <span class="mni-txt">대형마트 쇼핑카트 광고</span>
               <span class="mni-arrow">›</span>
             </li>
 
           </ul>
         </div>
 
-        <!-- RIGHT COLUMN: DYNAMIC LIVE PREVIEW STAGE & HUGE DETAIL BUTTON -->
+        <!-- RIGHT COLUMN: DYNAMIC LIVE PREVIEW STAGESTAGE & HUGE DETAIL BUTTON -->
         <div class="mos-content-col">
           
           <!-- TOP LEAD & TAGS -->
