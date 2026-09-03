@@ -5864,29 +5864,34 @@ body.menu-open {
 
 
 
+
+
 /* ==========================================================================
-   08 EXACT MASSTIGE-STYLE ALL-IN-ONE INLINE FOOTER (media_1788420698073.png)
+   08 EXACT MASSTIGE-STYLE INLINE FOOTER (딥 네이비 럭셔리 & 시원한 높이와 간격)
 ========================================================================== */
 .am-master-conversion-section {
   width: 100%;
-  padding: 40px 0 90px;
+  padding: 50px 0 100px;
   background: #f8fafc;
 }
 
-/* THE EXACT ROUNDED CONTAINER BOX */
+/* DEEP LUXURY MIDNIGHT NAVY ROUNDED CARD BOX */
 .masstige-agency-box {
   width: 100% !important;
   box-sizing: border-box !important;
-  background: #2563eb;
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
-  border-radius: 28px;
-  padding: 56px 54px 44px;
+  background: #07152c;
+  background: linear-gradient(145deg, #07152c 0%, #0d2244 50%, #061327 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 32px;
+  padding: 84px 64px 74px; /* 시원하고 웅장한 높이와 패딩 */
   display: grid;
   grid-template-columns: 1fr 1.35fr;
-  gap: 56px;
+  gap: 64px;
   align-items: stretch;
   color: #ffffff;
-  box-shadow: 0 20px 60px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 30px 80px rgba(7, 21, 44, 0.25), 0 0 0 1px rgba(56, 189, 248, 0.08);
+  position: relative;
+  overflow: hidden;
 }
 
 /* LEFT COLUMN */
@@ -5894,50 +5899,50 @@ body.menu-open {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 40px;
+  gap: 48px;
 }
 
 .masstige-left-top {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 .masstige-main-title {
-  font-size: 25px;
-  font-weight: 800;
+  font-size: 28px;
+  font-weight: 900;
   line-height: 1.35;
   color: #ffffff;
   margin: 0;
-  letter-spacing: -0.6px;
+  letter-spacing: -0.8px;
   font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
 }
 
 .masstige-main-phone {
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 900;
   color: #ffffff;
   text-decoration: none;
   line-height: 1.1;
   letter-spacing: -1px;
   font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
-  transition: opacity 0.2s;
+  transition: color 0.2s;
 }
 
 .masstige-main-phone:hover {
-  opacity: 0.88;
+  color: #38bdf8;
 }
 
 .masstige-left-bottom {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .masstige-corp-tagline {
   font-size: 13.5px;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
   margin: 0;
 }
 
@@ -5948,8 +5953,8 @@ body.menu-open {
 
 .masstige-corp-addr {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.75);
-  margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 10px;
 }
 
 .masstige-sns-row {
@@ -5960,24 +5965,27 @@ body.menu-open {
 }
 
 .masstige-sns-icon {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff !important;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: all 0.2s;
 }
 
 .masstige-sns-icon:hover {
-  background: rgba(255, 255, 255, 0.35);
+  background: #1855b7;
+  border-color: #38bdf8;
+  transform: translateY(-2px);
 }
 
 .masstige-download-link {
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.85) !important;
   text-decoration: none;
@@ -5986,7 +5994,7 @@ body.menu-open {
 }
 
 .masstige-download-link:hover {
-  color: #ffffff !important;
+  color: #38bdf8 !important;
   text-decoration: underline;
 }
 
@@ -5998,37 +6006,39 @@ body.menu-open {
 .masstige-form-wrap {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px; /* 필드 간 여유로운 간격 */
 }
 
 .masstige-input-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 16px;
 }
 
-/* PILL INPUTS MATCHING SCREENSHOT EXACTLY */
+/* PILL INPUTS WITH GENEROUS HEIGHT */
 .masstige-field-pill {
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 10px;
-  height: 48px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  height: 54px; /* 54px 시원한 높이 */
   display: flex;
   align-items: center;
-  padding: 0 14px;
-  gap: 12px;
-  transition: all 0.2s ease;
+  padding: 0 18px;
+  gap: 14px;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
 }
 
 .masstige-field-pill:focus-within {
-  background: rgba(255, 255, 255, 0.22);
-  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
 }
 
 .mfp-label {
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 800;
-  color: #ffffff;
+  color: #38bdf8;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -6039,52 +6049,56 @@ body.menu-open {
   border: none;
   outline: none;
   color: #ffffff;
-  font-size: 13.5px;
+  font-size: 14px;
   font-family: inherit;
+  font-weight: 500;
 }
 
 .mfp-input::placeholder {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.4);
 }
 
-/* TEXTAREA PILL */
+/* TEXTAREA PILL WITH GENEROUS HEIGHT */
 .masstige-textarea-pill {
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 10px;
-  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  padding: 16px 18px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  transition: all 0.2s ease;
+  gap: 10px;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
 }
 
 .masstige-textarea-pill:focus-within {
-  background: rgba(255, 255, 255, 0.22);
-  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
 }
 
 .mfp-label-top {
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 800;
-  color: #ffffff;
+  color: #38bdf8;
 }
 
 .mfp-textarea {
   width: 100%;
-  height: 120px;
+  height: 135px; /* 135px 시원한 텍스트에리어 */
   background: transparent;
   border: none;
   outline: none;
   color: #ffffff;
-  font-size: 13.5px;
+  font-size: 14px;
   font-family: inherit;
+  font-weight: 500;
   resize: none;
   line-height: 1.6;
 }
 
 .mfp-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* ACTION ROW (PRIVACY + SUBMIT BUTTON) */
@@ -6092,9 +6106,9 @@ body.menu-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 6px;
+  margin-top: 8px;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 16px;
 }
 
 .masstige-privacy-group {
@@ -6119,61 +6133,64 @@ body.menu-open {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #ffffff;
+  background: #38bdf8;
   display: inline-block;
   position: relative;
   transition: all 0.2s;
+  box-shadow: 0 0 6px rgba(56, 189, 248, 0.6);
 }
 
 .masstige-native-chk:not(:checked) + .masstige-custom-dot {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
 }
 
 .masstige-privacy-text {
   font-size: 12.5px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 600;
 }
 
 .masstige-privacy-badge {
-  background: #ffffff;
-  color: #1d4ed8 !important;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff !important;
   text-decoration: none;
   font-size: 11px;
-  font-weight: 800;
-  padding: 2px 10px;
+  font-weight: 700;
+  padding: 3px 10px;
   border-radius: 100px;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
 }
 
 .masstige-privacy-badge:hover {
-  opacity: 0.9;
+  background: #1855b7;
+  border-color: #38bdf8;
 }
 
-/* THE SUBMIT BUTTON MATCHING SCREENSHOT */
+/* THE SUBMIT BUTTON MATCHING SCREENSHOT IN EXECUTIVE BLUE */
 .masstige-submit-btn {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  background: #1855b7;
-  background: linear-gradient(135deg, #1d4ed8 0%, #0f3d99 100%);
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  gap: 14px;
+  background: linear-gradient(135deg, #1855b7 0%, #0284c7 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
   color: #ffffff;
-  padding: 8px 10px 8px 22px;
+  padding: 10px 14px 10px 26px;
   border-radius: 100px;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
+  box-shadow: 0 10px 26px rgba(24, 85, 183, 0.4);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .masstige-submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.35);
-  background: #0f3d99;
+  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.5);
+  background: linear-gradient(135deg, #0f4296 0%, #0369a1 100%);
 }
 
 .msb-label {
-  font-size: 14.5px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: -0.3px;
   color: #ffffff;
@@ -6183,7 +6200,7 @@ body.menu-open {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #000000;
+  background: #07152c;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6191,44 +6208,48 @@ body.menu-open {
 }
 
 .masstige-submit-btn:hover .msb-circle {
-  transform: scale(1.08);
+  transform: scale(1.1);
+  background: #0f2347;
 }
 
 .msb-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: #ffffff;
+  background: #38bdf8;
+  box-shadow: 0 0 6px #38bdf8;
 }
 
 /* RIGHT FOOTER LEGAL META */
 .masstige-legal-meta {
-  margin-top: 14px;
+  margin-top: 18px;
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.4;
+  gap: 4px;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.5;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
 }
 
 .mlm-line {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 .mlm-copy {
-  margin: 3px 0 0;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 10.5px;
+  margin: 2px 0 0;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
 }
 
 @media (max-width: 991px) {
   .masstige-agency-box {
     grid-template-columns: 1fr;
-    padding: 40px 30px;
-    gap: 36px;
+    padding: 50px 32px;
+    gap: 40px;
   }
 }
 
@@ -6238,15 +6259,21 @@ body.menu-open {
   }
   .masstige-agency-box {
     margin: 0 12px;
-    padding: 34px 20px 28px;
-    border-radius: 20px;
+    padding: 38px 20px 32px;
+    border-radius: 22px;
   }
   .masstige-main-phone {
     font-size: 32px;
   }
   .masstige-input-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 12px;
+  }
+  .masstige-field-pill {
+    height: 48px;
+  }
+  .masstige-textarea-pill textarea {
+    height: 110px;
   }
   .masstige-action-row {
     flex-direction: column;
@@ -6256,72 +6283,6 @@ body.menu-open {
   .masstige-submit-btn {
     width: 100%;
     justify-content: space-between;
-    height: 48px;
-  }
-}
-
-
-/* ==========================================================================
-   01-B SIMPLE CLEAN CENTERED CTA BUTTON (군더더기 없는 심플 버튼)
-========================================================================== */
-.am-simple-mid-cta {
-  width: 100%;
-  padding: 16px 0 44px;
-  text-align: center;
-}
-
-.am-simple-inquiry-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 15px 36px;
-  border-radius: 100px;
-  background: #0f172a;
-  color: #ffffff !important;
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: -0.2px;
-  text-decoration: none;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  border: 1.5px solid #1e293b;
-}
-
-.am-simple-inquiry-btn:hover {
-  background: #1855b7;
-  border-color: #1855b7;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(24, 85, 183, 0.28);
-}
-
-@media (max-width: 768px) {
-  .am-simple-mid-cta {
-    padding: 10px 16px 36px;
-  }
-  .am-simple-inquiry-btn {
-    width: 100%;
-    max-width: 320px;
     height: 50px;
-    padding: 0 20px;
-    box-sizing: border-box;
   }
-}
-
-/* ==========================================================================
-   NATURAL SPEC BADGE (AI 하늘색 탈피 & 고급 백색/다크 글래스 뱃지)
-========================================================================== */
-.mhb-spec-badge {
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  background: rgba(15, 23, 42, 0.8) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  padding: 6px 14px !important;
-  border-radius: 100px !important;
-  width: max-content !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
-  letter-spacing: -0.2px !important;
 }

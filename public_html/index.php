@@ -571,18 +571,6 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </section>
 
-          <!-- ============================================
-       01-B SIMPLE CLEAN CENTERED INQUIRY BUTTON (심플 버튼 전면 교체)
-  ============================================ -->
-  <div class="am-simple-mid-cta wow fadeInUp" data-wow-duration="0.6s">
-    <div class="am-container" style="text-align: center;">
-      <a href="/board/estmate/write.php" class="am-simple-inquiry-btn">
-        <span>1:1 맞춤 견적 및 제안서 신청</span>
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-      </a>
-    </div>
-  </div>
-
   <section class="am-section am-bg-white" id="online">
     <div class="am-container">
       
