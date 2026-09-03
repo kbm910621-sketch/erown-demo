@@ -2778,3 +2778,115 @@ body.modal-lock { overflow:hidden !important; }
   .acm-title { font-size: 28px; }
   .acm-partner-card { padding: 10px 18px; font-size: 13.5px; }
 }
+
+
+/* ==========================================================================
+   POLISHED OOH STAGE TEXT & TAG PILLS STYLING
+========================================================================== */
+.mos-lead-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  margin-bottom: 4px !important;
+}
+
+.mos-dyn-kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  color: #1855b7 !important;
+  background: rgba(24, 85, 183, 0.08) !important;
+  border: 1px solid rgba(24, 85, 183, 0.25) !important;
+  padding: 5px 14px !important;
+  border-radius: 100px !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  width: max-content !important;
+}
+
+.mos-dyn-lead {
+  font-size: 17px !important;
+  line-height: 1.65 !important;
+  color: #1e293b !important;
+  margin: 0 !important;
+  font-weight: 600 !important;
+  word-break: keep-all !important;
+}
+
+.mos-dyn-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-top: 4px !important;
+}
+
+.mos-dyn-tags .mdt-pill,
+.mdt-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #334155 !important;
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  padding: 6px 14px !important;
+  border-radius: 100px !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03) !important;
+  white-space: nowrap !important;
+}
+
+/* HIGH-CONTRAST BANNER OVERLAY CONTENT */
+.mos-hero-banner {
+  position: relative !important;
+  width: 100% !important;
+  height: 480px !important;
+  border-radius: 30px !important;
+  overflow: hidden !important;
+  background: #0f172a !important;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12) !important;
+}
+
+.mhb-scrim {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(to top, rgba(10, 18, 40, 0.96) 0%, rgba(10, 18, 40, 0.6) 45%, rgba(10, 18, 40, 0.15) 100%) !important;
+  pointer-events: none !important;
+}
+
+.mhb-overlay-content {
+  position: absolute !important;
+  bottom: 36px !important;
+  left: 36px !important;
+  right: 36px !important;
+  z-index: 3 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  align-items: flex-start !important;
+}
+
+.mhb-spec-badge {
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  color: #38bdf8 !important;
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.5) !important;
+  padding: 6px 16px !important;
+  border-radius: 100px !important;
+  width: max-content !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+}
+
+.mhb-title {
+  font-size: 30px !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  line-height: 1.32 !important;
+  letter-spacing: -0.6px !important;
+  margin: 0 !important;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8) !important;
+  word-break: keep-all !important;
+}

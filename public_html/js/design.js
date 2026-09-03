@@ -640,6 +640,8 @@ $(function() {
 
   
 
+  
+
   /* MASSTIGE.IO OUR SERVICES TAB SWITCHER & CASCADE REVEAL MOTION */
   $(document).on('click mouseenter', '.mos-nav-item', function() {
     var $this = $(this);
@@ -648,12 +650,13 @@ $(function() {
     $('.mos-nav-item').removeClass('on');
     $this.addClass('on');
 
-    var kicker = $this.data('kicker');
-    var lead = $this.data('lead');
-    var tags = ($this.data('tags') || '').split(',');
-    var title = $this.data('banner-title');
-    var img = $this.data('banner-img');
-    var spec = $this.data('spec');
+    var kicker = $this.data('kicker') || 'OOH MEDIA';
+    var lead = $this.data('lead') || '';
+    var rawTags = $this.data('tags') || '';
+    var tags = typeof rawTags === 'string' ? rawTags.split(',') : [];
+    var title = $this.data('banner-title') || '';
+    var img = $this.data('banner-img') || '/images/bs_ad/main_sec02_img.jpg';
+    var spec = $this.data('spec') || '';
     var guide = $this.data('guide') || 'guideBusOut';
 
     $('#mosDynKicker').text(kicker);
@@ -665,8 +668,9 @@ $(function() {
 
     var tagsHtml = '';
     for (var i = 0; i < tags.length; i++) {
-      if (tags[i].trim()) {
-        tagsHtml += '<span class="mdt-pill">' + tags[i].trim() + '</span>';
+      var t = tags[i].trim();
+      if (t) {
+        tagsHtml += '<span class="mdt-pill">' + t + '</span>';
       }
     }
     $('#mosDynTags').html(tagsHtml);
