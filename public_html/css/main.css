@@ -6873,3 +6873,23 @@ body.menu-open {
     min-height: 380px !important;
   }
 }
+
+
+/* ==========================================================================
+   VIDEO PORTFOLIO STRIP WHITE TEXT FIX
+========================================================================== */
+.asps-title.white,
+.am-sub-port-strip.dark .asps-title {
+  color: #ffffff !important;
+}
+
+.asps-kicker.cyan,
+.am-sub-port-strip.dark .asps-kicker {
+  color: #ffffff !important;
+  opacity: 0.95 !important;
+}
+
+.am-sub-port-strip.dark .asps-more-link {
+  color: #ffffff !important;
+  opacity: 0.9 !important;
+}
