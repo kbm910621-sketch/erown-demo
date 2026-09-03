@@ -14,35 +14,14 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
 
     <section class="content contact-page">
 
-      <!-- 페이지 헤더 -->
-      <div class="port-page-head">
-        <span class="am-sub-kicker wow fadeInUp" data-wow-duration="0.6s">GAON-N 1:1 CONSULTING &amp; ESTIMATE</span>
-        <h1 class="port-page-title wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.1s">1:1 맞춤 <span>견적 상담 신청</span></h1>
-        <p class="port-page-desc wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.2s">광주 104개 시내버스부터 온라인 1위 마케팅, 4K 영상까지 외주 없는 본사 전문팀이 최적의 미디어 믹스를 제안합니다.</p>
+            <!-- SUBPAGE HEADER -->
+      <div class="estimate-page-header wow fadeInUp" data-wow-duration="0.6s">
+        <span class="eph-kicker">GAON-N 1:1 CONSULTING &amp; ESTIMATE</span>
+        <h1 class="eph-title">1:1 맞춤 <span>견적 상담 신청</span></h1>
+        <p class="eph-desc">
+          광주 104개 시내버스부터 스마트플레이스, 4K 시네마 영상까지 외주 없는 본사 전문팀이 최적의 미디어 플랜을 제안해 드립니다.
+        </p>
       </div>
-
-      <!-- CONSULT SECTION: 럭셔리 폼 컨테이너 -->
-      <div class="contact-consult-wrap">
-        <div class="contact-consult-section">
-
-          <div class="consult-right" style="max-width:880px; margin:0 auto; width:100%;">
-            <form name="frm" id="contactForm" method="post" action="process_write.php">
-
-              <!-- 01 회사 정보 -->
-              <div class="cf-section-head first anim">
-                <span class="cf-num">01</span>
-                <span class="cf-stitle">광고주 및 담당자 정보</span>
-              </div>
-              <div class="cf-row anim">
-                <div class="cf-field">
-                  <label>회사명 / 상호 <span>*</span></label>
-                  <input type="text" name="in_company" id="in_company" class="cf-input" placeholder="예: 가온메디컬의원 / 가온학원" required>
-                </div>
-                <div class="cf-field">
-                  <label>담당자명 <span>*</span></label>
-                  <input type="text" name="in_name" id="in_name" class="cf-input" placeholder="담당자 성함을 입력하세요" required>
-                </div>
-              </div>
               <div class="cf-field anim">
                 <label>직급</label>
                 <select name="in_position" id="in_position" class="cf-select cf-select-sm">
@@ -126,10 +105,12 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
                 <label for="agree">개인정보 수집 및 이용에 동의합니다. (상담 및 견적 안내 목적)</label>
               </div>
 
-              <div class="cf-btn-wrap anim" style="margin-top:32px;">
-                <button type="submit" class="cf-submit-btn">
+                            <div class="cf-btn-wrap anim">
+                <button type="submit" class="cf-luxury-submit-btn" id="btnSubmitEstimate">
                   <span>1:1 맞춤 견적 및 제안서 신청하기</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  <div class="clsb-circle">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </div>
                 </button>
               </div>
 
