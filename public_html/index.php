@@ -571,8 +571,25 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </section>
 
-  <section class="am-section am-bg-white" id="online">
+    <section class="am-section am-bg-white" id="online">
     <div class="am-container">
+      
+      <!-- TOP HEADER (01 옥외광고 섹션과 1:1 완벽 일치하는 상단 헤더) -->
+      <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
+        <div class="ash-flex">
+          <div>
+            <span class="ash-kicker">02 / DIGITAL MARKETING SOLUTIONS</span>
+            <h2 class="ash-title">온라인 마케팅 솔루션</h2>
+            <p class="ash-desc">네이버 스마트플레이스 1위 세팅부터 C-Rank 브랜드 블로그, 맘카페 바이럴, 인스타그램 스폰서 광고까지 가온엔 본사 인하우스 전문팀이 직접 운영합니다.</p>
+          </div>
+          <div class="ash-actions">
+            <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideOnline">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span>온라인 채널 제안서 &amp; 가이드(PDF) ↗</span>
+            </button>
+          </div>
+        </div>
+      </div>
       
       <!-- MAIN SEALNPACK TALL PORTRAIT LAYOUT -->
       <div class="som-layout-stage wow fadeInUp" data-wow-duration="0.8s">
