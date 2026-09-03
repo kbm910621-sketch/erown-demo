@@ -2210,33 +2210,39 @@ body.modal-lock { overflow:hidden !important; }
 
 
 
+
+
 /* ==========================================================================
-   MASSTIGE.IO OUR SERVICES TABBED INTERACTIVE SECTION
+   GLOBAL SECTION SPACING EXPANSION (여유롭고 럭셔리한 섹션 상하 여백)
+========================================================================== */
+.am-section {
+  padding: 140px 0 !important;
+}
+
+.am-about-stats-sec {
+  padding: 130px 0 140px !important;
+}
+
+/* ==========================================================================
+   OOH SERVICES (옥외광고) TABBED SECTION - HEIGHT BALANCED & EXPANDED
 ========================================================================== */
 .mos-top-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   gap: 30px;
 }
 
-.mos-title-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
 .mos-main-title {
-  font-size: 48px;
-  font-weight: 900;
-  color: #0f172a;
-  letter-spacing: -1.2px;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: "Pretendard", "Poppins", sans-serif;
+  font-size: 52px !important;
+  font-weight: 900 !important;
+  color: #0f172a !important;
+  letter-spacing: -1.5px !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
 }
 
 .mos-title-circle {
@@ -2248,69 +2254,59 @@ body.modal-lock { overflow:hidden !important; }
   box-shadow: 0 0 14px rgba(24, 85, 183, 0.45);
 }
 
-.mos-sub-kicker {
-  font-size: 13.5px;
-  font-weight: 800;
-  color: #94a3b8;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.mos-top-process-note {
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: #64748b;
-  text-align: right;
-  font-weight: 500;
-  word-break: keep-all;
-}
-
-/* 2-COLUMN STAGE */
 .mos-stage-layout {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: 380px 1fr;
   gap: 50px;
-  align-items: start;
+  align-items: stretch; /* 좌우 높이 완벽 일치 */
 }
 
-/* LEFT NAVIGATION LIST */
+/* LEFT NAVIGATION LIST - MATCHES RIGHT HEIGHT BEAUTIFULLY */
 .mos-nav-col {
   background: #ffffff;
   border: 1.5px solid #e2e8f0;
-  border-radius: 24px;
+  border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .mos-nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .mos-nav-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 19px 24px;
+  padding: 0 28px;
+  flex: 1; /* 8개 항목이 우측 전체 높이에 맞춰 균일하게 100% 매칭 */
   border-bottom: 1px solid #f1f5f9;
   cursor: pointer;
   transition: all 0.22s ease;
   user-select: none;
+  min-height: 72px;
 }
 .mos-nav-item:last-child {
   border-bottom: 0;
 }
 
 .mni-txt {
-  font-size: 15.5px;
+  font-size: 16px;
   font-weight: 700;
   color: #334155;
   transition: color 0.2s ease;
 }
 
 .mni-arrow {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 800;
   color: #94a3b8;
   transition: transform 0.2s ease, color 0.2s ease;
@@ -2324,13 +2320,11 @@ body.modal-lock { overflow:hidden !important; }
 }
 .mos-nav-item:hover .mni-arrow {
   color: #1855b7;
-  transform: translateX(3px);
+  transform: translateX(4px);
 }
 
-/* ACTIVE HIGHLIGHT STATE (MASSTIGE.IO SIGNATURE HIGHLIGHT) */
 .mos-nav-item.on {
-  background: #1855b7 !important; /* GAON-N ELECTRIC BLUE */
-  position: relative;
+  background: #1855b7 !important;
 }
 .mos-nav-item.on .mni-txt {
   color: #ffffff !important;
@@ -2338,107 +2332,49 @@ body.modal-lock { overflow:hidden !important; }
 }
 .mos-nav-item.on .mni-arrow {
   color: #ffffff !important;
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
 /* RIGHT CONTENT COLUMN */
 .mos-content-col {
   display: flex;
   flex-direction: column;
-  gap: 22px;
-}
-
-.mos-lead-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.mos-dyn-kicker {
-  font-size: 12.5px;
-  font-weight: 800;
-  color: #1855b7;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  gap: 24px;
 }
 
 .mos-dyn-lead {
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: 17.5px;
+  line-height: 1.75;
   color: #1e293b;
   margin: 0;
   font-weight: 600;
   word-break: keep-all;
 }
 
-.mos-dyn-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.mdt-pill {
-  font-size: 13px;
-  font-weight: 700;
-  color: #475569;
-  background: #ffffff;
-  border: 1.5px solid #cbd5e1;
-  padding: 6px 14px;
-  border-radius: 100px;
-}
-
-/* CENTER HERO BANNER */
+/* EXPANDED TALL HERO BANNER (HEIGHT: 480PX) */
 .mos-hero-banner {
   position: relative;
   width: 100%;
-  height: 400px;
-  border-radius: 28px;
+  height: 480px; /* EXPANDED TALL HERO BANNER */
+  border-radius: 30px;
   overflow: hidden;
   background: #0f172a;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
-}
-
-.mhb-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
-}
-.mos-hero-banner:hover .mhb-bg-img {
-  transform: scale(1.04);
-}
-
-.mhb-scrim {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(10, 18, 40, 0.92) 0%, rgba(10, 18, 40, 0.45) 60%, rgba(10, 18, 40, 0.2) 100%);
-  pointer-events: none;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
 }
 
 .mhb-overlay-content {
   position: absolute;
-  bottom: 34px;
-  left: 36px;
-  right: 36px;
+  bottom: 38px;
+  left: 40px;
+  right: 40px;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-.mhb-spec-badge {
-  font-size: 13px;
-  font-weight: 800;
-  color: #38bdf8;
-  background: rgba(56, 189, 248, 0.18);
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  padding: 5px 14px;
-  border-radius: 100px;
-  width: max-content;
+  gap: 12px;
 }
 
 .mhb-title {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 900;
   color: #ffffff;
   line-height: 1.3;
@@ -2447,12 +2383,11 @@ body.modal-lock { overflow:hidden !important; }
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* HUGE ACTION BAR (대형 자세히 보기 버튼) */
 .mos-huge-action-bar {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-top: 6px;
+  gap: 18px;
+  margin-top: 8px;
 }
 
 .mos-huge-btn {
@@ -2460,9 +2395,9 @@ body.modal-lock { overflow:hidden !important; }
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 18px 36px;
+  padding: 20px 40px;
   border-radius: 100px;
-  font-size: 16px;
+  font-size: 16.5px;
   font-weight: 900;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -2481,12 +2416,6 @@ body.modal-lock { overflow:hidden !important; }
   transform: translateY(-3px);
   box-shadow: 0 14px 30px rgba(24, 85, 183, 0.35);
 }
-.mos-huge-btn.primary .mhb-btn-arrow {
-  transition: transform 0.25s ease;
-}
-.mos-huge-btn.primary:hover .mhb-btn-arrow {
-  transform: translateX(4px);
-}
 
 .mos-huge-btn.secondary {
   background: #ffffff;
@@ -2503,13 +2432,12 @@ body.modal-lock { overflow:hidden !important; }
 
 @media(max-width:1200px) {
   .mos-stage-layout { grid-template-columns: 1fr; gap: 36px; }
-  .mos-hero-banner { height: 320px; }
-  .mos-top-header { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .mos-top-process-note { text-align: left; }
+  .mos-hero-banner { height: 380px; }
+  .mos-nav-item { min-height: 60px; }
 }
 @media(max-width:640px) {
-  .mos-main-title { font-size: 36px; }
-  .mhb-title { font-size: 20px; }
+  .mos-main-title { font-size: 38px !important; }
+  .mhb-title { font-size: 22px; }
   .mos-huge-action-bar { flex-direction: column; }
   .mos-huge-btn { width: 100%; padding: 16px 24px; font-size: 15px; }
 }

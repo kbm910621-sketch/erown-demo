@@ -268,7 +268,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="mos-top-header wow fadeInUp" data-wow-duration="0.7s">
         <div class="mos-title-wrap">
           <h2 class="mos-main-title">
-            Our Services <span class="mos-title-circle"></span>
+            옥외광고 <span class="mos-title-circle"></span>
           </h2>
           <span class="mos-sub-kicker">OOH MEDIA SOLUTIONS</span>
         </div>
