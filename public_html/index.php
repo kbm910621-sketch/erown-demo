@@ -875,7 +875,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s" style="margin-top:60px;">
         <div class="asps-head">
           <div class="asps-title-wrap">
-            <span class="asps-kicker green">DIGITAL MARKETING PORTFOLIO</span>
+            <span class="asps-kicker blue">DIGITAL MARKETING PORTFOLIO</span>
             <h4 class="asps-title">온라인 마케팅 &amp; 스마트플레이스 1위 집행 실적</h4>
           </div>
           <div class="asps-nav-controls">
@@ -885,7 +885,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <button type="button" class="asps-arrow-btn asps-next-online" aria-label="다음 사례">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
-            <a href="/contents/a_type/a_1.php?category=online" class="asps-more-link green">
+            <a href="/contents/a_type/a_1.php?category=online" class="asps-more-link">
               <span>온라인 사례 전체보기</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
@@ -897,7 +897,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <div class="swiper-slide asps-card main-port-card" data-cat="<?php echo htmlspecialchars($oItem['category']); ?>" data-id="<?php echo (int)$oItem['id']; ?>" data-name="<?php echo htmlspecialchars($oItem['title']); ?>" data-img="<?php echo htmlspecialchars($oItem['thumb']); ?>" data-tag="온라인마케팅">
               <div class="asps-thumb">
                 <img src="<?php echo htmlspecialchars($oItem['thumb']); ?>" alt="<?php echo htmlspecialchars($oItem['title']); ?>" loading="lazy">
-                <span class="asps-badge green">온라인마케팅</span>
+                <span class="asps-badge blue">온라인마케팅</span>
                 <div class="asps-arrow-badge">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </div>
@@ -926,7 +926,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     <div class="am-container" style="position:relative; z-index:2;">
 
       <div class="am-sec-head dark-head text-center wow fadeInUp" data-wow-duration="0.7s">
-        <span class="ash-kicker gold">03 / 4K CINEMATIC &amp; SHORTS PRODUCTION</span>
+        <span class="ash-kicker cyan">03 / 4K CINEMATIC &amp; SHORTS PRODUCTION</span>
         <h2 class="ash-title white">영상제작 솔루션</h2>
         <p class="ash-desc light" style="margin:0 auto;">기업·상급병원 4K 브랜드 필름부터 9:16 모바일 릴스까지 인하우스 프로덕션이 기획·촬영·편집을 원스톱으로 제작합니다.</p>
       </div>
@@ -1046,7 +1046,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="am-sub-port-strip dark wow fadeInUp" data-wow-duration="0.8s" style="margin-top:60px;">
         <div class="asps-head">
           <div class="asps-title-wrap">
-            <span class="asps-kicker gold">CINEMA REEL PORTFOLIO</span>
+            <span class="asps-kicker cyan">CINEMA REEL PORTFOLIO</span>
             <h4 class="asps-title white">최근 4K 브랜드 필름 &amp; 숏폼 영상 제작 실적</h4>
           </div>
           <div class="asps-nav-controls">
@@ -1056,7 +1056,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <button type="button" class="asps-arrow-btn light asps-next-video" aria-label="다음 사례">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
-            <a href="/contents/a_type/a_1.php?category=video" class="asps-more-link gold">
+            <a href="/contents/a_type/a_1.php?category=video" class="asps-more-link">
               <span>영상 사례 전체보기</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
@@ -1068,7 +1068,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <div class="swiper-slide asps-card dark main-port-card" data-cat="<?php echo htmlspecialchars($vItem['category']); ?>" data-id="<?php echo (int)$vItem['id']; ?>" data-name="<?php echo htmlspecialchars($vItem['title']); ?>" data-img="<?php echo htmlspecialchars($vItem['thumb']); ?>" data-tag="영상제작">
               <div class="asps-thumb">
                 <img src="<?php echo htmlspecialchars($vItem['thumb']); ?>" alt="<?php echo htmlspecialchars($vItem['title']); ?>" loading="lazy">
-                <span class="asps-badge gold">영상제작</span>
+                <span class="asps-badge cyan">영상제작</span>
                 <div class="asps-arrow-badge">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </div>
@@ -1076,7 +1076,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="asps-info">
                 <div class="asps-title-row">
                   <strong class="asps-item-title white"><?php echo htmlspecialchars($vItem['title']); ?></strong>
-                  <span class="asps-title-arrow" style="color:#fbbf24;">↗</span>
+                  <span class="asps-title-arrow" style="color:#38bdf8;">↗</span>
                 </div>
                 <span class="asps-item-loc light">4K UHD 시네마틱 &amp; 숏폼 제작</span>
               </div>
@@ -1726,7 +1726,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     <!-- PORTFOLIO LIGHTBOX MODAL (오른쪽 위 안쪽 닫기 버튼 탑재) -->
   <div class="portfolio-modal-backdrop" id="modalBackdrop">
     <div class="pm-modal-box">
-      <button type="button" class="pm-close-btn" id="modalClose" aria-label="팝업 닫기">✕</button>
+      <button type="button" class="pm-close-btn" id="modalClose" aria-label="팝업 닫기" style="position: absolute !important; top: 16px !important; right: 16px !important; left: auto !important; z-index: 9999 !important;">✕</button>
       <div class="pm-img-wrap">
         <img src="" id="modalImg" alt="포트폴리오 상세 실사">
       </div>

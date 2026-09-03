@@ -908,14 +908,17 @@ $(function() {
   });
 
 
+  
+
   /* SUB-PORTFOLIO 3-SECTION SWIPER INITIALIZATION (Bus, Online, Video) */
   function initAllSubPortfolioSwipers() {
     if (typeof Swiper === 'undefined') return;
 
-    // 01 Bus Swiper (8 Items)
+    // 01 Bus Swiper (8 Items: 모바일 1.35개 노출 & 화살표 클릭 시 1칸씩 슬라이딩)
     new Swiper('.asps-swiper-bus', {
-      slidesPerView: 2,
-      spaceBetween: 12,
+      slidesPerView: 1.35,
+      spaceBetween: 14,
+      slidesPerGroup: 1,
       rewind: true,
       navigation: {
         prevEl: '.asps-prev-bus',
@@ -925,15 +928,16 @@ $(function() {
         769: {
           slidesPerView: 4,
           spaceBetween: 22,
-          slidesPerGroup: 2
+          slidesPerGroup: 1
         }
       }
     });
 
-    // 02 Online Swiper (8 Items)
+    // 02 Online Swiper (8 Items: 모바일 1.35개 노출 & 화살표 클릭 시 1칸씩 슬라이딩)
     new Swiper('.asps-swiper-online', {
-      slidesPerView: 2,
-      spaceBetween: 12,
+      slidesPerView: 1.35,
+      spaceBetween: 14,
+      slidesPerGroup: 1,
       rewind: true,
       navigation: {
         prevEl: '.asps-prev-online',
@@ -943,15 +947,16 @@ $(function() {
         769: {
           slidesPerView: 4,
           spaceBetween: 22,
-          slidesPerGroup: 2
+          slidesPerGroup: 1
         }
       }
     });
 
-    // 03 Video Swiper (8 Items)
+    // 03 Video Swiper (8 Items: 모바일 1.35개 노출 & 화살표 클릭 시 1칸씩 슬라이딩)
     new Swiper('.asps-swiper-video', {
-      slidesPerView: 2,
-      spaceBetween: 12,
+      slidesPerView: 1.35,
+      spaceBetween: 14,
+      slidesPerGroup: 1,
       rewind: true,
       navigation: {
         prevEl: '.asps-prev-video',
@@ -961,7 +966,7 @@ $(function() {
         769: {
           slidesPerView: 4,
           spaceBetween: 22,
-          slidesPerGroup: 2
+          slidesPerGroup: 1
         }
       }
     });

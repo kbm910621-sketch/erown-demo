@@ -194,7 +194,7 @@ $totalCount = count($list);
   <!-- LIGHTBOX MODAL (오른쪽 위 안쪽 ✕ 닫기 버튼) -->
   <div class="portfolio-modal-backdrop" id="modalBackdrop">
     <div class="pm-modal-box">
-      <button type="button" class="pm-close-btn" id="modalClose" aria-label="팝업 닫기">✕</button>
+      <button type="button" class="pm-close-btn" id="modalClose" aria-label="팝업 닫기" style="position: absolute !important; top: 16px !important; right: 16px !important; left: auto !important; z-index: 9999 !important;">✕</button>
       <div class="pm-img-wrap">
         <img src="" id="modalImg" alt="포트폴리오 상세 실사">
       </div>
