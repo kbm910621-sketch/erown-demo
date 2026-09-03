@@ -222,6 +222,7 @@ $totalCount = count($list);
   </div>
   </div>
 
+  <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/bottom_conversion.php"; ?>
   <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/footer.php"; ?>
 </div>
 

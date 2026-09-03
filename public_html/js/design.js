@@ -917,7 +917,7 @@ $(function() {
 
 
   /* QUICK INLINE ESTIMATE FORM AJAX SUBMISSION (하단 빠른 견적 문의 접수) */
-  $(document).on('submit', '#quickEstimateForm', function(e) {
+  $(document).on('submit', '#quickEstimateForm, .quickEstimateFormAjax', function(e) {
     e.preventDefault();
     var $form = $(this);
     var $btn = $form.find('#btnQuickSubmit');
