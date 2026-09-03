@@ -571,6 +571,24 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </section>
 
+  <!-- ============================================
+       TRENDY MID-PAGE INQUIRY CTA BAR (사용자 지정 트렌디 퍼플 알약 견적문의 버튼)
+  ============================================ -->
+  <section class="am-mid-estimate-bar wow fadeInUp" data-wow-duration="0.7s">
+    <div class="am-container meb-inner">
+      <div class="meb-text-wrap">
+        <span class="meb-badge">QUICK ESTIMATE</span>
+        <strong class="meb-title">원하시는 예산과 타깃에 맞춘 1:1 맞춤 미디어 플랜을 제안해 드립니다.</strong>
+      </div>
+      <a href="/board/estmate/write.php" class="trendy-pill-estimate-btn">
+        <span class="tpeb-txt">견적문의</span>
+        <span class="tpeb-circle-dot">
+          <span class="tpeb-dot"></span>
+        </span>
+      </a>
+    </div>
+  </section>
+
   <section class="am-section am-bg-white" id="online">
     <div class="am-container">
       
