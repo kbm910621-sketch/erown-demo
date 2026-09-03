@@ -411,7 +411,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <div class="mos-content-col">
           
           <!-- TOP LEAD & TAGS -->
-          <div class="mos-lead-wrap">
+          <div class="mos-lead-wrap" id="mosLeadWrap">
             <span class="mos-dyn-kicker" id="mosDynKicker">OOH 01 · 광주 대표 교통매체</span>
             <p class="mos-dyn-lead" id="mosDynLead">
               광주 전역을 1일 18시간 동안 반복 주행하며 상무대로·무진대로·금남로 등 주요 간선도로 운전자와 보행자의 시선을 압도하는 광주 1등 랜드마크 빌보드입니다.
@@ -428,7 +428,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="mos-hero-banner" id="mosHeroBanner">
             <img src="/images/bs_ad/main_sec02_img.jpg" id="mosBannerImg" alt="옥외광고 솔루션 실사" class="mhb-bg-img">
             <div class="mhb-scrim"></div>
-            <div class="mhb-overlay-content">
+            <div class="mhb-overlay-content" id="mosBannerText">
               <div class="mhb-spec-badge" id="mosDynSpec">차도면 3.7m + 인도면 3.0m + 후면 2.4m</div>
               <h3 class="mhb-title" id="mosBannerTitle">광주 104개 전 노선, 1일 18시간 움직이는 랜드마크</h3>
             </div>

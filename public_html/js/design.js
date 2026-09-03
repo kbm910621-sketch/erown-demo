@@ -644,7 +644,9 @@ $(function() {
 
   
 
-  /* MASSTIGE.IO OUR SERVICES TAB SWITCHER & 0.65S SMOOTH GLIDE REVEAL */
+  
+
+  /* MASSTIGE.IO OUR SERVICES TAB SWITCHER & SEPARATED INDEPENDENT MOTIONS */
   $(document).on('click mouseenter', '.mos-nav-item', function() {
     var $this = $(this);
     if ($this.hasClass('on')) return;
@@ -668,6 +670,7 @@ $(function() {
     $('#mosBannerImg').attr('src', img);
     $('#mosBtnGuide').attr('data-guide', guide);
 
+    // TAG PILLS 100% PROPER HTML SPANS
     var tagsHtml = '';
     for (var i = 0; i < tags.length; i++) {
       var t = tags[i].trim();
@@ -677,9 +680,21 @@ $(function() {
     }
     $('#mosDynTags').html(tagsHtml);
 
-    // SMOOTH GLIDE REVEAL (0.65s 천천히 슥 내려오는 고급 모션)
-    var $content = $('.mos-content-col');
-    $content.removeClass('cascade-in');
-    void $content[0].offsetWidth; // force reflow
-    $content.addClass('cascade-in');
+    // 1. TOP TEXT: SLIDE UP (아래서 위로 슈루룩)
+    var $topText = $('#mosLeadWrap');
+    $topText.removeClass('text-slide-up');
+    void $topText[0].offsetWidth; // force reflow
+    $topText.addClass('text-slide-up');
+
+    // 2. PHOTO: GLIDE & FADE (사진만 스르륵)
+    var $bannerImg = $('#mosBannerImg');
+    $bannerImg.removeClass('photo-glide');
+    void $bannerImg[0].offsetWidth; // force reflow
+    $bannerImg.addClass('photo-glide');
+
+    // 3. BANNER INNER TEXT: SLIDE UP (배너 안 글자도 아래서 위로 슈루룩)
+    var $bannerText = $('#mosBannerText');
+    $bannerText.removeClass('inner-text-slide-up');
+    void $bannerText[0].offsetWidth; // force reflow
+    $bannerText.addClass('inner-text-slide-up');
   });
