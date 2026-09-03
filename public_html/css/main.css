@@ -4869,8 +4869,21 @@ body.menu-open {
   -webkit-overflow-scrolling: touch !important;
 }
 
+/* ==========================================================================
+   MOBILE ONLY DRAWER ELEMENTS (PC 화면에서는 100% 완전 숨김)
+========================================================================== */
+.gnb_drawer_head,
+.gnb_drawer_footer,
+.mobile_only {
+  display: none !important;
+}
+
 /* 2. BESPOKE HUMAN-CRAFTED DRAWER FOOTER */
 @media (max-width: 991px) {
+  .gnb_drawer_head {
+    display: flex !important;
+  }
+
   .gnb_drawer_footer {
     display: flex !important;
     flex-direction: column !important;
