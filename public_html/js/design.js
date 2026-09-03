@@ -977,16 +977,34 @@ $(function() {
   });
 
 
-  /* MOBILE HAMBURGER MENU & DIM OVERLAY TOGGLE */
+    $(document).on('click', '#gnbCloseBtn, .gnb_close_btn, #gnbDim, .gnb_anchor_link', function(e) {
+    $('#gnb').removeClass('is-mobile-open on');
+    $('#gnbDim').fadeOut(200);
+    $('body').removeClass('menu-open');
+  });
+
+
+  /* MOBILE HAMBURGER MENU & COMPLETE BACKGROUND SCROLL LOCK */
   $(document).on('click', '#gnbOpenBtn, .gnb_open', function(e) {
     e.preventDefault();
     $('#gnb').addClass('is-mobile-open on');
     $('#gnbDim').fadeIn(200);
     $('body').addClass('menu-open');
+    if (window.lenis) {
+      try { window.lenis.stop(); } catch(err) {}
+    }
   });
 
   $(document).on('click', '#gnbCloseBtn, .gnb_close_btn, #gnbDim, .gnb_anchor_link', function(e) {
     $('#gnb').removeClass('is-mobile-open on');
     $('#gnbDim').fadeOut(200);
     $('body').removeClass('menu-open');
+    if (window.lenis) {
+      try { window.lenis.start(); } catch(err) {}
+    }
+  });
+
+  // Prevent wheel / touchmove leak to background body
+  $('#gnb').on('wheel touchmove', function(e) {
+    e.stopPropagation();
   });

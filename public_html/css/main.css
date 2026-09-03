@@ -4851,3 +4851,92 @@ body.menu-open #gnbDim {
   display: block !important;
   opacity: 1 !important;
 }
+
+
+/* ==========================================================================
+   BESPOKE HUMAN-CRAFTED DRAWER FOOTER & BACKGROUND SCROLL LOCK
+========================================================================== */
+
+/* 1. SCROLL LOCK WHEN DRAWER IS OPEN (뒷배경 휙휙 내려가는 휠 먹힘 현상 100% 완전 차단) */
+body.menu-open {
+  overflow: hidden !important;
+  height: 100vh !important;
+  touch-action: none !important;
+}
+
+#gnb.gnb_nav {
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* 2. BESPOKE HUMAN-CRAFTED DRAWER FOOTER */
+@media (max-width: 991px) {
+  .gnb_drawer_footer {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding-top: 24px !important;
+    margin-top: auto !important;
+    border-top: 1px solid #e2e8f0 !important;
+  }
+
+  .gdf_info_row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  .gdf_col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+  }
+
+  .gdf_lbl {
+    font-size: 10.5px !important;
+    font-weight: 700 !important;
+    color: #94a3b8 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+  }
+
+  .gdf_tel {
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    text-decoration: none !important;
+    letter-spacing: -0.3px !important;
+    transition: color 0.2s ease !important;
+  }
+  .gdf_tel:hover {
+    color: #1855b7 !important;
+  }
+
+  .gdf_email {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+    letter-spacing: -0.2px !important;
+  }
+
+  .gdf_cta_btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: #0f172a !important; /* 모던 블랙/네이비 럭셔리 버튼 */
+    color: #ffffff !important;
+    font-size: 14.5px !important;
+    font-weight: 800 !important;
+    padding: 14px 20px !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+    transition: all 0.25s ease !important;
+  }
+  .gdf_cta_btn:hover,
+  .gdf_cta_btn:active {
+    background: #1855b7 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 18px rgba(24, 85, 183, 0.3) !important;
+  }
+}

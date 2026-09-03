@@ -20,8 +20,22 @@
                     <li class="depth1"><a href="/contents/a_type/a_1.php">포트폴리오<span class="gnb-sub">Portfolio ➔</span></a></li>
                     <li class="depth1 contact_depth"><a href="/board/estmate/write.php" class="gnb_cta_btn">상담신청<span class="gnb-sub">Contact ➔</span></a></li>
                 </ul>
-                <div class="gnb-contact">
-                    <div class="gnb-contact-lbl">광고 상담 문의</div>
+                <div class="gnb_drawer_footer mobile_only">
+      <div class="gdf_info_row">
+          <div class="gdf_col">
+              <span class="gdf_lbl">CONTACT</span>
+              <a href="tel:062-385-0110" class="gdf_tel">062-385-0110</a>
+          </div>
+          <div class="gdf_col">
+              <span class="gdf_lbl">E-MAIL</span>
+              <span class="gdf_email">gaon-n@naver.com</span>
+          </div>
+      </div>
+      <a href="/board/estmate/write.php" class="gdf_cta_btn">
+          <span>프로젝트 상담신청</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+  </div>
                     <div class="gnb-contact-tel"><a href="tel:062-385-0110">📞 062-385-0110</a></div>
                     <div class="gnb-contact-email">gaon-n@naver.com</div>
                     <a href="/board/estmate/write.php" class="gnb_mobile_direct_cta mobile_only">1:1 빠른 견적 신청 ➔</a>
