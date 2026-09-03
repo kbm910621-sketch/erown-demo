@@ -810,3 +810,17 @@ $(function() {
   $(document).on('keydown', function(e) {
     if (e.key === 'Escape') closeMobileGnb();
   });
+
+
+  /* ONLINE MARKETING HOVER & TOUCH PAUSE HANDLERS */
+  $(document).on('mouseenter', '.som-stream-stage, .som-stream-track-wrap, .som-card-item, .som-stag-card, .som-col', function() {
+    $('.som-stream-track').css({
+      'animation-play-state': 'paused',
+      '-webkit-animation-play-state': 'paused'
+    });
+  }).on('mouseleave', '.som-stream-stage, .som-stream-track-wrap, .som-card-item, .som-stag-card, .som-col', function() {
+    $('.som-stream-track').css({
+      'animation-play-state': 'running',
+      '-webkit-animation-play-state': 'running'
+    });
+  });

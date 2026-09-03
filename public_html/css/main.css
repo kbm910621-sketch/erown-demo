@@ -4243,3 +4243,17 @@ body.modal-lock { overflow:hidden !important; }
     border-radius: 10px !important;
   }
 }
+
+
+/* ==========================================================================
+   ONLINE MARKETING PC MOUSE HOVER PAUSE (마우스 호버 시 100% 가만히 정지)
+========================================================================== */
+.som-stream-stage:hover .som-stream-track,
+.som-stream-track-wrap:hover .som-stream-track,
+.som-stream-track:hover,
+.som-card-item:hover,
+.som-col:hover .som-stream-track,
+.som-staggered-grid-wrap:hover .som-stream-track {
+  animation-play-state: paused !important;
+  -webkit-animation-play-state: paused !important;
+}
