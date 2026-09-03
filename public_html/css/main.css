@@ -5856,99 +5856,196 @@ body.menu-open {
 
 
 
+
+
 /* ==========================================================================
-   GAON-N SIGNATURE ROUNDED ESTIMATE CARD (가온엔 시그니처 둥근 사각형 카드)
+   01-B GAON-N MID-PAGE INQUIRY BANNER (완벽 복구 및 세련된 코발트 블루)
+========================================================================== */
+.am-mid-estimate-bar {
+  width: 100%;
+  background: linear-gradient(135deg, #f0f7ff 0%, #e2effe 100%);
+  border-top: 1px solid #bfdbfe;
+  border-bottom: 1px solid #bfdbfe;
+  padding: 32px 0;
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.meb-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.meb-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.meb-badge-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  padding: 4px 12px;
+  border-radius: 100px;
+  width: fit-content;
+  box-shadow: 0 2px 6px rgba(24, 85, 183, 0.05);
+}
+
+.meb-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0284c7;
+  box-shadow: 0 0 8px #38bdf8;
+  animation: mebPulse 2s infinite ease-in-out;
+}
+
+@keyframes mebPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.6; }
+}
+
+.meb-badge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #1855b7;
+}
+
+.meb-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.4px;
+  margin: 0;
+  line-height: 1.35;
+  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
+}
+
+.meb-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #1855b7 0%, #0284c7 100%);
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 10px 14px 10px 24px;
+  border-radius: 100px;
+  box-shadow: 0 8px 24px rgba(24, 85, 183, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.meb-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(2, 132, 199, 0.45);
+  background: linear-gradient(135deg, #0f4296 0%, #0369a1 100%);
+}
+
+.meb-btn-txt {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.meb-btn-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #07152c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.meb-cta-btn:hover .meb-btn-circle {
+  transform: translateX(3px);
+  background: #0f2347;
+}
+
+@media (max-width: 768px) {
+  .meb-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .meb-badge-wrap {
+    margin: 0 auto;
+  }
+  .meb-title {
+    font-size: 15.5px;
+    word-break: keep-all;
+  }
+  .meb-cta-btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: space-between;
+  }
+}
+
+/* ==========================================================================
+   08 GAON-N SIGNATURE ROUNDED INLINE ESTIMATE CARD (100% 가로 일치 & 인간 디자이너급 완성도)
 ========================================================================== */
 .am-master-conversion-section {
   width: 100%;
-  padding: 40px 0 80px;
+  padding: 40px 0 90px;
   background: #f8fafc;
-  position: relative;
 }
 
+/* 100% CONTAINER MATCHED CARD BOX */
 .mcf-card-box {
-  width: 100%;
-  max-width: 1340px;
-  margin: 0 auto;
+  width: 100% !important;
+  box-sizing: border-box !important;
   background: #07152c;
-  background: linear-gradient(145deg, #07152c 0%, #0d2244 50%, #061326 100%);
+  background: linear-gradient(145deg, #07152c 0%, #0c2042 50%, #061327 100%);
   border: 1.5px solid rgba(255, 255, 255, 0.12);
-  border-radius: 36px;
-  padding: 68px 56px 56px;
-  box-shadow: 0 30px 80px rgba(7, 21, 44, 0.22), 0 0 0 1px rgba(56, 189, 248, 0.08);
+  border-radius: 28px;
+  padding: 56px 50px 48px;
+  box-shadow: 0 24px 60px rgba(7, 21, 44, 0.18), 0 0 0 1px rgba(56, 189, 248, 0.08);
   position: relative;
   overflow: hidden;
-  box-sizing: border-box;
-}
-
-/* AMBIENT BACKGROUND GLOW */
-.mcf-ambient-glow {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(70px);
-}
-.mcf-ambient-glow.glow-1 {
-  top: -20%;
-  left: -10%;
-  width: 380px;
-  height: 380px;
-  background: radial-gradient(circle, rgba(24, 85, 183, 0.3) 0%, rgba(24, 85, 183, 0) 70%);
-}
-.mcf-ambient-glow.glow-2 {
-  bottom: -20%;
-  right: -10%;
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(56, 189, 248, 0) 70%);
 }
 
 .mcf-grid-layout {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 56px;
+  grid-template-columns: 1fr 1.28fr;
+  gap: 52px;
   align-items: start;
-  position: relative;
-  z-index: 2;
 }
 
 /* LEFT COLUMN */
 .mcf-brand-col {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
 }
 
-.mcf-kicker-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.25);
-  padding: 5px 14px;
-  border-radius: 100px;
-  color: #38bdf8;
-  font-size: 11.5px;
+.mcf-sub-kicker {
+  display: inline-block;
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.12em;
-  margin-bottom: 14px;
-}
-
-.mcf-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #38bdf8;
-  box-shadow: 0 0 8px #38bdf8;
+  letter-spacing: 0.14em;
+  color: #38bdf8;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .mcf-title {
-  font-size: 38px;
+  font-size: 34px;
   font-weight: 900;
-  line-height: 1.25;
+  line-height: 1.28;
   color: #ffffff;
-  letter-spacing: -1.2px;
-  margin: 0;
+  letter-spacing: -1px;
+  margin: 0 0 12px;
   font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
 }
 
@@ -5956,73 +6053,85 @@ body.menu-open {
   color: #38bdf8;
 }
 
-.mcf-phone-box {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.mcf-phone-label {
-  font-size: 13px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.65);
-}
-
-.mcf-phone-val {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 38px;
-  font-weight: 900;
-  color: #ffffff;
-  text-decoration: none;
-  letter-spacing: -1px;
-  line-height: 1.1;
-  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
-  transition: all 0.25s ease;
-}
-
-.mcf-phone-val:hover {
-  color: #38bdf8;
-  transform: translateX(4px);
-}
-
-.mcf-company-info {
-  margin-top: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding-top: 22px;
-}
-
-.mcf-corp-name {
-  font-size: 16px;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-}
-
-.mcf-corp-desc {
-  font-size: 13px;
+.mcf-desc {
+  font-size: 14.5px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.75);
   margin: 0;
+  word-break: keep-all;
 }
 
-.mcf-meta-list {
+.mcf-phone-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 16px 20px;
+}
+
+.mpc-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mpc-info {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  font-size: 11.5px;
-  color: rgba(255, 255, 255, 0.55);
-  line-height: 1.5;
+  gap: 2px;
 }
 
-.mcf-copy {
+.mpc-lbl {
   font-size: 11.5px;
-  color: rgba(255, 255, 255, 0.4);
-  margin-top: 4px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mpc-num {
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
+  transition: color 0.2s;
+}
+
+.mpc-num:hover {
+  color: #38bdf8;
+}
+
+.mcf-trust-points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.mtp-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mtp-check {
+  color: #38bdf8;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.mtp-txt {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
 }
 
 /* RIGHT FORM COLUMN */
@@ -6042,83 +6151,107 @@ body.menu-open {
   gap: 14px;
 }
 
-.mcf-input-wrap,
-.mcf-textarea-wrap {
-  position: relative;
+.mcf-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mcf-field-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.mcf-field-label .req {
+  color: #38bdf8;
+  font-weight: 900;
+}
+
+.mcf-field-input,
+.mcf-field-textarea {
+  width: 100%;
+  box-sizing: border-box;
   background: rgba(255, 255, 255, 0.07);
   border: 1.5px solid rgba(255, 255, 255, 0.14);
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  padding: 0 18px;
+  border-radius: 12px;
+  padding: 0 16px;
+  height: 46px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  outline: none;
   transition: all 0.25s ease;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
-.mcf-textarea-wrap {
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 14px 18px;
+.mcf-field-textarea {
+  height: auto;
+  padding: 12px 16px;
+  resize: none;
+  line-height: 1.6;
 }
 
-.mcf-input-wrap:focus-within,
-.mcf-textarea-wrap:focus-within {
+.mcf-field-input:focus,
+.mcf-field-textarea:focus {
   background: rgba(255, 255, 255, 0.12);
   border-color: #38bdf8;
   box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
 }
 
-.mcf-input-lbl {
-  font-size: 13px;
-  font-weight: 800;
-  color: #38bdf8;
-  white-space: nowrap;
-  width: 52px;
-  flex-shrink: 0;
-}
-
-.mcf-textarea-wrap .mcf-input-lbl {
-  margin-bottom: 8px;
-}
-
-.mcf-field-input {
-  width: 100%;
-  height: 50px;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 500;
-  font-family: inherit;
-}
-
-.mcf-field-textarea {
-  width: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 500;
-  font-family: inherit;
-  resize: none;
-  line-height: 1.6;
-}
-
 .mcf-field-input::placeholder,
 .mcf-field-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 13.5px;
 }
 
+/* MEDIA CHIPS CHECKBOXES */
+.mcf-media-chips {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.mcf-chip-lbl {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.mcf-chip-lbl input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mcf-chip-lbl span {
+  display: block;
+  text-align: center;
+  padding: 9px 4px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.mcf-chip-lbl input:checked + span {
+  background: #1855b7;
+  border-color: #38bdf8;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(24, 85, 183, 0.3);
+}
+
+/* BOTTOM ACTION ROW */
 .mcf-action-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 8px;
+  margin-top: 6px;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 14px;
 }
 
 .mcf-privacy-label {
@@ -6126,27 +6259,27 @@ body.menu-open {
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .mcf-chk {
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   accent-color: #1855b7;
   cursor: pointer;
 }
 
 .mcf-privacy-btn {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff !important;
   text-decoration: none;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
-  padding: 3px 10px;
+  padding: 2px 8px;
   border-radius: 100px;
-  margin-left: 4px;
+  margin-left: 2px;
   transition: all 0.2s;
 }
 
@@ -6155,30 +6288,57 @@ body.menu-open {
   border-color: #38bdf8;
 }
 
-.mcf-submit-pill {
-  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
-  outline: none !important;
-  cursor: pointer !important;
-  padding: 10px 12px 10px 24px !important;
+.mcf-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #1855b7 0%, #0284c7 100%);
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 20px 12px 24px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(24, 85, 183, 0.4);
+  transition: all 0.3s ease;
+}
+
+.mcf-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(2, 132, 199, 0.5);
+  background: linear-gradient(135deg, #0f4296 0%, #0369a1 100%);
+}
+
+.msb-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #07152c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.mcf-submit-btn:hover .msb-arrow {
+  transform: translateX(3px);
+  background: #0f2347;
 }
 
 @media (max-width: 991px) {
-  .am-master-conversion-section {
-    padding: 30px 0 60px;
-  }
   .mcf-card-box {
-    padding: 45px 30px 40px;
-    border-radius: 28px;
+    padding: 40px 28px;
   }
   .mcf-grid-layout {
     grid-template-columns: 1fr;
     gap: 36px;
   }
   .mcf-title {
-    font-size: 30px;
+    font-size: 28px;
   }
-  .mcf-phone-val {
-    font-size: 32px;
+  .mcf-media-chips {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -6187,9 +6347,8 @@ body.menu-open {
     padding: 20px 0 50px;
   }
   .mcf-card-box {
-    margin: 0 12px;
-    padding: 36px 20px 32px;
-    border-radius: 24px;
+    padding: 32px 18px;
+    border-radius: 22px;
   }
   .mcf-grid-row {
     grid-template-columns: 1fr;
@@ -6198,12 +6357,10 @@ body.menu-open {
   .mcf-action-row {
     flex-direction: column;
     align-items: stretch;
-    gap: 14px;
   }
-  .mcf-submit-pill {
-    width: 100% !important;
-    max-width: 100% !important;
-    justify-content: space-between !important;
-    height: 52px !important;
+  .mcf-submit-btn {
+    width: 100%;
+    justify-content: space-between;
+    height: 50px;
   }
 }
