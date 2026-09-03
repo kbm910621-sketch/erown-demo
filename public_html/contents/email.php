@@ -13,11 +13,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
   <div id="container">
     <section class="content email-policy-page">
       
-      <!-- SUBPAGE HEADER -->
-      <div class="port-page-head">
-        <span class="am-sub-kicker wow fadeInUp" data-wow-duration="0.6s">GAON-N POLICY &amp; LEGAL</span>
-        <h1 class="port-page-title wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.1s">이메일 <span>무단수집 거부</span></h1>
-        <p class="port-page-desc wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.2s">
+            <!-- DEDICATED CLEAN SUBPAGE HEADER -->
+      <div class="email-page-header wow fadeInUp" data-wow-duration="0.6s">
+        <span class="eph-kicker">GAON-N POLICY &amp; LEGAL</span>
+        <h1 class="eph-title">이메일 <span>무단수집 거부</span></h1>
+        <p class="eph-desc">
           (주)가온엔은 정보주체의 개인정보와 권익을 보호하고 무단 수집 및 불법 스팸 전송을 엄격히 금지합니다.
         </p>
       </div>

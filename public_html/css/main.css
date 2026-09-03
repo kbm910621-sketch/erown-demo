@@ -6366,295 +6366,72 @@ body.menu-open {
 }
 
 
+
+
+
 /* ==========================================================================
-   EMAIL POLICY PAGE (이메일 무단수집거부 최고급 에이전시 룩 리디자인)
+   EMAIL POLICY PAGE (단정하고 세련된 상단 타이포그래피 & 완벽 여백 조율)
 ========================================================================== */
 .email-policy-page {
-  padding-bottom: 90px;
-  background: #f8fafc;
+  padding-top: 110px !important;
+  padding-bottom: 90px !important;
+  background: #f8fafc !important;
+  min-height: 80vh;
 }
 
-.email-policy-wrap {
+.email-page-header {
   max-width: 980px;
-  margin: 0 auto;
+  margin: 0 auto 36px;
   padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  text-align: left;
 }
 
-/* 01 NOTICE CALLOUT CARD */
-.epc-notice-card {
-  display: flex;
-  gap: 20px;
-  background: #ffffff;
-  border: 1.5px solid #bfdbfe;
-  border-radius: 20px;
-  padding: 28px 32px;
-  box-shadow: 0 10px 30px rgba(24, 85, 183, 0.06);
+.eph-kicker {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #1855b7;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
-.epc-shield-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  background: #eff6ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.epc-notice-text {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.epc-notice-title {
-  font-size: 19px;
+.eph-title {
+  font-size: 36px;
   font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: -1px;
   color: #0f172a;
-  letter-spacing: -0.4px;
+  margin: 0 0 12px;
   font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
 }
 
-.epc-notice-desc {
-  font-size: 14.5px;
-  line-height: 1.7;
-  color: #334155;
+.eph-title span {
+  color: #1855b7;
+}
+
+.eph-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #64748b;
   margin: 0;
   word-break: keep-all;
-}
-
-.epc-notice-desc strong {
-  color: #1855b7;
-  font-weight: 800;
-}
-
-/* SECTION BLOCKS */
-.epc-section-block {
-  background: #ffffff;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 24px;
-  padding: 36px 36px;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
-}
-
-.epc-sec-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-  border-bottom: 1.5px solid #f1f5f9;
-  padding-bottom: 16px;
-}
-
-.epc-num-badge {
-  font-size: 12px;
-  font-weight: 900;
-  color: #1855b7;
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
-  padding: 4px 10px;
-  border-radius: 100px;
-  font-family: "Pretendard", sans-serif;
-}
-
-.epc-sec-title {
-  font-size: 20px;
-  font-weight: 900;
-  color: #0f172a;
-  margin: 0;
-  letter-spacing: -0.4px;
-  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
-}
-
-/* CLAUSES 3-GRID */
-.epc-clauses-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.epc-clause-card {
-  background: #f8fafc;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 22px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  transition: all 0.25s ease;
-}
-
-.epc-clause-card:hover {
-  background: #ffffff;
-  border-color: #93c5fd;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(24, 85, 183, 0.08);
-}
-
-.ecc-tag {
-  display: inline-block;
-  font-size: 11.5px;
-  font-weight: 800;
-  color: #1855b7;
-}
-
-.ecc-title {
-  font-size: 15px;
-  font-weight: 900;
-  color: #0f172a;
-  letter-spacing: -0.3px;
-}
-
-.ecc-desc {
-  font-size: 13px;
-  line-height: 1.65;
-  color: #475569;
-  margin: 0;
-  word-break: keep-all;
-}
-
-/* PENALTY CARD */
-.epc-penalty-card {
-  background: #fef2f2;
-  border: 1.5px solid #fecaca;
-  border-radius: 16px;
-  padding: 24px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.ep-law-ref {
-  font-size: 13px;
-  font-weight: 800;
-  color: #b91c1c;
-}
-
-.ep-penalty-txt {
-  font-size: 14.5px;
-  line-height: 1.7;
-  color: #1e293b;
-  margin: 0;
-}
-
-.ep-highlight {
-  color: #dc2626;
-  font-weight: 900;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.ep-date-info {
-  margin-top: 6px;
-  font-size: 12px;
-  color: #64748b;
-}
-
-/* CONTACT GRID */
-.epc-contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-
-.ep-contact-box {
-  background: #f8fafc;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 22px 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.ecb-title {
-  font-size: 15px;
-  font-weight: 900;
-  color: #0f172a;
-  border-bottom: 1px solid #e2e8f0;
-  padding-bottom: 8px;
-}
-
-.ecb-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 13px;
-  color: #334155;
-}
-
-.ecb-list em {
-  font-style: normal;
-  font-weight: 800;
-  color: #64748b;
-  display: inline-block;
-  width: 90px;
-}
-
-.ecb-list a {
-  color: #1855b7;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.ecb-list a:hover {
-  text-decoration: underline;
-}
-
-/* BOTTOM CTA */
-.epc-bottom-cta {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.epc-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background: linear-gradient(135deg, #1855b7 0%, #0284c7 100%);
-  color: #ffffff !important;
-  text-decoration: none;
-  padding: 15px 32px;
-  border-radius: 100px;
-  font-size: 15.5px;
-  font-weight: 800;
-  box-shadow: 0 10px 28px rgba(24, 85, 183, 0.35);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.epc-cta-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.45);
-  background: linear-gradient(135deg, #0f4296 0%, #0369a1 100%);
 }
 
 @media (max-width: 768px) {
-  .email-policy-wrap {
-    padding: 0 14px;
-    gap: 24px;
+  .email-policy-page {
+    padding-top: 85px !important;
+    padding-bottom: 60px !important;
   }
-  .epc-notice-card {
-    flex-direction: column;
-    padding: 20px 18px;
+  .email-page-header {
+    margin-bottom: 24px;
+    padding: 0 16px;
   }
-  .epc-section-block {
-    padding: 24px 18px;
+  .eph-title {
+    font-size: 26px;
+    letter-spacing: -0.6px;
   }
-  .epc-clauses-grid,
-  .epc-contact-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .ecb-list em {
-    width: 80px;
-  }
-  .epc-cta-btn {
-    width: 100%;
-    justify-content: center;
-    box-sizing: border-box;
+  .eph-desc {
+    font-size: 13.5px;
   }
 }
