@@ -3960,3 +3960,286 @@ body.modal-lock { overflow:hidden !important; }
   box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1) !important;
   border-color: #1855b7 !important;
 }
+
+
+/* ==========================================================================
+   LUXURY MOBILE GNB DRAWER & a_1 PORTFOLIO SUBPAGE MOBILE RESPONSIVE
+========================================================================== */
+
+/* PC DISPLAY HELPERS */
+.mobile_only { display: none !important; }
+
+/* 1. MOBILE DRAWER SYSTEM */
+@media (max-width: 991px) {
+  .mobile_only { display: flex !important; }
+  
+  .mobile_hamburger {
+    display: block !important;
+    z-index: 101 !important;
+  }
+  
+  .gnb_open {
+    width: 44px !important;
+    height: 44px !important;
+    background: transparent !important;
+    border: 0 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+    padding: 0 !important;
+  }
+  .gnb_open span {
+    display: block !important;
+    width: 24px !important;
+    height: 2px !important;
+    background: #0f172a !important;
+    border-radius: 2px !important;
+    transition: all 0.3s ease !important;
+  }
+  #header.is-dark .gnb_open span {
+    background: #ffffff !important;
+  }
+
+  /* GNB FULL-SCREEN SLIDE DRAWER */
+  #gnb.gnb_nav {
+    display: block !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 85% !important;
+    max-width: 360px !important;
+    height: 100vh !important;
+    background: #0f172a !important;
+    z-index: 99999 !important;
+    padding: 24px 28px 40px !important;
+    box-sizing: border-box !important;
+    transform: translateX(105%) !important;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5) !important;
+  }
+
+  #gnb.gnb_nav.is-mobile-open {
+    transform: translateX(0) !important;
+  }
+
+  /* DRAWER HEAD */
+  .gnb_drawer_head {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding-bottom: 24px !important;
+    margin-bottom: 28px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+  .gdh_logo {
+    font-size: 20px !important;
+    font-weight: 900 !important;
+    color: #ffffff !important;
+    letter-spacing: -0.5px !important;
+  }
+  .gnb_close_btn {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 0 !important;
+    color: #ffffff !important;
+    font-size: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+  }
+
+  /* DRAWER NAV LIST */
+  .gnb_nav_list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 0 32px !important;
+  }
+
+  .gnb_nav_list li a {
+    color: #ffffff !important;
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 10px !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+  }
+  .gnb_nav_list li a:hover {
+    color: #38bdf8 !important;
+  }
+  .gnb_nav_list .gnb-sub {
+    font-size: 11px !important;
+    color: #38bdf8 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+  }
+
+  /* DRAWER FOOTER */
+  .gnb-contact {
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+    padding-top: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .gnb-contact-lbl {
+    font-size: 12px !important;
+    color: #94a3b8 !important;
+    font-weight: 700 !important;
+  }
+  .gnb-contact-tel a {
+    font-size: 22px !important;
+    font-weight: 900 !important;
+    color: #38bdf8 !important;
+    text-decoration: none !important;
+  }
+  .gnb-contact-email {
+    font-size: 13.5px !important;
+    color: #cbd5e1 !important;
+  }
+  .gnb_mobile_direct_cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 14px !important;
+    padding: 14px 20px !important;
+    background: #1855b7 !important;
+    color: #ffffff !important;
+    font-size: 14.5px !important;
+    font-weight: 800 !important;
+    border-radius: 100px !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 14px rgba(24, 85, 183, 0.4) !important;
+  }
+
+  /* GNB BACKDROP DIM */
+  .gnb_dim {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 99998;
+  }
+  .gnb_dim.is-active {
+    display: block;
+  }
+}
+
+/* 2. a_1 PORTFOLIO SUBPAGE MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .mbp-top-sec {
+    padding-top: 90px !important;
+    padding-bottom: 20px !important;
+  }
+  .mbp-breadcrumb {
+    margin-bottom: 16px !important;
+    font-size: 12px !important;
+  }
+  .mbp-title-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 18px !important;
+    padding-bottom: 24px !important;
+  }
+  .mbp-main-title {
+    font-size: 32px !important;
+    margin-bottom: 6px !important;
+  }
+  .mbp-sub-desc {
+    font-size: 14px !important;
+  }
+  .mbp-search-pill {
+    width: 100% !important;
+    padding: 8px 18px !important;
+    box-sizing: border-box !important;
+  }
+  .mbp-search-pill input {
+    font-size: 14px !important;
+  }
+
+  /* SUBPAGE FILTER BAR ON MOBILE */
+  .mbp-filter-sec {
+    padding: 16px 0 24px !important;
+  }
+  .mbp-filter-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+  }
+  .mbp-total-counter strong {
+    font-size: 24px !important;
+  }
+  .mbp-total-unit {
+    font-size: 12.5px !important;
+  }
+
+  .mbp-category-list {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 16px !important;
+    width: 100% !important;
+    padding-bottom: 6px !important;
+  }
+  .mbp-category-list::-webkit-scrollbar {
+    display: none !important;
+  }
+  .mbp-cat-link h2 {
+    font-size: 15px !important;
+    white-space: nowrap !important;
+  }
+
+  /* 1-COLUMN FULL-WIDTH CARDS ON MOBILE */
+  .mbp-portfolio-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    margin-bottom: 40px !important;
+  }
+  .mbp-card-item {
+    border-radius: 20px !important;
+  }
+  .mbp-img-box {
+    aspect-ratio: 16 / 10 !important;
+  }
+  .mbp-text-box {
+    padding: 18px 20px 22px !important;
+  }
+  .mbp-card-title {
+    font-size: 17px !important;
+    line-height: 1.4 !important;
+  }
+  .mbp-card-meta {
+    margin-bottom: 8px !important;
+  }
+  .mbp-card-tag {
+    font-size: 12px !important;
+  }
+  .mbp-card-date {
+    font-size: 12px !important;
+  }
+
+  /* PAGINATION BUTTONS ON MOBILE */
+  .mbp-page-num,
+  .mbp-page-arrow {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 14px !important;
+    border-radius: 10px !important;
+  }
+}

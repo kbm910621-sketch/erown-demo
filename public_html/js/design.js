@@ -778,3 +778,35 @@ $(function() {
   $(document).ready(function() {
     initSubPortfolioSwipers();
   });
+
+
+  /* LUXURY MOBILE GNB DRAWER TOGGLE & ANCHOR NAVIGATION */
+  function openMobileGnb() {
+    $('#gnb').addClass('is-mobile-open');
+    $('#gnbDim').addClass('is-active');
+    $('body').css('overflow', 'hidden');
+  }
+
+  function closeMobileGnb() {
+    $('#gnb').removeClass('is-mobile-open');
+    $('#gnbDim').removeClass('is-active');
+    $('body').css('overflow', '');
+  }
+
+  $(document).on('click', '#gnbOpenBtn, .gnb_open', function(e) {
+    e.preventDefault();
+    openMobileGnb();
+  });
+
+  $(document).on('click', '#gnbCloseBtn, #gnbDim', function(e) {
+    e.preventDefault();
+    closeMobileGnb();
+  });
+
+  $(document).on('click', '.gnb_anchor_link, #gnb a', function() {
+    closeMobileGnb();
+  });
+
+  $(document).on('keydown', function(e) {
+    if (e.key === 'Escape') closeMobileGnb();
+  });
