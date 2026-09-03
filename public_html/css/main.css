@@ -5858,25 +5858,35 @@ body.menu-open {
 
 
 
+
+
 /* ==========================================================================
-   01-B GAON-N MID-PAGE INQUIRY BANNER (완벽 복구 및 세련된 코발트 블루)
+   01-B GAON-N MINIMALIST LUXURY MID-PAGE INQUIRY BANNER (세련되고 깔끔한 미니멀 룩)
 ========================================================================== */
 .am-mid-estimate-bar {
   width: 100%;
-  background: linear-gradient(135deg, #f0f7ff 0%, #e2effe 100%);
-  border-top: 1px solid #bfdbfe;
-  border-bottom: 1px solid #bfdbfe;
-  padding: 32px 0;
-  margin: 40px 0;
-  position: relative;
-  overflow: hidden;
+  padding: 20px 0 50px;
+  background: transparent;
 }
 
-.meb-inner {
+.meb-clean-box {
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 34px 44px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+  transition: all 0.3s ease;
+}
+
+.meb-clean-box:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 16px 40px rgba(24, 85, 183, 0.08);
 }
 
 .meb-text-wrap {
@@ -5885,42 +5895,16 @@ body.menu-open {
   gap: 6px;
 }
 
-.meb-badge-wrap {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #ffffff;
-  border: 1px solid #bfdbfe;
-  padding: 4px 12px;
-  border-radius: 100px;
-  width: fit-content;
-  box-shadow: 0 2px 6px rgba(24, 85, 183, 0.05);
-}
-
-.meb-pulse-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #0284c7;
-  box-shadow: 0 0 8px #38bdf8;
-  animation: mebPulse 2s infinite ease-in-out;
-}
-
-@keyframes mebPulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.3); opacity: 0.6; }
-}
-
-.meb-badge {
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+.meb-kicker {
+  font-size: 11.5px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
   color: #1855b7;
 }
 
 .meb-title {
-  font-size: 19px;
-  font-weight: 800;
+  font-size: 20px;
+  font-weight: 900;
   color: #0f172a;
   letter-spacing: -0.4px;
   margin: 0;
@@ -5928,89 +5912,66 @@ body.menu-open {
   font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
 }
 
-.meb-cta-btn {
+.meb-minimal-btn {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  background: linear-gradient(135deg, #1855b7 0%, #0284c7 100%);
+  gap: 12px;
+  background: #0f172a;
   color: #ffffff !important;
   text-decoration: none;
-  padding: 10px 14px 10px 24px;
+  padding: 15px 30px;
   border-radius: 100px;
-  box-shadow: 0 8px 24px rgba(24, 85, 183, 0.35);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.2);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   flex-shrink: 0;
 }
 
-.meb-cta-btn:hover {
+.meb-minimal-btn:hover {
+  background: #1855b7;
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(2, 132, 199, 0.45);
-  background: linear-gradient(135deg, #0f4296 0%, #0369a1 100%);
-}
-
-.meb-btn-txt {
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: -0.3px;
-  color: #ffffff;
-  white-space: nowrap;
-}
-
-.meb-btn-circle {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #07152c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-}
-
-.meb-cta-btn:hover .meb-btn-circle {
-  transform: translateX(3px);
-  background: #0f2347;
+  box-shadow: 0 12px 28px rgba(24, 85, 183, 0.35);
 }
 
 @media (max-width: 768px) {
-  .meb-inner {
+  .meb-clean-box {
     flex-direction: column;
     text-align: center;
-    gap: 16px;
-  }
-  .meb-badge-wrap {
-    margin: 0 auto;
+    padding: 26px 20px;
+    gap: 18px;
   }
   .meb-title {
-    font-size: 15.5px;
+    font-size: 16px;
     word-break: keep-all;
   }
-  .meb-cta-btn {
+  .meb-minimal-btn {
     width: 100%;
-    max-width: 280px;
-    justify-content: space-between;
+    justify-content: center;
+    box-sizing: border-box;
   }
 }
 
 /* ==========================================================================
-   08 GAON-N SIGNATURE ROUNDED INLINE ESTIMATE CARD (100% 가로 일치 & 인간 디자이너급 완성도)
+   08 GAON-N SIGNATURE SPACIOUS ROUNDED ESTIMATE CARD (시원한 높이와 넓은 간격)
 ========================================================================== */
 .am-master-conversion-section {
   width: 100%;
-  padding: 40px 0 90px;
+  padding: 40px 0 100px;
   background: #f8fafc;
 }
 
-/* 100% CONTAINER MATCHED CARD BOX */
+/* HIGH-END SPACIOUS CARD BOX */
 .mcf-card-box {
   width: 100% !important;
   box-sizing: border-box !important;
   background: #07152c;
   background: linear-gradient(145deg, #07152c 0%, #0c2042 50%, #061327 100%);
   border: 1.5px solid rgba(255, 255, 255, 0.12);
-  border-radius: 28px;
-  padding: 56px 50px 48px;
-  box-shadow: 0 24px 60px rgba(7, 21, 44, 0.18), 0 0 0 1px rgba(56, 189, 248, 0.08);
+  border-radius: 32px;
+  padding: 80px 64px 72px; /* 훨씬 높고 시원한 상하좌우 패딩 */
+  box-shadow: 0 30px 80px rgba(7, 21, 44, 0.25), 0 0 0 1px rgba(56, 189, 248, 0.08);
   position: relative;
   overflow: hidden;
 }
@@ -6018,7 +5979,7 @@ body.menu-open {
 .mcf-grid-layout {
   display: grid;
   grid-template-columns: 1fr 1.28fr;
-  gap: 52px;
+  gap: 64px; /* 칼럼 사이 넓은 간격 */
   align-items: start;
 }
 
@@ -6026,7 +5987,7 @@ body.menu-open {
 .mcf-brand-col {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 }
 
 .mcf-sub-kicker {
@@ -6035,17 +5996,17 @@ body.menu-open {
   font-weight: 800;
   letter-spacing: 0.14em;
   color: #38bdf8;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-transform: uppercase;
 }
 
 .mcf-title {
-  font-size: 34px;
+  font-size: 38px;
   font-weight: 900;
-  line-height: 1.28;
+  line-height: 1.25;
   color: #ffffff;
-  letter-spacing: -1px;
-  margin: 0 0 12px;
+  letter-spacing: -1.2px;
+  margin: 0 0 16px;
   font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
 }
 
@@ -6054,9 +6015,9 @@ body.menu-open {
 }
 
 .mcf-desc {
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
   margin: 0;
   word-break: keep-all;
 }
@@ -6064,18 +6025,18 @@ body.menu-open {
 .mcf-phone-card {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
-  padding: 16px 20px;
+  border-radius: 18px;
+  padding: 22px 26px;
 }
 
 .mpc-icon {
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: rgba(56, 189, 248, 0.12);
+  background: rgba(56, 189, 248, 0.14);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6085,17 +6046,17 @@ body.menu-open {
 .mpc-info {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .mpc-lbl {
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .mpc-num {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 900;
   color: #ffffff;
   text-decoration: none;
@@ -6111,30 +6072,30 @@ body.menu-open {
 .mcf-trust-points {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 20px;
+  gap: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 26px;
 }
 
 .mtp-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .mtp-check {
   color: #38bdf8;
   font-weight: 900;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .mtp-txt {
-  font-size: 13.5px;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
 }
 
-/* RIGHT FORM COLUMN */
+/* RIGHT FORM COLUMN (EXPANDED HEIGHT & ROOMY PADDING) */
 .mcf-form-col {
   width: 100%;
 }
@@ -6142,25 +6103,25 @@ body.menu-open {
 .mcf-form-box {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 20px; /* 필드 간 넉넉한 세로 간격 */
 }
 
 .mcf-grid-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 18px;
 }
 
 .mcf-field-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .mcf-field-label {
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .mcf-field-label .req {
@@ -6168,17 +6129,16 @@ body.menu-open {
   font-weight: 900;
 }
 
-.mcf-field-input,
-.mcf-field-textarea {
+.mcf-field-input {
   width: 100%;
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.07);
-  border: 1.5px solid rgba(255, 255, 255, 0.14);
-  border-radius: 12px;
-  padding: 0 16px;
-  height: 46px;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 0 20px;
+  height: 56px; /* 56px 시원한 높이 */
   color: #ffffff;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   font-family: inherit;
   outline: none;
@@ -6186,10 +6146,21 @@ body.menu-open {
 }
 
 .mcf-field-textarea {
-  height: auto;
-  padding: 12px 16px;
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 18px 20px;
+  height: 140px; /* 140px 시원한 텍스트에리어 높이 */
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  outline: none;
   resize: none;
   line-height: 1.6;
+  transition: all 0.25s ease;
 }
 
 .mcf-field-input:focus,
@@ -6201,15 +6172,15 @@ body.menu-open {
 
 .mcf-field-input::placeholder,
 .mcf-field-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.35);
-  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 14px;
 }
 
 /* MEDIA CHIPS CHECKBOXES */
 .mcf-media-chips {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  gap: 10px;
 }
 
 .mcf-chip-lbl {
@@ -6227,12 +6198,12 @@ body.menu-open {
 .mcf-chip-lbl span {
   display: block;
   text-align: center;
-  padding: 9px 4px;
-  border-radius: 10px;
+  padding: 12px 6px;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.14);
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
   font-weight: 700;
   transition: all 0.2s ease;
 }
@@ -6241,7 +6212,7 @@ body.menu-open {
   background: #1855b7;
   border-color: #38bdf8;
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(24, 85, 183, 0.3);
+  box-shadow: 0 4px 14px rgba(24, 85, 183, 0.35);
 }
 
 /* BOTTOM ACTION ROW */
@@ -6249,9 +6220,9 @@ body.menu-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 6px;
+  margin-top: 10px;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 16px;
 }
 
 .mcf-privacy-label {
@@ -6259,13 +6230,13 @@ body.menu-open {
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  font-size: 12.5px;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .mcf-chk {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   accent-color: #1855b7;
   cursor: pointer;
 }
@@ -6275,11 +6246,11 @@ body.menu-open {
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff !important;
   text-decoration: none;
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 700;
-  padding: 2px 8px;
+  padding: 3px 9px;
   border-radius: 100px;
-  margin-left: 2px;
+  margin-left: 3px;
   transition: all 0.2s;
 }
 
@@ -6291,28 +6262,28 @@ body.menu-open {
 .mcf-submit-btn {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   background: linear-gradient(135deg, #1855b7 0%, #0284c7 100%);
   color: #ffffff;
   border: 1.5px solid rgba(255, 255, 255, 0.3);
-  padding: 12px 20px 12px 24px;
+  padding: 14px 22px 14px 28px;
   border-radius: 100px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 0 10px 24px rgba(24, 85, 183, 0.4);
+  box-shadow: 0 12px 28px rgba(24, 85, 183, 0.45);
   transition: all 0.3s ease;
 }
 
 .mcf-submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(2, 132, 199, 0.5);
+  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.55);
   background: linear-gradient(135deg, #0f4296 0%, #0369a1 100%);
 }
 
 .msb-arrow {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: #07152c;
   display: flex;
@@ -6322,20 +6293,20 @@ body.menu-open {
 }
 
 .mcf-submit-btn:hover .msb-arrow {
-  transform: translateX(3px);
+  transform: translateX(4px);
   background: #0f2347;
 }
 
 @media (max-width: 991px) {
   .mcf-card-box {
-    padding: 40px 28px;
+    padding: 50px 32px;
   }
   .mcf-grid-layout {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 40px;
   }
   .mcf-title {
-    font-size: 28px;
+    font-size: 30px;
   }
   .mcf-media-chips {
     grid-template-columns: repeat(2, 1fr);
@@ -6344,527 +6315,31 @@ body.menu-open {
 
 @media (max-width: 768px) {
   .am-master-conversion-section {
-    padding: 20px 0 50px;
+    padding: 20px 0 60px;
   }
   .mcf-card-box {
-    padding: 32px 18px;
-    border-radius: 22px;
+    margin: 0 12px;
+    padding: 40px 20px 36px;
+    border-radius: 24px;
   }
   .mcf-grid-row {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 14px;
+  }
+  .mcf-field-input {
+    height: 50px;
+  }
+  .mcf-field-textarea {
+    height: 120px;
   }
   .mcf-action-row {
     flex-direction: column;
     align-items: stretch;
+    gap: 16px;
   }
   .mcf-submit-btn {
     width: 100%;
     justify-content: space-between;
-    height: 50px;
-  }
-}
-
-
-
-
-
-
-
-/* ==========================================================================
-   EMAIL POLICY PAGE (완벽한 상단 헤더 및 본문 카드 전체 스타일 복구)
-========================================================================== */
-.email-policy-page {
-  padding-top: 110px !important;
-  padding-bottom: 90px !important;
-  background: #f8fafc !important;
-  min-height: 80vh;
-}
-
-.email-page-header {
-  max-width: 980px;
-  margin: 0 auto 36px;
-  padding: 0 20px;
-  text-align: left;
-}
-
-.eph-kicker {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  color: #1855b7;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.eph-title {
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 1.25;
-  letter-spacing: -1px;
-  color: #0f172a;
-  margin: 0 0 12px;
-  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
-}
-
-.eph-title span {
-  color: #1855b7;
-}
-
-.eph-desc {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #64748b;
-  margin: 0;
-  word-break: keep-all;
-}
-
-.email-policy-wrap {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-
-/* 01 NOTICE CALLOUT CARD */
-.epc-notice-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  background: #ffffff;
-  border: 1.5px solid #bfdbfe;
-  border-radius: 20px;
-  padding: 28px 32px;
-  box-shadow: 0 10px 30px rgba(24, 85, 183, 0.06);
-}
-
-.epc-shield-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  background: #eff6ff;
-  border: 1px solid #dbeafe;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.epc-notice-text {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.epc-notice-title {
-  font-size: 19px;
-  font-weight: 900;
-  color: #0f172a;
-  letter-spacing: -0.4px;
-  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
-}
-
-.epc-notice-desc {
-  font-size: 14.5px;
-  line-height: 1.7;
-  color: #334155;
-  margin: 0;
-  word-break: keep-all;
-}
-
-.epc-notice-desc strong {
-  color: #1855b7;
-  font-weight: 800;
-}
-
-/* SECTION BLOCKS */
-.epc-section-block {
-  background: #ffffff;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 24px;
-  padding: 36px 36px;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
-}
-
-.epc-sec-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-  border-bottom: 1.5px solid #f1f5f9;
-  padding-bottom: 16px;
-}
-
-.epc-num-badge {
-  font-size: 12px;
-  font-weight: 900;
-  color: #1855b7;
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
-  padding: 4px 10px;
-  border-radius: 100px;
-  font-family: "Pretendard", sans-serif;
-}
-
-.epc-sec-title {
-  font-size: 20px;
-  font-weight: 900;
-  color: #0f172a;
-  margin: 0;
-  letter-spacing: -0.4px;
-  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
-}
-
-/* CLAUSES 3-GRID */
-.epc-clauses-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.epc-clause-card {
-  background: #f8fafc;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 22px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  transition: all 0.25s ease;
-}
-
-.epc-clause-card:hover {
-  background: #ffffff;
-  border-color: #93c5fd;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(24, 85, 183, 0.08);
-}
-
-.ecc-tag {
-  display: inline-block;
-  font-size: 11.5px;
-  font-weight: 800;
-  color: #1855b7;
-}
-
-.ecc-title {
-  font-size: 15px;
-  font-weight: 900;
-  color: #0f172a;
-  letter-spacing: -0.3px;
-}
-
-.ecc-desc {
-  font-size: 13px;
-  line-height: 1.65;
-  color: #475569;
-  margin: 0;
-  word-break: keep-all;
-}
-
-/* PENALTY CARD */
-.epc-penalty-card {
-  background: #fef2f2;
-  border: 1.5px solid #fecaca;
-  border-radius: 16px;
-  padding: 24px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.ep-law-ref {
-  font-size: 13px;
-  font-weight: 800;
-  color: #b91c1c;
-}
-
-.ep-penalty-txt {
-  font-size: 14.5px;
-  line-height: 1.7;
-  color: #1e293b;
-  margin: 0;
-  word-break: keep-all;
-}
-
-.ep-highlight {
-  color: #dc2626;
-  font-weight: 900;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.ep-date-info {
-  margin-top: 6px;
-  font-size: 12px;
-  color: #64748b;
-}
-
-/* CONTACT GRID */
-.epc-contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-
-.ep-contact-box {
-  background: #f8fafc;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 22px 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.ecb-title {
-  font-size: 15px;
-  font-weight: 900;
-  color: #0f172a;
-  border-bottom: 1px solid #e2e8f0;
-  padding-bottom: 8px;
-}
-
-.ecb-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 13px;
-  color: #334155;
-}
-
-.ecb-list em {
-  font-style: normal;
-  font-weight: 800;
-  color: #64748b;
-  display: inline-block;
-  width: 90px;
-}
-
-.ecb-list a {
-  color: #1855b7;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.ecb-list a:hover {
-  text-decoration: underline;
-}
-
-/* BOTTOM CTA */
-.epc-bottom-cta {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.epc-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background: linear-gradient(135deg, #1855b7 0%, #0284c7 100%);
-  color: #ffffff !important;
-  text-decoration: none;
-  padding: 15px 32px;
-  border-radius: 100px;
-  font-size: 15.5px;
-  font-weight: 800;
-  box-shadow: 0 10px 28px rgba(24, 85, 183, 0.35);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.epc-cta-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.45);
-  background: linear-gradient(135deg, #0f4296 0%, #0369a1 100%);
-}
-
-@media (max-width: 768px) {
-  .email-policy-page {
-    padding-top: 85px !important;
-    padding-bottom: 60px !important;
-  }
-  .email-page-header {
-    margin-bottom: 24px;
-    padding: 0 16px;
-  }
-  .eph-title {
-    font-size: 26px;
-    letter-spacing: -0.6px;
-  }
-  .eph-desc {
-    font-size: 13.5px;
-  }
-  .email-policy-wrap {
-    padding: 0 14px;
-    gap: 24px;
-  }
-  .epc-notice-card {
-    flex-direction: column;
-    padding: 20px 18px;
-  }
-  .epc-section-block {
-    padding: 24px 18px;
-  }
-  .epc-clauses-grid,
-  .epc-contact-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .ecb-list em {
-    width: 80px;
-  }
-  .epc-cta-btn {
-    width: 100%;
-    justify-content: center;
-    box-sizing: border-box;
-  }
-}
-
-
-/* ==========================================================================
-   ESTIMATE WRITE PAGE REFINEMENT (촌스러운 100% 버튼 해소 & 프레스티지 폼 조율)
-========================================================================== */
-.contact-page {
-  padding-top: 110px !important;
-  padding-bottom: 90px !important;
-  background: #f8fafc !important;
-  min-height: 85vh;
-}
-
-.estimate-page-header {
-  max-width: 920px;
-  margin: 0 auto 36px;
-  padding: 0 20px;
-  text-align: left;
-}
-
-.contact-consult-wrap {
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.contact-consult-section {
-  width: 100%;
-}
-
-.contact-consult-section .consult-right {
-  background: #ffffff !important;
-  border: 1.5px solid #e2e8f0 !important;
-  border-radius: 28px !important;
-  padding: 48px 44px !important;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.04) !important;
-  box-sizing: border-box !important;
-}
-
-.cf-section-head {
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  margin: 28px 0 18px !important;
-  padding-bottom: 12px !important;
-  border-bottom: 1.5px solid #f1f5f9 !important;
-}
-
-.cf-section-head.first {
-  margin-top: 0 !important;
-}
-
-.cf-num {
-  font-size: 12px !important;
-  font-weight: 900 !important;
-  color: #1855b7 !important;
-  background: #eff6ff !important;
-  border: 1px solid #bfdbfe !important;
-  padding: 3px 10px !important;
-  border-radius: 100px !important;
-}
-
-.cf-stitle {
-  font-size: 17px !important;
-  font-weight: 800 !important;
-  color: #0f172a !important;
-  letter-spacing: -0.3px !important;
-}
-
-/* CENTERED LUXURY SUBMIT BUTTON */
-.cf-btn-wrap {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin-top: 40px !important;
-  width: 100% !important;
-}
-
-.cf-luxury-submit-btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 16px !important;
-  width: auto !important;
-  min-width: 320px !important;
-  max-width: 380px !important;
-  height: 56px !important;
-  padding: 0 16px 0 28px !important;
-  border-radius: 100px !important;
-  background: linear-gradient(135deg, #1855b7 0%, #0284c7 100%) !important;
-  color: #ffffff !important;
-  font-size: 15.5px !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.3px !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
-  box-shadow: 0 12px 28px rgba(24, 85, 183, 0.38) !important;
-  cursor: pointer !important;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-}
-
-.cf-luxury-submit-btn:hover {
-  transform: translateY(-3px) scale(1.02) !important;
-  box-shadow: 0 18px 40px rgba(2, 132, 199, 0.48) !important;
-  background: linear-gradient(135deg, #0f4296 0%, #0369a1 100%) !important;
-}
-
-.cf-luxury-submit-btn:active {
-  transform: scale(0.98) !important;
-}
-
-.clsb-circle {
-  width: 36px !important;
-  height: 36px !important;
-  border-radius: 50% !important;
-  background: #07152c !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: transform 0.3s ease !important;
-}
-
-.cf-luxury-submit-btn:hover .clsb-circle {
-  transform: translateX(4px) !important;
-  background: #0f2347 !important;
-}
-
-@media (max-width: 768px) {
-  .contact-page {
-    padding-top: 85px !important;
-    padding-bottom: 60px !important;
-  }
-  .estimate-page-header,
-  .contact-consult-wrap {
-    padding: 0 14px !important;
-  }
-  .contact-consult-section .consult-right {
-    padding: 30px 18px !important;
-    border-radius: 20px !important;
-  }
-  .cf-luxury-submit-btn {
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    height: 52px !important;
-    padding: 0 14px 0 20px !important;
+    height: 54px;
   }
 }

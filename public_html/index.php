@@ -571,24 +571,21 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </section>
 
-      <!-- ============================================
-       01-B GAON-N SIGNATURE MID-PAGE INQUIRY BANNER
+        <!-- ============================================
+       01-B GAON-N MINIMALIST LUXURY MID-PAGE INQUIRY BANNER
   ============================================ -->
   <section class="am-mid-estimate-bar wow fadeInUp" data-wow-duration="0.7s">
-    <div class="am-container meb-inner">
-      <div class="meb-text-wrap">
-        <div class="meb-badge-wrap">
-          <span class="meb-pulse-dot"></span>
-          <span class="meb-badge">GAON-N 1:1 CONSULTING</span>
+    <div class="am-container">
+      <div class="meb-clean-box">
+        <div class="meb-text-wrap">
+          <span class="meb-kicker">CUSTOM MEDIA PLAN</span>
+          <h3 class="meb-title">광고 예산과 상권에 맞춘 1:1 최적 미디어 믹스를 무료로 설계해 드립니다.</h3>
         </div>
-        <h3 class="meb-title">광고 집행이 고민이신가요? 가온엔 맞춤 미디어 플랜을 제안해 드립니다.</h3>
+        <a href="/board/estmate/write.php" class="meb-minimal-btn">
+          <span>견적 문의하기</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
       </div>
-      <a href="/board/estmate/write.php" class="meb-cta-btn">
-        <span class="meb-btn-txt">1:1 맞춤 견적문의</span>
-        <span class="meb-btn-circle">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </span>
-      </a>
     </div>
   </section>
 
