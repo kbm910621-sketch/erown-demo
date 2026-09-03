@@ -5854,41 +5854,92 @@ body.menu-open {
 
 
 
+
+
 /* ==========================================================================
-   ALL-IN-ONE MASTER INLINE CONVERSION FOOTER (media_1788418661787.png)
+   GAON-N SIGNATURE ROUNDED ESTIMATE CARD (가온엔 시그니처 둥근 사각형 카드)
 ========================================================================== */
-.am-master-conversion-footer {
+.am-master-conversion-section {
   width: 100%;
-  background: #6d28d9;
-  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 45%, #4c1d95 100%);
-  color: #ffffff;
-  padding: 85px 0 70px;
+  padding: 40px 0 80px;
+  background: #f8fafc;
   position: relative;
-  overflow: hidden;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.mcf-container {
+.mcf-card-box {
+  width: 100%;
+  max-width: 1340px;
+  margin: 0 auto;
+  background: #07152c;
+  background: linear-gradient(145deg, #07152c 0%, #0d2244 50%, #061326 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 36px;
+  padding: 68px 56px 56px;
+  box-shadow: 0 30px 80px rgba(7, 21, 44, 0.22), 0 0 0 1px rgba(56, 189, 248, 0.08);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* AMBIENT BACKGROUND GLOW */
+.mcf-ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(70px);
+}
+.mcf-ambient-glow.glow-1 {
+  top: -20%;
+  left: -10%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(24, 85, 183, 0.3) 0%, rgba(24, 85, 183, 0) 70%);
+}
+.mcf-ambient-glow.glow-2 {
+  bottom: -20%;
+  right: -10%;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(56, 189, 248, 0) 70%);
+}
+
+.mcf-grid-layout {
   display: grid;
-  grid-template-columns: 1fr 1.35fr;
-  gap: 60px;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 56px;
   align-items: start;
+  position: relative;
+  z-index: 2;
 }
 
 /* LEFT COLUMN */
 .mcf-brand-col {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 28px;
 }
 
-.mcf-kicker {
-  display: inline-block;
-  font-size: 12px;
+.mcf-kicker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 5px 14px;
+  border-radius: 100px;
+  color: #38bdf8;
+  font-size: 11.5px;
   font-weight: 800;
-  letter-spacing: 0.18em;
-  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.12em;
   margin-bottom: 14px;
+}
+
+.mcf-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
 }
 
 .mcf-title {
@@ -5899,6 +5950,10 @@ body.menu-open {
   letter-spacing: -1.2px;
   margin: 0;
   font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
+}
+
+.mcf-title .mcf-hl {
+  color: #38bdf8;
 }
 
 .mcf-phone-box {
@@ -5914,40 +5969,44 @@ body.menu-open {
 }
 
 .mcf-phone-val {
-  font-size: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 38px;
   font-weight: 900;
   color: #ffffff;
   text-decoration: none;
   letter-spacing: -1px;
   line-height: 1.1;
   font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
-  transition: opacity 0.2s;
+  transition: all 0.25s ease;
 }
 
 .mcf-phone-val:hover {
-  opacity: 0.85;
+  color: #38bdf8;
+  transform: translateX(4px);
 }
 
 .mcf-company-info {
-  margin-top: 10px;
+  margin-top: 6px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: 24px;
+  gap: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 22px;
 }
 
 .mcf-corp-name {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 900;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   color: #ffffff;
 }
 
 .mcf-corp-desc {
-  font-size: 13.5px;
+  font-size: 13px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.75);
   margin: 0;
 }
 
@@ -5955,15 +6014,15 @@ body.menu-open {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.55);
   line-height: 1.5;
 }
 
 .mcf-copy {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.45);
-  margin-top: 6px;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 4px;
 }
 
 /* RIGHT FORM COLUMN */
@@ -5986,33 +6045,34 @@ body.menu-open {
 .mcf-input-wrap,
 .mcf-textarea-wrap {
   position: relative;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
   display: flex;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 18px;
   transition: all 0.25s ease;
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .mcf-textarea-wrap {
   flex-direction: column;
   align-items: flex-start;
-  padding: 14px 16px;
+  padding: 14px 18px;
 }
 
 .mcf-input-wrap:focus-within,
 .mcf-textarea-wrap:focus-within {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: #ffffff;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
 }
 
 .mcf-input-lbl {
   font-size: 13px;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.9);
+  color: #38bdf8;
   white-space: nowrap;
   width: 52px;
   flex-shrink: 0;
@@ -6024,7 +6084,7 @@ body.menu-open {
 
 .mcf-field-input {
   width: 100%;
-  height: 48px;
+  height: 50px;
   background: transparent;
   border: none;
   outline: none;
@@ -6049,14 +6109,14 @@ body.menu-open {
 
 .mcf-field-input::placeholder,
 .mcf-field-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .mcf-action-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 8px;
   flex-wrap: wrap;
   gap: 16px;
 }
@@ -6073,12 +6133,13 @@ body.menu-open {
 .mcf-chk {
   width: 16px;
   height: 16px;
-  accent-color: #9333ea;
+  accent-color: #1855b7;
   cursor: pointer;
 }
 
 .mcf-privacy-btn {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff !important;
   text-decoration: none;
   font-size: 11.5px;
@@ -6086,36 +6147,50 @@ body.menu-open {
   padding: 3px 10px;
   border-radius: 100px;
   margin-left: 4px;
-  transition: background 0.2s;
+  transition: all 0.2s;
 }
 
 .mcf-privacy-btn:hover {
-  background: rgba(255, 255, 255, 0.35);
+  background: #1855b7;
+  border-color: #38bdf8;
 }
 
 .mcf-submit-pill {
-  border: none !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
   outline: none !important;
   cursor: pointer !important;
+  padding: 10px 12px 10px 24px !important;
 }
 
 @media (max-width: 991px) {
-  .am-master-conversion-footer {
-    padding: 60px 0;
+  .am-master-conversion-section {
+    padding: 30px 0 60px;
   }
-  .mcf-container {
+  .mcf-card-box {
+    padding: 45px 30px 40px;
+    border-radius: 28px;
+  }
+  .mcf-grid-layout {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
   .mcf-title {
     font-size: 30px;
   }
   .mcf-phone-val {
-    font-size: 34px;
+    font-size: 32px;
   }
 }
 
 @media (max-width: 768px) {
+  .am-master-conversion-section {
+    padding: 20px 0 50px;
+  }
+  .mcf-card-box {
+    margin: 0 12px;
+    padding: 36px 20px 32px;
+    border-radius: 24px;
+  }
   .mcf-grid-row {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -6130,176 +6205,5 @@ body.menu-open {
     max-width: 100% !important;
     justify-content: space-between !important;
     height: 52px !important;
-  }
-}
-
-
-/* ==========================================================================
-   GAON-N SIGNATURE BRAND-ALIGNED MID-PAGE ESTIMATE BAR (가온엔 코발트 블루)
-========================================================================== */
-.am-mid-estimate-bar {
-  width: 100%;
-  background: linear-gradient(135deg, #f0f7ff 0%, #e4effe 50%, #dbeafe 100%);
-  border-top: 1.5px solid #bfdbfe;
-  border-bottom: 1.5px solid #bfdbfe;
-  padding: 36px 0;
-  position: relative;
-  overflow: hidden;
-  box-shadow: inset 0 2px 8px rgba(24, 85, 183, 0.04);
-}
-
-.am-mid-estimate-bar::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.meb-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  position: relative;
-  z-index: 2;
-}
-
-.meb-text-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.meb-badge-wrap {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #ffffff;
-  border: 1px solid #bfdbfe;
-  padding: 4px 14px;
-  border-radius: 100px;
-  width: fit-content;
-  box-shadow: 0 2px 6px rgba(24, 85, 183, 0.06);
-}
-
-.meb-pulse-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #0284c7;
-  box-shadow: 0 0 8px #38bdf8;
-  animation: pulseDot 2s infinite ease-in-out;
-}
-
-@keyframes pulseDot {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.4); opacity: 0.6; }
-}
-
-.meb-badge {
-  font-size: 11.5px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  color: #1855b7;
-}
-
-.meb-title {
-  font-size: 19.5px;
-  font-weight: 900;
-  color: #07152c;
-  letter-spacing: -0.5px;
-  line-height: 1.4;
-  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
-}
-
-/* GAON-N SIGNATURE COBALT PILL BUTTON */
-.trendy-pill-estimate-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  background: linear-gradient(135deg, #1855b7 0%, #0284c7 100%);
-  color: #ffffff !important;
-  text-decoration: none;
-  padding: 10px 12px 10px 24px;
-  border-radius: 100px;
-  box-shadow: 0 10px 28px rgba(24, 85, 183, 0.38), 0 2px 6px rgba(0, 0, 0, 0.08);
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-.trendy-pill-estimate-btn:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.48);
-  background: linear-gradient(135deg, #0f4296 0%, #0369a1 100%);
-}
-
-.trendy-pill-estimate-btn:active {
-  transform: scale(0.97);
-}
-
-.tpeb-txt {
-  font-size: 15.5px;
-  font-weight: 900;
-  letter-spacing: -0.3px;
-  color: #ffffff;
-  white-space: nowrap;
-}
-
-.tpeb-circle-dot {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #07152c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 10px rgba(7, 21, 44, 0.4);
-  transition: transform 0.3s ease;
-}
-
-.trendy-pill-estimate-btn:hover .tpeb-circle-dot {
-  transform: scale(1.1) rotate(45deg);
-  background: #0f172a;
-}
-
-.tpeb-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #38bdf8;
-  box-shadow: 0 0 8px #38bdf8;
-}
-
-@media (max-width: 768px) {
-  .am-mid-estimate-bar {
-    padding: 30px 16px;
-  }
-  .meb-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
-  }
-  .meb-badge-wrap {
-    margin: 0 auto;
-  }
-  .meb-title {
-    font-size: 15.5px;
-    word-break: keep-all;
-    line-height: 1.5;
-  }
-  .trendy-pill-estimate-btn {
-    width: 100%;
-    max-width: 280px;
-    justify-content: space-between;
-    padding: 10px 14px 10px 22px;
   }
 }
