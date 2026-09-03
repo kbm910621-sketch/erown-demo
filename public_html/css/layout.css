@@ -290,7 +290,7 @@ body { background:#f2f2f4}
 #gnb .main_menu { width: 100%; margin: 50px 0; padding: 0; }
 #gnb .main_menu > ul { display: block; border: none; width: 100%; }
 #gnb .main_menu .depth1 { border-bottom: 1px solid #f0f0f0; padding: 0; }
-#gnb .main_menu .depth1:first-child { border-top: 1px solid #f0f0f0; }
+
 #gnb .main_menu .depth1 > a { display: block; padding: 22px 0; font-size: 24px; font-weight: 700; color: #111; letter-spacing: -.5px; transition: color 0.2s; }
 #gnb .main_menu .depth1 > a:hover { color: #2E5FA3; }
 #gnb .main_menu .depth1 > a:after { display: none; }
