@@ -721,27 +721,33 @@ $(function() {
 
   
 
+  
   /* ==========================================================================
-     SUB-PORTFOLIO 3-SECTION SWIPER (부드러운 speed 650ms 전환 & 75%+15% 빼꼼)
+     SUB-PORTFOLIO 3-SECTION SWIPER (자동 롤링 Autoplay + 부드러운 speed 700ms)
   ========================================================================== */
   function initAllSubPortfolioSwipers() {
     if (typeof Swiper === 'undefined') return;
 
     var swiperConfig = {
-      slidesPerView: 1.25, /* 1번 75~80% + 2번 15~20% 빼꼼 */
+      slidesPerView: 1.25, /* 모바일: 1번 75~80% 메인 + 2번 15~20% 빼꼼 */
       spaceBetween: 12,
       slidesPerGroup: 1,
-      speed: 650, /* 부드럽고 매끄러운 고급 슬라이딩 모션 */
+      speed: 700, /* 부드럽고 매끄러운 고급 슬라이딩 모션 */
       grabCursor: true,
       touchRatio: 1.1,
       centeredSlides: false,
       rewind: true,
+      autoplay: {
+        delay: 3500, /* 3.5초마다 자동으로 다음 사례 롤링 */
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
       breakpoints: {
         769: {
           slidesPerView: 4,
           spaceBetween: 22,
           slidesPerGroup: 1,
-          speed: 700,
+          speed: 750,
           rewind: true
         }
       }
@@ -768,6 +774,7 @@ $(function() {
       }));
     } catch(e) {}
   }
+
 
   /* ==========================================================================
      PORTFOLIO LIGHTBOX MODAL WITH FULL PREV / NEXT NAVIGATION
