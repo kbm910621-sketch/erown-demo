@@ -4003,16 +4003,16 @@ body.modal-lock { overflow:hidden !important; }
     background: #ffffff !important;
   }
 
-  /* GNB FULL-SCREEN SLIDE DRAWER */
+  /* GNB FULL-SCREEN SLIDE DRAWER (화사하고 깨끗한 퓨어 화이트 & 로열블루 테마) */
   #gnb.gnb_nav {
     display: block !important;
     position: fixed !important;
     top: 0 !important;
     right: 0 !important;
     width: 85% !important;
-    max-width: 360px !important;
+    max-width: 340px !important;
     height: 100vh !important;
-    background: #0f172a !important;
+    background: #ffffff !important; /* 화사하고 깨끗한 화이트 배경 */
     z-index: 99999 !important;
     padding: 24px 28px 40px !important;
     box-sizing: border-box !important;
@@ -4020,7 +4020,7 @@ body.modal-lock { overflow:hidden !important; }
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.5) !important;
+    box-shadow: -10px 0 35px rgba(15, 23, 42, 0.2) !important;
   }
 
   #gnb.gnb_nav.is-mobile-open {
@@ -4030,84 +4030,91 @@ body.modal-lock { overflow:hidden !important; }
   /* DRAWER HEAD */
   .gnb_drawer_head {
     display: flex !important;
-    justify-content: space-between !important;
+    justify-content: flex-end !important;
     align-items: center !important;
-    padding-bottom: 24px !important;
-    margin-bottom: 28px !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 20px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
   }
   .gdh_logo {
-    font-size: 20px !important;
-    font-weight: 900 !important;
-    color: #ffffff !important;
-    letter-spacing: -0.5px !important;
+    display: none !important;
   }
   .gnb_close_btn {
-    width: 36px !important;
-    height: 36px !important;
+    width: 38px !important;
+    height: 38px !important;
     border-radius: 50% !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-    border: 0 !important;
-    color: #ffffff !important;
+    background: #f1f5f9 !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #0f172a !important;
     font-size: 18px !important;
+    font-weight: 800 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     cursor: pointer !important;
+    transition: all 0.2s ease !important;
+  }
+  .gnb_close_btn:hover {
+    background: #e2e8f0 !important;
   }
 
   /* DRAWER NAV LIST */
   .gnb_nav_list {
     display: flex !important;
     flex-direction: column !important;
-    gap: 18px !important;
+    gap: 14px !important;
     list-style: none !important;
     padding: 0 !important;
-    margin: 0 0 32px !important;
+    margin: 0 0 28px !important;
+  }
+
+  .gnb_nav_list li {
+    border-bottom: 1px solid #f1f5f9 !important;
+    padding-bottom: 14px !important;
   }
 
   .gnb_nav_list li a {
-    color: #ffffff !important;
-    font-size: 20px !important;
+    color: #0f172a !important; /* 또렷하고 선명한 다크 네이비 */
+    font-size: 19px !important;
     font-weight: 800 !important;
     display: flex !important;
-    align-items: baseline !important;
-    gap: 10px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
     text-decoration: none !important;
     transition: color 0.2s ease !important;
   }
   .gnb_nav_list li a:hover {
-    color: #38bdf8 !important;
+    color: #1855b7 !important;
   }
   .gnb_nav_list .gnb-sub {
-    font-size: 11px !important;
-    color: #38bdf8 !important;
+    font-size: 12px !important;
+    color: #1855b7 !important; /* 신뢰감 있는 가온엔 로열블루 */
     font-weight: 700 !important;
     text-transform: uppercase !important;
   }
 
   /* DRAWER FOOTER */
   .gnb-contact {
-    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
-    padding-top: 24px !important;
+    border-top: 1px solid #e2e8f0 !important;
+    background: #f8fafc !important;
+    padding: 20px !important;
+    border-radius: 14px !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 8px !important;
   }
   .gnb-contact-lbl {
     font-size: 12px !important;
-    color: #94a3b8 !important;
+    color: #64748b !important;
     font-weight: 700 !important;
   }
   .gnb-contact-tel a {
     font-size: 22px !important;
     font-weight: 900 !important;
-    color: #38bdf8 !important;
+    color: #1855b7 !important;
     text-decoration: none !important;
   }
   .gnb-contact-email {
-    font-size: 13.5px !important;
-    color: #cbd5e1 !important;
   }
   .gnb_mobile_direct_cta {
     display: inline-flex !important;
