@@ -53,9 +53,12 @@ if (empty($list)) {
     if ($reqCat === 'all') {
         $list = $allFallback;
     } else {
-        $list = array_filter($allFallback, function($it) use ($reqCat) {
-            return $it['category'] === $reqCat;
-        });
+        $list = array();
+    foreach ($allFallback as $it) {
+        if (isset($it['category']) && $it['category'] === $reqCat) {
+            $list[] = $it;
+        }
+    }
     }
 }
 
