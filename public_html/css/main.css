@@ -6893,3 +6893,61 @@ body.menu-open {
   color: #ffffff !important;
   opacity: 0.9 !important;
 }
+
+
+/* ==========================================================================
+   ONLINE MARKETING CARD RATIO UNIFICATION (모든 카드의 비율 및 높이 100% 완벽 통일)
+========================================================================== */
+.som-stream-card {
+  position: relative !important;
+  width: 100% !important;
+  height: 380px !important; /* 모든 카드의 높이를 380px로 완벽 일치 */
+  min-height: 380px !important;
+  max-height: 380px !important;
+  border-radius: 28px !important;
+  overflow: hidden !important;
+  background: #0f172a !important;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08) !important;
+  cursor: pointer !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.som-stream-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+.som-right-stream-wrap {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 26px !important;
+  height: 786px !important; /* 카드 2장(380*2) + 간격(26) 완벽 일치 */
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+@media (max-width: 991px) {
+  .som-right-stream-wrap {
+    height: auto !important;
+  }
+  .som-stream-card {
+    height: 320px !important;
+    min-height: 320px !important;
+    max-height: 320px !important;
+    border-radius: 22px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .som-stream-card {
+    height: 220px !important;
+    min-height: 220px !important;
+    max-height: 220px !important;
+    border-radius: 18px !important;
+  }
+}
