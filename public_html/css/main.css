@@ -6645,27 +6645,73 @@ body.menu-open {
 
 
 
+
+
 /* ==========================================================================
-   AUTHENTIC HUMAN-DESIGNED CONTACT PAGE STYLES
+   AUTHENTIC HUMAN-DESIGNED CONTACT PAGE STYLES (헤더 안쪽 정렬 & 하단 여백 최적화)
 ========================================================================== */
 .contact-page {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 auto !important;
+  padding-top: 110px !important;
+  padding-bottom: 100px !important;
+  background: #ffffff !important;
   box-sizing: border-box !important;
 }
 
-.contact-consult-wrap,
-.contact-info-wrap {
-  max-width: 1320px !important;
+.contact-align-container {
+  max-width: 900px !important;
   margin: 0 auto !important;
-  padding: 0 24px !important;
+  padding: 0 20px !important;
   box-sizing: border-box !important;
+}
+
+.contact-align-container .port-page-head {
+  padding: 0 0 36px 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  margin-bottom: 40px !important;
+}
+
+.contact-align-container .port-page-title {
+  font-size: 46px !important;
+  font-weight: 800 !important;
+  letter-spacing: -1.2px !important;
+  color: #111111 !important;
+  line-height: 1.15 !important;
+  margin: 0 0 12px !important;
+  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif !important;
+}
+
+.contact-align-container .port-page-title span {
+  color: #1855b7 !important;
+}
+
+.contact-align-container .port-page-desc {
+  font-size: 16px !important;
+  color: #666666 !important;
+  margin: 0 !important;
+  line-height: 1.6 !important;
+}
+
+.contact-consult-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.consult-right {
+  border-left: none !important;
+  padding: 0 !important;
 }
 
 .consult-right form {
-  max-width: 900px !important;
-  margin: 0 auto 60px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-bottom: 0 !important;
 }
 
 .cf-btn-submit {
@@ -6690,9 +6736,15 @@ body.menu-open {
 }
 
 @media (max-width: 768px) {
-  .contact-consult-wrap,
-  .contact-info-wrap {
+  .contact-page {
+    padding-top: 85px !important;
+    padding-bottom: 60px !important;
+  }
+  .contact-align-container {
     padding: 0 16px !important;
+  }
+  .contact-align-container .port-page-title {
+    font-size: 30px !important;
   }
   .cf-btn-submit {
     width: 100% !important;
