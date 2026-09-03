@@ -3510,17 +3510,7 @@ body.modal-lock { overflow:hidden !important; }
   }
   .rmb-close-btn,
   .bgm-close-btn,
-  .pm-close-btn {
-    position: sticky !important;
-    top: 8px !important;
-    right: 8px !important;
-    z-index: 100 !important;
-    width: 38px !important;
-    height: 38px !important;
-    background: rgba(15, 23, 42, 0.85) !important;
-    color: #ffffff !important;
-    border-radius: 50% !important;
-  }
+  
 }
 
 
@@ -5708,5 +5698,154 @@ body.menu-open {
   }
   .pm-next-btn {
     right: 8px !important;
+  }
+}
+
+
+/* ==========================================================================
+   HERO MOBILE FLUID NO-TRAP LAYOUT & LIGHTBOX MODAL CLOSE (✕) TOP-RIGHT PIN
+========================================================================== */
+
+/* 1. 팝업 닫기(✕) 버튼: PC/모바일 전 구간 [오른쪽 위 상단(top: 16px, right: 16px)] 강제 고정 */
+.pm-close-btn,
+#modalClose {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  left: auto !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  background: rgba(15, 23, 42, 0.8) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  z-index: 999999 !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35) !important;
+  transition: all 0.25s ease !important;
+}
+
+.pm-close-btn:hover,
+#modalClose:hover {
+  background: #0f172a !important;
+  border-color: #ffffff !important;
+  transform: rotate(90deg) scale(1.05) !important;
+}
+
+@media (max-width: 768px) {
+  .pm-close-btn,
+  #modalClose {
+    top: 14px !important;
+    right: 14px !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 16px !important;
+  }
+
+  /* 2. 모바일 히어로: 스크롤 멈춤 완전 해제 & 상단 텍스트 잘림 방지 안전 여백 */
+  .main_hero {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding-top: 88px !important; /* 고정 헤더 아래 안전 여백으로 '보는 순간' 잘림 100% 방지 */
+    padding-bottom: 36px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    background: #f8fafc !important;
+    overflow: visible !important;
+  }
+
+  .main_hero_text_wrap {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+    margin-bottom: 22px !important;
+    text-align: center !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .main_hero_text {
+    font-size: 30px !important;
+    font-weight: 900 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -1px !important;
+    color: #0f172a !important;
+    margin: 0 0 12px !important;
+    opacity: 1 !important;
+    word-break: keep-all !important;
+  }
+
+  .main_hero_keywords {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-wrap: wrap !important;
+    margin-top: 8px !important;
+    opacity: 1 !important;
+  }
+
+  .main_hero_keywords span {
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+    border-radius: 100px !important;
+  }
+
+  .main_hero_panel_wrap {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: calc(100% - 32px) !important;
+    max-width: 480px !important;
+    height: 240px !important;
+    margin: 0 auto !important;
+    border-radius: 22px !important;
+    overflow: hidden !important;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.15) !important;
+    background: #0f172a !important;
+  }
+
+  .main_hero_panel {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 22px !important;
+    transform: none !important;
+  }
+
+  .main_hero_panel_video_wrap {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .main_hero_panel_video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transform: none !important;
+  }
+
+  .main_hero_panel_dim {
+    display: none !important;
+  }
+
+  .main_hero_panel_overlay_text {
+    display: none !important;
   }
 }

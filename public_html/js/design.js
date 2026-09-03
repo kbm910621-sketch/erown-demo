@@ -35,9 +35,9 @@ $(function() {
     window.addEventListener('heroLock', function() { lenis.stop(); });
   }
 
-  /* GSAP SINGLE MASTER TIMELINE (100% PERFECT BI-DIRECTIONAL SYMMETRY) */
+    /* GSAP SINGLE MASTER TIMELINE (PC 전용 웅장한 전체화면 확장 인터랙션 / 모바일은 스크롤 락 완전 해제) */
   var hero = document.querySelector('.main_hero');
-  if (hero && typeof gsap !== 'undefined') {
+  if (hero && typeof gsap !== 'undefined' && window.innerWidth > 768) {
     if (typeof ScrollTrigger !== 'undefined') {
       gsap.registerPlugin(ScrollTrigger);
     }
