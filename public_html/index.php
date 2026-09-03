@@ -1133,6 +1133,76 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
 
   <!-- ============================================
+       07-B OUR CLIENTS : 2-LINE CONTINUOUS HORIZONTAL MARQUEE STREAM (500+ PARTNERS)
+  ============================================ -->
+  <section class="am-clients-marquee-sec wow fadeInUp" data-wow-duration="0.8s" id="clients">
+    <div class="am-container">
+      <div class="acm-head text-center">
+        <span class="ash-kicker">OUR CLIENTS &amp; TRUST</span>
+        <h3 class="acm-title">가온엔과 함께하는 500+ 대표 파트너</h3>
+        <p class="acm-desc">광주 대표 메디컬센터, 전문 교육기관, 대형 유통사, 관공서가 가온엔의 온·오프라인 마케팅과 함께 성장하고 있습니다.</p>
+      </div>
+    </div>
+
+    <!-- 2-LINE HORIZONTAL MARQUEE STREAMS (슉슉 지나가는 2줄 무한 롤링) -->
+    <div class="acm-streams-wrap">
+      
+      <!-- LINE 1 (LEFTWARD STREAM) -->
+      <div class="acm-stream-row acm-row-left">
+        <div class="acm-stream-track track-left">
+          
+          <div class="acm-partner-card"><span class="apc-badge">HOSPITAL</span><strong>상무지구 대형 피부과</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">ACADEMY</span><strong>봉선동 대표 입시학원</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">MEDICAL</span><strong>수완지구 척추관절병원</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">TRANSIT</span><strong>유스퀘어 광주버스터미널</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">DENTAL</span><strong>광주 대표 임플란트 치과</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">RETAIL</span><strong>이마트·롯데마트 광주점</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">PUBLIC</span><strong>광주광역시 공공기관 캠페인</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">FRANCHISE</span><strong>호남 대표 F&amp;B 외식 브랜드</strong></div>
+
+          <!-- EXACT DUPLICATE FOR INFINITE SEAMLESS LOOP -->
+          <div class="acm-partner-card"><span class="apc-badge">HOSPITAL</span><strong>상무지구 대형 피부과</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">ACADEMY</span><strong>봉선동 대표 입시학원</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">MEDICAL</span><strong>수완지구 척추관절병원</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">TRANSIT</span><strong>유스퀘어 광주버스터미널</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">DENTAL</span><strong>광주 대표 임플란트 치과</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">RETAIL</span><strong>이마트·롯데마트 광주점</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">PUBLIC</span><strong>광주광역시 공공기관 캠페인</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">FRANCHISE</span><strong>호남 대표 F&amp;B 외식 브랜드</strong></div>
+
+        </div>
+      </div>
+
+      <!-- LINE 2 (RIGHTWARD STREAM) -->
+      <div class="acm-stream-row acm-row-right">
+        <div class="acm-stream-track track-right">
+          
+          <div class="acm-partner-card"><span class="apc-badge">HOSPITAL</span><strong>첨단지구 한방병원</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">ACADEMY</span><strong>수완지구 어학원</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">AUTO</span><strong>광주 수입차 공식 전시장</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">MALL</span><strong>광주 대형 복합 쇼핑몰</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">LAW</span><strong>호남 최대 법무법인</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">COMMUNITY</span><strong>광주 맘스홀릭 공식 제휴</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">EYE</span><strong>상무지구 안과 라식센터</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">FINANCE</span><strong>지역 금융기관 OOH 미디어</strong></div>
+
+          <!-- EXACT DUPLICATE FOR INFINITE SEAMLESS LOOP -->
+          <div class="acm-partner-card"><span class="apc-badge">HOSPITAL</span><strong>첨단지구 한방병원</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">ACADEMY</span><strong>수완지구 어학원</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">AUTO</span><strong>광주 수입차 공식 전시장</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">MALL</span><strong>광주 대형 복합 쇼핑몰</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">LAW</span><strong>호남 최대 법무법인</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">COMMUNITY</span><strong>광주 맘스홀릭 공식 제휴</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">EYE</span><strong>상무지구 안과 라식센터</strong></div>
+          <div class="acm-partner-card"><span class="apc-badge">FINANCE</span><strong>지역 금융기관 OOH 미디어</strong></div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- ============================================
        08 GAON-N GET STARTED MASTER CTA (SOLID NAVY ROUNDED BOX & 4 FLOATING PILLS)
   ============================================ -->
   <section class="am-get-started-sec" id="getStarted">

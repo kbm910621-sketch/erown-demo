@@ -638,9 +638,13 @@ $(function() {
   });
 
 
-  /* MASSTIGE.IO OUR SERVICES TAB SWITCHER */
+  
+
+  /* MASSTIGE.IO OUR SERVICES TAB SWITCHER & CASCADE REVEAL MOTION */
   $(document).on('click mouseenter', '.mos-nav-item', function() {
     var $this = $(this);
+    if ($this.hasClass('on') && $('.mos-content-col').hasClass('cascade-in')) return;
+    
     $('.mos-nav-item').removeClass('on');
     $this.addClass('on');
 
@@ -666,4 +670,10 @@ $(function() {
       }
     }
     $('#mosDynTags').html(tagsHtml);
+
+    // CASCADE REVEAL TRIGGER (위에서부터 차르르 내려오는 효과)
+    var $content = $('.mos-content-col');
+    $content.removeClass('cascade-in');
+    void $content[0].offsetWidth; // force reflow
+    $content.addClass('cascade-in');
   });
