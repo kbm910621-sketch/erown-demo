@@ -571,23 +571,17 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </section>
 
-        <!-- ============================================
-       01-B GAON-N MINIMALIST LUXURY MID-PAGE INQUIRY BANNER
+          <!-- ============================================
+       01-B SIMPLE CLEAN CENTERED INQUIRY BUTTON (심플 버튼 전면 교체)
   ============================================ -->
-  <section class="am-mid-estimate-bar wow fadeInUp" data-wow-duration="0.7s">
-    <div class="am-container">
-      <div class="meb-clean-box">
-        <div class="meb-text-wrap">
-          <span class="meb-kicker">CUSTOM MEDIA PLAN</span>
-          <h3 class="meb-title">광고 예산과 상권에 맞춘 1:1 최적 미디어 믹스를 무료로 설계해 드립니다.</h3>
-        </div>
-        <a href="/board/estmate/write.php" class="meb-minimal-btn">
-          <span>견적 문의하기</span>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
-      </div>
+  <div class="am-simple-mid-cta wow fadeInUp" data-wow-duration="0.6s">
+    <div class="am-container" style="text-align: center;">
+      <a href="/board/estmate/write.php" class="am-simple-inquiry-btn">
+        <span>1:1 맞춤 견적 및 제안서 신청</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
     </div>
-  </section>
+  </div>
 
   <section class="am-section am-bg-white" id="online">
     <div class="am-container">
