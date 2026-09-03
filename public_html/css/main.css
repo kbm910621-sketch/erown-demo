@@ -3304,8 +3304,8 @@ body.modal-lock { overflow:hidden !important; }
     border-radius: 18px !important;
   }
   .aas-stat-card:last-child {
-    grid-column: span 2 !important;
-    text-align: center !important;
+    grid-column: span 1 !important;
+    text-align: left !important;
   }
   .asc-num {
     font-size: 34px !important;
@@ -4787,11 +4787,7 @@ body.modal-lock { overflow:hidden !important; }
   transition: all 0.25s ease;
 }
 
-.aas-stat-card-mobile-logos {
-  display: none !important;
-}
-
-/* MOBILE 2x3 GRID (6 EQUAL BOXES) */
+/* MOBILE STATS: 5 EQUAL CARDS (1칸씩 단독 차지) */
 @media (max-width: 768px) {
   .aas-cards-grid {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -4800,29 +4796,7 @@ body.modal-lock { overflow:hidden !important; }
   .aas-stat-card {
     padding: 20px 16px !important;
     border-radius: 18px !important;
-  }
-  .aas-stat-card-mobile-logos {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    background: #f8fafc !important;
-    border-color: #cbd5e1 !important;
-  }
-  .ascp-mobile-pill-grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 6px !important;
-  }
-  .ascp-logo-pill {
-    font-size: 11px !important;
-    font-weight: 800 !important;
-    color: #1855b7 !important;
-    background: #ffffff !important;
-    border: 1px solid #cbd5e1 !important;
-    padding: 5px 0 !important;
-    border-radius: 6px !important;
-    text-align: center !important;
-    display: block !important;
+    grid-column: span 1 !important;
   }
 }
 
