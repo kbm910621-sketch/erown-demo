@@ -222,6 +222,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       </div>
 
       <div class="aas-cards-grid wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.15s">
+        
+        <!-- CARD 01 -->
         <div class="aas-stat-card">
           <span class="asc-label">누적 광고 집행</span>
           <div class="asc-value-row">
@@ -229,6 +231,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <span class="asc-unit">건</span>
         </div>
+
+        <!-- CARD 02 -->
         <div class="aas-stat-card">
           <span class="asc-label">운행 광고 차량</span>
           <div class="asc-value-row">
@@ -236,6 +240,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <span class="asc-unit">대</span>
         </div>
+
+        <!-- CARD 03 -->
         <div class="aas-stat-card">
           <span class="asc-label">광주 지역 서비스</span>
           <div class="asc-value-row">
@@ -243,6 +249,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <span class="asc-unit">년</span>
         </div>
+
+        <!-- CARD 04 -->
         <div class="aas-stat-card">
           <span class="asc-label">고객 재계약률</span>
           <div class="asc-value-row">
@@ -250,13 +258,27 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
           <span class="asc-unit">%</span>
         </div>
-        <div class="aas-stat-card">
-          <span class="asc-label">협력 매체사</span>
-          <div class="asc-value-row">
-            <strong class="asc-num counter" data-target="50">50</strong><span class="asc-plus">+</span>
+
+        <!-- CARD 05 : PARTNERS WITH BALANCED LOGO STRIP (모바일 우측 로고 채움으로 균형 정렬) -->
+        <div class="aas-stat-card aas-stat-card-partners">
+          <div class="ascp-left-info">
+            <span class="asc-label">협력 매체사</span>
+            <div class="asc-value-row">
+              <strong class="asc-num counter" data-target="50">50</strong><span class="asc-plus">+</span>
+              <span class="asc-unit" style="margin-left:4px;">곳</span>
+            </div>
+            <span class="ascp-sub-txt">광주 시내버스 10개 운송사 &amp; 주요 방송·포털 제휴</span>
           </div>
-          <span class="asc-unit">곳</span>
+          <div class="ascp-right-logos">
+            <span class="ascp-logo-pill">광주시내버스</span>
+            <span class="ascp-logo-pill">유스퀘어</span>
+            <span class="ascp-logo-pill">네이버</span>
+            <span class="ascp-logo-pill">카카오</span>
+            <span class="ascp-logo-pill">메타</span>
+            <span class="ascp-logo-pill">CJ대한통운</span>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -510,8 +532,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-      <!-- RECENT OOH PORTFOLIO SHOWCASE STRIP -->
-            <!-- RECENT OOH PORTFOLIO SHOWCASE STRIP (SWIPER ARROWS: PC 4개 / 모바일 2개) -->
+            <!-- RECENT OOH PORTFOLIO SHOWCASE STRIP (HIGH-END MODERN ARROWS) -->
       <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s" style="margin-top:60px;">
         <div class="asps-head">
           <div class="asps-title-wrap">
@@ -519,9 +540,16 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <h4 class="asps-title">최근 옥외광고 &amp; 시내버스 직영 시공 실적</h4>
           </div>
           <div class="asps-nav-controls">
-            <button type="button" class="asps-arrow-btn asps-prev-bus" aria-label="이전 사례">‹</button>
-            <button type="button" class="asps-arrow-btn asps-next-bus" aria-label="다음 사례">›</button>
-            <a href="/contents/a_type/a_1.php?category=bus" class="asps-more-link">옥외 사례 전체보기 ↗</a>
+            <button type="button" class="asps-arrow-btn asps-prev-bus" aria-label="이전 사례">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="asps-arrow-btn asps-next-bus" aria-label="다음 사례">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <a href="/contents/a_type/a_1.php?category=bus" class="asps-more-link">
+              <span>사례 전체보기</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
           </div>
         </div>
         <div class="swiper asps-swiper asps-swiper-bus">
@@ -531,10 +559,15 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="asps-thumb">
                 <img src="<?php echo htmlspecialchars($bItem['thumb']); ?>" alt="<?php echo htmlspecialchars($bItem['title']); ?>" loading="lazy">
                 <span class="asps-badge">옥외매체</span>
-                <div class="asps-hover-overlay">상세보기 ↗</div>
+                <div class="asps-arrow-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </div>
               </div>
               <div class="asps-info">
-                <strong class="asps-item-title"><?php echo htmlspecialchars($bItem['title']); ?></strong>
+                <div class="asps-title-row">
+                  <strong class="asps-item-title"><?php echo htmlspecialchars($bItem['title']); ?></strong>
+                  <span class="asps-title-arrow">↗</span>
+                </div>
                 <span class="asps-item-loc">광주 104개 노선 맞춤 직영 시공</span>
               </div>
             </div>

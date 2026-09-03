@@ -4650,3 +4650,221 @@ body.modal-lock { overflow:hidden !important; }
 .asps-item-loc.light {
   color: #94a3b8 !important;
 }
+
+
+/* ==========================================================================
+   PRECISION UI: FIXED HEADER, TOP-RIGHT CLOSE, OOH TALL BANNER, UNIFIED LINKS
+========================================================================== */
+
+/* 1. FIXED STICKY HEADER (스크롤 내려도 상단에 따라다니는 헤더) */
+#header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 99999 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 2. LIGHTBOX MODAL: TOP-RIGHT CORNER CLOSE BUTTON (✕ 오른쪽 위 안쪽에 완벽 배치) */
+.portfolio-modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 17, 32, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 999999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.portfolio-modal-backdrop.open {
+  display: flex !important;
+}
+
+.pm-modal-box {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 760px !important;
+  background: #ffffff !important;
+  border-radius: 26px !important;
+  padding: 28px !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6) !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.pm-close-btn {
+  position: absolute !important;
+  top: 16px !important;    /* 상단 모서리 */
+  right: 16px !important;  /* 오른쪽 모서리에 바짝 고정 */
+  left: auto !important;
+  z-index: 1000 !important;
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  background: #0f172a !important;
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  border: 0 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  transition: all 0.2s ease !important;
+}
+.pm-close-btn:hover {
+  background: #1855b7 !important;
+  transform: scale(1.1) !important;
+}
+
+/* 3. SECTION 01 OOH: EXPAND RIGHT BANNER HEIGHT TO MATCH LEFT TABLE */
+.mos-stage-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 32px;
+  align-items: stretch !important;
+}
+
+.mos-nav-col {
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.mos-nav-list {
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mos-content-col {
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mos-hero-banner {
+  flex: 1 !important;
+  min-height: 520px !important; /* 표 높이에 맞춰 묵직하게 확장 */
+  height: 100% !important;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 4. UNIFIED CHIC "사례 전체보기" BUTTONS (옥외와 동일한 고급 단일 컬러) */
+.asps-more-link,
+.asps-more-link.green,
+.asps-more-link.gold {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 18px !important;
+  border-radius: 100px !important;
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  color: #1855b7 !important;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04) !important;
+}
+
+.asps-more-link:hover,
+.asps-more-link.green:hover,
+.asps-more-link.gold:hover {
+  background: #1855b7 !important;
+  color: #ffffff !important;
+  border-color: #1855b7 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(24, 85, 183, 0.25) !important;
+}
+
+/* 5. ABOUT STATS: PC 5-COL GRID & MOBILE 5TH CARD BALANCED WITH LOGOS */
+.aas-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.aas-stat-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 22px;
+  padding: 28px 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.ascp-mobile-logos {
+  display: none;
+}
+
+/* MOBILE ONLY: 5TH CARD BALANCED WITH LOGOS */
+@media (max-width: 768px) {
+  .aas-cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  .aas-stat-card-partners {
+    grid-column: span 2 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+    padding: 20px 18px !important;
+  }
+  .ascp-main-info {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    flex-shrink: 0 !important;
+  }
+  .ascp-main-info .asc-label {
+    margin-bottom: 0 !important;
+    font-size: 13px !important;
+  }
+  .ascp-main-info .asc-num {
+    font-size: 28px !important;
+  }
+  .ascp-sub-txt {
+    font-size: 11.5px !important;
+    color: #64748b !important;
+    display: block !important;
+  }
+  .ascp-mobile-logos {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 5px !important;
+    justify-content: flex-end !important;
+  }
+  .ascp-logo-pill {
+    font-size: 10.5px !important;
+    font-weight: 800 !important;
+    color: #1855b7 !important;
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 4px 8px !important;
+    border-radius: 100px !important;
+  }
+}
