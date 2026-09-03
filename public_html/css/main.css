@@ -2659,234 +2659,94 @@ body.modal-lock { overflow:hidden !important; }
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
 }
 
+
+
 /* ==========================================================================
-   OUR CLIENTS 2-LINE HORIZONTAL INFINITE MARQUEE STREAMS
+   OUR CLIENTS 2-LINE LUXURIOUS MARQUEE (140PX SPACING & 60PX CARDS)
 ========================================================================== */
 .am-clients-marquee-sec {
-  padding: 100px 0 60px !important;
+  padding: 130px 0 110px !important; /* GENEROUS LUXURY SPACING */
   background: #ffffff !important;
-  overflow: hidden;
-  position: relative;
-}
-
-.acm-head {
-  margin-bottom: 45px;
-}
-
-.acm-title {
-  font-size: 38px;
-  font-weight: 900;
-  color: #0f172a;
-  letter-spacing: -1px;
-  margin: 6px 0 10px;
-}
-
-.acm-desc {
-  font-size: 16px;
-  color: #64748b;
-  margin: 0 auto;
-  max-width: 680px;
-  word-break: keep-all;
+  overflow: hidden !important;
+  position: relative !important;
+  border-bottom: 1px solid #f1f5f9 !important;
 }
 
 .acm-streams-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  position: relative !important;
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%) !important;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%) !important;
 }
 
 .acm-stream-row {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-  user-select: none;
+  display: flex !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  user-select: none !important;
 }
 
 .acm-stream-track {
-  display: flex;
-  gap: 16px;
-  width: max-content;
-  will-change: transform;
+  display: flex !important;
+  gap: 20px !important;
+  width: max-content !important;
+  will-change: transform !important;
 }
 
 .track-left {
-  animation: acmMarqueeLeft 28s linear infinite;
+  animation: acmMarqueeLeft 28s linear infinite !important;
 }
 
 .track-right {
-  animation: acmMarqueeRight 32s linear infinite;
+  animation: acmMarqueeRight 32s linear infinite !important;
 }
 
 .acm-streams-wrap:hover .acm-stream-track {
-  animation-play-state: paused;
+  animation-play-state: paused !important;
 }
 
+/* 60PX TALL LUXURY PARTNER PILL CARD */
 .acm-partner-card {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 26px;
-  background: #f8fafc;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 100px;
-  white-space: nowrap;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
-  transition: all 0.25s ease;
-  cursor: default;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  height: 60px !important;
+  padding: 0 30px !important;
+  background: #ffffff !important;
+  border: 1.5px solid #e2e8f0 !important;
+  border-radius: 100px !important;
+  white-space: nowrap !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: default !important;
+  box-sizing: border-box !important;
 }
 
 .acm-partner-card:hover {
-  background: #ffffff;
-  border-color: #1855b7;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(24, 85, 183, 0.12);
+  background: #ffffff !important;
+  border-color: #1855b7 !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 14px 30px rgba(24, 85, 183, 0.15) !important;
 }
 
 .apc-badge {
-  font-size: 11px;
-  font-weight: 800;
-  color: #1855b7;
-  background: rgba(24, 85, 183, 0.1);
-  padding: 3px 10px;
-  border-radius: 100px;
-  letter-spacing: 0.04em;
+  font-size: 11.5px !important;
+  font-weight: 800 !important;
+  color: #1855b7 !important;
+  background: #eef4ff !important;
+  border: 1px solid rgba(24, 85, 183, 0.2) !important;
+  padding: 4px 12px !important;
+  border-radius: 100px !important;
+  letter-spacing: 0.05em !important;
 }
 
 .acm-partner-card strong {
-  font-size: 15px;
-  font-weight: 800;
-  color: #1e293b;
-}
-
-/* MARQUEE KEYFRAMES */
-@keyframes acmMarqueeLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-@keyframes acmMarqueeRight {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
-}
-
-@media(max-width:768px) {
-  .acm-title { font-size: 28px; }
-  .acm-partner-card { padding: 10px 18px; font-size: 13.5px; }
-}
-
-
-/* ==========================================================================
-   POLISHED OOH STAGE TEXT & TAG PILLS STYLING
-========================================================================== */
-.mos-lead-wrap {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 14px !important;
-  margin-bottom: 4px !important;
-}
-
-.mos-dyn-kicker {
-  display: inline-flex !important;
-  align-items: center !important;
-  font-size: 13px !important;
+  font-size: 16px !important;
   font-weight: 800 !important;
-  color: #1855b7 !important;
-  background: rgba(24, 85, 183, 0.08) !important;
-  border: 1px solid rgba(24, 85, 183, 0.25) !important;
-  padding: 5px 14px !important;
-  border-radius: 100px !important;
-  letter-spacing: 0.04em !important;
-  text-transform: uppercase !important;
-  width: max-content !important;
-}
-
-.mos-dyn-lead {
-  font-size: 17px !important;
-  line-height: 1.65 !important;
-  color: #1e293b !important;
-  margin: 0 !important;
-  font-weight: 600 !important;
-  word-break: keep-all !important;
-}
-
-.mos-dyn-tags {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 8px !important;
-  margin-top: 4px !important;
-}
-
-.mos-dyn-tags .mdt-pill,
-.mdt-pill {
-  display: inline-flex !important;
-  align-items: center !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  color: #334155 !important;
-  background: #ffffff !important;
-  border: 1.5px solid #cbd5e1 !important;
-  padding: 6px 14px !important;
-  border-radius: 100px !important;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03) !important;
-  white-space: nowrap !important;
-}
-
-/* HIGH-CONTRAST BANNER OVERLAY CONTENT */
-.mos-hero-banner {
-  position: relative !important;
-  width: 100% !important;
-  height: 480px !important;
-  border-radius: 30px !important;
-  overflow: hidden !important;
-  background: #0f172a !important;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12) !important;
-}
-
-.mhb-scrim {
-  position: absolute !important;
-  inset: 0 !important;
-  background: linear-gradient(to top, rgba(10, 18, 40, 0.96) 0%, rgba(10, 18, 40, 0.6) 45%, rgba(10, 18, 40, 0.15) 100%) !important;
-  pointer-events: none !important;
-}
-
-.mhb-overlay-content {
-  position: absolute !important;
-  bottom: 36px !important;
-  left: 36px !important;
-  right: 36px !important;
-  z-index: 3 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 12px !important;
-  align-items: flex-start !important;
-}
-
-.mhb-spec-badge {
-  font-size: 13.5px !important;
-  font-weight: 800 !important;
-  color: #38bdf8 !important;
-  background: rgba(15, 23, 42, 0.85) !important;
-  border: 1.5px solid rgba(56, 189, 248, 0.5) !important;
-  padding: 6px 16px !important;
-  border-radius: 100px !important;
-  width: max-content !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
-}
-
-.mhb-title {
-  font-size: 30px !important;
-  font-weight: 900 !important;
-  color: #ffffff !important;
-  line-height: 1.32 !important;
-  letter-spacing: -0.6px !important;
-  margin: 0 !important;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8) !important;
-  word-break: keep-all !important;
+  color: #0f172a !important;
+  letter-spacing: -0.3px !important;
 }

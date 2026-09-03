@@ -1135,12 +1135,17 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   <!-- ============================================
        07-B OUR CLIENTS : 2-LINE CONTINUOUS HORIZONTAL MARQUEE STREAM (500+ PARTNERS)
   ============================================ -->
+    <!-- ============================================
+       07-B OUR CLIENTS : 2-LINE CONTINUOUS HORIZONTAL MARQUEE STREAM (500+ PARTNERS)
+  ============================================ -->
   <section class="am-clients-marquee-sec wow fadeInUp" data-wow-duration="0.8s" id="clients">
     <div class="am-container">
-      <div class="acm-head text-center">
-        <span class="ash-kicker">OUR CLIENTS &amp; TRUST</span>
-        <h3 class="acm-title">가온엔과 함께하는 500+ 대표 파트너</h3>
-        <p class="acm-desc">광주 대표 메디컬센터, 전문 교육기관, 대형 유통사, 관공서가 가온엔의 온·오프라인 마케팅과 함께 성장하고 있습니다.</p>
+      <div class="am-sec-head text-center" style="margin-bottom: 50px;">
+        <span class="ash-kicker">OUR PARTNERS &amp; TRUST</span>
+        <h2 class="ash-title">가온엔과 함께하는 500+ 대표 파트너</h2>
+        <p class="ash-desc" style="margin: 0 auto; max-width: 760px;">
+          광주 대표 메디컬센터, 전문 교육기관, 대형 유통사, 관공서가 가온엔의 온·오프라인 통합 마케팅과 함께 성장하고 있습니다.
+        </p>
       </div>
     </div>
 
