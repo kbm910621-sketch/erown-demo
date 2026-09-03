@@ -712,3 +712,61 @@ $(function() {
       $list.animate({ scrollLeft: scrollLeft }, 250);
     }
   });
+
+
+  /* SUB-PORTFOLIO STRIP SWIPER INITIALIZATION (PC 4열, 모바일 2열) */
+  function initSubPortfolioSwipers() {
+    if (typeof Swiper === 'undefined') return;
+
+    // Bus Sub Swiper
+    new Swiper('.asps-swiper-bus', {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      navigation: {
+        prevEl: '.asps-prev-bus',
+        nextEl: '.asps-next-bus'
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 4,
+          spaceBetween: 24
+        }
+      }
+    });
+
+    // Online Sub Swiper
+    new Swiper('.asps-swiper-online', {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      navigation: {
+        prevEl: '.asps-prev-online',
+        nextEl: '.asps-next-online'
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 4,
+          spaceBetween: 24
+        }
+      }
+    });
+
+    // Video Sub Swiper
+    new Swiper('.asps-swiper-video', {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      navigation: {
+        prevEl: '.asps-prev-video',
+        nextEl: '.asps-next-video'
+      },
+      breakpoints: {
+        769: {
+          slidesPerView: 4,
+          spaceBetween: 24
+        }
+      }
+    });
+  }
+
+  $(document).ready(function() {
+    initSubPortfolioSwipers();
+  });

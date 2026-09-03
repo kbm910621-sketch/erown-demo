@@ -3522,3 +3522,187 @@ body.modal-lock { overflow:hidden !important; }
     border-radius: 50% !important;
   }
 }
+
+
+/* ==========================================================================
+   MASSTIGE MOBILE OOH (media_1788400711196.png) & SUB-PORTFOLIO SWIPERS
+========================================================================== */
+
+/* SUB PORTFOLIO SWIPER ARROW CONTROLS (PC 4열, 모바일 2열) */
+.asps-nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.asps-arrow-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.asps-arrow-btn:hover {
+  background: #1855b7;
+  border-color: #1855b7;
+  color: #ffffff;
+}
+
+.asps-arrow-btn.light {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+.asps-arrow-btn.light:hover {
+  background: #fbbf24;
+  border-color: #fbbf24;
+  color: #0f172a;
+}
+
+.asps-swiper {
+  width: 100%;
+  overflow: hidden;
+  padding: 6px 2px 14px;
+}
+
+.asps-card {
+  text-decoration: none;
+  display: flex !important;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   MOBILE EXACT REPLICA OF media_1788400711196.png (<= 768px)
+========================================================================== */
+@media (max-width: 768px) {
+  /* SECTION 01 OOH: EXACT SCREENSHOT STRUCTURE */
+  .mos-stage-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  /* 1. TOP SWIPEABLE PILL BAR (위쪽 알약 탭) */
+  .mos-nav-col {
+    order: 1 !important;
+    margin-bottom: 20px !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .mos-nav-list {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 8px !important;
+    padding: 2px 2px 8px !important;
+  }
+  .mos-nav-list::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .mos-nav-item {
+    flex: 0 0 auto !important;
+    padding: 10px 20px !important;
+    min-height: 44px !important;
+    border-radius: 100px !important;
+    border: 1.5px solid #cbd5e1 !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+  }
+
+  .mos-nav-item.on {
+    background: #1855b7 !important;
+    border-color: #1855b7 !important;
+  }
+  .mos-nav-item.on .mni-txt {
+    color: #ffffff !important;
+    font-weight: 900 !important;
+  }
+
+  .mos-nav-item .mni-txt {
+    font-size: 14px !important;
+    white-space: nowrap !important;
+    color: #334155 !important;
+  }
+
+  /* 2. DESCRIPTION & TAGS IN MIDDLE (중간 설명문 & 태그) */
+  .mos-content-col {
+    order: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .mos-lead-wrap {
+    margin-bottom: 0 !important;
+  }
+
+  .mos-dyn-lead {
+    font-size: 15.5px !important;
+    line-height: 1.7 !important;
+    color: #334155 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .mos-dyn-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    margin-bottom: 16px !important;
+  }
+  .mos-dyn-tags span.mdt-pill {
+    font-size: 12.5px !important;
+    padding: 6px 14px !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 100px !important;
+  }
+
+  /* 3. CENTER VISUAL HERO BANNER */
+  .mos-hero-banner {
+    height: 300px !important;
+    border-radius: 22px !important;
+  }
+
+  /* 4. DETAIL BUTTON AT BOTTOM (하단 자세히 보기 버튼) */
+  .mos-huge-action-bar {
+    margin-top: 14px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  /* ABOUT GAON-N SECTION (01-B) MOBILE REFINEMENT */
+  .aas-top-row {
+    flex-direction: column !important;
+    gap: 14px !important;
+    margin-bottom: 28px !important;
+  }
+  .aas-main-title {
+    font-size: 24px !important;
+    line-height: 1.35 !important;
+  }
+
+  /* SUB-PORTFOLIO 2 CARDS PER VIEW ON MOBILE */
+  .asps-swiper {
+    padding-bottom: 10px !important;
+  }
+  .asps-card {
+    width: 100% !important;
+  }
+}
