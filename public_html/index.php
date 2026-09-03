@@ -792,7 +792,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
 
               <!-- EXACT 4 CLONES FOR SEAMLESS 50% LOOP -->
-              <div class="som-stream-card">
+              <div class="som-stream-card som-clone-card">
                 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="구글 검색광고 & 유튜브 GDN 리타깃팅">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
@@ -807,7 +807,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 </div>
               </div>
 
-              <div class="som-stream-card">
+              <div class="som-stream-card som-clone-card">
                 <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="네이버 파워링크 검색광고 (SA) 세팅">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
@@ -822,7 +822,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 </div>
               </div>
 
-              <div class="som-stream-card">
+              <div class="som-stream-card som-clone-card">
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="블로그 체험단 & 인플루언서 섭외">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
@@ -837,7 +837,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                 </div>
               </div>
 
-              <div class="som-stream-card">
+              <div class="som-stream-card som-clone-card">
                 <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80" alt="모바일 고전환 웹사이트 & 랜딩페이지">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
