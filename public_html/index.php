@@ -264,115 +264,182 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   <section class="am-section am-bg-slate" id="bus">
     <div class="am-container">
       
-      <!-- SECTION HEAD -->
-      <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
-        <div class="ash-flex">
-          <div>
-            <span class="ash-kicker">OOH MEDIA SERVICES</span>
-            <h2 class="ash-title">옥외광고 솔루션</h2>
-            <p class="ash-desc">광주 104개 전 노선 시내버스부터 택시 랩핑, 유스퀘어 터미널 및 대형 DID 전광판까지 도심을 24시간 장악하는 통합 옥외 미디어 솔루션입니다.</p>
-          </div>
-          <div class="ash-actions">
-            <button type="button" class="ash-guide-btn blue" id="btnOpenRouteSearchModal">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <span>104개 노선 실시간 검색기</span>
-            </button>
-            <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideBusOut">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              <span>옥외매체 규격서 &amp; 제안서(PDF) ↗</span>
-            </button>
-          </div>
+      <!-- TOP HEADER (EXACT MASSTIGE.IO TOP ROW) -->
+      <div class="mos-top-header wow fadeInUp" data-wow-duration="0.7s">
+        <div class="mos-title-wrap">
+          <h2 class="mos-main-title">
+            Our Services <span class="mos-title-circle"></span>
+          </h2>
+          <span class="mos-sub-kicker">OOH MEDIA SOLUTIONS</span>
+        </div>
+        <div class="mos-top-process-note">
+          시내버스 ➔ 택시 래핑 ➔ 터미널 DID ➔ 특화 매체. 광주 5개 구 도심을 24시간 장악하는<br>
+          가온엔만의 1:1 맞춤형 옥외 미디어 믹스 솔루션입니다.
         </div>
       </div>
 
-      <!-- MASSTIGE.IO STYLE BENTO GRID STAGE -->
-      <div class="mob-bento-stage wow fadeInUp" data-wow-duration="0.8s">
+      <!-- MASSTIGE.IO STYLE 2-COLUMN TABBED INTERACTIVE STAGE -->
+      <div class="mos-stage-layout wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- 1. LEFT HERO BENTO CARD (BUS 104 ROUTES) -->
-        <div class="mob-bento-card mob-hero-card">
-          <img src="/images/bs_ad/main_sec02_img.jpg" alt="광주 시내버스 104개 전 노선 광고" class="mob-bg-img">
-          <div class="mob-scrim"></div>
-          
-          <div class="mob-card-body">
-            <div class="mob-top-badge-row">
-              <span class="mob-step-badge">STEP 01 · 광주 대표 교통매체</span>
-              <span class="mob-status-pill">광주 104개 노선 98% 배차</span>
-            </div>
+        <!-- LEFT COLUMN: VERTICAL SERVICE NAVIGATION LIST -->
+        <div class="mos-nav-col">
+          <ul class="mos-nav-list" id="mosNavList">
+            
+            <li class="mos-nav-item on" 
+                data-id="bus_all"
+                data-kicker="OOH 01 · 광주 대표 교통매체"
+                data-lead="광주 전역을 1일 18시간 동안 반복 주행하며 상무대로·무진대로·금남로 등 주요 간선도로 운전자와 보행자의 시선을 압도하는 광주 1등 랜드마크 빌보드입니다."
+                data-tags="광주 104개 전 노선,1일 18시간 운행,배차 점유율 98%,직영 시공 관리"
+                data-banner-title="광주 104개 전 노선, 1일 18시간 움직이는 랜드마크"
+                data-banner-bg="#0f172a"
+                data-banner-img="/images/bs_ad/main_sec02_img.jpg"
+                data-guide="guideBusOut"
+                data-spec="차도면 3.7m + 인도면 3.0m + 후면 2.4m">
+              <span class="mni-txt">광주 시내버스 104개 전 노선</span>
+              <span class="mni-arrow">›</span>
+            </li>
 
-            <div class="mob-main-content">
-              <h3 class="mob-hero-title">광주 시내버스 104개 전 노선 맞춤 래핑</h3>
-              <p class="mob-hero-desc">
-                광주 전역을 1일 18시간 동안 반복 주행하며 상무대로·무진대로·금남로 등 주요 간선도로 운전자와 보행자의 시선을 압도하는 광주 1등 랜드마크 빌보드입니다.
-              </p>
+            <li class="mos-nav-item" 
+                data-id="bus_road"
+                data-kicker="OOH 02 · 왕복 8차선 압도"
+                data-lead="왕복 8차선 대로변 맞은편 차량 운전자와 보행자 시야 정면에 3.7m 초대형 스케일로 브랜드를 각인시키는 시내버스 핵심 메인 규격입니다."
+                data-tags="차도면 3700×1000mm,LG 정품 솔벤 시트,운전자 시선 집중도 1위,대로변 노출"
+                data-banner-title="왕복 8차선 운전자의 시선을 사로잡는 차도면 3.7m"
+                data-banner-bg="#1855b7"
+                data-banner-img="/images/bs_ad/baro.jpg"
+                data-guide="guideBusOut"
+                data-spec="실측 규격: 3,700 × 1,000 mm">
+              <span class="mni-txt">버스 차도면 대형 래핑 (3.7m)</span>
+              <span class="mni-arrow">›</span>
+            </li>
 
-              <!-- SPECS GRID -->
-              <div class="mob-specs-pills">
-                <div class="msp-pill">
-                  <span class="msp-label">차도면 대형</span>
-                  <strong class="msp-val">3,700 × 1,000 mm</strong>
-                </div>
-                <div class="msp-pill">
-                  <span class="msp-label">인도면 표준</span>
-                  <strong class="msp-val">3,000 × 500 mm</strong>
-                </div>
-                <div class="msp-pill">
-                  <span class="msp-label">후면 번호판</span>
-                  <strong class="msp-val">2,400 × 300 mm</strong>
-                </div>
-                <div class="msp-pill">
-                  <span class="msp-label">운행 시간</span>
-                  <strong class="msp-val">1일 18시간 연속</strong>
-                </div>
-              </div>
+            <li class="mos-nav-item" 
+                data-id="bus_side"
+                data-kicker="OOH 03 · 정류장 승객 밀착"
+                data-lead="버스 탑승 승객과 정류장 보행자의 눈높이 정면에 위치하여 병원 진료과목, 학원 정보, 전화번호를 선명하게 전달하는 밀착형 규격입니다."
+                data-tags="인도면 3000×500mm,정류장 탑승객 눈높이,세부 정보 전달,고해상도 출력"
+                data-banner-title="정류장 탑승객 눈높이에 밀착되는 인도면 3.0m"
+                data-banner-bg="#0284c7"
+                data-banner-img="/images/bs_ad/baro_3.jpg"
+                data-guide="guideBusOut"
+                data-spec="실측 규격: 3,000 × 500 mm">
+              <span class="mni-txt">버스 인도면 표준 래핑 (3.0m)</span>
+              <span class="mni-arrow">›</span>
+            </li>
 
-              <!-- ACTION ROW -->
-              <div class="mob-hero-action-row">
-                <button type="button" class="mob-action-btn primary" id="btnOpenRouteSearchModal2" onclick="$('#btnOpenRouteSearchModal').trigger('click');">
-                  <span>104개 노선 검색기 열기 ↗</span>
-                </button>
-                <a href="/board/estmate/write.php" class="mob-action-btn secondary">
-                  <span>버스광고 1:1 맞춤 견적</span>
-                </a>
-              </div>
-            </div>
-          </div>
+            <li class="mos-nav-item" 
+                data-id="bus_back"
+                data-kicker="OOH 04 · 신호 대기 강제 노출"
+                data-lead="출퇴근 시간 및 도심 교차로 신호 대기 중 뒤따르는 차량 운전자와 동승자의 시선 정면에 3분 이상 머무르는 필수 패키지 면입니다."
+                data-tags="후면 2400×300mm,신호 대기 후방 차량,3분 이상 강제 주시,반사 솔벤"
+                data-banner-title="신호 대기 차량 운전자를 사로잡는 후면 번호판 래핑"
+                data-banner-bg="#4338ca"
+                data-banner-img="/images/bs_ad/baro_9.jpg"
+                data-guide="guideBusOut"
+                data-spec="실측 규격: 2,400 × 300 mm">
+              <span class="mni-txt">버스 후면 번호판 래핑</span>
+              <span class="mni-arrow">›</span>
+            </li>
+
+            <li class="mos-nav-item" 
+                data-id="bus_in"
+                data-kicker="OOH 05 · 시청각 동시 독점"
+                data-lead="목적지까지 이동하는 30분간 승객 정면에 머무는 중앙창문 포스터와 정류소 도착 직전 전문 성우 음성안내 방송을 결합한 실내 미디어입니다."
+                data-tags="중앙창문 1100×500mm,성우 7초 음성방송,탑승객 100% 도달,시청각 독점"
+                data-banner-title="탑승 30분간 승객의 시각과 청각을 동시 독점"
+                data-banner-bg="#0d9488"
+                data-banner-img="/images/bs_ad/port_in03.jpg"
+                data-guide="guideBusIn"
+                data-spec="창문 1,100×500mm / 음성 7초">
+              <span class="mni-txt">버스 내부 창문 &amp; 음성방송</span>
+              <span class="mni-arrow">›</span>
+            </li>
+
+            <li class="mos-nav-item" 
+                data-id="taxi"
+                data-kicker="OOH 06 · 24시간 골목 밀착"
+                data-lead="광주 전역 200여 대 법인·개인택시가 주요 번화가와 골목길을 24시간 365일 쉼 없이 기동하며 보행자 눈높이에서 밀착 노출됩니다."
+                data-tags="택시 양측면 2100×320mm,24시간 365일 기동,골목상권 침투,광주 전역 배차"
+                data-banner-title="골목상권부터 번화가까지 24시간 달리는 택시 래핑"
+                data-banner-bg="#15803d"
+                data-banner-img="/images/ev1.jpg"
+                data-guide="guideTaxiDelivery"
+                data-spec="실측 규격: 2,100 × 320 mm">
+              <span class="mni-txt">광주 전역 택시 양측면 래핑</span>
+              <span class="mni-arrow">›</span>
+            </li>
+
+            <li class="mos-nav-item" 
+                data-id="did"
+                data-kicker="OOH 07 · 랜드마크 사이니지"
+                data-lead="일일 유동인구 10만 명의 광주종합버스터미널(유스퀘어) 및 상무지구 핵심 교차로 4K 고휘도 LED 전광판에 15초 영상을 하루 100회 이상 연속 송출합니다."
+                data-tags="55~85인치 4K UHD,일 100회 이상 송출,유스퀘어 터미널,고휘도 LED"
+                data-banner-title="유스퀘어 터미널 &amp; 상무지구 대형 4K DID 전광판"
+                data-banner-bg="#7e22ce"
+                data-banner-img="/images/bs_ad/did_01.jpg"
+                data-guide="guideSubwayCart"
+                data-spec="55~85인치 4K UHD LED">
+              <span class="mni-txt">유스퀘어 터미널 &amp; 대형 DID 전광판</span>
+              <span class="mni-arrow">›</span>
+            </li>
+
+            <li class="mos-nav-item" 
+                data-id="cart"
+                data-kicker="OOH 08 · 실구매 3050 주부"
+                data-lead="이마트·롯데마트 쇼핑카트 손잡이에 부착되어 실질적인 구매 결정권을 가진 3050 가족 고객과 60분간 1:1로 동행하며 높은 구매 전환을 유도합니다."
+                data-tags="쇼핑카트 280×160mm,마트 무빙워크,3050 주부 타깃,60분 연속 주시"
+                data-banner-title="마트 쇼핑카트 1,000대, 60분간 고객과 1:1 동행"
+                data-banner-bg="#b91c1c"
+                data-banner-img="/images/sub_bg_02.jpg"
+                data-guide="guideSubwayCart"
+                data-spec="실측 규격: 280 × 160 mm">
+              <span class="mni-txt">대형마트 쇼핑카트 &amp; 무빙워크</span>
+              <span class="mni-arrow">›</span>
+            </li>
+
+          </ul>
         </div>
 
-        <!-- 2. RIGHT STACK (SUB 02 & SUB 03) -->
-        <div class="mob-bento-side-stack">
+        <!-- RIGHT COLUMN: DYNAMIC LIVE PREVIEW STAGE & HUGE DETAIL BUTTON -->
+        <div class="mos-content-col">
           
-          <!-- SUB CARD 02: TAXI WRAPPING -->
-          <div class="mob-bento-card mob-sub-card">
-            <img src="/images/ev1.jpg" alt="광주 전역 택시 래핑 광고" class="mob-bg-img">
-            <div class="mob-scrim sub"></div>
-            <div class="mob-card-body sub">
-              <div class="mob-top-badge-row">
-                <span class="mob-step-badge green">STEP 02 · 24시간 상권 밀착</span>
-              </div>
-              <h4 class="mob-sub-title">광주 전역 법인·개인택시 래핑</h4>
-              <p class="mob-sub-desc">주요 번화가와 골목상권을 24시간 누비며 보행자 눈높이에서 가장 친근하게 브랜드를 각인시킵니다.</p>
-              <div class="mob-sub-meta">
-                <span>규격: 2,100 × 320 mm</span>
-                <span>24시간 상시 운행</span>
-              </div>
+          <!-- TOP LEAD & TAGS -->
+          <div class="mos-lead-wrap">
+            <span class="mos-dyn-kicker" id="mosDynKicker">OOH 01 · 광주 대표 교통매체</span>
+            <p class="mos-dyn-lead" id="mosDynLead">
+              광주 전역을 1일 18시간 동안 반복 주행하며 상무대로·무진대로·금남로 등 주요 간선도로 운전자와 보행자의 시선을 압도하는 광주 1등 랜드마크 빌보드입니다.
+            </p>
+            <div class="mos-dyn-tags" id="mosDynTags">
+              <span class="mdt-pill">광주 104개 전 노선</span>
+              <span class="mdt-pill">1일 18시간 운행</span>
+              <span class="mdt-pill">배차 점유율 98%</span>
+              <span class="mdt-pill">직영 시공 관리</span>
             </div>
           </div>
 
-          <!-- SUB CARD 03: TERMINAL & DID SIGNAGE -->
-          <div class="mob-bento-card mob-sub-card">
-            <img src="/images/bs_ad/did_01.jpg" alt="유스퀘어 터미널 & 대형 DID 전광판" class="mob-bg-img">
-            <div class="mob-scrim sub"></div>
-            <div class="mob-card-body sub">
-              <div class="mob-top-badge-row">
-                <span class="mob-step-badge purple">STEP 03 · 랜드마크 사이니지</span>
-              </div>
-              <h4 class="mob-sub-title">유스퀘어 터미널 &amp; 대형 DID 전광판</h4>
-              <p class="mob-sub-desc">일일 유동인구 10만 명 광주종합버스터미널 및 상무지구 핵심 교차로 4K 초고화질 디지털 사이니지 송출.</p>
-              <div class="mob-sub-meta">
-                <span>4K 고휘도 LED</span>
-                <span>일 100회 이상 연속 송출</span>
-              </div>
+          <!-- CENTER HERO VISUAL BANNER -->
+          <div class="mos-hero-banner" id="mosHeroBanner">
+            <img src="/images/bs_ad/main_sec02_img.jpg" id="mosBannerImg" alt="옥외광고 솔루션 실사" class="mhb-bg-img">
+            <div class="mhb-scrim"></div>
+            <div class="mhb-overlay-content">
+              <div class="mhb-spec-badge" id="mosDynSpec">차도면 3.7m + 인도면 3.0m + 후면 2.4m</div>
+              <h3 class="mhb-title" id="mosBannerTitle">광주 104개 전 노선, 1일 18시간 움직이는 랜드마크</h3>
             </div>
+          </div>
+
+          <!-- HUGE DETAIL BUTTONS ROW (자세히 보기 훨씬 큼직하게) -->
+          <div class="mos-huge-action-bar">
+            <button type="button" class="mos-huge-btn primary bus-guide-open" id="mosBtnGuide" data-guide="guideBusOut">
+              <span class="mhb-btn-txt">규격 가이드 &amp; 제안서(PDF) 자세히 보기</span>
+              <span class="mhb-btn-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </button>
+
+            <button type="button" class="mos-huge-btn secondary" id="btnOpenRouteSearchModal" onclick="openRouteModal();">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>104개 노선 실시간 검색기</span>
+            </button>
           </div>
 
         </div>
@@ -380,7 +447,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       </div>
 
       <!-- RECENT OOH PORTFOLIO SHOWCASE STRIP -->
-      <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s" style="margin-top:50px;">
+      <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s" style="margin-top:60px;">
         <div class="asps-head">
           <div class="asps-title-wrap">
             <span class="asps-kicker">OOH PORTFOLIO</span>

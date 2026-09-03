@@ -636,3 +636,34 @@ $(function() {
       closeAllModals();
     }
   });
+
+
+  /* MASSTIGE.IO OUR SERVICES TAB SWITCHER */
+  $(document).on('click mouseenter', '.mos-nav-item', function() {
+    var $this = $(this);
+    $('.mos-nav-item').removeClass('on');
+    $this.addClass('on');
+
+    var kicker = $this.data('kicker');
+    var lead = $this.data('lead');
+    var tags = ($this.data('tags') || '').split(',');
+    var title = $this.data('banner-title');
+    var img = $this.data('banner-img');
+    var spec = $this.data('spec');
+    var guide = $this.data('guide') || 'guideBusOut';
+
+    $('#mosDynKicker').text(kicker);
+    $('#mosDynLead').text(lead);
+    $('#mosBannerTitle').text(title);
+    $('#mosDynSpec').text(spec);
+    $('#mosBannerImg').attr('src', img);
+    $('#mosBtnGuide').attr('data-guide', guide);
+
+    var tagsHtml = '';
+    for (var i = 0; i < tags.length; i++) {
+      if (tags[i].trim()) {
+        tagsHtml += '<span class="mdt-pill">' + tags[i].trim() + '</span>';
+      }
+    }
+    $('#mosDynTags').html(tagsHtml);
+  });
