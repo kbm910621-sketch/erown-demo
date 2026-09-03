@@ -6951,3 +6951,104 @@ body.menu-open {
     border-radius: 18px !important;
   }
 }
+
+
+/* ==========================================================================
+   PC HEADER TRANSPARENT GLASSMORPHISM (배경이 투명하게 비치는 글래스 헤더)
+========================================================================== */
+#header {
+  background: rgba(255, 255, 255, 0.52) !important; /* 뒤 배경이 선명히 비치는 반투명 글래스 */
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.3s ease !important;
+}
+
+#header.on,
+#header.is-scrolled {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6) !important;
+}
+
+/* ==========================================================================
+   ONLINE MARKETING TALL SLENDER PORTRAIT CARDS (폭 줄이고 높이 520px 길쭉한 포트레이트 비율)
+========================================================================== */
+.som-stage-layout {
+  display: grid !important;
+  grid-template-columns: 380px 760px !important;
+  gap: 50px !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.som-right-stream-wrap {
+  display: grid !important;
+  grid-template-columns: 360px 360px !important;
+  gap: 24px !important;
+  width: 744px !important;
+  max-width: 100% !important;
+  height: 1064px !important; /* 520px * 2장 + 간격 24px = 1064px */
+  overflow: hidden !important;
+  position: relative !important;
+  margin-left: auto !important;
+}
+
+.som-stream-card {
+  position: relative !important;
+  width: 360px !important;
+  height: 520px !important; /* 길쭉한 520px 포트레이트 비율 */
+  min-height: 520px !important;
+  max-height: 520px !important;
+  border-radius: 28px !important;
+  overflow: hidden !important;
+  background: #0f172a !important;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1) !important;
+  cursor: pointer !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.som-stream-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+@media (max-width: 1200px) {
+  .som-stage-layout {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 30px !important;
+  }
+  .som-right-stream-wrap {
+    width: 100% !important;
+    grid-template-columns: 1fr 1fr !important;
+    height: 940px !important;
+  }
+  .som-stream-card {
+    width: 100% !important;
+    height: 450px !important;
+    min-height: 450px !important;
+    max-height: 450px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .som-stage-layout {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  .som-right-stream-wrap {
+    height: auto !important;
+  }
+  .som-stream-card {
+    height: 360px !important;
+    min-height: 360px !important;
+    max-height: 360px !important;
+  }
+}
