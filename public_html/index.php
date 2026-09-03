@@ -1182,67 +1182,83 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </section>
 
-    <!-- ============================================
-       08 GAON-N GET STARTED MASTER CTA (SOLID NAVY ROUNDED BOX & 4 FLOATING PILLS)
+      <!-- ============================================
+       08 GAON-N ALL-IN-ONE INLINE ESTIMATE FOOTER SECTION (media_1788418661787.png 100% 매칭)
   ============================================ -->
-  <section class="am-get-started-sec" id="getStarted">
-    <div class="am-container">
+  <section class="am-master-conversion-footer wow fadeInUp" data-wow-duration="0.8s" id="contact">
+    <div class="am-container mcf-container">
       
-      <!-- SOLID NAVY ROUNDED BOX WITH NICE OUTER MARGINS -->
-      <div class="ags-solid-box wow fadeInUp" data-wow-duration="0.8s">
-        
-        <!-- 4 FLOATING PILLS (둥둥 떠다니는 알약 4종) -->
-        <div class="ags-floating-pill pill-top-left">
-          <span class="afp-dot green"></span>
-          <span class="afp-text">지금 바로 상담해보세요</span>
+      <!-- LEFT BRANDING & CONTACT INFO -->
+      <div class="mcf-brand-col">
+        <div class="mcf-head-box">
+          <span class="mcf-kicker">START WITH GAON-N</span>
+          <h2 class="mcf-title">가온엔과<br>성공적인 협력을<br>시작해 보세요.</h2>
         </div>
 
-        <div class="ags-floating-pill pill-top-right">
-          <span class="afp-dot yellow"></span>
-          <span class="afp-text">빠른 견적 안내 가능합니다</span>
+        <div class="mcf-phone-box">
+          <span class="mcf-phone-label">직통 상담 전화</span>
+          <a href="tel:062-385-0110" class="mcf-phone-val">062-385-0110</a>
         </div>
 
-        <div class="ags-floating-pill pill-bottom-left">
-          <span class="afp-icon-clock">⏱</span>
-          <span class="afp-text">광주 500+ 신뢰 대행사</span>
-        </div>
-
-        <div class="ags-floating-pill pill-bottom-right">
-          <span class="afp-dot green"></span>
-          <span class="afp-text">오프라인 · 온라인 통합 운영</span>
-        </div>
-
-        <!-- CENTER HEADLINE & CTA -->
-        <div class="ags-center-box">
-          <span class="ags-kicker">GET STARTED</span>
-          <h2 class="ags-title">
-            광고, 이제<br>
-            <span class="ags-highlight">제대로 시작하세요.</span>
-          </h2>
-          <p class="ags-desc">
-            광주 104개 시내버스부터 네이버 스마트플레이스, 4K 시네마 영상까지<br class="pc-only">
-            외주 없는 100% 인하우스 전문팀이 가장 확실한 맞춤 미디어 믹스를 제안해 드립니다.
-          </p>
-
-          <div class="ags-cta-wrap">
-            <a href="/board/estmate/write.php" class="ags-white-pill-btn">
-              <span class="awpb-text">맞춤 견적 상담받기</span>
-              <span class="awpb-arrow-circle">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </span>
-            </a>
-            <a href="tel:062-385-0110" class="ags-call-outline-btn">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              <span>직통 전화 062-385-0110</span>
-            </a>
+        <div class="mcf-company-info">
+          <strong class="mcf-corp-name">GAON-N</strong>
+          <p class="mcf-corp-desc">광주 104개 시내버스부터 스마트플레이스, 4K 시네마 영상까지 100% 인하우스 직영 광고 대행사</p>
+          <div class="mcf-meta-list">
+            <span>(주)가온엔 &nbsp;|&nbsp; 대표자 : 김창현 &nbsp;|&nbsp; 사업자등록번호 : 137-87-02335</span>
+            <span>주소 : 광주광역시 서구 상무버들로 28 재민빌딩 2층</span>
+            <span>대표전화 : 062-385-0110 &nbsp;|&nbsp; 이메일 : lgmo123@naver.com</span>
           </div>
+          <p class="mcf-copy">© 2004–2026 GAON-N. All rights reserved.</p>
         </div>
+      </div>
 
+      <!-- RIGHT DIRECT INLINE ESTIMATE FORM -->
+      <div class="mcf-form-col">
+        <form id="quickEstimateForm" class="mcf-form-box" method="post">
+          
+          <div class="mcf-grid-row">
+            <div class="mcf-input-wrap">
+              <label for="qe_company" class="mcf-input-lbl">회사명</label>
+              <input type="text" name="in_company" id="qe_company" class="mcf-field-input" placeholder="회사명을 입력해주세요." required>
+            </div>
+            <div class="mcf-input-wrap">
+              <label for="qe_name" class="mcf-input-lbl">담당자</label>
+              <input type="text" name="in_name" id="qe_name" class="mcf-field-input" placeholder="담당자를 입력해주세요." required>
+            </div>
+          </div>
+
+          <div class="mcf-grid-row">
+            <div class="mcf-input-wrap">
+              <label for="qe_email" class="mcf-input-lbl">이메일</label>
+              <input type="email" name="in_email" id="qe_email" class="mcf-field-input" placeholder="이메일 주소를 입력해주세요." required>
+            </div>
+            <div class="mcf-input-wrap">
+              <label for="qe_tel" class="mcf-input-lbl">연락처</label>
+              <input type="text" name="in_tel" id="qe_tel" class="mcf-field-input" placeholder="연락처를 입력해주세요." required>
+            </div>
+          </div>
+
+          <div class="mcf-textarea-wrap">
+            <label for="qe_memo" class="mcf-input-lbl">문의내용</label>
+            <textarea name="in_memo" id="qe_memo" class="mcf-field-textarea" placeholder="희망 광고 매체(버스, 온라인, 영상 등) 및 상담 문의 내용을 자세히 입력해주세요." rows="4" required></textarea>
+          </div>
+
+          <div class="mcf-action-row">
+            <label class="mcf-privacy-label">
+              <input type="checkbox" name="agree_privacy" id="qe_privacy" class="mcf-chk" checked required>
+              <span class="mcf-privacy-txt">개인정보수집 및 이용에 동의합니다.</span>
+              <a href="/contents/email.php" target="_blank" class="mcf-privacy-btn">전문보기</a>
+            </label>
+
+            <button type="submit" class="trendy-pill-estimate-btn mcf-submit-pill" id="btnQuickSubmit">
+              <span class="tpeb-txt">문의하기</span>
+              <span class="tpeb-circle-dot">
+                <span class="tpeb-dot"></span>
+              </span>
+            </button>
+          </div>
+
+        </form>
       </div>
 
     </div>

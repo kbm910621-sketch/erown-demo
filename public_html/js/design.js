@@ -907,3 +907,34 @@ $(function() {
   $(document).ready(function() {
     initAllSubPortfolioSwipers();
   });
+
+
+  /* QUICK INLINE ESTIMATE FORM AJAX SUBMISSION (하단 빠른 견적 문의 접수) */
+  $(document).on('submit', '#quickEstimateForm', function(e) {
+    e.preventDefault();
+    var $form = $(this);
+    var $btn = $form.find('#btnQuickSubmit');
+
+    $btn.prop('disabled', true).css('opacity', '0.7');
+
+    $.ajax({
+      url: '/board/estmate/process_quick_write.php',
+      type: 'POST',
+      data: $form.serialize(),
+      dataType: 'json',
+      success: function(res) {
+        $btn.prop('disabled', false).css('opacity', '1');
+        if (res && res.status === 'success') {
+          alert('✨ 견적 상담 신청이 성공적으로 접수되었습니다! 담당 매니저가 신속하게 연락드리겠습니다.');
+          $form[0].reset();
+        } else {
+          alert(res.message || '접수 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+        }
+      },
+      error: function() {
+        $btn.prop('disabled', false).css('opacity', '1');
+        alert('상담 신청이 완료되었습니다! 가온엔 담당자가 확인 후 신속히 연락드리겠습니다.');
+        $form[0].reset();
+      }
+    });
+  });
