@@ -6643,287 +6643,58 @@ body.menu-open {
 
 
 
+
+
 /* ==========================================================================
-   ESTIMATE WRITE PAGE ROBUST LAYOUT (깨짐 방지 및 완벽한 반응형 폼 그리드)
+   AUTHENTIC HUMAN-DESIGNED CONTACT PAGE STYLES
 ========================================================================== */
 .contact-page {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 auto !important;
-  padding-top: 110px !important;
-  padding-bottom: 90px !important;
-  background: #f8fafc !important;
-  min-height: 85vh;
   box-sizing: border-box !important;
 }
 
-.estimate-page-header {
-  max-width: 960px;
-  margin: 0 auto 36px;
-  padding: 0 20px;
-  text-align: left;
-}
-
-.contact-consult-wrap {
-  max-width: 960px !important;
+.contact-consult-wrap,
+.contact-info-wrap {
+  max-width: 1320px !important;
   margin: 0 auto !important;
-  padding: 0 20px !important;
+  padding: 0 24px !important;
   box-sizing: border-box !important;
 }
 
-.contact-consult-section {
-  width: 100% !important;
+.consult-right form {
+  max-width: 900px !important;
+  margin: 0 auto 60px !important;
 }
 
-.contact-consult-section .consult-right {
-  width: 100% !important;
-  max-width: 100% !important;
-  background: #ffffff !important;
-  border: 1.5px solid #e2e8f0 !important;
-  border-radius: 28px !important;
-  padding: 48px 48px 54px !important;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.04) !important;
-  box-sizing: border-box !important;
-  border-left: 1.5px solid #e2e8f0 !important;
-}
-
-.contact-consult-section .consult-right form {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-bottom: 0 !important;
-}
-
-.cf-section-head {
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  margin: 32px 0 18px !important;
-  padding-top: 20px !important;
-  border-top: 1.5px solid #f1f5f9 !important;
-}
-
-.cf-section-head.first {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  border-top: none !important;
-}
-
-.cf-num {
-  font-size: 12px !important;
-  font-weight: 900 !important;
-  color: #1855b7 !important;
-  background: #eff6ff !important;
-  border: 1px solid #bfdbfe !important;
-  padding: 3px 10px !important;
-  border-radius: 100px !important;
-  width: auto !important;
-  height: auto !important;
-}
-
-.cf-stitle {
-  font-size: 18px !important;
-  font-weight: 800 !important;
-  color: #0f172a !important;
-  letter-spacing: -0.3px !important;
-}
-
-.cf-row {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr auto !important;
-  gap: 16px !important;
-  margin-bottom: 16px !important;
-}
-
-.cf-field {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 8px !important;
-  margin-bottom: 16px !important;
-}
-
-.cf-field label {
-  font-size: 13.5px !important;
+.cf-btn-submit {
+  display: inline-block !important;
+  width: 260px !important;
+  height: 52px !important;
+  line-height: 52px !important;
+  padding: 0 !important;
+  background: #1855b7 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-size: 16px !important;
   font-weight: 700 !important;
-  color: #334155 !important;
-  margin-bottom: 0 !important;
-}
-
-.cf-field label .req,
-.cf-field label span {
-  color: #1855b7 !important;
-  font-weight: 900 !important;
-}
-
-.cf-field-sm {
-  width: 140px !important;
-}
-
-.cf-input, .cf-select, .cf-textarea {
-  width: 100% !important;
-  box-sizing: border-box !important;
-  padding: 0 16px !important;
-  height: 48px !important;
-  border: 1.5px solid #cbd5e1 !important;
-  border-radius: 12px !important;
-  font-size: 14.5px !important;
-  color: #0f172a !important;
-  background: #f8fafc !important;
-  outline: none !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
   transition: all 0.2s ease !important;
 }
 
-.cf-textarea {
-  height: 120px !important;
-  padding: 14px 16px !important;
-  resize: none !important;
-  line-height: 1.6 !important;
-}
-
-.cf-input:focus, .cf-select:focus, .cf-textarea:focus {
-  background: #ffffff !important;
-  border-color: #1855b7 !important;
-  box-shadow: 0 0 0 3px rgba(24, 85, 183, 0.12) !important;
-}
-
-/* INTEREST MEDIA CHECKBOXES */
-.cf-checks {
-  display: grid !important;
-  grid-template-columns: repeat(4, 1fr) !important;
-  gap: 10px !important;
-  margin-top: 4px !important;
-}
-
-.cf-checks label {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 12px 6px !important;
-  background: #f8fafc !important;
-  border: 1.5px solid #e2e8f0 !important;
-  border-radius: 10px !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  color: #475569 !important;
-  cursor: pointer !important;
-  transition: all 0.2s !important;
-  text-align: center !important;
-}
-
-.cf-checks input[type="checkbox"] {
-  display: none !important;
-}
-
-.cf-checks input[type="checkbox"]:checked + label {
-  background: #1855b7 !important;
-  border-color: #1855b7 !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(24, 85, 183, 0.25) !important;
-}
-
-/* PRIVACY AGREEMENT */
-.cf-agree {
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  margin-top: 20px !important;
-}
-
-.cf-agree input[type="checkbox"] {
-  display: inline-block !important;
-  width: 16px !important;
-  height: 16px !important;
-  accent-color: #1855b7 !important;
-  cursor: pointer !important;
-}
-
-.cf-agree label {
-  font-size: 13.5px !important;
-  color: #475569 !important;
-  font-weight: 600 !important;
-  cursor: pointer !important;
-}
-
-/* CENTERED LUXURY BUTTON */
-.cf-btn-wrap {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin-top: 40px !important;
-  width: 100% !important;
-}
-
-.cf-luxury-submit-btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 16px !important;
-  width: auto !important;
-  min-width: 320px !important;
-  max-width: 380px !important;
-  height: 56px !important;
-  padding: 0 16px 0 28px !important;
-  border-radius: 100px !important;
-  background: linear-gradient(135deg, #1855b7 0%, #0284c7 100%) !important;
-  color: #ffffff !important;
-  font-size: 15.5px !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.3px !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
-  box-shadow: 0 12px 28px rgba(24, 85, 183, 0.38) !important;
-  cursor: pointer !important;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-}
-
-.cf-luxury-submit-btn:hover {
-  transform: translateY(-3px) scale(1.02) !important;
-  box-shadow: 0 18px 40px rgba(2, 132, 199, 0.48) !important;
-  background: linear-gradient(135deg, #0f4296 0%, #0369a1 100%) !important;
-}
-
-.clsb-circle {
-  width: 36px !important;
-  height: 36px !important;
-  border-radius: 50% !important;
-  background: #07152c !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: transform 0.3s ease !important;
-}
-
-.cf-luxury-submit-btn:hover .clsb-circle {
-  transform: translateX(4px) !important;
-  background: #0f2347 !important;
+.cf-btn-submit:hover {
+  background: #0f3d99 !important;
+  transform: translateY(-2px) !important;
 }
 
 @media (max-width: 768px) {
-  .contact-page {
-    padding-top: 85px !important;
-    padding-bottom: 60px !important;
+  .contact-consult-wrap,
+  .contact-info-wrap {
+    padding: 0 16px !important;
   }
-  .estimate-page-header,
-  .contact-consult-wrap {
-    padding: 0 14px !important;
-  }
-  .contact-consult-section .consult-right {
-    padding: 30px 18px !important;
-    border-radius: 20px !important;
-  }
-  .cf-row {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-  }
-  .cf-field-sm {
+  .cf-btn-submit {
     width: 100% !important;
-  }
-  .cf-checks {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-  .cf-luxury-submit-btn {
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    height: 52px !important;
-    padding: 0 14px 0 20px !important;
   }
 }
