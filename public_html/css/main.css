@@ -5167,3 +5167,247 @@ body.menu-open {
     box-shadow: 0 4px 12px rgba(24, 85, 183, 0.25) !important;
   }
 }
+
+
+/* ==========================================================================
+   ONLINE MARKETING MOBILE STATIC SQUARE CARDS & DETAIL POPUP MODAL
+========================================================================== */
+
+/* 1. 모바일 정적 2열 네모 박스 (Static Square Grid) */
+@media (max-width: 768px) {
+  .som-layout-stage {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .som-right-stream-wrap {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .som-stream-col {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .som-stream-track {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    animation: none !important; /* 롤링 애니메이션 중지 -> 정적 고정 */
+    transform: none !important;
+  }
+
+  .som-stream-card.som-clone-card {
+    display: none !important; /* 복제 카드 숨김 -> 4개 핵심 카드만 깔끔하게 노출 */
+  }
+
+  .som-stream-card {
+    height: 160px !important; /* 깔끔한 네모 박스 형태 */
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    position: relative !important;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08) !important;
+  }
+
+  .som-stream-card .som-hover-detail {
+    display: none !important; /* 모바일에서는 카드 위 덮지 않고 팝업으로 오픈 */
+  }
+
+  .som-stream-card .som-default-txt {
+    opacity: 1 !important;
+    transform: none !important;
+    padding: 14px 12px !important;
+  }
+
+  .som-stream-card .sct-kicker {
+    font-size: 10px !important;
+    padding: 3px 8px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .som-stream-card .sct-title {
+    font-size: 13.5px !important;
+    line-height: 1.35 !important;
+    word-break: keep-all !important;
+  }
+
+  /* 우측 상단 터치 유도 돋보기 뱃지 */
+  .som-stream-card::after {
+    content: '🔍' !important;
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    width: 26px !important;
+    height: 26px !important;
+    background: rgba(15, 23, 42, 0.55) !important;
+    backdrop-filter: blur(4px) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 11px !important;
+    color: #ffffff !important;
+    z-index: 5 !important;
+  }
+}
+
+/* 2. 온라인 마케팅 카드 상세 팝업창 (Online Card Detail Modal) */
+.online-card-modal-overlay {
+  display: none;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 999999 !important;
+  background: rgba(15, 23, 42, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  padding: 20px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+.ocm-panel {
+  width: 100% !important;
+  max-width: 440px !important;
+  background: #ffffff !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.3) !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  animation: ocmPopIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+@keyframes ocmPopIn {
+  from { opacity: 0; transform: scale(0.92) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.ocm-close-btn {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+  backdrop-filter: blur(4px) !important;
+  border: 0 !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 10 !important;
+  transition: all 0.2s ease !important;
+}
+.ocm-close-btn:hover {
+  background: #0f172a !important;
+  transform: rotate(90deg) !important;
+}
+
+.ocm-image-box {
+  width: 100% !important;
+  height: 200px !important;
+  position: relative !important;
+  background: #0f172a !important;
+}
+
+.ocm-image-box img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.ocm-img-scrim {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(180deg, rgba(15,23,42,0.1) 0%, rgba(15,23,42,0.7) 100%) !important;
+}
+
+.ocm-kicker-badge {
+  position: absolute !important;
+  bottom: 14px !important;
+  left: 18px !important;
+  background: #1855b7 !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  padding: 4px 12px !important;
+  border-radius: 100px !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 4px 10px rgba(24, 85, 183, 0.4) !important;
+}
+
+.ocm-body {
+  padding: 24px 20px 22px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  background: #ffffff !important;
+}
+
+.ocm-title {
+  font-size: 21px !important;
+  font-weight: 900 !important;
+  color: #0f172a !important;
+  margin: 0 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.5px !important;
+}
+
+.ocm-desc {
+  font-size: 14px !important;
+  color: #475569 !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+  word-break: keep-all !important;
+}
+
+.ocm-tag-box {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  margin-top: 4px !important;
+}
+
+.ocm-feature-tag {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #1855b7 !important;
+  background: #eff6ff !important;
+  border: 1px solid #bfdbfe !important;
+  padding: 5px 12px !important;
+  border-radius: 8px !important;
+}
+
+.ocm-cta-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #1855b7 !important;
+  color: #ffffff !important;
+  font-size: 14.5px !important;
+  font-weight: 800 !important;
+  padding: 13px !important;
+  border-radius: 12px !important;
+  text-decoration: none !important;
+  margin-top: 8px !important;
+  box-shadow: 0 4px 14px rgba(24, 85, 183, 0.25) !important;
+  transition: all 0.2s ease !important;
+}
+.ocm-cta-btn:hover {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+}

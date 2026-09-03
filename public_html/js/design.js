@@ -1008,3 +1008,34 @@ $(function() {
   $('#gnb').on('wheel touchmove', function(e) {
     e.stopPropagation();
   });
+
+
+  /* ONLINE MARKETING MOBILE CARD DETAIL POPUP */
+  $(document).on('click', '.som-stream-card', function(e) {
+    if ($(window).width() <= 768) {
+      e.preventDefault();
+      var imgSrc = $(this).find('img').attr('src');
+      var kicker = $(this).find('.sct-kicker').text() || $(this).find('.shd-kicker').text();
+      var title = $(this).find('.sct-title').text() || $(this).find('.shd-title').text();
+      var desc = $(this).find('.shd-desc').text();
+      var tag = $(this).find('.shd-tag').text();
+
+      $('#ocmModalImg').attr('src', imgSrc);
+      $('#ocmModalKicker').text(kicker);
+      $('#ocmModalTitle').text(title);
+      $('#ocmModalDesc').text(desc);
+      $('#ocmModalTag').text(tag);
+
+      $('#onlineCardModal').fadeIn(200).css('display', 'flex');
+      $('body').addClass('menu-open');
+      if (window.lenis) { try { window.lenis.stop(); } catch(err){} }
+    }
+  });
+
+  $(document).on('click', '#btnCloseOnlineCardModal, #onlineCardModal', function(e) {
+    if (e.target === this || $(this).is('#btnCloseOnlineCardModal')) {
+      $('#onlineCardModal').fadeOut(200);
+      $('body').removeClass('menu-open');
+      if (window.lenis) { try { window.lenis.start(); } catch(err){} }
+    }
+  });

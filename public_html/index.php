@@ -665,7 +665,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
 
               <!-- EXACT 4 CLONES FOR SEAMLESS 50% LOOP -->
-              <div class="som-stream-card">
+              <div class="som-stream-card som-clone-card">
                 <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" alt="블로그 상위 노출 & C-Rank 브랜딩">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
@@ -679,8 +679,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                   <span class="shd-tag">전문 칼럼 정기 발행</span>
                 </div>
               </div>
-
-              <div class="som-stream-card">
+              <div class="som-stream-card som-clone-card">
                 <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=800&q=80" alt="맘카페 & 당근마켓 침투 바이럴">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
@@ -694,8 +693,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                   <span class="shd-tag">광주 맘카페 여론 형성</span>
                 </div>
               </div>
-
-              <div class="som-stream-card">
+              <div class="som-stream-card som-clone-card">
                 <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="스마트플레이스 1위 세팅 & 예약 연동">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
@@ -709,8 +707,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                   <span class="shd-tag">로컬 지도 상위 노출</span>
                 </div>
               </div>
-
-              <div class="som-stream-card">
+              <div class="som-stream-card som-clone-card">
                 <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="인스타그램 릴스 & 모바일 스폰서 광고">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
@@ -724,10 +721,8 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                   <span class="shd-tag">반경 1~3km 정밀 노출</span>
                 </div>
               </div>
-
             </div>
           </div>
-
           <!-- STREAM COLUMN 2 (4 DIFFERENT ITEMS + 4 EXACT CLONES) -->
           <div class="som-stream-col som-col-2">
             <div class="som-stream-track track-2">
