@@ -5169,11 +5169,13 @@ body.menu-open {
 }
 
 
+
+
 /* ==========================================================================
-   ONLINE MARKETING MOBILE STATIC SQUARE CARDS & DETAIL POPUP MODAL
+   ONLINE MARKETING MOBILE 2-COLUMNS (세로 2줄씩) & SVG PICTOGRAM MODAL
 ========================================================================== */
 
-/* 1. 모바일 정적 2열 네모 박스 (Static Square Grid) */
+/* 1. 모바일 세로 2줄 그리드 (좌 4개 + 우 4개 = 총 8개 카드) */
 @media (max-width: 768px) {
   .som-layout-stage {
     display: flex !important;
@@ -5184,81 +5186,103 @@ body.menu-open {
   .som-right-stream-wrap {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    gap: 10px !important;
+    gap: 12px !important;
     height: auto !important;
     overflow: visible !important;
+    width: 100% !important;
   }
 
   .som-stream-col {
+    display: flex !important;
+    flex-direction: column !important;
     height: auto !important;
     overflow: visible !important;
+    width: 100% !important;
   }
 
   .som-stream-track {
     display: flex !important;
     flex-direction: column !important;
-    gap: 10px !important;
-    animation: none !important; /* 롤링 애니메이션 중지 -> 정적 고정 */
+    gap: 12px !important;
+    animation: none !important; /* 롤링 중지 */
     transform: none !important;
+    width: 100% !important;
   }
 
   .som-stream-card.som-clone-card {
-    display: none !important; /* 복제 카드 숨김 -> 4개 핵심 카드만 깔끔하게 노출 */
+    display: none !important; /* 복제본 숨김 */
   }
 
   .som-stream-card {
-    height: 160px !important; /* 깔끔한 네모 박스 형태 */
+    width: 100% !important;
+    height: 165px !important;
     aspect-ratio: 1 / 1 !important;
-    border-radius: 16px !important;
+    border-radius: 18px !important;
     overflow: hidden !important;
     cursor: pointer !important;
     position: relative !important;
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    transition: transform 0.2s ease !important;
+  }
+  .som-stream-card:active {
+    transform: scale(0.97) !important;
   }
 
   .som-stream-card .som-hover-detail {
-    display: none !important; /* 모바일에서는 카드 위 덮지 않고 팝업으로 오픈 */
+    display: none !important; /* 모바일에서는 팝업으로 상세 내용 표시 */
   }
 
   .som-stream-card .som-default-txt {
     opacity: 1 !important;
     transform: none !important;
-    padding: 14px 12px !important;
+    padding: 16px 14px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
   }
 
   .som-stream-card .sct-kicker {
-    font-size: 10px !important;
+    font-size: 10.5px !important;
+    font-weight: 800 !important;
+    color: #38bdf8 !important;
+    background: rgba(15, 23, 42, 0.75) !important;
+    backdrop-filter: blur(4px) !important;
     padding: 3px 8px !important;
+    border-radius: 6px !important;
     margin-bottom: 6px !important;
+    width: max-content !important;
   }
 
   .som-stream-card .sct-title {
-    font-size: 13.5px !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
     line-height: 1.35 !important;
+    color: #ffffff !important;
     word-break: keep-all !important;
   }
 
-  /* 우측 상단 터치 유도 돋보기 뱃지 */
-  .som-stream-card::after {
-    content: '🔍' !important;
+  /* 모바일 카드 우측 상단 모던 SVG 픽토그램 (이모지 완전 배제) */
+  .som-stream-card::before {
+    content: '' !important;
     position: absolute !important;
     top: 10px !important;
     right: 10px !important;
-    width: 26px !important;
-    height: 26px !important;
-    background: rgba(15, 23, 42, 0.55) !important;
+    width: 28px !important;
+    height: 28px !important;
+    background-color: rgba(15, 23, 42, 0.65) !important;
     backdrop-filter: blur(4px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
     border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 11px !important;
-    color: #ffffff !important;
     z-index: 5 !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3) !important;
   }
 }
 
-/* 2. 온라인 마케팅 카드 상세 팝업창 (Online Card Detail Modal) */
+/* 2. 온라인 마케팅 카드 상세 팝업창 (SVG 픽토그램 & PC 호버 내용 100% 레이아웃) */
 .online-card-modal-overlay {
   display: none;
   position: fixed !important;
@@ -5267,7 +5291,7 @@ body.menu-open {
   background: rgba(15, 23, 42, 0.75) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
-  padding: 20px !important;
+  padding: 16px !important;
   align-items: center !important;
   justify-content: center !important;
   box-sizing: border-box !important;
@@ -5275,19 +5299,20 @@ body.menu-open {
 
 .ocm-panel {
   width: 100% !important;
-  max-width: 440px !important;
+  max-width: 420px !important;
   background: #ffffff !important;
   border-radius: 24px !important;
   overflow: hidden !important;
-  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.3) !important;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.35) !important;
   position: relative !important;
   display: flex !important;
   flex-direction: column !important;
-  animation: ocmPopIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  border: 1px solid #e2e8f0 !important;
+  animation: ocmPopIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 @keyframes ocmPopIn {
-  from { opacity: 0; transform: scale(0.92) translateY(10px); }
+  from { opacity: 0; transform: scale(0.93) translateY(12px); }
   to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
@@ -5295,15 +5320,13 @@ body.menu-open {
   position: absolute !important;
   top: 14px !important;
   right: 14px !important;
-  width: 36px !important;
-  height: 36px !important;
+  width: 38px !important;
+  height: 38px !important;
   border-radius: 50% !important;
   background: rgba(15, 23, 42, 0.6) !important;
   backdrop-filter: blur(4px) !important;
-  border: 0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
   color: #ffffff !important;
-  font-size: 16px !important;
-  font-weight: 800 !important;
   cursor: pointer !important;
   display: flex !important;
   align-items: center !important;
@@ -5318,7 +5341,7 @@ body.menu-open {
 
 .ocm-image-box {
   width: 100% !important;
-  height: 200px !important;
+  height: 190px !important;
   position: relative !important;
   background: #0f172a !important;
 }
@@ -5332,26 +5355,32 @@ body.menu-open {
 .ocm-img-scrim {
   position: absolute !important;
   inset: 0 !important;
-  background: linear-gradient(180deg, rgba(15,23,42,0.1) 0%, rgba(15,23,42,0.7) 100%) !important;
+  background: linear-gradient(180deg, rgba(15,23,42,0.1) 0%, rgba(15,23,42,0.75) 100%) !important;
 }
 
-.ocm-kicker-badge {
+.ocm-kicker-badge-wrap {
   position: absolute !important;
   bottom: 14px !important;
   left: 18px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
   background: #1855b7 !important;
   color: #ffffff !important;
+  padding: 5px 14px !important;
+  border-radius: 100px !important;
+  box-shadow: 0 4px 12px rgba(24, 85, 183, 0.4) !important;
+}
+
+.ocm-kicker-badge {
   font-size: 12px !important;
   font-weight: 800 !important;
-  padding: 4px 12px !important;
-  border-radius: 100px !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
-  box-shadow: 0 4px 10px rgba(24, 85, 183, 0.4) !important;
 }
 
 .ocm-body {
-  padding: 24px 20px 22px !important;
+  padding: 22px 20px !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 12px !important;
@@ -5359,16 +5388,17 @@ body.menu-open {
 }
 
 .ocm-title {
-  font-size: 21px !important;
+  font-size: 20px !important;
   font-weight: 900 !important;
   color: #0f172a !important;
   margin: 0 !important;
   line-height: 1.3 !important;
   letter-spacing: -0.5px !important;
+  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif !important;
 }
 
 .ocm-desc {
-  font-size: 14px !important;
+  font-size: 14.5px !important;
   color: #475569 !important;
   line-height: 1.65 !important;
   margin: 0 !important;
@@ -5379,28 +5409,34 @@ body.menu-open {
   display: flex !important;
   flex-wrap: wrap !important;
   gap: 6px !important;
-  margin-top: 4px !important;
+  margin-top: 2px !important;
+}
+
+.ocm-feature-tag-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #eff6ff !important;
+  border: 1px solid #bfdbfe !important;
+  padding: 6px 14px !important;
+  border-radius: 10px !important;
 }
 
 .ocm-feature-tag {
-  font-size: 12px !important;
-  font-weight: 700 !important;
+  font-size: 12.5px !important;
+  font-weight: 800 !important;
   color: #1855b7 !important;
-  background: #eff6ff !important;
-  border: 1px solid #bfdbfe !important;
-  padding: 5px 12px !important;
-  border-radius: 8px !important;
 }
 
 .ocm-cta-btn {
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: space-between !important;
   background: #1855b7 !important;
   color: #ffffff !important;
   font-size: 14.5px !important;
   font-weight: 800 !important;
-  padding: 13px !important;
+  padding: 14px 18px !important;
   border-radius: 12px !important;
   text-decoration: none !important;
   margin-top: 8px !important;
