@@ -7052,3 +7052,66 @@ body.menu-open {
     max-height: 360px !important;
   }
 }
+
+
+/* ==========================================================================
+   04 HIGH-END BIG TYPOGRAPHY WATERMARK FOR SECTION 02
+========================================================================== */
+.som-layout-stage {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.som-bg-watermark-text {
+  position: absolute !important;
+  top: 50% !important;
+  left: -10px !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  max-width: 900px !important;
+}
+
+.sbw-line-1,
+.sbw-line-2 {
+  font-family: "Pretendard", "Montserrat", "Helvetica Neue", sans-serif !important;
+  font-size: 150px !important;
+  font-weight: 900 !important;
+  line-height: 0.88 !important;
+  letter-spacing: -4px !important;
+  color: rgba(15, 23, 42, 0.035) !important;
+  -webkit-text-stroke: 1.5px rgba(15, 23, 42, 0.065) !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.sbw-line-2 {
+  margin-left: 80px !important;
+}
+
+.som-left-content {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.som-right-stream-wrap {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 1400px) {
+  .sbw-line-1, .sbw-line-2 {
+    font-size: 120px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .som-bg-watermark-text {
+    display: none !important;
+  }
+}

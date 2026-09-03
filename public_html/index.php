@@ -577,6 +577,12 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <!-- MAIN SEALNPACK TALL PORTRAIT LAYOUT -->
       <div class="som-layout-stage wow fadeInUp" data-wow-duration="0.8s">
         
+        <!-- HIGH-END BIG TYPOGRAPHY WATERMARK -->
+        <div class="som-bg-watermark-text" aria-hidden="true">
+          <span class="sbw-line-1">DIGITAL</span>
+          <span class="sbw-line-2">MARKETING</span>
+        </div>
+        
         <!-- LEFT: CLEAN EDITORIAL BRAND HEADLINE & CONCISE BUTTON -->
         <div class="som-left-content">
           <div class="som-title-wrap">
