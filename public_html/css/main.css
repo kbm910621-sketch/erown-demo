@@ -2639,11 +2639,16 @@ body.modal-lock { overflow:hidden !important; }
 
 
 
-/* ==========================================================================
-   SEPARATED PHOTO (스르륵) & TEXT (아래서 위로 슈루룩) MOTION STYLING
-========================================================================== */
 
-/* TOP TEXT AREA - SLIDE UP MOTION (아래에서 위로 슈루룩) */
+
+/* ==========================================================================
+   MASSTIGE.IO EXACT CURTAIN CLIP-PATH REVEAL (스르륵 커튼 열림 모션)
+========================================================================== */
+:root {
+  --mst-ez: cubic-bezier(.22, .61, .36, 1);
+}
+
+/* TOP TEXT: SUBTLE GENTLE RISE (.46s) */
 .mos-lead-wrap {
   display: flex !important;
   flex-direction: column !important;
@@ -2652,16 +2657,16 @@ body.modal-lock { overflow:hidden !important; }
   will-change: transform, opacity !important;
 }
 
-.mos-lead-wrap.text-slide-up {
-  animation: mosTextSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+.mos-lead-wrap.mst-on {
+  animation: mstPanelFade .46s var(--mst-ez) forwards !important;
 }
 
-@keyframes mosTextSlideUp {
-  0% {
+@keyframes mstPanelFade {
+  from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(12px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -2691,7 +2696,7 @@ body.modal-lock { overflow:hidden !important; }
   word-break: keep-all !important;
 }
 
-/* 100% BULLETPROOF TAG PILLS (절대 붙지 않는 독립 캡슐 알약) */
+/* TAG PILLS STAGGER FADE IN */
 .mos-dyn-tags {
   display: flex !important;
   flex-wrap: wrap !important;
@@ -2699,9 +2704,7 @@ body.modal-lock { overflow:hidden !important; }
   margin-top: 6px !important;
 }
 
-.mos-dyn-tags span.mdt-pill,
-span.mdt-pill,
-.mdt-pill {
+.mos-dyn-tags span.mdt-pill {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -2715,9 +2718,19 @@ span.mdt-pill,
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
   white-space: nowrap !important;
   line-height: 1.2 !important;
+  animation: mstTagFade .5s var(--mst-ez) both !important;
+}
+.mos-dyn-tags span.mdt-pill:nth-child(1) { animation-delay: .04s !important; }
+.mos-dyn-tags span.mdt-pill:nth-child(2) { animation-delay: .09s !important; }
+.mos-dyn-tags span.mdt-pill:nth-child(3) { animation-delay: .14s !important; }
+.mos-dyn-tags span.mdt-pill:nth-child(4) { animation-delay: .19s !important; }
+
+@keyframes mstTagFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* CENTER BANNER - PHOTO GLIDE MOTION (사진만 스르륵 페이드) */
+/* CENTER BANNER: EXACT MASSTIGE CLIP-PATH INSET CURTAIN REVEAL (.68s) */
 .mos-hero-banner {
   position: relative !important;
   width: 100% !important;
@@ -2728,28 +2741,31 @@ span.mdt-pill,
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12) !important;
 }
 
+.mos-hero-banner.mst-on {
+  animation: mstClipCurtain .68s var(--mst-ez) .06s both !important;
+}
+
+@keyframes mstClipCurtain {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
 .mhb-bg-img {
   position: absolute !important;
   inset: 0 !important;
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
-  will-change: transform, opacity !important;
+  transform: scale(1.03) !important;
+  transition: transform .68s var(--mst-ez) !important;
 }
 
-.mhb-bg-img.photo-glide {
-  animation: mosPhotoGlide 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
-}
-
-@keyframes mosPhotoGlide {
-  0% {
-    opacity: 0.2;
-    transform: scale(1.05) translateY(-8px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
+.mos-hero-banner.mst-on .mhb-bg-img {
+  transform: scale(1) !important;
 }
 
 .mhb-scrim {
@@ -2760,7 +2776,6 @@ span.mdt-pill,
   z-index: 2 !important;
 }
 
-/* BANNER INNER TEXT - SEPARATE SLIDE UP (사진 위 글자도 아래서 위로 슈루룩) */
 .mhb-overlay-content {
   position: absolute !important;
   bottom: 38px !important;
@@ -2771,11 +2786,6 @@ span.mdt-pill,
   flex-direction: column !important;
   gap: 12px !important;
   align-items: flex-start !important;
-  will-change: transform, opacity !important;
-}
-
-.mhb-overlay-content.inner-text-slide-up {
-  animation: mosTextSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.06s forwards !important;
 }
 
 .mhb-spec-badge {
@@ -2801,89 +2811,4 @@ span.mdt-pill,
   margin: 0 !important;
   text-shadow: 0 3px 14px rgba(0, 0, 0, 0.85) !important;
   word-break: keep-all !important;
-}
-
-
-/* ==========================================================================
-   HUMANIZED MASTERPLAN WORKFLOW PIPELINE STYLING
-========================================================================== */
-.apg-status-badge {
-  font-size: 12px !important;
-  font-weight: 800 !important;
-  color: #475569 !important;
-  background: #f1f5f9 !important;
-  border: 1px solid #e2e8f0 !important;
-  padding: 5px 12px !important;
-  border-radius: 100px !important;
-  letter-spacing: -0.2px !important;
-}
-
-.apg-status-badge.blue {
-  color: #1855b7 !important;
-  background: #eef4ff !important;
-  border-color: rgba(24, 85, 183, 0.25) !important;
-}
-
-.apg-step-card {
-  padding: 34px 28px !important;
-  border-radius: 28px !important;
-}
-
-.apg-step-title {
-  font-size: 20px !important;
-  font-weight: 900 !important;
-  color: #0f172a !important;
-  margin: 14px 0 8px !important;
-  letter-spacing: -0.4px !important;
-}
-
-.apg-step-sub {
-  font-size: 14.5px !important;
-  line-height: 1.65 !important;
-  color: #64748b !important;
-  margin: 0 0 20px !important;
-  word-break: keep-all !important;
-}
-
-
-/* ==========================================================================
-   PORTFOLIO SUBPAGE LUXURY SEARCH & FILTERING BAR
-========================================================================== */
-.sub-port-search-box {
-  display: flex;
-  align-items: center;
-  background: #ffffff;
-  border: 1.5px solid #cbd5e1;
-  border-radius: 100px;
-  padding: 6px 18px;
-  width: 320px;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
-}
-
-.sub-port-search-box input {
-  border: 0;
-  outline: none;
-  background: transparent;
-  font-size: 14px;
-  font-weight: 600;
-  color: #0f172a;
-  width: 100%;
-}
-
-.sub-port-search-box button {
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  color: #64748b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.sub-port-search-box button:hover {
-  color: #1855b7;
-}
-
-.port-sub-container {
-  background: #f8fafc;
-  min-height: 80vh;
 }
