@@ -191,15 +191,27 @@ $totalCount = count($list);
 
   </main>
 
-  <!-- LIGHTBOX MODAL (오른쪽 위 안쪽 ✕ 닫기 버튼) -->
+    <!-- PORTFOLIO LIGHTBOX MODAL (오른쪽 위 안쪽 닫기 버튼 + 좌우 넘김 화살표 탑재) -->
   <div class="portfolio-modal-backdrop" id="modalBackdrop">
     <div class="pm-modal-box">
-      <button type="button" class="pm-close-btn" id="modalClose" aria-label="팝업 닫기" style="position: absolute !important; top: 16px !important; right: 16px !important; left: auto !important; z-index: 9999 !important;">✕</button>
+      <button type="button" class="pm-close-btn" id="modalClose" aria-label="팝업 닫기">✕</button>
+      
+      <!-- MODAL PREV / NEXT ARROWS -->
+      <button type="button" class="pm-nav-btn pm-prev-btn" id="modalPrevBtn" aria-label="이전 사례">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button type="button" class="pm-nav-btn pm-next-btn" id="modalNextBtn" aria-label="다음 사례">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+
       <div class="pm-img-wrap">
         <img src="" id="modalImg" alt="포트폴리오 상세 실사">
       </div>
       <div class="pm-info-wrap">
-        <span class="pm-cat-badge" id="modalCat">광고사례</span>
+        <div class="pm-meta-row">
+          <span class="pm-cat-badge" id="modalCat">광고사례</span>
+          <span class="pm-counter-badge" id="modalCounter">1 / 8</span>
+        </div>
         <h3 class="pm-title" id="modalTitle">프로젝트명</h3>
         <p class="pm-loc" id="modalLoc">광주 주요 상권 직영 시공 사례</p>
         <div class="pm-action-row">
@@ -207,6 +219,7 @@ $totalCount = count($list);
         </div>
       </div>
     </div>
+  </div>
   </div>
 
   <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/footer.php"; ?>

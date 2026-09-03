@@ -5629,3 +5629,84 @@ body.menu-open {
     box-sizing: border-box !important;
   }
 }
+
+
+/* ==========================================================================
+   PORTFOLIO LIGHTBOX MODAL BIDIRECTIONAL NAVIGATION & SMOOTH PHYSICS
+========================================================================== */
+.pm-modal-box {
+  position: relative !important;
+}
+
+.pm-nav-btn {
+  position: absolute !important;
+  top: 40% !important;
+  transform: translateY(-50%) !important;
+  width: 46px !important;
+  height: 46px !important;
+  border-radius: 50% !important;
+  background: rgba(15, 23, 42, 0.75) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  z-index: 50 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.pm-prev-btn {
+  left: 12px !important;
+}
+
+.pm-next-btn {
+  right: 12px !important;
+}
+
+.pm-nav-btn:hover {
+  background: #1855b7 !important;
+  border-color: #38bdf8 !important;
+  transform: translateY(-50%) scale(1.1) !important;
+}
+
+.pm-nav-btn:active {
+  transform: translateY(-50%) scale(0.92) !important;
+}
+
+.pm-meta-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 6px !important;
+}
+
+.pm-counter-badge {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  color: #64748b !important;
+  background: #f1f5f9 !important;
+  padding: 3px 10px !important;
+  border-radius: 100px !important;
+}
+
+#modalImg {
+  transition: opacity 0.2s ease, transform 0.25s ease !important;
+}
+
+@media (max-width: 768px) {
+  .pm-nav-btn {
+    width: 40px !important;
+    height: 40px !important;
+    top: 36% !important;
+  }
+  .pm-prev-btn {
+    left: 8px !important;
+  }
+  .pm-next-btn {
+    right: 8px !important;
+  }
+}

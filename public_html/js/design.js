@@ -719,16 +719,21 @@ $(function() {
   /* SUB-PORTFOLIO STRIP SWIPER INITIALIZATION (PC 4열, 모바일 2열 회전) */
   
 
+  
+
   /* ==========================================================================
-     SUB-PORTFOLIO 3-SECTION SWIPER (모바일 1번 75% + 2번 15% 빼꼼 peek & 1칸씩 슬라이딩)
+     SUB-PORTFOLIO 3-SECTION SWIPER (부드러운 speed 650ms 전환 & 75%+15% 빼꼼)
   ========================================================================== */
   function initAllSubPortfolioSwipers() {
     if (typeof Swiper === 'undefined') return;
 
     var swiperConfig = {
-      slidesPerView: 1.25, /* 모바일: 1번 75~80% 메인 + 2번 15~20% 빼꼼 */
+      slidesPerView: 1.25, /* 1번 75~80% + 2번 15~20% 빼꼼 */
       spaceBetween: 12,
       slidesPerGroup: 1,
+      speed: 650, /* 부드럽고 매끄러운 고급 슬라이딩 모션 */
+      grabCursor: true,
+      touchRatio: 1.1,
       centeredSlides: false,
       rewind: true,
       breakpoints: {
@@ -736,6 +741,7 @@ $(function() {
           slidesPerView: 4,
           spaceBetween: 22,
           slidesPerGroup: 1,
+          speed: 700,
           rewind: true
         }
       }
@@ -764,21 +770,75 @@ $(function() {
   }
 
   /* ==========================================================================
-     PORTFOLIO LIGHTBOX MODAL (포트폴리오 사례 클릭 시 팝업 오픈)
+     PORTFOLIO LIGHTBOX MODAL WITH FULL PREV / NEXT NAVIGATION
   ========================================================================== */
-  $(document).on('click', '.main-port-card, .asps-card', function(e) {
-    e.preventDefault();
-    var title = $(this).data('name') || $(this).find('.asps-item-title, h5').text().trim();
-    var img = $(this).data('img') || $(this).find('img').attr('src');
-    var tag = $(this).data('tag') || '광고사례';
+  var currentModalList = [];
+  var currentModalIndex = 0;
 
-    $('#modalTitle').text(title);
-    $('#modalImg').attr('src', img);
-    $('#modalCat').text(tag);
-    $('#modalLoc').text('광주 주요 상권 직영 시공 사례');
+  function updateModalContent(index) {
+    if (!currentModalList.length) return;
+    if (index < 0) index = currentModalList.length - 1;
+    if (index >= currentModalList.length) index = 0;
+    currentModalIndex = index;
+
+    var item = currentModalList[currentModalIndex];
+    $('#modalImg').css({ opacity: 0, transform: 'scale(0.97)' });
+    setTimeout(function() {
+      $('#modalTitle').text(item.title);
+      $('#modalImg').attr('src', item.img);
+      $('#modalCat').text(item.tag);
+      $('#modalLoc').text('광주 주요 상권 직영 시공 사례');
+      $('#modalCounter').text((currentModalIndex + 1) + ' / ' + currentModalList.length);
+      $('#modalImg').css({ opacity: 1, transform: 'scale(1)' });
+    }, 120);
+  }
+
+  // Open Lightbox Modal on card click
+  $(document).on('click', '.main-port-card, .asps-card, .mbp-card-item', function(e) {
+    e.preventDefault();
+    var $container = $(this).closest('.swiper-wrapper, .mbp-grid-layout, .am-sub-port-strip');
+    var $cards = $container.length ? $container.find('.main-port-card, .asps-card, .mbp-card-item:visible') : $('.main-port-card, .asps-card');
+    
+    currentModalList = [];
+    $cards.each(function(i, el) {
+      currentModalList.push({
+        title: $(el).data('name') || $(el).find('.asps-item-title, h5, .mbp-card-title').text().trim(),
+        img: $(el).data('img') || $(el).find('img').attr('src'),
+        tag: $(el).data('tag') || $(el).data('cat') || '광고사례'
+      });
+    });
+
+    var clickedTitle = $(this).data('name') || $(this).find('.asps-item-title, h5, .mbp-card-title').text().trim();
+    var foundIndex = currentModalList.findIndex(function(it) { return it.title === clickedTitle; });
+    if (foundIndex === -1) foundIndex = 0;
+
+    updateModalContent(foundIndex);
     $('#modalBackdrop').addClass('open').fadeIn(200);
   });
 
+  // Modal Prev / Next Buttons
+  $(document).on('click', '#modalPrevBtn', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    updateModalContent(currentModalIndex - 1);
+  });
+
+  $(document).on('click', '#modalNextBtn', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    updateModalContent(currentModalIndex + 1);
+  });
+
+  // Keyboard navigation for modal (Left / Right arrow keys)
+  $(document).on('keydown', function(e) {
+    if ($('#modalBackdrop').hasClass('open')) {
+      if (e.key === 'ArrowLeft') updateModalContent(currentModalIndex - 1);
+      if (e.key === 'ArrowRight') updateModalContent(currentModalIndex + 1);
+      if (e.key === 'Escape') $('#modalBackdrop').removeClass('open').fadeOut(200);
+    }
+  });
+
+  // Modal Close Handlers
   $(document).on('click', '#modalClose, .portfolio-modal-backdrop', function(e) {
     if (e.target === this || $(this).attr('id') === 'modalClose' || $(this).closest('#modalClose').length) {
       e.preventDefault();
@@ -847,4 +907,3 @@ $(function() {
   $(document).ready(function() {
     initAllSubPortfolioSwipers();
   });
-
