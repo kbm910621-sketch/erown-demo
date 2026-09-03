@@ -305,6 +305,10 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         
         <!-- LEFT COLUMN: VERTICAL SERVICE NAVIGATION LIST -->
         <div class="mos-nav-col">
+          <div class="mos-mobile-scroll-cue mobile_only">
+            <span class="mmsc-txt">11대 옥외 매체</span>
+            <span class="mmsc-cue">좌우로 밀어서 매체 선택 ➔</span>
+          </div>
                     <ul class="mos-nav-list" id="mosNavList">
             
             <!-- 01. 시내버스 104개 전 노선 -->

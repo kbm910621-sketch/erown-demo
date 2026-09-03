@@ -4928,3 +4928,106 @@ body.menu-open {
     box-shadow: 0 6px 18px rgba(24, 85, 183, 0.3) !important;
   }
 }
+
+
+/* ==========================================================================
+   REFINED OOH MEDIA MOBILE: COMPACT 2-COL UTILITY & FADE HORIZONTAL TABS
+========================================================================== */
+
+@media (max-width: 768px) {
+  /* 1. 상단 2개 유틸리티 버튼: 컴팩트 2분할 사각 라운드 바로 차별화 */
+  .am-sec-head .ash-actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 14px !important;
+    margin-bottom: 22px !important;
+  }
+
+  .ash-guide-btn {
+    height: 40px !important;
+    padding: 0 10px !important;
+    border-radius: 10px !important; /* 알약이 아닌 모던 사각 라운드 */
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
+  }
+  .ash-guide-btn.blue {
+    background: #0f172a !important; /* 묵직한 다크 네이비 */
+    color: #ffffff !important;
+    border: 0 !important;
+  }
+  .ash-guide-btn.bus-guide-open {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1.5px solid #e2e8f0 !important;
+  }
+
+  /* 2. 하단 11개 가로 탭: 스와이프 유도 문구 & 페이드 마스크 */
+  .mos-mobile-scroll-cue {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 8px !important;
+    padding: 0 4px !important;
+  }
+  .mmsc-txt {
+    font-size: 12.5px !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+  }
+  .mmsc-cue {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    color: #1855b7 !important;
+    letter-spacing: -0.2px !important;
+  }
+
+  .mos-nav-col {
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  .mos-nav-list {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 8px !important;
+    padding: 4px 4px 14px !important;
+    height: auto !important;
+    mask-image: linear-gradient(to right, black 85%, transparent 100%) !important;
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%) !important;
+  }
+
+  .mos-nav-item {
+    flex: 0 0 auto !important;
+    padding: 9px 16px !important;
+    min-height: 40px !important;
+    border-radius: 100px !important;
+    border: 1.5px solid #e2e8f0 !important;
+    background: #f8fafc !important; /* 부드러운 밝은 그레이 칩 */
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03) !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  .mos-nav-item .mni-txt {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #475569 !important;
+    white-space: nowrap !important;
+  }
+
+  .mos-nav-item.on {
+    background: #1855b7 !important; /* 활성화 시 가온엔 로열 블루 */
+    border-color: #1855b7 !important;
+    box-shadow: 0 4px 12px rgba(24, 85, 183, 0.25) !important;
+  }
+  .mos-nav-item.on .mni-txt {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+  }
+}
