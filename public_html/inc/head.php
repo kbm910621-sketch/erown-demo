@@ -91,4 +91,106 @@ $key_desc = $row['key_ch5'];
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 <title><?php echo $page_title?></title>
+
+<!-- ============================================
+     GAON-N ADVANCED SEO & GEO (AI SEARCH OPTIMIZATION) SCHEMAS
+============================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AdvertisingAgency",
+      "@id": "https://gaon-n.com/#organization",
+      "name": "주식회사 가온엔 (GAON-N)",
+      "alternateName": ["가온엔", "GAON-N", "광주 옥외광고 가온엔", "광주 시내버스광고 가온엔"],
+      "url": "https://gaon-n.com",
+      "logo": "https://gaon-n.com/images/logo.png",
+      "image": "https://gaon-n.com/images/bs_ad/main_sec02_img.jpg",
+      "description": "광주 104개 전 노선 시내버스 3면 래핑 광고 공식 직영사, 네이버 스마트플레이스 1위 세팅, C-Rank 브랜드 블로그, 4K UHD 시네마틱 홍보영상 제작 전문 종합 광고대행사",
+      "telephone": "062-385-0110",
+      "priceRange": "$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "광주광역시 서구 상무중앙로 78, 4층",
+        "addressLocality": "서구",
+        "addressRegion": "광주광역시",
+        "postalCode": "61964",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.1534,
+        "longitude": 126.8521
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "areaServed": [
+        {"@type": "AdministrativeArea", "name": "광주광역시"},
+        {"@type": "AdministrativeArea", "name": "광주 서구"},
+        {"@type": "AdministrativeArea", "name": "광주 남구"},
+        {"@type": "AdministrativeArea", "name": "광주 동구"},
+        {"@type": "AdministrativeArea", "name": "광주 북구"},
+        {"@type": "AdministrativeArea", "name": "광주 광산구"},
+        {"@type": "AdministrativeArea", "name": "전라남도"},
+        {"@type": "AdministrativeArea", "name": "나주시"}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "가온엔 통합 마케팅 서비스",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "광주 시내버스 3면 래핑 옥외광고",
+              "description": "광주 104개 노선 1일 18시간 운행 차도면 3.7m + 인도면 3m + 후면 2.4m 직영 시공"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "네이버 스마트플레이스 1위 최적화 세팅",
+              "description": "광주 주요 상권 키워드 상위 1~3위 노출 및 영수증 리뷰 유입 최적화"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "C-Rank 브랜드 블로그 마케팅",
+              "description": "전문 에디터 1:1 맞춤 칼럼 기획 및 네이버 뷰탭 상단 노출"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "4K UHD 시네마틱 브랜드 영상 및 숏폼 제작",
+              "description": "인하우스 프로덕션 직접 기획·촬영·편집 홍보영상 및 인스타그램 릴스"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://gaon-n.com/#website",
+      "url": "https://gaon-n.com",
+      "name": "가온엔 - 광주 옥외광고 & 디지털 통합 마케팅 대행사",
+      "publisher": {
+        "@id": "https://gaon-n.com/#organization"
+      }
+    }
+  ]
+}
+</script>
+
 </head>
