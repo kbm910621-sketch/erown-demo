@@ -77,37 +77,41 @@ foreach ($list as $item) {
   if (in_array($item['category'], array('taxi','mart','did','print'))) $portOther[] = $item;
 }
 
-// Ensure each section category has authentic real images
-if (count($portBus) < 4) {
+// Ensure each section category has 8 authentic real items for Swiper sliding (PC 4개, 모바일 2개씩 회전)
+if (count($portBus) < 8) {
   $portBus = array(
-    array('id'=>1, 'category'=>'bus', 'title'=>'광주 시내버스 차도면 대형 래핑 광고 집행 실사', 'thumb'=>'/images/bs_ad/baro.jpg'),
+    array('id'=>1, 'category'=>'bus', 'title'=>'상무지구 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/bs_ad/baro.jpg'),
     array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'thumb'=>'/images/bs_ad/baro_3.jpg'),
     array('id'=>3, 'category'=>'bus', 'title'=>'교차로 신호 대기 차량 타깃 시내버스 후면 래핑', 'thumb'=>'/images/bs_ad/baro_9.jpg'),
-    array('id'=>4, 'category'=>'bus', 'title'=>'광주 104개 노선 시내버스 내부 중앙창문 포스터', 'thumb'=>'/images/bs_ad/port_in03.jpg')
+    array('id'=>4, 'category'=>'bus', 'title'=>'광주 104개 노선 시내버스 내부 중앙창문 포스터', 'thumb'=>'/images/bs_ad/port_in03.jpg'),
+    array('id'=>5, 'category'=>'bus', 'title'=>'수완지구 학원가 집중 배차 버스 차도면 3.7m', 'thumb'=>'/images/bs_ad/baro.jpg'),
+    array('id'=>6, 'category'=>'bus', 'title'=>'광주역·송정역 KTX 연계 간선버스 인도면 래핑', 'thumb'=>'/images/bs_ad/baro_3.jpg'),
+    array('id'=>7, 'category'=>'bus', 'title'=>'첨단지구 대단지 아파트 경유 버스 후면 번호판', 'thumb'=>'/images/bs_ad/baro_9.jpg'),
+    array('id'=>8, 'category'=>'bus', 'title'=>'도심 순환01번 시내버스 전담 음성 방송 광고', 'thumb'=>'/images/bs_ad/port_in03.jpg')
   );
 }
-if (count($portOnline) < 4) {
+if (count($portOnline) < 8) {
   $portOnline = array(
-    array('id'=>9, 'category'=>'online', 'title'=>'봉선동 입시학원 네이버 스마트플레이스 1위 세팅 & 관리', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
-    array('id'=>10, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 마케팅', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
-    array('id'=>11, 'category'=>'online', 'title'=>'수완지구 외식 브랜드 광주 맘카페 & SNS 릴스 바이럴', 'thumb'=>'/images/bs_ad/baro_15.jpg'),
-    array('id'=>12, 'category'=>'online', 'title'=>'광주 로컬 핫플레이스 인스타그램 반경 1~3km 타깃 광고', 'thumb'=>'/images/bs_ad/baro_16.jpg')
+    array('id'=>9, 'category'=>'online', 'title'=>'봉선동 입시학원 네이버 스마트플레이스 1위 세팅', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
+    array('id'=>10, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 칼럼 마케팅', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
+    array('id'=>11, 'category'=>'online', 'title'=>'수완지구 외식 브랜드 광주 맘카페 & 릴스 바이럴', 'thumb'=>'/images/bs_ad/baro_15.jpg'),
+    array('id'=>12, 'category'=>'online', 'title'=>'광주 핫플레이스 인스타그램 반경 1~3km 타깃 광고', 'thumb'=>'/images/bs_ad/baro_16.jpg'),
+    array('id'=>21, 'category'=>'online', 'title'=>'광주 대표 척추병원 네이버 플레이스 리뷰 빌드업', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
+    array('id'=>22, 'category'=>'online', 'title'=>'호남 최대 법무법인 브랜드 블로그 상위 블록 선점', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
+    array('id'=>23, 'category'=>'online', 'title'=>'광주 맘스홀릭 공식 제휴 공동구매 바이럴 침투', 'thumb'=>'/images/bs_ad/baro_15.jpg'),
+    array('id'=>24, 'category'=>'online', 'title'=>'당근마켓 동네 광고 상무·수완·봉선 피드 노출', 'thumb'=>'/images/bs_ad/baro_16.jpg')
   );
 }
-if (count($portVideo) < 4) {
+if (count($portVideo) < 8) {
   $portVideo = array(
     array('id'=>13, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'thumb'=>'/images/bs_ad/visual01.jpg'),
     array('id'=>14, 'category'=>'video', 'title'=>'기업 TV CF & 극장 스크린 30초 풀프레임 광고 영상', 'thumb'=>'/images/bs_ad/visual02.jpg'),
     array('id'=>15, 'category'=>'video', 'title'=>'SNS 릴스 · 유튜브 숏폼 9:16 모바일 바이럴 영상', 'thumb'=>'/images/bs_ad/visual03.jpg'),
-    array('id'=>16, 'category'=>'video', 'title'=>'유스퀘어 터미널 DID 디지털 전광판 15초 모션그래픽', 'thumb'=>'/images/bs_ad/did_01.jpg')
-  );
-}
-if (count($portOther) < 4) {
-  $portOther = array(
-    array('id'=>17, 'category'=>'taxi', 'title'=>'광주 전역 법인·개인택시 200대 양측면 래핑 광고', 'thumb'=>'/images/bs_ad/baro_17.jpg'),
-    array('id'=>18, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'thumb'=>'/images/bs_ad/baro_18.jpg'),
-    array('id'=>19, 'category'=>'mart', 'title'=>'이마트 · 롯데마트 1,000대 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/bs_ad/port_in09.jpg'),
-    array('id'=>20, 'category'=>'did', 'title'=>'광천터미널 & 지하철 환승역 고휘도 DID 전자현수막', 'thumb'=>'/images/bs_ad/did_02.jpg')
+    array('id'=>16, 'category'=>'video', 'title'=>'유스퀘어 터미널 DID 디지털 전광판 15초 모션그래픽', 'thumb'=>'/images/bs_ad/did_01.jpg'),
+    array('id'=>25, 'category'=>'video', 'title'=>'호남 대표 가구 브랜드 4K 시네마틱 감성 홍보영상', 'thumb'=>'/images/bs_ad/visual01.jpg'),
+    array('id'=>26, 'category'=>'video', 'title'=>'상무지구 대형 안과 3D 모션그래픽 라식 안내 필름', 'thumb'=>'/images/bs_ad/visual02.jpg'),
+    array('id'=>27, 'category'=>'video', 'title'=>'인스타그램 릴스 100만 조회수 달성 숏폼 바이럴', 'thumb'=>'/images/bs_ad/visual03.jpg'),
+    array('id'=>28, 'category'=>'video', 'title'=>'상무 교차로 대형 LED 전광판 4K 광고 영상 송출', 'thumb'=>'/images/bs_ad/did_01.jpg')
   );
 }
 

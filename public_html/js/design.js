@@ -714,14 +714,17 @@ $(function() {
   });
 
 
-  /* SUB-PORTFOLIO STRIP SWIPER INITIALIZATION (PC 4열, 모바일 2열) */
+  
+
+  /* SUB-PORTFOLIO STRIP SWIPER INITIALIZATION (PC 4열, 모바일 2열 회전) */
   function initSubPortfolioSwipers() {
     if (typeof Swiper === 'undefined') return;
 
-    // Bus Sub Swiper
+    // Bus Sub Swiper (8 Items)
     new Swiper('.asps-swiper-bus', {
       slidesPerView: 2,
       spaceBetween: 12,
+      rewind: true,
       navigation: {
         prevEl: '.asps-prev-bus',
         nextEl: '.asps-next-bus'
@@ -729,15 +732,17 @@ $(function() {
       breakpoints: {
         769: {
           slidesPerView: 4,
-          spaceBetween: 24
+          spaceBetween: 24,
+          slidesPerGroup: 2
         }
       }
     });
 
-    // Online Sub Swiper
+    // Online Sub Swiper (8 Items)
     new Swiper('.asps-swiper-online', {
       slidesPerView: 2,
       spaceBetween: 12,
+      rewind: true,
       navigation: {
         prevEl: '.asps-prev-online',
         nextEl: '.asps-next-online'
@@ -745,15 +750,17 @@ $(function() {
       breakpoints: {
         769: {
           slidesPerView: 4,
-          spaceBetween: 24
+          spaceBetween: 24,
+          slidesPerGroup: 2
         }
       }
     });
 
-    // Video Sub Swiper
+    // Video Sub Swiper (8 Items)
     new Swiper('.asps-swiper-video', {
       slidesPerView: 2,
       spaceBetween: 12,
+      rewind: true,
       navigation: {
         prevEl: '.asps-prev-video',
         nextEl: '.asps-next-video'
@@ -761,7 +768,8 @@ $(function() {
       breakpoints: {
         769: {
           slidesPerView: 4,
-          spaceBetween: 24
+          spaceBetween: 24,
+          slidesPerGroup: 2
         }
       }
     });

@@ -3887,3 +3887,76 @@ body.modal-lock { overflow:hidden !important; }
     padding-left: 12px !important;
   }
 }
+
+
+/* ==========================================================================
+   PROMINENT SWIPER ARROW BUTTONS (PC 4열, 모바일 2열 완벽 회전)
+========================================================================== */
+.asps-nav-controls {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.asps-arrow-btn {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background: #ffffff !important;
+  border: 2px solid #0f172a !important;
+  color: #0f172a !important;
+  font-size: 24px !important;
+  font-weight: 900 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08) !important;
+  line-height: 1 !important;
+  user-select: none !important;
+}
+
+.asps-arrow-btn:hover {
+  background: #1855b7 !important;
+  border-color: #1855b7 !important;
+  color: #ffffff !important;
+  transform: scale(1.08) !important;
+  box-shadow: 0 8px 20px rgba(24, 85, 183, 0.3) !important;
+}
+
+.asps-arrow-btn.light {
+  background: rgba(30, 41, 59, 0.9) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+.asps-arrow-btn.light:hover {
+  background: #fbbf24 !important;
+  border-color: #fbbf24 !important;
+  color: #0f172a !important;
+  box-shadow: 0 8px 20px rgba(251, 191, 36, 0.4) !important;
+}
+
+.asps-swiper {
+  width: 100% !important;
+  overflow: hidden !important;
+  padding: 8px 2px 16px !important;
+}
+
+.asps-card {
+  text-decoration: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  cursor: pointer !important;
+  background: #ffffff !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.asps-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1) !important;
+  border-color: #1855b7 !important;
+}
