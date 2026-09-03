@@ -3188,11 +3188,13 @@ body.modal-lock { overflow:hidden !important; }
 }
 
 
+
+
 /* ==========================================================================
-   MASTER RESPONSIVE SYSTEM - ZERO CONTENT REMOVED (내용 삭제 없이 100% 화면 맞춤)
+   MASTER MOBILE PERFECTION SYSTEM (7대 파트 정밀 모바일 100% 최적화)
 ========================================================================== */
 
-/* 1. FLUID CONTAINERS */
+/* 1. GLOBAL MOBILE FLUIDITY */
 @media (max-width: 1200px) {
   .am-container,
   .am-container-wide {
@@ -3200,223 +3202,323 @@ body.modal-lock { overflow:hidden !important; }
   }
   .mos-stage-layout {
     grid-template-columns: 1fr !important;
-    gap: 32px !important;
+    gap: 30px !important;
   }
   .som-stage-layout {
     grid-template-columns: 1fr !important;
-    gap: 40px !important;
+    gap: 36px !important;
   }
 }
 
 @media (max-width: 768px) {
-  /* GLOBAL SECTION PADDING SCALING */
+  /* GLOBAL SECTION SPACING */
   .am-section {
-    padding: 80px 0 !important;
+    padding: 70px 0 !important;
   }
   .am-about-stats-sec {
-    padding: 80px 0 90px !important;
+    padding: 70px 0 80px !important;
   }
-
   .am-container,
   .am-container-wide {
-    padding: 0 18px !important;
+    padding: 0 16px !important;
   }
 
   /* HEADERS RESPONSIVE TYPOGRAPHY */
   .ash-title {
-    font-size: 32px !important;
-    line-height: 1.25 !important;
+    font-size: clamp(26px, 6.5vw, 32px) !important;
+    line-height: 1.24 !important;
     letter-spacing: -0.8px !important;
-    margin-bottom: 12px !important;
+    margin-bottom: 10px !important;
+    word-break: keep-all !important;
   }
   .ash-kicker {
     font-size: 12px !important;
     margin-bottom: 6px !important;
   }
   .ash-desc {
-    font-size: 15px !important;
-    line-height: 1.65 !important;
+    font-size: 14.5px !important;
+    line-height: 1.6 !important;
+    word-break: keep-all !important;
   }
   .ash-actions {
     width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 10px !important;
+    margin-top: 14px !important;
   }
   .ash-guide-btn {
     width: 100% !important;
     justify-content: center !important;
     padding: 14px 20px !important;
     font-size: 14px !important;
+    box-sizing: border-box !important;
   }
 
-  /* 01-B ABOUT STATS SECTION (5개 지표 모두 유지) */
+  /* PART 1: HERO & VIDEO MOBILE PERFECTION */
+  .am-hero-sec,
+  .vis_box,
+  .main_hero {
+    min-height: 78vh !important;
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+  }
+  .main_hero_panel_video,
+  .vis_video {
+    object-fit: cover !important;
+    height: 100% !important;
+  }
+  .mho-title,
+  .main_hero_text {
+    font-size: clamp(26px, 6.8vw, 32px) !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.8px !important;
+    word-break: keep-all !important;
+  }
+  .mho-sub {
+    font-size: 14.5px !important;
+    line-height: 1.55 !important;
+    word-break: keep-all !important;
+  }
+
+  /* PART 2: STATS 2x2 GOLDEN GRID */
   .aas-top-row {
     flex-direction: column !important;
-    gap: 20px !important;
-    margin-bottom: 36px !important;
+    gap: 16px !important;
+    margin-bottom: 30px !important;
   }
   .aas-main-title {
-    font-size: 26px !important;
+    font-size: 24px !important;
     line-height: 1.35 !important;
   }
   .aas-watermark-col {
     display: none !important;
   }
   .aas-cards-grid {
+    display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 14px !important;
+    gap: 12px !important;
+  }
+  .aas-stat-card {
+    padding: 22px 16px !important;
+    border-radius: 18px !important;
   }
   .aas-stat-card:last-child {
     grid-column: span 2 !important;
+    text-align: center !important;
   }
   .asc-num {
-    font-size: 38px !important;
+    font-size: 34px !important;
+  }
+  .asc-label {
+    font-size: 12.5px !important;
   }
 
-  /* 02 SECTION 01 OOH TABBED STAGE (8대 매체 모두 완벽 유지) */
+  /* PART 3: SECTION 01 OOH SWIPEABLE PILL BAR & 280PX BANNER */
   .mos-nav-col {
-    border-radius: 20px !important;
+    border-radius: 16px !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
   }
   .mos-nav-list {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important; /* 모바일 2열 탭으로 8개 한눈에 확인 */
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 8px !important;
+    padding: 4px 0 12px !important;
     height: auto !important;
   }
+  .mos-nav-list::-webkit-scrollbar {
+    display: none !important;
+  }
   .mos-nav-item {
-    padding: 12px 14px !important;
-    min-height: 52px !important;
-    border-bottom: 1px solid #f1f5f9 !important;
-    border-right: 1px solid #f1f5f9 !important;
+    flex: 0 0 auto !important;
+    padding: 10px 18px !important;
+    min-height: 44px !important;
+    border-radius: 100px !important;
+    border: 1.5px solid #cbd5e1 !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
   }
-  .mos-nav-item:nth-child(2n) {
-    border-right: 0 !important;
+  .mos-nav-item.on {
+    background: #1855b7 !important;
+    border-color: #1855b7 !important;
   }
-  .mni-txt {
+  .mos-nav-item .mni-txt {
     font-size: 13.5px !important;
-    letter-spacing: -0.3px !important;
+    white-space: nowrap !important;
   }
-  .mni-arrow {
+  .mos-nav-item .mni-arrow {
     display: none !important;
   }
 
+  .mos-dyn-lead {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+  .mos-dyn-tags {
+    gap: 6px !important;
+  }
+  .mos-dyn-tags span.mdt-pill {
+    font-size: 12px !important;
+    padding: 5px 12px !important;
+  }
+
   .mos-hero-banner {
-    height: 340px !important;
-    border-radius: 22px !important;
+    height: 280px !important;
+    border-radius: 20px !important;
   }
   .mhb-title {
-    font-size: 22px !important;
-    line-height: 1.35 !important;
+    font-size: 20px !important;
+    line-height: 1.3 !important;
   }
   .mhb-spec-badge {
-    font-size: 12px !important;
-    padding: 5px 14px !important;
+    font-size: 11.5px !important;
+    padding: 4px 12px !important;
   }
   .mhb-overlay-content {
-    left: 20px !important;
-    right: 20px !important;
-    bottom: 22px !important;
+    left: 18px !important;
+    right: 18px !important;
+    bottom: 20px !important;
+    gap: 8px !important;
   }
+
   .mos-huge-action-bar {
     flex-direction: column !important;
     gap: 10px !important;
+    margin-top: 14px !important;
   }
   .mos-huge-btn {
     width: 100% !important;
-    padding: 16px 20px !important;
-    font-size: 15px !important;
+    padding: 15px 20px !important;
+    font-size: 14.5px !important;
     justify-content: center !important;
+    box-sizing: border-box !important;
   }
 
-  /* 03 SECTION 02 ONLINE MARKETING STREAM (세로 롤링 모바일 최적화) */
+  /* PART 4: SECTION 02 ONLINE MARKETING DUAL STREAM RESPONSIVE */
+  .som-stage-layout {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
   .som-stream-stage {
-    height: 600px !important;
+    height: 520px !important;
     padding: 0 !important;
   }
   .som-stream-track-wrap {
-    gap: 12px !important;
+    gap: 10px !important;
   }
   .som-card-item {
-    height: 380px !important;
-    border-radius: 20px !important;
+    height: 330px !important;
+    border-radius: 18px !important;
   }
   .sci-title {
-    font-size: 18px !important;
+    font-size: 17px !important;
+  }
+  .sci-desc {
+    font-size: 13.5px !important;
   }
 
-  /* 04 SECTION 03 VIDEO & PROCESS (4단계 모두 유지) */
+  /* PART 5: SECTION 03 VIDEO & SECTION 04 MASTERPLAN */
+  .am-cinema-frame {
+    border-radius: 18px !important;
+  }
   .am-pipeline-grid {
     grid-template-columns: 1fr !important;
-    gap: 16px !important;
+    gap: 14px !important;
   }
   .apg-step-card {
-    padding: 26px 22px !important;
-    border-radius: 22px !important;
+    padding: 24px 20px !important;
+    border-radius: 20px !important;
   }
   .apg-step-title {
-    font-size: 19px !important;
+    font-size: 18px !important;
+  }
+  .apg-step-sub {
+    font-size: 13.5px !important;
   }
 
-  /* 05 SUB PORTFOLIO STRIPS (4개 아이템 2x2 그리드로 모두 유지) */
+  /* PART 6: SUB PORTFOLIO STRIPS (2x2 GRID) */
   .am-sub-port-strip {
-    margin-top: 50px !important;
-    padding-top: 40px !important;
+    margin-top: 45px !important;
+    padding-top: 35px !important;
   }
   .asps-head {
     flex-direction: column !important;
     align-items: flex-start !important;
-    gap: 12px !important;
-    margin-bottom: 20px !important;
+    gap: 10px !important;
+    margin-bottom: 18px !important;
   }
   .asps-title {
-    font-size: 20px !important;
+    font-size: 19px !important;
+  }
+  .asps-more-link {
+    font-size: 13.5px !important;
   }
   .asps-grid-4 {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 14px !important;
+    gap: 12px !important;
   }
   .asps-thumb {
     aspect-ratio: 16 / 11 !important;
+    border-radius: 14px !important;
   }
   .asps-card-title {
-    font-size: 13.5px !important;
-    line-height: 1.4 !important;
+    font-size: 13px !important;
+    line-height: 1.35 !important;
   }
 
-  /* 06 CTA SOLID NAVY BOX */
+  /* CTA SOLID NAVY BOX */
   .ags-solid-box {
-    padding: 60px 24px !important;
-    border-radius: 26px !important;
+    padding: 50px 20px !important;
+    border-radius: 22px !important;
   }
   .ags-main-title {
-    font-size: 28px !important;
-    line-height: 1.3 !important;
-    margin-bottom: 24px !important;
+    font-size: 26px !important;
+    line-height: 1.28 !important;
+    margin-bottom: 20px !important;
   }
   .ags-action-row {
     flex-direction: column !important;
     width: 100% !important;
-    gap: 12px !important;
+    gap: 10px !important;
   }
   .ags-btn {
     width: 100% !important;
     justify-content: center !important;
-    padding: 16px 24px !important;
-    font-size: 15px !important;
+    padding: 15px 20px !important;
+    font-size: 14.5px !important;
+    box-sizing: border-box !important;
   }
   .ags-floating-pill {
-    position: static !important;
-    display: inline-flex !important;
-    margin: 4px auto !important;
+    display: none !important;
   }
 
-  /* 07 MODALS MOBILE FULLSCREEN FRIENDLY */
+  /* PART 7: MODAL POPUPS MOBILE VIEWPORT OPTIMIZATION */
   .route-modal-box,
   .bus-guide-modal-box,
   .pm-modal-box {
     width: 95% !important;
-    max-height: 90vh !important;
+    max-height: 88vh !important;
     border-radius: 20px !important;
-    padding: 24px 18px !important;
+    padding: 22px 16px !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .rmb-close-btn,
+  .bgm-close-btn,
+  .pm-close-btn {
+    position: sticky !important;
+    top: 8px !important;
+    right: 8px !important;
+    z-index: 100 !important;
+    width: 38px !important;
+    height: 38px !important;
+    background: rgba(15, 23, 42, 0.85) !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
   }
 }

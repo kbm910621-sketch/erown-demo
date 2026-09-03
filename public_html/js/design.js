@@ -694,3 +694,21 @@ $(function() {
     void $banner[0].offsetWidth;
     $banner.addClass('mst-on');
   });
+
+
+  /* MOBILE TOUCH PAUSE & SWIPE CENTER SUPPORT */
+  $(document).on('touchstart', '.som-stream-stage', function() {
+    $('.som-stream-track').css('animation-play-state', 'paused');
+  }).on('touchend', '.som-stream-stage', function() {
+    $('.som-stream-track').css('animation-play-state', 'running');
+  });
+
+  // Center active pill on mobile horizontal swipe
+  $(document).on('click', '.mos-nav-item', function() {
+    if ($(window).width() <= 768) {
+      var $list = $('.mos-nav-list');
+      var $item = $(this);
+      var scrollLeft = $item.position().left + $list.scrollLeft() - ($list.width() / 2) + ($item.width() / 2);
+      $list.animate({ scrollLeft: scrollLeft }, 250);
+    }
+  });
