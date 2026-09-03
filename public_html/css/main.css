@@ -4874,6 +4874,7 @@ body.menu-open {
 ========================================================================== */
 .gnb_drawer_head,
 .gnb_drawer_footer,
+.gnb-contact,
 .mobile_only {
   display: none !important;
 }

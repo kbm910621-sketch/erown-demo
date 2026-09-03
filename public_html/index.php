@@ -259,24 +259,13 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <span class="asc-unit">%</span>
         </div>
 
-        <!-- CARD 05 : PARTNERS WITH BALANCED LOGO STRIP (모바일 우측 로고 채움으로 균형 정렬) -->
-        <div class="aas-stat-card aas-stat-card-partners">
-          <div class="ascp-left-info">
-            <span class="asc-label">협력 매체사</span>
-            <div class="asc-value-row">
-              <strong class="asc-num counter" data-target="50">50</strong><span class="asc-plus">+</span>
-              <span class="asc-unit" style="margin-left:4px;">곳</span>
-            </div>
-            <span class="ascp-sub-txt">광주 시내버스 10개 운송사 &amp; 주요 방송·포털 제휴</span>
+                <!-- CARD 05 -->
+        <div class="aas-stat-card">
+          <span class="asc-label">협력 매체사</span>
+          <div class="asc-value-row">
+            <strong class="asc-num counter" data-target="50">50</strong><span class="asc-plus">+</span>
           </div>
-          <div class="ascp-right-logos">
-            <span class="ascp-logo-pill">광주시내버스</span>
-            <span class="ascp-logo-pill">유스퀘어</span>
-            <span class="ascp-logo-pill">네이버</span>
-            <span class="ascp-logo-pill">카카오</span>
-            <span class="ascp-logo-pill">메타</span>
-            <span class="ascp-logo-pill">CJ대한통운</span>
-          </div>
+          <span class="asc-unit">곳</span>
         </div>
 
       </div>
