@@ -71,12 +71,12 @@ $key_desc = $row['key_ch5'];
 <meta property="og:image" content="<?php echo $key_img?>">
 <meta property="og:url" content="<?php echo $key_url?>">
 
-<link type="text/css" rel="stylesheet" href="/css/import.css">
+<link type="text/css" rel="stylesheet" href="/css/import.css?v=<?php echo time();?>">
 <link type="text/css" rel="stylesheet" href="/css/jquery-ui.css">
 <link type="text/css" rel="stylesheet" href="/css/animate.css">
 <script src="/js/jquery-1.12.4.js"></script>
 <script src="/js/jquery-ui.js"></script>
-<script src="/js/design.js"></script>
+<script src="/js/design.js?v=<?php echo time();?>"></script>
 <script src="/js/checkform.js"></script>
 <script src="/js/wow.min.js"></script>
 <script src="/js/jquery.bxslider.js"></script>
