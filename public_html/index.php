@@ -584,53 +584,27 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="som-layout-stage wow fadeInUp" data-wow-duration="0.8s">
         
         <!-- PC ONLY: BIG SUBTLE ENGLISH TYPOGRAPHY WATERMARK (위/아래 3단 영문 워터마크) -->
-                <!-- LEFT: EDITORIAL ENGLISH TOP + TITLE & ONLINE MARKETING KEYWORD CLOUD -->
+        <div class="som-pc-watermark" aria-hidden="true">
+          <span>PERFORMANCE</span>
+          <span>DIGITAL</span>
+          <span>MARKETING</span>
+        </div>
+        
+        <!-- LEFT: CLEAN EDITORIAL BRAND HEADLINE & CONCISE BUTTON -->
         <div class="som-left-content">
-          
-          <!-- TOP: PROMINENT EDITORIAL ENGLISH HEADLINE (PC ONLY) -->
-          <div class="som-top-editorial pc_only">
-            <span class="ste-slogan">INTEGRATED DIGITAL PERFORMANCE &amp; GROWTH</span>
-            <h3 class="ste-eng-title">DATA-DRIVEN<br>DIGITAL AGENCY</h3>
+          <div class="som-title-wrap">
+            <span class="som-top-eng-label pc_only">INTEGRATED CREATIVE &amp; DIGITAL PERFORMANCE</span>
+            <span class="ash-kicker">02 / DIGITAL MARKETING</span>
+            <h2 class="ash-title">온라인 마케팅</h2>
           </div>
 
-          <!-- MID: CORE KOREAN TITLE, DESCRIPTION & ONLINE MARKETING KEYWORD CLOUD -->
-          <div class="som-mid-group">
-            <div class="som-title-wrap">
-              <span class="ash-kicker">02 / DIGITAL MARKETING</span>
-              <h2 class="ash-title">온라인 마케팅</h2>
-            </div>
+          <p class="som-desc">
+            네이버 스마트플레이스 1위 세팅부터 C-Rank 브랜드 블로그, 맘카페 바이럴, 인스타그램 스폰서 광고까지 가온엔 본사 인하우스 전문팀이 직접 운영합니다.
+          </p>
 
-            <p class="som-desc">
-              네이버 스마트플레이스 1위 세팅부터 C-Rank 브랜드 블로그, 맘카페 바이럴, 인스타그램 스폰서 광고까지 가온엔 본사 인하우스 전문팀이 직접 운영합니다.
-            </p>
-
-            <!-- PC ONLY: MODERN TYPOGRAPHY KEYWORD CLOUD (온라인 마케팅 맞춤 키워드 클라우드) -->
-            <div class="som-tag-cloud pc_only" aria-label="온라인 마케팅 핵심 키워드">
-              <span class="stc-item stc-highlight">스마트플레이스<i class="stc-dot"></i></span>
-              <span class="stc-item stc-sub">스마트블록</span>
-              <span class="stc-item stc-highlight">C-Rank 블로그<i class="stc-dot"></i></span>
-              <span class="stc-item stc-sub">로컬 SEO</span>
-              <span class="stc-item stc-sub">리뷰 빌드업</span>
-              <span class="stc-item stc-highlight">인스타그램 AD<i class="stc-dot"></i></span>
-              <span class="stc-item stc-sub">타깃 리타게팅</span>
-              <span class="stc-item stc-highlight">맘카페 바이럴<i class="stc-dot"></i></span>
-              <span class="stc-item stc-sub">키워드 분석</span>
-              <span class="stc-item stc-sub">ROAS 극대화</span>
-              <span class="stc-item stc-highlight">파워링크 1위<i class="stc-dot"></i></span>
-              <span class="stc-item stc-sub">인하우스 전담</span>
-              <span class="stc-item stc-highlight">당근 비즈니스<i class="stc-dot"></i></span>
-              <span class="stc-item stc-sub">메타 픽셀</span>
-              <span class="stc-item stc-sub">숏폼 릴스</span>
-              <span class="stc-item stc-highlight">SEO 최적화<i class="stc-dot"></i></span>
-              <span class="stc-item stc-sub">GA4 데이터</span>
-              <span class="stc-item stc-sub">체험단 마케팅</span>
-            </div>
-
-            <button type="button" class="som-guide-btn bus-guide-open" data-guide="guideOnline">
-              <span class="sgb-txt">온라인 채널 가이드</span>
-            </button>
-          </div>
-
+          <button type="button" class="som-guide-btn bus-guide-open" data-guide="guideOnline">
+            <span class="sgb-txt">온라인 채널 가이드</span>
+          </button>
         </div>
 
         <!-- RIGHT: DUAL VERTICAL MARQUEE STREAMS (8 HIGH-RES TOPIC MATCHED IMAGES) -->
