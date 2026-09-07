@@ -7281,102 +7281,110 @@ body.menu-open {
 }
 
 
+
+
 /* ==========================================================================
-   OPTION 01: TOP-ALIGNED LEFT CONTENT WITH 3 STAT METRIC CARDS (PC 전용)
+   OPTION 03: FULL-WIDTH HEADER + LEFT 8-CHANNEL NAVIGATION TAB LIST
 ========================================================================== */
 @media (min-width: 992px) {
   .som-stage-layout {
     display: grid !important;
-    grid-template-columns: 420px 746px !important;
-    gap: 50px !important;
-    align-items: start !important; /* 우측 카드의 맨 윗선과 시작점 완벽 일치 */
+    grid-template-columns: 380px 746px !important;
+    gap: 40px !important;
+    align-items: stretch !important; /* 좌우 높이 1:1 완벽 일치 */
     justify-content: space-between !important;
   }
 
-  .som-left-content {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
-    padding-top: 4px !important;
-    position: sticky !important;
-    top: 130px !important; /* 스티키 고정 효과로 스크롤 시에도 최적의 시선 유지 */
-    z-index: 2 !important;
-  }
-
-  .som-title-wrap {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 6px !important;
-  }
-
-  .som-desc {
-    font-size: 15.5px !important;
-    line-height: 1.7 !important;
-    color: #475569 !important;
-    margin: 0 !important;
-  }
-
-  /* 3대 성과 수치 카드 그리드 */
-  .som-stat-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-    margin-top: 10px !important;
-    width: 100% !important;
-  }
-
-  .som-stat-card {
-    display: flex !important;
-    align-items: center !important;
-    gap: 18px !important;
-    padding: 16px 20px !important;
+  .som-nav-col {
     background: #ffffff !important;
     border: 1.5px solid #e2e8f0 !important;
-    border-radius: 18px !important;
-    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
-    transition: all 0.25s ease !important;
-  }
-
-  .som-stat-card:hover {
-    background: #ffffff !important;
-    border-color: #1855b7 !important;
-    transform: translateX(5px) !important;
-    box-shadow: 0 8px 24px rgba(24, 85, 183, 0.12) !important;
-  }
-
-  .ssc-num {
-    font-size: 32px !important;
-    font-weight: 900 !important;
-    color: #1855b7 !important;
-    line-height: 1 !important;
-    letter-spacing: -1px !important;
-    font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif !important;
-    flex-shrink: 0 !important;
-    min-width: 78px !important;
-  }
-
-  .ssc-num small {
-    font-size: 16px !important;
-    font-weight: 800 !important;
-    margin-left: 2px !important;
-  }
-
-  .ssc-text-wrap {
+    border-radius: 28px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 2px !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
   }
 
-  .ssc-label {
-    font-size: 14.5px !important;
+  .som-nav-list {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .som-nav-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 24px !important;
+    flex: 1 !important;
+    min-height: 64px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    cursor: pointer !important;
+    transition: all 0.22s ease !important;
+    user-select: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .som-nav-item:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .sni-num {
+    font-size: 13px !important;
+    font-weight: 900 !important;
+    color: #1855b7 !important;
+    font-family: "Pretendard", sans-serif !important;
+    margin-right: 12px !important;
+  }
+
+  .sni-txt {
+    font-size: 15.5px !important;
+    font-weight: 700 !important;
+    color: #334155 !important;
+    flex: 1 !important;
+    transition: color 0.2s ease !important;
+  }
+
+  .sni-arrow {
+    font-size: 20px !important;
     font-weight: 800 !important;
-    color: #0f172a !important;
-    line-height: 1.3 !important;
+    color: #94a3b8 !important;
+    transition: transform 0.2s ease, color 0.2s ease !important;
   }
 
-  .ssc-desc {
-    font-size: 12px !important;
-    color: #64748b !important;
-    line-height: 1.4 !important;
+  .som-nav-item:hover {
+    background: #f8fafc !important;
+  }
+  .som-nav-item:hover .sni-txt {
+    color: #1855b7 !important;
+  }
+  .som-nav-item:hover .sni-arrow {
+    color: #1855b7 !important;
+    transform: translateX(4px) !important;
+  }
+
+  .som-nav-item.on {
+    background: #1855b7 !important;
+  }
+  .som-nav-item.on .sni-num,
+  .som-nav-item.on .sni-txt,
+  .som-nav-item.on .sni-arrow {
+    color: #ffffff !important;
+  }
+  .som-nav-item.on .sni-arrow {
+    transform: translateX(5px) !important;
+  }
+}
+
+/* MOBILE VIEW MAINTAINS FULL-WIDTH 2-COL GRID */
+@media (max-width: 991px) {
+  .som-nav-col {
+    display: none !important;
   }
 }
