@@ -7411,7 +7411,7 @@ body.menu-open {
 }
 
 /* ==========================================================================
-   ONLINE MARKETING: TOP/BOTTOM ENGLISH TYPOGRAPHY & 3-TIER VERTICAL BALANCE
+   ONLINE MARKETING: TOP ENGLISH TYPOGRAPHY & CUSTOM KEYWORD CLOUD
 ========================================================================== */
 .som-top-editorial {
   display: flex;
@@ -7439,33 +7439,66 @@ body.menu-open {
   font-family: "Pretendard", "Montserrat", sans-serif;
 }
 
-.som-bottom-editorial {
+/* PC ONLY KEYWORD CLOUD (맞춤형 타이포그래피 태그 클라우드) */
+.som-tag-cloud {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  position: relative;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 12px;
+  margin: 12px 0 6px;
+  max-width: 390px;
+  line-height: 1.6;
+  padding: 16px 0 6px;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
 }
 
-.sbe-watermark {
-  font-size: 68px;
-  font-weight: 900;
-  line-height: 0.88;
-  letter-spacing: -2px;
-  color: rgba(15, 23, 42, 0.04);
-  -webkit-text-stroke: 1.5px rgba(15, 23, 42, 0.08);
-  text-transform: uppercase;
+.stc-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
-  font-family: "Pretendard", "Montserrat", sans-serif;
+  cursor: default;
 }
 
-.sbe-subtext {
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  color: #64748b;
-  text-transform: uppercase;
-  font-family: "Pretendard", "Montserrat", sans-serif;
+.stc-item.stc-highlight {
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -0.4px;
+  font-family: "Pretendard", sans-serif;
+}
+
+.stc-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d4f738; /* 형광 라임/옐로우 포인트 */
+  border: 1.2px solid #0f172a;
+  margin-left: 2px;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(212, 247, 56, 0.6);
+}
+
+.stc-item.stc-sub {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: -0.2px;
+  font-family: "Pretendard", sans-serif;
+}
+
+.stc-item:hover {
+  color: #1855b7;
+  transform: translateY(-2px);
+}
+
+.stc-item.stc-highlight:hover .stc-dot {
+  background: #1855b7;
+  border-color: #1855b7;
+  box-shadow: 0 0 8px rgba(24, 85, 183, 0.5);
 }
 
 @media (min-width: 992px) {
@@ -7493,9 +7526,9 @@ body.menu-open {
   .som-mid-group {
     display: flex !important;
     flex-direction: column !important;
-    gap: 18px !important;
+    gap: 16px !important;
     margin: auto 0 !important;
-    padding: 20px 0 !important;
+    padding: 10px 0 !important;
   }
 
   .som-title-wrap {
@@ -7553,7 +7586,7 @@ body.menu-open {
   .som-top-editorial {
     display: none !important;
   }
-  .som-bottom-editorial {
+  .som-tag-cloud {
     display: none !important;
   }
   .som-mid-group {
