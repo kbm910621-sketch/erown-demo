@@ -7286,63 +7286,64 @@ body.menu-open {
 
 
 /* ==========================================================================
-   ONLINE MARKETING: STICKY LEFT TITLE & UNDER-BUTTON KEYWORD TAG CLOUD (PC ONLY)
+   ONLINE MARKETING: SCREEN-FIT HEIGHT + LARGER TAGS + ROCK-SOLID STICKY (PC ONLY)
 ========================================================================== */
+/* 더 크고 선명한 가온엔 맞춤형 태그 클라우드 */
 .som-tag-cloud {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 9px 12px;
-  max-width: 400px;
+  gap: 11px 15px;
+  max-width: 440px;
   line-height: 1.65;
-  margin-top: 24px;
-  padding-top: 20px;
+  margin-top: 26px;
+  padding-top: 22px;
   border-top: 1px solid rgba(15, 23, 42, 0.09);
 }
 
 .stc-item {
   display: inline-flex;
   align-items: center;
-  gap: 4.5px;
+  gap: 5px;
   white-space: nowrap;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
   cursor: pointer;
 }
 
-/* 주요 볼드 키워드 (다크 슬레이트 & 가온 시그니처 블루 도트 포인트) */
+/* 주요 볼드 키워드 (사진처럼 더 크고 선명하게 19px) */
 .stc-item.stc-highlight {
-  font-size: 15.5px;
-  font-weight: 800;
+  font-size: 19px;
+  font-weight: 900;
   color: #0f172a;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.4px;
   font-family: "Pretendard", sans-serif;
 }
 
 .stc-dot {
   display: inline-block;
-  width: 6.5px;
-  height: 6.5px;
+  width: 7.5px;
+  height: 7.5px;
   border-radius: 50%;
   background: #1855b7; /* 가온엔 시그니처 블루 */
-  margin-left: 2px;
+  margin-left: 3px;
   flex-shrink: 0;
-  box-shadow: 0 0 6px rgba(24, 85, 183, 0.45);
+  box-shadow: 0 0 6px rgba(24, 85, 183, 0.5);
   transition: all 0.25s ease;
 }
 
-/* 서브 키워드 (부드러운 슬레이트 그레이) */
+/* 서브 키워드 (16px 볼드) */
 .stc-item.stc-sub {
-  font-size: 13.5px;
-  font-weight: 600;
+  font-size: 15.5px;
+  font-weight: 700;
   color: #8492a6;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.25px;
   font-family: "Pretendard", sans-serif;
 }
 
 /* 마우스 호버 시 자연스럽게 살짝 커지며 색상 변화 */
 .stc-item:hover {
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-2px) scale(1.05);
 }
 
 .stc-item.stc-highlight:hover {
@@ -7351,42 +7352,52 @@ body.menu-open {
 
 .stc-item.stc-highlight:hover .stc-dot {
   background: #00d2ff;
-  box-shadow: 0 0 8px rgba(0, 210, 255, 0.7);
-  transform: scale(1.2);
+  box-shadow: 0 0 8px rgba(0, 210, 255, 0.8);
+  transform: scale(1.25);
 }
 
 .stc-item.stc-sub:hover {
   color: #0f172a;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 @media (min-width: 992px) {
   #online {
     position: relative !important;
     overflow: visible !important;
+    padding: 60px 0 80px !important;
   }
 
+  #online .am-container {
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  /* 화면 높이에 딱 맞는 콤팩트한 뷰포트 레이아웃 */
   .som-layout-stage {
     display: grid !important;
-    grid-template-columns: 410px 746px !important;
+    grid-template-columns: 430px 746px !important;
     gap: 40px !important;
     align-items: flex-start !important; /* STICKY 구동 필수 */
     justify-content: space-between !important;
     position: relative !important;
     overflow: visible !important;
+    min-height: 740px !important;
   }
 
-  /* PC 전용: 온라인 마케팅 섹션 스크롤 시 좌측 영역이 120px 위치에 고정(Sticky)되고 섹션을 벗어나면 자연스럽게 해제 */
+  /* PC 전용: 온라인 마케팅 섹션 스크롤 시 좌측 영역이 100px 위치에 완벽 고정(Sticky) */
   .som-left-content {
+    position: -webkit-sticky !important;
     position: sticky !important;
-    top: 120px !important;
+    top: 100px !important;
     align-self: flex-start !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 18px !important;
     padding: 0 !important;
+    margin: 0 !important;
     box-sizing: border-box !important;
-    z-index: 5 !important;
+    z-index: 10 !important;
   }
 
   .som-title-wrap {
@@ -7402,29 +7413,31 @@ body.menu-open {
     margin: 0 !important;
   }
 
+  /* 우측 카드 스트림: 화면 한눈에 딱 들어오는 최적 높이 (720px) */
   .som-right-stream-wrap {
     display: grid !important;
     grid-template-columns: 360px 360px !important;
-    gap: 26px !important;
+    gap: 24px !important;
     width: 746px !important;
     max-width: 100% !important;
-    height: 1166px !important; /* 570px * 2 + 26px */
+    height: 720px !important; /* 화면 높이에 딱 맞는 최적 비율 (2장 카드 340px + 24px 간격 + 340px) */
     overflow: hidden !important;
     position: relative !important;
     margin-left: auto !important;
+    margin-top: 0 !important;
     z-index: 2 !important;
   }
 
   .som-stream-card {
     position: relative !important;
     width: 360px !important;
-    height: 570px !important;
-    min-height: 570px !important;
-    max-height: 570px !important;
-    border-radius: 28px !important;
+    height: 340px !important;
+    min-height: 340px !important;
+    max-height: 340px !important;
+    border-radius: 24px !important;
     overflow: hidden !important;
     background: #0f172a !important;
-    box-shadow: 0 16px 42px rgba(15, 23, 42, 0.1) !important;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.09) !important;
     cursor: pointer !important;
     flex-shrink: 0 !important;
     box-sizing: border-box !important;

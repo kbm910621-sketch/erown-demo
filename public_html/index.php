@@ -581,7 +581,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     <div class="am-container">
       
       <!-- MAIN SEALNPACK TALL PORTRAIT LAYOUT -->
-      <div class="som-layout-stage wow fadeInUp" data-wow-duration="0.8s">
+      <div class="som-layout-stage">
         
         <!-- PC ONLY: BIG SUBTLE ENGLISH TYPOGRAPHY WATERMARK (위/아래 3단 영문 워터마크) -->
         <!-- LEFT: STICKY BRAND TITLE, DESCRIPTION, GUIDE BUTTON & KEYWORD TAG CLOUD (PC ONLY STICKY) -->
