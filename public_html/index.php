@@ -583,10 +583,10 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <span>MARKETING</span>
         </div>
         
-        <!-- LEFT: CLEAN EDITORIAL BRAND HEADLINE & CONCISE BUTTON -->
+                <!-- LEFT: TOP-ALIGNED EDITORIAL HEADLINE & 3 CORE STAT METRIC CARDS -->
         <div class="som-left-content">
           <div class="som-title-wrap">
-            <span class="ash-kicker">02 / DIGITAL MARKETING</span>
+            <span class="ash-kicker">02 / DIGITAL MARKETING SOLUTIONS</span>
             <h2 class="ash-title">온라인 마케팅</h2>
           </div>
 
@@ -597,6 +597,33 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <button type="button" class="som-guide-btn bus-guide-open" data-guide="guideOnline">
             <span class="sgb-txt">온라인 채널 가이드</span>
           </button>
+
+          <!-- 3 CORE DIGITAL PERFORMANCE STAT METRIC CARDS (PC 전용 3대 성과 지표) -->
+          <div class="som-stat-grid pc_only">
+            <div class="som-stat-card">
+              <span class="ssc-num">98<small>%</small></span>
+              <div class="ssc-text-wrap">
+                <strong class="ssc-label">맘카페·지역 커뮤니티</strong>
+                <span class="ssc-desc">실사용자 기반 여론 형성 &amp; 바이럴 침투</span>
+              </div>
+            </div>
+
+            <div class="som-stat-card">
+              <span class="ssc-num">1<small>위</small></span>
+              <div class="ssc-text-wrap">
+                <strong class="ssc-label">스마트플레이스 상위 랭크</strong>
+                <span class="ssc-desc">네이버 지도 1페이지 상단 고정 &amp; 예약 연동</span>
+              </div>
+            </div>
+
+            <div class="som-stat-card">
+              <span class="ssc-num">300<small>%↑</small></span>
+              <div class="ssc-text-wrap">
+                <strong class="ssc-label">잠재고객 유입 &amp; 매출 증대</strong>
+                <span class="ssc-desc">ROAS 중심 정밀 타깃 퍼포먼스 마케팅</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- RIGHT: DUAL VERTICAL MARQUEE STREAMS (8 HIGH-RES TOPIC MATCHED IMAGES) -->
