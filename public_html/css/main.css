@@ -7286,34 +7286,141 @@ body.menu-open {
 
 
 /* ==========================================================================
-   ONLINE MARKETING: TOP/BOTTOM ENGLISH TYPOGRAPHY & WATERMARK STYLE
+   ONLINE MARKETING: TOP ENGLISH TYPOGRAPHY & BOTTOM GAON-N CUSTOM TAG CLOUD
 ========================================================================== */
-.som-top-eng-label {
-  display: block;
+.som-top-editorial {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ste-slogan {
   font-size: 13px;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: 0.16em;
   color: #1855b7;
   text-transform: uppercase;
-  margin-bottom: 8px;
   font-family: "Pretendard", "Montserrat", sans-serif;
 }
 
+.ste-eng-title {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  color: #0f172a;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: "Pretendard", "Montserrat", sans-serif;
+}
+
+/* BOTTOM CUSTOM BRANDED TAG CLOUD (가온엔 맞춤 컬러 & 자연스러운 마우스 호버 인터랙션) */
+.som-bottom-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.som-tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 9px 12px;
+  max-width: 390px;
+  line-height: 1.65;
+  padding: 18px 0 0;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.stc-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4.5px;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  cursor: pointer;
+}
+
+/* 주요 볼드 키워드 (다크 슬레이트 & 가온 시그니처 블루 도트 포인트) */
+.stc-item.stc-highlight {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.3px;
+  font-family: "Pretendard", sans-serif;
+}
+
+.stc-dot {
+  display: inline-block;
+  width: 6.5px;
+  height: 6.5px;
+  border-radius: 50%;
+  background: #1855b7; /* 가온엔 시그니처 블루 */
+  margin-left: 2px;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(24, 85, 183, 0.45);
+  transition: all 0.25s ease;
+}
+
+/* 서브 키워드 (부드러운 슬레이트 그레이) */
+.stc-item.stc-sub {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #8492a6;
+  letter-spacing: -0.2px;
+  font-family: "Pretendard", sans-serif;
+}
+
+/* 마우스 호버 시 자연스럽게 살짝 커지며 색상 변화 */
+.stc-item:hover {
+  transform: translateY(-2px) scale(1.04);
+}
+
+.stc-item.stc-highlight:hover {
+  color: #1855b7;
+}
+
+.stc-item.stc-highlight:hover .stc-dot {
+  background: #00d2ff;
+  box-shadow: 0 0 8px rgba(0, 210, 255, 0.7);
+  transform: scale(1.2);
+}
+
+.stc-item.stc-sub:hover {
+  color: #0f172a;
+  font-weight: 700;
+}
+
 @media (min-width: 992px) {
-  .som-stage-layout {
+  .som-layout-stage {
     display: grid !important;
-    grid-template-columns: 380px 746px !important;
+    grid-template-columns: 400px 746px !important;
     gap: 50px !important;
-    align-items: center !important;
+    align-items: stretch !important;
     justify-content: space-between !important;
+    min-height: 1166px !important;
   }
 
   .som-left-content {
     display: flex !important;
     flex-direction: column !important;
-    gap: 20px !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    min-height: 1166px !important;
+    padding: 10px 0 !important;
+    box-sizing: border-box !important;
     position: relative !important;
     z-index: 2 !important;
+  }
+
+  .som-mid-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    margin: auto 0 !important;
+    padding: 20px 0 !important;
   }
 
   .som-title-wrap {
@@ -7327,40 +7434,6 @@ body.menu-open {
     line-height: 1.75 !important;
     color: #475569 !important;
     margin: 0 !important;
-  }
-
-  /* 3단 대형 영문 워터마크 (위, 중간, 아래를 감각적으로 채움) */
-  .som-layout-stage {
-    position: relative !important;
-    overflow: visible !important;
-  }
-
-  .som-pc-watermark {
-    display: flex !important;
-    flex-direction: column !important;
-    position: absolute !important;
-    top: 50% !important;
-    left: -10px !important;
-    transform: translateY(-50%) !important;
-    z-index: 1 !important;
-    pointer-events: none !important;
-    user-select: none !important;
-    font-family: "Pretendard", "Montserrat", "Helvetica Neue", sans-serif !important;
-    font-size: 118px !important;
-    font-weight: 900 !important;
-    line-height: 0.85 !important;
-    letter-spacing: -4px !important;
-    color: rgba(15, 23, 42, 0.035) !important;
-    -webkit-text-stroke: 1.5px rgba(15, 23, 42, 0.06) !important;
-    text-transform: uppercase !important;
-    white-space: nowrap !important;
-  }
-
-  .som-pc-watermark span:nth-child(2) {
-    margin-left: 50px !important;
-  }
-  .som-pc-watermark span:nth-child(3) {
-    margin-left: 100px !important;
   }
 
   .som-right-stream-wrap {
@@ -7402,10 +7475,17 @@ body.menu-open {
 }
 
 @media (max-width: 991px) {
-  .som-top-eng-label {
+  .som-top-editorial {
     display: none !important;
   }
-  .som-pc-watermark {
+  .som-bottom-tags {
     display: none !important;
+  }
+  .som-mid-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
