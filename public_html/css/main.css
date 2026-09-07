@@ -7286,9 +7286,9 @@ body.menu-open {
 
 
 /* ==========================================================================
-   ONLINE MARKETING: HARDWARE-ACCELERATED STICKY ENGINE + 520PX TALL CARDS
+   ONLINE MARKETING: TOP-ALIGNED 1:1 PERFECT BALANCED AGENCY LAYOUT (PC ONLY)
 ========================================================================== */
-/* 더 크고 선명한 가온엔 맞춤형 태그 클라우드 */
+/* 더 크고 선명한 가온엔 맞춤형 태그 클라우드 (19px 볼드 & 가온 블루 도트) */
 .som-tag-cloud {
   display: flex;
   flex-wrap: wrap;
@@ -7296,7 +7296,7 @@ body.menu-open {
   gap: 12px 16px;
   max-width: 440px;
   line-height: 1.65;
-  margin-top: 26px;
+  margin-top: 24px;
   padding-top: 22px;
   border-top: 1px solid rgba(15, 23, 42, 0.09);
 }
@@ -7364,8 +7364,9 @@ body.menu-open {
 @media (min-width: 992px) {
   #online {
     position: relative !important;
-    overflow: visible !important;
-    padding: 80px 0 140px !important;
+    overflow: hidden !important;
+    padding: 70px 0 90px !important;
+    background: #ffffff !important;
   }
 
   #online .am-container {
@@ -7373,30 +7374,28 @@ body.menu-open {
     overflow: visible !important;
   }
 
+  /* 좌우 상단 시작선(Top Line)이 1:1로 정확하게 일치하는 완벽한 그리드 */
   .som-layout-stage {
     display: grid !important;
-    grid-template-columns: 430px 746px !important;
-    gap: 40px !important;
+    grid-template-columns: 440px 746px !important;
+    gap: 50px !important;
     align-items: flex-start !important;
     justify-content: space-between !important;
     position: relative !important;
-    overflow: visible !important;
-    min-height: 1300px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
   }
 
-  /* PC 전용: 하드웨어 가속 transform 기반의 절대 무결점 스티키 고정 */
+  /* 좌측 칼정렬 콘텐츠: 우측 카드 1번의 맨 윗선과 수평 완벽 일치 */
   .som-left-content {
-    position: relative !important;
-    top: 0 !important;
-    align-self: flex-start !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 18px !important;
-    padding: 0 !important;
+    gap: 20px !important;
+    align-self: flex-start !important;
     margin: 0 !important;
-    box-sizing: border-box !important;
-    z-index: 10 !important;
-    will-change: transform !important;
+    padding-top: 4px !important;
+    position: relative !important;
+    z-index: 2 !important;
   }
 
   .som-title-wrap {
@@ -7410,16 +7409,18 @@ body.menu-open {
     line-height: 1.75 !important;
     color: #475569 !important;
     margin: 0 !important;
+    font-weight: 500 !important;
+    word-break: keep-all !important;
   }
 
-  /* 우측 카드 스트림: 길쭉하고 시원한 520px 롱 포트레이트 카드 (1300px 높이 & 넉넉한 스크롤 버퍼) */
+  /* 우측 카드 스트림: 시원하고 슬렌더한 470px 포트레이트 카드 2장 (총 980px) */
   .som-right-stream-wrap {
     display: grid !important;
     grid-template-columns: 360px 360px !important;
     gap: 26px !important;
     width: 746px !important;
     max-width: 100% !important;
-    height: 1300px !important;
+    height: 980px !important;
     overflow: hidden !important;
     position: relative !important;
     margin-left: auto !important;
@@ -7430,13 +7431,13 @@ body.menu-open {
   .som-stream-card {
     position: relative !important;
     width: 360px !important;
-    height: 520px !important;
-    min-height: 520px !important;
-    max-height: 520px !important;
-    border-radius: 26px !important;
+    height: 470px !important; /* 길쭉하고 슬렌더한 최적 세로 비율 */
+    min-height: 470px !important;
+    max-height: 470px !important;
+    border-radius: 24px !important;
     overflow: hidden !important;
     background: #0f172a !important;
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1) !important;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08) !important;
     cursor: pointer !important;
     flex-shrink: 0 !important;
     box-sizing: border-box !important;
