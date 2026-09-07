@@ -3,7 +3,7 @@
    ========================================================================== */
 @charset "utf-8";
 
-.agency-master-system { position:relative; width:100%; overflow-x:hidden; background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; -webkit-font-smoothing:antialiased; }
+.agency-master-system { position:relative; width:100%; overflow:visible; background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; -webkit-font-smoothing:antialiased; }
 .am-container, .am-container-wide { width:100% !important; max-width:1650px !important; margin:0 auto !important; padding:0 40px !important; box-sizing:border-box !important; }
 
 /* MAIN_HERO GSAP SCROLL INTERACTION (GENEROUS SPACING BETWEEN PILLS & VIDEO) */
@@ -274,7 +274,7 @@
 
 /* 10 104 BUS ROUTES MODAL */
 /* 11 SWISS SPEC MODAL */
- .lux-modal-head, .lux-modal-tabs, .lux-modal-body, .lux-modal-foot { padding-left:18px; padding-right:18px; } .lux-modal-panel { max-height:96vh; border-radius:18px; } }
+@media (max-width: 991px) { .lux-modal-head, .lux-modal-tabs, .lux-modal-body, .lux-modal-foot { padding-left:18px; padding-right:18px; } .lux-modal-panel { max-height:96vh; border-radius:18px; } }
 
 .lmf-btn { display:inline-flex; align-items:center; padding:12px 28px; border-radius:100px; background:#1855b7; color:#ffffff; font-size:13.5px; font-weight:800; text-decoration:none; transition:all 0.2s; }
 .lmf-btn:hover { background:#0f3f8c; }
@@ -479,7 +479,7 @@
 @keyframes spinBadge { 0% { transform:rotate(0deg); } 100% { transform:rotate(360deg); } }
 @media(max-width:991px) { .ags-floating-pill { display:none; } .ags-floating-circle-badge { display:none; } .am-get-started-sec { padding:80px 0; min-height:auto; } }
 
- .avh-workflow-strip { flex-wrap:wrap; border-radius:16px; } }
+@media (max-width: 991px) { .avh-workflow-strip { flex-wrap:wrap; border-radius:16px; } }
 
 /* STATIC CLEAN GET STARTED PILLS (NO HEADACHE ANIMATIONS) */
 .ags-floating-pill { position:absolute; z-index:3; display:inline-flex; align-items:center; gap:8px; padding:10px 20px; background:rgba(15,30,55,0.85); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.12); border-radius:100px; color:rgba(255,255,255,0.9); font-size:13px; font-weight:700; letter-spacing:-0.2px; box-shadow:0 8px 24px rgba(0,0,0,0.25); animation:none !important; }
@@ -577,7 +577,7 @@
 @media(max-width:991px) { .ags-floating-pill { position:static; margin:8px; font-size:14.5px; padding:12px 22px; } .am-get-started-sec { display:flex; flex-direction:column; align-items:center; } }
 
 
- }
+
 
 
 /* ROUTE SEARCH MODAL 2-COLUMN PERFECT ALIGNMENT */
@@ -630,31 +630,13 @@
 .lmt-tab.on { background:#0f172a; color:#ffffff; border-color:#0f172a; box-shadow:0 6px 18px rgba(15,23,42,0.25); }
 .lmt-tab svg { stroke:currentColor; }
 
- .acsm-card.featured-hero { grid-column:span 1; } }
+@media (max-width: 991px) { .acsm-card.featured-hero { grid-column:span 1; } }
 
 /* 04. ULTRA TIGHTLY CENTERED PILLS (33~35% SUPER CLOSE TO CENTER) */
 .ags-floating-pill { position:absolute; z-index:4; display:inline-flex; align-items:center; gap:11px; padding:15px 30px; background:rgba(10,25,52,0.96); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:2px solid rgba(255, 255, 255, 0.45); border-radius:100px; color:#ffffff; font-size:16.5px; font-weight:900; letter-spacing:-0.3px; box-shadow:0 14px 36px rgba(0,0,0,0.5), 0 0 24px rgba(255, 255, 255, 0.25); transition:all 0.3s ease; text-shadow:0 1px 3px rgba(0,0,0,0.6); }
 .pill-top-left { top:11%; left:33%; animation:vibrantFloatA 2.5s ease-in-out infinite; }
 .pill-top-right { top:11%; right:33%; animation:vibrantFloatB 2.7s ease-in-out infinite; }
 .pill-bottom-left { bottom:13%; left:35%; animation:vibrantFloatB 2.4s ease-in-out infinite; }
-.pill-bottom-right { bottom:13%; right:35%; animation:vibrantFloatA 2.6s ease-in-out infinite; }
-@media(max-width:1600px) { .pill-top-left { left:26%; } .pill-top-right { right:26%; } .pill-bottom-left { left:28%; } .pill-bottom-right { right:28%; } }
-@media(max-width:1200px) { .pill-top-left { left:15%; } .pill-top-right { right:15%; } .pill-bottom-left { left:17%; } .pill-bottom-right { right:17%; } }
-@media(max-width:991px) { .ags-floating-pill { position:static; margin:8px; font-size:14.5px; padding:12px 22px; } .am-get-started-sec { display:flex; flex-direction:column; align-items:center; } }
-
-
- .adp-tile-featured { grid-column:span 1; } .adp-tile-featured .adp-thumb-box { height:290px; } }
-
-
- .adp-tile-featured { grid-column:span 1; } .adp-tile-featured .adp-thumb-box { height:290px; } }
-
-
- .ais-photo-frame { height:320px; } .ais-sticky-box { position:static; } }
-
-
-/* NATURAL AGENCY BUS SHOWCASE STAGE */
-.am-bus-human-showcase { background:#ffffff; border-radius:24px; border:1px solid #e2e8f0; box-shadow:0 16px 45px rgba(15,23,42,0.06); padding:32px; margin-bottom:36px; }
-.abh-tabs-row { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px; padding-bottom:20px; border-bottom:1px solid #f1f5f9; }
 .abh-tab-btn { padding:12px 24px; border-radius:100px; border:1.5px solid #e2e8f0; background:#f8fafc; color:#475569; font-size:14px; font-weight:800; cursor:pointer; transition:all 0.25s ease; }
 .abh-tab-btn:hover { border-color:#1855b7; color:#1855b7; background:#ffffff; }
 .abh-tab-btn.on { background:linear-gradient(135deg, #1855b7 0%, #1855b7 100%); color:#ffffff; border-color:#1855b7; box-shadow:0 8px 20px rgba(24,85,183,0.3); }
@@ -673,21 +655,6 @@
 .apl-label { color:#64748b; font-weight:800; }
 .apl-val { color:#0f172a; font-weight:900; }
 .abh-cta-btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:15px; background:#1855b7; color:#ffffff; font-size:14.5px; font-weight:900; border-radius:14px; text-decoration:none; transition:all 0.3s ease; box-shadow:0 8px 20px rgba(24,85,183,0.25); }
-.abh-cta-btn:hover { background:#0f3f8c; transform:translateY(-2px); box-shadow:0 12px 28px rgba(24,85,183,0.35); }
-@media(max-width:991px) { .abh-stage-body { grid-template-columns:1fr; } .abh-photo-box { height:280px; } }
-
- }
-
-
- .amp-down-btn { width:100%; justify-content:center; } }
-
-
- .ldb-btn { width:100%; justify-content:center; } }
-
-
-/* MODAL IN-TAB PDF DOWNLOAD BANNER */
-.lmg-download-banner { background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius:16px; padding:18px 22px; margin-bottom:24px; display:flex; justify-content:space-between; align-items:center; border:1px solid #334155; box-shadow:0 10px 25px rgba(15,23,42,0.15); gap:16px; }
-.ldb-info { display:flex; flex-direction:column; gap:4px; }
 .ldb-badge { font-size:10.5px; font-weight:900; color:#ffffff; background:rgba(255, 255, 255, 0.15); border:1px solid rgba(255, 255, 255, 0.3); padding:3px 10px; border-radius:100px; width:max-content; letter-spacing:0.04em; }
 .ldb-title { font-size:16.5px; font-weight:900; color:#ffffff; letter-spacing:-0.4px; }
 .ldb-meta { font-size:12.5px; color:#94a3b8; }
@@ -806,6 +773,7 @@ body.modal-lock { overflow:hidden !important; }
 }
 
 
+@media (max-width: 991px) {
   .rsm-head, .rsm-body, .rsm-foot { padding-left:18px; padding-right:18px; }
   .rsm-panel { max-height:96vh; border-radius:18px; }
   .rsm-directory-list { grid-template-columns:1fr; }
@@ -847,6 +815,7 @@ body.modal-lock { overflow:hidden !important; }
 
 
 
+@media (max-width: 991px) {
   .am-live-search-sim-stage { padding:24px; }
   .alss-phone-mockup { width:100%; max-width:380px; }
   .alss-action-box { flex-direction:column; align-items:flex-start; }
@@ -854,6 +823,7 @@ body.modal-lock { overflow:hidden !important; }
 
 
 
+@media (max-width: 991px) {
   .am-hospital-blog-sim-stage { padding:24px; }
   .ahbs-blog-mockup { width:100%; max-width:440px; }
 }

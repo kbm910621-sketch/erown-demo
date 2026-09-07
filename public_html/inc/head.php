@@ -77,7 +77,7 @@ $key_desc = $row['key_ch5'];
 <link type="text/css" rel="stylesheet" href="/css/layout.css?v=<?php echo time();?>">
 <link type="text/css" rel="stylesheet" href="/css/board.css?v=<?php echo time();?>">
 <link type="text/css" rel="stylesheet" href="/css/member.css?v=<?php echo time();?>">
-<link type="text/css" rel="stylesheet" href="/css/main.css?v=1788746493484<?php echo time();?>">
+<link type="text/css" rel="stylesheet" href="/css/main.css?v=1788747461046<?php echo time();?>">
 <link type="text/css" rel="stylesheet" href="/css/contents.css?v=<?php echo time();?>">
 <link type="text/css" rel="stylesheet" href="/css/jquery-ui.css">
 <link type="text/css" rel="stylesheet" href="/css/animate.css">
@@ -93,7 +93,7 @@ $key_desc = $row['key_ch5'];
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <!-- Site Scripts Loaded After Libs -->
-<script src="/js/design.js?v=1788746493484<?php echo time();?>"></script>
+<script src="/js/design.js?v=1788747461046<?php echo time();?>"></script>
 <script src="/js/checkform.js"></script>
 
 <title><?php echo $page_title?></title>
