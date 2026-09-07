@@ -584,16 +584,16 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="som-layout-stage wow fadeInUp" data-wow-duration="0.8s">
         
         <!-- PC ONLY: BIG SUBTLE ENGLISH TYPOGRAPHY WATERMARK (위/아래 3단 영문 워터마크) -->
-        <!-- LEFT: 3-TIER EDITORIAL (TOP ENGLISH + MID KOREAN TITLE + BOTTOM CUSTOM TAG CLOUD) -->
+        <!-- LEFT: BIG ENGLISH EDITORIAL TOP + KOREAN CONTENT & GUIDE BUTTON & TAG CLOUD -->
         <div class="som-left-content">
           
-          <!-- TOP: PROMINENT EDITORIAL ENGLISH HEADLINE (PC ONLY) -->
+          <!-- TOP: BIG PROMINENT EDITORIAL ENGLISH TYPOGRAPHY (PC ONLY) -->
           <div class="som-top-editorial pc_only">
             <span class="ste-slogan">INTEGRATED DIGITAL PERFORMANCE &amp; GROWTH</span>
             <h3 class="ste-eng-title">DATA-DRIVEN<br>DIGITAL AGENCY</h3>
           </div>
 
-          <!-- MID: CORE KOREAN TITLE, DESCRIPTION & INTERACTIVE GUIDE BUTTON -->
+          <!-- MID: CORE KOREAN TITLE, DESCRIPTION, GUIDE BUTTON & DIRECT TAG CLOUD -->
           <div class="som-mid-group">
             <div class="som-title-wrap">
               <span class="ash-kicker">02 / DIGITAL MARKETING</span>
@@ -607,11 +607,9 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <button type="button" class="som-guide-btn bus-guide-open" data-guide="guideOnline">
               <span class="sgb-txt">온라인 채널 가이드</span>
             </button>
-          </div>
 
-          <!-- BOTTOM: CUSTOM GAON-N BRANDED KEYWORD TAG CLOUD (PC ONLY) -->
-          <div class="som-bottom-tags pc_only" aria-label="온라인 마케팅 핵심 키워드">
-            <div class="som-tag-cloud">
+            <!-- PC ONLY: CUSTOM BRANDED KEYWORD TAG CLOUD (채널 가이드 바로 아래 배치) -->
+            <div class="som-tag-cloud pc_only" aria-label="온라인 마케팅 핵심 키워드">
               <span class="stc-item stc-highlight">스마트플레이스<i class="stc-dot"></i></span>
               <span class="stc-item stc-sub">스마트블록</span>
               <span class="stc-item stc-highlight">C-Rank 블로그<i class="stc-dot"></i></span>

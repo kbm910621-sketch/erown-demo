@@ -7286,16 +7286,16 @@ body.menu-open {
 
 
 /* ==========================================================================
-   ONLINE MARKETING: TOP ENGLISH TYPOGRAPHY & BOTTOM GAON-N CUSTOM TAG CLOUD
+   ONLINE MARKETING: BIG TOP ENGLISH TYPOGRAPHY & UNDER-BUTTON TAG CLOUD
 ========================================================================== */
 .som-top-editorial {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .ste-slogan {
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 800;
   letter-spacing: 0.16em;
   color: #1855b7;
@@ -7303,34 +7303,29 @@ body.menu-open {
   font-family: "Pretendard", "Montserrat", sans-serif;
 }
 
+/* 상단 큰 영어 타이포 (시원하고 볼드한 대형 타이포그래피) */
 .ste-eng-title {
-  font-size: 32px;
+  font-size: 44px;
   font-weight: 900;
-  line-height: 1.15;
-  letter-spacing: -0.8px;
+  line-height: 1.06;
+  letter-spacing: -1.5px;
   color: #0f172a;
   text-transform: uppercase;
   margin: 0;
   font-family: "Pretendard", "Montserrat", sans-serif;
 }
 
-/* BOTTOM CUSTOM BRANDED TAG CLOUD (가온엔 맞춤 컬러 & 자연스러운 마우스 호버 인터랙션) */
-.som-bottom-tags {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
-}
-
+/* 채널 가이드 바로 아래에 위치하는 맞춤형 태그 클라우드 */
 .som-tag-cloud {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 9px 12px;
-  max-width: 390px;
+  max-width: 400px;
   line-height: 1.65;
-  padding: 18px 0 0;
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(15, 23, 42, 0.09);
 }
 
 .stc-item {
@@ -7396,8 +7391,8 @@ body.menu-open {
 @media (min-width: 992px) {
   .som-layout-stage {
     display: grid !important;
-    grid-template-columns: 400px 746px !important;
-    gap: 50px !important;
+    grid-template-columns: 410px 746px !important;
+    gap: 40px !important;
     align-items: stretch !important;
     justify-content: space-between !important;
     min-height: 1166px !important;
@@ -7409,7 +7404,7 @@ body.menu-open {
     justify-content: space-between !important;
     height: 100% !important;
     min-height: 1166px !important;
-    padding: 10px 0 !important;
+    padding: 10px 0 20px !important;
     box-sizing: border-box !important;
     position: relative !important;
     z-index: 2 !important;
@@ -7418,9 +7413,9 @@ body.menu-open {
   .som-mid-group {
     display: flex !important;
     flex-direction: column !important;
-    gap: 18px !important;
-    margin: auto 0 !important;
-    padding: 20px 0 !important;
+    gap: 16px !important;
+    margin: auto 0 0 !important; /* 상단 대형 타이포 아래로 넉넉하고 안정적인 밸런스 */
+    padding: 0 !important;
   }
 
   .som-title-wrap {
@@ -7478,7 +7473,7 @@ body.menu-open {
   .som-top-editorial {
     display: none !important;
   }
-  .som-bottom-tags {
+  .som-tag-cloud {
     display: none !important;
   }
   .som-mid-group {
