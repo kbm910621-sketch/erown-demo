@@ -693,6 +693,17 @@ $(function() {
     $banner.removeClass('mst-on');
     void $banner[0].offsetWidth;
     $banner.addClass('mst-on');
+    
+    // mosNavListScrollCenter: 모바일 가로 스와이프 선택 시 해당 칩이 화면 중앙에 오도록 스크롤
+    if (window.innerWidth <= 991) {
+      var navListEl = document.getElementById('mosNavList');
+      if (navListEl && $this[0]) {
+        var itemLeft = $this[0].offsetLeft;
+        var itemWidth = $this[0].offsetWidth;
+        var listWidth = navListEl.offsetWidth;
+        navListEl.scrollTo({ left: itemLeft - (listWidth / 2) + (itemWidth / 2), behavior: 'smooth' });
+      }
+    }
   });
 
 
