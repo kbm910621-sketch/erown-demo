@@ -584,27 +584,37 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <div class="som-layout-stage wow fadeInUp" data-wow-duration="0.8s">
         
         <!-- PC ONLY: BIG SUBTLE ENGLISH TYPOGRAPHY WATERMARK (위/아래 3단 영문 워터마크) -->
-        <div class="som-pc-watermark" aria-hidden="true">
-          <span>PERFORMANCE</span>
-          <span>DIGITAL</span>
-          <span>MARKETING</span>
-        </div>
-        
-        <!-- LEFT: CLEAN EDITORIAL BRAND HEADLINE & CONCISE BUTTON -->
+                <!-- LEFT: 3-TIER EDITORIAL STRUCTURE (TOP ENGLISH + MID KOREAN + BOTTOM ENGLISH) -->
         <div class="som-left-content">
-          <div class="som-title-wrap">
-            <span class="som-top-eng-label pc_only">INTEGRATED CREATIVE &amp; DIGITAL PERFORMANCE</span>
-            <span class="ash-kicker">02 / DIGITAL MARKETING</span>
-            <h2 class="ash-title">온라인 마케팅</h2>
+          
+          <!-- TOP: PROMINENT EDITORIAL ENGLISH HEADLINE (PC ONLY) -->
+          <div class="som-top-editorial pc_only">
+            <span class="ste-slogan">INTEGRATED DIGITAL PERFORMANCE &amp; GROWTH</span>
+            <h3 class="ste-eng-title">DATA-DRIVEN<br>DIGITAL AGENCY</h3>
           </div>
 
-          <p class="som-desc">
-            네이버 스마트플레이스 1위 세팅부터 C-Rank 브랜드 블로그, 맘카페 바이럴, 인스타그램 스폰서 광고까지 가온엔 본사 인하우스 전문팀이 직접 운영합니다.
-          </p>
+          <!-- MID: CORE KOREAN TITLE, DESCRIPTION & INTERACTIVE GUIDE BUTTON -->
+          <div class="som-mid-group">
+            <div class="som-title-wrap">
+              <span class="ash-kicker">02 / DIGITAL MARKETING</span>
+              <h2 class="ash-title">온라인 마케팅</h2>
+            </div>
 
-          <button type="button" class="som-guide-btn bus-guide-open" data-guide="guideOnline">
-            <span class="sgb-txt">온라인 채널 가이드</span>
-          </button>
+            <p class="som-desc">
+              네이버 스마트플레이스 1위 세팅부터 C-Rank 브랜드 블로그, 맘카페 바이럴, 인스타그램 스폰서 광고까지 가온엔 본사 인하우스 전문팀이 직접 운영합니다.
+            </p>
+
+            <button type="button" class="som-guide-btn bus-guide-open" data-guide="guideOnline">
+              <span class="sgb-txt">온라인 채널 가이드</span>
+            </button>
+          </div>
+
+          <!-- BOTTOM: SUBTLE BIG ENGLISH WATERMARK & SERVICE KEYWORDS (PC ONLY) -->
+          <div class="som-bottom-editorial pc_only">
+            <div class="sbe-watermark">DIGITAL<br>MARKETING</div>
+            <div class="sbe-subtext">SEO · BRAND BLOG · VIRAL · SOCIAL ADS</div>
+          </div>
+
         </div>
 
         <!-- RIGHT: DUAL VERTICAL MARQUEE STREAMS (8 HIGH-RES TOPIC MATCHED IMAGES) -->

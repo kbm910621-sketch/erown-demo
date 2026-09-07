@@ -7409,3 +7409,158 @@ body.menu-open {
     display: none !important;
   }
 }
+
+/* ==========================================================================
+   ONLINE MARKETING: TOP/BOTTOM ENGLISH TYPOGRAPHY & 3-TIER VERTICAL BALANCE
+========================================================================== */
+.som-top-editorial {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ste-slogan {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #1855b7;
+  text-transform: uppercase;
+  font-family: "Pretendard", "Montserrat", sans-serif;
+}
+
+.ste-eng-title {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  color: #0f172a;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: "Pretendard", "Montserrat", sans-serif;
+}
+
+.som-bottom-editorial {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.sbe-watermark {
+  font-size: 68px;
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -2px;
+  color: rgba(15, 23, 42, 0.04);
+  -webkit-text-stroke: 1.5px rgba(15, 23, 42, 0.08);
+  text-transform: uppercase;
+  user-select: none;
+  font-family: "Pretendard", "Montserrat", sans-serif;
+}
+
+.sbe-subtext {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: #64748b;
+  text-transform: uppercase;
+  font-family: "Pretendard", "Montserrat", sans-serif;
+}
+
+@media (min-width: 992px) {
+  .som-layout-stage {
+    display: grid !important;
+    grid-template-columns: 400px 746px !important;
+    gap: 50px !important;
+    align-items: stretch !important;
+    justify-content: space-between !important;
+    min-height: 1166px !important;
+  }
+
+  .som-left-content {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    min-height: 1166px !important;
+    padding: 10px 0 !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .som-mid-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    margin: auto 0 !important;
+    padding: 20px 0 !important;
+  }
+
+  .som-title-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+
+  .som-desc {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+    color: #475569 !important;
+    margin: 0 !important;
+  }
+
+  .som-right-stream-wrap {
+    display: grid !important;
+    grid-template-columns: 360px 360px !important;
+    gap: 26px !important;
+    width: 746px !important;
+    max-width: 100% !important;
+    height: 1166px !important; /* 570px * 2 + 26px */
+    overflow: hidden !important;
+    position: relative !important;
+    margin-left: auto !important;
+    z-index: 2 !important;
+  }
+
+  .som-stream-card {
+    position: relative !important;
+    width: 360px !important;
+    height: 570px !important;
+    min-height: 570px !important;
+    max-height: 570px !important;
+    border-radius: 28px !important;
+    overflow: hidden !important;
+    background: #0f172a !important;
+    box-shadow: 0 16px 42px rgba(15, 23, 42, 0.1) !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .som-stream-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .som-top-editorial {
+    display: none !important;
+  }
+  .som-bottom-editorial {
+    display: none !important;
+  }
+  .som-mid-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
