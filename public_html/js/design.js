@@ -955,4 +955,50 @@ $(function() {
         $form[0].reset();
       }
     });
-  });
+  
+  /* ==========================================================================
+     ONLINE MARKETING: BULLETPROOF HARDWARE-ACCELERATED STICKY ENGINE (PC ONLY)
+  ========================================================================== */
+  function updateStickyOnline() {
+    if (window.innerWidth <= 991) {
+      var elem = document.querySelector('.som-left-content');
+      if (elem) elem.style.transform = '';
+      return;
+    }
+    var stage = document.querySelector('.som-layout-stage');
+    var leftContent = document.querySelector('.som-left-content');
+    if (!stage || !leftContent) return;
+
+    var rect = stage.getBoundingClientRect();
+    var topOffset = 100; // Viewport top offset (header clearance)
+    var maxScroll = stage.offsetHeight - leftContent.offsetHeight;
+
+    if (maxScroll <= 0) {
+      leftContent.style.transform = 'translate3d(0, 0, 0)';
+      return;
+    }
+
+    if (rect.top <= topOffset) {
+      var diff = topOffset - rect.top;
+      var translateY = Math.min(Math.max(0, diff), maxScroll);
+      leftContent.style.transform = 'translate3d(0, ' + translateY + 'px, 0)';
+    } else {
+      leftContent.style.transform = 'translate3d(0, 0, 0)';
+    }
+  }
+
+  // Hook all scroll & resize events
+  window.addEventListener('scroll', updateStickyOnline, { passive: true });
+  window.addEventListener('resize', updateStickyOnline, { passive: true });
+  
+  if (typeof lenis !== 'undefined' && lenis) {
+    lenis.on('scroll', updateStickyOnline);
+  }
+
+  function stickyRafLoop() {
+    updateStickyOnline();
+    requestAnimationFrame(stickyRafLoop);
+  }
+  requestAnimationFrame(stickyRafLoop);
+
+});
