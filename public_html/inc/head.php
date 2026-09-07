@@ -71,7 +71,14 @@ $key_desc = $row['key_ch5'];
 <meta property="og:image" content="<?php echo $key_img?>">
 <meta property="og:url" content="<?php echo $key_url?>">
 
-<link type="text/css" rel="stylesheet" href="/css/import.css?v=<?php echo time();?>">
+<!-- DIRECT CSS INCLUDES WITH TIMESTAMP CACHE BUSTER (브라우저 캐시 완벽 방지) -->
+<link type="text/css" rel="stylesheet" href="/css/reset.css?v=<?php echo time();?>">
+<link type="text/css" rel="stylesheet" href="/css/common.css?v=<?php echo time();?>">
+<link type="text/css" rel="stylesheet" href="/css/layout.css?v=<?php echo time();?>">
+<link type="text/css" rel="stylesheet" href="/css/board.css?v=<?php echo time();?>">
+<link type="text/css" rel="stylesheet" href="/css/member.css?v=<?php echo time();?>">
+<link type="text/css" rel="stylesheet" href="/css/main.css?v=<?php echo time();?>">
+<link type="text/css" rel="stylesheet" href="/css/contents.css?v=<?php echo time();?>">
 <link type="text/css" rel="stylesheet" href="/css/jquery-ui.css">
 <link type="text/css" rel="stylesheet" href="/css/animate.css">
 <script src="/js/jquery-1.12.4.js"></script>
