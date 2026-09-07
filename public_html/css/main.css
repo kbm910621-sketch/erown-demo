@@ -6895,36 +6895,77 @@ body.menu-open {
 }
 
 
+
 /* ==========================================================================
-   1. MOBILE OOH SWIPEABLE PILL STRIP (모바일에서 오른쪽으로 시원하게 밀어서 선택)
+   1. MOBILE OOH FLOATING CONTROL BOX (추천 1번+2번 라운드 플로팅 컨트롤러 & 뱃지 애니메이션)
 ========================================================================== */
 @media (max-width: 991px) {
   .mos-stage-layout {
     display: flex !important;
     flex-direction: column !important;
-    gap: 20px !important;
+    gap: 16px !important;
   }
 
+  /* 둥근 아이스 블루 플로팅 컨트롤 박스 */
   .mos-nav-col {
     width: 100% !important;
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    height: auto !important;
-    overflow: visible !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    background: #f1f6ff !important; /* 은은한 가온엔 아이스 블루 틴트 */
+    border: 1.5px solid #dbeafe !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 24px rgba(24, 85, 183, 0.08) !important;
+    padding: 14px 14px 10px !important;
+    margin: 0 0 10px 0 !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   .mos-mobile-scroll-cue {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    padding: 0 4px 8px !important;
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    color: #64748b !important;
+    padding: 0 4px 10px !important;
+    margin-bottom: 4px !important;
+    border-bottom: 1px solid rgba(24, 85, 183, 0.12) !important;
+  }
+
+  .mmsc-txt {
+    font-size: 13.5px !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif !important;
+  }
+
+  .mmsc-txt::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #1855b7;
+    display: inline-block;
+  }
+
+  .mmsc-cue {
+    font-size: 11.5px !important;
+    font-weight: 800 !important;
+    color: #1855b7 !important;
+    background: #ffffff !important;
+    padding: 3px 10px !important;
+    border-radius: 100px !important;
+    border: 1px solid #bfdbfe !important;
+    box-shadow: 0 2px 6px rgba(24, 85, 183, 0.08) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    animation: swipeCueAnim 2s infinite ease-in-out !important;
+  }
+
+  @keyframes swipeCueAnim {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
   }
 
   .mos-nav-list {
@@ -6936,7 +6977,7 @@ body.menu-open {
     scroll-snap-type: x mandatory !important;
     scrollbar-width: none !important;
     gap: 8px !important;
-    padding: 4px 2px 14px !important;
+    padding: 8px 2px 6px !important;
     margin: 0 !important;
     height: auto !important;
     width: 100% !important;
@@ -6959,15 +7000,15 @@ body.menu-open {
     border-radius: 100px !important;
     border: 1.5px solid #cbd5e1 !important;
     background: #ffffff !important;
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06) !important;
     white-space: nowrap !important;
     cursor: pointer !important;
-    transition: all 0.2s ease !important;
+    transition: all 0.22s ease !important;
   }
 
   .mos-nav-item .mni-txt {
     font-size: 13.5px !important;
-    font-weight: 700 !important;
+    font-weight: 800 !important;
     color: #334155 !important;
     white-space: nowrap !important;
   }
@@ -6979,7 +7020,8 @@ body.menu-open {
   .mos-nav-item.on {
     background: #1855b7 !important;
     border-color: #1855b7 !important;
-    box-shadow: 0 4px 14px rgba(24, 85, 183, 0.3) !important;
+    box-shadow: 0 6px 18px rgba(24, 85, 183, 0.35) !important;
+    transform: translateY(-2px) !important;
   }
 
   .mos-nav-item.on .mni-txt {
