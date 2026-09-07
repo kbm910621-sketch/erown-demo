@@ -76,19 +76,18 @@ $key_desc = $row['key_ch5'];
 <link type="text/css" rel="stylesheet" href="/css/animate.css">
 <script src="/js/jquery-1.12.4.js"></script>
 <script src="/js/jquery-ui.js"></script>
-<script src="/js/design.js?v=<?php echo time();?>"></script>
-<script src="/js/checkform.js"></script>
 <script src="/js/wow.min.js"></script>
 <script src="/js/jquery.bxslider.js"></script>
-<!-- <link rel="shortcut icon" href="/images/ge.ico" type="image/x-icon"> -->
+<!-- 3rd-party Libs Loaded First -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<!-- Site Scripts Loaded After Libs -->
+<script src="/js/design.js?v=<?php echo time();?>"></script>
+<script src="/js/checkform.js"></script>
 
 <title><?php echo $page_title?></title>
 
