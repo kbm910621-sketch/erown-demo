@@ -1753,270 +1753,70 @@ body.modal-lock { overflow:hidden !important; }
 
 
 /* ==========================================================================
-   TALL PORTRAIT SEALNPACK CARDS WITH HOVER DARK DETAIL & SEAMLESS 50% LOOP
+   02. DIGITAL MARKETING SECTION (PC BASE & 100% STICKY PINNING)
 ========================================================================== */
-.som-layout-stage {
-  display: grid;
-  grid-template-columns: 440px 1fr;
-  gap: 80px;
-  align-items: center;
-  padding: 40px 0;
-}
+#online { position:relative; overflow:visible; padding:80px 0 120px; background:#ffffff; }
+#online .am-container { position:relative; overflow:visible; }
+.som-layout-stage { display:flex; justify-content:space-between; align-items:flex-start; position:relative; overflow:visible; min-height:1400px; width:100%; }
+.som-left-content { position:-webkit-sticky; position:sticky; top:110px; align-self:flex-start; display:flex; flex-direction:column; gap:20px; width:440px; max-width:440px; flex-shrink:0; box-sizing:border-box; z-index:20; }
+.som-title-wrap { display:flex; flex-direction:column; gap:6px; }
+.som-desc { font-size:16px; line-height:1.75; color:#475569; margin:0; font-weight:500; word-break:keep-all; }
+.som-guide-btn { display:inline-flex; align-items:center; background:none; border:0; padding:0; cursor:pointer; margin-top:6px; width:max-content; }
+.som-guide-btn .sgb-txt { display:inline-flex; align-items:center; padding:14px 34px; border-radius:100px; border:1.5px solid #0f172a; background:#ffffff; color:#0f172a; font-size:15px; font-weight:800; transition:all 0.25s ease; box-shadow:0 4px 14px rgba(15,23,42,0.04); }
+.som-guide-btn:hover .sgb-txt { background:#0f172a; color:#ffffff; transform:translateY(-2px); box-shadow:0 8px 20px rgba(15,23,42,0.15); }
+.som-tag-cloud { display:flex; flex-wrap:wrap; align-items:baseline; gap:12px 16px; max-width:440px; line-height:1.65; margin-top:14px; padding-top:20px; border-top:1px solid rgba(15,23,42,0.09); }
+.stc-item { display:inline-flex; align-items:center; gap:5px; white-space:nowrap; transition:all 0.25s cubic-bezier(0.16,1,0.3,1); user-select:none; cursor:pointer; }
+.stc-item.stc-highlight { font-size:19px; font-weight:900; color:#0f172a; letter-spacing:-0.4px; font-family:"Pretendard", sans-serif; }
+.stc-dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:#1855b7; margin-left:3px; flex-shrink:0; box-shadow:0 0 6px rgba(24,85,183,0.5); transition:all 0.25s ease; }
+.stc-item.stc-sub { font-size:15.5px; font-weight:700; color:#8492a6; letter-spacing:-0.25px; font-family:"Pretendard", sans-serif; }
+.stc-item:hover { transform:translateY(-2px) scale(1.05); }
+.stc-item.stc-highlight:hover { color:#1855b7; }
+.stc-item.stc-highlight:hover .stc-dot { background:#00d2ff; box-shadow:0 0 8px rgba(0,210,255,0.8); transform:scale(1.25); }
+.stc-item.stc-sub:hover { color:#0f172a; font-weight:800; }
+.som-right-stream-wrap { display:grid; grid-template-columns:360px 360px; gap:26px; width:746px; max-width:100%; height:1400px; overflow:hidden; position:relative; margin-left:auto; margin-top:0; flex-shrink:0; z-index:2; }
+.som-stream-col { overflow:hidden; position:relative; height:100%; }
+.som-stream-track { display:flex; flex-direction:column; gap:26px; will-change:transform; }
+.track-1 { animation:somStreamFlow1 26s linear infinite; }
+.track-2 { animation:somStreamFlow2 32s linear infinite; animation-delay:-8s; }
+.som-right-stream-wrap:hover .som-stream-track { animation-play-state:paused; }
+.som-stream-card { position:relative; width:360px; height:500px; min-height:500px; max-height:500px; border-radius:26px; overflow:hidden; background:#0f172a; box-shadow:0 16px 40px rgba(15,23,42,0.1); cursor:pointer; flex-shrink:0; box-sizing:border-box; transition:all 0.4s cubic-bezier(0.16,1,0.3,1); }
+.som-stream-card img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; transition:transform 0.6s ease; }
+.som-card-scrim { position:absolute; inset:0; background:linear-gradient(to top, rgba(10,20,45,0.9) 0%, rgba(10,20,45,0.3) 50%, transparent 100%); transition:opacity 0.3s ease; pointer-events:none; }
+.som-default-txt { position:absolute; bottom:24px; left:24px; right:24px; display:flex; flex-direction:column; gap:5px; z-index:2; transition:opacity 0.3s ease, transform 0.3s ease; }
+.sct-kicker { font-size:12px; font-weight:800; color:#ffffff; letter-spacing:0.05em; text-transform:uppercase; }
+.sct-title { font-size:18px; font-weight:800; color:#ffffff; line-height:1.35; margin:0; letter-spacing:-0.4px; text-shadow:0 2px 8px rgba(0,0,0,0.6); }
+.som-hover-detail { position:absolute; inset:0; background:rgba(8,18,42,0.94); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); padding:34px 28px; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; gap:12px; z-index:3; opacity:0; visibility:hidden; transform:translateY(10px); transition:all 0.35s cubic-bezier(0.16,1,0.3,1); box-sizing:border-box; }
+.som-stream-card:hover .som-hover-detail { opacity:1; visibility:visible; transform:translateY(0); }
+.som-stream-card:hover .som-default-txt { opacity:0; }
+.som-stream-card:hover img { transform:scale(1.08); }
+.shd-kicker { font-size:11.5px; font-weight:800; color:#ffffff; letter-spacing:0.08em; text-transform:uppercase; background:rgba(255,255,255,0.12); padding:4px 10px; border-radius:6px; }
+.shd-title { font-size:19px; font-weight:900; color:#ffffff; line-height:1.3; margin:0; }
+.shd-desc { font-size:13.5px; color:#cbd5e1; line-height:1.55; margin:0; }
+.shd-tag { font-size:11.5px; font-weight:800; color:#93c5fd; background:rgba(147,197,253,0.12); padding:4px 10px; border-radius:6px; border:1px solid rgba(147,197,253,0.25); }
 
-/* LEFT EDITORIAL CONTENT */
-.som-left-content {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
+@keyframes somStreamFlow1 { 0% { transform:translateY(0); } 100% { transform:translateY(-50%); } }
+@keyframes somStreamFlow2 { 0% { transform:translateY(0); } 100% { transform:translateY(-50%); } }
 
-.som-title-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+/* ==========================================================================
+   02. DIGITAL MARKETING SECTION (MOBILE 2-COLUMN FULL-WIDTH GRID)
+========================================================================== */
+@media (max-width: 991px) {
+  #online { width:100%; overflow:hidden; padding:40px 0 60px; }
+  #online .am-container { width:100%; max-width:100%; padding:0 16px; margin:0 auto; box-sizing:border-box; }
+  .som-layout-stage { display:flex; flex-direction:column; gap:24px; width:100%; max-width:100%; margin:0; padding:0; min-height:auto; box-sizing:border-box; }
+  .som-left-content { position:static; width:100%; max-width:100%; display:flex; flex-direction:column; gap:16px; margin:0; padding:0; }
+  .som-tag-cloud { display:none; }
+  .som-right-stream-wrap { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:12px; width:100%; max-width:100%; min-width:0; height:auto; overflow:visible; margin:0; padding:0; box-sizing:border-box; }
+  .som-stream-col { display:flex; flex-direction:column; width:100%; max-width:100%; min-width:0; height:auto; overflow:visible; box-sizing:border-box; }
+  .som-stream-track { animation:none; transform:none; display:flex; flex-direction:column; gap:12px; width:100%; max-width:100%; min-width:0; box-sizing:border-box; }
+  .som-stream-card.som-clone-card { display:none; }
+  .som-stream-card { position:relative; width:100%; max-width:100%; min-width:0; height:230px; min-height:230px; max-height:230px; border-radius:16px; overflow:hidden; background:#0f172a; box-shadow:0 4px 16px rgba(15,23,42,0.08); cursor:pointer; box-sizing:border-box; }
+  .som-stream-card img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+  .som-card-scrim { background:linear-gradient(to top, rgba(10,20,45,0.94) 0%, rgba(10,20,45,0.4) 60%, transparent 100%); }
+  .som-default-txt { position:absolute; bottom:12px; left:12px; right:12px; display:flex; flex-direction:column; gap:3px; box-sizing:border-box; }
+  .sct-kicker { font-size:10px; font-weight:800; letter-spacing:0.04em; color:#ffffff; opacity:0.9; text-transform:uppercase; }
+  .sct-title { font-size:13.5px; font-weight:800; line-height:1.25; letter-spacing:-0.3px; color:#ffffff; word-break:keep-all; }
 }
-
-.som-desc {
-  font-size: 16.5px;
-  line-height: 1.75;
-  color: #475569;
-  margin: 0;
-  font-weight: 500;
-  word-break: keep-all;
-}
-
-/* CLEAN GUIDE BUTTON (NO EXTRA ARROW) */
-.som-guide-btn {
-  display: inline-flex;
-  align-items: center;
-  background: none;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-  margin-top: 10px;
-  width: max-content;
-}
-
-.sgb-txt {
-  display: inline-flex;
-  align-items: center;
-  padding: 14px 34px;
-  border-radius: 100px;
-  border: 1.5px solid #0f172a;
-  background: #ffffff;
-  color: #0f172a;
-  font-size: 15.5px;
-  font-weight: 800;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
-}
-
-.som-guide-btn:hover .sgb-txt {
-  background: #0f172a;
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
-}
-
-/* RIGHT TALL STREAM (NO BLUR MASK / FULL CRISP DISPLAY) */
-.som-right-stream-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 26px;
-  height: 800px; /* TALL HEIGHT FOR PORTRAIT CARDS */
-  overflow: hidden;
-  position: relative;
-  /* NO MASK-IMAGE */
-}
-
-.som-stream-col {
-  overflow: hidden;
-  position: relative;
-  height: 100%;
-}
-
-.som-stream-track {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-  will-change: transform;
-}
-
-/* SEAMLESS 50% SCROLL - ZERO JITTER */
-.track-1 {
-  animation: somStreamFlow1 26s linear infinite;
-}
-
-.track-2 {
-  animation: somStreamFlow2 32s linear infinite;
-  animation-delay: -8s; /* NATURAL STAGGERED OFFSET */
-}
-
-.som-right-stream-wrap:hover .som-stream-track {
-  animation-play-state: paused;
-}
-
-/* TALL PORTRAIT CARD (HEIGHT: 380PX) */
-.som-stream-card {
-  position: relative;
-  width: 100%;
-  height: 380px; /* TALL PORTRAIT CARD */
-  border-radius: 28px;
-  overflow: hidden;
-  background: #0f172a;
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  flex-shrink: 0;
-}
-
-.som-stream-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.som-card-scrim {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(10, 20, 45, 0.9) 0%, rgba(10, 20, 45, 0.3) 50%, transparent 100%);
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-/* DEFAULT TEXT AT BOTTOM */
-.som-default-txt {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  right: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  z-index: 2;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.sct-kicker {
-  font-size: 12px;
-  font-weight: 800;
-  color: #ffffff;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.sct-title {
-  font-size: 18px;
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1.35;
-  margin: 0;
-  letter-spacing: -0.4px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-/* HOVER DARK OVERLAY & DETAILED DESCRIPTION (마우스 진입 시 어두워지며 상세 설명 노출) */
-.som-hover-detail {
-  position: absolute;
-  inset: 0;
-  background: rgba(8, 18, 42, 0.94);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 34px 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 12px;
-  z-index: 3;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  box-sizing: border-box;
-}
-
-.som-stream-card:hover .som-hover-detail {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.som-stream-card:hover .som-default-txt {
-  opacity: 0;
-}
-
-.som-stream-card:hover img {
-  transform: scale(1.08);
-}
-
-.shd-kicker {
-  font-size: 11.5px;
-  font-weight: 800;
-  color: #ffffff;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 4px 10px;
-  border-radius: 6px;
-}
-
-.shd-title {
-  font-size: 19px;
-  font-weight: 900;
-  color: #ffffff;
-  line-height: 1.3;
-  letter-spacing: -0.5px;
-  margin: 0;
-}
-
-.shd-desc {
-  font-size: 14.5px;
-  line-height: 1.68;
-  color: #cbd5e1;
-  margin: 0;
-  font-weight: 500;
-  word-break: keep-all;
-}
-
-.shd-tag {
-  font-size: 12.5px;
-  font-weight: 800;
-  color: #10b981;
-  margin-top: 6px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.shd-tag::before {
-  content: "✓";
-  font-size: 12px;
-}
-
-/* SEAMLESS 50% TRANSFORM KEYFRAMES (4 ITEMS + 4 ITEMS) */
-@keyframes somStreamFlow1 {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-50%); }
-}
-
-@keyframes somStreamFlow2 {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-50%); }
-}
-
-@media(max-width:1200px) {
-  .som-layout-stage { grid-template-columns: 1fr; gap: 40px; }
-  .som-right-stream-wrap { height: 600px; }
-  .som-stream-card { height: 320px; }
-}
-@media(max-width:640px) {
-  .som-right-stream-wrap { grid-template-columns: 1fr; height: 500px; }
-  .som-col-2 { display: none; }
-  .som-stream-card { height: 340px; }
-}
-
 
 /* ==========================================================================
    HUGE ABOUT STATS NUMBERS (500건, 200대, 10년, 98% 58PX 대형화)
@@ -2063,40 +1863,6 @@ body.modal-lock { overflow:hidden !important; }
 }
 
 /* ==========================================================================
-   EXTRA TALL PORTRAIT ONLINE STREAM CARDS (HEIGHT: 460PX, CONTAINER: 960PX)
-========================================================================== */
-.som-right-stream-wrap {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 28px !important;
-  height: 960px !important; /* EXTRA TALL STAGE */
-  overflow: hidden !important;
-  position: relative !important;
-}
-
-.som-stream-card {
-  position: relative !important;
-  width: 100% !important;
-  height: 460px !important; /* EXTRA TALL PORTRAIT CARD */
-  border-radius: 30px !important;
-  overflow: hidden !important;
-  background: #0f172a !important;
-  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08) !important;
-  cursor: pointer !important;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  flex-shrink: 0 !important;
-}
-
-.track-1 {
-  animation: somStreamFlow1 28s linear infinite !important;
-}
-
-.track-2 {
-  animation: somStreamFlow2 34s linear infinite !important;
-  animation-delay: -9s !important;
-}
-
-/* ==========================================================================
    RELIABLE MODAL OVERLAY STYLING (ZERO BLOCKING / 100% WORKING OPEN)
 ========================================================================== */
 .route-search-modal-overlay,
@@ -2117,16 +1883,7 @@ body.modal-lock { overflow:hidden !important; }
   -webkit-overflow-scrolling: touch !important;
 }
 
-@media(max-width:1200px) {
-  .som-right-stream-wrap { height: 720px !important; }
-  .som-stream-card { height: 380px !important; }
-}
-@media(max-width:640px) {
-  .som-right-stream-wrap { grid-template-columns: 1fr !important; height: 580px !important; }
-  .som-col-2 { display: none !important; }
-  .som-stream-card { height: 380px !important; }
-  .asc-num { font-size: 44px !important; }
-}
+@media(max-width:640px) { .asc-num { font-size: 44px !important; } }
 
 
 /* ==========================================================================
@@ -3174,10 +2931,6 @@ body.modal-lock { overflow:hidden !important; }
     grid-template-columns: 1fr !important;
     gap: 30px !important;
   }
-  .som-stage-layout {
-    grid-template-columns: 1fr !important;
-    gap: 36px !important;
-  }
 }
 
 @media (max-width: 768px) {
@@ -3367,29 +3120,6 @@ body.modal-lock { overflow:hidden !important; }
     font-size: 14.5px !important;
     justify-content: center !important;
     box-sizing: border-box !important;
-  }
-
-  /* PART 4: SECTION 02 ONLINE MARKETING DUAL STREAM RESPONSIVE */
-  .som-stage-layout {
-    grid-template-columns: 1fr !important;
-    gap: 28px !important;
-  }
-  .som-stream-stage {
-    height: 520px !important;
-    padding: 0 !important;
-  }
-  .som-stream-track-wrap {
-    gap: 10px !important;
-  }
-  .som-card-item {
-    height: 330px !important;
-    border-radius: 18px !important;
-  }
-  .sci-title {
-    font-size: 17px !important;
-  }
-  .sci-desc {
-    font-size: 13.5px !important;
   }
 
   /* PART 5: SECTION 03 VIDEO & SECTION 04 MASTERPLAN */
@@ -3675,114 +3405,7 @@ body.modal-lock { overflow:hidden !important; }
 
 
 /* ==========================================================================
-   STAGGERED 2-COLUMN STATIC ONLINE GRID (움직이지 않는 감각적인 비대칭 그리드)
-========================================================================== */
-.som-staggered-grid-wrap {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  align-items: start;
-}
-
-.som-col {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-/* RIGHT COLUMN OFFSET DOWNWARDS (오른쪽 칸 살짝 아래로 시간차 배치) */
-.som-col-right {
-  margin-top: 50px;
-}
-
-.som-stag-card {
-  background: #ffffff;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 26px;
-  padding: 34px 30px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  display: flex;
-  flex-direction: column;
-}
-
-.som-stag-card:hover {
-  transform: translateY(-8px);
-  border-color: #1855b7;
-  box-shadow: 0 20px 45px rgba(24, 85, 183, 0.12);
-}
-
-.ssc-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 18px;
-}
-
-.ssc-num {
-  font-size: 24px;
-  font-weight: 900;
-  color: #cbd5e1;
-  font-family: "Poppins", sans-serif;
-}
-
-.ssc-badge {
-  font-size: 11.5px;
-  font-weight: 800;
-  color: #1855b7;
-  background: rgba(24, 85, 183, 0.08);
-  padding: 5px 14px;
-  border-radius: 100px;
-  letter-spacing: 0.04em;
-}
-
-.ssc-title {
-  font-size: 22px;
-  font-weight: 900;
-  color: #0f172a;
-  letter-spacing: -0.6px;
-  margin: 0 0 12px;
-  line-height: 1.35;
-}
-
-.ssc-desc {
-  font-size: 15.5px;
-  line-height: 1.65;
-  color: #64748b;
-  margin: 0 0 20px;
-  word-break: keep-all;
-}
-
-.ssc-points {
-  list-style: none;
-  margin: auto 0 0;
-  padding: 18px 0 0;
-  border-top: 1px solid #f1f5f9;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.ssc-points li {
-  font-size: 14px;
-  font-weight: 700;
-  color: #334155;
-  position: relative;
-  padding-left: 16px;
-  line-height: 1.45;
-}
-
-.ssc-points li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #1855b7;
-  font-weight: 900;
-  font-size: 12.5px;
-}
-
-/* ==========================================================================
-   MOBILE 2-COLUMN MASTERPLAN & STAGGERED GRID (<= 768px)
+   MOBILE 2-COLUMN MASTERPLAN (<= 768px)
 ========================================================================== */
 @media (max-width: 768px) {
   /* MASTERPLAN 2 BOXES PER ROW ON MOBILE (모바일 가로 2개씩 배치) */
@@ -3820,34 +3443,6 @@ body.modal-lock { overflow:hidden !important; }
     font-size: 12px !important;
   }
 
-  /* STAGGERED ONLINE GRID ON MOBILE (2열 유지 + 오른쪽 칸 살짝 30px 내려감) */
-  .som-staggered-grid-wrap {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 14px !important;
-  }
-  .som-col {
-    gap: 14px !important;
-  }
-  .som-col-right {
-    margin-top: 28px !important; /* 모바일에서도 오른쪽 살짝 시간차 */
-  }
-  .som-stag-card {
-    padding: 20px 16px !important;
-    border-radius: 18px !important;
-  }
-  .ssc-title {
-    font-size: 16.5px !important;
-    margin-bottom: 8px !important;
-  }
-  .ssc-desc {
-    font-size: 12.5px !important;
-    line-height: 1.55 !important;
-    margin-bottom: 14px !important;
-  }
-  .ssc-points {
-    padding-top: 12px !important;
-    gap: 6px !important;
-  }
   .ssc-points li {
     font-size: 12px !important;
     padding-left: 12px !important;
@@ -4230,20 +3825,6 @@ body.modal-lock { overflow:hidden !important; }
     font-size: 14px !important;
     border-radius: 10px !important;
   }
-}
-
-
-/* ==========================================================================
-   ONLINE MARKETING PC MOUSE HOVER PAUSE (마우스 호버 시 100% 가만히 정지)
-========================================================================== */
-.som-stream-stage:hover .som-stream-track,
-.som-stream-track-wrap:hover .som-stream-track,
-.som-stream-track:hover,
-.som-card-item:hover,
-.som-col:hover .som-stream-track,
-.som-staggered-grid-wrap:hover .som-stream-track {
-  animation-play-state: paused !important;
-  -webkit-animation-play-state: paused !important;
 }
 
 
@@ -5136,117 +4717,6 @@ body.menu-open {
 
 
 
-
-/* ==========================================================================
-   ONLINE MARKETING MOBILE 2-COLUMNS (세로 2줄씩) & SVG PICTOGRAM MODAL
-========================================================================== */
-
-/* 1. 모바일 세로 2줄 그리드 (좌 4개 + 우 4개 = 총 8개 카드) */
-@media (max-width: 768px) {
-  .som-layout-stage {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
-  }
-
-  .som-right-stream-wrap {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 12px !important;
-    height: auto !important;
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  .som-stream-col {
-    display: flex !important;
-    flex-direction: column !important;
-    height: auto !important;
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  .som-stream-track {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-    animation: none !important; /* 롤링 중지 */
-    transform: none !important;
-    width: 100% !important;
-  }
-
-  .som-stream-card.som-clone-card {
-    display: none !important; /* 복제본 숨김 */
-  }
-
-  .som-stream-card {
-    width: 100% !important;
-    height: 165px !important;
-    aspect-ratio: 1 / 1 !important;
-    border-radius: 18px !important;
-    overflow: hidden !important;
-    cursor: pointer !important;
-    position: relative !important;
-    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08) !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
-    transition: transform 0.2s ease !important;
-  }
-  .som-stream-card:active {
-    transform: scale(0.97) !important;
-  }
-
-  .som-stream-card .som-hover-detail {
-    display: none !important; /* 모바일에서는 팝업으로 상세 내용 표시 */
-  }
-
-  .som-stream-card .som-default-txt {
-    opacity: 1 !important;
-    transform: none !important;
-    padding: 16px 14px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-end !important;
-  }
-
-  .som-stream-card .sct-kicker {
-    font-size: 10.5px !important;
-    font-weight: 800 !important;
-    color: #ffffff !important;
-    background: rgba(15, 23, 42, 0.75) !important;
-    backdrop-filter: blur(4px) !important;
-    padding: 3px 8px !important;
-    border-radius: 6px !important;
-    margin-bottom: 6px !important;
-    width: max-content !important;
-  }
-
-  .som-stream-card .sct-title {
-    font-size: 14px !important;
-    font-weight: 800 !important;
-    line-height: 1.35 !important;
-    color: #ffffff !important;
-    word-break: keep-all !important;
-  }
-
-  /* 모바일 카드 우측 상단 모던 SVG 픽토그램 (이모지 완전 배제) */
-  .som-stream-card::before {
-    content: '' !important;
-    position: absolute !important;
-    top: 10px !important;
-    right: 10px !important;
-    width: 28px !important;
-    height: 28px !important;
-    background-color: rgba(15, 23, 42, 0.65) !important;
-    backdrop-filter: blur(4px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
-    border-radius: 50% !important;
-    z-index: 5 !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3) !important;
-  }
-}
 
 /* 2. 온라인 마케팅 카드 상세 팝업창 (SVG 픽토그램 & PC 호버 내용 100% 레이아웃) */
 .online-card-modal-overlay {
@@ -7008,437 +6478,5 @@ body.menu-open {
   .mos-huge-action-bar {
     grid-template-columns: 1fr !important;
     gap: 10px !important;
-  }
-}
-
-/* ==========================================================================
-   2. PC ONLINE MARKETING TALL CARDS (세로로 1.5배 570px 길쭉한 롱 포트레이트 비율)
-========================================================================== */
-@media (min-width: 992px) {
-  .som-stage-layout {
-    display: grid !important;
-    grid-template-columns: 380px 760px !important;
-    gap: 50px !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-  }
-
-  .som-right-stream-wrap {
-    display: grid !important;
-    grid-template-columns: 360px 360px !important;
-    gap: 26px !important;
-    width: 746px !important;
-    max-width: 100% !important;
-    height: 1166px !important; /* 570px * 2 + 간격 26px = 1166px */
-    overflow: hidden !important;
-    position: relative !important;
-    margin-left: auto !important;
-  }
-
-  .som-stream-card {
-    position: relative !important;
-    width: 360px !important;
-    height: 570px !important; /* 1.5배 길쭉한 570px 세로 비율 */
-    min-height: 570px !important;
-    max-height: 570px !important;
-    border-radius: 28px !important;
-    overflow: hidden !important;
-    background: #0f172a !important;
-    box-shadow: 0 16px 42px rgba(15, 23, 42, 0.1) !important;
-    cursor: pointer !important;
-    flex-shrink: 0 !important;
-    box-sizing: border-box !important;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  }
-
-  .som-stream-card img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    display: block !important;
-  }
-
-  /* 3. PC ONLY: BIG SUBTLE ENGLISH TYPOGRAPHY WATERMARK */
-  .som-layout-stage {
-    position: relative !important;
-    overflow: visible !important;
-  }
-
-  .som-pc-watermark {
-    display: flex !important;
-    flex-direction: column !important;
-    position: absolute !important;
-    bottom: 20px !important;
-    left: 0 !important;
-    z-index: 1 !important;
-    pointer-events: none !important;
-    user-select: none !important;
-    font-family: "Pretendard", "Montserrat", "Helvetica Neue", sans-serif !important;
-    font-size: 130px !important;
-    font-weight: 900 !important;
-    line-height: 0.88 !important;
-    letter-spacing: -4px !important;
-    color: rgba(15, 23, 42, 0.035) !important;
-    -webkit-text-stroke: 1.5px rgba(15, 23, 42, 0.065) !important;
-    text-transform: uppercase !important;
-    white-space: nowrap !important;
-  }
-
-  .som-pc-watermark span:nth-child(2) {
-    margin-left: 70px !important;
-  }
-
-  .som-left-content {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  .som-right-stream-wrap {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-}
-
-@media (max-width: 991px) {
-  .som-pc-watermark {
-    display: none !important; /* 모바일에서는 깔끔하게 숨김 */
-  }
-  .som-stream-card {
-    height: 320px !important;
-    min-height: 320px !important;
-    max-height: 320px !important;
-  }
-}
-
-
-
-
-/* ==========================================================================
-   MOBILE ONLINE MARKETING 2-COLUMN FULL-WIDTH GRID (화면 좌우 여백에 100% 꽉 찬 2열)
-========================================================================== */
-@media (max-width: 991px) {
-  #online {
-    width: 100% !important;
-    overflow: hidden !important;
-    padding: 40px 0 60px !important;
-  }
-
-  #online .am-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 16px !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-  }
-
-  .som-layout-stage {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 24px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  .som-left-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 2개 컬럼이 화면 좌우에 100% 꽉 차는 세로 2열 그리드 */
-  .som-right-stream-wrap {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-    gap: 12px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    height: auto !important;
-    overflow: visible !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  .som-stream-col {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    height: auto !important;
-    overflow: visible !important;
-    box-sizing: border-box !important;
-  }
-
-  .som-stream-track {
-    animation: none !important;
-    transform: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 모바일에서는 복제 카드 숨김 ➔ 2x2 총 4개 핵심 카드만 노출 */
-  .som-stream-card.som-clone-card {
-    display: none !important;
-  }
-
-  .som-stream-card {
-    position: relative !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    height: 230px !important; /* 모바일 세로 2열 꽉 찬 최적 비율 */
-    min-height: 230px !important;
-    max-height: 230px !important;
-    border-radius: 16px !important;
-    overflow: hidden !important;
-    background: #0f172a !important;
-    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08) !important;
-    cursor: pointer !important;
-    box-sizing: border-box !important;
-  }
-
-  .som-stream-card img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    display: block !important;
-  }
-
-  .som-card-scrim {
-    background: linear-gradient(to top, rgba(10, 20, 45, 0.94) 0%, rgba(10, 20, 45, 0.4) 60%, transparent 100%) !important;
-  }
-
-  .som-default-txt {
-    position: absolute !important;
-    bottom: 12px !important;
-    left: 12px !important;
-    right: 12px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 3px !important;
-    box-sizing: border-box !important;
-  }
-
-  .sct-kicker {
-    font-size: 10px !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.04em !important;
-    color: #ffffff !important;
-    opacity: 0.9 !important;
-    text-transform: uppercase !important;
-  }
-
-  .sct-title {
-    font-size: 13.5px !important;
-    font-weight: 800 !important;
-    line-height: 1.25 !important;
-    letter-spacing: -0.3px !important;
-    color: #ffffff !important;
-    word-break: keep-all !important;
-  }
-}
-
-
-
-
-
-
-/* ==========================================================================
-   ONLINE MARKETING: ROCK-SOLID POSITION:FIXED PINNED LEFT TITLE & TAGS (PC ONLY)
-========================================================================== */
-/* 더 크고 선명한 가온엔 맞춤형 태그 클라우드 (19px 볼드 & 가온 블루 도트) */
-.som-tag-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 12px 16px;
-  max-width: 440px;
-  line-height: 1.65;
-  margin-top: 24px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(15, 23, 42, 0.09);
-}
-
-.stc-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  white-space: nowrap;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  user-select: none;
-  cursor: pointer;
-}
-
-/* 주요 볼드 키워드 (19px 초고화질 울트라 볼드) */
-.stc-item.stc-highlight {
-  font-size: 19px;
-  font-weight: 900;
-  color: #0f172a;
-  letter-spacing: -0.4px;
-  font-family: "Pretendard", sans-serif;
-}
-
-.stc-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #1855b7; /* 가온엔 시그니처 블루 */
-  margin-left: 3px;
-  flex-shrink: 0;
-  box-shadow: 0 0 6px rgba(24, 85, 183, 0.5);
-  transition: all 0.25s ease;
-}
-
-/* 서브 키워드 (15.5px 미디엄 볼드) */
-.stc-item.stc-sub {
-  font-size: 15.5px;
-  font-weight: 700;
-  color: #8492a6;
-  letter-spacing: -0.25px;
-  font-family: "Pretendard", sans-serif;
-}
-
-/* 마우스 호버 시 자연스럽게 살짝 커지며 색상 변화 */
-.stc-item:hover {
-  transform: translateY(-2px) scale(1.05);
-}
-
-.stc-item.stc-highlight:hover {
-  color: #1855b7;
-}
-
-.stc-item.stc-highlight:hover .stc-dot {
-  background: #00d2ff;
-  box-shadow: 0 0 8px rgba(0, 210, 255, 0.8);
-  transform: scale(1.25);
-}
-
-.stc-item.stc-sub:hover {
-  color: #0f172a;
-  font-weight: 800;
-}
-
-@media (min-width: 992px) {
-  #online {
-    position: relative !important;
-    overflow: visible !important;
-    padding: 80px 0 120px !important;
-    background: #ffffff !important;
-  }
-
-  #online .am-container {
-    position: relative !important;
-    overflow: visible !important;
-  }
-
-  /* 좌우 레이아웃 스테이지: Flexbox 기반 (오른쪽 카드 1400px 높이 동안 좌측 완벽 Sticky 고정) */
-  .som-layout-stage {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: flex-start !important;
-    position: relative !important;
-    overflow: visible !important;
-    min-height: 1400px !important;
-    width: 100% !important;
-  }
-
-  /* 좌측 칼정렬 콘텐츠: 440px 고정너비 + 완벽한 브라우저 네이티브 STICKY 고정 (top: 110px) */
-  .som-left-content {
-    position: -webkit-sticky !important;
-    position: sticky !important;
-    top: 110px !important;
-    align-self: flex-start !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
-    width: 440px !important;
-    max-width: 440px !important;
-    flex-shrink: 0 !important;
-    box-sizing: border-box !important;
-    z-index: 20 !important;
-  }
-
-  .som-title-wrap {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 6px !important;
-  }
-
-  .som-desc {
-    font-size: 16px !important;
-    line-height: 1.75 !important;
-    color: #475569 !important;
-    margin: 0 !important;
-    font-weight: 500 !important;
-    word-break: keep-all !important;
-  }
-
-  /* 우측 카드 스트림: 길쭉한 500px 포트레이트 카드 (1400px 높이 & 넉넉한 스크롤 버퍼) */
-  .som-right-stream-wrap {
-    display: grid !important;
-    grid-template-columns: 360px 360px !important;
-    gap: 26px !important;
-    width: 746px !important;
-    max-width: 100% !important;
-    height: 1400px !important;
-    overflow: hidden !important;
-    position: relative !important;
-    margin-left: auto !important;
-    margin-top: 0 !important;
-    flex-shrink: 0 !important;
-    z-index: 2 !important;
-  }
-
-  .som-stream-card {
-    position: relative !important;
-    width: 360px !important;
-    height: 500px !important;
-    min-height: 500px !important;
-    max-height: 500px !important;
-    border-radius: 26px !important;
-    overflow: hidden !important;
-    background: #0f172a !important;
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1) !important;
-    cursor: pointer !important;
-    flex-shrink: 0 !important;
-    box-sizing: border-box !important;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  }
-
-  .som-stream-card img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    display: block !important;
-  }
-}
-
-@media (max-width: 991px) {
-  .som-tag-cloud {
-    display: none !important;
-  }
-  .som-left-content {
-    position: static !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 16px !important;
-    margin: 0 !important;
-    padding: 0 !important;
   }
 }
