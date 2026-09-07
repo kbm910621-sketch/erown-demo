@@ -18,7 +18,7 @@ font-weight:900; black
 
 /*****reset*****/
 html {
-    overflow-x: hidden;
+    overflow-x: clip;
     /*overflow-y:scroll; word-break:break-all; word-break:keep-all; white-space:nowrap;셀의 너비를 지정했다 하더라도 자동으로 줄바꿈이 되지 않게 하는 속성 */
     /*-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing: grayscale; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; */
 }
