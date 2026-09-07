@@ -7374,27 +7374,30 @@ body.menu-open {
     overflow: visible !important;
   }
 
-  /* 좌우 그리드 스테이지 (오른쪽 카드 1400px 높이로 넉넉한 스크롤 고정 공간 확보) */
+  /* 좌우 레이아웃 스테이지: Flexbox 기반 (오른쪽 카드 1400px 높이 동안 좌측 완벽 Sticky 고정) */
   .som-layout-stage {
-    display: grid !important;
-    grid-template-columns: 440px 746px !important;
-    gap: 50px !important;
-    align-items: flex-start !important;
+    display: flex !important;
     justify-content: space-between !important;
+    align-items: flex-start !important;
     position: relative !important;
     overflow: visible !important;
     min-height: 1400px !important;
+    width: 100% !important;
   }
 
-  /* 좌측 칼정렬 콘텐츠: 기본 너비 440px 유지 */
+  /* 좌측 칼정렬 콘텐츠: 440px 고정너비 + 완벽한 브라우저 네이티브 STICKY 고정 (top: 110px) */
   .som-left-content {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 110px !important;
+    align-self: flex-start !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 20px !important;
     width: 440px !important;
     max-width: 440px !important;
+    flex-shrink: 0 !important;
     box-sizing: border-box !important;
-    position: relative;
     z-index: 20 !important;
   }
 
@@ -7425,6 +7428,7 @@ body.menu-open {
     position: relative !important;
     margin-left: auto !important;
     margin-top: 0 !important;
+    flex-shrink: 0 !important;
     z-index: 2 !important;
   }
 
