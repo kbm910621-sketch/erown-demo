@@ -1001,4 +1001,70 @@ $(function() {
   }
   requestAnimationFrame(stickyRafLoop);
 
+
+  /* ==========================================================================
+     ONLINE MARKETING: 100% GUARANTEED POSITION:FIXED PINNING ENGINE (PC ONLY)
+  ========================================================================== */
+  function syncOnlineFixedPin() {
+    if (window.innerWidth <= 991) {
+      var elem = document.querySelector('.som-left-content');
+      if (elem) {
+        elem.style.position = '';
+        elem.style.top = '';
+        elem.style.bottom = '';
+        elem.style.left = '';
+        elem.style.width = '';
+      }
+      return;
+    }
+
+    var stage = document.querySelector('.som-layout-stage');
+    var leftContent = document.querySelector('.som-left-content');
+    if (!stage || !leftContent) return;
+
+    var stageRect = stage.getBoundingClientRect();
+    var topFixedPos = 100; // Header clearance
+    var contentHeight = leftContent.offsetHeight;
+    var maxBottom = stageRect.bottom;
+
+    // 1. When stage is below viewport (not reached yet)
+    if (stageRect.top > topFixedPos) {
+      leftContent.style.position = 'relative';
+      leftContent.style.top = '0px';
+      leftContent.style.bottom = 'auto';
+      leftContent.style.left = '0px';
+      leftContent.style.width = '440px';
+    }
+    // 2. When reached and within stage bounds (PINNED FIXED TO SCREEN)
+    else if (stageRect.top <= topFixedPos && maxBottom >= contentHeight + topFixedPos) {
+      leftContent.style.position = 'fixed';
+      leftContent.style.top = topFixedPos + 'px';
+      leftContent.style.bottom = 'auto';
+      leftContent.style.left = stageRect.left + 'px';
+      leftContent.style.width = '440px';
+    }
+    // 3. When stage is scrolling off top (unpin and stay at bottom of stage)
+    else {
+      leftContent.style.position = 'absolute';
+      leftContent.style.top = 'auto';
+      leftContent.style.bottom = '0px';
+      leftContent.style.left = '0px';
+      leftContent.style.width = '440px';
+    }
+  }
+
+  // Hook all scroll & resize events
+  window.addEventListener('scroll', syncOnlineFixedPin, { passive: true });
+  window.addEventListener('resize', syncOnlineFixedPin, { passive: true });
+
+  if (typeof lenis !== 'undefined' && lenis) {
+    lenis.on('scroll', syncOnlineFixedPin);
+  }
+
+  function pinRafLoop() {
+    syncOnlineFixedPin();
+    requestAnimationFrame(pinRafLoop);
+  }
+  requestAnimationFrame(pinRafLoop);
+
 });

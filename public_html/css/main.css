@@ -7286,7 +7286,7 @@ body.menu-open {
 
 
 /* ==========================================================================
-   ONLINE MARKETING: TOP-ALIGNED 1:1 PERFECT BALANCED AGENCY LAYOUT (PC ONLY)
+   ONLINE MARKETING: ROCK-SOLID POSITION:FIXED PINNED LEFT TITLE & TAGS (PC ONLY)
 ========================================================================== */
 /* 더 크고 선명한 가온엔 맞춤형 태그 클라우드 (19px 볼드 & 가온 블루 도트) */
 .som-tag-cloud {
@@ -7364,8 +7364,8 @@ body.menu-open {
 @media (min-width: 992px) {
   #online {
     position: relative !important;
-    overflow: hidden !important;
-    padding: 70px 0 90px !important;
+    overflow: visible !important;
+    padding: 80px 0 120px !important;
     background: #ffffff !important;
   }
 
@@ -7374,7 +7374,7 @@ body.menu-open {
     overflow: visible !important;
   }
 
-  /* 좌우 상단 시작선(Top Line)이 1:1로 정확하게 일치하는 완벽한 그리드 */
+  /* 좌우 그리드 스테이지 (오른쪽 카드 1400px 높이로 넉넉한 스크롤 고정 공간 확보) */
   .som-layout-stage {
     display: grid !important;
     grid-template-columns: 440px 746px !important;
@@ -7382,20 +7382,20 @@ body.menu-open {
     align-items: flex-start !important;
     justify-content: space-between !important;
     position: relative !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
+    overflow: visible !important;
+    min-height: 1400px !important;
   }
 
-  /* 좌측 칼정렬 콘텐츠: 우측 카드 1번의 맨 윗선과 수평 완벽 일치 */
+  /* 좌측 칼정렬 콘텐츠: 기본 너비 440px 유지 */
   .som-left-content {
     display: flex !important;
     flex-direction: column !important;
     gap: 20px !important;
-    align-self: flex-start !important;
-    margin: 0 !important;
-    padding-top: 4px !important;
-    position: relative !important;
-    z-index: 2 !important;
+    width: 440px !important;
+    max-width: 440px !important;
+    box-sizing: border-box !important;
+    position: relative;
+    z-index: 20 !important;
   }
 
   .som-title-wrap {
@@ -7413,14 +7413,14 @@ body.menu-open {
     word-break: keep-all !important;
   }
 
-  /* 우측 카드 스트림: 시원하고 슬렌더한 470px 포트레이트 카드 2장 (총 980px) */
+  /* 우측 카드 스트림: 길쭉한 500px 포트레이트 카드 (1400px 높이 & 넉넉한 스크롤 버퍼) */
   .som-right-stream-wrap {
     display: grid !important;
     grid-template-columns: 360px 360px !important;
     gap: 26px !important;
     width: 746px !important;
     max-width: 100% !important;
-    height: 980px !important;
+    height: 1400px !important;
     overflow: hidden !important;
     position: relative !important;
     margin-left: auto !important;
@@ -7431,13 +7431,13 @@ body.menu-open {
   .som-stream-card {
     position: relative !important;
     width: 360px !important;
-    height: 470px !important; /* 길쭉하고 슬렌더한 최적 세로 비율 */
-    min-height: 470px !important;
-    max-height: 470px !important;
-    border-radius: 24px !important;
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
+    border-radius: 26px !important;
     overflow: hidden !important;
     background: #0f172a !important;
-    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08) !important;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1) !important;
     cursor: pointer !important;
     flex-shrink: 0 !important;
     box-sizing: border-box !important;
@@ -7459,7 +7459,8 @@ body.menu-open {
   }
   .som-left-content {
     position: static !important;
-    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 16px !important;
