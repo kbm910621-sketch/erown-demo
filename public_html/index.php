@@ -574,73 +574,37 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     <!-- ============================================
        03 SECTION 02 : 온라인 마케팅 솔루션 (OPTION 03: 1섹션 패밀리룩 상단 전폭 헤더 + 좌측 채널 탭)
   ============================================ -->
+    <!-- ============================================
+       03 SECTION 02 : 온라인 마케팅 솔루션 (위/아래 영문 타이포 스타일)
+  ============================================ -->
   <section class="am-section am-bg-white" id="online">
     <div class="am-container">
       
-      <!-- TOP HEADER (01 옥외광고 섹션과 1:1 완벽 일치하는 상단 전폭 헤더) -->
-      <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
-        <div class="ash-flex">
-          <div>
-            <span class="ash-kicker">02 / DIGITAL MARKETING SOLUTIONS</span>
-            <h2 class="ash-title">온라인 마케팅 솔루션</h2>
-            <p class="ash-desc">네이버 스마트플레이스 1위 세팅부터 C-Rank 브랜드 블로그, 맘카페 바이럴, 인스타그램 스폰서 광고까지 가온엔 본사 인하우스 전문팀이 직접 운영합니다.</p>
-          </div>
-          <div class="ash-actions">
-            <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideOnline">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              <span>온라인 채널 제안서 &amp; 가이드(PDF) ↗</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2-COLUMN TABBED STAGE LAYOUT -->
-      <div class="som-stage-layout wow fadeInUp" data-wow-duration="0.8s">
+      <!-- MAIN SEALNPACK TALL PORTRAIT LAYOUT -->
+      <div class="som-layout-stage wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- LEFT COLUMN: 8 CORE ONLINE CHANNEL NAVIGATION LIST (PC 전용 8대 채널 탭 리스트) -->
-        <div class="som-nav-col pc_only">
-          <ul class="som-nav-list" id="somNavList">
-            <li class="som-nav-item on">
-              <span class="sni-num">01</span>
-              <span class="sni-txt">C-Rank 브랜드 블로그 상위 노출</span>
-              <span class="sni-arrow">›</span>
-            </li>
-            <li class="som-nav-item">
-              <span class="sni-num">02</span>
-              <span class="sni-txt">맘카페 &amp; 당근마켓 침투 바이럴</span>
-              <span class="sni-arrow">›</span>
-            </li>
-            <li class="som-nav-item">
-              <span class="sni-num">03</span>
-              <span class="sni-txt">스마트플레이스 1위 &amp; 예약 연동</span>
-              <span class="sni-arrow">›</span>
-            </li>
-            <li class="som-nav-item">
-              <span class="sni-num">04</span>
-              <span class="sni-txt">인스타그램 릴스 &amp; 스폰서 광고</span>
-              <span class="sni-arrow">›</span>
-            </li>
-            <li class="som-nav-item">
-              <span class="sni-num">05</span>
-              <span class="sni-txt">구글 검색 &amp; 유튜브 GDN 리타깃팅</span>
-              <span class="sni-arrow">›</span>
-            </li>
-            <li class="som-nav-item">
-              <span class="sni-num">06</span>
-              <span class="sni-txt">네이버 파워링크 검색광고 (SA)</span>
-              <span class="sni-arrow">›</span>
-            </li>
-            <li class="som-nav-item">
-              <span class="sni-num">07</span>
-              <span class="sni-txt">블로그 체험단 &amp; 인플루언서 섭외</span>
-              <span class="sni-arrow">›</span>
-            </li>
-            <li class="som-nav-item">
-              <span class="sni-num">08</span>
-              <span class="sni-txt">고전환 웹사이트 &amp; 모바일 랜딩</span>
-              <span class="sni-arrow">›</span>
-            </li>
-          </ul>
+        <!-- PC ONLY: BIG SUBTLE ENGLISH TYPOGRAPHY WATERMARK (위/아래 3단 영문 워터마크) -->
+        <div class="som-pc-watermark" aria-hidden="true">
+          <span>PERFORMANCE</span>
+          <span>DIGITAL</span>
+          <span>MARKETING</span>
+        </div>
+        
+        <!-- LEFT: CLEAN EDITORIAL BRAND HEADLINE & CONCISE BUTTON -->
+        <div class="som-left-content">
+          <div class="som-title-wrap">
+            <span class="som-top-eng-label pc_only">INTEGRATED CREATIVE &amp; DIGITAL PERFORMANCE</span>
+            <span class="ash-kicker">02 / DIGITAL MARKETING</span>
+            <h2 class="ash-title">온라인 마케팅</h2>
+          </div>
+
+          <p class="som-desc">
+            네이버 스마트플레이스 1위 세팅부터 C-Rank 브랜드 블로그, 맘카페 바이럴, 인스타그램 스폰서 광고까지 가온엔 본사 인하우스 전문팀이 직접 운영합니다.
+          </p>
+
+          <button type="button" class="som-guide-btn bus-guide-open" data-guide="guideOnline">
+            <span class="sgb-txt">온라인 채널 가이드</span>
+          </button>
         </div>
 
         <!-- RIGHT: DUAL VERTICAL MARQUEE STREAMS (8 HIGH-RES TOPIC MATCHED IMAGES) -->

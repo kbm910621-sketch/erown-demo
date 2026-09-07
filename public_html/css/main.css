@@ -7283,108 +7283,129 @@ body.menu-open {
 
 
 
+
+
 /* ==========================================================================
-   OPTION 03: FULL-WIDTH HEADER + LEFT 8-CHANNEL NAVIGATION TAB LIST
+   ONLINE MARKETING: TOP/BOTTOM ENGLISH TYPOGRAPHY & WATERMARK STYLE
 ========================================================================== */
+.som-top-eng-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  color: #1855b7;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-family: "Pretendard", "Montserrat", sans-serif;
+}
+
 @media (min-width: 992px) {
   .som-stage-layout {
     display: grid !important;
     grid-template-columns: 380px 746px !important;
-    gap: 40px !important;
-    align-items: stretch !important; /* 좌우 높이 1:1 완벽 일치 */
-    justify-content: space-between !important;
-  }
-
-  .som-nav-col {
-    background: #ffffff !important;
-    border: 1.5px solid #e2e8f0 !important;
-    border-radius: 28px !important;
-    overflow: hidden !important;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
-    display: flex !important;
-    flex-direction: column !important;
-    height: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  .som-nav-list {
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    height: 100% !important;
-    justify-content: space-between !important;
-  }
-
-  .som-nav-item {
-    display: flex !important;
+    gap: 50px !important;
     align-items: center !important;
     justify-content: space-between !important;
-    padding: 0 24px !important;
-    flex: 1 !important;
-    min-height: 64px !important;
-    border-bottom: 1px solid #f1f5f9 !important;
-    cursor: pointer !important;
-    transition: all 0.22s ease !important;
+  }
+
+  .som-left-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .som-title-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+
+  .som-desc {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+    color: #475569 !important;
+    margin: 0 !important;
+  }
+
+  /* 3단 대형 영문 워터마크 (위, 중간, 아래를 감각적으로 채움) */
+  .som-layout-stage {
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  .som-pc-watermark {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: -10px !important;
+    transform: translateY(-50%) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
     user-select: none !important;
-    box-sizing: border-box !important;
-  }
-
-  .som-nav-item:last-child {
-    border-bottom: 0 !important;
-  }
-
-  .sni-num {
-    font-size: 13px !important;
+    font-family: "Pretendard", "Montserrat", "Helvetica Neue", sans-serif !important;
+    font-size: 118px !important;
     font-weight: 900 !important;
-    color: #1855b7 !important;
-    font-family: "Pretendard", sans-serif !important;
-    margin-right: 12px !important;
+    line-height: 0.85 !important;
+    letter-spacing: -4px !important;
+    color: rgba(15, 23, 42, 0.035) !important;
+    -webkit-text-stroke: 1.5px rgba(15, 23, 42, 0.06) !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
   }
 
-  .sni-txt {
-    font-size: 15.5px !important;
-    font-weight: 700 !important;
-    color: #334155 !important;
-    flex: 1 !important;
-    transition: color 0.2s ease !important;
+  .som-pc-watermark span:nth-child(2) {
+    margin-left: 50px !important;
+  }
+  .som-pc-watermark span:nth-child(3) {
+    margin-left: 100px !important;
   }
 
-  .sni-arrow {
-    font-size: 20px !important;
-    font-weight: 800 !important;
-    color: #94a3b8 !important;
-    transition: transform 0.2s ease, color 0.2s ease !important;
+  .som-right-stream-wrap {
+    display: grid !important;
+    grid-template-columns: 360px 360px !important;
+    gap: 26px !important;
+    width: 746px !important;
+    max-width: 100% !important;
+    height: 1166px !important; /* 570px * 2 + 26px */
+    overflow: hidden !important;
+    position: relative !important;
+    margin-left: auto !important;
+    z-index: 2 !important;
   }
 
-  .som-nav-item:hover {
-    background: #f8fafc !important;
-  }
-  .som-nav-item:hover .sni-txt {
-    color: #1855b7 !important;
-  }
-  .som-nav-item:hover .sni-arrow {
-    color: #1855b7 !important;
-    transform: translateX(4px) !important;
+  .som-stream-card {
+    position: relative !important;
+    width: 360px !important;
+    height: 570px !important;
+    min-height: 570px !important;
+    max-height: 570px !important;
+    border-radius: 28px !important;
+    overflow: hidden !important;
+    background: #0f172a !important;
+    box-shadow: 0 16px 42px rgba(15, 23, 42, 0.1) !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
 
-  .som-nav-item.on {
-    background: #1855b7 !important;
-  }
-  .som-nav-item.on .sni-num,
-  .som-nav-item.on .sni-txt,
-  .som-nav-item.on .sni-arrow {
-    color: #ffffff !important;
-  }
-  .som-nav-item.on .sni-arrow {
-    transform: translateX(5px) !important;
+  .som-stream-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
   }
 }
 
-/* MOBILE VIEW MAINTAINS FULL-WIDTH 2-COL GRID */
 @media (max-width: 991px) {
-  .som-nav-col {
+  .som-top-eng-label {
+    display: none !important;
+  }
+  .som-pc-watermark {
     display: none !important;
   }
 }
