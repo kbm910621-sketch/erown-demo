@@ -230,6 +230,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_01_1.jpg"
     ),
+    "sort_order" => 100,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 2,
     "category" => "shelter",
@@ -244,6 +247,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_02_1.jpg"
     ),
+    "sort_order" => 101,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 3,
     "category" => "bus",
@@ -258,6 +264,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_03_1.jpg"
     ),
+    "sort_order" => 102,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 4,
     "category" => "shelter",
@@ -272,6 +281,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_04_1.jpg"
     ),
+    "sort_order" => 103,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 5,
     "category" => "shelter",
@@ -286,6 +298,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_05_1.jpg"
     ),
+    "sort_order" => 104,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 6,
     "category" => "bus",
@@ -300,6 +315,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_06_1.jpg"
     ),
+    "sort_order" => 105,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 7,
     "category" => "bus",
@@ -314,6 +332,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_07_1.jpg"
     ),
+    "sort_order" => 106,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 8,
     "category" => "bus",
@@ -328,6 +349,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_08_1.jpg"
     ),
+    "sort_order" => 107,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 9,
     "category" => "bus",
@@ -343,6 +367,9 @@ $GAON_PORTFOLIO_ITEMS = array(
       "/images/port/port_09_1.jpg",
       "/images/port/port_09_2.jpg"
     ),
+    "sort_order" => 108,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 10,
     "category" => "shelter",
@@ -357,6 +384,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_10_1.jpg"
     ),
+    "sort_order" => 109,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 11,
     "category" => "shelter",
@@ -371,6 +401,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_11_1.jpg"
     ),
+    "sort_order" => 110,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 12,
     "category" => "shelter",
@@ -386,6 +419,9 @@ $GAON_PORTFOLIO_ITEMS = array(
       "/images/port/port_12_1.jpg",
       "/images/port/port_12_2.jpg"
     ),
+    "sort_order" => 111,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 13,
     "category" => "bus",
@@ -400,6 +436,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_13_1.jpg"
     ),
+    "sort_order" => 112,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 14,
     "category" => "bus",
@@ -414,6 +453,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_14_1.jpg"
     ),
+    "sort_order" => 113,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 15,
     "category" => "bus",
@@ -428,6 +470,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_15_1.jpg"
     ),
+    "sort_order" => 114,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 16,
     "category" => "did",
@@ -442,6 +487,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_16_1.jpg"
     ),
+    "sort_order" => 115,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 17,
     "category" => "bus",
@@ -456,6 +504,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_17_1.jpg"
     ),
+    "sort_order" => 116,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 18,
     "category" => "bus",
@@ -471,6 +522,9 @@ $GAON_PORTFOLIO_ITEMS = array(
       "/images/port/port_18_1.jpg",
       "/images/port/port_18_2.jpg"
     ),
+    "sort_order" => 117,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 19,
     "category" => "shelter",
@@ -485,6 +539,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_19_1.jpg"
     ),
+    "sort_order" => 118,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 20,
     "category" => "bus",
@@ -499,6 +556,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_20_1.jpg"
     ),
+    "sort_order" => 119,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 21,
     "category" => "shelter",
@@ -513,6 +573,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_21_1.jpg"
     ),
+    "sort_order" => 120,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 22,
     "category" => "bus",
@@ -528,6 +591,9 @@ $GAON_PORTFOLIO_ITEMS = array(
       "/images/port/port_22_1.jpg",
       "/images/port/port_22_2.jpg"
     ),
+    "sort_order" => 121,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 23,
     "category" => "bus",
@@ -542,6 +608,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_23_1.jpg"
     ),
+    "sort_order" => 122,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 24,
     "category" => "bus",
@@ -556,6 +625,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_24_1.jpg"
     ),
+    "sort_order" => 123,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 25,
     "category" => "bus",
@@ -570,6 +642,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_25_1.jpg"
     ),
+    "sort_order" => 124,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 26,
     "category" => "shelter",
@@ -584,6 +659,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_26_1.jpg"
     ),
+    "sort_order" => 125,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 27,
     "category" => "bus",
@@ -598,6 +676,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_27_1.jpg"
     ),
+    "sort_order" => 126,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 28,
     "category" => "bus",
@@ -612,6 +693,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_28_1.jpg"
     ),
+    "sort_order" => 127,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 29,
     "category" => "bus",
@@ -626,6 +710,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_29_1.jpg"
     ),
+    "sort_order" => 128,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 30,
     "category" => "shelter",
@@ -641,6 +728,9 @@ $GAON_PORTFOLIO_ITEMS = array(
       "/images/port/port_30_1.jpg",
       "/images/port/port_30_2.jpg"
     ),
+    "sort_order" => 129,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 31,
     "category" => "bus",
@@ -655,6 +745,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_31_1.jpg"
     ),
+    "sort_order" => 130,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 32,
     "category" => "shelter",
@@ -669,6 +762,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_32_1.jpg"
     ),
+    "sort_order" => 131,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 33,
     "category" => "bus",
@@ -683,6 +779,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_33_1.jpg"
     ),
+    "sort_order" => 132,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 34,
     "category" => "shelter",
@@ -697,6 +796,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_34_1.jpg"
     ),
+    "sort_order" => 133,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 35,
     "category" => "bus",
@@ -711,6 +813,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_35_1.jpg"
     ),
+    "sort_order" => 134,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 36,
     "category" => "bus",
@@ -725,6 +830,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_36_1.jpg"
     ),
+    "sort_order" => 135,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 37,
     "category" => "bus",
@@ -739,6 +847,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_37_1.jpg"
     ),
+    "sort_order" => 136,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 38,
     "category" => "bus",
@@ -753,6 +864,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_38_1.jpg"
     ),
+    "sort_order" => 137,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 39,
     "category" => "shelter",
@@ -767,6 +881,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_39_1.jpg"
     ),
+    "sort_order" => 138,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 40,
     "category" => "bus",
@@ -781,6 +898,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_40_1.jpg"
     ),
+    "sort_order" => 139,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 41,
     "category" => "shelter",
@@ -795,6 +915,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_41_1.jpg"
     ),
+    "sort_order" => 140,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 42,
     "category" => "shelter",
@@ -809,6 +932,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_42_1.jpg"
     ),
+    "sort_order" => 141,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 43,
     "category" => "shelter",
@@ -823,6 +949,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_43_1.jpg"
     ),
+    "sort_order" => 142,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 44,
     "category" => "shelter",
@@ -837,6 +966,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_44_1.jpg"
     ),
+    "sort_order" => 143,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 45,
     "category" => "did",
@@ -851,6 +983,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_45_1.jpg"
     ),
+    "sort_order" => 144,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 46,
     "category" => "bus",
@@ -865,6 +1000,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_46_1.jpg"
     ),
+    "sort_order" => 145,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 47,
     "category" => "bus",
@@ -879,6 +1017,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_47_1.jpg"
     ),
+    "sort_order" => 146,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 48,
     "category" => "bus",
@@ -893,6 +1034,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_48_1.jpg"
     ),
+    "sort_order" => 147,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 49,
     "category" => "taxi",
@@ -907,6 +1051,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_49_1.jpg"
     ),
+    "sort_order" => 148,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 50,
     "category" => "taxi",
@@ -921,6 +1068,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_50_1.jpg"
     ),
+    "sort_order" => 149,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 51,
     "category" => "taxi",
@@ -935,6 +1085,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_51_1.jpg"
     ),
+    "sort_order" => 150,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 52,
     "category" => "taxi",
@@ -949,6 +1102,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_52_1.jpg"
     ),
+    "sort_order" => 151,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 53,
     "category" => "bus",
@@ -963,6 +1119,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_53_1.jpg"
     ),
+    "sort_order" => 152,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 54,
     "category" => "video",
@@ -978,6 +1137,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/video_thumb_01.jpg"
     ),
+    "sort_order" => 153,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 55,
     "category" => "video",
@@ -993,6 +1155,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/video_thumb_02.jpg"
     ),
+    "sort_order" => 154,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 56,
     "category" => "video",
@@ -1008,6 +1173,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/video_thumb_03.jpg"
     ),
+    "sort_order" => 155,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 57,
     "category" => "video",
@@ -1023,6 +1191,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/video_thumb_04.jpg"
     ),
+    "sort_order" => 156,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 58,
     "category" => "video",
@@ -1038,6 +1209,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/video_thumb_05.jpg"
     ),
+    "sort_order" => 157,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 63,
     "category" => "video",
@@ -1053,6 +1227,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/video_thumb_06.jpg"
     ),
+    "sort_order" => 158,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 59,
     "category" => "taxi",
@@ -1067,6 +1244,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_59_1.jpg"
     ),
+    "sort_order" => 159,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 60,
     "category" => "taxi",
@@ -1081,6 +1261,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_60_1.jpg"
     ),
+    "sort_order" => 160,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 61,
     "category" => "taxi",
@@ -1095,6 +1278,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_61_1.jpg"
     ),
+    "sort_order" => 161,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 62,
     "category" => "taxi",
@@ -1109,6 +1295,9 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_62_1.jpg"
     ),
+    "sort_order" => 162,
+    "date" => "2026·09"
+  ),
   array(
     "id" => 64,
     "category" => "mart",
@@ -1123,4 +1312,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/mart/mart_01.jpg"
     ),
+    "sort_order" => 163,
+    "date" => "2026·09"
+  ),
 );
