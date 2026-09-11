@@ -15,7 +15,7 @@
                     <li class="depth1"><a href="/index.php#bus" class="gnb_anchor_link" onclick="closeMobileNav();">옥외광고<span class="gnb-sub">OOH Media</span></a></li>
                     <li class="depth1"><a href="/index.php#online" class="gnb_anchor_link" onclick="closeMobileNav();">온라인마케팅<span class="gnb-sub">Digital</span></a></li>
                     <li class="depth1"><a href="/index.php#video" class="gnb_anchor_link" onclick="closeMobileNav();">영상제작<span class="gnb-sub">Cinema</span></a></li>
-                    <li class="depth1"><a href="/index.php#broadcast" class="gnb_anchor_link" onclick="closeMobileNav();">방송프로그램<span class="gnb-sub">Broadcast</span></a></li>
+                    <li class="depth1"><a href="/index.php#broadcast" class="gnb_anchor_link" onclick="closeMobileNav();">TV방송<span class="gnb-sub">TV Broadcast</span></a></li>
                     <li class="depth1"><a href="/contents/a_type/a_1.php" onclick="closeMobileNav();">포트폴리오<span class="gnb-sub">Portfolio ➔</span></a></li>
                     <li class="depth1 contact_depth"><a href="/board/estmate/write.php" class="gnb_cta_btn" onclick="closeMobileNav();">상담신청<span class="gnb-sub">Contact ➔</span></a></li>
                 </ul>

@@ -1357,8 +1357,8 @@ if (!empty($active_popups)) {
         
         <!-- SECTION HEADER -->
         <div class="broadcast-head wow fadeInUp" data-wow-duration="0.8s">
-          <span class="broadcast-kicker">BROADCAST PROGRAM</span>
-          <h2 class="broadcast-head-title">방송 연계 프로그램</h2>
+          <span class="broadcast-kicker">04 / TV BROADCAST</span>
+          <h2 class="broadcast-head-title">TV 방송 프로그램</h2>
           <p class="broadcast-head-desc">
             지역 방송과 의료기관을 연결해<br class="pc_only">
             방송 프로그램 연계부터 진행까지 함께합니다.
