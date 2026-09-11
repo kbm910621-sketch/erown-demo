@@ -1672,9 +1672,9 @@ $(function() {
       var progress = currentScroll / totalScrollable;
 
       // Progress Stages:
-      // 0.00 ~ 0.35 : STEP 01 (MBC 건강365) Solid View
+      // 0.00 ~ 0.35 : STEP 01 (KBC 닥터365) Solid View
       // 0.35 ~ 0.55 : Scene Transition (trigger at 0.46 down, 0.40 up with hysteresis)
-      // 0.55 ~ 0.88 : STEP 02 (KBC 닥터365) Solid View
+      // 0.55 ~ 0.88 : STEP 02 (MBC 건강365) Solid View
       // 0.88 ~ 1.00 : Seamless exit to PARTNERS
       if (progress >= 0.46) {
         if (!$sec.hasClass('is-step-2')) {
@@ -1700,7 +1700,7 @@ $(function() {
 
       if (totalScrollable <= 0) return;
 
-      // 01 -> 18% (MBC sweet spot), 02 -> 70% (KBC sweet spot)
+      // 01 -> 18% (KBC sweet spot), 02 -> 70% (MBC sweet spot)
       var targetProgress = $btn.hasClass('bnb-02') ? 0.70 : 0.18;
       var targetY = trackOffsetTop + (totalScrollable * targetProgress);
 

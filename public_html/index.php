@@ -1368,39 +1368,7 @@ if (!empty($active_popups)) {
         <!-- MAIN SHOWCASE STAGE -->
         <div class="broadcast-stage">
           
-          <!-- STEP 01 : 광주MBC 건강365 -->
-          <div class="broadcast-card is-mbc">
-            <div class="broadcast-copy">
-              <div class="broadcast-logo">
-                <img src="/images/broadcast/gwangju-mbc.png" alt="광주MBC" class="broadcast-logo-img">
-              </div>
-              <h3 class="broadcast-title">건강365</h3>
-              <p class="broadcast-desc">
-                의료진의 전문적인 건강 정보를<br>
-                지역 시청자에게 쉽고 신뢰감 있게 전달하는<br>
-                의료·건강 정보 프로그램입니다.
-              </p>
-              <div class="broadcast-features">
-                <span class="broadcast-feat-label">PROGRAM FEATURES</span>
-                <ul class="broadcast-feat-list">
-                  <li><span class="bf-num">01</span><span class="bf-txt">의료진 전문성 전달</span></li>
-                  <li><span class="bf-num">02</span><span class="bf-txt">건강정보 콘텐츠 구성</span></li>
-                  <li><span class="bf-num">03</span><span class="bf-txt">지역 시청자 대상 방송 연계</span></li>
-                </ul>
-              </div>
-              <div class="broadcast-cta">
-                <a href="#contact" class="broadcast-cta-btn">
-                  <span>건강365 문의</span>
-                  <span class="broadcast-cta-arrow">↗</span>
-                </a>
-              </div>
-            </div>
-            <div class="broadcast-visual">
-              <img src="/images/broadcast/broadcast_mbc_365.jpg" alt="광주MBC 건강365 방송 연계 프로그램" class="broadcast-img" loading="lazy">
-            </div>
-          </div>
-
-          <!-- STEP 02 : KBC 닥터365 (EXCLUSIVE) -->
+          <!-- STEP 01 (1P) : KBC 닥터365 (EXCLUSIVE) -->
           <div class="broadcast-card is-kbc">
             <div class="broadcast-copy">
               <div class="broadcast-logo">
@@ -1408,22 +1376,19 @@ if (!empty($active_popups)) {
               </div>
               <h3 class="broadcast-title">닥터365</h3>
               <div class="broadcast-exclusive">
-                <span class="broadcast-ex-kicker">GAON-N EXCLUSIVE</span>
-                <div class="broadcast-ex-line"></div>
-                <strong class="broadcast-ex-title">가온엔 독점 연계 프로그램</strong>
+                <span class="be-tag">GAON-N EXCLUSIVE</span>
+                <span class="be-title">가온엔 독점 연계 프로그램</span>
               </div>
               <p class="broadcast-desc">
-                의료진의 전문성과 병원의 핵심 정보를<br>
-                방송 콘텐츠로 구성해<br>
-                지역 시청자에게 효과적으로 전달하는<br>
-                KBC 건강정보 프로그램입니다.
+                의료진의 전문성과 병원의 핵심 정보를 방송 콘텐츠로 구성해<br class="pc_only">
+                지역 시청자에게 효과적으로 전달하는 KBC 건강정보 프로그램입니다.
               </p>
               <div class="broadcast-features">
                 <span class="broadcast-feat-label">PROGRAM FEATURES</span>
                 <ul class="broadcast-feat-list">
-                  <li><span class="bf-num">01</span><span class="bf-txt">의료진 전문 콘텐츠</span></li>
-                  <li><span class="bf-num">02</span><span class="bf-txt">지역 방송을 통한 정보 전달</span></li>
-                  <li><span class="bf-num">03</span><span class="bf-txt">가온엔 독점 프로그램 연계</span></li>
+                  <li><span class="bf-num">01</span><span class="bf-txt">의료진 전문 콘텐츠 기획 및 구성</span></li>
+                  <li><span class="bf-num">02</span><span class="bf-txt">지역 방송망을 통한 높은 신뢰도 확보</span></li>
+                  <li><span class="bf-num">03</span><span class="bf-txt">가온엔 독점 프로그램 공식 연계 지원</span></li>
                 </ul>
               </div>
               <div class="broadcast-cta">
@@ -1438,11 +1403,42 @@ if (!empty($active_popups)) {
             </div>
           </div>
 
+          <!-- STEP 02 (2P) : 광주MBC 건강365 -->
+          <div class="broadcast-card is-mbc">
+            <div class="broadcast-copy">
+              <div class="broadcast-logo">
+                <img src="/images/broadcast/mbc.png" alt="MBC" class="broadcast-logo-img">
+              </div>
+              <h3 class="broadcast-title">건강365</h3>
+              <p class="broadcast-desc">
+                의료진의 전문적인 건강 정보를 방송 콘텐츠로 전달하여<br class="pc_only">
+                지역 시청자에게 쉽고 신뢰감 있게 전달하는 대표 의료·건강 정보 프로그램입니다.
+              </p>
+              <div class="broadcast-features">
+                <span class="broadcast-feat-label">PROGRAM FEATURES</span>
+                <ul class="broadcast-feat-list">
+                  <li><span class="bf-num">01</span><span class="bf-txt">의료진 전문성 및 임상 정보 전달</span></li>
+                  <li><span class="bf-num">02</span><span class="bf-txt">시청자 눈높이에 맞춘 건강정보 구성</span></li>
+                  <li><span class="bf-num">03</span><span class="bf-txt">지역 시청자 대상 방송 연계 및 송출</span></li>
+                </ul>
+              </div>
+              <div class="broadcast-cta">
+                <a href="#contact" class="broadcast-cta-btn">
+                  <span>건강365 문의</span>
+                  <span class="broadcast-cta-arrow">↗</span>
+                </a>
+              </div>
+            </div>
+            <div class="broadcast-visual">
+              <img src="/images/broadcast/broadcast_mbc_365.jpg" alt="MBC 건강365 방송 연계 프로그램" class="broadcast-img" loading="lazy">
+            </div>
+          </div>
+
           <!-- NAVIGATION (01 ━━━━ 02) -->
           <div class="broadcast-nav" aria-label="프로그램 진행 순서">
-            <button type="button" class="broadcast-nav-btn bnb-01" aria-label="광주MBC 건강365">01</button>
+            <button type="button" class="broadcast-nav-btn bnb-01" aria-label="KBC 닥터365">01</button>
             <div class="broadcast-nav-track"><div class="broadcast-nav-bar"></div></div>
-            <button type="button" class="broadcast-nav-btn bnb-02" aria-label="KBC 닥터365">02</button>
+            <button type="button" class="broadcast-nav-btn bnb-02" aria-label="MBC 건강365">02</button>
           </div>
 
         </div>
