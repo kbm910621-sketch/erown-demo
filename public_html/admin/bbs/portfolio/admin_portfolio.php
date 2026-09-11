@@ -66,7 +66,6 @@ if (file_exists($seed_file)) {
                 header('Location: admin_portfolio.php?msg=synced');
                 exit;
             }
-        }
     }
 }
 
