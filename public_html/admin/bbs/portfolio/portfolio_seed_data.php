@@ -1038,4 +1038,207 @@ array(
     ),
     "date" => "2026·09"
   ),
+
+  array(
+    "id" => 65,
+    "category" => "taxi",
+    "badge" => "TAXI·WRAP",
+    "tag" => "택시 외부 래핑",
+    "title" => "광주안과의원 전면·측면 고광택 택시 랩핑 광고",
+    "client" => "광주안과의원",
+    "location" => "광주 전역 택시 영업구역",
+    "scale" => "법인·개인 택시 래핑",
+    "description" => "광주 시내 전역을 상시 운행하는 택시 도어 및 펜더 랩핑으로 도심 유동인구 및 차량 탑승객 대상 고빈도 브랜드 각인",
+    "thumb" => "/images/port/port_taxi_01.jpg",
+    "images" => array(
+      "/images/port/port_taxi_01.jpg",
+      "/images/port/port_taxi_02.jpg"
+    ),
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 66,
+    "category" => "bus",
+    "badge" => "BUS·WRAP",
+    "tag" => "시내버스 광고",
+    "title" => "해태아이스 부라보콘 지원45번 버스 3면 풀래핑 광고",
+    "client" => "해태아이스",
+    "location" => "광주 지원45번 간선버스 노선",
+    "scale" => "시내버스 차도면·인도면·후면",
+    "description" => "친근한 스테디셀러 브랜드 부라보콘의 대형 비주얼을 버스 차도면과 인도면에 와이드하게 부착하여 보행자 및 차량 운전자 시선 집중",
+    "thumb" => "/images/port/port_bus_bravo_01.jpg",
+    "images" => array(
+      "/images/port/port_bus_bravo_01.jpg",
+      "/images/port/port_bus_bravo_02.jpg",
+      "/images/port/port_bus_bravo_03.jpg"
+    ),
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 67,
+    "category" => "taxi",
+    "badge" => "PARCEL·AD",
+    "tag" => "택배차량 광고",
+    "title" => "더스마트병원 골절·관절 전문케어 택배차량 래핑 광고",
+    "client" => "더스마트병원",
+    "location" => "광주 전역 택배 배송 권역 (4대)",
+    "scale" => "택배차량 4대 측면·후면",
+    "description" => "아파트 단지 및 주택가 골목길을 1일 10시간 이상 누비는 택배차량 양측면과 후면에 병원 진료과목 집중 홍보",
+    "thumb" => "/images/port/port_truck_smart_01.jpg",
+    "images" => array(
+      "/images/port/port_truck_smart_01.jpg",
+      "/images/port/port_truck_smart_02.jpg",
+      "/images/port/port_truck_smart_03.jpg"
+    ),
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 68,
+    "category" => "taxi",
+    "badge" => "PARCEL·AD",
+    "tag" => "택배차량 광고",
+    "title" => "삼성스토어 광천점 오픈·가전 페스타 택배차량 30대 래핑 광고",
+    "client" => "삼성스토어 광천점",
+    "location" => "광주 서구·광산구·북구 배송 권역 (30대)",
+    "scale" => "택배차량 30대 대형 플릿",
+    "description" => "광주 주요 거점 아파트 밀집 주거지역을 순회하는 택배 탑차 30대에 동시 래핑 집행하여 단기간 내 압도적인 브랜드 노출 확보",
+    "thumb" => "/images/port/port_truck_samsung_01.jpg",
+    "images" => array(
+      "/images/port/port_truck_samsung_01.jpg",
+      "/images/port/port_truck_samsung_02.jpg",
+      "/images/port/port_truck_samsung_03.jpg"
+    ),
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 69,
+    "category" => "taxi",
+    "badge" => "PARCEL·AD",
+    "tag" => "택배차량 광고",
+    "title" => "스마트인재개발원 IT·AI 취업과정 모집 택배차량 10대 래핑 광고",
+    "client" => "스마트인재개발원",
+    "location" => "광주 대학가 및 청년 주거밀집 구역 (10대)",
+    "scale" => "택배차량 10대",
+    "description" => "국비지원 IT·빅데이터·AI 교육생 모집 안내를 2030 주거 및 상권 밀집지역 택배차량에 래핑하여 타깃 접근성 극대화",
+    "thumb" => "/images/port/port_truck_smhrd_01.jpg",
+    "images" => array(
+      "/images/port/port_truck_smhrd_01.jpg",
+      "/images/port/port_truck_smhrd_02.jpg",
+      "/images/port/port_truck_smhrd_03.jpg"
+    ),
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 70,
+    "category" => "taxi",
+    "badge" => "PARCEL·AD",
+    "tag" => "택배차량 광고",
+    "title" => "신수정 시의원 지역밀착 의정보고 택배차량 10대 홍보 래핑",
+    "client" => "신수정 광주광역시의원",
+    "location" => "광주 북구 관내 생활권 배송 노선 (10대)",
+    "scale" => "택배차량 10대",
+    "description" => "지역 유권자의 생활 동선과 골목길에 상시 노출되는 택배 차량을 활용한 친근하고 효과적인 의정활동 홍보 집행",
+    "thumb" => "/images/port/port_truck_sinsujeong_01.jpg",
+    "images" => array(
+      "/images/port/port_truck_sinsujeong_01.jpg",
+      "/images/port/port_truck_sinsujeong_02.jpg",
+      "/images/port/port_truck_sinsujeong_03.jpg"
+    ),
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 71,
+    "category" => "taxi",
+    "badge" => "PARCEL·AD",
+    "tag" => "택배차량 광고",
+    "title" => "정다은 변호사 무료법률상담·전문클리닉 택배차량 40대 래핑 광고",
+    "client" => "정다은 변호사",
+    "location" => "광주 전역 5개구 순회 배송 권역 (40대)",
+    "scale" => "택배차량 40대 대규모 플릿",
+    "description" => "광주 전역 5개구를 커버하는 40대 택배 탑차 측면·후면에 법률 서비스 안내를 부착하여 상시 노출 및 신뢰도 제고",
+    "thumb" => "/images/port/port_truck_jungdaeun_01.jpg",
+    "images" => array(
+      "/images/port/port_truck_jungdaeun_01.jpg",
+      "/images/port/port_truck_jungdaeun_02.jpg",
+      "/images/port/port_truck_jungdaeun_03.jpg"
+    ),
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 72,
+    "category" => "taxi",
+    "badge" => "PARCEL·AD",
+    "tag" => "택배차량 광고",
+    "title" => "하트치과 분과별 전문진료 택배차량 5대 양면 래핑 광고",
+    "client" => "하트치과의원",
+    "location" => "광주 도심 및 주거밀집 배송 노선 (5대)",
+    "scale" => "택배차량 5대",
+    "description" => "치아교정·임플란트 진료 안내를 택배 탑차 측면 대형 면적에 선명한 컬러로 래핑하여 보행자와 주거민에게 각인",
+    "thumb" => "/images/port/port_truck_heartdental_01.jpg",
+    "images" => array(
+      "/images/port/port_truck_heartdental_01.jpg",
+      "/images/port/port_truck_heartdental_02.jpg",
+      "/images/port/port_truck_heartdental_03.jpg"
+    ),
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 73,
+    "category" => "bus",
+    "badge" => "BUS·WRAP",
+    "tag" => "시내버스 광고",
+    "title" => "광주 시내버스 간선노선 측면 와이드 래핑 광고",
+    "client" => "광주 주요 공공·기업",
+    "location" => "광주 전역 간선·지선 노선",
+    "scale" => "시내버스 차도면·인도면",
+    "description" => "광주 시내 중심가를 관통하는 간선버스 외부 와이드 광고면을 활용한 고효율 옥외광고 집행 사례",
+    "thumb" => "/images/port/port_bus_new_01.jpg",
+    "images" => array(
+      "/images/port/port_bus_new_01.jpg",
+      "/images/port/port_bus_new_02.jpg",
+      "/images/port/port_bus_new_03.jpg",
+      "/images/port/port_bus_new_04.jpg"
+    ),
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 74,
+    "category" => "shelter",
+    "badge" => "SHELTER·AD",
+    "tag" => "버스 승강장·쉘터",
+    "title" => "광주 도심 주요 거점 버스승강장 와이드 조명 쉘터 광고",
+    "client" => "지역 유력 브랜드",
+    "location" => "광주 서구·북구·남구 주요 환승 정류소",
+    "scale" => "승강장 양면 조명 쉘터",
+    "description" => "야간에도 선명한 백라이트 조명 쉘터로 대중교통 이용객 및 야간 유동인구 시선 밀착 집중",
+    "thumb" => "/images/port/port_bus_new_05.jpg",
+    "images" => array(
+      "/images/port/port_bus_new_05.jpg",
+      "/images/port/port_bus_new_06.jpg",
+      "/images/port/port_bus_new_07.jpg",
+      "/images/port/port_bus_new_08.jpg"
+    ),
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 75,
+    "category" => "bus",
+    "badge" => "BUS·WRAP",
+    "tag" => "시내버스 광고",
+    "title" => "광주 대중교통 시내버스 차도면·후면 복합 래핑 캠페인",
+    "client" => "브랜드 캠페인",
+    "location" => "광주 도심 순환 및 간선도로",
+    "scale" => "시내버스 복합 래핑",
+    "description" => "차량 운전자와 보행자 시선을 동시에 사로잡는 시내버스 차도면 및 후면 복합 래핑 집행",
+    "thumb" => "/images/port/port_bus_new_09.jpg",
+    "images" => array(
+      "/images/port/port_bus_new_09.jpg",
+      "/images/port/port_bus_new_10.jpg",
+      "/images/port/port_bus_new_11.jpg",
+      "/images/port/port_bus_new_12.jpg",
+      "/images/port/port_bus_new_13.jpg",
+      "/images/port/port_bus_new_14.jpg"
+    ),
+    "date" => "2026·09"
+  )
 );
