@@ -1051,23 +1051,46 @@ $(function() {
   });
 
   /* ==========================================================================
-     PORTFOLIO LIGHTBOX MODAL WITH FULL PREV / NEXT NAVIGATION & VIDEO PLAYBACK
+     PORTFOLIO LIGHTBOX MODAL WITH FULL PREV / NEXT NAVIGATION & MULTI-PHOTO DOTS
   ========================================================================== */
   var currentModalList = [];
   var currentModalIndex = 0;
+  var currentModalPhotoIdx = 0;
 
-  function updateModalContent(index) {
+  function switchMainModalPhoto(pIdx) {
+    if (!currentModalList.length) return;
+    var item = currentModalList[currentModalIndex];
+    if (!item.images || !item.images.length) return;
+    if (pIdx < 0) pIdx = item.images.length - 1;
+    if (pIdx >= item.images.length) pIdx = 0;
+    currentModalPhotoIdx = pIdx;
+
+    var $img = $('#modalImg');
+    $img.css({ opacity: 0.35 });
+    setTimeout(function() {
+      $img.attr('src', item.images[pIdx]);
+      $img.css({ opacity: 1 });
+    }, 90);
+
+    $('.pm-dot-btn').removeClass('active');
+    $('.pm-dot-btn[data-idx="' + pIdx + '"]').addClass('active');
+  }
+
+  function updateModalContent(index, photoIdx) {
     if (!currentModalList.length) return;
     if (index < 0) index = currentModalList.length - 1;
     if (index >= currentModalList.length) index = 0;
     currentModalIndex = index;
+    currentModalPhotoIdx = (typeof photoIdx === 'number') ? photoIdx : 0;
 
     var item = currentModalList[currentModalIndex];
     var $img = $('#modalImg');
     var $vEl = $('#modalVideo');
+    var $dotsWrap = $('#modalPhotoDots');
 
     if (item.video) {
       $img.hide();
+      if ($dotsWrap.length) $dotsWrap.hide().empty();
       if ($vEl.length) {
         $vEl.attr('src', item.video).show();
         if ($vEl[0]) {
@@ -1089,16 +1112,34 @@ $(function() {
         $vEl[0].pause();
         $vEl.hide().attr('src', '');
       }
+
+      var imgs = (item.images && item.images.length) ? item.images : [item.img];
+      if (currentModalPhotoIdx >= imgs.length) currentModalPhotoIdx = 0;
+      var activeImgSrc = imgs[currentModalPhotoIdx];
+
       $img.show().css({ opacity: 0, transform: 'scale(0.97)' });
       setTimeout(function() {
         $('#modalTitle').text(item.title);
-        $('#modalImg').attr('src', item.img);
+        $('#modalImg').attr('src', activeImgSrc);
         $('#modalCat').text(item.tag);
         $('#modalLoc').text('광주 주요 상권 직영 시공 사례');
         $('#modalCounter').text((currentModalIndex + 1) + ' / ' + currentModalList.length);
         $('#modalCtaBtn').text('이 광고 집행 견적 문의 ➔');
         $('#modalImg').css({ opacity: 1, transform: 'scale(1)' });
-      }, 120);
+      }, 100);
+
+      // Render dots if multiple images
+      if ($dotsWrap.length) {
+        if (imgs.length > 1) {
+          var dHtml = '';
+          imgs.forEach(function(u, pI) {
+            dHtml += '<button type="button" class="pm-dot-btn ' + (pI === currentModalPhotoIdx ? 'active' : '') + '" data-idx="' + pI + '" title="사진 ' + (pI + 1) + '"></button>';
+          });
+          $dotsWrap.html(dHtml).show();
+        } else {
+          $dotsWrap.hide().empty();
+        }
+      }
     }
   }
 
@@ -1111,6 +1152,38 @@ $(function() {
     $('#modalBackdrop').removeClass('open').fadeOut(200);
   }
 
+  // Dot Click in Main Modal
+  $(document).on('click', '.pm-dot-btn', function(e) {
+    e.stopPropagation();
+    var pIdx = parseInt($(this).data('idx'), 10) || 0;
+    switchMainModalPhoto(pIdx);
+  });
+
+  // Main Swiper Card Multi-photo Dot Click/Hover
+  $(document).on('click mouseenter', '.asps-card-dot-btn', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    var $dot = $(this);
+    if ($dot.hasClass('active')) return;
+
+    var targetImgUrl = $dot.data('img-url');
+    var pIdx = parseInt($dot.data('idx'), 10) || 0;
+    var $card = $dot.closest('.asps-card');
+    var $img = $card.find('.asps-thumb img');
+
+    $card.find('.asps-card-dot-btn').removeClass('active');
+    $dot.addClass('active');
+
+    $img.addClass('is-switching');
+    setTimeout(function() {
+      $img.attr('src', targetImgUrl);
+      $img.removeClass('is-switching');
+    }, 90);
+
+    $card.data('selected-photo-idx', pIdx);
+  });
+
   // Open Lightbox Modal on card click
   $(document).on('click', '.main-port-card, .asps-card, .mbp-card-item', function(e) {
     if ($('.portfolio-body').length) return;
@@ -1121,9 +1194,22 @@ $(function() {
     
     currentModalList = [];
     $cards.each(function(i, el) {
+      var rawImgs = $(el).data('images');
+      var imgArr = [];
+      if (typeof rawImgs === 'string') {
+        try { imgArr = JSON.parse(rawImgs); } catch(err) { imgArr = []; }
+      } else if (Array.isArray(rawImgs)) {
+        imgArr = rawImgs;
+      }
+      if (!imgArr.length) {
+        var s = $(el).data('img') || $(el).find('img').attr('src');
+        if (s) imgArr = [s];
+      }
+
       currentModalList.push({
         title: $(el).data('name') || $(el).find('.asps-item-title, h5, .mbp-card-title').text().trim(),
         img: $(el).data('img') || $(el).find('img').attr('src'),
+        images: imgArr,
         video: $(el).data('video') || '',
         tag: $(el).data('tag') || $(el).data('cat') || '광고사례'
       });
@@ -1133,7 +1219,8 @@ $(function() {
     var foundIndex = currentModalList.findIndex(function(it) { return it.title === clickedTitle; });
     if (foundIndex === -1) foundIndex = 0;
 
-    updateModalContent(foundIndex);
+    var savedPhotoIdx = parseInt($(this).data('selected-photo-idx'), 10) || 0;
+    updateModalContent(foundIndex, savedPhotoIdx);
     $('#modalBackdrop').addClass('open').fadeIn(200);
   });
 
@@ -1141,20 +1228,44 @@ $(function() {
   $(document).on('click', '#modalPrevBtn', function(e) {
     e.preventDefault();
     e.stopPropagation();
-    updateModalContent(currentModalIndex - 1);
+    var item = currentModalList[currentModalIndex];
+    if (item && item.images && item.images.length > 1 && currentModalPhotoIdx > 0) {
+      switchMainModalPhoto(currentModalPhotoIdx - 1);
+    } else {
+      updateModalContent(currentModalIndex - 1);
+    }
   });
 
   $(document).on('click', '#modalNextBtn', function(e) {
     e.preventDefault();
     e.stopPropagation();
-    updateModalContent(currentModalIndex + 1);
+    var item = currentModalList[currentModalIndex];
+    if (item && item.images && item.images.length > 1 && currentModalPhotoIdx < item.images.length - 1) {
+      switchMainModalPhoto(currentModalPhotoIdx + 1);
+    } else {
+      updateModalContent(currentModalIndex + 1);
+    }
   });
 
   // Keyboard navigation for modal (Left / Right arrow keys)
   $(document).on('keydown', function(e) {
     if ($('#modalBackdrop').hasClass('open')) {
-      if (e.key === 'ArrowLeft') updateModalContent(currentModalIndex - 1);
-      if (e.key === 'ArrowRight') updateModalContent(currentModalIndex + 1);
+      if (e.key === 'ArrowLeft') {
+        var item = currentModalList[currentModalIndex];
+        if (item && item.images && item.images.length > 1 && currentModalPhotoIdx > 0) {
+          switchMainModalPhoto(currentModalPhotoIdx - 1);
+        } else {
+          updateModalContent(currentModalIndex - 1);
+        }
+      }
+      if (e.key === 'ArrowRight') {
+        var item = currentModalList[currentModalIndex];
+        if (item && item.images && item.images.length > 1 && currentModalPhotoIdx < item.images.length - 1) {
+          switchMainModalPhoto(currentModalPhotoIdx + 1);
+        } else {
+          updateModalContent(currentModalIndex + 1);
+        }
+      }
       if (e.key === 'Escape') closeMainModal();
     }
   });

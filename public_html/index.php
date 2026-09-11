@@ -53,20 +53,24 @@ foreach ($list as $item) {
 
 // 01 옥외광고 (버스/택시/택배 등) 기본 샘플 데이터 및 보충 (최신 등록 사례 최우선 배치)
 $defaultBus = array(
-  array('id'=>65, 'category'=>'taxi', 'title'=>'광주안과의원 전면·측면 고광택 택시 랩핑 광고', 'thumb'=>'/images/port/port_taxi_01.jpg', 'sort_order'=>1),
-  array('id'=>66, 'category'=>'bus', 'title'=>'해태아이스 부라보콘 지원45번 버스 3면 풀래핑 광고', 'thumb'=>'/images/port/port_bus_bravo_01.jpg', 'sort_order'=>2),
-  array('id'=>67, 'category'=>'taxi', 'title'=>'더스마트병원 골절·관절 전문케어 택배차량 래핑 광고', 'thumb'=>'/images/port/port_truck_smart_01.jpg', 'sort_order'=>3),
-  array('id'=>68, 'category'=>'taxi', 'title'=>'삼성스토어 광천점 오픈·가전 페스타 택배차량 30대 래핑 광고', 'thumb'=>'/images/port/port_truck_samsung_01.jpg', 'sort_order'=>4),
-  array('id'=>69, 'category'=>'taxi', 'title'=>'스마트인재개발원 IT·AI 취업과정 모집 택배차량 10대 래핑 광고', 'thumb'=>'/images/port/port_truck_smhrd_01.jpg', 'sort_order'=>5),
-  array('id'=>70, 'category'=>'taxi', 'title'=>'신수정 시의원 지역밀착 의정보고 택배차량 10대 홍보 래핑', 'thumb'=>'/images/port/port_truck_sinsujeong_01.jpg', 'sort_order'=>6),
-  array('id'=>71, 'category'=>'taxi', 'title'=>'정다은 변호사 무료법률상담·전문클리닉 택배차량 40대 래핑 광고', 'thumb'=>'/images/port/port_truck_jungdaeun_01.jpg', 'sort_order'=>7),
-  array('id'=>72, 'category'=>'taxi', 'title'=>'하트치과 분과별 전문진료 택배차량 5대 양면 래핑 광고', 'thumb'=>'/images/port/port_truck_heartdental_01.jpg', 'sort_order'=>8),
-  array('id'=>73, 'category'=>'bus', 'title'=>'광주 시내버스 간선노선 측면 와이드 래핑 광고', 'thumb'=>'/images/port/port_bus_new_01.jpg', 'sort_order'=>9),
-  array('id'=>74, 'category'=>'shelter', 'title'=>'광주 도심 주요 거점 버스승강장 와이드 조명 쉘터 광고', 'thumb'=>'/images/port/port_bus_new_05.jpg', 'sort_order'=>10),
-  array('id'=>75, 'category'=>'bus', 'title'=>'광주 대중교통 시내버스 차도면·후면 복합 래핑 캠페인', 'thumb'=>'/images/port/port_bus_new_09.jpg', 'sort_order'=>11),
-  array('id'=>1, 'category'=>'bus', 'title'=>'상무지구 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/bs_ad/ooh11/차도면광고.png', 'sort_order'=>100),
-  array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'thumb'=>'/images/bs_ad/ooh11/인도면광고.png', 'sort_order'=>101),
-  array('id'=>64, 'category'=>'mart', 'title'=>'더스마트병원 대형마트 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/port/mart/mart_01.jpg', 'sort_order'=>102)
+  array('id'=>65, 'category'=>'taxi', 'badge'=>'TAXI·WRAP', 'title'=>'광주안과의원 전면·측면 고광택 택시 랩핑 광고', 'thumb'=>'/images/port/port_taxi_01.jpg', 'images'=>array('/images/port/port_taxi_01.jpg','/images/port/port_taxi_02.jpg'), 'client'=>'광주안과의원', 'location'=>'광주 전역 택시 영업구역', 'sort_order'=>1),
+  array('id'=>66, 'category'=>'bus', 'badge'=>'BUS·WRAP', 'title'=>'해태아이스 부라보콘 지원45번 버스 3면 풀래핑 광고', 'thumb'=>'/images/port/port_bus_bravo_01.jpg', 'images'=>array('/images/port/port_bus_bravo_01.jpg','/images/port/port_bus_bravo_02.jpg','/images/port/port_bus_bravo_03.jpg'), 'client'=>'해태아이스', 'location'=>'광주 지원45번 간선버스', 'sort_order'=>2),
+  array('id'=>67, 'category'=>'bus', 'badge'=>'BUS·REAR', 'title'=>'제3회 광산 세계야시장 광주시내버스 후면 광고', 'thumb'=>'/images/port/port_bus_gwangsan_night_01.jpg', 'images'=>array('/images/port/port_bus_gwangsan_night_01.jpg','/images/port/port_bus_gwangsan_night_02.jpg'), 'client'=>'광산구청', 'location'=>'광주 지곡196번 / 일곡10번', 'sort_order'=>3),
+  array('id'=>68, 'category'=>'bus', 'badge'=>'BUS·REAR', 'title'=>'호남최대규모 전기난방업체 대륙 시내버스 후면 광고', 'thumb'=>'/images/port/port_bus_daeruk_heating_01.jpg', 'images'=>array('/images/port/port_bus_daeruk_heating_01.jpg'), 'client'=>'(주)대륙난방', 'location'=>'광주 지곡196번 시내버스', 'sort_order'=>4),
+  array('id'=>69, 'category'=>'bus', 'badge'=>'BUS·SIDE', 'title'=>'신신제약 신신파스 아렉스 좌석02번 버스 인도면 광고', 'thumb'=>'/images/port/port_bus_sinshin_02.jpg', 'images'=>array('/images/port/port_bus_sinshin_02.jpg','/images/port/port_bus_sinshin_01.jpg'), 'client'=>'신신제약', 'location'=>'광주 좌석02번 급행버스', 'sort_order'=>5),
+  array('id'=>70, 'category'=>'bus', 'badge'=>'BUS·SIDE', 'title'=>'베스트장례문화원 OPEN 시내버스 차도면 와이드 광고', 'thumb'=>'/images/port/port_bus_best_funeral_02.jpg', 'images'=>array('/images/port/port_bus_best_funeral_02.jpg','/images/port/port_bus_best_funeral_01.jpg'), 'client'=>'베스트장례문화원', 'location'=>'광주 공항 맞은편', 'sort_order'=>6),
+  array('id'=>71, 'category'=>'bus', 'badge'=>'BUS·REAR', 'title'=>'세계로 앞서가는 전남과학대학교 시내버스 후면 광고', 'thumb'=>'/images/port/port_bus_chunnam_sci_01.jpg', 'images'=>array('/images/port/port_bus_chunnam_sci_01.jpg'), 'client'=>'전남과학대학교', 'location'=>'광주 좌석02번 급행버스', 'sort_order'=>7),
+  array('id'=>72, 'category'=>'bus', 'badge'=>'BUS·SIDE', 'title'=>'No.1 K-슈즈 탠디(TANDY) 금호36번 버스 인도면 광고', 'thumb'=>'/images/port/port_bus_tandy_01.jpg', 'images'=>array('/images/port/port_bus_tandy_01.jpg','/images/port/port_bus_tandy_02.jpg'), 'client'=>'탠디(TANDY)', 'location'=>'광주 금호36번 간선버스', 'sort_order'=>8),
+  array('id'=>73, 'category'=>'bus', 'badge'=>'BUS·SIDE', 'title'=>'국립아시아문화전당 코레오커넥션 수소전기버스 차도면 광고', 'thumb'=>'/images/port/port_bus_acc_choreo_02.jpg', 'images'=>array('/images/port/port_bus_acc_choreo_02.jpg','/images/port/port_bus_acc_choreo_01.jpg'), 'client'=>'국립아시아문화전당', 'location'=>'광주 수소전기버스', 'sort_order'=>9),
+  array('id'=>74, 'category'=>'bus', 'badge'=>'BUS·SIDE', 'title'=>'월드드림랜드(찜질방·수영장) 시내버스 차도면 와이드 광고', 'thumb'=>'/images/port/port_bus_worlddream_01.jpg', 'images'=>array('/images/port/port_bus_worlddream_01.jpg','/images/port/port_bus_worlddream_02.jpg'), 'client'=>'월드드림랜드', 'location'=>'광주 대창운수 간선버스', 'sort_order'=>10),
+  array('id'=>75, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'더스마트병원 골절·관절 전문케어 택배차량 래핑 광고', 'thumb'=>'/images/port/port_truck_smart_01.jpg', 'images'=>array('/images/port/port_truck_smart_01.jpg','/images/port/port_truck_smart_02.jpg','/images/port/port_truck_smart_03.jpg'), 'client'=>'더스마트병원', 'location'=>'광주 전역 택배 배송 권역', 'sort_order'=>11),
+  array('id'=>76, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'삼성스토어 광천점 오픈·가전 페스타 택배차량 30대 래핑 광고', 'thumb'=>'/images/port/port_truck_samsung_01.jpg', 'images'=>array('/images/port/port_truck_samsung_01.jpg','/images/port/port_truck_samsung_02.jpg','/images/port/port_truck_samsung_03.jpg'), 'client'=>'삼성스토어', 'location'=>'광주 30대 배송 권역', 'sort_order'=>12),
+  array('id'=>77, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'스마트인재개발원 IT·AI 취업과정 모집 택배차량 10대 래핑 광고', 'thumb'=>'/images/port/port_truck_smhrd_01.jpg', 'images'=>array('/images/port/port_truck_smhrd_01.jpg','/images/port/port_truck_smhrd_02.jpg','/images/port/port_truck_smhrd_03.jpg'), 'client'=>'스마트인재개발원', 'location'=>'광주 10대 배송 권역', 'sort_order'=>13),
+  array('id'=>78, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'신수정 시의원 지역밀착 의정보고 택배차량 10대 홍보 래핑', 'thumb'=>'/images/port/port_truck_sinsujeong_01.jpg', 'images'=>array('/images/port/port_truck_sinsujeong_01.jpg','/images/port/port_truck_sinsujeong_02.jpg'), 'client'=>'신수정 시의원', 'location'=>'광주 북구 10대', 'sort_order'=>14),
+  array('id'=>79, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'정다은 변호사 무료법률상담·전문클리닉 택배차량 40대 래핑 광고', 'thumb'=>'/images/port/port_truck_jungdaeun_01.jpg', 'images'=>array('/images/port/port_truck_jungdaeun_01.jpg','/images/port/port_truck_jungdaeun_02.jpg','/images/port/port_truck_jungdaeun_03.jpg'), 'client'=>'정다은 변호사', 'location'=>'광주 40대 플릿', 'sort_order'=>15),
+  array('id'=>80, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'하트치과 분과별 전문진료 택배차량 5대 양면 래핑 광고', 'thumb'=>'/images/port/port_truck_heartdental_01.jpg', 'images'=>array('/images/port/port_truck_heartdental_01.jpg','/images/port/port_truck_heartdental_02.jpg','/images/port/port_truck_heartdental_03.jpg'), 'client'=>'하트치과의원', 'location'=>'광주 5대 권역', 'sort_order'=>16),
+  array('id'=>1, 'category'=>'bus', 'badge'=>'BUS·SIDE', 'title'=>'상무지구 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/bs_ad/ooh11/차도면광고.png', 'images'=>array('/images/bs_ad/ooh11/차도면광고.png'), 'client'=>'메디컬센터', 'location'=>'상무지구 노선', 'sort_order'=>100),
+  array('id'=>64, 'category'=>'mart', 'badge'=>'MART·CART', 'title'=>'더스마트병원 대형마트 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/port/mart/mart_01.jpg', 'images'=>array('/images/port/mart/mart_01.jpg'), 'client'=>'더스마트병원', 'location'=>'광주 대형마트', 'sort_order'=>102)
 );
 if (empty($portBus)) {
   $portBus = $defaultBus;
@@ -713,11 +717,34 @@ if (!empty($active_popups)) {
         </div>
         <div class="swiper asps-swiper asps-swiper-bus">
           <div class="swiper-wrapper">
-            <?php foreach ($portBus as $bItem): ?>
-            <div class="swiper-slide asps-card main-port-card" data-cat="<?php echo htmlspecialchars($bItem['category']); ?>" data-id="<?php echo (int)$bItem['id']; ?>" data-name="<?php echo htmlspecialchars($bItem['title']); ?>" data-img="<?php echo htmlspecialchars($bItem['thumb']); ?>" data-tag="옥외광고">
+            <?php foreach ($portBus as $bItem): 
+              $bThumb = normalize_port_img(!empty($bItem['thumb']) ? $bItem['thumb'] : '');
+              $bImages = array($bThumb);
+              if (!empty($bItem['images'])) {
+                $bDec = is_array($bItem['images']) ? $bItem['images'] : json_decode($bItem['images'], true);
+                if (is_array($bDec) && count($bDec) > 0) {
+                  $bImages = array_map('normalize_port_img', $bDec);
+                }
+              }
+              $bHasMulti = count($bImages) > 1;
+              $bImagesJson = htmlspecialchars(json_encode($bImages), ENT_QUOTES, 'UTF-8');
+              $bBadge = !empty($bItem['badge']) ? htmlspecialchars($bItem['badge']) : '옥외매체';
+              $bTag = !empty($bItem['tag']) ? htmlspecialchars($bItem['tag']) : '옥외광고';
+              $bClient = !empty($bItem['client']) ? htmlspecialchars($bItem['client']) : '';
+              $bLoc = !empty($bItem['location']) ? htmlspecialchars($bItem['location']) : '광주 맞춤 직영 시공';
+            ?>
+            <div class="swiper-slide asps-card main-port-card" data-cat="<?php echo htmlspecialchars($bItem['category']); ?>" data-id="<?php echo (int)$bItem['id']; ?>" data-name="<?php echo htmlspecialchars($bItem['title']); ?>" data-img="<?php echo $bThumb; ?>" data-images='<?php echo $bImagesJson; ?>' data-tag="<?php echo $bTag; ?>">
               <div class="asps-thumb">
-                <img src="<?php echo htmlspecialchars($bItem['thumb']); ?>" alt="<?php echo htmlspecialchars($bItem['title']); ?>" loading="lazy">
-                <span class="asps-badge">옥외매체</span>
+                <img src="<?php echo $bThumb; ?>" alt="<?php echo htmlspecialchars($bItem['title']); ?>" loading="lazy">
+                <span class="asps-badge"><?php echo $bBadge; ?></span>
+                <?php if ($bHasMulti): ?>
+                <!-- Main Card Photo Dots -->
+                <div class="asps-card-photo-dots" onclick="event.stopPropagation();">
+                  <?php foreach ($bImages as $dIdx => $dUrl): ?>
+                  <button type="button" class="asps-card-dot-btn <?php echo $dIdx === 0 ? 'active' : ''; ?>" data-img-url="<?php echo htmlspecialchars($dUrl, ENT_QUOTES, 'UTF-8'); ?>" data-idx="<?php echo $dIdx; ?>" title="<?php echo ($dIdx + 1); ?>번 사진 보기" aria-label="<?php echo ($dIdx + 1); ?>번 사진 보기"></button>
+                  <?php endforeach; ?>
+                </div>
+                <?php endif; ?>
                 <div class="asps-arrow-badge">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </div>
@@ -727,7 +754,7 @@ if (!empty($active_popups)) {
                   <strong class="asps-item-title"><?php echo htmlspecialchars($bItem['title']); ?></strong>
                   <span class="asps-title-arrow">↗</span>
                 </div>
-                <span class="asps-item-loc">광주 시내버스 맞춤 직영 시공</span>
+                <span class="asps-item-loc"><?php echo $bClient ? $bClient . ' · ' : ''; ?><?php echo $bLoc; ?></span>
               </div>
             </div>
             <?php endforeach; ?>

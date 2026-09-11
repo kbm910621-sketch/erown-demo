@@ -1,6 +1,6 @@
 <?php
 /**
- * Gaon-N Portfolio Seed Data (Properly Paired Outdoor Cases Front-Prioritized)
+ * Gaon-N Portfolio Seed Data (Accurately Paired by Brand/Advertiser)
  */
 $GAON_PORTFOLIO_ITEMS = array(
   array(
@@ -42,6 +42,148 @@ $GAON_PORTFOLIO_ITEMS = array(
   ),
   array(
     "id" => 67,
+    "category" => "bus",
+    "badge" => "BUS·REAR",
+    "tag" => "시내버스 후면",
+    "title" => "제3회 광산 세계야시장 광주시내버스 후면 광고",
+    "client" => "광산구청 / 광산세계야시장",
+    "location" => "광주 지곡196번 / 일곡10번 노선",
+    "scale" => "시내버스 2대 후면 전면 랩핑",
+    "description" => "가을 축제 광산 세계야시장 홍보를 위해 지곡196번과 일곡10번 버스 후면에 대형 비주얼 래핑 집행",
+    "thumb" => "/images/port/port_bus_gwangsan_night_01.jpg",
+    "images" => array(
+      "/images/port/port_bus_gwangsan_night_01.jpg",
+      "/images/port/port_bus_gwangsan_night_02.jpg"
+    ),
+    "sort_order" => 3,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 68,
+    "category" => "bus",
+    "badge" => "BUS·REAR",
+    "tag" => "시내버스 후면",
+    "title" => "호남최대규모 전기난방업체 대륙 시내버스 후면 광고",
+    "client" => "(주)대륙난방",
+    "location" => "광주 지곡196번 시내버스 노선",
+    "scale" => "시내버스 1대 후면 래핑",
+    "description" => "전기판넬·필름난방·건식난방 전문 대륙난방의 핵심 브랜드 및 대표전화를 후방 운전자 시선에 직결",
+    "thumb" => "/images/port/port_bus_daeruk_heating_01.jpg",
+    "images" => array(
+      "/images/port/port_bus_daeruk_heating_01.jpg"
+    ),
+    "sort_order" => 4,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 69,
+    "category" => "bus",
+    "badge" => "BUS·SIDE",
+    "tag" => "시내버스 인도면",
+    "title" => "신신제약 신신파스 아렉스 좌석02번 버스 인도면 광고",
+    "client" => "신신제약",
+    "location" => "광주 좌석02번 급행버스 노선",
+    "scale" => "좌석02번 인도면 와이드 패널",
+    "description" => "냉온찜질 이중효과 신신파스 아렉스 인도면 광고로 승강장 대기 승객 및 인도 보행자 대상 고노출",
+    "thumb" => "/images/port/port_bus_sinshin_02.jpg",
+    "images" => array(
+      "/images/port/port_bus_sinshin_02.jpg",
+      "/images/port/port_bus_sinshin_01.jpg"
+    ),
+    "sort_order" => 5,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 70,
+    "category" => "bus",
+    "badge" => "BUS·SIDE",
+    "tag" => "시내버스 차도면",
+    "title" => "베스트장례문화원 OPEN 시내버스 차도면 와이드 광고",
+    "client" => "베스트장례문화원",
+    "location" => "광주 주요 거점 간선버스 노선",
+    "scale" => "시내버스 차도면 와이드 래핑",
+    "description" => "광주 공항 맞은편 신규 오픈 베스트장례문화원의 프리미엄 시설과 대표번호를 차도면 대형 패널에 집중 홍보",
+    "thumb" => "/images/port/port_bus_best_funeral_02.jpg",
+    "images" => array(
+      "/images/port/port_bus_best_funeral_02.jpg",
+      "/images/port/port_bus_best_funeral_01.jpg"
+    ),
+    "sort_order" => 6,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 71,
+    "category" => "bus",
+    "badge" => "BUS·REAR",
+    "tag" => "시내버스 후면",
+    "title" => "세계로 앞서가는 전남과학대학교 시내버스 후면 광고",
+    "client" => "전남과학대학교",
+    "location" => "광주 좌석02번 급행버스 노선",
+    "scale" => "시내버스 1대 후면 래핑",
+    "description" => "전문대학혁신지원사업 우수 등급 획득 전남과학대학교의 모집 홍보를 좌석02번 버스 후면에 집행",
+    "thumb" => "/images/port/port_bus_chunnam_sci_01.jpg",
+    "images" => array(
+      "/images/port/port_bus_chunnam_sci_01.jpg"
+    ),
+    "sort_order" => 7,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 72,
+    "category" => "bus",
+    "badge" => "BUS·SIDE",
+    "tag" => "시내버스 인도면",
+    "title" => "No.1 K-슈즈 탠디(TANDY) 금호36번 버스 인도면 광고",
+    "client" => "탠디(TANDY)",
+    "location" => "광주 금호36번 간선버스 노선",
+    "scale" => "금호36번 인도면 와이드 패널",
+    "description" => "24년 연속 제화 브랜드 1위 탠디(TANDY)의 프리미엄 슈즈 라인업을 버스 인도면에 선명하게 래핑",
+    "thumb" => "/images/port/port_bus_tandy_01.jpg",
+    "images" => array(
+      "/images/port/port_bus_tandy_01.jpg",
+      "/images/port/port_bus_tandy_02.jpg"
+    ),
+    "sort_order" => 8,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 73,
+    "category" => "bus",
+    "badge" => "BUS·SIDE",
+    "tag" => "수소전기버스 차도면",
+    "title" => "국립아시아문화전당 코레오커넥션 수소전기버스 차도면 광고",
+    "client" => "국립아시아문화전당(ACC)",
+    "location" => "광주 수소전기버스(ELEC CITY) 노선",
+    "scale" => "수소전기버스 차도면 와이드 래핑",
+    "description" => "국립아시아문화전당 예술극장 기획공연 코레오커넥션의 강렬한 레드 비주얼을 친환경 수소전기버스에 부착",
+    "thumb" => "/images/port/port_bus_acc_choreo_02.jpg",
+    "images" => array(
+      "/images/port/port_bus_acc_choreo_02.jpg",
+      "/images/port/port_bus_acc_choreo_01.jpg"
+    ),
+    "sort_order" => 9,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 74,
+    "category" => "bus",
+    "badge" => "BUS·SIDE",
+    "tag" => "시내버스 차도면",
+    "title" => "월드드림랜드(찜질방·수영장) 시내버스 차도면 와이드 광고",
+    "client" => "월드드림랜드",
+    "location" => "광주 대창운수 간선버스 노선",
+    "scale" => "시내버스 차도면 와이드 래핑",
+    "description" => "24시 연중무휴 건강·힐링 스팟 월드드림랜드의 특가 이벤트와 다양한 부대시설을 버스 차도면에 와이드 홍보",
+    "thumb" => "/images/port/port_bus_worlddream_01.jpg",
+    "images" => array(
+      "/images/port/port_bus_worlddream_01.jpg",
+      "/images/port/port_bus_worlddream_02.jpg"
+    ),
+    "sort_order" => 10,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 75,
     "category" => "taxi",
     "badge" => "PARCEL·AD",
     "tag" => "택배차량 광고",
@@ -56,11 +198,11 @@ $GAON_PORTFOLIO_ITEMS = array(
       "/images/port/port_truck_smart_02.jpg",
       "/images/port/port_truck_smart_03.jpg"
     ),
-    "sort_order" => 3,
+    "sort_order" => 11,
     "date" => "2026·09"
   ),
   array(
-    "id" => 68,
+    "id" => 76,
     "category" => "taxi",
     "badge" => "PARCEL·AD",
     "tag" => "택배차량 광고",
@@ -68,215 +210,89 @@ $GAON_PORTFOLIO_ITEMS = array(
     "client" => "삼성스토어 광천점",
     "location" => "광주 서구·광산구·북구 배송 권역 (30대)",
     "scale" => "택배차량 30대 대형 플릿",
-    "description" => "광주 주요 거점 아파트 밀집 주거지역을 순회하는 택배 탑차 30대에 동시 래핑 집행하여 단기간 내 압도적인 브랜드 노출 확보",
+    "description" => "광주 전역을 촘촘히 연결하는 30대 택배차량 플릿 래핑으로 오픈 프로모션 및 가전 페스타 집중 홍보",
     "thumb" => "/images/port/port_truck_samsung_01.jpg",
     "images" => array(
       "/images/port/port_truck_samsung_01.jpg",
       "/images/port/port_truck_samsung_02.jpg",
       "/images/port/port_truck_samsung_03.jpg"
     ),
-    "sort_order" => 4,
+    "sort_order" => 12,
     "date" => "2026·09"
   ),
   array(
-    "id" => 69,
+    "id" => 77,
     "category" => "taxi",
     "badge" => "PARCEL·AD",
     "tag" => "택배차량 광고",
     "title" => "스마트인재개발원 IT·AI 취업과정 모집 택배차량 10대 래핑 광고",
     "client" => "스마트인재개발원",
-    "location" => "광주 대학가 및 청년 주거밀집 구역 (10대)",
-    "scale" => "택배차량 10대 (양측면+후면)",
-    "description" => "국비지원 IT·빅데이터·AI 교육생 모집 안내를 2030 주거 및 상권 밀집지역 택배차량에 래핑하여 타깃 접근성 극대화",
+    "location" => "광주 대학가·원룸촌·도심 상권 (10대)",
+    "scale" => "택배차량 10대 플릿",
+    "description" => "청년 취업준비생 유동이 많은 대학가 및 주거 권역 중심 10대 택배차량 래핑으로 국비 취업과정 홍보",
     "thumb" => "/images/port/port_truck_smhrd_01.jpg",
     "images" => array(
       "/images/port/port_truck_smhrd_01.jpg",
       "/images/port/port_truck_smhrd_02.jpg",
       "/images/port/port_truck_smhrd_03.jpg"
     ),
-    "sort_order" => 5,
-    "date" => "2026·09"
-  ),
-  array(
-    "id" => 70,
-    "category" => "taxi",
-    "badge" => "PARCEL·AD",
-    "tag" => "택배차량 광고",
-    "title" => "신수정 시의원 지역밀착 의정보고 택배차량 10대 홍보 래핑",
-    "client" => "신수정 광주광역시의원",
-    "location" => "광주 북구 관내 생활권 배송 노선 (10대)",
-    "scale" => "택배차량 10대",
-    "description" => "지역 유권자의 생활 동선과 골목길에 상시 노출되는 택배 차량을 활용한 친근하고 효과적인 의정활동 홍보 집행",
-    "thumb" => "/images/port/port_truck_sinsujeong_01.jpg",
-    "images" => array(
-      "/images/port/port_truck_sinsujeong_01.jpg",
-      "/images/port/port_truck_sinsujeong_02.jpg"
-    ),
-    "sort_order" => 6,
-    "date" => "2026·09"
-  ),
-  array(
-    "id" => 71,
-    "category" => "taxi",
-    "badge" => "PARCEL·AD",
-    "tag" => "택배차량 광고",
-    "title" => "정다은 변호사 무료법률상담·전문클리닉 택배차량 40대 래핑 광고",
-    "client" => "정다은 변호사",
-    "location" => "광주 전역 5개구 순회 배송 권역 (40대)",
-    "scale" => "택배차량 40대 대규모 플릿",
-    "description" => "광주 전역 5개구를 커버하는 40대 택배 탑차 측면·후면에 법률 서비스 안내를 부착하여 상시 노출 및 신뢰도 제고",
-    "thumb" => "/images/port/port_truck_jungdaeun_01.jpg",
-    "images" => array(
-      "/images/port/port_truck_jungdaeun_01.jpg",
-      "/images/port/port_truck_jungdaeun_02.jpg",
-      "/images/port/port_truck_jungdaeun_03.jpg"
-    ),
-    "sort_order" => 7,
-    "date" => "2026·09"
-  ),
-  array(
-    "id" => 72,
-    "category" => "taxi",
-    "badge" => "PARCEL·AD",
-    "tag" => "택배차량 광고",
-    "title" => "하트치과 분과별 전문진료 택배차량 5대 양면 래핑 광고",
-    "client" => "하트치과의원",
-    "location" => "광주 도심 및 주거밀집 배송 노선 (5대)",
-    "scale" => "택배차량 5대 (양측면+후면)",
-    "description" => "치아교정·임플란트 진료 안내를 택배 탑차 측면 대형 면적에 선명한 컬러로 래핑하여 보행자와 주거민에게 각인",
-    "thumb" => "/images/port/port_truck_heartdental_01.jpg",
-    "images" => array(
-      "/images/port/port_truck_heartdental_01.jpg",
-      "/images/port/port_truck_heartdental_02.jpg",
-      "/images/port/port_truck_heartdental_03.jpg"
-    ),
-    "sort_order" => 8,
-    "date" => "2026·09"
-  ),
-  array(
-    "id" => 73,
-    "category" => "bus",
-    "badge" => "BUS·WRAP",
-    "tag" => "시내버스 광고",
-    "title" => "광주 순환01번 시내버스 차도면·인도면 양면 래핑 광고",
-    "client" => "광주 주요 공공·기업",
-    "location" => "광주 도심 순환01번 간선노선",
-    "scale" => "시내버스 2면 (차도면+인도면)",
-    "description" => "광주 시내 중심가를 순환하는 간선버스 차도면 및 인도면 양면 래핑 집행 사례",
-    "thumb" => "/images/port/port_bus_new_01.jpg",
-    "images" => array(
-      "/images/port/port_bus_new_01.jpg",
-      "/images/port/port_bus_new_02.jpg"
-    ),
-    "sort_order" => 9,
-    "date" => "2026·09"
-  ),
-  array(
-    "id" => 74,
-    "category" => "bus",
-    "badge" => "BUS·WRAP",
-    "tag" => "시내버스 광고",
-    "title" => "광주 첨단09번 간선버스 차도면·인도면 와이드 래핑 광고",
-    "client" => "지역 유력 브랜드",
-    "location" => "광주 첨단지구-상무지구 간선노선",
-    "scale" => "시내버스 2면 (차도면+인도면)",
-    "description" => "첨단지구와 상무지구를 연결하는 핵심 간선노선 버스 양측면 래핑 광고",
-    "thumb" => "/images/port/port_bus_new_03.jpg",
-    "images" => array(
-      "/images/port/port_bus_new_03.jpg",
-      "/images/port/port_bus_new_04.jpg"
-    ),
-    "sort_order" => 10,
-    "date" => "2026·09"
-  ),
-  array(
-    "id" => 75,
-    "category" => "bus",
-    "badge" => "BUS·WRAP",
-    "tag" => "시내버스 광고",
-    "title" => "광주 송정19번 KTX 연계 시내버스 양면 래핑 광고",
-    "client" => "공공기관 및 브랜드",
-    "location" => "광주송정역-도심 연계 간선노선",
-    "scale" => "시내버스 2면 (차도면+인도면)",
-    "description" => "KTX 광주송정역과 도심 주요 거점을 연결하는 유동인구 밀집 노선 버스 래핑",
-    "thumb" => "/images/port/port_bus_new_05.jpg",
-    "images" => array(
-      "/images/port/port_bus_new_05.jpg",
-      "/images/port/port_bus_new_06.jpg"
-    ),
-    "sort_order" => 11,
-    "date" => "2026·09"
-  ),
-  array(
-    "id" => 76,
-    "category" => "bus",
-    "badge" => "BUS·WRAP",
-    "tag" => "시내버스 광고",
-    "title" => "광주 봉선37번 주거·학원가 집중 노선 버스 래핑 광고",
-    "client" => "교육·의료 전문 브랜드",
-    "location" => "광주 남구 봉선동 학원가 경유 노선",
-    "scale" => "시내버스 2면 (차도면+인도면)",
-    "description" => "남구 학원가와 아파트 밀집 주거지역을 집중 경유하는 타깃 맞춤형 버스 래핑",
-    "thumb" => "/images/port/port_bus_new_07.jpg",
-    "images" => array(
-      "/images/port/port_bus_new_07.jpg",
-      "/images/port/port_bus_new_08.jpg"
-    ),
-    "sort_order" => 12,
-    "date" => "2026·09"
-  ),
-  array(
-    "id" => 77,
-    "category" => "bus",
-    "badge" => "BUS·WRAP",
-    "tag" => "시내버스 광고",
-    "title" => "광주 문흥18번 북구 관내 간선버스 양면 래핑 광고",
-    "client" => "지역 거점 유통·의료",
-    "location" => "광주 북구 문흥동-도심 간선노선",
-    "scale" => "시내버스 2면 (차도면+인도면)",
-    "description" => "북구 주거지역과 상권을 연결하는 메인 간선버스 차도면 및 인도면 래핑",
-    "thumb" => "/images/port/port_bus_new_09.jpg",
-    "images" => array(
-      "/images/port/port_bus_new_09.jpg",
-      "/images/port/port_bus_new_10.jpg"
-    ),
     "sort_order" => 13,
     "date" => "2026·09"
   ),
   array(
     "id" => 78,
-    "category" => "bus",
-    "badge" => "BUS·WRAP",
-    "tag" => "시내버스 광고",
-    "title" => "광주 진월07번 남구-서구 관통 간선버스 래핑 광고",
-    "client" => "금융·공공 캠페인",
-    "location" => "광주 남구 진월동-서구 상무지구 노선",
-    "scale" => "시내버스 2면 (차도면+인도면)",
-    "description" => "남구 주거타운과 서구 업무지구를 오가는 직장인·주민 타깃 간선버스 래핑",
-    "thumb" => "/images/port/port_bus_new_11.jpg",
+    "category" => "taxi",
+    "badge" => "PARCEL·AD",
+    "tag" => "택배차량 광고",
+    "title" => "신수정 시의원 지역밀착 의정보고 택배차량 10대 홍보 래핑",
+    "client" => "신수정 광주광역시의원",
+    "location" => "광주 북구 관내 생활권역 (10대)",
+    "scale" => "택배차량 10대 생활밀착 래핑",
+    "description" => "북구 주민들의 생활 동선 구석구석을 누비는 택배차량 10대를 활용하여 의정활동 보고 및 주요 정책 성과 홍보",
+    "thumb" => "/images/port/port_truck_sinsujeong_01.jpg",
     "images" => array(
-      "/images/port/port_bus_new_11.jpg",
-      "/images/port/port_bus_new_12.jpg"
+      "/images/port/port_truck_sinsujeong_01.jpg",
+      "/images/port/port_truck_sinsujeong_02.jpg"
     ),
     "sort_order" => 14,
     "date" => "2026·09"
   ),
   array(
     "id" => 79,
-    "category" => "bus",
-    "badge" => "BUS·WRAP",
-    "tag" => "시내버스 광고",
-    "title" => "광주 수완12번 광산구 신도시 간선버스 양면 래핑 광고",
-    "client" => "신도시 입주·의료 브랜드",
-    "location" => "광주 수완지구-하남지구 간선노선",
-    "scale" => "시내버스 2면 (차도면+인도면)",
-    "description" => "수완신도시 및 하남산단을 연결하는 젊은 3040 타깃 집중 노선 버스 래핑",
-    "thumb" => "/images/port/port_bus_new_13.jpg",
+    "category" => "taxi",
+    "badge" => "PARCEL·AD",
+    "tag" => "택배차량 광고",
+    "title" => "정다은 변호사 무료법률상담·전문클리닉 택배차량 40대 래핑 광고",
+    "client" => "법률사무소 정다은 변호사",
+    "location" => "광주 5개구 전역 배송 권역 (40대)",
+    "scale" => "택배차량 40대 최대 규모 플릿",
+    "description" => "광주 전역을 커버하는 40대 대형 택배차량 플릿에 전문 법률상담 및 권익보호 안내를 래핑하여 광범위한 인지도 확보",
+    "thumb" => "/images/port/port_truck_jungdaeun_01.jpg",
     "images" => array(
-      "/images/port/port_bus_new_13.jpg",
-      "/images/port/port_bus_new_14.jpg"
+      "/images/port/port_truck_jungdaeun_01.jpg",
+      "/images/port/port_truck_jungdaeun_02.jpg",
+      "/images/port/port_truck_jungdaeun_03.jpg"
     ),
     "sort_order" => 15,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 80,
+    "category" => "taxi",
+    "badge" => "PARCEL·AD",
+    "tag" => "택배차량 광고",
+    "title" => "하트치과 분과별 전문진료 택배차량 5대 양면 래핑 광고",
+    "client" => "하트치과의원",
+    "location" => "광주 서구·광산구 중심 생활권역 (5대)",
+    "scale" => "택배차량 5대 (양측면+후면)",
+    "description" => "치과 인근 주거 밀집지역을 매일 순회하는 택배차량 5대에 분과별 전문진료 및 위치 안내를 직관적으로 노출",
+    "thumb" => "/images/port/port_truck_heartdental_01.jpg",
+    "images" => array(
+      "/images/port/port_truck_heartdental_01.jpg",
+      "/images/port/port_truck_heartdental_02.jpg",
+      "/images/port/port_truck_heartdental_03.jpg"
+    ),
+    "sort_order" => 16,
     "date" => "2026·09"
   ),
   array(
@@ -293,7 +309,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_01_1.jpg"
     ),
-    "sort_order" => 100,
+    "sort_order" => 101,
     "date" => "2026·09"
   ),
   array(
@@ -310,7 +326,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_02_1.jpg"
     ),
-    "sort_order" => 101,
+    "sort_order" => 102,
     "date" => "2026·09"
   ),
   array(
@@ -327,7 +343,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_03_1.jpg"
     ),
-    "sort_order" => 102,
+    "sort_order" => 103,
     "date" => "2026·09"
   ),
   array(
@@ -344,7 +360,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_04_1.jpg"
     ),
-    "sort_order" => 103,
+    "sort_order" => 104,
     "date" => "2026·09"
   ),
   array(
@@ -361,7 +377,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_05_1.jpg"
     ),
-    "sort_order" => 104,
+    "sort_order" => 105,
     "date" => "2026·09"
   ),
   array(
@@ -378,7 +394,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_06_1.jpg"
     ),
-    "sort_order" => 105,
+    "sort_order" => 106,
     "date" => "2026·09"
   ),
   array(
@@ -395,7 +411,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_07_1.jpg"
     ),
-    "sort_order" => 106,
+    "sort_order" => 107,
     "date" => "2026·09"
   ),
   array(
@@ -412,7 +428,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_08_1.jpg"
     ),
-    "sort_order" => 107,
+    "sort_order" => 108,
     "date" => "2026·09"
   ),
   array(
@@ -430,7 +446,7 @@ $GAON_PORTFOLIO_ITEMS = array(
       "/images/port/port_09_1.jpg",
       "/images/port/port_09_2.jpg"
     ),
-    "sort_order" => 108,
+    "sort_order" => 109,
     "date" => "2026·09"
   ),
   array(
@@ -447,7 +463,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_10_1.jpg"
     ),
-    "sort_order" => 109,
+    "sort_order" => 110,
     "date" => "2026·09"
   ),
   array(
@@ -464,7 +480,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_11_1.jpg"
     ),
-    "sort_order" => 110,
+    "sort_order" => 111,
     "date" => "2026·09"
   ),
   array(
@@ -482,7 +498,7 @@ $GAON_PORTFOLIO_ITEMS = array(
       "/images/port/port_12_1.jpg",
       "/images/port/port_12_2.jpg"
     ),
-    "sort_order" => 111,
+    "sort_order" => 112,
     "date" => "2026·09"
   ),
   array(
@@ -499,7 +515,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_13_1.jpg"
     ),
-    "sort_order" => 112,
+    "sort_order" => 113,
     "date" => "2026·09"
   ),
   array(
@@ -516,7 +532,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_14_1.jpg"
     ),
-    "sort_order" => 113,
+    "sort_order" => 114,
     "date" => "2026·09"
   ),
   array(
@@ -533,7 +549,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_15_1.jpg"
     ),
-    "sort_order" => 114,
+    "sort_order" => 115,
     "date" => "2026·09"
   ),
   array(
@@ -550,7 +566,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_16_1.jpg"
     ),
-    "sort_order" => 115,
+    "sort_order" => 116,
     "date" => "2026·09"
   ),
   array(
@@ -567,7 +583,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_17_1.jpg"
     ),
-    "sort_order" => 116,
+    "sort_order" => 117,
     "date" => "2026·09"
   ),
   array(
@@ -585,7 +601,7 @@ $GAON_PORTFOLIO_ITEMS = array(
       "/images/port/port_18_1.jpg",
       "/images/port/port_18_2.jpg"
     ),
-    "sort_order" => 117,
+    "sort_order" => 118,
     "date" => "2026·09"
   ),
   array(
@@ -602,7 +618,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_19_1.jpg"
     ),
-    "sort_order" => 118,
+    "sort_order" => 119,
     "date" => "2026·09"
   ),
   array(
@@ -619,7 +635,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_20_1.jpg"
     ),
-    "sort_order" => 119,
+    "sort_order" => 120,
     "date" => "2026·09"
   ),
   array(
@@ -636,7 +652,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_21_1.jpg"
     ),
-    "sort_order" => 120,
+    "sort_order" => 121,
     "date" => "2026·09"
   ),
   array(
@@ -654,7 +670,7 @@ $GAON_PORTFOLIO_ITEMS = array(
       "/images/port/port_22_1.jpg",
       "/images/port/port_22_2.jpg"
     ),
-    "sort_order" => 121,
+    "sort_order" => 122,
     "date" => "2026·09"
   ),
   array(
@@ -671,7 +687,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_23_1.jpg"
     ),
-    "sort_order" => 122,
+    "sort_order" => 123,
     "date" => "2026·09"
   ),
   array(
@@ -688,7 +704,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_24_1.jpg"
     ),
-    "sort_order" => 123,
+    "sort_order" => 124,
     "date" => "2026·09"
   ),
   array(
@@ -705,7 +721,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_25_1.jpg"
     ),
-    "sort_order" => 124,
+    "sort_order" => 125,
     "date" => "2026·09"
   ),
   array(
@@ -722,7 +738,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_26_1.jpg"
     ),
-    "sort_order" => 125,
+    "sort_order" => 126,
     "date" => "2026·09"
   ),
   array(
@@ -739,7 +755,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_27_1.jpg"
     ),
-    "sort_order" => 126,
+    "sort_order" => 127,
     "date" => "2026·09"
   ),
   array(
@@ -756,7 +772,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_28_1.jpg"
     ),
-    "sort_order" => 127,
+    "sort_order" => 128,
     "date" => "2026·09"
   ),
   array(
@@ -773,7 +789,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_29_1.jpg"
     ),
-    "sort_order" => 128,
+    "sort_order" => 129,
     "date" => "2026·09"
   ),
   array(
@@ -791,7 +807,7 @@ $GAON_PORTFOLIO_ITEMS = array(
       "/images/port/port_30_1.jpg",
       "/images/port/port_30_2.jpg"
     ),
-    "sort_order" => 129,
+    "sort_order" => 130,
     "date" => "2026·09"
   ),
   array(
@@ -808,7 +824,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_31_1.jpg"
     ),
-    "sort_order" => 130,
+    "sort_order" => 131,
     "date" => "2026·09"
   ),
   array(
@@ -825,7 +841,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_32_1.jpg"
     ),
-    "sort_order" => 131,
+    "sort_order" => 132,
     "date" => "2026·09"
   ),
   array(
@@ -842,7 +858,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_33_1.jpg"
     ),
-    "sort_order" => 132,
+    "sort_order" => 133,
     "date" => "2026·09"
   ),
   array(
@@ -859,7 +875,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_34_1.jpg"
     ),
-    "sort_order" => 133,
+    "sort_order" => 134,
     "date" => "2026·09"
   ),
   array(
@@ -876,7 +892,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_35_1.jpg"
     ),
-    "sort_order" => 134,
+    "sort_order" => 135,
     "date" => "2026·09"
   ),
   array(
@@ -893,7 +909,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_36_1.jpg"
     ),
-    "sort_order" => 135,
+    "sort_order" => 136,
     "date" => "2026·09"
   ),
   array(
@@ -910,7 +926,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_37_1.jpg"
     ),
-    "sort_order" => 136,
+    "sort_order" => 137,
     "date" => "2026·09"
   ),
   array(
@@ -927,7 +943,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_38_1.jpg"
     ),
-    "sort_order" => 137,
+    "sort_order" => 138,
     "date" => "2026·09"
   ),
   array(
@@ -944,7 +960,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_39_1.jpg"
     ),
-    "sort_order" => 138,
+    "sort_order" => 139,
     "date" => "2026·09"
   ),
   array(
@@ -961,7 +977,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_40_1.jpg"
     ),
-    "sort_order" => 139,
+    "sort_order" => 140,
     "date" => "2026·09"
   ),
   array(
@@ -978,7 +994,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_41_1.jpg"
     ),
-    "sort_order" => 140,
+    "sort_order" => 141,
     "date" => "2026·09"
   ),
   array(
@@ -995,7 +1011,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_42_1.jpg"
     ),
-    "sort_order" => 141,
+    "sort_order" => 142,
     "date" => "2026·09"
   ),
   array(
@@ -1012,7 +1028,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_43_1.jpg"
     ),
-    "sort_order" => 142,
+    "sort_order" => 143,
     "date" => "2026·09"
   ),
   array(
@@ -1029,7 +1045,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_44_1.jpg"
     ),
-    "sort_order" => 143,
+    "sort_order" => 144,
     "date" => "2026·09"
   ),
   array(
@@ -1046,7 +1062,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_45_1.jpg"
     ),
-    "sort_order" => 144,
+    "sort_order" => 145,
     "date" => "2026·09"
   ),
   array(
@@ -1063,7 +1079,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_46_1.jpg"
     ),
-    "sort_order" => 145,
+    "sort_order" => 146,
     "date" => "2026·09"
   ),
   array(
@@ -1080,7 +1096,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_47_1.jpg"
     ),
-    "sort_order" => 146,
+    "sort_order" => 147,
     "date" => "2026·09"
   ),
   array(
@@ -1097,7 +1113,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_48_1.jpg"
     ),
-    "sort_order" => 147,
+    "sort_order" => 148,
     "date" => "2026·09"
   ),
   array(
@@ -1114,7 +1130,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_49_1.jpg"
     ),
-    "sort_order" => 148,
+    "sort_order" => 149,
     "date" => "2026·09"
   ),
   array(
@@ -1131,7 +1147,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_50_1.jpg"
     ),
-    "sort_order" => 149,
+    "sort_order" => 150,
     "date" => "2026·09"
   ),
   array(
@@ -1148,7 +1164,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_51_1.jpg"
     ),
-    "sort_order" => 150,
+    "sort_order" => 151,
     "date" => "2026·09"
   ),
   array(
@@ -1165,7 +1181,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_52_1.jpg"
     ),
-    "sort_order" => 151,
+    "sort_order" => 152,
     "date" => "2026·09"
   ),
   array(
@@ -1182,7 +1198,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/port_53_1.jpg"
     ),
-    "sort_order" => 152,
+    "sort_order" => 153,
     "date" => "2026·09"
   ),
   array(
@@ -1196,11 +1212,10 @@ $GAON_PORTFOLIO_ITEMS = array(
     "scale" => "10초 하이라이트 영상 (대표 프레임 캡쳐본)",
     "description" => "정갈한 수제 프리미엄 도시락 제작 과정 10초 하이라이트 영상 및 대표 스틸컷 캡쳐본",
     "thumb" => "/images/port/video_thumb_01.jpg",
-    "video" => "/images/port/video/video_clip_01.mp4",
     "images" => array(
       "/images/port/video_thumb_01.jpg"
     ),
-    "sort_order" => 153,
+    "sort_order" => 154,
     "date" => "2026·09"
   ),
   array(
@@ -1214,11 +1229,10 @@ $GAON_PORTFOLIO_ITEMS = array(
     "scale" => "10초 세로형 숏폼 영상 (대표 프레임 캡쳐본)",
     "description" => "SNS 맞춤형 9:16 세로형 숏폼 10초 하이라이트 영상 및 대표 스틸컷 캡쳐본",
     "thumb" => "/images/port/video_thumb_02.jpg",
-    "video" => "/images/port/video/video_clip_02.mp4",
     "images" => array(
       "/images/port/video_thumb_02.jpg"
     ),
-    "sort_order" => 154,
+    "sort_order" => 155,
     "date" => "2026·09"
   ),
   array(
@@ -1232,11 +1246,10 @@ $GAON_PORTFOLIO_ITEMS = array(
     "scale" => "10초 하이라이트 영상 (대표 프레임 캡쳐본)",
     "description" => "깊은 풍미의 전통 한식 상차림 10초 하이라이트 영상 및 대표 스틸컷 캡쳐본",
     "thumb" => "/images/port/video_thumb_03.jpg",
-    "video" => "/images/port/video/video_clip_03.mp4",
     "images" => array(
       "/images/port/video_thumb_03.jpg"
     ),
-    "sort_order" => 155,
+    "sort_order" => 156,
     "date" => "2026·09"
   ),
   array(
@@ -1250,11 +1263,10 @@ $GAON_PORTFOLIO_ITEMS = array(
     "scale" => "10초 하이라이트 영상 (대표 프레임 캡쳐본)",
     "description" => "진한 닭육수와 쫄깃한 면발 클로즈업 10초 하이라이트 영상 및 대표 스틸컷 캡쳐본",
     "thumb" => "/images/port/video_thumb_04.jpg",
-    "video" => "/images/port/video/video_clip_04.mp4",
     "images" => array(
       "/images/port/video_thumb_04.jpg"
     ),
-    "sort_order" => 156,
+    "sort_order" => 157,
     "date" => "2026·09"
   ),
   array(
@@ -1268,11 +1280,10 @@ $GAON_PORTFOLIO_ITEMS = array(
     "scale" => "10초 하이라이트 영상 (대표 프레임 캡쳐본)",
     "description" => "노릇하게 구워지는 신선한 장어구이 10초 하이라이트 영상 및 대표 스틸컷 캡쳐본",
     "thumb" => "/images/port/video_thumb_05.jpg",
-    "video" => "/images/port/video/video_clip_05.mp4",
     "images" => array(
       "/images/port/video_thumb_05.jpg"
     ),
-    "sort_order" => 157,
+    "sort_order" => 158,
     "date" => "2026·09"
   ),
   array(
@@ -1286,11 +1297,10 @@ $GAON_PORTFOLIO_ITEMS = array(
     "scale" => "10초 하이라이트 영상 (대표 프레임 캡쳐본)",
     "description" => "셰프의 정교한 손길과 프리미엄 스시 10초 하이라이트 영상 및 대표 스틸컷 캡쳐본",
     "thumb" => "/images/port/video_thumb_06.jpg",
-    "video" => "/images/port/video/video_clip_06.mp4",
     "images" => array(
       "/images/port/video_thumb_06.jpg"
     ),
-    "sort_order" => 158,
+    "sort_order" => 163,
     "date" => "2026·09"
   ),
   array(
@@ -1375,7 +1385,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/mart/mart_01.jpg"
     ),
-    "sort_order" => 163,
+    "sort_order" => 164,
     "date" => "2026·09"
-  ),
+  )
 );
