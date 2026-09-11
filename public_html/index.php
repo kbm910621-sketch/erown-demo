@@ -1387,8 +1387,7 @@ if (!empty($active_popups)) {
               </div>
               <h3 class="broadcast-title">닥터365</h3>
               <div class="broadcast-exclusive">
-                <span class="be-tag">GAON-N EXCLUSIVE</span>
-                <span class="be-title">가온엔 독점 연계 프로그램</span>
+                <span class="be-badge">가온엔 공식 독점 연계</span>
               </div>
               <p class="broadcast-desc">
                 의료진의 전문성과 병원의 핵심 정보를 방송 콘텐츠로 구성해<br class="pc_only">
@@ -1411,12 +1410,6 @@ if (!empty($active_popups)) {
             </div>
             <div class="broadcast-visual">
               <img src="/images/broadcast/broadcast_kbc_365.jpg" alt="KBC 닥터365 가온엔 독점 연계 프로그램" class="broadcast-img" loading="lazy">
-            </div>
-            <div class="broadcast-mob-switch mob_only">
-              <button type="button" class="broadcast-mob-next" data-step="2">
-                <span>다음 프로그램 (MBC 건강365)</span>
-                <span class="bmn-circle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-              </button>
             </div>
           </div>
 
@@ -1449,12 +1442,12 @@ if (!empty($active_popups)) {
             <div class="broadcast-visual">
               <img src="/images/broadcast/broadcast_mbc_365.jpg" alt="MBC 건강365 방송 연계 프로그램" class="broadcast-img" loading="lazy">
             </div>
-            <div class="broadcast-mob-switch mob_only">
-              <button type="button" class="broadcast-mob-next" data-step="1">
-                <span>이전 프로그램 (KBC 닥터365 독점)</span>
-                <span class="bmn-circle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
-              </button>
-            </div>
+          </div>
+
+          <!-- MOBILE CIRCULAR INDICATORS (01 ● 02) -->
+          <div class="broadcast-mob-dots mob_only" aria-label="프로그램 전환">
+            <button type="button" class="bmd-dot is-active" data-step="1" aria-label="KBC 닥터365"></button>
+            <button type="button" class="bmd-dot" data-step="2" aria-label="MBC 건강365"></button>
           </div>
 
           <!-- NAVIGATION (01 ━━━━ 02) -->

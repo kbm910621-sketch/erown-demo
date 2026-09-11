@@ -1709,18 +1709,18 @@ $(function() {
       }, 450);
     });
 
-    // Mobile Tab & Next Switcher Handler
-    $(document).on('click', '.bmt-btn, .broadcast-mob-next', function(e) {
+    // Mobile Tab & Dot Switcher Handler
+    $(document).on('click', '.bmt-btn, .bmd-dot', function(e) {
       e.preventDefault();
       var step = $(this).attr('data-step');
       if (step === '2') {
         $sec.removeClass('is-step-1').addClass('is-step-2');
-        $('.bmt-btn[data-step="2"]').addClass('is-active');
-        $('.bmt-btn[data-step="1"]').removeClass('is-active');
+        $('.bmt-btn[data-step="2"], .bmd-dot[data-step="2"]').addClass('is-active');
+        $('.bmt-btn[data-step="1"], .bmd-dot[data-step="1"]').removeClass('is-active');
       } else {
         $sec.removeClass('is-step-2').addClass('is-step-1');
-        $('.bmt-btn[data-step="1"]').addClass('is-active');
-        $('.bmt-btn[data-step="2"]').removeClass('is-active');
+        $('.bmt-btn[data-step="1"], .bmd-dot[data-step="1"]').addClass('is-active');
+        $('.bmt-btn[data-step="2"], .bmd-dot[data-step="2"]').removeClass('is-active');
       }
     });
 
