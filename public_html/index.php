@@ -2189,6 +2189,8 @@ if (!empty($active_popups)) {
       <div class="pm-img-wrap">
         <img src="" id="modalImg" alt="포트폴리오 상세 실사">
         <video id="modalVideo" src="" controls playsinline loop muted style="display:none; width:100%; height:auto; max-height:70vh; background:#000; object-fit:contain; border-radius:8px;"></video>
+        <!-- Modal Multi-photo Dots Selector -->
+        <div class="pm-photo-dots" id="modalPhotoDots" style="display:none;"></div>
       </div>
       <div class="pm-info-wrap">
         <div class="pm-meta-row">

@@ -4140,12 +4140,16 @@ body.modal-lock { overflow:hidden !important; }
 }
 
 .pm-img-wrap {
+  position: relative !important;
   width: 100%;
   aspect-ratio: 16 / 10;
   border-radius: 18px;
   overflow: hidden;
-  background: #f1f5f9;
+  background: #0b1120;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pm-img-wrap img {
@@ -4153,6 +4157,46 @@ body.modal-lock { overflow:hidden !important; }
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: opacity 0.25s ease;
+}
+
+/* Modal Multi-photo Floating Dots (동그라미 도트) */
+.pm-photo-dots {
+  position: absolute !important;
+  bottom: 14px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(15, 23, 42, 0.78) !important;
+  padding: 6px 14px !important;
+  border-radius: 9999px !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  z-index: 10 !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3) !important;
+}
+.pm-dot-btn {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.45) !important;
+  border: none !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+.pm-dot-btn:hover {
+  background: #ffffff !important;
+  transform: scale(1.25) !important;
+}
+.pm-dot-btn.active {
+  width: 24px !important;
+  border-radius: 999px !important;
+  background: #2563eb !important;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.9) !important;
 }
 
 .pm-info-wrap {

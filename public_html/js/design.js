@@ -1194,7 +1194,7 @@ $(function() {
     
     currentModalList = [];
     $cards.each(function(i, el) {
-      var rawImgs = $(el).data('images');
+      var rawImgs = $(el).data('images') || $(el).attr('data-images');
       var imgArr = [];
       if (typeof rawImgs === 'string') {
         try { imgArr = JSON.parse(rawImgs); } catch(err) { imgArr = []; }
@@ -1202,24 +1202,24 @@ $(function() {
         imgArr = rawImgs;
       }
       if (!imgArr.length) {
-        var s = $(el).data('img') || $(el).find('img').attr('src');
+        var s = $(el).data('img') || $(el).attr('data-img') || $(el).find('img').attr('src');
         if (s) imgArr = [s];
       }
 
       currentModalList.push({
-        title: $(el).data('name') || $(el).find('.asps-item-title, h5, .mbp-card-title').text().trim(),
-        img: $(el).data('img') || $(el).find('img').attr('src'),
+        title: $(el).data('name') || $(el).attr('data-name') || $(el).find('.asps-item-title, h5, .mbp-card-title').text().trim(),
+        img: $(el).data('img') || $(el).attr('data-img') || $(el).find('img').attr('src'),
         images: imgArr,
-        video: $(el).data('video') || '',
-        tag: $(el).data('tag') || $(el).data('cat') || '광고사례'
+        video: $(el).data('video') || $(el).attr('data-video') || '',
+        tag: $(el).data('tag') || $(el).attr('data-tag') || $(el).data('cat') || '광고사례'
       });
     });
 
-    var clickedTitle = $(this).data('name') || $(this).find('.asps-item-title, h5, .mbp-card-title').text().trim();
+    var clickedTitle = $(this).data('name') || $(this).attr('data-name') || $(this).find('.asps-item-title, h5, .mbp-card-title').text().trim();
     var foundIndex = currentModalList.findIndex(function(it) { return it.title === clickedTitle; });
     if (foundIndex === -1) foundIndex = 0;
 
-    var savedPhotoIdx = parseInt($(this).data('selected-photo-idx'), 10) || 0;
+    var savedPhotoIdx = parseInt($(this).data('selected-photo-idx') || $(this).attr('data-selected-photo-idx'), 10) || 0;
     updateModalContent(foundIndex, savedPhotoIdx);
     $('#modalBackdrop').addClass('open').fadeIn(200);
   });
