@@ -47,6 +47,9 @@ if(strstr($pageName,"main")){
 }else if(strstr($dirPage,"popup")){
     $path_st = "none";
     $path_current = "팝업 관리";
+}else if(strstr($dirPage,"portfolio") || strstr($pageName,"portfolio")){
+    $path_st = "none";
+    $path_current = "포트폴리오 관리";
 }
 ?>
 

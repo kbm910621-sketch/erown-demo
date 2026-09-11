@@ -1,64 +1,92 @@
 <?php
+$page_title = "PORTFOLIO | GAON N";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/db_conn.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/common.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
 
 $categories = array(
-    'all'    => 'ALL',
-    'bus'    => '시내버스 광고',
-    'online' => '온라인 마케팅',
-    'video'  => '영상제작',
-    'taxi'   => '택시·특화매체',
-    'did'    => 'DID·전광판',
-    'mart'   => '대형마트 카트'
+    'all'     => 'ALL',
+    'bus'     => '시내버스 광고',
+    'shelter' => '버스 승강장·쉘터',
+    'did'     => 'DID·터미널 광고',
+    'taxi'    => '택시·택배·특화매체',
+    'video'   => '영상제작',
+    'mart'    => '대형마트 카트'
 );
 
-$sql = "SELECT * FROM portfolio WHERE status='active' ORDER BY sort_order ASC, id DESC";
-$result = mysqli_query($conn, $sql);
-$list = array();
-if ($result) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $list[] = $row;
+function normalize_port_img($url) {
+    if (empty($url)) return '/images/bs_ad/baro.jpg';
+    return str_replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/', $url);
+}
+
+if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/admin/bbs/portfolio/portfolio_seed_data.php")) {
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/admin/bbs/portfolio/portfolio_seed_data.php";
+}
+
+if ($conn) {
+    @mysqli_query($conn, "ALTER TABLE `portfolio` MODIFY COLUMN `category` VARCHAR(50) NOT NULL DEFAULT 'bus'");
+    @mysqli_query($conn, "UPDATE `portfolio` SET `thumb` = REPLACE(`thumb`, '/admin/bbs/portfolio/uploads/bus/', '/images/port/'), `images` = REPLACE(`images`, '/admin/bbs/portfolio/uploads/bus/', '/images/port/')");
+    
+    $shelterIds = "2,4,5,10,11,12,19,21,26,30,32,34,39,41,42,43,44";
+    @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'shelter' WHERE id IN ($shelterIds) AND (category = '' OR category = 'bus' OR category IS NULL)");
+    @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'did' WHERE id IN (16, 45)");
+
+    // Auto-sync all items from portfolio_seed_data.php
+    if (!empty($GAON_PORTFOLIO_ITEMS)) {
+        foreach ($GAON_PORTFOLIO_ITEMS as $itm) {
+            $nid = (int)$itm['id'];
+            $sord = $nid;
+            $cat  = mysqli_real_escape_string($conn, $itm['category']);
+            $tit  = mysqli_real_escape_string($conn, $itm['title']);
+            $cli  = mysqli_real_escape_string($conn, $itm['client']);
+            $loc  = mysqli_real_escape_string($conn, $itm['location']);
+            $sca  = mysqli_real_escape_string($conn, $itm['scale']);
+            $des  = mysqli_real_escape_string($conn, $itm['description']);
+            $thm  = mysqli_real_escape_string($conn, $itm['thumb']);
+            $imgs = mysqli_real_escape_string($conn, json_encode($itm['images']));
+            @mysqli_query($conn, "INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale`, `description`, `thumb`, `images`, `is_featured`, `sort_order`, `status`, `created_at`, `updated_at`) VALUES ($nid, '$cat', '$tit', '$cli', '$loc', '$sca', '$des', '$thm', '$imgs', 1, $sord, 'active', NOW(), NOW()) ON DUPLICATE KEY UPDATE `title`=VALUES(`title`), `client`=VALUES(`client`), `scale`=VALUES(`scale`), `description`=VALUES(`description`), `thumb`=VALUES(`thumb`), `images`=VALUES(`images`), `category`=VALUES(`category`)");
+        }
+    }
+
+
+    // Check count and auto-seed if empty
+    $chkCount = mysqli_query($conn, "SELECT COUNT(*) as cnt FROM `portfolio`");
+    $chkRow = $chkCount ? mysqli_fetch_assoc($chkCount) : array('cnt' => 0);
+    if ($chkRow['cnt'] == 0 && !empty($GAON_PORTFOLIO_ITEMS)) {
+        foreach ($GAON_PORTFOLIO_ITEMS as $itm) {
+            $sord = (int)$itm['id'];
+            $cat  = mysqli_real_escape_string($conn, $itm['category']);
+            $tit  = mysqli_real_escape_string($conn, $itm['title']);
+            $cli  = mysqli_real_escape_string($conn, $itm['client']);
+            $loc  = mysqli_real_escape_string($conn, $itm['location']);
+            $sca  = mysqli_real_escape_string($conn, $itm['scale']);
+            $des  = mysqli_real_escape_string($conn, $itm['description']);
+            $thm  = mysqli_real_escape_string($conn, normalize_port_img($itm['thumb']));
+            $imgs = mysqli_real_escape_string($conn, json_encode(array_map('normalize_port_img', $itm['images'])));
+            mysqli_query($conn, "INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale`, `description`, `thumb`, `images`, `is_featured`, `sort_order`, `status`, `created_at`, `updated_at`) VALUES ($sord, '$cat', '$tit', '$cli', '$loc', '$sca', '$des', '$thm', '$imgs', 1, $sord, 'active', NOW(), NOW())");
+        }
+    }
+
+    $sql = "SELECT * FROM portfolio WHERE status='active' AND category != 'online' AND category != 'web' ORDER BY sort_order ASC, id DESC";
+    $result = mysqli_query($conn, $sql);
+    $list = array();
+    if ($result) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $row['thumb'] = normalize_port_img($row['thumb']);
+            $list[] = $row;
+        }
     }
 }
 
-// 24+ Rich fallback items if DB empty
-if (empty($list)) {
-    $list = array(
-        // BUS
-        array('id'=>1, 'category'=>'bus', 'badge'=>'BUS·AD', 'title'=>'상무지구 메디컬센터 시내버스 3면 풀래핑 광고', 'tag'=>'광주 시내버스', 'date'=>'2026·09', 'thumb'=>'/images/bs_ad/baro.jpg'),
-        array('id'=>2, 'category'=>'bus', 'badge'=>'BUS·AD', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'tag'=>'광주 시내버스', 'date'=>'2026·09', 'thumb'=>'/images/bs_ad/baro_3.jpg'),
-        array('id'=>3, 'category'=>'bus', 'badge'=>'BUS·AD', 'title'=>'교차로 신호 대기 차량 타깃 시내버스 후면 래핑', 'tag'=>'광주 시내버스', 'date'=>'2026·08', 'thumb'=>'/images/bs_ad/baro_9.jpg'),
-        array('id'=>4, 'category'=>'bus', 'badge'=>'BUS·AD', 'title'=>'광주 104개 노선 시내버스 내부 중앙창문 포스터', 'tag'=>'버스 내부광고', 'date'=>'2026·08', 'thumb'=>'/images/bs_ad/port_in03.jpg'),
-        array('id'=>5, 'category'=>'bus', 'badge'=>'BUS·AD', 'title'=>'수완지구 학원가 집중 배차 버스 차도면 3.7m', 'tag'=>'광주 시내버스', 'date'=>'2026·08', 'thumb'=>'/images/bs_ad/baro.jpg'),
-        array('id'=>6, 'category'=>'bus', 'badge'=>'BUS·AD', 'title'=>'순환01번 시내버스 정류소 음성안내 방송', 'tag'=>'버스 음성방송', 'date'=>'2026·07', 'thumb'=>'/images/bs_ad/port_in01.jpg'),
-
-        // ONLINE
-        array('id'=>9, 'category'=>'online', 'badge'=>'PLACE SEO', 'title'=>'봉선동 입시학원 네이버 스마트플레이스 1위 세팅', 'tag'=>'네이버 플레이스', 'date'=>'2026·09', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
-        array('id'=>10, 'category'=>'online', 'badge'=>'C-RANK BLOG', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 칼럼 마케팅', 'tag'=>'브랜드 블로그', 'date'=>'2026·09', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
-        array('id'=>11, 'category'=>'online', 'badge'=>'VIRAL', 'title'=>'수완지구 외식 브랜드 광주 맘카페 & 릴스 바이럴', 'tag'=>'맘카페 바이럴', 'date'=>'2026·08', 'thumb'=>'/images/bs_ad/baro_15.jpg'),
-        array('id'=>12, 'category'=>'online', 'badge'=>'META ADS', 'title'=>'광주 핫플레이스 인스타그램 반경 1~3km 타깃 광고', 'tag'=>'인스타그램 광고', 'date'=>'2026·08', 'thumb'=>'/images/bs_ad/baro_16.jpg'),
-        array('id'=>21, 'category'=>'online', 'badge'=>'PLACE SEO', 'title'=>'광주 대표 척추병원 네이버 플레이스 리뷰 빌드업', 'tag'=>'네이버 플레이스', 'date'=>'2026·07', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
-        array('id'=>22, 'category'=>'online', 'badge'=>'C-RANK BLOG', 'title'=>'호남 최대 법무법인 브랜드 블로그 상위 블록 선점', 'tag'=>'브랜드 블로그', 'date'=>'2026·07', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
-
-        // VIDEO
-        array('id'=>13, 'category'=>'video', 'badge'=>'CINEMA 4K', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'tag'=>'시네마틱 영상', 'date'=>'2026·09', 'thumb'=>'/images/bs_ad/visual01.jpg'),
-        array('id'=>14, 'category'=>'video', 'badge'=>'TV CF', 'title'=>'기업 TV CF & 극장 스크린 30초 풀프레임 광고 영상', 'tag'=>'TV CF', 'date'=>'2026·08', 'thumb'=>'/images/bs_ad/visual02.jpg'),
-        array('id'=>15, 'category'=>'video', 'badge'=>'SNS REELS', 'title'=>'SNS 릴스 · 유튜브 숏폼 9:16 모바일 바이럴 영상', 'tag'=>'숏폼 바이럴', 'date'=>'2026·08', 'thumb'=>'/images/bs_ad/visual03.jpg'),
-        array('id'=>16, 'category'=>'video', 'badge'=>'DID MOTION', 'title'=>'유스퀘어 터미널 DID 디지털 전광판 15초 모션그래픽', 'tag'=>'전광판 영상', 'date'=>'2026·07', 'thumb'=>'/images/bs_ad/did_01.jpg'),
-
-        // TAXI & DELIVERY
-        array('id'=>17, 'category'=>'taxi', 'badge'=>'TAXI WRAP', 'title'=>'광주 전역 법인·개인택시 200대 양측면 래핑 광고', 'tag'=>'택시 래핑', 'date'=>'2026·09', 'thumb'=>'/images/ev1.jpg'),
-        array('id'=>18, 'category'=>'taxi', 'badge'=>'DELIVERY', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'tag'=>'택배차 래핑', 'date'=>'2026·08', 'thumb'=>'/images/bs_ad/baro_18.jpg'),
-
-        // DID
-        array('id'=>19, 'category'=>'did', 'badge'=>'SIGNAGE', 'title'=>'유스퀘어 광주버스터미널 4K UHD 디지털 사이니지 송출', 'tag'=>'터미널 전광판', 'date'=>'2026·09', 'thumb'=>'/images/bs_ad/did_01.jpg'),
-        array('id'=>20, 'category'=>'did', 'badge'=>'LED SIGN', 'title'=>'상무 교차로 대형 빌딩 LED 전광판 4K 광고 영상 송출', 'tag'=>'빌딩 전광판', 'date'=>'2026·08', 'thumb'=>'/images/bs_ad/did_02.jpg'),
-
-        // MART
-        array('id'=>23, 'category'=>'mart', 'badge'=>'CART AD', 'title'=>'광주 이마트 쇼핑카트 1,000대 양면 플레이트 광고', 'tag'=>'마트 카트광고', 'date'=>'2026·09', 'thumb'=>'/images/sub_bg_02.jpg'),
-        array('id'=>24, 'category'=>'mart', 'badge'=>'CART AD', 'title'=>'광주 롯데마트 쇼핑카트 3050 주부 타깃 밀착 광고', 'tag'=>'마트 카트광고', 'date'=>'2026·08', 'thumb'=>'/images/sub_bg_02.jpg')
-    );
+// Fallback to verified seed items if empty (excluding online/web)
+if (empty($list) && !empty($GAON_PORTFOLIO_ITEMS)) {
+    $filteredSeed = array();
+    foreach ($GAON_PORTFOLIO_ITEMS as $si) {
+        if ($si['category'] !== 'online' && $si['category'] !== 'web') {
+            $filteredSeed[] = $si;
+        }
+    }
+    $list = $filteredSeed;
 }
 
 $totalCount = count($list);
@@ -91,12 +119,12 @@ $totalCount = count($list);
         <div class="mbp-title-row wow fadeInUp" data-wow-duration="0.6s">
           <div class="mbp-title-wrap">
             <h1 class="mbp-main-title">포트폴리오</h1>
-            <p class="mbp-sub-desc">시내버스 옥외광고, 온라인 마케팅, 4K 영상제작까지 가온엔의 온·오프라인 집행 실적입니다.</p>
+            <p class="mbp-sub-desc">시내버스 광고, 버스 승강장 쉘터, 터미널·DID 매체 등 가온엔의 고화질 현장 집행 실적입니다.</p>
           </div>
 
           <!-- SEARCH PILL -->
           <div class="mbp-search-pill">
-            <input type="text" id="mbpSearchInput" placeholder="프로젝트명을 입력해주세요" aria-label="포트폴리오 검색">
+            <input type="text" id="mbpSearchInput" placeholder="광고주 또는 프로젝트명을 검색하세요" aria-label="포트폴리오 검색">
             <button type="button" id="mbpSearchBtn" class="mbp-search-btn" aria-label="검색">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             </button>
@@ -143,26 +171,72 @@ $totalCount = count($list);
         <div class="mbp-portfolio-grid" id="mbpGrid">
           <?php foreach ($list as $item): 
             $cat = !empty($item['category']) ? htmlspecialchars($item['category']) : 'bus';
-            $badgeText = !empty($item['badge']) ? htmlspecialchars($item['badge']) : (isset($categories[$cat]) ? $categories[$cat] : 'GAON-N');
-            $tagText = !empty($item['tag']) ? htmlspecialchars($item['tag']) : (isset($categories[$cat]) ? $categories[$cat] : 'MEDIA');
-            $imgSrc = !empty($item['thumb']) ? htmlspecialchars($item['thumb']) : '/images/bs_ad/baro.jpg';
+            
+            // Badge & Tag
+            $badgeText = !empty($item['badge']) ? htmlspecialchars($item['badge']) : 'GAON·AD';
+            $tagText = !empty($item['tag']) ? htmlspecialchars($item['tag']) : (isset($categories[$cat]) ? $categories[$cat] : '옥외광고');
+            if (empty($item['badge'])) {
+                if ($cat === 'shelter') { $badgeText = 'SHELTER·AD'; $tagText = '버스 승강장·쉘터'; }
+                else if ($cat === 'did') { $badgeText = 'TERMINAL·AD'; $tagText = '터미널·DID 광고'; }
+                else if ($cat === 'taxi') { $badgeText = 'SPECIAL·AD'; $tagText = '택시·택배·특화매체'; }
+                else if ($cat === 'bus') { $badgeText = 'BUS·AD'; $tagText = '시내버스 광고'; }
+                else if ($cat === 'mart') { $badgeText = 'MART·CART'; $tagText = '대형마트 카트'; }
+            }
+
+            $imgSrc = normalize_port_img(!empty($item['thumb']) ? $item['thumb'] : '');
+            $videoSrc = !empty($item['video']) ? htmlspecialchars($item['video']) : '';
+            if (empty($videoSrc) && $cat === 'video') {
+                $vIdxMap = array(54 => '01', 55 => '02', 56 => '03', 57 => '04', 58 => '05', 63 => '06');
+                if (isset($vIdxMap[$item['id']])) {
+                    $videoSrc = '/images/port/video/video_clip_' . $vIdxMap[$item['id']] . '.mp4';
+                }
+            }
             $dateText = !empty($item['date']) ? htmlspecialchars($item['date']) : '2026·09';
             $titleText = htmlspecialchars($item['title']);
+            $clientText = !empty($item['client']) ? htmlspecialchars($item['client']) : '';
+            $locationText = !empty($item['location']) ? htmlspecialchars($item['location']) : '광주 주요 거점 노선';
+            $scaleText = !empty($item['scale']) ? htmlspecialchars($item['scale']) : '';
+
+            // Handle images array
+            $imagesArray = array($imgSrc);
+            if (!empty($item['images'])) {
+                if (is_array($item['images'])) {
+                    $imagesArray = $item['images'];
+                } else {
+                    $decoded = json_decode($item['images'], true);
+                    if (is_array($decoded) && count($decoded) > 0) {
+                        $imagesArray = $decoded;
+                    }
+                }
+            }
+            $imagesArray = array_map('normalize_port_img', $imagesArray);
+            $imagesJsonAttr = htmlspecialchars(json_encode($imagesArray), ENT_QUOTES, 'UTF-8');
+            $hasMultiple = count($imagesArray) > 1;
           ?>
           <div class="mbp-card-item wow fadeInUp" data-wow-duration="0.7s"
                data-cat="<?php echo $cat; ?>"
                data-id="<?php echo (int)$item['id']; ?>"
                data-name="<?php echo $titleText; ?>"
+               data-client="<?php echo $clientText; ?>"
                data-img="<?php echo $imgSrc; ?>"
+               data-video="<?php echo $videoSrc; ?>"
+               data-images='<?php echo $imagesJsonAttr; ?>'
                data-tag="<?php echo $tagText; ?>"
+               data-loc="<?php echo $locationText; ?>"
+               data-scale="<?php echo $scaleText; ?>"
                data-date="<?php echo $dateText; ?>">
             
             <!-- IMAGE BOX WITH HOVER ZOOM & BADGE -->
-            <div class="mbp-img-box">
+            <div class="mbp-img-box <?php echo $videoSrc ? 'is-video-box' : ''; ?>">
               <img src="<?php echo $imgSrc; ?>" alt="<?php echo $titleText; ?>" loading="lazy">
               <span class="mbp-badge"><?php echo $badgeText; ?></span>
+              <?php if ($videoSrc): ?>
+              <span class="mbp-video-play-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> 10초 영상 (스틸컷 캡쳐본)</span>
+              <?php elseif ($hasMultiple): ?>
+              <span class="mbp-multi-badge" title="다중 사진 등록">📷 <?php echo count($imagesArray); ?>장</span>
+              <?php endif; ?>
               <div class="mbp-img-overlay">
-                <span class="mbp-view-btn">View Detail ➔</span>
+                <span class="mbp-view-btn"><?php echo $videoSrc ? '▶ 10초 영상 재생 (캡쳐본)' : 'View Detail ➔'; ?></span>
               </div>
             </div>
 
@@ -170,9 +244,14 @@ $totalCount = count($list);
             <div class="mbp-text-box">
               <div class="mbp-card-meta">
                 <span class="mbp-card-tag"><?php echo $tagText; ?></span>
-                <span class="mbp-card-date"><?php echo $dateText; ?></span>
+                <?php if ($scaleText): ?>
+                <span class="mbp-card-scale"><?php echo $scaleText; ?></span>
+                <?php endif; ?>
               </div>
               <h3 class="mbp-card-title"><?php echo $titleText; ?></h3>
+              <?php if ($clientText || $locationText): ?>
+              <p class="mbp-card-client"><?php echo $clientText ? $clientText . ' · ' : ''; ?><?php echo $locationText; ?></p>
+              <?php endif; ?>
             </div>
 
           </div>
@@ -191,7 +270,7 @@ $totalCount = count($list);
 
   </main>
 
-    <!-- PORTFOLIO LIGHTBOX MODAL (오른쪽 위 안쪽 닫기 버튼 + 좌우 넘김 화살표 탑재) -->
+  <!-- PORTFOLIO LIGHTBOX MODAL -->
   <div class="portfolio-modal-backdrop" id="modalBackdrop">
     <div class="pm-modal-box">
       <button type="button" class="pm-close-btn" id="modalClose" aria-label="팝업 닫기">✕</button>
@@ -206,60 +285,184 @@ $totalCount = count($list);
 
       <div class="pm-img-wrap">
         <img src="" id="modalImg" alt="포트폴리오 상세 실사">
+        <video id="modalVideo" src="" controls playsinline loop muted style="display:none; width:100%; height:auto; max-height:70vh; background:#000; object-fit:contain; border-radius:8px;"></video>
+        <!-- Multi-photo Sleek Dots Selector (사진을 가리지 않는 하단 미니 도트 인디케이터) -->
+        <div class="pm-photo-dots" id="modalPhotoDots" style="display:none;"></div>
       </div>
       <div class="pm-info-wrap">
         <div class="pm-meta-row">
           <span class="pm-cat-badge" id="modalCat">광고사례</span>
-          <span class="pm-counter-badge" id="modalCounter">1 / 8</span>
+          <span class="pm-counter-badge" id="modalCounter">1 / 47</span>
         </div>
         <h3 class="pm-title" id="modalTitle">프로젝트명</h3>
         <p class="pm-loc" id="modalLoc">광주 주요 상권 직영 시공 사례</p>
+        <p class="pm-sub-notice" id="modalSubNotice" style="display:none; font-size:12px; color:#38bdf8; margin-top:6px; font-weight:600;">🎬 10초 하이라이트 영상 (대표 화면 스틸컷 캡쳐본)</p>
         <div class="pm-action-row">
-          <a href="/board/estmate/write.php" class="pm-cta-btn">이 광고 집행 견적 문의 ➔</a>
+          <a href="/board/estmate/write.php" class="pm-cta-btn" id="modalCtaBtn">이 매체 집행 견적 문의 ➔</a>
         </div>
       </div>
     </div>
-  </div>
   </div>
 
   <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/bottom_conversion.php"; ?>
   <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/footer.php"; ?>
 </div>
 
+<style>
+.mbp-video-play-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(220, 38, 38, 0.9);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 2;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
+.mbp-img-box.is-video-box .mbp-view-btn {
+  background: #dc2626;
+  border-color: #ef4444;
+  color: #ffffff;
+}
+.mbp-multi-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(6px);
+  color: #60a5fa;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  z-index: 2;
+  letter-spacing: 0.3px;
+}
+.mbp-card-scale {
+  font-size: 12px;
+  color: #0284c7;
+  font-weight: 600;
+  margin-left: 8px;
+}
+.mbp-card-client {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 6px;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pm-img-wrap {
+  position: relative;
+  width: 100%;
+  background: #0b1120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+}
+.pm-img-wrap img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.25s ease;
+}
+.pm-img-wrap img.is-fading {
+  opacity: 0.3;
+}
+/* 사진을 가리지 않는 슬림한 플로팅 동그라미 도트 */
+.pm-photo-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.7);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.pm-dot-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.pm-dot-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.25);
+}
+.pm-dot-btn.active {
+  width: 22px;
+  border-radius: 999px;
+  background: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.8);
+}
+</style>
+
 <script>
 $(document).ready(function() {
   var PAGE_SIZE = 9;
   var currentPage = 1;
+  var currentModalIndex = 0;
+  var currentPhotoIndex = 0;
+  var currentModalImages = [];
+  var matchedCards = [];
 
-  function renderPortfolio() {
+  function getMatchedCards() {
     var activeCat = $('.mbp-cat-link.on').data('cat') || 'all';
     var kw = ($('#mbpSearchInput').val() || '').toLowerCase().trim();
     
-    // Find matching items
-    var $matchedItems = $('.mbp-card-item').filter(function() {
+    return $('.mbp-card-item').filter(function() {
       var itemCat = $(this).data('cat');
       var itemName = ($(this).data('name') || '').toLowerCase();
+      var itemClient = ($(this).data('client') || '').toLowerCase();
+      var itemLoc = ($(this).data('loc') || '').toLowerCase();
+      
       var matchCat = (activeCat === 'all' || itemCat === activeCat);
-      var matchKw = (kw === '' || itemName.indexOf(kw) !== -1);
+      var matchKw = (kw === '' || itemName.indexOf(kw) !== -1 || itemClient.indexOf(kw) !== -1 || itemLoc.indexOf(kw) !== -1);
       return matchCat && matchKw;
     });
+  }
 
-    var totalItems = $matchedItems.length;
+  function renderPortfolio() {
+    var $matched = getMatchedCards();
+    matchedCards = $matched.toArray();
+    var totalItems = matchedCards.length;
     var totalPages = Math.ceil(totalItems / PAGE_SIZE) || 1;
     if (currentPage > totalPages) currentPage = 1;
 
-    // Hide all items first
     $('.mbp-card-item').hide();
 
-    // Show slice for current page
     var startIndex = (currentPage - 1) * PAGE_SIZE;
     var endIndex = startIndex + PAGE_SIZE;
-    $matchedItems.slice(startIndex, endIndex).stop(true, true).fadeIn(200);
+    $matched.slice(startIndex, endIndex).stop(true, true).fadeIn(200);
 
-    // Update Counter
     $('#mbpTotalNum').text(totalItems);
 
-    // Render Pagination
     var pageHtml = '';
     if (totalPages > 1) {
       pageHtml += '<li><button type="button" class="mbp-page-arrow" data-page="1">«</button></li>';
@@ -291,7 +494,7 @@ $(document).ready(function() {
   });
 
   // Search Input Event
-  $('#mbpSearchInput').on('keyup', function() {
+  $('#mbpSearchInput').on('keyup input', function() {
     currentPage = 1;
     renderPortfolio();
   });
@@ -307,29 +510,171 @@ $(document).ready(function() {
     }
   });
 
-  // Lightbox Modal Click Event
-  $(document).on('click', '.mbp-card-item', function() {
-    var title = $(this).data('name');
-    var img = $(this).data('img');
-    var tag = $(this).data('tag');
-    var date = $(this).data('date');
+  function switchPhoto(pIdx) {
+    if (!currentModalImages || currentModalImages.length === 0) return;
+    if (pIdx < 0) pIdx = currentModalImages.length - 1;
+    if (pIdx >= currentModalImages.length) pIdx = 0;
+    currentPhotoIndex = pIdx;
+
+    var targetUrl = currentModalImages[pIdx];
+    var $img = $('#modalImg');
+    var $vEl = $('#modalVideo');
+    if ($vEl.length && $vEl[0]) {
+      $vEl[0].pause();
+      $vEl.hide().attr('src', '');
+    }
+    $img.show().addClass('is-fading');
+    setTimeout(function() {
+      $img.attr('src', targetUrl);
+      $img.removeClass('is-fading');
+    }, 120);
+
+    $('.pm-dot-btn').removeClass('active');
+    $('.pm-dot-btn[data-idx="' + pIdx + '"]').addClass('active');
+  }
+
+  function openModal(idx) {
+    if (idx < 0) idx = matchedCards.length - 1;
+    if (idx >= matchedCards.length) idx = 0;
+    currentModalIndex = idx;
+    currentPhotoIndex = 0;
+
+    var $card = $(matchedCards[idx]);
+    var title = $card.data('name');
+    var tag = $card.data('tag');
+    var date = $card.data('date');
+    var loc = $card.data('loc') || '';
+    var scale = $card.data('scale') || '';
+    var client = $card.data('client') || '';
+    var videoUrl = $card.data('video') || '';
+    var rawImages = $card.data('images');
+
+    if (typeof rawImages === 'string') {
+      try { rawImages = JSON.parse(rawImages); } catch(e) { rawImages = [$card.data('img')]; }
+    }
+    if (!Array.isArray(rawImages) || rawImages.length === 0) {
+      rawImages = [$card.data('img')];
+    }
+
+    currentModalImages = rawImages.map(function(u) {
+      if (!u) return '/images/bs_ad/baro.jpg';
+      return u.replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/');
+    });
 
     $('#modalTitle').text(title);
-    $('#modalImg').attr('src', img);
-    $('#modalCat').text(tag + ' · ' + date);
-    $('#modalLoc').text('광주 주요 상권 직영 시공 사례');
+    $('#modalCat').text(tag + (scale ? ' · ' + scale : ''));
+    $('#modalLoc').text((client ? '광고주: ' + client + ' | ' : '') + '집행처: ' + loc);
+    $('#modalCounter').text((idx + 1) + ' / ' + matchedCards.length);
+
+    var $vEl = $('#modalVideo');
+    var $imgEl = $('#modalImg');
+
+    if (videoUrl) {
+      $imgEl.hide();
+      $vEl.attr('src', videoUrl).show();
+      if ($vEl[0]) {
+        $vEl[0].muted = true;
+        $vEl[0].currentTime = 0;
+        var playPromise = $vEl[0].play();
+        if (playPromise !== undefined) {
+          playPromise.catch(function(e) { /* Autoplay was prevented */ });
+        }
+      }
+      $('#modalSubNotice').show();
+      $('#modalCtaBtn').text('이 영상 제작 견적 문의 ➔');
+      $('#modalPhotoDots').hide().empty();
+    } else {
+      $('#modalSubNotice').hide();
+      if ($vEl.length && $vEl[0]) {
+        $vEl[0].pause();
+        $vEl.attr('src', '').hide();
+      }
+      $imgEl.show().attr('src', currentModalImages[0]);
+      $('#modalCtaBtn').text('이 매체 집행 견적 문의 ➔');
+
+      // Render Sleek Dots if multiple photos
+      var $dotsWrap = $('#modalPhotoDots');
+      if (currentModalImages.length > 1) {
+        var dotsHtml = '';
+        currentModalImages.forEach(function(imgUrl, pIdx) {
+          dotsHtml += '<button type="button" class="pm-dot-btn ' + (pIdx === 0 ? 'active' : '') + '" data-idx="' + pIdx + '" title="사진 ' + (pIdx + 1) + '"></button>';
+        });
+        $dotsWrap.html(dotsHtml).show();
+      } else {
+        $dotsWrap.hide().empty();
+      }
+    }
+
     $('#modalBackdrop').addClass('open');
+  }
+
+  function closeModal() {
+    var $vEl = $('#modalVideo');
+    if ($vEl.length && $vEl[0]) {
+      $vEl[0].pause();
+      $vEl.attr('src', '').hide();
+    }
+    $('#modalBackdrop').removeClass('open');
+  }
+
+  // Click on Dot Button
+  $(document).on('click', '.pm-dot-btn', function(e) {
+    e.stopPropagation();
+    var pIdx = parseInt($(this).data('idx'), 10);
+    switchPhoto(pIdx);
+  });
+
+  // Lightbox Modal Click Event
+  $(document).on('click', '.mbp-card-item', function() {
+    var idx = matchedCards.indexOf(this);
+    if (idx !== -1) {
+      openModal(idx);
+    }
+  });
+
+  // Prev / Next Arrows
+  $('#modalPrevBtn').on('click', function(e) {
+    e.stopPropagation();
+    if (currentModalImages.length > 1 && currentPhotoIndex > 0) {
+      switchPhoto(currentPhotoIndex - 1);
+    } else {
+      openModal(currentModalIndex - 1);
+    }
+  });
+
+  $('#modalNextBtn').on('click', function(e) {
+    e.stopPropagation();
+    if (currentModalImages.length > 1 && currentPhotoIndex < currentModalImages.length - 1) {
+      switchPhoto(currentPhotoIndex + 1);
+    } else {
+      openModal(currentModalIndex + 1);
+    }
   });
 
   // Modal Close
   $(document).on('click', '#modalClose, .portfolio-modal-backdrop', function(e) {
     if (e.target === this || $(this).attr('id') === 'modalClose') {
-      $('#modalBackdrop').removeClass('open');
+      closeModal();
     }
   });
 
   $(document).on('keydown', function(e) {
-    if (e.key === 'Escape') $('#modalBackdrop').removeClass('open');
+    if (!$('#modalBackdrop').hasClass('open')) return;
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowLeft') {
+      if (currentModalImages.length > 1 && currentPhotoIndex > 0) {
+        switchPhoto(currentPhotoIndex - 1);
+      } else {
+        openModal(currentModalIndex - 1);
+      }
+    }
+    if (e.key === 'ArrowRight') {
+      if (currentModalImages.length > 1 && currentPhotoIndex < currentModalImages.length - 1) {
+        switchPhoto(currentPhotoIndex + 1);
+      } else {
+        openModal(currentModalIndex + 1);
+      }
+    }
   });
 
   // Initial Run

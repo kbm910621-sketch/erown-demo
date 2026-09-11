@@ -1,7 +1,14 @@
 <?php
+function normalize_port_img($url) {
+    if (empty($url)) return '/images/bs_ad/baro.jpg';
+    return str_replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/', $url);
+}
 include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/db_conn.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/common.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
+if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/admin/bbs/portfolio/portfolio_seed_data.php")) {
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/admin/bbs/portfolio/portfolio_seed_data.php";
+}
 ?>
 
 <body class="is-main">
@@ -12,58 +19,25 @@ $temp = mysqli_fetch_array($result);
 $totals = $temp[0];
 
 $categories = array(
-  'bus'    => '시내버스 광고',
-  'taxi'   => '택시·택배 광고',
-  'did'    => 'DID 전광판',
-  'print'  => '인쇄·대형현수막',
-  'online' => '온라인 마케팅',
-  'web'    => '홈페이지 제작',
-  'video'  => '영상제작',
-  'mart'   => '대형마트 리테일',
+  'bus'     => '시내버스 광고',
+  'shelter' => '버스 승강장·쉘터',
+  'did'     => 'DID·터미널 광고',
+  'taxi'    => '택시·택배·특화매체',
+  'online'  => '온라인 마케팅',
+  'video'   => '영상제작',
+  'mart'    => '대형마트 카트',
+  'print'   => '인쇄물·현수막',
+  'web'     => '홈페이지제작'
 );
 
 $result = mysqli_query($conn, "SELECT * FROM portfolio WHERE status='active' ORDER BY sort_order ASC, id DESC");
 $list   = array();
 if ($result) {
   while ($row = mysqli_fetch_assoc($result)) {
+    $row['thumb'] = normalize_port_img($row['thumb']);
     $list[] = $row;
   }
 }
-
-// 100% REAL AUTHENTIC HIGH-RES IMAGES SOURCED DIRECTLY FROM BS-AD.CO.KR (1.5MB+ ULTRA HIGH-RES)
-if (empty($list)) {
-  $list = array(
-    // 01 BUS ADVERTISING (REAL BUS WRAPPINGS)
-    array('id'=>1, 'category'=>'bus', 'title'=>'광주 시내버스 차도면 대형 래핑 광고 집행 실사', 'thumb'=>'/images/bs_ad/baro.jpg'),
-    array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'thumb'=>'/images/bs_ad/baro_3.jpg'),
-    array('id'=>3, 'category'=>'bus', 'title'=>'교차로 신호 대기 차량 타깃 시내버스 후면 래핑', 'thumb'=>'/images/bs_ad/baro_9.jpg'),
-    array('id'=>4, 'category'=>'bus', 'title'=>'광주 104개 노선 시내버스 내부 중앙창문 포스터', 'thumb'=>'/images/bs_ad/port_in03.jpg'),
-    array('id'=>5, 'category'=>'bus', 'title'=>'광주 전남 대표 브랜드 시내버스 3면 풀패키지 래핑', 'thumb'=>'/images/bs_ad/baro_10.jpg'),
-    array('id'=>6, 'category'=>'bus', 'title'=>'상무·수완·첨단 주요 상권 관통 시내버스 외부 래핑', 'thumb'=>'/images/bs_ad/baro_11.jpg'),
-    array('id'=>7, 'category'=>'bus', 'title'=>'도심 주요 간선 축 시내버스 차도면 3.7m 와이드 래핑', 'thumb'=>'/images/bs_ad/baro_12.jpg'),
-    array('id'=>8, 'category'=>'bus', 'title'=>'광주 시내버스 내부 하차문 사랑면 포스터 광고', 'thumb'=>'/images/bs_ad/port_in05.jpg'),
-
-    // 02 ONLINE MARKETING (SEARCH & PLACE & SOCIAL)
-    array('id'=>9, 'category'=>'online', 'title'=>'봉선동 입시학원 네이버 스마트플레이스 1위 세팅 & 관리', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
-    array('id'=>10, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 전문 칼럼 마케팅', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
-    array('id'=>11, 'category'=>'online', 'title'=>'수완지구 외식 브랜드 광주 맘카페 & SNS 릴스 바이럴', 'thumb'=>'/images/bs_ad/baro_15.jpg'),
-    array('id'=>12, 'category'=>'online', 'title'=>'광주 로컬 핫플레이스 인스타그램 반경 1~3km 타깃 광고', 'thumb'=>'/images/bs_ad/baro_16.jpg'),
-
-    // 03 VIDEO PRODUCTION (4K CINEMATIC & SHORTS)
-    array('id'=>13, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'thumb'=>'/images/bs_ad/visual01.jpg'),
-    array('id'=>14, 'category'=>'video', 'title'=>'기업 TV CF & 극장 스크린 30초 풀프레임 광고 영상', 'thumb'=>'/images/bs_ad/visual02.jpg'),
-    array('id'=>15, 'category'=>'video', 'title'=>'SNS 릴스 · 유튜브 숏폼 9:16 모바일 바이럴 영상', 'thumb'=>'/images/bs_ad/visual03.jpg'),
-    array('id'=>16, 'category'=>'video', 'title'=>'유스퀘어 터미널 DID 디지털 전광판 15초 모션그래픽', 'thumb'=>'/images/bs_ad/did_01.jpg'),
-
-    // 04 SPECIALIZED OOH MEDIA (TAXI, DELIVERY, MART, DID)
-    array('id'=>17, 'category'=>'taxi', 'title'=>'광주 전역 법인·개인택시 200대 양측면 래핑 광고', 'thumb'=>'/images/bs_ad/baro_17.jpg'),
-    array('id'=>18, 'category'=>'taxi', 'title'=>'광주 5개 구 아파트 단지 택배 탑차 3면 와이드 래핑', 'thumb'=>'/images/bs_ad/baro_18.jpg'),
-    array('id'=>19, 'category'=>'mart', 'title'=>'이마트 · 롯데마트 1,000대 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/bs_ad/port_in09.jpg'),
-    array('id'=>20, 'category'=>'did', 'title'=>'광천터미널 & 지하철 환승역 고휘도 DID 전자현수막', 'thumb'=>'/images/bs_ad/did_02.jpg')
-  );
-}
-
-$total = count($list);
 
 $portBus = array();
 $portOnline = array();
@@ -71,74 +45,140 @@ $portVideo = array();
 $portOther = array();
 
 foreach ($list as $item) {
-  if ($item['category'] == 'bus') $portBus[] = $item;
+  if (in_array($item['category'], array('bus', 'shelter', 'did', 'taxi', 'mart'))) $portBus[] = $item;
   if ($item['category'] == 'online' || $item['category'] == 'web') $portOnline[] = $item;
   if ($item['category'] == 'video') $portVideo[] = $item;
   if (in_array($item['category'], array('taxi','mart','did','print'))) $portOther[] = $item;
 }
 
-// Ensure each section category has 8 authentic real items for Swiper sliding (PC 4개, 모바일 2개씩 회전)
-if (count($portBus) < 8) {
-  $portBus = array(
-    array('id'=>1, 'category'=>'bus', 'title'=>'상무지구 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/bs_ad/baro.jpg'),
-    array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'thumb'=>'/images/bs_ad/baro_3.jpg'),
-    array('id'=>3, 'category'=>'bus', 'title'=>'교차로 신호 대기 차량 타깃 시내버스 후면 래핑', 'thumb'=>'/images/bs_ad/baro_9.jpg'),
-    array('id'=>4, 'category'=>'bus', 'title'=>'광주 104개 노선 시내버스 내부 중앙창문 포스터', 'thumb'=>'/images/bs_ad/port_in03.jpg'),
-    array('id'=>5, 'category'=>'bus', 'title'=>'수완지구 학원가 집중 배차 버스 차도면 3.7m', 'thumb'=>'/images/bs_ad/baro.jpg'),
-    array('id'=>6, 'category'=>'bus', 'title'=>'광주역·송정역 KTX 연계 간선버스 인도면 래핑', 'thumb'=>'/images/bs_ad/baro_3.jpg'),
-    array('id'=>7, 'category'=>'bus', 'title'=>'첨단지구 대단지 아파트 경유 버스 후면 번호판', 'thumb'=>'/images/bs_ad/baro_9.jpg'),
-    array('id'=>8, 'category'=>'bus', 'title'=>'도심 순환01번 시내버스 전담 음성 방송 광고', 'thumb'=>'/images/bs_ad/port_in03.jpg')
-  );
-}
-if (count($portOnline) < 8) {
-  $portOnline = array(
-    array('id'=>9, 'category'=>'online', 'title'=>'봉선동 입시학원 네이버 스마트플레이스 1위 세팅', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
-    array('id'=>10, 'category'=>'online', 'title'=>'상무지구 피부과 C-Rank 브랜드 블로그 칼럼 마케팅', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
-    array('id'=>11, 'category'=>'online', 'title'=>'수완지구 외식 브랜드 광주 맘카페 & 릴스 바이럴', 'thumb'=>'/images/bs_ad/baro_15.jpg'),
-    array('id'=>12, 'category'=>'online', 'title'=>'광주 핫플레이스 인스타그램 반경 1~3km 타깃 광고', 'thumb'=>'/images/bs_ad/baro_16.jpg'),
-    array('id'=>21, 'category'=>'online', 'title'=>'광주 대표 척추병원 네이버 플레이스 리뷰 빌드업', 'thumb'=>'/images/bs_ad/baro_13.jpg'),
-    array('id'=>22, 'category'=>'online', 'title'=>'호남 최대 법무법인 브랜드 블로그 상위 블록 선점', 'thumb'=>'/images/bs_ad/baro_14.jpg'),
-    array('id'=>23, 'category'=>'online', 'title'=>'광주 맘스홀릭 공식 제휴 공동구매 바이럴 침투', 'thumb'=>'/images/bs_ad/baro_15.jpg'),
-    array('id'=>24, 'category'=>'online', 'title'=>'당근마켓 동네 광고 상무·수완·봉선 피드 노출', 'thumb'=>'/images/bs_ad/baro_16.jpg')
-  );
-}
-if (count($portVideo) < 8) {
-  $portVideo = array(
-    array('id'=>13, 'category'=>'video', 'title'=>'광주 대표 종합병원 4K UHD 시네마틱 브랜드 필름', 'thumb'=>'/images/bs_ad/visual01.jpg'),
-    array('id'=>14, 'category'=>'video', 'title'=>'기업 TV CF & 극장 스크린 30초 풀프레임 광고 영상', 'thumb'=>'/images/bs_ad/visual02.jpg'),
-    array('id'=>15, 'category'=>'video', 'title'=>'SNS 릴스 · 유튜브 숏폼 9:16 모바일 바이럴 영상', 'thumb'=>'/images/bs_ad/visual03.jpg'),
-    array('id'=>16, 'category'=>'video', 'title'=>'유스퀘어 터미널 DID 디지털 전광판 15초 모션그래픽', 'thumb'=>'/images/bs_ad/did_01.jpg'),
-    array('id'=>25, 'category'=>'video', 'title'=>'호남 대표 가구 브랜드 4K 시네마틱 감성 홍보영상', 'thumb'=>'/images/bs_ad/visual01.jpg'),
-    array('id'=>26, 'category'=>'video', 'title'=>'상무지구 대형 안과 3D 모션그래픽 라식 안내 필름', 'thumb'=>'/images/bs_ad/visual02.jpg'),
-    array('id'=>27, 'category'=>'video', 'title'=>'인스타그램 릴스 100만 조회수 달성 숏폼 바이럴', 'thumb'=>'/images/bs_ad/visual03.jpg'),
-    array('id'=>28, 'category'=>'video', 'title'=>'상무 교차로 대형 LED 전광판 4K 광고 영상 송출', 'thumb'=>'/images/bs_ad/did_01.jpg')
-  );
+// 01 옥외광고 (버스/택시 등) 기본 샘플 데이터 및 보충
+$defaultBus = array(
+  array('id'=>1, 'category'=>'bus', 'title'=>'상무지구 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/bs_ad/ooh11/차도면광고.png'),
+  array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'thumb'=>'/images/bs_ad/ooh11/인도면광고.png'),
+  array('id'=>3, 'category'=>'bus', 'title'=>'교차로 신호 대기 차량 타깃 시내버스 후면 래핑', 'thumb'=>'/images/bs_ad/ooh11/노선도01.png'),
+  array('id'=>4, 'category'=>'bus', 'title'=>'광주 시내버스 내부 중앙창문 포스터', 'thumb'=>'/images/bs_ad/ooh11/버스시트광고01.png'),
+  array('id'=>5, 'category'=>'bus', 'title'=>'수완지구 학원가 집중 배차 버스 차도면 3.7m', 'thumb'=>'/images/bs_ad/ooh11/하차문광고01.png'),
+  array('id'=>6, 'category'=>'bus', 'title'=>'광주역·송정역 KTX 연계 간선버스 인도면 래핑', 'thumb'=>'/images/bs_ad/ooh11/버스음성광고.png'),
+  array('id'=>7, 'category'=>'bus', 'title'=>'첨단지구 대단지 아파트 경유 버스 후면 번호판', 'thumb'=>'/images/bs_ad/ooh11/유스퀘어광고.png'),
+  array('id'=>8, 'category'=>'bus', 'title'=>'도심 순환01번 시내버스 전담 음성 방송 광고', 'thumb'=>'/images/bs_ad/ooh11/DID광고.png'),
+  array('id'=>64, 'category'=>'mart', 'title'=>'더스마트병원 대형마트 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/port/mart/mart_01.jpg')
+);
+if (empty($portBus)) {
+  $portBus = $defaultBus;
+} else if (count($portBus) < 8) {
+  foreach ($defaultBus as $df) {
+    if (count($portBus) >= 8) break;
+    $portBus[] = $df;
+  }
 }
 
-if($totals>0){
-	$sql = "SELECT * FROM popup WHERE pop_status='1' ORDER BY pop_order ASC";
-	$result = mysqli_query($conn, $sql);
-	while($row = mysqli_fetch_array($result)){
-		if($_COOKIE["todayCookie_".$row['pop_uid']] != "done"){
+// 02 온라인마케팅 기본 샘플 데이터 및 보충
+$defaultOnline = array(
+    array('id'=>9, 'category'=>'online', 'title'=>'스마트플레이스 정보·콘텐츠 통합 운영', 'thumb'=>'/images/online/online_place.jpg'),
+    array('id'=>10, 'category'=>'online', 'title'=>'브랜드 블로그 콘텐츠 기획 및 운영', 'thumb'=>'/images/online/online_blog.jpg'),
+    array('id'=>11, 'category'=>'online', 'title'=>'지역 커뮤니티 & 콘텐츠 마케팅', 'thumb'=>'/images/online/online_local.jpg'),
+    array('id'=>12, 'category'=>'online', 'title'=>'인스타그램 릴스 & 타깃 광고 운영', 'thumb'=>'/images/online/online_instagram.jpg'),
+    array('id'=>21, 'category'=>'online', 'title'=>'구글 검색 & 디스플레이 광고', 'thumb'=>'/images/online/online_analytics.jpg'),
+    array('id'=>22, 'category'=>'online', 'title'=>'네이버 검색광고 키워드 캠페인 운영', 'thumb'=>'/images/online/online_search.jpg'),
+    array('id'=>23, 'category'=>'online', 'title'=>'체험단 & 인플루언서 콘텐츠 마케팅', 'thumb'=>'/images/online/online_influencer.jpg'),
+    array('id'=>24, 'category'=>'online', 'title'=>'홈페이지 & 랜딩페이지 제작', 'thumb'=>'/images/online/online_web.jpg')
+  );
+if (empty($portOnline)) {
+  $portOnline = $defaultOnline;
+} else if (count($portOnline) < 8) {
+  foreach ($defaultOnline as $df) {
+    if (count($portOnline) >= 8) break;
+    $portOnline[] = $df;
+  }
+}
+
+// 03 영상제작 기본 샘플 데이터 및 보충
+$defaultVideo = array(
+  array('id'=>54, 'category'=>'video', 'title'=>'달라온도시락 브랜드 홍보영상', 'thumb'=>'/images/port/video_thumb_01.jpg', 'video'=>'/images/port/video/video_clip_01.mp4', 'client'=>'달라온도시락'),
+  array('id'=>55, 'category'=>'video', 'title'=>'더다르다김밥 숏폼 릴스/쇼츠 홍보영상', 'thumb'=>'/images/port/video_thumb_02.jpg', 'video'=>'/images/port/video/video_clip_02.mp4', 'client'=>'더다르다김밥'),
+  array('id'=>56, 'category'=>'video', 'title'=>'삼미가 정통 한식 백반 홍보영상', 'thumb'=>'/images/port/video_thumb_03.jpg', 'video'=>'/images/port/video/video_clip_03.mp4', 'client'=>'삼미가'),
+  array('id'=>57, 'category'=>'video', 'title'=>'신우네닭칼국수 시그니처 메뉴 홍보영상', 'thumb'=>'/images/port/video_thumb_04.jpg', 'video'=>'/images/port/video/video_clip_04.mp4', 'client'=>'신우네닭칼국수'),
+  array('id'=>58, 'category'=>'video', 'title'=>'장어먹자 숯불구이 전문점 홍보영상', 'thumb'=>'/images/port/video_thumb_05.jpg', 'video'=>'/images/port/video/video_clip_05.mp4', 'client'=>'장어먹자'),
+  array('id'=>63, 'category'=>'video', 'title'=>'정초밥 프리미엄 일식 스시 홍보영상', 'thumb'=>'/images/port/video_thumb_06.jpg', 'video'=>'/images/port/video/video_clip_06.mp4', 'client'=>'정초밥')
+);
+if (empty($portVideo)) {
+  $portVideo = $defaultVideo;
+} else if (count($portVideo) < 6) {
+  foreach ($defaultVideo as $df) {
+    if (count($portVideo) >= 6) break;
+    $portVideo[] = $df;
+  }
+}
+
+// ACTIVE POPUPS FETCH
+$today = date('Y-m-d');
+$pop_sql = "SELECT * FROM popup WHERE pop_view='Y' AND (pop_start <= '$today' AND pop_end >= '$today') AND pop_file0 != '' ORDER BY pop_uid DESC";
+$pop_res = mysqli_query($conn, $pop_sql);
+$active_popups = array();
+if ($pop_res && mysqli_num_rows($pop_res) > 0) {
+  while ($p_row = mysqli_fetch_array($pop_res)) {
+    if (empty($_COOKIE["todayCookie_".$p_row['pop_uid']]) && empty($_COOKIE["todayPopupAll_done"])) {
+      $active_popups[] = $p_row;
+    }
+  }
+}
+
+if (!empty($active_popups)) {
 ?>
-<div class="popup_layer" id="popup_<?php echo $row['pop_uid']; ?>" style="top:<?php echo $row['pop_top']; ?>px;left:<?php echo $row['pop_left']; ?>px">
-    <div class="pop_top"></div>
-    <div class="pop_mid"><img src="/admin/popup/uploads/<?php echo $row['pop_file0']; ?>" style="width:<?php echo $row['pop_width']; ?>px" alt="" /></div>
-    <div class="pop_botm">
-		<input type="checkbox" class="btn_day_close" val="<?php echo $row['pop_uid']; ?>">
-		<label for="popcheck" class="btn_day_close" val="<?php echo $row['pop_uid']; ?>">오늘 하루 동안 열지 않기</label>
-		<span class="pop_close" popnum="<?php echo $row['pop_uid']; ?>">닫기</span>
+<!-- ============================================
+     GAON-N ULTRA-MODERN MODAL POPUP (OVERLAY & SWIPER CAROUSEL)
+============================================ -->
+<script>document.documentElement.classList.add('modal-popup-active');</script>
+<div id="mainModalPopupOverlay" class="main-modal-popup-overlay">
+  <div class="main-modal-popup-card">
+    
+    <!-- TOP BAR -->
+    <div class="mmp-header">
+      <?php if (count($active_popups) > 1) { ?>
+        <div class="mmp-slide-counter"><span class="mmp-current">1</span> / <span class="mmp-total"><?php echo count($active_popups); ?></span></div>
+      <?php } else { ?>
+        <div></div>
+      <?php } ?>
+      <button type="button" class="mmp-close-x" id="btnModalPopupCloseX" aria-label="팝업 닫기">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
     </div>
-</div>
-<?php } } } ?>
 
-<script type="text/javascript">
-$(function () {
-	$(document).on('click','.pop_close', function(){ $('#popup_'+$(this).attr('popnum')).hide(); });
-	$(document).on('click','.btn_day_close', function(){ setCookie("todayCookie_"+$(this).attr('val'), "done", 1); $('#popup_'+$(this).attr('val')).hide(); });
-});
-function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.getDate() + expiredays); document.cookie = name + "=" + escape(value) + "; path=/; expires=" + d.toGMTString() + ";"; }
-</script>
+    <!-- SWIPER CONTAINER -->
+    <div class="mmp-body">
+      <div class="swiper mainModalPopupSwiper">
+        <div class="swiper-wrapper">
+          <?php foreach ($active_popups as $idx => $pop) { ?>
+            <div class="swiper-slide mmp-slide" data-popid="<?php echo $pop['pop_uid']; ?>">
+              <div class="mmp-img-wrap">
+                <img src="/admin/popup/uploads/<?php echo $pop['pop_file0']; ?>" alt="<?php echo htmlspecialchars($pop['pop_title']); ?>" class="mmp-img">
+              </div>
+            </div>
+          <?php } ?>
+        </div>
+        
+        <?php if (count($active_popups) > 1) { ?>
+          <!-- ARROW CONTROLS -->
+          <div class="swiper-button-prev mmp-arrow mmp-arrow-prev"></div>
+          <div class="swiper-button-next mmp-arrow mmp-arrow-next"></div>
+          <div class="swiper-pagination mmp-pagination"></div>
+        <?php } ?>
+      </div>
+    </div>
+
+    <!-- BOTTOM FOOTER TOOLBAR -->
+    <div class="mmp-footer">
+      <label class="mmp-today-check">
+        <input type="checkbox" id="chkModalPopupToday">
+        <span class="mmp-check-custom"></span>
+        <span class="mmp-check-label">오늘 하루 동안 열지 않기</span>
+      </label>
+      <button type="button" class="mmp-btn-close" id="btnModalPopupClose">닫기</button>
+    </div>
+
+  </div>
+</div>
+<?php } ?>
 
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/blank.php";?>
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/skip.php";?>
@@ -148,385 +188,506 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 	<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/header.php";?>
   
   <!-- ============================================
-       01 HERO STAGE : GSAP 1.2S SYMMETRIC SILKY SCROLL HERO
+       01 HERO STAGE : AGENCY BESPOKE EDITORIAL HERO
   ============================================ -->
-  <section class="main_hero" id="hero">
-    <div class="main_hero_text_wrap">
-      <h1 class="main_hero_text">
-        보여주는 광고보다<br>
-        이해되는 광고를 만듭니다.
-      </h1>
-      <div class="main_hero_keywords">
-        <a href="#bus" class="mhk-pill">버스 광고</a>
-        <a href="#other" class="mhk-pill">택시 광고</a>
-        <a href="#online" class="mhk-pill">온라인·SNS</a>
-        <a href="#video" class="mhk-pill">영상제작</a>
-        <a href="#online" class="mhk-pill">병원 마케팅</a>
-      </div>
+  <section class="gh-hero-editorial" id="hero">
+    <div class="gh-video-wrap">
+      <video autoplay muted loop playsinline class="gh-video-bg">
+        <source src="/images/movie.mp4" type="video/mp4">
+      </video>
+      <div class="gh-scrim"></div>
     </div>
 
-    <div class="main_hero_panel_wrap">
-      <div class="main_hero_panel">
-        <div class="main_hero_panel_video_wrap">
-          <video autoplay muted loop playsinline class="main_hero_panel_video">
-            <source src="/images/movie.mp4" type="video/mp4">
-          </video>
-          <div class="main_hero_panel_dim"></div>
-          <div class="main_hero_panel_overlay_text">
-            <div class="mho-text-box">
-              <h2 class="mho-title">
-                보여주는 광고보다<br>
-                이해되는 광고를 만듭니다.
-              </h2>
-              <p class="mho-sub">
-                광주 시내버스 104개 전 노선 맞춤 배차 · 네이버 1위 마케팅 · 4K 시네마틱 프로덕션
-              </p>
-            </div>
-          </div>
+    <div class="gh-container">
+
+      <!-- CENTER HEADLINE & SUBCOPY -->
+      <div class="gh-center-block wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.1s">
+        <h1 class="gh-headline">
+          브랜드가 필요한 순간,<br>
+          가장 알맞은 방식으로 연결합니다.
+        </h1>
+        <p class="gh-sub">
+          옥외광고부터 온라인 마케팅, 영상, 홈페이지까지<br>
+          브랜드와 고객이 만나는 다양한 접점을 연결합니다.
+        </p>
+      </div>
+
+      <!-- BOTTOM CTA & SCOPE ROW -->
+      <div class="gh-bottom-row wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.25s">
+        <a href="/board/estmate/write.php" class="gh-btn-cta">
+          <span>프로젝트 문의하기</span>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+
+        <div class="gh-scope-list pc_only">
+          <span>OOH MEDIA</span>
+          <span class="gsl-dot">/</span>
+          <span>DIGITAL</span>
+          <span class="gsl-dot">/</span>
+          <span>CONTENT</span>
+          <span class="gsl-dot">/</span>
+          <span>WEB</span>
         </div>
       </div>
+
     </div>
   </section>
 
 
   <!-- ============================================
-       01-B ABOUT STATS SECTION (CLEAN LIGHT BACKGROUND)
+       01-B HERO ➔ ABOUT TYPOGRAPHY TRANSITION STRIP
   ============================================ -->
-  <section class="am-about-stats-sec">
-    <div class="aas-silk-canvas">
-      <svg class="aas-silk-svg" viewBox="0 0 1600 600" fill="none" preserveAspectRatio="none">
-        <path class="silk-line line-1" d="M-100,220 C350,60 700,380 1150,140 C1400,-20 1550,220 1750,160" stroke="#e8edf4" stroke-width="1.1" stroke-linecap="round" />
-        <path class="silk-line line-2" d="M-80,360 C320,180 780,460 1180,240 C1420,80 1560,340 1780,260" stroke="#edf2f7" stroke-width="0.9" stroke-linecap="round" />
-      </svg>
+  <div class="gh-transition-strip" aria-hidden="true">
+    <div class="gts-track">
+      <span class="gts-word outline">OOH</span>
+      <span class="gts-word">DIGITAL</span>
+      <span class="gts-word outline">CONTENT</span>
+      <span class="gts-word">WEB</span>
+      <span class="gts-word outline">OOH</span>
+      <span class="gts-word">DIGITAL</span>
+      <span class="gts-word outline">CONTENT</span>
+      <span class="gts-word">WEB</span>
     </div>
+  </div>
 
-    <div class="am-container" style="position:relative; z-index:2;">
-      <div class="aas-top-row wow fadeInUp" data-wow-duration="0.8s">
-        <div class="aas-headline-col">
-          <div class="aas-kicker-line">
-            <span class="akl-dash"></span>
-            <span class="akl-text">ABOUT GAON-N</span>
-          </div>
-          <h2 class="aas-main-title">
-            우리는 광고의<br>
-            <span class="aas-blue-highlight">오프라인과 온라인을 잇는</span><br>
-            통합 마케팅 파트너입니다.
+
+  <!-- ============================================
+       01-C ABOUT SECTION : EDITORIAL 2-COLUMN & SERVICE LIST
+  ============================================ -->
+  <section class="ga-about-editorial" id="about">
+    <div class="gae-container">
+      <div class="gae-grid">
+        
+        <!-- LEFT: KICKER & TITLE -->
+        <div class="gae-left wow fadeInUp" data-wow-duration="0.8s">
+          <span class="gae-kicker">ABOUT GAON-N</span>
+          <h2 class="gae-title">
+            온라인에서 거리까지,<br>
+            브랜드와 고객이 만나는<br>
+            접점을 연결합니다.
           </h2>
         </div>
 
-        <div class="aas-watermark-col">
-          <div class="awc-huge-text">BUS</div>
-          <div class="awc-huge-text">TAXI</div>
-          <div class="awc-huge-text bold">ONLINE</div>
-        </div>
-      </div>
+        <!-- RIGHT: DESCRIPTION & SERVICE LIST -->
+        <div class="gae-right wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.15s">
+          <p class="gae-desc">
+            가온엔은 하나의 광고 방식에 머무르지 않습니다.<br>
+            광주 주요 생활권을 잇는 옥외매체부터 온라인 마케팅, 콘텐츠와 홈페이지까지<br>
+            브랜드의 목적에 맞는 접점을 함께 설계합니다.
+          </p>
 
-      <div class="aas-cards-grid wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.15s">
-        
-        <!-- CARD 01 -->
-        <div class="aas-stat-card">
-          <span class="asc-label">누적 광고 집행</span>
-          <div class="asc-value-row">
-            <strong class="asc-num counter" data-target="500">500</strong><span class="asc-plus">+</span>
-          </div>
-          <span class="asc-unit">건</span>
-        </div>
+          <div class="gae-service-list">
+            
+            <div class="gae-service-item">
+              <div class="gsi-left">
+                <span class="gsi-num">01</span>
+                <strong class="gsi-name">OOH MEDIA</strong>
+              </div>
+              <span class="gsi-sub">옥외 · 교통광고</span>
+              <span class="gsi-arrow">→</span>
+            </div>
 
-        <!-- CARD 02 -->
-        <div class="aas-stat-card">
-          <span class="asc-label">운행 광고 차량</span>
-          <div class="asc-value-row">
-            <strong class="asc-num counter" data-target="200">200</strong><span class="asc-plus">+</span>
-          </div>
-          <span class="asc-unit">대</span>
-        </div>
+            <div class="gae-service-item">
+              <div class="gsi-left">
+                <span class="gsi-num">02</span>
+                <strong class="gsi-name">DIGITAL</strong>
+              </div>
+              <span class="gsi-sub">온라인 마케팅</span>
+              <span class="gsi-arrow">→</span>
+            </div>
 
-        <!-- CARD 03 -->
-        <div class="aas-stat-card">
-          <span class="asc-label">광주 지역 서비스</span>
-          <div class="asc-value-row">
-            <strong class="asc-num counter" data-target="10">10</strong>
-          </div>
-          <span class="asc-unit">년</span>
-        </div>
+            <div class="gae-service-item">
+              <div class="gsi-left">
+                <span class="gsi-num">03</span>
+                <strong class="gsi-name">CONTENT</strong>
+              </div>
+              <span class="gsi-sub">영상 · 콘텐츠</span>
+              <span class="gsi-arrow">→</span>
+            </div>
 
-        <!-- CARD 04 -->
-        <div class="aas-stat-card">
-          <span class="asc-label">고객 재계약률</span>
-          <div class="asc-value-row">
-            <strong class="asc-num counter" data-target="98">98</strong>
-          </div>
-          <span class="asc-unit">%</span>
-        </div>
+            <div class="gae-service-item">
+              <div class="gsi-left">
+                <span class="gsi-num">04</span>
+                <strong class="gsi-name">WEB</strong>
+              </div>
+              <span class="gsi-sub">홈페이지 · 랜딩페이지</span>
+              <span class="gsi-arrow">→</span>
+            </div>
 
-                <!-- CARD 05 -->
-        <div class="aas-stat-card">
-          <span class="asc-label">협력 매체사</span>
-          <div class="asc-value-row">
-            <strong class="asc-num counter" data-target="50">50</strong><span class="asc-plus">+</span>
           </div>
-          <span class="asc-unit">곳</span>
         </div>
 
       </div>
     </div>
   </section>
 
-
   <!-- ============================================
-       02 SECTION 01 : 시내버스 광고 (HUMAN CRAFTED CLEAN STAGE)
+       02 SECTION 01 : OOH MEDIA SOLUTIONS (3-TIER EDITORIAL HIERARCHY)
   ============================================ -->
-  <section class="am-section am-bg-slate" id="bus">
-    <div class="am-container">
+  <section class="am-section go-ooh-editorial-sec" id="bus">
+    <div class="go-container">
       
-      <!-- TOP HEADER (EXACT MASSTIGE.IO TOP ROW) -->
-      <div class="am-sec-head wow fadeInUp" data-wow-duration="0.7s">
-        <div class="ash-flex">
-          <div>
-            <span class="ash-kicker">01 / OOH MEDIA SOLUTIONS</span>
-            <h2 class="ash-title">옥외광고 솔루션</h2>
-            <p class="ash-desc">광주 104개 전 노선 시내버스부터 택시 랩핑, 유스퀘어 터미널 및 대형 DID 전광판까지 도심을 24시간 장악하는 통합 옥외 미디어 믹스입니다.</p>
-          </div>
-          <div class="ash-actions">
-            <button type="button" class="ash-guide-btn blue" id="btnHeadRouteSearch" onclick="openRouteModal();">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <span>104개 노선 실시간 검색기</span>
-            </button>
-            <button type="button" class="ash-guide-btn bus-guide-open" data-guide="guideBusOut">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              <span>옥외매체 규격서 &amp; 제안서(PDF) ↗</span>
-            </button>
-          </div>
+      <!-- TOP HEADER ROW -->
+      <div class="go-header-row">
+        <div class="go-header-left">
+          <span class="go-kicker">01 / OOH MEDIA</span>
+          <h2 class="go-title">옥외광고 솔루션</h2>
+          <p class="go-desc">
+            시내버스부터 택시, 터미널, DID까지 생활권 곳곳에서 만나는 다양한 옥외매체를 운영합니다.
+          </p>
         </div>
       </div>
 
-      <!-- MASSTIGE.IO STYLE 2-COLUMN TABBED INTERACTIVE STAGE -->
-      <div class="mos-stage-layout wow fadeInUp" data-wow-duration="0.8s">
+      <!-- MAIN 2-COLUMN EDITORIAL STAGE -->
+      <div class="go-stage-grid">
         
-        <!-- LEFT COLUMN: VERTICAL SERVICE NAVIGATION LIST -->
-        <div class="mos-nav-col">
-          <div class="mos-mobile-scroll-cue mobile_only">
-            <span class="mmsc-txt">11대 옥외 매체</span>
-            <span class="mmsc-cue">좌우로 밀어서 매체 선택 ➔</span>
-          </div>
-                    <ul class="mos-nav-list" id="mosNavList">
+        <!-- LEFT: 4 PRIMARY ACCORDION CATEGORIES -->
+        <div class="go-left-col">
+          
+          <!-- PRIMARY ACCORDION LIST -->
+          <div class="go-primary-list" id="goPrimaryList">
             
-            <!-- 01. 시내버스 104개 전 노선 -->
-            <li class="mos-nav-item on" 
-                data-id="bus_all"
-                data-kicker="OOH 01 · 광주 대표 교통매체"
-                data-lead="광주 전역을 1일 18시간 동안 반복 주행하며 상무대로·무진대로·금남로 등 주요 간선도로 운전자와 보행자의 시선을 압도하는 광주 1등 랜드마크 빌보드입니다."
-                data-tags="광주 104개 전 노선,1일 18시간 운행,배차 점유율 98%,본사 직영 시공"
-                data-banner-title="광주 104개 전 노선, 1일 18시간 움직이는 랜드마크"
-                data-banner-bg="#0f172a"
-                data-banner-img="/images/bs_ad/main_sec02_img.jpg"
-                data-guide="guideBusOut"
-                data-spec="차도면 3.7m + 인도면 3.0m + 후면 2.4m">
-              <span class="mni-txt">광주 시내버스 104개 전 노선</span>
-              <span class="mni-arrow">›</span>
-            </li>
+            <!-- 01. 시내버스 외부광고 (DEFAULT OPEN) -->
+            <div class="go-primary-item on" 
+                 data-cat="outdoor" 
+                 data-num="01" 
+                 data-eng="BUS OUTDOOR" 
+                 data-title="시내버스 외부광고" 
+                 data-guide="guideBusOut">
+              <div class="gpi-header-btn">
+                <div class="gpi-title-wrap">
+                  <div class="gpi-eyebrow-row">
+                    <span class="gpi-eyebrow">01 / BUS OUTDOOR</span>
+                  </div>
+                  <h3 class="gpi-title">시내버스 외부광고</h3>
+                  <p class="gpi-sub">광주·나주 주요 생활권을 운행하며 브랜드를 알리는 이동형 광고매체</p>
+                </div>
+                <div class="gpi-toggle-icon">
+                  <span class="gpi-icon-bar h"></span>
+                  <span class="gpi-icon-bar v"></span>
+                </div>
+              </div>
 
-            <!-- 02. 버스 차도면 대형 래핑 -->
-            <li class="mos-nav-item" 
-                data-id="bus_road"
-                data-kicker="OOH 02 · 왕복 8차선 압도"
-                data-lead="왕복 8차선 대로변 맞은편 차량 운전자와 보행자 시야 정면에 3.7m 초대형 스케일로 브랜드를 각인시키는 시내버스 핵심 메인 규격입니다."
-                data-tags="차도면 3700×1000mm,LG 정품 솔벤 시트,운전자 시선 집중도 1위,대로변 노출"
-                data-banner-title="왕복 8차선 운전자의 시선을 사로잡는 차도면 3.7m"
-                data-banner-bg="#1855b7"
-                data-banner-img="/images/bs_ad/baro.jpg"
-                data-guide="guideBusOut"
-                data-spec="실측 규격: 3,700 × 1,000 mm">
-              <span class="mni-txt">버스 차도면 대형 래핑 (3.7m)</span>
-              <span class="mni-arrow">›</span>
-            </li>
+              <!-- NESTED DETAIL ACCORDION BODY -->
+              <div class="gpi-accordion-body">
+                <div class="gpi-body-inner">
+                  <div class="gds-sub-list">
+                    <button type="button" class="gds-item on" 
+                            data-id="bus_road" 
+                            data-cat="outdoor"
+                            data-num="01"
+                            data-eng="BUS OUTDOOR"
+                            data-img="/images/bs_ad/ooh11/차도면광고.png" 
+                            data-sub="차도면 광고" 
+                            data-guide="guideBusOut">
+                      <span class="gds-item-num">01</span>
+                      <span class="gds-item-txt">차도면 광고</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                    <button type="button" class="gds-item" 
+                            data-id="bus_side" 
+                            data-cat="outdoor"
+                            data-num="01"
+                            data-eng="BUS OUTDOOR"
+                            data-img="/images/bs_ad/ooh11/인도면광고.png" 
+                            data-sub="인도면 광고" 
+                            data-guide="guideBusOut">
+                      <span class="gds-item-num">02</span>
+                      <span class="gds-item-txt">인도면 광고</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                    <button type="button" class="gds-item" 
+                            data-id="bus_back" 
+                            data-cat="outdoor"
+                            data-num="01"
+                            data-eng="BUS OUTDOOR"
+                            data-img="/images/bs_ad/ooh11/후면광고.jpg" 
+                            data-sub="후면 광고" 
+                            data-guide="guideBusOut">
+                      <span class="gds-item-num">03</span>
+                      <span class="gds-item-txt">후면 광고</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                  </div>
+                  <!-- MOBILE INLINE PREVIEW -->
+                  <div class="go-mobile-preview">
+                    <div class="gmp-image-wrap">
+                      <img class="gmp-image" src="/images/bs_ad/ooh11/차도면광고.png" alt="차도면 광고">
+                    </div>
+                    <div class="gmp-caption">
+                      <span class="gmp-meta">01 / BUS OUTDOOR</span>
+                      <strong class="gmp-title">차도면 광고</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            <!-- 03. 버스 인도면 표준 래핑 -->
-            <li class="mos-nav-item" 
-                data-id="bus_side"
-                data-kicker="OOH 03 · 정류장 승객 밀착"
-                data-lead="버스 탑승 승객과 정류장 보행자의 눈높이 정면에 위치하여 병원 진료과목, 학원 정보, 전화번호를 선명하게 전달하는 밀착형 규격입니다."
-                data-tags="인도면 3000×500mm,정류장 탑승객 눈높이,세부 정보 전달,고해상도 출력"
-                data-banner-title="정류장 탑승객 눈높이에 밀착되는 인도면 3.0m"
-                data-banner-bg="#0284c7"
-                data-banner-img="/images/bs_ad/baro_3.jpg"
-                data-guide="guideBusOut"
-                data-spec="실측 규격: 3,000 × 500 mm">
-              <span class="mni-txt">버스 인도면 표준 래핑 (3.0m)</span>
-              <span class="mni-arrow">›</span>
-            </li>
+            <!-- 02. 버스 내부 · 음성광고 -->
+            <div class="go-primary-item" 
+                 data-cat="interior" 
+                 data-num="02" 
+                 data-eng="BUS INTERIOR" 
+                 data-title="버스 내부 · 음성광고" 
+                 data-guide="guideBusIn">
+              <div class="gpi-header-btn">
+                <div class="gpi-title-wrap">
+                  <div class="gpi-eyebrow-row">
+                    <span class="gpi-eyebrow">02 / BUS INTERIOR</span>
+                  </div>
+                  <h3 class="gpi-title">버스 내부 · 음성광고</h3>
+                  <p class="gpi-sub">버스 이용객의 이동시간 동안 시각과 음성으로 브랜드를 전달하는 매체</p>
+                </div>
+                <div class="gpi-toggle-icon">
+                  <span class="gpi-icon-bar h"></span>
+                  <span class="gpi-icon-bar v"></span>
+                </div>
+              </div>
 
-            <!-- 04. 버스 후면 번호판 래핑 -->
-            <li class="mos-nav-item" 
-                data-id="bus_back"
-                data-kicker="OOH 04 · 신호 대기 강제 노출"
-                data-lead="출퇴근 시간 및 도심 교차로 신호 대기 중 뒤따르는 차량 운전자와 동승자의 시선 정면에 3분 이상 머무르는 필수 패키지 면입니다."
-                data-tags="후면 2400×300mm,신호 대기 후방 차량,3분 이상 강제 주시,반사 솔벤"
-                data-banner-title="신호 대기 차량 운전자를 사로잡는 후면 번호판 래핑"
-                data-banner-bg="#4338ca"
-                data-banner-img="/images/bs_ad/baro_9.jpg"
-                data-guide="guideBusOut"
-                data-spec="실측 규격: 2,400 × 300 mm">
-              <span class="mni-txt">버스 후면 번호판 래핑</span>
-              <span class="mni-arrow">›</span>
-            </li>
+              <!-- NESTED DETAIL ACCORDION BODY -->
+              <div class="gpi-accordion-body">
+                <div class="gpi-body-inner">
+                  <div class="gds-sub-list">
+                    <button type="button" class="gds-item on" 
+                            data-id="bus_window" 
+                            data-cat="interior"
+                            data-num="02"
+                            data-eng="BUS INTERIOR"
+                            data-img="/images/bs_ad/ooh11/노선도01.png" 
+                            data-sub="노선도 광고" 
+                            data-guide="guideBusIn">
+                      <span class="gds-item-num">01</span>
+                      <span class="gds-item-txt">노선도 광고</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                    <button type="button" class="gds-item" 
+                            data-id="bus_door" 
+                            data-cat="interior"
+                            data-num="02"
+                            data-eng="BUS INTERIOR"
+                            data-img="/images/bs_ad/ooh11/하차문광고01.png" 
+                            data-sub="하차문 광고" 
+                            data-guide="guideBusIn">
+                      <span class="gds-item-num">02</span>
+                      <span class="gds-item-txt">하차문 광고</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                    <button type="button" class="gds-item" 
+                            data-id="bus_seat" 
+                            data-cat="interior"
+                            data-num="02"
+                            data-eng="BUS INTERIOR"
+                            data-img="/images/bs_ad/ooh11/버스시트광고01.png" 
+                            data-sub="좌석시트 광고" 
+                            data-guide="guideBusIn">
+                      <span class="gds-item-num">03</span>
+                      <span class="gds-item-txt">좌석시트 광고</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                    <button type="button" class="gds-item" 
+                            data-id="bus_voice" 
+                            data-cat="interior"
+                            data-num="02"
+                            data-eng="BUS INTERIOR"
+                            data-img="/images/bs_ad/ooh11/버스음성광고.png" 
+                            data-sub="음성안내 방송" 
+                            data-guide="guideBusIn">
+                      <span class="gds-item-num">04</span>
+                      <span class="gds-item-txt">음성안내 방송</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                  </div>
+                  <!-- MOBILE INLINE PREVIEW -->
+                  <div class="go-mobile-preview">
+                    <div class="gmp-image-wrap">
+                      <img class="gmp-image" src="/images/bs_ad/ooh11/노선도01.png" alt="노선도 광고">
+                    </div>
+                    <div class="gmp-caption">
+                      <span class="gmp-meta">02 / BUS INTERIOR</span>
+                      <strong class="gmp-title">노선도 광고</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            <!-- 05. 버스 내부창문 포스터 (따로 분리) -->
-            <li class="mos-nav-item" 
-                data-id="bus_in_window"
-                data-kicker="OOH 05 · 탑승객 시선 독점"
-                data-lead="버스 내부 좌석 및 입석 승객의 시선 정면에 위치하여 이동 시간 30분 동안 자연스럽게 내용을 정독시키는 고밀도 정보 전달 매체입니다."
-                data-tags="중앙창문 1100×500mm,하차문 포스터,탑승객 100% 강제 노출,정독률 1위"
-                data-banner-title="탑승 30분간 승객 눈높이 정면에 머무는 중앙창문 포스터"
-                data-banner-bg="#0d9488"
-                data-banner-img="/images/bs_ad/port_in03.jpg"
-                data-guide="guideBusIn"
-                data-spec="실측 규격: 1,100 × 500 mm">
-              <span class="mni-txt">버스 내부창문 포스터 (중앙창·하차문)</span>
-              <span class="mni-arrow">›</span>
-            </li>
+            <!-- 03. 유스퀘어 터미널 광고 -->
+            <div class="go-primary-item" 
+                 data-cat="terminal" 
+                 data-num="03" 
+                 data-eng="TERMINAL MEDIA" 
+                 data-title="유스퀘어 전광판 광고" 
+                 data-guide="guideUsquare">
+              <div class="gpi-header-btn">
+                <div class="gpi-title-wrap">
+                  <div class="gpi-eyebrow-row">
+                    <span class="gpi-eyebrow">03 / TERMINAL MEDIA</span>
+                  </div>
+                  <h3 class="gpi-title">유스퀘어 전광판 광고</h3>
+                  <p class="gpi-sub">유스퀘어 매표소 상단에 설치된 대형 LED 전광판 광고</p>
+                </div>
+                <div class="gpi-toggle-icon">
+                  <span class="gpi-icon-bar h"></span>
+                  <span class="gpi-icon-bar v"></span>
+                </div>
+              </div>
 
-            <!-- 06. 버스 음성안내 방송 (따로 분리) -->
-            <li class="mos-nav-item" 
-                data-id="bus_voice"
-                data-kicker="OOH 06 · 청각 100% 독점"
-                data-lead="주요 정류소 도착 직전 차내 전체에 송출되는 전문 성우 음성 방송으로, 시각적 피로 없이 청각을 통해 확실한 브랜드 네이밍을 각인시킵니다."
-                data-tags="전문 성우 녹음,7초 음성방송(45자 이내),정류소 도착 전 송출,청각 100% 독점"
-                data-banner-title="정류소 도착 직전 전문 성우 7초 음성안내 방송"
-                data-banner-bg="#0891b2"
-                data-banner-img="/images/bs_ad/port_in01.jpg"
-                data-guide="guideBusIn"
-                data-spec="송출 시간: 7초 (성우 음성 45자 이내)">
-              <span class="mni-txt">버스 음성안내 방송 (전문 성우 7초)</span>
-              <span class="mni-arrow">›</span>
-            </li>
+              <!-- NESTED DETAIL ACCORDION BODY -->
+              <div class="gpi-accordion-body">
+                <div class="gpi-body-inner">
+                  <div class="gds-sub-list">
+                    <button type="button" class="gds-item on" 
+                            data-id="usquare" 
+                            data-cat="terminal"
+                            data-num="03"
+                            data-eng="TERMINAL MEDIA"
+                            data-img="/images/bs_ad/ooh11/유스퀘어광고.png" 
+                            data-sub="매표소 상단 LED 전광판" 
+                            data-guide="guideUsquare">
+                      <span class="gds-item-num">01</span>
+                      <span class="gds-item-txt">매표소 상단 LED 전광판</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                  </div>
+                  <!-- MOBILE INLINE PREVIEW -->
+                  <div class="go-mobile-preview">
+                    <div class="gmp-image-wrap">
+                      <img class="gmp-image" src="/images/bs_ad/ooh11/유스퀘어광고.png" alt="매표소 상단 LED 전광판">
+                    </div>
+                    <div class="gmp-caption">
+                      <span class="gmp-meta">03 / TERMINAL MEDIA</span>
+                      <strong class="gmp-title">매표소 상단 LED 전광판</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            <!-- 07. 광주 전역 택시 래핑 -->
-            <li class="mos-nav-item" 
-                data-id="taxi"
-                data-kicker="OOH 07 · 24시간 골목 밀착"
-                data-lead="광주 전역 200여 대 법인·개인택시가 주요 번화가와 골목길을 24시간 365일 쉼 없이 기동하며 보행자 눈높이에서 밀착 노출됩니다."
-                data-tags="택시 양측면 2100×320mm,24시간 365일 기동,골목상권 침투,광주 전역 배차"
-                data-banner-title="골목상권부터 번화가까지 24시간 달리는 택시 래핑"
-                data-banner-bg="#15803d"
-                data-banner-img="/images/ev1.jpg"
-                data-guide="guideTaxiDelivery"
-                data-spec="실측 규격: 2,100 × 320 mm">
-              <span class="mni-txt">광주 전역 택시 래핑 광고</span>
-              <span class="mni-arrow">›</span>
-            </li>
+            <!-- 04. 특화 옥외매체 -->
+            <div class="go-primary-item" 
+                 data-cat="special" 
+                 data-num="04" 
+                 data-eng="SPECIAL MEDIA" 
+                 data-title="특화 옥외매체" 
+                 data-guide="guideTaxiSpec">
+              <div class="gpi-header-btn">
+                <div class="gpi-title-wrap">
+                  <div class="gpi-eyebrow-row">
+                    <span class="gpi-eyebrow">04 / SPECIAL MEDIA</span>
+                  </div>
+                  <h3 class="gpi-title">특화 옥외매체</h3>
+                  <p class="gpi-sub">DID · 택시 · 택배차 · 대형마트 카트</p>
+                </div>
+                <div class="gpi-toggle-icon">
+                  <span class="gpi-icon-bar h"></span>
+                  <span class="gpi-icon-bar v"></span>
+                </div>
+              </div>
 
-            <!-- 08. 아파트 택배차 3면 래핑 (택배차광고 신설) -->
-            <li class="mos-nav-item" 
-                data-id="delivery"
-                data-kicker="OOH 08 · 주거 밀착 래핑"
-                data-lead="아파트 단지와 주택가 골목길 안쪽까지 깊숙이 진입하여 주민들의 일상 동선 정면에 3면 와이드 스케일로 장시간 노출되는 주거 상권 1등 매체입니다."
-                data-tags="택배차 3면 풀래핑,차도·인도·후면 3면,아파트 단지 주거 밀착,CJ·한진·로젠 연계"
-                data-banner-title="5개 구 아파트 단지 주거 밀착 택배 탑차 3면 래핑"
-                data-banner-bg="#ea580c"
-                data-banner-img="/images/bs_ad/baro_18.jpg"
-                data-guide="guideTaxiDelivery"
-                data-spec="측면 2,800×1,400mm / 후면 1,400×1,400mm">
-              <span class="mni-txt">아파트 택배차 3면 래핑 광고</span>
-              <span class="mni-arrow">›</span>
-            </li>
+              <!-- NESTED DETAIL ACCORDION BODY -->
+              <div class="gpi-accordion-body">
+                <div class="gpi-body-inner">
+                  <div class="gds-sub-list">
+                    <button type="button" class="gds-item on" 
+                            data-id="did" 
+                            data-cat="special"
+                            data-num="04"
+                            data-eng="SPECIAL MEDIA"
+                            data-img="/images/bs_ad/ooh11/DID광고.png" 
+                            data-sub="DID 디지털 전광판" 
+                            data-guide="guideTaxiSpec">
+                      <span class="gds-item-num">01</span>
+                      <span class="gds-item-txt">DID 디지털 전광판</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                    <button type="button" class="gds-item" 
+                            data-id="taxi" 
+                            data-cat="special"
+                            data-num="04"
+                            data-eng="SPECIAL MEDIA"
+                            data-img="/images/bs_ad/ooh11/택시광고01.png" 
+                            data-sub="택시 광고" 
+                            data-guide="guideTaxiSpec">
+                      <span class="gds-item-num">02</span>
+                      <span class="gds-item-txt">택시 광고</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                    <button type="button" class="gds-item" 
+                            data-id="delivery" 
+                            data-cat="special"
+                            data-num="04"
+                            data-eng="SPECIAL MEDIA"
+                            data-img="/images/bs_ad/ooh11/택배차광고01.png" 
+                            data-sub="택배차 래핑광고" 
+                            data-guide="guideTaxiSpec">
+                      <span class="gds-item-num">03</span>
+                      <span class="gds-item-txt">택배차 래핑광고</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                    <button type="button" class="gds-item" 
+                            data-id="mart" 
+                            data-cat="special"
+                            data-num="04"
+                            data-eng="SPECIAL MEDIA"
+                            data-img="/images/bs_ad/ooh11/mart_cart_01.jpg" 
+                            data-sub="대형마트 카트광고" 
+                            data-guide="guideTaxiSpec">
+                      <span class="gds-item-num">04</span>
+                      <span class="gds-item-txt">대형마트 카트광고</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                  </div>
+                  <!-- MOBILE INLINE PREVIEW -->
+                  <div class="go-mobile-preview">
+                    <div class="gmp-image-wrap">
+                      <img class="gmp-image" src="/images/bs_ad/ooh11/DID광고.png" alt="DID 디지털 전광판">
+                    </div>
+                    <div class="gmp-caption">
+                      <span class="gmp-meta">04 / SPECIAL MEDIA</span>
+                      <strong class="gmp-title">DID 디지털 전광판</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            <!-- 09. 유스퀘어 광천터미널 (쉘터광고 제외) -->
-            <li class="mos-nav-item" 
-                data-id="usquare"
-                data-kicker="OOH 09 · 호남 최대 허브"
-                data-lead="호남 최대 교통 허브인 유스퀘어 광천터미널 내 대합실, 승하차장, 주요 통로의 대형 조명 라이트박스로 광주 전역 및 외지 유입 인구를 압도합니다."
-                data-tags="유스퀘어 광천터미널,대합실 와이드 조명,승하차장 라이트박스,일 10만 유동인구"
-                data-banner-title="일 유동인구 10만 명 유스퀘어 터미널 대합실 &amp; 와이드 조명"
-                data-banner-bg="#7e22ce"
-                data-banner-img="/images/bs_ad/did_01.jpg"
-                data-guide="guideSubwayCart"
-                data-spec="터미널 내부 와이드 라이트박스">
-              <span class="mni-txt">유스퀘어 광천터미널 광고</span>
-              <span class="mni-arrow">›</span>
-            </li>
+          </div>
 
-            <!-- 10. DID 디지털 전광판 (따로 분리) -->
-            <li class="mos-nav-item" 
-                data-id="did_screen"
-                data-kicker="OOH 10 · 4K UHD LED"
-                data-lead="상무지구 핵심 교차로 빌딩 옥외 LED 및 지하철 환승역사 내 고휘도 DID 스크린을 통해 15초 풀HD/4K 모션그래픽 영상을 하루 100회 이상 연속 송출합니다."
-                data-tags="55~85인치 4K UHD LED,15초 모션영상 송출,일 100회 이상 반복,상무지구 전광판"
-                data-banner-title="도심 핵심 교차로 &amp; 역사 내 4K UHD 초고화질 DID 전광판"
-                data-banner-bg="#6b21a8"
-                data-banner-img="/images/bs_ad/did_02.jpg"
-                data-guide="guideSubwayCart"
-                data-spec="55~85인치 4K UHD 고휘도 LED">
-              <span class="mni-txt">DID 디지털 전광판</span>
-              <span class="mni-arrow">›</span>
-            </li>
-
-            <!-- 11. 대형마트 쇼핑카트 (무빙워크 제외) -->
-            <li class="mos-nav-item" 
-                data-id="cart"
-                data-kicker="OOH 11 · 3050 주부 타깃"
-                data-lead="광주 전역 이마트, 롯데마트 쇼핑카트 전면 플레이트에 부착되어 실질적인 가계 구매력을 가진 3050 주부 고객과 1시간 이상 1:1로 밀착 동행합니다."
-                data-tags="쇼핑카트 280×160mm,이마트·롯데마트 1000대,3050 주부 타깃,60분 밀착 노출"
-                data-banner-title="이마트·롯데마트 쇼핑카트 1,000대, 60분간 고객과 1:1 동행"
-                data-banner-bg="#b91c1c"
-                data-banner-img="/images/sub_bg_02.jpg"
-                data-guide="guideSubwayCart"
-                data-spec="실측 규격: 280 × 160 mm">
-              <span class="mni-txt">대형마트 쇼핑카트 광고</span>
-              <span class="mni-arrow">›</span>
-            </li>
-
-          </ul>
         </div>
 
-        <!-- RIGHT COLUMN: DYNAMIC LIVE PREVIEW STAGESTAGE & HUGE DETAIL BUTTON -->
-        <div class="mos-content-col">
+        <!-- RIGHT: PILL CTA BUTTONS + HERO ARTWORK SHOWCASE -->
+        <div class="go-right-col">
           
-          <!-- TOP LEAD & TAGS -->
-          <div class="mos-lead-wrap" id="mosLeadWrap">
-            <span class="mos-dyn-kicker" id="mosDynKicker">OOH 01 · 광주 대표 교통매체</span>
-            <p class="mos-dyn-lead" id="mosDynLead">
-              광주 전역을 1일 18시간 동안 반복 주행하며 상무대로·무진대로·금남로 등 주요 간선도로 운전자와 보행자의 시선을 압도하는 광주 1등 랜드마크 빌보드입니다.
-            </p>
-            <div class="mos-dyn-tags" id="mosDynTags">
-              <span class="mdt-pill">광주 104개 전 노선</span>
-              <span class="mdt-pill">1일 18시간 운행</span>
-              <span class="mdt-pill">배차 점유율 98%</span>
-              <span class="mdt-pill">직영 시공 관리</span>
-            </div>
-          </div>
-
-          <!-- CENTER HERO VISUAL BANNER -->
-          <div class="mos-hero-banner" id="mosHeroBanner">
-            <img src="/images/bs_ad/main_sec02_img.jpg" id="mosBannerImg" alt="옥외광고 솔루션 실사" class="mhb-bg-img">
-            <div class="mhb-scrim"></div>
-            <div class="mhb-overlay-content" id="mosBannerText">
-              <div class="mhb-spec-badge" id="mosDynSpec">차도면 3.7m + 인도면 3.0m + 후면 2.4m</div>
-              <h3 class="mhb-title" id="mosBannerTitle">광주 104개 전 노선, 1일 18시간 움직이는 랜드마크</h3>
-            </div>
-          </div>
-
-          <!-- HUGE DETAIL BUTTONS ROW (자세히 보기 훨씬 큼직하게) -->
-          <div class="mos-huge-action-bar">
-            <button type="button" class="mos-huge-btn primary bus-guide-open" id="mosBtnGuide" data-guide="guideBusOut">
-              <span class="mhb-btn-txt">규격 가이드 &amp; 제안서(PDF) 자세히 보기</span>
-              <span class="mhb-btn-arrow">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </span>
+          <!-- TOP PILL CTA ACTION ROW (ABOVE PHOTO) -->
+          <div class="go-photo-actions">
+            <button type="button" class="go-pill-btn bus-guide-open" id="goBtnGuide" data-guide="guideBusOut">
+              <span>규격 가이드 &amp; 제안서 보기</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </button>
-
-            <button type="button" class="mos-huge-btn secondary" id="btnOpenRouteSearchModal" onclick="openRouteModal();">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <span>104개 노선 실시간 검색기</span>
+            <button type="button" class="go-pill-btn open-route-search" onclick="openRouteModal();">
+              <span>광주 시내버스 노선 검색</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </button>
           </div>
 
+          <div class="go-photo-frame" id="goPhotoFrame">
+            <div class="go-single-visual" id="goSingleVisual">
+              <!-- DUAL LAYER FOR SILKY CINEMATIC CROSSFADE -->
+              <img src="/images/bs_ad/ooh11/차도면광고.png" id="goPhotoBack" alt="옥외광고 배경" class="go-photo-img go-photo-back">
+              <img src="/images/bs_ad/ooh11/차도면광고.png" id="goPhotoFront" alt="옥외광고 솔루션 실사" class="go-photo-img go-photo-front">
+              <div class="go-photo-scrim"></div>
+              <div class="go-photo-caption" id="goPhotoCaption">
+                <span class="gpc-tag" id="goCapNumEng">01 / BUS OUTDOOR</span>
+                <strong class="gpc-title" id="goCapTitle">차도면 광고</strong>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
 
-            <!-- RECENT OOH PORTFOLIO SHOWCASE STRIP (HIGH-END MODERN ARROWS) -->
-      <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s" style="margin-top:60px;">
+      <!-- RECENT OOH PORTFOLIO SHOWCASE STRIP (KEPT INTACT) -->
+      <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s" style="margin-top:70px;">
         <div class="asps-head">
           <div class="asps-title-wrap">
             <span class="asps-kicker">OOH PORTFOLIO</span>
@@ -561,20 +722,18 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
                   <strong class="asps-item-title"><?php echo htmlspecialchars($bItem['title']); ?></strong>
                   <span class="asps-title-arrow">↗</span>
                 </div>
-                <span class="asps-item-loc">광주 104개 노선 맞춤 직영 시공</span>
+                <span class="asps-item-loc">광주 시내버스 맞춤 직영 시공</span>
               </div>
             </div>
             <?php endforeach; ?>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
-    <!-- ============================================
-       03 SECTION 02 : 온라인 마케팅 솔루션 (OPTION 03: 1섹션 패밀리룩 상단 전폭 헤더 + 좌측 채널 탭)
-  ============================================ -->
-    <!-- ============================================
+<!-- ============================================
        03 SECTION 02 : 온라인 마케팅 솔루션 (위/아래 영문 타이포 스타일)
   ============================================ -->
   <section class="am-section am-bg-white" id="online">
@@ -583,8 +742,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
       <!-- MAIN SEALNPACK TALL PORTRAIT LAYOUT -->
       <div class="som-layout-stage">
         
-        <!-- PC ONLY: BIG SUBTLE ENGLISH TYPOGRAPHY WATERMARK (위/아래 3단 영문 워터마크) -->
-        <!-- LEFT: STICKY BRAND TITLE, DESCRIPTION, GUIDE BUTTON & KEYWORD TAG CLOUD (PC ONLY STICKY) -->
+        <!-- LEFT: STICKY BRAND TITLE, DESCRIPTION, GUIDE BUTTON & KEYWORD TAG CLOUD -->
         <div class="som-left-content">
           
           <div class="som-title-wrap">
@@ -593,295 +751,312 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           </div>
 
           <p class="som-desc">
-            네이버 스마트플레이스 1위 세팅부터 C-Rank 브랜드 블로그, 맘카페 바이럴, 인스타그램 스폰서 광고까지 가온엔 본사 인하우스 전문팀이 직접 운영합니다.
+          검색, 플레이스, 블로그, SNS, 홈페이지까지 고객이 브랜드를 발견하고 정보를 확인하는 다양한 온라인 접점을 함께 운영합니다.
+          업종과 지역, 고객의 이용 흐름을 살펴 필요한 채널을 연결하고 콘텐츠와 광고를 지속적으로 관리합니다.
           </p>
 
           <button type="button" class="som-guide-btn bus-guide-open" data-guide="guideOnline">
             <span class="sgb-txt">온라인 채널 가이드</span>
           </button>
 
-          <!-- PC ONLY: CUSTOM BRANDED KEYWORD TAG CLOUD (채널 가이드 바로 아래 밀착 배치) -->
-          <div class="som-tag-cloud pc_only" aria-label="온라인 마케팅 핵심 키워드">
-            <span class="stc-item stc-highlight">스마트플레이스<i class="stc-dot"></i></span>
-            <span class="stc-item stc-sub">스마트블록</span>
-            <span class="stc-item stc-highlight">C-Rank 블로그<i class="stc-dot"></i></span>
-            <span class="stc-item stc-sub">로컬 SEO</span>
-            <span class="stc-item stc-sub">리뷰 빌드업</span>
-            <span class="stc-item stc-highlight">인스타그램 AD<i class="stc-dot"></i></span>
-            <span class="stc-item stc-sub">타깃 리타게팅</span>
-            <span class="stc-item stc-highlight">맘카페 바이럴<i class="stc-dot"></i></span>
-            <span class="stc-item stc-sub">키워드 분석</span>
-            <span class="stc-item stc-sub">ROAS 극대화</span>
-            <span class="stc-item stc-highlight">파워링크 1위<i class="stc-dot"></i></span>
-            <span class="stc-item stc-sub">인하우스 전담</span>
-            <span class="stc-item stc-highlight">당근 비즈니스<i class="stc-dot"></i></span>
-            <span class="stc-item stc-sub">메타 픽셀</span>
-            <span class="stc-item stc-sub">숏폼 릴스</span>
-            <span class="stc-item stc-highlight">SEO 최적화<i class="stc-dot"></i></span>
-            <span class="stc-item stc-sub">GA4 데이터</span>
+          <!-- PC ONLY: CUSTOM BRANDED KEYWORD TAG CLOUD -->
+          <div class="som-tag-cloud pc_only" aria-label="온라인 마케팅 핵심 키워드"> 
+            <span class="stc-item stc-highlight">병원마케팅<i class="stc-dot"></i></span> 
+            <span class="stc-item stc-sub">의료기관 맞춤운영</span> 
+            <span class="stc-item stc-sub">스마트플레이스</span> 
+            <span class="stc-item stc-highlight">홈페이지 제작<i class="stc-dot"></i></span>
+            <span class="stc-item stc-sub">네이버 검색마케팅</span> 
+            
+            <span class="stc-item stc-highlight">블로그 마케팅<i class="stc-dot"></i></span> 
+            <span class="stc-item stc-sub">콘텐츠 기획</span> 
+            
+            <span class="stc-item stc-sub">지역 타깃 마케팅</span> 
+            
+            <span class="stc-item stc-highlight">SNS 마케팅<i class="stc-dot"></i></span> 
+            <span class="stc-item stc-sub">타깃 광고</span> 
+            
+            <span class="stc-item stc-highlight">카페 바이럴<i class="stc-dot"></i></span> 
+            <span class="stc-item stc-sub">키워드 전략</span> 
+            
+            <span class="stc-item stc-sub">브랜드 콘텐츠</span> 
+            
+            <span class="stc-item stc-highlight">검색광고<i class="stc-dot"></i></span> 
+            <span class="stc-item stc-sub">온라인 통합 운영</span> 
+            
+            <span class="stc-item stc-highlight">당근 비즈니스<i class="stc-dot"></i></span> 
+            <span class="stc-item stc-sub">지역 기반 광고</span> 
+            
+            <span class="stc-item stc-sub">숏폼 콘텐츠</span> 
+            
+            <span class="stc-item stc-highlight">SEO 최적화<i class="stc-dot"></i></span> 
+            <span class="stc-item stc-sub">데이터 분석</span> 
+            
             <span class="stc-item stc-sub">체험단 마케팅</span>
           </div>
-
         </div>
 
-        <!-- RIGHT: DUAL VERTICAL MARQUEE STREAMS (8 HIGH-RES TOPIC MATCHED IMAGES) -->
+        <!-- RIGHT: DUAL VERTICAL MARQUEE STREAMS -->
         <div class="som-right-stream-wrap">
           
-          <!-- STREAM COLUMN 1 (4 DISTINCT ITEMS + 4 EXACT CLONES) -->
+          <!-- STREAM COLUMN 1 -->
           <div class="som-stream-col som-col-1">
             <div class="som-stream-track track-1">
               
               <!-- ITEM 01 : BLOG -->
-              <div class="som-stream-card">
-                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" alt="블로그 상위 노출 & C-Rank 브랜딩">
+                <div class="som-stream-card">
+                <img src="/images/online/online_blog.jpg" alt="브랜드 블로그 콘텐츠 운영">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">C-Rank Blog</span>
-                  <strong class="sct-title">블로그 상위 노출 &amp; C-Rank 브랜딩</strong>
+                    <span class="sct-kicker">Blog Content</span>
+                    <strong class="sct-title">브랜드 블로그 &amp; 콘텐츠 운영</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">C-Rank Blog</span>
-                  <strong class="shd-title">블로그 상위 노출 &amp; C-Rank 브랜딩</strong>
-                  <p class="shd-desc">상무·수완·봉선 주요 상권 키워드 점유. 전문 에디터의 1:1 맞춤 기획으로 독보적인 브랜드 신뢰도를 구축합니다.</p>
-                  <span class="shd-tag">전문 칼럼 정기 발행</span>
+                    <span class="shd-kicker">Blog Content</span>
+                    <strong class="shd-title">브랜드 블로그 &amp; 콘텐츠 운영</strong>
+                    <p class="shd-desc">업종과 고객이 궁금해하는 주제를 바탕으로 검색 흐름을 고려한 콘텐츠를 기획하고 꾸준히 운영합니다.</p>
+                    <span class="shd-tag">검색형 콘텐츠 운영</span>
                 </div>
-              </div>
+                </div>
 
-              <!-- ITEM 02 : MOM CAFE -->
-              <div class="som-stream-card">
-                <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=800&q=80" alt="맘카페 & 당근마켓 침투 바이럴">
+                <!-- ITEM 02 : MOM CAFE -->
+                <div class="som-stream-card">
+                <img src="/images/online/online_local.jpg" alt="지역 커뮤니티 & 당근 마케팅">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Viral Marketing</span>
-                  <strong class="sct-title">맘카페 &amp; 당근마켓 침투 바이럴</strong>
+                    <span class="sct-kicker">Local Community</span>
+                    <strong class="sct-title">지역 커뮤니티 &amp; 당근 마케팅</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Viral Marketing</span>
-                  <strong class="shd-title">맘카페 &amp; 당근마켓 침투 바이럴</strong>
-                  <p class="shd-desc">광주맘스홀릭 및 당근 동네생활 실사용자 기반 자연스러운 방문 후기 여론 형성과 3050 주부 타깃 신뢰 확보.</p>
-                  <span class="shd-tag">광주 맘카페 여론 형성</span>
+                    <span class="shd-kicker">Local Community</span>
+                    <strong class="shd-title">지역 커뮤니티 &amp; 당근 마케팅</strong>
+                    <p class="shd-desc">지역 커뮤니티와 생활권 플랫폼의 특성을 고려해 브랜드와 고객이 자연스럽게 만날 수 있는 접점을 만들어갑니다.</p>
+                    <span class="shd-tag">지역 생활권 채널 운영</span>
                 </div>
-              </div>
+                </div>
 
-              <!-- ITEM 03 : SMART PLACE -->
-              <div class="som-stream-card">
-                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="스마트플레이스 1위 세팅 & 예약 연동">
+                <!-- ITEM 03 : SMART PLACE -->
+                <div class="som-stream-card">
+                <img src="/images/online/online_place.jpg" alt="스마트플레이스 운영 & 예약 연동">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Place SEO</span>
-                  <strong class="sct-title">스마트플레이스 1위 &amp; 예약 연동</strong>
+                    <span class="sct-kicker">Smart Place</span>
+                    <strong class="sct-title">스마트플레이스 &amp; 예약 연동</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Place SEO</span>
-                  <strong class="shd-title">스마트플레이스 1위 &amp; 예약 연동</strong>
-                  <p class="shd-desc">네이버 지도 1페이지 상단 고정 최적화 및 24시간 네이버 스마트콜/예약 시스템 실시간 매출 연동.</p>
-                  <span class="shd-tag">로컬 지도 상위 노출</span>
+                    <span class="shd-kicker">Smart Place</span>
+                    <strong class="shd-title">스마트플레이스 &amp; 예약 연동</strong>
+                    <p class="shd-desc">매장 정보와 콘텐츠, 예약·톡톡 등 주요 기능을 정리해 검색 고객이 필요한 정보를 편리하게 확인할 수 있도록 관리합니다.</p>
+                    <span class="shd-tag">플레이스 통합 관리</span>
                 </div>
-              </div>
+                </div>
 
-              <!-- ITEM 04 : INSTAGRAM -->
-              <div class="som-stream-card">
-                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="인스타그램 릴스 & 모바일 스폰서 광고">
+                <!-- ITEM 04 : INSTAGRAM -->
+                <div class="som-stream-card">
+                <img src="/images/online/online_instagram.jpg" alt="인스타그램 콘텐츠 & 타깃 광고">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Meta Ads</span>
-                  <strong class="sct-title">인스타그램 릴스 &amp; 스폰서 광고</strong>
+                    <span class="sct-kicker">Social Media</span>
+                    <strong class="sct-title">인스타그램 콘텐츠 &amp; 타깃 광고</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Meta Ads</span>
-                  <strong class="shd-title">인스타그램 릴스 &amp; 스폰서 광고</strong>
-                  <p class="shd-desc">사업장 반경 1~3km 내 핵심 타깃 정밀 송출 및 첫 3초 시선을 사로잡는 9:16 모바일 숏폼 영상 제작.</p>
-                  <span class="shd-tag">반경 1~3km 정밀 노출</span>
+                    <span class="shd-kicker">Social Media</span>
+                    <strong class="shd-title">인스타그램 콘텐츠 &amp; 타깃 광고</strong>
+                    <p class="shd-desc">브랜드에 맞는 피드와 릴스 콘텐츠를 제작하고 지역·연령·관심사 등을 고려한 타깃 광고를 함께 운영합니다.</p>
+                    <span class="shd-tag">SNS 콘텐츠·광고 운영</span>
                 </div>
-              </div>
+                </div>
 
-              <!-- EXACT 4 CLONES FOR SEAMLESS 50% LOOP -->
-              <div class="som-stream-card som-clone-card">
-                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" alt="블로그 상위 노출 & C-Rank 브랜딩">
+                <!-- EXACT 4 CLONES FOR SEAMLESS 50% LOOP -->
+                <div class="som-stream-card som-clone-card">
+                <img src="/images/online/online_blog.jpg" alt="브랜드 블로그 콘텐츠 운영">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">C-Rank Blog</span>
-                  <strong class="sct-title">블로그 상위 노출 &amp; C-Rank 브랜딩</strong>
+                    <span class="sct-kicker">Blog Content</span>
+                    <strong class="sct-title">브랜드 블로그 &amp; 콘텐츠 운영</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">C-Rank Blog</span>
-                  <strong class="shd-title">블로그 상위 노출 &amp; C-Rank 브랜딩</strong>
-                  <p class="shd-desc">상무·수완·봉선 주요 상권 키워드 점유. 전문 에디터의 1:1 맞춤 기획으로 독보적인 브랜드 신뢰도를 구축합니다.</p>
-                  <span class="shd-tag">전문 칼럼 정기 발행</span>
+                    <span class="shd-kicker">Blog Content</span>
+                    <strong class="shd-title">브랜드 블로그 &amp; 콘텐츠 운영</strong>
+                    <p class="shd-desc">업종과 고객이 궁금해하는 주제를 바탕으로 검색 흐름을 고려한 콘텐츠를 기획하고 꾸준히 운영합니다.</p>
+                    <span class="shd-tag">검색형 콘텐츠 운영</span>
                 </div>
-              </div>
-              <div class="som-stream-card som-clone-card">
-                <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=800&q=80" alt="맘카페 & 당근마켓 침투 바이럴">
+                </div>
+
+                <div class="som-stream-card som-clone-card">
+                <img src="/images/online/online_local.jpg" alt="지역 커뮤니티 & 당근 마케팅">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Viral Marketing</span>
-                  <strong class="sct-title">맘카페 &amp; 당근마켓 침투 바이럴</strong>
+                    <span class="sct-kicker">Local Community</span>
+                    <strong class="sct-title">지역 커뮤니티 &amp; 당근 마케팅</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Viral Marketing</span>
-                  <strong class="shd-title">맘카페 &amp; 당근마켓 침투 바이럴</strong>
-                  <p class="shd-desc">광주맘스홀릭 및 당근 동네생활 실사용자 기반 자연스러운 방문 후기 여론 형성과 3050 주부 타깃 신뢰 확보.</p>
-                  <span class="shd-tag">광주 맘카페 여론 형성</span>
+                    <span class="shd-kicker">Local Community</span>
+                    <strong class="shd-title">지역 커뮤니티 &amp; 당근 마케팅</strong>
+                    <p class="shd-desc">지역 커뮤니티와 생활권 플랫폼의 특성을 고려해 브랜드와 고객이 자연스럽게 만날 수 있는 접점을 만들어갑니다.</p>
+                    <span class="shd-tag">지역 생활권 채널 운영</span>
                 </div>
-              </div>
-              <div class="som-stream-card som-clone-card">
-                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="스마트플레이스 1위 세팅 & 예약 연동">
+                </div>
+
+                <div class="som-stream-card som-clone-card">
+                <img src="/images/online/online_place.jpg" alt="스마트플레이스 운영 & 예약 연동">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Place SEO</span>
-                  <strong class="sct-title">스마트플레이스 1위 &amp; 예약 연동</strong>
+                    <span class="sct-kicker">Smart Place</span>
+                    <strong class="sct-title">스마트플레이스 &amp; 예약 연동</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Place SEO</span>
-                  <strong class="shd-title">스마트플레이스 1위 &amp; 예약 연동</strong>
-                  <p class="shd-desc">네이버 지도 1페이지 상단 고정 최적화 및 24시간 네이버 스마트콜/예약 시스템 실시간 매출 연동.</p>
-                  <span class="shd-tag">로컬 지도 상위 노출</span>
+                    <span class="shd-kicker">Smart Place</span>
+                    <strong class="shd-title">스마트플레이스 &amp; 예약 연동</strong>
+                    <p class="shd-desc">매장 정보와 콘텐츠, 예약·톡톡 등 주요 기능을 정리해 검색 고객이 필요한 정보를 편리하게 확인할 수 있도록 관리합니다.</p>
+                    <span class="shd-tag">플레이스 통합 관리</span>
                 </div>
-              </div>
-              <div class="som-stream-card som-clone-card">
-                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="인스타그램 릴스 & 모바일 스폰서 광고">
+                </div>
+
+                <div class="som-stream-card som-clone-card">
+                <img src="/images/online/online_instagram.jpg" alt="인스타그램 콘텐츠 & 타깃 광고">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Meta Ads</span>
-                  <strong class="sct-title">인스타그램 릴스 &amp; 스폰서 광고</strong>
+                    <span class="sct-kicker">Social Media</span>
+                    <strong class="sct-title">인스타그램 콘텐츠 &amp; 타깃 광고</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Meta Ads</span>
-                  <strong class="shd-title">인스타그램 릴스 &amp; 스폰서 광고</strong>
-                  <p class="shd-desc">사업장 반경 1~3km 내 핵심 타깃 정밀 송출 및 첫 3초 시선을 사로잡는 9:16 모바일 숏폼 영상 제작.</p>
-                  <span class="shd-tag">반경 1~3km 정밀 노출</span>
+                    <span class="shd-kicker">Social Media</span>
+                    <strong class="shd-title">인스타그램 콘텐츠 &amp; 타깃 광고</strong>
+                    <p class="shd-desc">브랜드에 맞는 피드와 릴스 콘텐츠를 제작하고 지역·연령·관심사 등을 고려한 타깃 광고를 함께 운영합니다.</p>
+                    <span class="shd-tag">SNS 콘텐츠·광고 운영</span>
                 </div>
-              </div>
+            </div>
+
             </div>
           </div>
-          <!-- STREAM COLUMN 2 (4 DIFFERENT ITEMS + 4 EXACT CLONES) -->
+          <!-- STREAM COLUMN 2 -->
           <div class="som-stream-col som-col-2">
             <div class="som-stream-track track-2">
               
               <!-- ITEM 05 : GOOGLE & GDN -->
-              <div class="som-stream-card">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="구글 검색광고 & 유튜브 GDN 리타깃팅">
+                <div class="som-stream-card">
+                <img src="/images/online/online_analytics.jpg" alt="구글 검색 & 디스플레이 광고">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Google &amp; GDN</span>
-                  <strong class="sct-title">구글 검색 &amp; 유튜브 GDN 리타깃팅</strong>
+                    <span class="sct-kicker">Google Ads</span>
+                    <strong class="sct-title">구글 검색 &amp; 디스플레이 광고</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Google &amp; GDN</span>
-                  <strong class="shd-title">구글 검색 &amp; 유튜브 GDN 리타깃팅</strong>
-                  <p class="shd-desc">키워드 검색 고객과 언론사 배너 네트워크를 결합하여 이탈 고객을 24시간 추적 및 재유입시키는 고효율 배너.</p>
-                  <span class="shd-tag">24시간 리타깃팅 배너</span>
+                    <span class="shd-kicker">Google Ads</span>
+                    <strong class="shd-title">구글 검색 &amp; 디스플레이 광고</strong>
+                    <p class="shd-desc">검색과 디스플레이 네트워크를 활용해 관심 고객과의 접점을 넓히고 캠페인 목적에 맞춰 광고를 운영합니다.</p>
+                    <span class="shd-tag">검색·디스플레이 운영</span>
                 </div>
-              </div>
+                </div>
 
-              <!-- ITEM 06 : SEARCH ADS -->
-              <div class="som-stream-card">
-                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="네이버 파워링크 검색광고 (SA) 세팅">
+                <!-- ITEM 06 : SEARCH ADS -->
+                <div class="som-stream-card">
+                <img src="/images/online/online_search.jpg" alt="네이버 검색광고 운영">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Search Ads</span>
-                  <strong class="sct-title">네이버 파워링크 검색광고 세팅</strong>
+                    <span class="sct-kicker">Search Ads</span>
+                    <strong class="sct-title">네이버 검색광고 운영</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Search Ads</span>
-                  <strong class="shd-title">네이버 파워링크 검색광고 세팅</strong>
-                  <p class="shd-desc">광주 주요 상권 황금 키워드 선점과 클릭률을 극대화하는 소재 최적화 및 ROAS 중심 예산 관리.</p>
-                  <span class="shd-tag">키워드 상위 선점</span>
+                    <span class="shd-kicker">Search Ads</span>
+                    <strong class="shd-title">네이버 검색광고 운영</strong>
+                    <p class="shd-desc">업종과 지역에 맞는 키워드를 검토하고 광고 문구와 예산을 조정해 검색 과정에서 브랜드를 효과적으로 알릴 수 있도록 운영합니다.</p>
+                    <span class="shd-tag">키워드·예산 관리</span>
                 </div>
-              </div>
+                </div>
 
-              <!-- ITEM 07 : INFLUENCER -->
-              <div class="som-stream-card">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="블로그 체험단 & 인플루언서 섭외">
+                <!-- ITEM 07 : INFLUENCER -->
+                <div class="som-stream-card">
+                <img src="/images/online/online_influencer.jpg" alt="체험단 & 인플루언서 마케팅">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Influencer</span>
-                  <strong class="sct-title">체험단 &amp; 인플루언서 섭외</strong>
+                    <span class="sct-kicker">Experience Marketing</span>
+                    <strong class="sct-title">체험단 &amp; 인플루언서 마케팅</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Influencer</span>
-                  <strong class="shd-title">체험단 &amp; 인플루언서 섭외</strong>
-                  <p class="shd-desc">실제 방문형 인플루언서와 고품질 블로거를 엄선 섭외하여 네이버 스마트블록 검색 노출을 극대화합니다.</p>
-                  <span class="shd-tag">고품질 리뷰어 매칭</span>
+                    <span class="shd-kicker">Experience Marketing</span>
+                    <strong class="shd-title">체험단 &amp; 인플루언서 마케팅</strong>
+                    <p class="shd-desc">업종과 브랜드에 맞는 참여자를 연결하고 실제 경험을 바탕으로 다양한 콘텐츠가 만들어질 수 있도록 운영합니다.</p>
+                    <span class="shd-tag">체험형 콘텐츠 운영</span>
                 </div>
-              </div>
+                </div>
 
-              <!-- ITEM 08 : WEB LANDING -->
-              <div class="som-stream-card">
-                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80" alt="모바일 고전환 웹사이트 & 랜딩페이지">
+                <!-- ITEM 08 : WEB LANDING -->
+                <div class="som-stream-card">
+                <img src="/images/online/online_web.jpg" alt="홈페이지 & 랜딩페이지 제작">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Web &amp; Landing</span>
-                  <strong class="sct-title">고전환 웹사이트 &amp; 랜딩페이지</strong>
+                    <span class="sct-kicker">Web &amp; Landing</span>
+                    <strong class="sct-title">홈페이지 &amp; 랜딩페이지 제작</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Web &amp; Landing</span>
-                  <strong class="shd-title">고전환 웹사이트 &amp; 랜딩페이지</strong>
-                  <p class="shd-desc">광고 클릭 후 즉각적인 전화/예약 전환을 유도하는 최적의 UI/UX 반응형 모바일 랜딩페이지 제작.</p>
-                  <span class="shd-tag">모바일 전환율 극대화</span>
+                    <span class="shd-kicker">Web &amp; Landing</span>
+                    <strong class="shd-title">홈페이지 &amp; 랜딩페이지 제작</strong>
+                    <p class="shd-desc">브랜드 정보와 고객의 이용 동선을 고려해 PC와 모바일에서 편리하게 사용할 수 있는 반응형 홈페이지와 랜딩페이지를 제작합니다.</p>
+                    <span class="shd-tag">반응형 웹 제작</span>
                 </div>
-              </div>
+                </div>
 
-              <!-- EXACT 4 CLONES FOR SEAMLESS 50% LOOP -->
-              <div class="som-stream-card som-clone-card">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="구글 검색광고 & 유튜브 GDN 리타깃팅">
+                <!-- EXACT 4 CLONES FOR SEAMLESS 50% LOOP -->
+                <div class="som-stream-card som-clone-card">
+                <img src="/images/online/online_analytics.jpg" alt="구글 검색 & 디스플레이 광고">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Google &amp; GDN</span>
-                  <strong class="sct-title">구글 검색 &amp; 유튜브 GDN 리타깃팅</strong>
+                    <span class="sct-kicker">Google Ads</span>
+                    <strong class="sct-title">구글 검색 &amp; 디스플레이 광고</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Google &amp; GDN</span>
-                  <strong class="shd-title">구글 검색 &amp; 유튜브 GDN 리타깃팅</strong>
-                  <p class="shd-desc">키워드 검색 고객과 언론사 배너 네트워크를 결합하여 이탈 고객을 24시간 추적 및 재유입시키는 고효율 배너.</p>
-                  <span class="shd-tag">24시간 리타깃팅 배너</span>
+                    <span class="shd-kicker">Google Ads</span>
+                    <strong class="shd-title">구글 검색 &amp; 디스플레이 광고</strong>
+                    <p class="shd-desc">검색과 디스플레이 네트워크를 활용해 관심 고객과의 접점을 넓히고 캠페인 목적에 맞춰 광고를 운영합니다.</p>
+                    <span class="shd-tag">검색·디스플레이 운영</span>
                 </div>
-              </div>
+                </div>
 
-              <div class="som-stream-card som-clone-card">
-                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="네이버 파워링크 검색광고 (SA) 세팅">
+                <div class="som-stream-card som-clone-card">
+                <img src="/images/online/online_search.jpg" alt="네이버 검색광고 운영">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Search Ads</span>
-                  <strong class="sct-title">네이버 파워링크 검색광고 세팅</strong>
+                    <span class="sct-kicker">Search Ads</span>
+                    <strong class="sct-title">네이버 검색광고 운영</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Search Ads</span>
-                  <strong class="shd-title">네이버 파워링크 검색광고 세팅</strong>
-                  <p class="shd-desc">광주 주요 상권 황금 키워드 선점과 클릭률을 극대화하는 소재 최적화 및 ROAS 중심 예산 관리.</p>
-                  <span class="shd-tag">키워드 상위 선점</span>
+                    <span class="shd-kicker">Search Ads</span>
+                    <strong class="shd-title">네이버 검색광고 운영</strong>
+                    <p class="shd-desc">업종과 지역에 맞는 키워드를 검토하고 광고 문구와 예산을 조정해 검색 과정에서 브랜드를 효과적으로 알릴 수 있도록 운영합니다.</p>
+                    <span class="shd-tag">키워드·예산 관리</span>
                 </div>
-              </div>
+                </div>
 
-              <div class="som-stream-card som-clone-card">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="블로그 체험단 & 인플루언서 섭외">
+                <div class="som-stream-card som-clone-card">
+                <img src="/images/online/online_influencer.jpg" alt="체험단 & 인플루언서 마케팅">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Influencer</span>
-                  <strong class="sct-title">체험단 &amp; 인플루언서 섭외</strong>
+                    <span class="sct-kicker">Experience Marketing</span>
+                    <strong class="sct-title">체험단 &amp; 인플루언서 마케팅</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Influencer</span>
-                  <strong class="shd-title">체험단 &amp; 인플루언서 섭외</strong>
-                  <p class="shd-desc">실제 방문형 인플루언서와 고품질 블로거를 엄선 섭외하여 네이버 스마트블록 검색 노출을 극대화합니다.</p>
-                  <span class="shd-tag">고품질 리뷰어 매칭</span>
+                    <span class="shd-kicker">Experience Marketing</span>
+                    <strong class="shd-title">체험단 &amp; 인플루언서 마케팅</strong>
+                    <p class="shd-desc">업종과 브랜드에 맞는 참여자를 연결하고 실제 경험을 바탕으로 다양한 콘텐츠가 만들어질 수 있도록 운영합니다.</p>
+                    <span class="shd-tag">체험형 콘텐츠 운영</span>
                 </div>
-              </div>
+                </div>
 
-              <div class="som-stream-card som-clone-card">
-                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80" alt="모바일 고전환 웹사이트 & 랜딩페이지">
+                <div class="som-stream-card som-clone-card">
+                <img src="/images/online/online_web.jpg" alt="홈페이지 & 랜딩페이지 제작">
                 <div class="som-card-scrim"></div>
                 <div class="som-default-txt">
-                  <span class="sct-kicker">Web &amp; Landing</span>
-                  <strong class="sct-title">고전환 웹사이트 &amp; 랜딩페이지</strong>
+                    <span class="sct-kicker">Web &amp; Landing</span>
+                    <strong class="sct-title">홈페이지 &amp; 랜딩페이지 제작</strong>
                 </div>
                 <div class="som-hover-detail">
-                  <span class="shd-kicker">Web &amp; Landing</span>
-                  <strong class="shd-title">고전환 웹사이트 &amp; 랜딩페이지</strong>
-                  <p class="shd-desc">광고 클릭 후 즉각적인 전화/예약 전환을 유도하는 최적의 UI/UX 반응형 모바일 랜딩페이지 제작.</p>
-                  <span class="shd-tag">모바일 전환율 극대화</span>
+                    <span class="shd-kicker">Web &amp; Landing</span>
+                    <strong class="shd-title">홈페이지 &amp; 랜딩페이지 제작</strong>
+                    <p class="shd-desc">브랜드 정보와 고객의 이용 동선을 고려해 PC와 모바일에서 편리하게 사용할 수 있는 반응형 홈페이지와 랜딩페이지를 제작합니다.</p>
+                    <span class="shd-tag">반응형 웹 제작</span>
                 </div>
-              </div>
+                </div>
 
             </div>
           </div>
@@ -890,52 +1065,113 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       </div>
 
-            <!-- SECTION 02 : RECENT ONLINE MARKETING PORTFOLIO SHOWCASE STRIP (HIGH-END MODERN ARROWS) -->
-      <div class="am-sub-port-strip wow fadeInUp" data-wow-duration="0.8s" style="margin-top:60px;">
-        <div class="asps-head">
-          <div class="asps-title-wrap">
-            <span class="asps-kicker blue">DIGITAL MARKETING PORTFOLIO</span>
-            <h4 class="asps-title">온라인 마케팅 &amp; 스마트플레이스 1위 집행 실적</h4>
-          </div>
-          <div class="asps-nav-controls">
-            <button type="button" class="asps-arrow-btn asps-prev-online" aria-label="이전 사례">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </button>
-            <button type="button" class="asps-arrow-btn asps-next-online" aria-label="다음 사례">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
-            <a href="/contents/a_type/a_1.php?category=online" class="asps-more-link">
-              <span>온라인 사례 전체보기</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-          </div>
+      <!-- ====================================================
+           SECTION 02-B : HOW WE WORK (DIGITAL FLOW EDITORIAL)
+      ==================================================== -->
+      <div class="dflow-section">
+        
+        <!-- SUBTLE BACKGROUND WATERMARK TYPOGRAPHY -->
+        <div class="dflow-bg-typo" aria-hidden="true">DIGITAL FLOW</div>
+
+        <!-- SECTION HEADER -->
+        <div class="dflow-header">
+          <span class="dflow-kicker">HOW WE WORK</span>
+          <h3 class="dflow-main-title">온라인에서 고객이 브랜드를 발견하고<br>문의하기까지의 흐름을 연결합니다.</h3>
+          <p class="dflow-sub-desc">검색과 콘텐츠, 광고, 홈페이지를 각각 따로 보지 않고<br class="pc_only">고객의 이용 흐름에 맞춰 필요한 채널을 함께 운영합니다.</p>
         </div>
-        <div class="swiper asps-swiper asps-swiper-online">
-          <div class="swiper-wrapper">
-            <?php foreach ($portOnline as $oItem): ?>
-            <div class="swiper-slide asps-card main-port-card" data-cat="<?php echo htmlspecialchars($oItem['category']); ?>" data-id="<?php echo (int)$oItem['id']; ?>" data-name="<?php echo htmlspecialchars($oItem['title']); ?>" data-img="<?php echo htmlspecialchars($oItem['thumb']); ?>" data-tag="온라인마케팅">
-              <div class="asps-thumb">
-                <img src="<?php echo htmlspecialchars($oItem['thumb']); ?>" alt="<?php echo htmlspecialchars($oItem['title']); ?>" loading="lazy">
-                <span class="asps-badge blue">온라인마케팅</span>
-                <div class="asps-arrow-badge">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </div>
+
+        <!-- 4-COLUMN EDITORIAL FLOW GRID -->
+        <div class="dflow-grid" id="dflowGrid">
+          
+          <!-- ITEM 01 -->
+          <div class="dflow-col" data-step="01">
+            <div class="dflow-line-box">
+              <div class="dflow-base-line"></div>
+              <div class="dflow-accent-line"></div>
+            </div>
+            <div class="dflow-content">
+              <div class="dflow-mask-reveal dflow-num-reveal">
+                <span class="dflow-num">01</span>
               </div>
-              <div class="asps-info">
-                <div class="asps-title-row">
-                  <strong class="asps-item-title"><?php echo htmlspecialchars($oItem['title']); ?></strong>
-                  <span class="asps-title-arrow">↗</span>
-                </div>
-                <span class="asps-item-loc">플레이스 1위 &amp; 블로그 상위 노출</span>
+              <div class="dflow-mask-reveal dflow-eng-reveal">
+                <span class="dflow-eng">FIND</span>
+              </div>
+              <div class="dflow-body-reveal">
+                <h4 class="dflow-ko-title">검색 · 플레이스 · 키워드</h4>
+                <p class="dflow-desc-text">고객이 필요한 정보를 검색에서 발견할 수 있도록<br class="pc_only">주요 검색 접점을 정리합니다.</p>
               </div>
             </div>
-            <?php endforeach; ?>
           </div>
+
+          <!-- ITEM 02 -->
+          <div class="dflow-col" data-step="02">
+            <div class="dflow-line-box">
+              <div class="dflow-base-line"></div>
+              <div class="dflow-accent-line"></div>
+            </div>
+            <div class="dflow-content">
+              <div class="dflow-mask-reveal dflow-num-reveal">
+                <span class="dflow-num">02</span>
+              </div>
+              <div class="dflow-mask-reveal dflow-eng-reveal">
+                <span class="dflow-eng">CONTENT</span>
+              </div>
+              <div class="dflow-body-reveal">
+                <h4 class="dflow-ko-title">블로그 · SNS · 지역 커뮤니티</h4>
+                <p class="dflow-desc-text">채널의 특성과 고객이 궁금해하는 내용을 고려해<br class="pc_only">브랜드 콘텐츠를 기획하고 운영합니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 03 -->
+          <div class="dflow-col" data-step="03">
+            <div class="dflow-line-box">
+              <div class="dflow-base-line"></div>
+              <div class="dflow-accent-line"></div>
+            </div>
+            <div class="dflow-content">
+              <div class="dflow-mask-reveal dflow-num-reveal">
+                <span class="dflow-num">03</span>
+              </div>
+              <div class="dflow-mask-reveal dflow-eng-reveal">
+                <span class="dflow-eng">ADVERTISING</span>
+              </div>
+              <div class="dflow-body-reveal">
+                <h4 class="dflow-ko-title">검색광고 · SNS광고 · 디스플레이</h4>
+                <p class="dflow-desc-text">캠페인 목적에 맞는 채널과 타깃을 설정해<br class="pc_only">필요한 고객과 만날 수 있도록 광고를 운영합니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 04 -->
+          <div class="dflow-col" data-step="04">
+            <div class="dflow-line-box">
+              <div class="dflow-base-line"></div>
+              <div class="dflow-accent-line"></div>
+            </div>
+            <div class="dflow-content">
+              <div class="dflow-mask-reveal dflow-num-reveal">
+                <span class="dflow-num">04</span>
+              </div>
+              <div class="dflow-mask-reveal dflow-eng-reveal">
+                <span class="dflow-eng">CONVERSION</span>
+              </div>
+              <div class="dflow-body-reveal">
+                <h4 class="dflow-ko-title">홈페이지 · 랜딩페이지 · 문의 동선</h4>
+                <p class="dflow-desc-text">광고와 콘텐츠에서 홈페이지와 랜딩페이지,<br class="pc_only">문의로 이어지는 흐름을 함께 정리합니다.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </div>
   </section>
 
+  <!-- ============================================
+       04 SECTION 03 : VIDEO PRODUCTION
+  ============================================ -->
   <section class="am-section am-bg-dark am-video-ambient-sec" id="video">
     <div class="avs-ambient-bg">
       <div class="avs-glow glow-left"></div>
@@ -943,130 +1179,125 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
 
     <div class="am-container" style="position:relative; z-index:2;">
+      <span class="ash-kicker cyan">03 / VIDEO &amp; CONTENT PRODUCTION</span>
+      <h2 class="ash-title white">영상제작 솔루션</h2>
+      <p class="ash-desc light" style="margin:0 auto;">브랜드 홍보영상부터 SNS 릴스·숏폼, DID 등 매체별 영상 콘텐츠를 기획·촬영·편집합니다.</p>
+    </div>
 
-      <div class="am-sec-head dark-head text-center wow fadeInUp" data-wow-duration="0.7s">
-        <span class="ash-kicker cyan">03 / 4K CINEMATIC &amp; SHORTS PRODUCTION</span>
-        <h2 class="ash-title white">영상제작 솔루션</h2>
-        <p class="ash-desc light" style="margin:0 auto;">기업·상급병원 4K 브랜드 필름부터 9:16 모바일 릴스까지 인하우스 프로덕션이 기획·촬영·편집을 원스톱으로 제작합니다.</p>
+    <!-- VIDEO PRODUCTION VISUAL CENTER STAGE -->
+    <div class="am-video-hero-stage wow fadeInUp" data-wow-duration="0.8s">
+      
+      <!-- HIGH-END SVG PICTOGRAM SEGMENT SWITCHER -->
+      <div class="avh-switcher-center-box">
+        <div class="avh-mode-switcher">
+          <button type="button" class="avh-mode-btn on" data-video-mode="wide">
+            <svg class="avh-btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+            <span>16:9 와이드 시네마</span>
+          </button>
+          <button type="button" class="avh-mode-btn" data-video-mode="shorts">
+            <svg class="avh-btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="14" height="20" x="5" y="2" rx="2.5"/><line x1="12" y1="18" x2="12" y2="18.01"/>
+            </svg>
+            <span>9:16 모바일 릴스·숏폼</span>
+          </button>
+        </div>
       </div>
 
-      <!-- VIDEO PRODUCTION VISUAL CENTER STAGE -->
-      <div class="am-video-hero-stage wow fadeInUp" data-wow-duration="0.8s">
+      <!-- MAIN STAGE DISPLAY -->
+      <div class="avh-display-arena" id="avhDisplayArena">
         
-        <!-- HIGH-END SVG PICTOGRAM SEGMENT SWITCHER (CENTERED) -->
-        <div class="avh-switcher-center-box">
-          <div class="avh-mode-switcher">
-            <button type="button" class="avh-mode-btn on" data-video-mode="wide">
-              <svg class="avh-btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-              </svg>
-              <span>16:9 와이드 시네마</span>
-            </button>
-            <button type="button" class="avh-mode-btn" data-video-mode="shorts">
-              <svg class="avh-btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect width="14" height="20" x="5" y="2" rx="2.5"/><line x1="12" y1="18" x2="12" y2="18.01"/>
-              </svg>
-              <span>9:16 모바일 릴스·숏폼</span>
-            </button>
+        <!-- 16:9 CINEMA FRAME -->
+        <div class="avh-cinema-frame on" id="cinemaFrame">
+          <div class="acf-bezel">
+            <video autoplay muted loop playsinline class="acf-video">
+              <source src="/images/movie.mp4" type="video/mp4">
+            </video>
+            <div class="acf-scrim"></div>
+            <div class="acf-overlay-info">
+              <span class="acf-tag gold">VIDEO &amp; CONTENT PRODUCTION</span>
+              <h3 class="acf-title" id="dynCinemaTitle">기업 · 병원 브랜드 홍보영상</h3>
+              <p class="acf-sub" id="dynCinemaSub">브랜드와 서비스의 특징을 담은 기획 · 촬영 · 편집</p>
+            </div>
           </div>
         </div>
 
-        <!-- MAIN STAGE DISPLAY (CINEMA & PHONE MOCKUP) -->
-        <div class="avh-display-arena" id="avhDisplayArena">
-          
-          <!-- 16:9 CINEMA FRAME -->
-          <div class="avh-cinema-frame on" id="cinemaFrame">
-            <div class="acf-bezel">
-              <video autoplay muted loop playsinline class="acf-video">
+        <!-- 9:16 SMARTPHONE MOCKUP FRAME -->
+        <div class="avh-phone-mockup" id="phoneMockup">
+          <div class="apm-device">
+            <div class="apm-dynamic-island">
+              <span class="apm-camera"></span>
+              <span class="apm-speaker"></span>
+            </div>
+            
+            <div class="apm-screen">
+              <video autoplay muted loop playsinline class="apm-video">
                 <source src="/images/movie.mp4" type="video/mp4">
               </video>
-              <div class="acf-scrim"></div>
-              <div class="acf-overlay-info">
-                <span class="acf-tag gold">4K CINEMATIC PRODUCTION</span>
-                <h3 class="acf-title" id="dynCinemaTitle">기업 · 상급병원 4K 시네마틱 브랜드 필름</h3>
-                <p class="acf-sub" id="dynCinemaSub">Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 더빙</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 9:16 SMARTPHONE MOCKUP FRAME -->
-          <div class="avh-phone-mockup" id="phoneMockup">
-            <div class="apm-device">
-              <!-- SMARTPHONE NOTCH / DYNAMIC ISLAND -->
-              <div class="apm-dynamic-island">
-                <span class="apm-camera"></span>
-                <span class="apm-speaker"></span>
-              </div>
-              
-              <!-- PHONE SCREEN WITH 9:16 VIDEO -->
-              <div class="apm-screen">
-                <video autoplay muted loop playsinline class="apm-video">
-                  <source src="/images/movie.mp4" type="video/mp4">
-                </video>
-                <div class="apm-reels-ui">
-                  <div class="aru-right-actions">
-                    <div class="aru-action-btn">❤️<span>2.4k</span></div>
-                    <div class="aru-action-btn">💬<span>184</span></div>
-                    <div class="aru-action-btn">↗️<span>공유</span></div>
-                  </div>
-                  <div class="aru-bottom-info">
-                    <span class="aru-brand-tag">@GAON_N_OFFICIAL</span>
-                    <h4 class="aru-title">SNS 릴스 · 틱톡 바이럴 숏폼</h4>
-                    <p class="aru-desc">첫 3초 만에 시선을 사로잡는 빠른 컷 전환 &amp; 모션그래픽</p>
-                  </div>
+              <div class="apm-reels-ui">
+                <div class="aru-right-actions">
+                  <div class="aru-action-btn">❤️</div>
+                  <div class="aru-action-btn">💬</div>
+                  <div class="aru-action-btn">↗️</div>
+                </div>
+                <div class="aru-bottom-info">
+                  <span class="aru-brand-tag">@GAON_N_OFFICIAL</span>
+                  <h4 class="aru-title">SNS 릴스 · 유튜브 숏폼</h4>
+                  <p class="aru-desc">모바일 환경에 맞춘 세로형 영상 콘텐츠</p>
                 </div>
               </div>
-
-              <!-- PHONE HOME INDICATOR BAR -->
-              <div class="apm-home-bar"></div>
             </div>
-          </div>
 
+            <div class="apm-home-bar"></div>
+          </div>
         </div>
 
-        <!-- 4 CLEAN VISUAL DELIVERABLE SELECTORS (BIG & BOLD) -->
-        <div class="avh-selectors-grid">
-          <div class="avs-item-card on" data-target-mode="wide"
-               data-title="기업 · 상급병원 4K 시네마틱 브랜드 필름"
-               data-sub="Sony FX Cinema 풀프레임 + 4K 드론 항공촬영 + 전문 성우 더빙">
-            <span class="avs-badge">01 / BRAND FILM</span>
-            <strong class="avs-title">기업 · 상급병원 브랜드 필름</strong>
-            <span class="avs-sub">4K UHD 풀프레임 시네마 (3~5분)</span>
-          </div>
+      </div>
 
-          <div class="avs-item-card" data-target-mode="wide"
-               data-title="TV CF &amp; 극장 스크린 광고 (15초 / 30초)"
-               data-sub="15초/30초 고임팩트 스토리텔링 + 2D/3D 모션그래픽">
-            <span class="avs-badge">02 / TV CF · THEATER</span>
-            <strong class="avs-title">TV CF · 극장 스크린 광고</strong>
-            <span class="avs-sub">15초/30초 초압축 임팩트 스토리텔링</span>
+      <!-- 4 CLEAN VISUAL DELIVERABLE SELECTORS -->
+      <div class="avh-selectors-grid">
+
+          <div class="avs-item-card on" data-target-mode="wide"
+              data-title="기업 · 병원 · 브랜드 홍보영상"
+              data-sub="브랜드와 서비스의 특징을 담은 기획·촬영·편집">
+          <span class="avs-badge">01 / BRAND CONTENT</span>
+          <strong class="avs-title">기업 · 병원 홍보영상</strong>
+          <span class="avs-sub">브랜드 소개 · 인터뷰 · 홍보 콘텐츠</span>
           </div>
 
           <div class="avs-item-card" data-target-mode="shorts"
-               data-title="SNS 릴스 · 유튜브 쇼츠 바이럴 (9:16 세로형)"
-               data-sub="인스타그램 릴스 + 유튜브 쇼츠 + 틱톡 최적화 숏폼">
-            <span class="avs-badge gold">03 / SNS SHORTS</span>
-            <strong class="avs-title">SNS 릴스 · 유튜브 숏폼</strong>
-            <span class="avs-sub">9:16 모바일 세로형 바이럴 영상</span>
+              data-title="SNS 릴스 · 유튜브 쇼츠 · 숏폼"
+              data-sub="모바일 환경에 맞춘 세로형 영상 콘텐츠">
+          <span class="avs-badge gold">02 / SOCIAL SHORTFORM</span>
+          <strong class="avs-title">SNS 릴스 · 유튜브 숏폼</strong>
+          <span class="avs-sub">9:16 모바일 세로형 콘텐츠</span>
           </div>
 
           <div class="avs-item-card" data-target-mode="wide"
-               data-title="DID 디지털 전광판 모션그래픽 (15초 풀HD)"
-               data-sub="옥외 고휘도 스크린 전용 15초 풀HD 고시인성 모션">
-            <span class="avs-badge">04 / DIGITAL SIGNAGE</span>
-            <strong class="avs-title">DID 전광판 모션그래픽</strong>
-            <span class="avs-sub">터미널·역사 고휘도 LED 송출 (15초)</span>
+              data-title="DID 디지털 사이니지 영상"
+              data-sub="설치 매체의 규격과 송출 환경에 맞춘 광고영상">
+          <span class="avs-badge">03 / DIGITAL SIGNAGE</span>
+          <strong class="avs-title">DID 전광판 영상</strong>
+          <span class="avs-sub">매체 규격 맞춤 영상 콘텐츠</span>
           </div>
-        </div>
+
+          <div class="avs-item-card" data-target-mode="wide"
+              data-title="광고 · 캠페인 영상 콘텐츠"
+              data-sub="온라인과 오프라인 광고에 활용할 수 있는 영상 제작">
+          <span class="avs-badge">04 / AD CONTENT</span>
+          <strong class="avs-title">광고 · 캠페인 영상</strong>
+          <span class="avs-sub">기획 · 촬영 · 편집</span>
+          </div>
 
       </div>
 
-            <!-- SECTION 03 : RECENT 4K VIDEO PORTFOLIO SHOWCASE STRIP (HIGH-END MODERN ARROWS) -->
+      <!-- SECTION 03 : RECENT 4K VIDEO PORTFOLIO SHOWCASE STRIP -->
       <div class="am-sub-port-strip dark wow fadeInUp" data-wow-duration="0.8s" style="margin-top:60px;">
         <div class="asps-head">
           <div class="asps-title-wrap">
-            <span class="asps-kicker cyan">CINEMA REEL PORTFOLIO</span>
-            <h4 class="asps-title white">최근 4K 브랜드 필름 &amp; 숏폼 영상 제작 실적</h4>
+            <span class="asps-kicker cyan">SELECTED VIDEO WORK</span>
+            <h4 class="asps-title white">영상 · 콘텐츠 제작 사례</h4>
           </div>
           <div class="asps-nav-controls">
             <button type="button" class="asps-arrow-btn light asps-prev-video" aria-label="이전 사례">
@@ -1083,21 +1314,30 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
         <div class="swiper asps-swiper asps-swiper-video">
           <div class="swiper-wrapper">
-            <?php foreach ($portVideo as $vItem): ?>
-            <div class="swiper-slide asps-card dark main-port-card" data-cat="<?php echo htmlspecialchars($vItem['category']); ?>" data-id="<?php echo (int)$vItem['id']; ?>" data-name="<?php echo htmlspecialchars($vItem['title']); ?>" data-img="<?php echo htmlspecialchars($vItem['thumb']); ?>" data-tag="영상제작">
+            <?php foreach ($portVideo as $vItem): 
+              $vVideo = !empty($vItem['video']) ? $vItem['video'] : '';
+              if (empty($vVideo) && !empty($vItem['id'])) {
+                $vIdxMap = array(54 => '01', 55 => '02', 56 => '03', 57 => '04', 58 => '05', 63 => '06');
+                if (isset($vIdxMap[$vItem['id']])) {
+                  $vVideo = '/images/port/video/video_clip_' . $vIdxMap[$vItem['id']] . '.mp4';
+                }
+              }
+              $vClient = !empty($vItem['client']) ? htmlspecialchars($vItem['client']) : '가온엔 기획 · 제작';
+            ?>
+            <div class="swiper-slide asps-card dark main-port-card" data-cat="<?php echo htmlspecialchars($vItem['category']); ?>" data-id="<?php echo (int)$vItem['id']; ?>" data-name="<?php echo htmlspecialchars($vItem['title']); ?>" data-img="<?php echo htmlspecialchars($vItem['thumb']); ?>" data-video="<?php echo htmlspecialchars($vVideo); ?>" data-tag="10초 영상 (스틸컷 캡쳐본)">
               <div class="asps-thumb">
                 <img src="<?php echo htmlspecialchars($vItem['thumb']); ?>" alt="<?php echo htmlspecialchars($vItem['title']); ?>" loading="lazy">
-                <span class="asps-badge cyan">영상제작</span>
+                <span class="asps-badge cyan">10초 영상</span>
                 <div class="asps-arrow-badge">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                 </div>
               </div>
               <div class="asps-info">
                 <div class="asps-title-row">
                   <strong class="asps-item-title white"><?php echo htmlspecialchars($vItem['title']); ?></strong>
-                  <span class="asps-title-arrow" style="color:#ffffff;">↗</span>
+                  <span class="asps-title-arrow" style="color:#ffffff;">▶</span>
                 </div>
-                <span class="asps-item-loc light">4K UHD 시네마틱 &amp; 숏폼 제작</span>
+                <span class="asps-item-loc light"><?php echo $vClient; ?> · 스틸컷 캡쳐본</span>
               </div>
             </div>
             <?php endforeach; ?>
@@ -1107,87 +1347,239 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </section>
 
-  <section class="am-section" id="process">
-    <div class="am-container">
+  <!-- ============================================
+       04 SECTION : BROADCAST PROGRAM (#broadcast)
+  ============================================ -->
+  <section class="ga-broadcast-sec" id="broadcast">
+    
+    <!-- SECTION HEADER (Inside standard container) -->
+    <div class="gbp-header-container">
+      <div class="gbp-header-row wow fadeInUp" data-wow-duration="0.8s">
+        <span class="gbp-kicker">BROADCAST PROGRAM</span>
+        <h2 class="gbp-title">방송 연계 프로그램</h2>
+        <p class="gbp-desc">
+          지역 방송과 의료기관을 연결해<br class="pc_only">
+          방송 프로그램 연계부터 진행까지 함께합니다.
+        </p>
+      </div>
+    </div>
+
+    <!-- FULL-WIDTH SOLUTION ROWS -->
+    <div class="gbp-solution-rows">
       
-      <!-- UNIFIED SECTION HEAD -->
-      <div class="am-sec-head text-center wow fadeInUp" data-wow-duration="0.7s">
-        <span class="ash-kicker">WORKFLOW PIPELINE</span>
-        <h2 class="ash-title">마스터플랜</h2>
-        <p class="ash-desc" style="margin: 0 auto; max-width: 780px;">
-          외주 하청 없는 100% 본사 인하우스 전문팀이 상권 분석부터 출력, 시공, 사후 보고까지 전 과정을 직접 책임집니다.
+      <!-- ROW 01 : MBC 건강365 (WHITE BACKGROUND) -->
+      <div class="gbp-sol-row gbp-row-white">
+        <div class="gbp-sol-inner">
+          <div class="gbp-sol-text wow fadeInUp" data-wow-duration="0.75s" data-wow-delay="0.1s">
+            <span class="gbp-station">MBC</span>
+            <h3 class="gbp-prog-title">건강365</h3>
+            <p class="gbp-prog-desc">
+              의료·건강 정보를 방송 콘텐츠로 전달하는<br class="pc_only">
+              지역 건강정보 프로그램
+            </p>
+            <a href="#contact" class="gbp-cta-link">
+              <span>건강365 문의</span>
+              <span class="gbp-cta-arrow">↗</span>
+            </a>
+          </div>
+
+          <div class="gbp-sol-media wow fadeInUp" data-wow-duration="0.85s" data-wow-delay="0.2s">
+            <div class="gbp-media-frame">
+              <img src="/images/broadcast/broadcast_mbc_365.jpg" alt="MBC 건강365 방송 연계 프로그램" class="gbp-media-img" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 02 : KBC 닥터365 (PALE BLUE-GRAY BACKGROUND) -->
+      <div class="gbp-sol-row gbp-row-pale-blue">
+        <div class="gbp-sol-inner">
+          <div class="gbp-sol-text wow fadeInUp" data-wow-duration="0.75s" data-wow-delay="0.1s">
+            <span class="gbp-station">KBC</span>
+            <h3 class="gbp-prog-title">닥터365</h3>
+            
+            <div class="gbp-exclusive-block">
+              <span class="gbp-ex-kicker">GAON-N EXCLUSIVE</span>
+              <strong class="gbp-ex-title">가온엔 독점 연계 프로그램</strong>
+            </div>
+
+            <p class="gbp-prog-desc">
+              의료진의 전문적인 건강 정보를<br class="pc_only">
+              지역 시청자에게 전달하는 건강 프로그램
+            </p>
+            <a href="#contact" class="gbp-cta-link gbp-cta-exclusive">
+              <span>닥터365 독점 연계 문의</span>
+              <span class="gbp-cta-arrow">↗</span>
+            </a>
+          </div>
+
+          <div class="gbp-sol-media wow fadeInUp" data-wow-duration="0.85s" data-wow-delay="0.2s">
+            <div class="gbp-media-frame">
+              <img src="/images/broadcast/broadcast_kbc_365.jpg" alt="KBC 닥터365 가온엔 독점 연계 프로그램" class="gbp-media-img" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ============================================
+       04-B SECTION : CLIENTS & PARTNERS (DIAGONAL WAVE SHOWCASE)
+  ============================================ -->
+  <section class="ga-partners-sec" id="partners">
+    <div class="gp-container">
+      
+      <!-- STANDARD EDITORIAL HEADER -->
+      <div class="gp-header-row wow fadeInUp" data-wow-duration="0.8s">
+        <span class="gp-kicker">CLIENTS &amp; PARTNERS</span>
+        <h2 class="gp-title">함께하는 파트너</h2>
+        <p class="gp-desc">
+          다양한 기업과 기관, 미디어 파트너와 함께<br class="pc_only">
+          브랜드와 고객이 만나는 다양한 접점을 만들어갑니다.
         </p>
       </div>
 
-      <!-- HUMAN CRAFTED 4-STEP MASTERPLAN GRID -->
-      <div class="am-pipeline-grid wow fadeInUp" data-wow-duration="0.8s">
+      <!-- MOTION ACCENT LINE -->
+      <div class="gp-motion-line-track wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s" aria-hidden="true">
+        <div class="gp-motion-line-segment"></div>
+      </div>
+
+      <!-- PARTNERS 2-ROW DIAGONAL STAGE -->
+      <div class="gp-stage-wrapper wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.15s">
+        <div class="gp-diagonal-stage" id="gpDiagonalStage" aria-live="off">
+          
+          <!-- ROW A (5 Items) -->
+          <div class="gp-row gp-row-a">
+            <div class="gp-slot" data-row="0" data-col="0">
+              <span class="gp-partner-text is-active is-short">KBC</span>
+            </div>
+            <div class="gp-slot" data-row="0" data-col="1">
+              <span class="gp-partner-text is-active">광주MBC</span>
+            </div>
+            <div class="gp-slot" data-row="0" data-col="2">
+              <span class="gp-partner-text is-active">광주광역시청</span>
+            </div>
+            <div class="gp-slot" data-row="0" data-col="3">
+              <span class="gp-partner-text is-active">한국폴리텍대학</span>
+            </div>
+            <div class="gp-slot" data-row="0" data-col="4">
+              <span class="gp-partner-text is-active">롯데하이마트</span>
+            </div>
+          </div>
+
+          <!-- ROW B (5 Items - Organic Offset) -->
+          <div class="gp-row gp-row-b">
+            <div class="gp-slot" data-row="1" data-col="0">
+              <span class="gp-partner-text is-active">국립목포대학교</span>
+            </div>
+            <div class="gp-slot" data-row="1" data-col="1">
+              <span class="gp-partner-text is-active">광주안과</span>
+            </div>
+            <div class="gp-slot" data-row="1" data-col="2">
+              <span class="gp-partner-text is-active">동신대학교광주한방병원</span>
+            </div>
+            <div class="gp-slot" data-row="1" data-col="3">
+              <span class="gp-partner-text is-active">새나래병원</span>
+            </div>
+            <div class="gp-slot" data-row="1" data-col="4">
+              <span class="gp-partner-text is-active">스마트인재개발원</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       05 SECTION 04 : EDITORIAL WORKFLOW PIPELINE (#process)
+  ============================================ -->
+  <section class="am-section ga-process-editorial-sec" id="process">
+    <div class="go-container">
+      
+      <!-- SECTION HEADER -->
+      <div class="gpe-header-row wow fadeInUp" data-wow-duration="0.7s">
+        <span class="gpe-kicker">04 / WORKFLOW PIPELINE</span>
+        <h2 class="gpe-title">프로젝트 진행 과정</h2>
+        <p class="gpe-desc">상담부터 기획, 제작, 운영까지 필요한 과정을 하나의 흐름으로 연결합니다.</p>
+      </div>
+
+      <!-- MAIN 2-COLUMN EDITORIAL STAGE -->
+      <div class="gpe-stage-grid wow fadeInUp" data-wow-duration="0.8s">
         
-        <!-- STEP 01 -->
-        <div class="apg-step-card">
-          <div class="apg-step-header">
-            <span class="apg-huge-gothic-num">01</span>
-            <span class="apg-status-badge">상권 최적화</span>
-          </div>
-          <div class="apg-icon-circle">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-          </div>
-          <h3 class="apg-step-title">상권 분석 &amp; 노선 설계</h3>
-          <p class="apg-step-sub">상무·수완·봉선·첨단 등 목표 고객의 실제 이동 동선을 분석하여 가장 효과적인 104개 버스 노선과 미디어를 믹스합니다.</p>
-          <div class="apg-deliverable-box">
-            <span>실무 지원:</span>
-            <strong>상권 타깃 분석 &amp; 골든 노선 추천</strong>
+        <!-- LEFT: STICKY GIANT STEP NUMBER -->
+        <div class="gpe-left-col pc_only">
+          <div class="gpe-giant-wrap">
+            <span class="gpe-giant-num" id="gpeActiveNum">01</span>
+            <div class="gpe-giant-meta">
+              <span class="gpe-giant-tag" id="gpeActiveEng">CONSULTING</span>
+              <strong class="gpe-giant-title" id="gpeActiveTitle">상담 · 매체 검토</strong>
+            </div>
           </div>
         </div>
 
-        <!-- STEP 02 -->
-        <div class="apg-step-card">
-          <div class="apg-step-header">
-            <span class="apg-huge-gothic-num">02</span>
-            <span class="apg-status-badge">맞춤 시안</span>
+        <!-- RIGHT: 4 EDITORIAL PROCESS STEPS -->
+        <div class="gpe-right-col" id="gpeStepList">
+          
+          <!-- STEP 01 -->
+          <div class="gpe-step-item on" data-step="01" data-eng="CONSULTING" data-title="상담 · 매체 검토">
+            <div class="gpe-item-num-wrap">
+              <span class="gpe-item-num">01</span>
+            </div>
+            <div class="gpe-item-content">
+              <div class="gpe-item-head">
+                <span class="gpe-item-eng">CONSULTING</span>
+                <h3 class="gpe-item-title">상담 · 매체 검토</h3>
+              </div>
+              <p class="gpe-item-desc">목표와 상황을 살펴 필요한 광고 채널과 진행 방향을 검토합니다.</p>
+            </div>
           </div>
-          <div class="apg-icon-circle">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.67-.75 1.67-1.67 0-.42-.17-.83-.42-1.17-.25-.33-.42-.75-.42-1.16 0-.92.75-1.67 1.67-1.67h1.92c3.08 0 5.58-2.5 5.58-5.58 0-4.83-4.42-8.75-9.42-8.75z"/><circle cx="7.5" cy="11.5" r="1.5"/><circle cx="12" cy="7.5" r="1.5"/><circle cx="16.5" cy="11.5" r="1.5"/></svg>
-          </div>
-          <h3 class="apg-step-title">3면 실측 1:1 디자인 기획</h3>
-          <p class="apg-step-sub">도심 주행 중 3초 안에 브랜드가 각인되도록 차도면(3.7m), 인도면(3m), 후면 규격에 맞춘 전담 디자이너 1:1 시안을 기획합니다.</p>
-          <div class="apg-deliverable-box">
-            <span>실무 지원:</span>
-            <strong>3면 실측 고시인성 시안 3종 제공</strong>
-          </div>
-        </div>
 
-        <!-- STEP 03 -->
-        <div class="apg-step-card">
-          <div class="apg-step-header">
-            <span class="apg-huge-gothic-num">03</span>
-            <span class="apg-status-badge">본사 직영</span>
+          <!-- STEP 02 -->
+          <div class="gpe-step-item" data-step="02" data-eng="PLANNING" data-title="기획 · 디자인">
+            <div class="gpe-item-num-wrap">
+              <span class="gpe-item-num">02</span>
+            </div>
+            <div class="gpe-item-content">
+              <div class="gpe-item-head">
+                <span class="gpe-item-eng">PLANNING</span>
+                <h3 class="gpe-item-title">기획 · 디자인</h3>
+              </div>
+              <p class="gpe-item-desc">매체와 고객 접점을 고려해 광고와 콘텐츠의 방향을 설계합니다.</p>
+            </div>
           </div>
-          <div class="apg-icon-circle">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-          </div>
-          <h3 class="apg-step-title">정품 출력 &amp; 책임 시공</h3>
-          <p class="apg-step-sub">LG 하우시스 최고급 내후성 정품 솔벤 시트를 자체 출력실에서 출력하고, 본사 10년 경력 시공팀이 들뜸 없이 직접 시공합니다.</p>
-          <div class="apg-deliverable-box">
-            <span>실무 지원:</span>
-            <strong>LG 정품 시트 직영 출력 및 완벽 부착</strong>
-          </div>
-        </div>
 
-        <!-- STEP 04 -->
-        <div class="apg-step-card highlight">
-          <div class="apg-step-header">
-            <span class="apg-huge-gothic-num blue">04</span>
-            <span class="apg-status-badge blue">투명 증빙</span>
+          <!-- STEP 03 -->
+          <div class="gpe-step-item" data-step="03" data-eng="PRODUCTION" data-title="제작 · 시공 · 콘텐츠">
+            <div class="gpe-item-num-wrap">
+              <span class="gpe-item-num">03</span>
+            </div>
+            <div class="gpe-item-content">
+              <div class="gpe-item-head">
+                <span class="gpe-item-eng">PRODUCTION</span>
+                <h3 class="gpe-item-title">제작 · 시공 · 콘텐츠</h3>
+              </div>
+              <p class="gpe-item-desc">직영 출력 및 전문 시공팀의 정밀 부착, 영상 촬영·편집, 웹 개발을 완성도 높게 실행합니다.</p>
+            </div>
           </div>
-          <div class="apg-icon-circle blue">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f3f8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
+
+          <!-- STEP 04 -->
+          <div class="gpe-step-item" data-step="04" data-eng="MANAGEMENT" data-title="운영 · 사후관리">
+            <div class="gpe-item-num-wrap">
+              <span class="gpe-item-num">04</span>
+            </div>
+            <div class="gpe-item-content">
+              <div class="gpe-item-head">
+                <span class="gpe-item-eng">MANAGEMENT</span>
+                <h3 class="gpe-item-title">운영 · 사후관리</h3>
+              </div>
+              <p class="gpe-item-desc">시공 증빙 자료 제공 및 집행 기간 동안 지속적인 모니터링과 데이터 피드백을 진행합니다.</p>
+            </div>
           </div>
-          <h3 class="apg-step-title">4면 실사 증빙 &amp; 사후 관리</h3>
-          <p class="apg-step-sub">시공 직후 차량 4면 번호판 실사 촬영본을 즉시 전송해 드리며, 계약 기간 동안 훼손 관리 및 주간 순위 리포트를 투명하게 보고합니다.</p>
-          <div class="apg-deliverable-box blue">
-            <span>실무 지원:</span>
-            <strong>차량 4면 실사 증빙철 &amp; 1:1 전담 관리</strong>
-          </div>
+
         </div>
 
       </div>
@@ -1195,21 +1587,21 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </section>
 
-            <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/bottom_conversion.php"; ?>
+  <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/bottom_conversion.php"; ?>
 
-    <!-- ============================================
-       10 LUXURY DIRECTORY: 104 BUS ROUTES SEARCH MODAL (CLEAN 2-COLUMN ALIGNMENT)
+  <!-- ============================================
+       10 LUXURY DIRECTORY: 104 BUS ROUTES SEARCH MODAL
   ============================================ -->
-  <div class="route-search-modal-overlay" id="routeSearchModal" style="display:none !important;">
+  <div class="route-search-modal-overlay" id="routeSearchModal" style="display:none;">
     <div class="rsm-panel">
       <div class="rsm-head">
         <div class="rsm-content-wrap">
           <div class="rsm-kicker-row">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1855b7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <span class="rsm-kicker-text">광주 시내버스 104개 전 노선 실시간 검색</span>
+            <span class="rsm-kicker-text">광주 시내버스 주요 노선 실시간 검색</span>
           </div>
-          <h3 class="rsm-title">광주 시내버스 104개 전 노선 디렉토리</h3>
-          <p class="rsm-desc">광주광역시 104개 전체 노선(급행/간선/지선)의 주요 경유 상권, 운행 대수, 배차 간격 및 타깃 정보입니다.</p>
+          <h3 class="rsm-title">광주 시내버스 주요 노선 디렉토리</h3>
+          <p class="rsm-desc">광주광역시 주요 노선(급행/간선/지선)의 주요 경유 상권, 운행 대수, 배차 간격 및 타깃 정보입니다.</p>
         </div>
         <button type="button" class="rsm-close" id="btnCloseRouteSearch" aria-label="닫기">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -1223,7 +1615,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
 
         <div class="rsm-tabs-row">
-          <button type="button" class="rsm-tab on" data-filter-cat="all">전체 104개 노선</button>
+          <button type="button" class="rsm-tab on" data-filter-cat="all">버스 노선</button>
           <button type="button" class="rsm-tab" data-filter-cat="express">급행 노선 (6)</button>
           <button type="button" class="rsm-tab" data-filter-cat="main">간선 노선 (24)</button>
           <button type="button" class="rsm-tab" data-filter-cat="feeder">지선 노선 (74)</button>
@@ -1234,7 +1626,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
 
         <div class="rsm-directory-list" id="modalBusRouteFullGrid">
-          <!-- Injected dynamically with 2-column rich directory styling -->
+          <!-- Injected dynamically -->
         </div>
       </div>
 
@@ -1249,13 +1641,13 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
   </div>
 
 
-        <!-- ============================================
-       11 HIGH-END 6-CATEGORY MASTER SPECIFICATION & PROPOSAL MODAL (CLEAN WHITE EXECUTIVE DESIGN)
+  <!-- ============================================
+       11 HIGH-END 6-CATEGORY MASTER SPECIFICATION & PROPOSAL MODAL
   ============================================ -->
-  <div class="bus-guide-overlay" id="busGuideOverlay" style="display:none !important;">
+  <div class="bus-guide-overlay" id="busGuideOverlay" style="display:none;">
     <div class="lux-modal-panel">
       
-      <!-- CLEAN WHITE EXECUTIVE HEADER (NO HEAVY DARK TINT) -->
+      <!-- CLEAN WHITE EXECUTIVE HEADER -->
       <div class="lux-modal-head">
         <div class="lmh-content-wrap">
           <div class="lmh-kicker-row">
@@ -1263,7 +1655,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <span class="lmh-label">가온엔 공식 매체 규격 &amp; 제안서 다운로드</span>
           </div>
           <h3 class="lmh-title">가온엔 통합 매체 공식 규격 및 제안서</h3>
-          <p class="lmh-desc">광주 104개 시내버스 외부·내부 규격부터 택시, 온라인 5대 채널, 4K 영상, 인쇄물 규격과 공식 PDF 제안서입니다.</p>
+          <p class="lmh-desc">시내버스 외부·내부광고부터 터미널 전광판, 특화 옥외매체, 온라인 마케팅, 영상·인쇄물까지 주요 서비스의 규격과 안내자료를 확인할 수 있습니다.</p>
         </div>
         <button type="button" class="lux-modal-close" id="btnCloseBusGuide" aria-label="닫기">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -1279,6 +1671,10 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <button type="button" class="lmt-tab" data-target="guideBusIn">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
           <span>버스 내부·음성</span>
+        </button>
+        <button type="button" class="lmt-tab" data-target="guideUsquare">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>유스퀘어 전광판</span>
         </button>
         <button type="button" class="lmt-tab" data-target="guideTaxiSpec">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
@@ -1318,29 +1714,29 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="lmg-high-contrast-grid">
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge blue">차도면 대형</span>
+                <span class="lhc-badge blue">차도면 광고</span>
                 <strong class="lhc-size">3,700 × 1,000 mm</strong>
                 <span class="lhc-aspect">운전자 시야 정면 노출</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">차도면 대형 래핑 광고 (좌측면)</h5>
-                <p class="lhc-desc">왕복 6~8차선 반대편 차량 운전자와 인도 보행자의 시야 정면에 노출되는 가장 거대한 랜드마크 규격입니다.</p>
+                <p class="lhc-desc">버스 좌측면의 넓은 광고면을 활용해 도로 이용자와 보행자에게 브랜드를 전달하는 대형 외부광고입니다.</p>
                 <div class="lhc-spec-list">
                   <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">도심 간선도로 운전자 &amp; 반대편 보행자</strong></div>
-                  <div class="lsl-item"><span class="lsl-k">원단 소재 :</span><strong class="lsl-v">LG 하우시스 최고급 정품 솔벤 시트</strong></div>
+                  <div class="lsl-item"><span class="lsl-k">원단 소재 :</span><strong class="lsl-v">차량용 내후성 점착 시트</strong></div>
                 </div>
               </div>
             </div>
 
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge blue">인도면 표준</span>
+                <span class="lhc-badge blue">인도면 광고</span>
                 <strong class="lhc-size">3,000 × 500 mm</strong>
-                <span class="lhc-aspect">보행자 눈높이 1:1 밀착</span>
+                <span class="lhc-aspect">정류장·보행자 시야에 가까운 위치</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">인도면 표준 래핑 광고 (우측면)</h5>
-                <p class="lhc-desc">버스 정류장 대기 승객 및 인도 보행자의 눈높이와 1:1로 밀착되어 상세 진료 과목, 상호, 전화번호 전달에 최적입니다.</p>
+                <p class="lhc-desc">버스 정류장 대기 승객 및 인도 보행자의 눈높이와 1:1로 밀착되어 상세 진료 과목, 상호, 전화번호 정보 전달에 활용할 수 있습니다.</p>
                 <div class="lhc-spec-list">
                   <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">정류소 탑승 대기 승객 &amp; 인도 보행자</strong></div>
                   <div class="lsl-item"><span class="lsl-k">원단 소재 :</span><strong class="lsl-v">LG 하우시스 최고급 내후성 솔벤 시트</strong></div>
@@ -1350,15 +1746,15 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge blue">후면 보조</span>
+                <span class="lhc-badge blue">후면 광고</span>
                 <strong class="lhc-size">2,400 × 300 mm</strong>
-                <span class="lhc-aspect">신호대기 3분 강제 주시</span>
+                <span class="lhc-aspect">신호대기·정체 구간에서 노출</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">후면 번호판 상단 래핑 광고</h5>
-                <p class="lhc-desc">교차로 신호 대기 및 출퇴근 도로 정체 시 후방 차량 운전자에게 3분 이상 강제 주시되는 필수 패키지 면입니다.</p>
+                <p class="lhc-desc">교차로 신호 대기 및 출퇴근 도로 정체 시 후방 차량 운전자에게 신호대기 및 도로 정체 시 후방 차량에서 확인할 수 있는 광고면 입니다.</p>
                 <div class="lhc-spec-list">
-                  <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">신호 대기 후방 정체 차량 운전자 전원</strong></div>
+                  <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">신호 대기 후방 차량 운전자</strong></div>
                   <div class="lsl-item"><span class="lsl-k">원단 소재 :</span><strong class="lsl-v">LG 하우시스 정품 솔벤 반사 시트 지원</strong></div>
                 </div>
               </div>
@@ -1388,7 +1784,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
             <div class="ldb-info">
               <span class="ldb-badge">OFFICIAL PDF</span>
               <strong class="ldb-title">광주 시내버스 내부광고 &amp; 음성안내 제안서 및 단가표 (PDF)</strong>
-              <p class="ldb-meta">중앙창문, 하차문 사랑면, 시트커버 및 7초 성우 음성안내 노선 단가표 수록 (PDF)</p>
+              <p class="ldb-meta">노선도, 하차문, 좌석시트 및 음성안내 광고 규격과 노선별 단가표 수록 (PDF)</p>
             </div>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
               <a href="/pdf/gaon_bus_inside.pdf" download="가온엔_시내버스_내부광고_공식제안서.pdf" class="ldb-btn">
@@ -1405,49 +1801,38 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="lmg-high-contrast-grid">
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge blue">중앙창문</span>
+                <span class="lhc-badge blue">노선도 광고</span>
                 <strong class="lhc-size">1,100 × 500 mm</strong>
                 <span class="lhc-aspect">차량 1대당 2매 부착</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">중앙창문 대형 포스터 광고</h5>
+                <h5 class="lhc-title">노선도 광고</h5>
                 <p class="lhc-desc">차량 내부 좌석 및 입석 승객의 눈높이 정면에 위치하며, 차량 1대당 2매가 부착되어 높은 가독성을 제공합니다.</p>
               </div>
             </div>
 
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge blue">사랑면(하차문)</span>
+                <span class="lhc-badge blue">하차문 광고</span>
                 <strong class="lhc-size">1,000 × 500 mm</strong>
-                <span class="lhc-aspect">하차 대기 승객 100% 접촉</span>
+                <span class="lhc-aspect">하차 대기 동선에 가까운 위치</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">하차문 측면 사랑면 광고</h5>
-                <p class="lhc-desc">승객이 하차하기 위해 대기하는 동안 100% 시선이 머무는 하차문 옆 핵심 골든존 위치입니다.</p>
+                <h5 class="lhc-title">하차문 광고</h5>
+                <p class="lhc-desc">하차를 위해 대기하는 승객의 동선과 가까운 위치에 설치되어 자연스럽게 시야에 들어오는 내부 광고입니다.</p>
               </div>
             </div>
 
-            <div class="lhc-card">
-              <div class="lhc-side">
-                <span class="lhc-badge blue">하차문 유리</span>
-                <strong class="lhc-size">700 × 400 mm</strong>
-                <span class="lhc-aspect">투명 유리면 직부착</span>
-              </div>
-              <div class="lhc-main">
-                <h5 class="lhc-title">하차문 유리창 포스터 광고</h5>
-                <p class="lhc-desc">하차문 투명 유리면에 직접 부착되어 문이 열리고 닫힐 때마다 승객 시야에 자연스럽게 노출됩니다.</p>
-              </div>
-            </div>
 
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge blue">시트커버</span>
+                <span class="lhc-badge blue">좌석시트 광고</span>
                 <strong class="lhc-size">240 × 120 mm</strong>
                 <span class="lhc-aspect">좌석 20매 전면 부착</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">좌석 등받이 시트커버 광고</h5>
-                <p class="lhc-desc">차량 1대당 18~22개 좌석 등받이에 부착되어 착석 승객이 이동 내내 1:1로 밀착 주시합니다.</p>
+                <h5 class="lhc-title">좌석 시트 광고</h5>
+                <p class="lhc-desc">차량 좌석 등받이에 설치되어 착석 승객의 가까운 거리에서 자연스럽게 반복 노출되는 내부 광고매체입니다.</p>
               </div>
             </div>
 
@@ -1459,7 +1844,27 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">시내버스 정류소 음성안내 방송 광고</h5>
-                <p class="lhc-desc">정류소 도착 전 전문 성우 음성으로 브랜드 및 위치가 7초간 자동 송출되어 청각을 완벽 장악합니다.</p>
+                <p class="lhc-desc">정류소 도착 전 안내방송과 함께 브랜드명과 위치 등의 정보를 음성으로 전달할 수 있는 광고입니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 U-SQUARE LED GUIDE -->
+        <div class="bus-guide-page" id="guideUsquare">
+          <div class="lmg-high-contrast-grid">
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge purple">유스퀘어 LED 전광판</span>
+                <strong class="lhc-size">2,500 × 1,500 mm</strong>
+                <span class="lhc-aspect">고속버스 매표소 상단</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">유스퀘어 매표소 상단 LED 전광판</h5>
+                <p class="lhc-desc">
+                  유스퀘어 고속버스 매표소 상단에 설치된 LED 전광판으로
+                  고정이미지와 동영상 광고를 송출할 수 있습니다.
+                </p>
               </div>
             </div>
           </div>
@@ -1484,11 +1889,10 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">택시 래핑</span>
                 <strong class="lhc-size">2,000 × 370 mm</strong>
-                <span class="lhc-aspect">24시간 도심 주행</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">법인 · 개인택시 양측면 래핑 광고</h5>
-                <p class="lhc-desc">광주 전역 200여 대 차량이 1일 24시간, 일 평균 400km를 주행하며 유흥가, 상업지구, 주택가 구석구석을 누빕니다.</p>
+                <h5 class="lhc-title">도심 생활권 이동 노출</h5>
+                <p class="lhc-desc">광주 생활권을 이동하는 법인·개인택시의 양측면을 활용해 다양한 지역에서 반복적으로 노출되는 차량 광고입니다.</p>
               </div>
             </div>
 
@@ -1496,11 +1900,10 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge blue">택배 탑차</span>
                 <strong class="lhc-size">3,000 × 1,500 mm</strong>
-                <span class="lhc-aspect">아파트 단지 10시간 체류</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">택배 탑차 3면 와이드 래핑 광고</h5>
-                <p class="lhc-desc">광주 5개 구 아파트 단지와 빌라촌 골목길에 매일 10시간 이상 머무르며 거주민 눈높이에서 3면으로 노출됩니다.</p>
+                <p class="lhc-desc">택배 차량의 넓은 외부면을 활용해 아파트와 주거지역 등 배송 동선에서 브랜드를 노출하는 래핑 광고입니다.</p>
               </div>
             </div>
 
@@ -1508,23 +1911,22 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge gold">쇼핑카트</span>
                 <strong class="lhc-size">280 × 160 mm</strong>
-                <span class="lhc-aspect">3050 주부 60분 동행</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">이마트 · 롯데마트 쇼핑카트 양면 광고</h5>
-                <p class="lhc-desc">1,000여 대 쇼핑카트 손잡이 정면에 위치하여 실질적 구매력을 갖춘 3050 주부 고객과 60분간 동행합니다.</p>
+                <h5 class="lhc-title">매장 내 쇼핑동선 노출</h5>
+                <p class="lhc-desc">대형마트 쇼핑카트에 광고를 부착해 고객의 매장 이용 동선에서 자연스럽게 브랜드와 상품 정보를 전달하는 매체입니다.</p>
               </div>
             </div>
 
             <div class="lhc-card">
               <div class="lhc-side">
                 <span class="lhc-badge purple">DID 전광판</span>
-                <strong class="lhc-size">55 ~ 85" UHD</strong>
-                <span class="lhc-aspect">일 100회 이상 연속 송출</span>
+                <strong class="lhc-size">매체별 상이</strong>
+                <span class="lhc-aspect">설치 위치별 송출 조건 상이</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">유스퀘어 터미널 &amp; 지하철 환승역 DID 전광판</h5>
-                <p class="lhc-desc">고휘도 UHD 스크린으로 15초 영상이 하루 100회 이상 연속 송출되어 유동 인구의 시선을 압도합니다.</p>
+                <h5 class="lhc-title">지역 거점 DID 디지털 전광판</h5>
+                <p class="lhc-desc">터미널 등 지역 생활거점에 설치된 디지털 전광판을 활용해 이미지와 영상 광고를 송출하는 옥외매체입니다.</p>
               </div>
             </div>
           </div>
@@ -1533,65 +1935,67 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         <!-- 04 ONLINE MARKETING GUIDE -->
         <div class="bus-guide-page" id="guideOnline">
           <div class="lmg-high-contrast-grid">
+
             <div class="lhc-card">
               <div class="lhc-side">
                 <span class="lhc-badge blue">01 플레이스</span>
-                <strong class="lhc-size">지도 1위 세팅</strong>
-                <span class="lhc-aspect">로컬 상권 검색 장악</span>
+                <strong class="lhc-size">통합 정보 관리</strong>
+                <span class="lhc-aspect">검색 · 정보 · 예약 연결</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">네이버 스마트플레이스 1위 세팅 &amp; 관리</h5>
-                <p class="lhc-desc">로컬 1위 SEO 알고리즘 8대 평가 요소 세팅, 영수증 리뷰 빌드업, 24시간 네이버 예약/톡톡 연동으로 유입 콜 수를 극대화합니다.</p>
+                <h5 class="lhc-title">네이버 스마트플레이스 운영 &amp; 관리</h5>
+                <p class="lhc-desc">기본 정보와 사진, 소식, 예약·톡톡 등 고객이 검색 후 확인하는 주요 요소를 정리하고 지속적으로 관리합니다.</p>
               </div>
             </div>
 
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge blue">02 C-Rank 블로그</span>
-                <strong class="lhc-size">월 8~12편 칼럼</strong>
-                <span class="lhc-aspect">전문 에디터 1:1 맞춤 기획</span>
+                <span class="lhc-badge blue">02 블로그 마케팅</span>
+                <strong class="lhc-size">콘텐츠 정기 운영</strong>
+                <span class="lhc-aspect">업종별 맞춤 콘텐츠 기획</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">C-Rank 브랜드 블로그 전문 칼럼 발행</h5>
-                <p class="lhc-desc">원장님과 대표님의 진료·경영 철학을 바탕으로 월 8~12편 고품격 전문 칼럼을 기획하여 스마트블록과 뷰탭을 안정적으로 점유합니다.</p>
+                <h5 class="lhc-title">브랜드 블로그 콘텐츠 기획 &amp; 운영</h5>
+                <p class="lhc-desc">업종의 전문성과 브랜드 특성을 바탕으로 고객이 궁금해하는 주제를 기획하고 검색 흐름에 맞는 콘텐츠를 꾸준히 운영합니다.</p>
               </div>
             </div>
 
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge green">03 맘카페 바이럴</span>
-                <strong class="lhc-size">광주 맘스홀릭</strong>
-                <span class="lhc-aspect">실유저 후기 침투</span>
+                <span class="lhc-badge green">03 지역 커뮤니티</span>
+                <strong class="lhc-size">지역 · 관심사 기반</strong>
+                <span class="lhc-aspect">생활권 채널 활용</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">광주 대표 맘카페 &amp; 동네생활 바이럴</h5>
-                <p class="lhc-desc">광주맘스홀릭, 맘수다방 및 당근마켓 동네생활 실유저 침투로 자연스러운 내방 후기와 3050 주부 신뢰 여론을 100% 형성합니다.</p>
+                <h5 class="lhc-title">카페 &amp; 지역 커뮤니티 마케팅</h5>
+                <p class="lhc-desc">지역 커뮤니티와 생활권 플랫폼의 특성을 고려해 브랜드 소식과 필요한 정보를 자연스럽게 전달할 수 있도록 채널별 운영 방향을 설계합니다.</p>
               </div>
             </div>
 
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge gold">04 SNS 릴스</span>
-                <strong class="lhc-size">반경 1~3km</strong>
-                <span class="lhc-aspect">초정밀 지역 스폰서드</span>
+                <span class="lhc-badge gold">04 SNS 마케팅</span>
+                <strong class="lhc-size">지역 · 관심사 타깃</strong>
+                <span class="lhc-aspect">릴스 · 피드 · 광고</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">인스타그램 릴스 &amp; 초정밀 반경 스폰서드</h5>
-                <p class="lhc-desc">병원/매장 반경 1~3km 내 실제 거주 세대원만을 정밀 타깃팅하여 9:16 세로형 숏폼 영상 광고로 문의 전화를 즉각 폭발시킵니다.</p>
+                <h5 class="lhc-title">인스타그램 콘텐츠 &amp; 타깃 광고</h5>
+                <p class="lhc-desc">피드와 릴스 등 브랜드 콘텐츠를 제작하고 지역·연령·관심사 등 캠페인 목적에 맞는 타깃을 설정해 광고를 운영합니다.</p>
               </div>
             </div>
 
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge purple">05 구글 GDN</span>
-                <strong class="lhc-size">검색 &amp; 배너</strong>
-                <span class="lhc-aspect">24시간 리타깃팅</span>
+                <span class="lhc-badge purple">05 구글 광고</span>
+                <strong class="lhc-size">검색 &amp; 디스플레이</strong>
+                <span class="lhc-aspect">관심 고객 재접점</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">구글 검색광고 &amp; 유튜브 GDN 리타깃팅</h5>
-                <p class="lhc-desc">구글 검색 키워드 타깃팅과 유튜브/언론사 제휴 배너 네트워크(GDN)를 통해 관심 고객에게 지속적인 리타깃팅을 집행합니다.</p>
+                <h5 class="lhc-title">구글 검색광고 &amp; 디스플레이 네트워크</h5>
+                <p class="lhc-desc">검색 키워드와 디스플레이 광고를 활용해 브랜드와 고객의 접점을 넓히고 필요에 따라 리마케팅 캠페인을 함께 운영합니다.</p>
               </div>
             </div>
+
           </div>
         </div>
 
@@ -1600,13 +2004,13 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="lmg-high-contrast-grid">
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge gold">브랜드 필름</span>
-                <strong class="lhc-size">4K UHD 풀프레임</strong>
-                <span class="lhc-aspect">영화급 시네마 영상</span>
+                <span class="lhc-badge gold">브랜드 영상</span>
+                <strong class="lhc-size">기업 · 병원 · 브랜드 콘텐츠</strong>
+                <span class="lhc-aspect">기획 · 촬영 · 편집</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">기업 · 상급병원 4K 시네마틱 브랜드 필름</h5>
-                <p class="lhc-desc">Sony FX 풀프레임 카메라와 국토부 승인 4K 항공 드론으로 완성하는 최고급 영화급 홍보영상으로 홈페이지 메인 및 TV CF에 최적화됩니다.</p>
+                <h5 class="lhc-title">기업 · 병원 브랜드 홍보영상</h5>
+                <p class="lhc-desc">브랜드의 목적과 활용 매체에 맞춰 기획부터 촬영, 편집까지 진행하는 홍보영상 콘텐츠입니다.</p>
               </div>
             </div>
 
@@ -1614,11 +2018,11 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               <div class="lhc-side">
                 <span class="lhc-badge gold">모바일 숏폼</span>
                 <strong class="lhc-size">9:16 FHD 세로형</strong>
-                <span class="lhc-aspect">알고리즘 바이럴</span>
+                <span class="lhc-aspect">모바일 세로형 콘텐츠</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">SNS 릴스 · 유튜브 쇼츠 · 틱톡 숏폼</h5>
-                <p class="lhc-desc">첫 3초 만에 시선을 사로잡는 빠른 컷 전환과 자막 모션그래픽으로 수만~수십만 뷰의 유기적 알고리즘 도달을 달성합니다.</p>
+                <p class="lhc-desc">모바일 시청 환경에 맞는 세로형 영상으로 짧은 시간 안에 핵심 메시지를 전달할 수 있도록 기획·제작합니다.</p>
               </div>
             </div>
           </div>
@@ -1629,25 +2033,13 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
           <div class="lmg-high-contrast-grid">
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge blue">차량 래핑 시트</span>
-                <strong class="lhc-size">LG 하우시스 정품</strong>
-                <span class="lhc-aspect">자외선 변색방지 UV코팅</span>
-              </div>
-              <div class="lhc-main">
-                <h5 class="lhc-title">차량 전용 최고급 내후성 솔벤 점착 시트</h5>
-                <p class="lhc-desc">비바람과 자외선에 1년 이상 색 바램이 없는 내후성 UV 코팅 처리와 제거 시 차량 도장 손상이 없는 그레이 점착제를 사용합니다.</p>
-              </div>
-            </div>
-
-            <div class="lhc-card">
-              <div class="lhc-side">
                 <span class="lhc-badge blue">대형 현수막</span>
-                <strong class="lhc-size">지정게시대 / 게릴라</strong>
+                <strong class="lhc-size">지정게시대 / 대형 현수막</strong>
                 <span class="lhc-aspect">구청 추첨 대행</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">구청 지정게시대 &amp; 대형 건물 분양 현수막</h5>
-                <p class="lhc-desc">광주 5개 구청 지정게시대 추첨 대행부터 텐트천 대형 현수막, 게릴라 현수막 제작·시공을 신속하게 집행합니다.</p>
+                <p class="lhc-desc">지정게시대 접수부터 다양한 규격의 현수막 제작과 시공까지 목적에 맞춰 진행합니다.</p>
               </div>
             </div>
 
@@ -1659,7 +2051,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">병원 안내 리플렛 · 기업 브로슈어 인쇄</h5>
-                <p class="lhc-desc">랑데뷰, 스노우 200g 고급 용지 사용 및 부분 에폭시, 금박/은박 후가공으로 최고급 홍보물을 제작 납품합니다.</p>
+                <p class="lhc-desc">랑데뷰, 스노우 200g 고급 용지 사용 및 부분 에폭시, 금박/은박 후가공으로 홍보물을 제작 납품합니다.</p>
               </div>
             </div>
           </div>
@@ -1669,7 +2061,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       <!-- SOLID MODAL FOOTER -->
       <div class="lux-modal-foot">
-        <span class="lmf-info-text">상세 단가표 및 맞춤 노선 믹스는 1:1 온라인 견적 상담을 통해 즉시 제공됩니다.</span>
+        <span class="lmf-info-text">상세 단가와 매체 구성은 1:1 견적 상담을 통해 안내해드립니다.</span>
         <a href="/board/estmate/write.php" class="am-more-btn" style="padding:13px 26px; font-size:14.5px;">
           <span>1:1 맞춤 견적 신청하기</span>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -1678,13 +2070,13 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
     </div>
   </div>
 
-      <!-- ============================================
-       ONLINE MARKETING CARD DETAIL MODAL (SVG 픽토그램 & PC 호버 내용 100% 연동 모달)
+  <!-- ============================================
+       ONLINE MARKETING CARD DETAIL MODAL
   ============================================ -->
   <div class="online-card-modal-overlay" id="onlineCardModal">
     <div class="ocm-panel">
       <button type="button" class="ocm-close-btn" id="btnCloseOnlineCardModal" aria-label="닫기">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
       <div class="ocm-image-box">
         <img id="ocmModalImg" src="" alt="온라인 마케팅 솔루션">
@@ -1705,13 +2097,13 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
         <a href="/board/estmate/write.php" class="ocm-cta-btn">
           <span>온라인 마케팅 1:1 상담 신청</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
       </div>
     </div>
   </div>
 
-      <!-- PORTFOLIO LIGHTBOX MODAL (오른쪽 위 안쪽 닫기 버튼 + 좌우 넘김 화살표 탑재) -->
+  <!-- PORTFOLIO LIGHTBOX MODAL -->
   <div class="portfolio-modal-backdrop" id="modalBackdrop">
     <div class="pm-modal-box">
       <button type="button" class="pm-close-btn" id="modalClose" aria-label="팝업 닫기">✕</button>
@@ -1726,6 +2118,7 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
 
       <div class="pm-img-wrap">
         <img src="" id="modalImg" alt="포트폴리오 상세 실사">
+        <video id="modalVideo" src="" controls playsinline loop muted style="display:none; width:100%; height:auto; max-height:70vh; background:#000; object-fit:contain; border-radius:8px;"></video>
       </div>
       <div class="pm-info-wrap">
         <div class="pm-meta-row">
@@ -1734,18 +2127,17 @@ function setCookie(name, value, expiredays){ var d = new Date(); d.setDate(d.get
         </div>
         <h3 class="pm-title" id="modalTitle">프로젝트명</h3>
         <p class="pm-loc" id="modalLoc">광주 주요 상권 직영 시공 사례</p>
+        <p class="pm-sub-notice" id="modalSubNotice" style="display:none; font-size:12px; color:#38bdf8; margin-top:6px; font-weight:600;">🎬 10초 하이라이트 영상 (대표 화면 스틸컷 캡쳐본)</p>
         <div class="pm-action-row">
-          <a href="/board/estmate/write.php" class="pm-cta-btn">이 광고 집행 견적 문의 ➔</a>
+          <a href="/board/estmate/write.php" class="pm-cta-btn" id="modalCtaBtn">이 광고 집행 견적 문의 ➔</a>
         </div>
       </div>
     </div>
-  </div>
   </div>
 
   <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/footer.php";?>
 
 </div>
-
 
 </body>
 </html>

@@ -1,2 +1,28 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /lib/
+
+# AI Search & LLM Engine Crawlers (Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: NaverBot
+Allow: /
+
+Sitemap: https://gaon-n.com/sitemap.xml

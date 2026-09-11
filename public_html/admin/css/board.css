@@ -165,7 +165,7 @@ appearance:none; -webkit-appearance:none; -moz-appearance:none; border:none; out
 /*select*/
 .select_type01 { height:40px; line-height:40px; background:#fff; border:1px solid #d2d2d2; text-align:left; padding:10px;
 /*box-sizing*/-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
-.select_type01:focus { background:#fffae5; border:1px solid #ffc000; }
+.select_type01:focus { background:#ffffff; border:1px solid #0f172a; outline:none; }
 
 .select_box { }
 .select_box span { margin-left:20px; display:inline-block; }
@@ -176,7 +176,7 @@ appearance:none; -webkit-appearance:none; -moz-appearance:none; border:none; out
 /*input*/
 .input_type01 { height:40px; line-height:40px; background:#fff; border:1px solid #d2d2d2; text-align:left; padding:0 10px;
 /*box-sizing*/-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
-.input_type01:focus { background:#fffae5; border:1px solid #ffc000; }
+.input_type01:focus { background:#ffffff; border:1px solid #0f172a; outline:none; }
 
 .date_pick .date_cell { float:left; display:inline-block; }
 .date_space { float:left; margin:11px; font-size:1rem; }

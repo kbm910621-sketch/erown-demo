@@ -72,18 +72,9 @@ if(isset($_GET['id'])){
         						</ul>
         					</td>
         				</tr>
-        				<tr>
-        					<th scope="row">팝업 위치</th>
-        					<td>
-        						상단 <input type="text" class="input_type01 w_100" name="pop_top" id="pop_top" value="<?=$row['pop_top']?>" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/> PX
-        						<span class="space"></span>
-        						좌측 <input type="text" class="input_type01 w_100" name="pop_left" id="pop_left" value="<?=$row['pop_left']?>" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/> PX
-        					</td>
-        				</tr>
-        				<tr>
-        					<th scope="row">팝업 크기</th>
-        					<td>가로 <input type="text" class="input_type01 w_100" name="pop_width" id="pop_width" value="<?=$row['pop_width']?>" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/> PX</td>
-        				</tr>
+						<input type="hidden" name="pop_top" id="pop_top" value="<?=$row['pop_top']?>"/>
+						<input type="hidden" name="pop_left" id="pop_left" value="<?=$row['pop_left']?>"/>
+						<input type="hidden" name="pop_width" id="pop_width" value="<?=$row['pop_width']?>"/>
                         <tr>
                             <th scope="row">팝업 내용</th>
                             <td>

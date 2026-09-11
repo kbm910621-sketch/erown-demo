@@ -262,21 +262,6 @@ body { background:#f2f2f4}
     /*************** common ***************/
     #wrap { padding-top:0px; }
     .inner { width:100%; padding:0 20px; }
-    #lnb .inner { width:100%; padding:0; }
-    #container { background:#fff; padding-top:30px; }
-    .content { }
-    /*************** //common ***************/
-
-    /*************** header ***************/
-    /*mobile ctrl*/
-    
-    #header .mobile_hamburger { display:block; z-index:30; width:44px; height:44px; position:relative; float:right; cursor:pointer; height:100px;}
-    #header .logo {top:20px; left:30px;}
-/* mobile gnb */
-
-/* 햄버거 */
-.gnb_open { position: fixed; top: 20px; right: 20px;width: 24px; height: 18px; background: transparent; cursor: pointer; }
-.gnb_open span { width: 24px; height: 2px; background: #111; display: block; position: absolute; left: 0; border-radius: 2px; transition: all 0.35s cubic-bezier(0.23,1,0.32,1); }
 .gnb_open span.stic_1 { top: 0; }
 .gnb_open span.stic_2 { top: 8px; width: 16px; }
 .gnb_open span.stic_3 { top: 16px; }
@@ -433,4 +418,75 @@ body { background:#f2f2f4}
 }
 #footer .foot_legal a:hover {
   color: #1855b7 !important;
+}
+
+
+@media (max-width: 768px) {
+  .cta-btn_m {
+    right: 16px !important;
+    bottom: 24px !important;
+    top: auto !important;
+    transform: none !important;
+    width: 68px !important;
+    height: 68px !important;
+    z-index: 9999 !important;
+  }
+  .cta-btn_m-ring {
+    display: none !important;
+  }
+  .cta-btn_m-circle {
+    width: 54px !important;
+    height: 54px !important;
+    box-shadow: 0 8px 24px rgba(24, 85, 183, 0.45) !important;
+  }
+  .cta-btn_m-text {
+    font-size: 12px !important;
+    font-weight: 800 !important;
+  }
+  .gotop {
+    right: 16px !important;
+    bottom: 90px !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .cta-btn_m {
+    right: 16px !important;
+    bottom: 20px !important;
+    top: auto !important;
+    transform: none !important;
+    width: 58px !important;
+    height: 58px !important;
+    z-index: 9999 !important;
+  }
+  .cta-btn_m-ring {
+    display: none !important;
+  }
+  .cta-btn_m-circle {
+    width: 54px !important;
+    height: 54px !important;
+    box-shadow: 0 8px 24px rgba(24, 85, 183, 0.45) !important;
+  }
+  .cta-btn_m-text {
+    font-size: 12px !important;
+    font-weight: 800 !important;
+  }
+  .gotop {
+    right: 21px !important;
+    bottom: -100px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: bottom 0.35s ease, opacity 0.35s ease !important;
+    z-index: 9998 !important;
+  }
+  .gotop.active {
+    bottom: 86px !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+  .gotop button {
+    width: 44px !important;
+    height: 44px !important;
+  }
 }

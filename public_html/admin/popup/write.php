@@ -63,18 +63,9 @@
 								</ul>
 							</td>
 						</tr>
-						<tr>
-							<th scope="row">팝업 위치</th>
-							<td>
-								상단 <input type="text" class="input_type01 w_100" name="pop_top" id="pop_top" value="0" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/> PX
-								<span class="space"></span>
-								좌측 <input type="text" class="input_type01 w_100" name="pop_left" id="pop_left" value="0" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/> PX
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">팝업 크기</th>
-							<td>가로 <input type="text" class="input_type01 w_100" name="pop_width" id="pop_width" value="200" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/> PX</td>
-						</tr>
+						<input type="hidden" name="pop_top" id="pop_top" value="0"/>
+						<input type="hidden" name="pop_left" id="pop_left" value="0"/>
+						<input type="hidden" name="pop_width" id="pop_width" value="500"/>
 						<tr>
 							<th scope="row">팝업 내용</th>
 							<td>

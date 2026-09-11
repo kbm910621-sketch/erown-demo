@@ -1,5 +1,146 @@
 $(function() {
 
+  /* 02-D. BESPOKE OOH 3-TIER HIERARCHY & ZERO-LATENCY PRELOADED SWITCHING */
+  var oohImageCache = {};
+  var oohImages = [
+    '/images/bs_ad/ooh11/차도면광고.png',
+    '/images/bs_ad/ooh11/인도면광고.png',
+    '/images/bs_ad/ooh11/후면광고.jpg',
+    '/images/bs_ad/ooh11/노선도01.png',
+    '/images/bs_ad/ooh11/하차문광고01.png',
+    '/images/bs_ad/ooh11/버스시트광고01.png',
+    '/images/bs_ad/ooh11/버스음성광고.png',
+    '/images/bs_ad/ooh11/유스퀘어광고.png',
+    '/images/bs_ad/ooh11/DID광고.png',
+    '/images/bs_ad/ooh11/택시광고01.png',
+    '/images/bs_ad/ooh11/택배차광고01.png',
+    '/images/bs_ad/ooh11/mart_cart_01.jpg'
+  ];
+  // Preload all high-res OOH images into browser memory immediately
+  oohImages.forEach(function(src) {
+    var img = new Image();
+    img.src = src;
+    oohImageCache[src] = img;
+  });
+
+  var currentOohSrc = '/images/bs_ad/ooh11/차도면광고.png';
+
+  function updateOohVisual(img, numEng, title, guide, $parentItem) {
+    // 1. PC Visual Elements (100% Preserved)
+    if (numEng) $('#goCapNumEng').text(numEng);
+    if (title) $('#goCapTitle').text(title);
+    if (guide) $('#goBtnGuide').attr('data-guide', guide);
+
+    if (img && img !== currentOohSrc) {
+      var $back = $('#goPhotoBack');
+      var $front = $('#goPhotoFront');
+
+      $back.attr('src', currentOohSrc);
+      currentOohSrc = img;
+
+      $front.removeClass('active').addClass('is-prep');
+      $front.attr('src', img);
+
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          $front.removeClass('is-prep').addClass('active');
+        });
+      });
+    }
+
+    // 2. Mobile Inline Preview (Smooth crossfade in current accordion)
+    if ($parentItem && $parentItem.length) {
+      var $mobPreview = $parentItem.find('.go-mobile-preview');
+      if ($mobPreview.length) {
+        var $mobImg = $mobPreview.find('.gmp-image');
+        var $mobMeta = $mobPreview.find('.gmp-meta');
+        var $mobTitle = $mobPreview.find('.gmp-title');
+
+        if (numEng) $mobMeta.text(numEng);
+        if (title) $mobTitle.text(title);
+
+        if (img && $mobImg.attr('src') !== img) {
+          $mobImg.css('opacity', '0');
+          setTimeout(function() {
+            $mobImg.attr('src', img);
+            $mobImg.css('opacity', '1');
+          }, 150);
+        }
+      }
+    }
+  }
+
+  // 1. Primary Category Accordion CLICK ONLY
+  $(document).on('click', '.gpi-header-btn', function(e) {
+    e.preventDefault();
+    var $item = $(this).closest('.go-primary-item');
+    if ($item.hasClass('on')) return; // Keep current open if already active
+
+    // Close all other primary items & Open clicked one
+    $('.go-primary-item').removeClass('on');
+    $item.addClass('on');
+
+    var num = $item.data('num') || '01';
+    var eng = $item.data('eng') || 'BUS OUTDOOR';
+    var numEng = num + ' / ' + eng;
+
+    // Activate the first detail sub-item within this opened accordion
+    var $subList = $item.find('.gds-sub-list');
+    var $firstSub = $subList.find('.gds-item:first');
+    $item.find('.gds-item').removeClass('on');
+    $firstSub.addClass('on');
+
+    var subImg = $firstSub.data('img');
+    var subTitle = $firstSub.data('sub');
+    var subGuide = $firstSub.data('guide') || $item.data('guide');
+    updateOohVisual(subImg, numEng, subTitle, subGuide, $item);
+  });
+
+  // 2. Detail Sub-Item CLICK ONLY
+  $(document).on('click', '.gds-item', function(e) {
+    e.preventDefault();
+    e.stopPropagation(); // Do not trigger parent accordion header
+
+    var $this = $(this);
+    var $parentItem = $this.closest('.go-primary-item');
+    
+    // Ensure parent primary item is active
+    if (!$parentItem.hasClass('on')) {
+      $('.go-primary-item').removeClass('on');
+      $parentItem.addClass('on');
+    }
+
+    // Set active detail state
+    $parentItem.find('.gds-item').removeClass('on');
+    $this.addClass('on');
+
+    var num = $this.data('num') || $parentItem.data('num') || '01';
+    var eng = $this.data('eng') || $parentItem.data('eng') || 'BUS OUTDOOR';
+    var numEng = num + ' / ' + eng;
+
+    var img = $this.data('img');
+    var title = $this.data('sub');
+    var guide = $this.data('guide') || $parentItem.data('guide') || '';
+
+    updateOohVisual(img, numEng, title, guide, $parentItem);
+  });
+
+  /* 05. BESPOKE PROCESS WORKFLOW INTERACTION */
+  $(document).on('mouseenter click', '.gpe-step-item', function() {
+    var $this = $(this);
+    $('.gpe-step-item').removeClass('on');
+    $this.addClass('on');
+
+    var step = $this.data('step');
+    var eng = $this.data('eng');
+    var title = $this.data('title');
+
+    if (step) $('#gpeActiveNum').text(step);
+    if (eng) $('#gpeActiveEng').text(eng);
+    if (title) $('#gpeActiveTitle').text(title);
+  });
+
+
   /* COMMON */
   var $windowWid = window.innerWidth;
 
@@ -19,6 +160,7 @@ $(function() {
       easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
       smooth: true
     });
+    window.lenis = lenis;
 
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       gsap.ticker.add(function(time) { lenis.raf(time * 1000); });
@@ -31,7 +173,7 @@ $(function() {
     lenis.on('scroll', function() { if (typeof wow !== 'undefined') wow.sync(); });
 
     /* HERO SCROLL LOCK / UNLOCK */
-    window.addEventListener('heroUnlock', function() { lenis.start(); });
+    window.addEventListener('heroUnlock', function() { if (!$('#mainModalPopupOverlay:visible').length) lenis.start(); });
     window.addEventListener('heroLock', function() { lenis.stop(); });
   }
 
@@ -292,12 +434,15 @@ $(function() {
   }
 
   function closeRouteModal() {
-    $('#routeSearchModal').fadeOut(200);
+    $('#routeSearchModal').removeClass('open').fadeOut(200);
     $('body').removeClass('modal-lock');
     $('html, body').removeClass('modal-lock');
   }
 
-  $(document).on('click', '#btnOpenRouteSearchModal, #btnHeadRouteSearch', function(e) {
+  window.openRouteModal = openRouteModal;
+  window.closeRouteModal = closeRouteModal;
+
+  $(document).on('click', '.open-route-search, #btnOpenRouteSearchModal, #btnHeadRouteSearch', function(e) {
     e.preventDefault();
     openRouteModal();
   });
@@ -558,8 +703,6 @@ $(function() {
     $('#' + target).fadeIn(150).addClass('on');
   });
 
-});
-
   /* MASSTIGE INSIGHTS-STYLE HUGE TYPOGRAPHIC TAB FILTERING */
   $(document).on('click', '.mai-tab', function() {
     $('.mai-tab').removeClass('on');
@@ -733,62 +876,182 @@ $(function() {
   
 
   
-  /* ==========================================================================
-     SUB-PORTFOLIO 3-SECTION SWIPER (자동 롤링 Autoplay + 부드러운 speed 700ms)
+      /* ==========================================================================
+     SUB-PORTFOLIO 4-COLUMN SWIPER (PC 4열 와이드 슬라이더)
   ========================================================================== */
+  var busSwiperInstance = null;
+  var videoSwiperInstance = null;
+
   function initAllSubPortfolioSwipers() {
     if (typeof Swiper === 'undefined') return;
 
-    var swiperConfig = {
-      slidesPerView: 1.25, /* 모바일: 1번 75~80% 메인 + 2번 15~20% 빼꼼 */
-      spaceBetween: 12,
-      slidesPerGroup: 1,
-      speed: 700, /* 부드럽고 매끄러운 고급 슬라이딩 모션 */
-      grabCursor: true,
-      touchRatio: 1.1,
-      centeredSlides: false,
-      rewind: true,
-      autoplay: {
-        delay: 3500, /* 3.5초마다 자동으로 다음 사례 롤링 */
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true
-      },
-      breakpoints: {
-        769: {
+    if ($('.asps-swiper-bus').length) {
+      if (busSwiperInstance) {
+        try { busSwiperInstance.destroy(true, true); } catch(e) {}
+      }
+      try {
+        busSwiperInstance = new Swiper('.asps-swiper-bus', {
           slidesPerView: 4,
           spaceBetween: 22,
-          slidesPerGroup: 1,
-          speed: 750,
-          rewind: true
-        }
+          speed: 600,
+          grabCursor: true,
+          observer: true,
+          observeParents: true,
+          watchOverflow: true,
+          loop: true,
+          loopAdditionalSlides: 2,
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          },
+          navigation: {
+            prevEl: '.asps-prev-bus',
+            nextEl: '.asps-next-bus'
+          },
+          breakpoints: {
+            0: {
+              slidesPerView: 1.25,
+              spaceBetween: 12
+            },
+            600: {
+              slidesPerView: 2.2,
+              spaceBetween: 16
+            },
+            900: {
+              slidesPerView: 3,
+              spaceBetween: 18
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 22
+            }
+          }
+        });
+      } catch(e) { console.error('busSwiper error:', e); }
+    }
+
+    if ($('.asps-swiper-video').length) {
+      if (videoSwiperInstance) {
+        try { videoSwiperInstance.destroy(true, true); } catch(e) {}
       }
-    };
+      try {
+        videoSwiperInstance = new Swiper('.asps-swiper-video', {
+          slidesPerView: 4,
+          spaceBetween: 22,
+          speed: 600,
+          grabCursor: true,
+          observer: true,
+          observeParents: true,
+          watchOverflow: true,
+          loop: true,
+          loopAdditionalSlides: 2,
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          },
+          navigation: {
+            prevEl: '.asps-prev-video',
+            nextEl: '.asps-next-video'
+          },
+          breakpoints: {
+            0: {
+              slidesPerView: 1.25,
+              spaceBetween: 12
+            },
+            600: {
+              slidesPerView: 2.2,
+              spaceBetween: 16
+            },
+            900: {
+              slidesPerView: 3,
+              spaceBetween: 18
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 22
+            }
+          }
+        });
+      } catch(e) { console.error('videoSwiper error:', e); }
+    }
 
-    // 01 옥외광고 사례
-    try {
-      new Swiper('.asps-swiper-bus', Object.assign({}, swiperConfig, {
-        navigation: { prevEl: '.asps-prev-bus', nextEl: '.asps-next-bus' }
-      }));
-    } catch(e) {}
-
-    // 02 온라인마케팅 사례
-    try {
-      new Swiper('.asps-swiper-online', Object.assign({}, swiperConfig, {
-        navigation: { prevEl: '.asps-prev-online', nextEl: '.asps-next-online' }
-      }));
-    } catch(e) {}
-
-    // 03 영상제작 사례
-    try {
-      new Swiper('.asps-swiper-video', Object.assign({}, swiperConfig, {
-        navigation: { prevEl: '.asps-prev-video', nextEl: '.asps-next-video' }
-      }));
-    } catch(e) {}
+    if ($('.asps-swiper-online').length) {
+      try {
+        new Swiper('.asps-swiper-online', {
+          slidesPerView: 4,
+          spaceBetween: 22,
+          speed: 600,
+          grabCursor: true,
+          observer: true,
+          observeParents: true,
+          watchOverflow: true,
+          loop: true,
+          loopAdditionalSlides: 2,
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          },
+          navigation: {
+            prevEl: '.asps-prev-online',
+            nextEl: '.asps-next-online'
+          },
+          breakpoints: {
+            0: {
+              slidesPerView: 1.25,
+              spaceBetween: 12
+            },
+            600: {
+              slidesPerView: 2.2,
+              spaceBetween: 16
+            },
+            900: {
+              slidesPerView: 3,
+              spaceBetween: 18
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 22
+            }
+          }
+        });
+      } catch(e) { console.error('onlineSwiper error:', e); }
+    }
   }
 
+  // Active sub-portfolio Swipers immediately and on DOM Ready & Load
+  initAllSubPortfolioSwipers();
+  $(document).ready(function() {
+    initAllSubPortfolioSwipers();
+  });
+  $(window).on('load resize', function() {
+    if (busSwiperInstance) busSwiperInstance.update();
+    if (videoSwiperInstance) videoSwiperInstance.update();
+  });
+
+  // 화살표 버튼 즉각 클릭 바인딩
+  $(document).on('click', '.asps-prev-bus', function(e) {
+    e.preventDefault(); e.stopPropagation();
+    if (busSwiperInstance) busSwiperInstance.slidePrev(600);
+  });
+  $(document).on('click', '.asps-next-bus', function(e) {
+    e.preventDefault(); e.stopPropagation();
+    if (busSwiperInstance) busSwiperInstance.slideNext(600);
+  });
+
+  $(document).on('click', '.asps-prev-video', function(e) {
+    e.preventDefault(); e.stopPropagation();
+    if (videoSwiperInstance) videoSwiperInstance.slidePrev(600);
+  });
+  $(document).on('click', '.asps-next-video', function(e) {
+    e.preventDefault(); e.stopPropagation();
+    if (videoSwiperInstance) videoSwiperInstance.slideNext(600);
+  });
 
   /* ==========================================================================
-     PORTFOLIO LIGHTBOX MODAL WITH FULL PREV / NEXT NAVIGATION
+     PORTFOLIO LIGHTBOX MODAL WITH FULL PREV / NEXT NAVIGATION & VIDEO PLAYBACK
   ========================================================================== */
   var currentModalList = [];
   var currentModalIndex = 0;
@@ -800,28 +1063,68 @@ $(function() {
     currentModalIndex = index;
 
     var item = currentModalList[currentModalIndex];
-    $('#modalImg').css({ opacity: 0, transform: 'scale(0.97)' });
-    setTimeout(function() {
+    var $img = $('#modalImg');
+    var $vEl = $('#modalVideo');
+
+    if (item.video) {
+      $img.hide();
+      if ($vEl.length) {
+        $vEl.attr('src', item.video).show();
+        if ($vEl[0]) {
+          $vEl[0].muted = true;
+          $vEl[0].currentTime = 0;
+          var p = $vEl[0].play();
+          if (p !== undefined) p.catch(function(){});
+        }
+      }
       $('#modalTitle').text(item.title);
-      $('#modalImg').attr('src', item.img);
       $('#modalCat').text(item.tag);
-      $('#modalLoc').text('광주 주요 상권 직영 시공 사례');
+      $('#modalLoc').text('가온엔 직영 영상 프로덕션');
+      $('#modalSubNotice').show();
       $('#modalCounter').text((currentModalIndex + 1) + ' / ' + currentModalList.length);
-      $('#modalImg').css({ opacity: 1, transform: 'scale(1)' });
-    }, 120);
+      $('#modalCtaBtn').text('이 영상 제작 견적 문의 ➔');
+    } else {
+      $('#modalSubNotice').hide();
+      if ($vEl.length && $vEl[0]) {
+        $vEl[0].pause();
+        $vEl.hide().attr('src', '');
+      }
+      $img.show().css({ opacity: 0, transform: 'scale(0.97)' });
+      setTimeout(function() {
+        $('#modalTitle').text(item.title);
+        $('#modalImg').attr('src', item.img);
+        $('#modalCat').text(item.tag);
+        $('#modalLoc').text('광주 주요 상권 직영 시공 사례');
+        $('#modalCounter').text((currentModalIndex + 1) + ' / ' + currentModalList.length);
+        $('#modalCtaBtn').text('이 광고 집행 견적 문의 ➔');
+        $('#modalImg').css({ opacity: 1, transform: 'scale(1)' });
+      }, 120);
+    }
+  }
+
+  function closeMainModal() {
+    var $vEl = $('#modalVideo');
+    if ($vEl.length && $vEl[0]) {
+      $vEl[0].pause();
+      $vEl.hide().attr('src', '');
+    }
+    $('#modalBackdrop').removeClass('open').fadeOut(200);
   }
 
   // Open Lightbox Modal on card click
   $(document).on('click', '.main-port-card, .asps-card, .mbp-card-item', function(e) {
+    if ($('.portfolio-body').length) return;
+
     e.preventDefault();
     var $container = $(this).closest('.swiper-wrapper, .mbp-grid-layout, .am-sub-port-strip');
-    var $cards = $container.length ? $container.find('.main-port-card, .asps-card, .mbp-card-item:visible') : $('.main-port-card, .asps-card');
+    var $cards = $container.length ? $container.find('.main-port-card:not(.swiper-slide-duplicate), .asps-card:not(.swiper-slide-duplicate), .mbp-card-item:visible') : $('.main-port-card:not(.swiper-slide-duplicate), .asps-card:not(.swiper-slide-duplicate)');
     
     currentModalList = [];
     $cards.each(function(i, el) {
       currentModalList.push({
         title: $(el).data('name') || $(el).find('.asps-item-title, h5, .mbp-card-title').text().trim(),
         img: $(el).data('img') || $(el).find('img').attr('src'),
+        video: $(el).data('video') || '',
         tag: $(el).data('tag') || $(el).data('cat') || '광고사례'
       });
     });
@@ -852,7 +1155,7 @@ $(function() {
     if ($('#modalBackdrop').hasClass('open')) {
       if (e.key === 'ArrowLeft') updateModalContent(currentModalIndex - 1);
       if (e.key === 'ArrowRight') updateModalContent(currentModalIndex + 1);
-      if (e.key === 'Escape') $('#modalBackdrop').removeClass('open').fadeOut(200);
+      if (e.key === 'Escape') closeMainModal();
     }
   });
 
@@ -860,7 +1163,7 @@ $(function() {
   $(document).on('click', '#modalClose, .portfolio-modal-backdrop', function(e) {
     if (e.target === this || $(this).attr('id') === 'modalClose' || $(this).closest('#modalClose').length) {
       e.preventDefault();
-      $('#modalBackdrop').removeClass('open').fadeOut(200);
+      closeMainModal();
     }
   });
 
@@ -894,10 +1197,6 @@ $(function() {
       $('#onlineCardModal').removeClass('open').fadeOut(200);
     }
   });
-
-  /* ==========================================================================
-     MOBILE HAMBURGER MENU & SCROLL CONTROL
-  ========================================================================== */
   $(document).on('click', '#gnbOpenBtn, .gnb_open', function(e) {
     e.preventDefault();
     $('#gnb').addClass('is-mobile-open on');
@@ -927,11 +1226,75 @@ $(function() {
   });
 
 
+  // 전화번호 자동 하이픈 (-) 포맷팅 및 숫자 전용 입력
+  $(document).on('input', 'input[name="in_tel"]', function() {
+    var val = $(this).val().replace(/[^0-9]/g, '');
+    var formatted = '';
+    if (val.length < 4) {
+      formatted = val;
+    } else if (val.length < 7) {
+      formatted = val.substr(0, 3) + '-' + val.substr(3);
+    } else if (val.length < 11) {
+      if (val.startsWith('02')) {
+        if (val.length < 6) {
+          formatted = val.substr(0, 2) + '-' + val.substr(2);
+        } else if (val.length < 10) {
+          formatted = val.substr(0, 2) + '-' + val.substr(2, 3) + '-' + val.substr(5);
+        } else {
+          formatted = val.substr(0, 2) + '-' + val.substr(2, 4) + '-' + val.substr(6, 4);
+        }
+      } else {
+        formatted = val.substr(0, 3) + '-' + val.substr(3, 3) + '-' + val.substr(6);
+      }
+    } else {
+      formatted = val.substr(0, 3) + '-' + val.substr(3, 4) + '-' + val.substr(7, 4);
+    }
+    $(this).val(formatted);
+  });
+
+  // 희망 광고 매체 칩(Chip) 선택 인터랙션
+  $(document).on('click', '.mad-chip', function(e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+    
+    var selected = [];
+    $('.mad-chip.active').each(function() {
+      selected.push($(this).data('val'));
+    });
+    
+    $('#bottom_in_ad_type').val(selected.join(', '));
+  });
+
   /* QUICK INLINE ESTIMATE FORM AJAX SUBMISSION (하단 빠른 견적 문의 접수) */
   $(document).on('submit', '#quickEstimateForm, .quickEstimateFormAjax', function(e) {
     e.preventDefault();
     var $form = $(this);
-    var $btn = $form.find('#btnQuickSubmit');
+
+    // 전화번호 유효성 검사 (최소 9자리 이상)
+    var $tel = $form.find('input[name="in_tel"]');
+    var rawTel = $tel.val().replace(/[^0-9]/g, '');
+    if ($tel.length && rawTel.length < 9) {
+      alert('올바른 연락처(전화번호)를 입력해 주세요.');
+      $tel.focus();
+      return false;
+    }
+
+    // 광고유형 선택 확인
+    var $adType = $form.find('input[name="in_ad_type"], select[name="in_ad_type"]');
+    if ($adType.length && !$adType.val()) {
+      alert('희망하시는 광고 매체를 1개 이상 선택해 주세요.');
+      return false;
+    }
+
+    // 개인정보 동의 체크 여부 확인
+    var $agree = $form.find('input[name="agree_privacy"], input[name="agree"], input[name="in_agree"], #agree, #agree_privacy');
+    if ($agree.length && !$agree.is(':checked')) {
+      alert('개인정보 수집 및 이용에 동의해 주세요.');
+      $agree.focus();
+      return false;
+    }
+
+    var $btn = $form.find('#btnQuickSubmit, .masstige-submit-btn, button[type="submit"]');
 
     $btn.prop('disabled', true).css('opacity', '0.7');
 
@@ -943,16 +1306,337 @@ $(function() {
       success: function(res) {
         $btn.prop('disabled', false).css('opacity', '1');
         if (res && res.status === 'success') {
-          alert('✨ 견적 상담 신청이 성공적으로 접수되었습니다! 담당 매니저가 신속하게 연락드리겠습니다.');
+          alert('문의가 정상적으로 접수되었습니다. 확인 후 담당자가 신속히 연락드리겠습니다.');
           $form[0].reset();
+          $('.mad-chip').removeClass('active');
+          $('.mad-chip:first').addClass('active');
+          $('#bottom_in_ad_type').val('버스 광고');
         } else {
           alert(res.message || '접수 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
         }
       },
       error: function() {
         $btn.prop('disabled', false).css('opacity', '1');
-        alert('상담 신청이 완료되었습니다! 가온엔 담당자가 확인 후 신속히 연락드리겠습니다.');
+        alert('문의가 정상적으로 접수되었습니다. 확인 후 담당자가 신속히 연락드리겠습니다.');
         $form[0].reset();
+        $('.mad-chip').removeClass('active');
+        $('.mad-chip:first').addClass('active');
+        $('#bottom_in_ad_type').val('버스 광고');
       }
     });
   });
+
+
+  /* ULTRA-MODERN POPUP OVERLAY & SWIPER MODAL SYSTEM */
+  function initMainModalPopup() {
+    var $overlay = $('#mainModalPopupOverlay');
+    if (!$overlay.length || !$overlay.is(':visible')) return;
+
+    function preventScroll(e) {
+      if ($('#mainModalPopupOverlay:visible').length) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    }
+
+    function lockModalScroll() {
+      $('html, body').addClass('modal-popup-active').css({
+        'overflow': 'hidden',
+        'height': '100vh',
+        'touch-action': 'none'
+      });
+      window.addEventListener('wheel', preventScroll, { passive: false });
+      window.addEventListener('touchmove', preventScroll, { passive: false });
+      document.addEventListener('touchmove', preventScroll, { passive: false });
+      if (window.lenis) { try { window.lenis.stop(); } catch(err){} }
+      if (typeof lenis !== 'undefined' && lenis) { try { lenis.stop(); } catch(err){} }
+    }
+
+    function unlockModalScroll() {
+      $('html, body').removeClass('modal-popup-active').css({
+        'overflow': '',
+        'height': '',
+        'touch-action': ''
+      });
+      window.removeEventListener('wheel', preventScroll);
+      window.removeEventListener('touchmove', preventScroll);
+      document.removeEventListener('touchmove', preventScroll);
+      if (window.lenis) { try { window.lenis.start(); } catch(err){} }
+      if (typeof lenis !== 'undefined' && lenis) { try { lenis.start(); } catch(err){} }
+    }
+
+    // 팝업 열림 시 스크롤 완전 차단
+    lockModalScroll();
+
+    $overlay.on('wheel touchmove', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    var totalSlides = $('.mainModalPopupSwiper .swiper-slide').length;
+    if (totalSlides > 1) {
+      var popupSwiper = new Swiper('.mainModalPopupSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        speed: 400,
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        },
+        navigation: {
+          nextEl: '.mmp-arrow-next',
+          prevEl: '.mmp-arrow-prev'
+        },
+        pagination: {
+          el: '.mmp-pagination',
+          clickable: true
+        },
+        on: {
+          slideChange: function() {
+            var currentIdx = (this.realIndex || 0) + 1;
+            $('.mmp-current').text(currentIdx);
+          }
+        }
+      });
+    }
+
+    // 팝업 닫기 이벤트 핸들러
+    function closeModalPopup() {
+      if ($('#chkModalPopupToday').is(':checked')) {
+        setCookie('todayPopupAll_done', 'done', 1);
+        $('.mainModalPopupSwiper .swiper-slide').each(function() {
+          var pId = $(this).data('popid');
+          if (pId) setCookie('todayCookie_' + pId, 'done', 1);
+        });
+      }
+      $overlay.fadeOut(220, function() {
+        unlockModalScroll();
+      });
+    }
+
+    $('#btnModalPopupClose, #btnModalPopupCloseX').on('click', function(e) {
+      e.preventDefault();
+      closeModalPopup();
+    });
+
+    $overlay.on('click', function(e) {
+      if ($(e.target).is('#mainModalPopupOverlay')) {
+        closeModalPopup();
+      }
+    });
+  }
+
+  $(document).ready(function() {
+    initMainModalPopup();
+  });
+
+  // 쿠키 설정 헬퍼 함수
+  window.setCookie = function(name, value, expiredays) {
+    var d = new Date();
+    d.setDate(d.getDate() + (expiredays || 1));
+    document.cookie = name + "=" + escape(value) + "; path=/; expires=" + d.toGMTString() + ";";
+  };
+  window.getCookie = function(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? unescape(match[2]) : null;
+  };
+
+
+  /* 05. EDITORIAL PROCESS HOVER & SCROLL ACTIVE */
+  $(document).on('mouseenter click', '.gpe-step-item', function() {
+    var $this = $(this);
+    $('.gpe-step-item').removeClass('on');
+    $this.addClass('on');
+
+    var step = $this.data('step');
+    var eng = $this.data('eng');
+    var title = $this.data('title');
+
+    $('#gpeActiveNum').text(step);
+    $('#gpeActiveEng').text(eng);
+    $('#gpeActiveTitle').text(title);
+  });
+
+  // Scroll active sync for Process section
+  $(window).on('scroll', function() {
+    var $proc = $('#process');
+    if (!$proc.length) return;
+    var procTop = $proc.offset().top;
+    var procHeight = $proc.outerHeight();
+    var scrollPos = $(window).scrollTop() + $(window).height() * 0.45;
+
+    if (scrollPos >= procTop && scrollPos <= procTop + procHeight) {
+      $('.gpe-step-item').each(function() {
+        var itemTop = $(this).offset().top;
+        var itemBottom = itemTop + $(this).outerHeight();
+        if (scrollPos >= itemTop - 80 && scrollPos <= itemBottom + 40) {
+          if (!$(this).hasClass('on')) {
+            $(this).trigger('mouseenter');
+          }
+        }
+      });
+    }
+  });
+
+  /* 06. DIGITAL FLOW (HOW WE WORK) EDITORIAL OBSERVER */
+  function initDflow() {
+    var grid = document.getElementById('dflowGrid');
+    if (!grid) return;
+    
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            grid.classList.add('is-inview');
+            observer.unobserve(grid);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      observer.observe(grid);
+    } else {
+      grid.classList.add('is-inview');
+    }
+  }
+  initDflow();
+
+  /* 07. CLIENTS & PARTNERS 2-ROW SILKY CROSSFADE CONTROLLER */
+  function initPartnerDiagonalWave() {
+    var stage = document.getElementById('gpDiagonalStage');
+    if (!stage) return;
+
+    var slots = Array.prototype.slice.call(stage.querySelectorAll('.gp-slot'));
+    if (!slots.length) return;
+
+    // Respect user's motion preferences
+    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    // Full Partner Data Pool (21 distinct real partners)
+    var PARTNERS_POOL = [
+      { name: 'KBC', isShort: true },
+      { name: '광주MBC', isShort: false },
+      { name: '광주광역시청', isShort: false },
+      { name: '한국폴리텍대학', isShort: false },
+      { name: '롯데하이마트', isShort: false },
+      { name: '국립목포대학교', isShort: false },
+      { name: '광주안과', isShort: false },
+      { name: '동신대학교광주한방병원', isShort: false },
+      { name: '새나래병원', isShort: false },
+      { name: '스마트인재개발원', isShort: false },
+      { name: '봉선한방병원', isShort: false },
+      { name: '광산센트럴병원', isShort: false },
+      { name: '아미아여성의원', isShort: false },
+      { name: '북구청세무과', isShort: false },
+      { name: '스마트미디어', isShort: false },
+      { name: '빛고을선병원', isShort: false },
+      { name: '조아진병원', isShort: false },
+      { name: '첨단선병원', isShort: false },
+      { name: '최고안과의원', isShort: false },
+      { name: '호호이비인후과', isShort: false },
+      { name: '빛고을노인건강타운', isShort: false }
+    ];
+
+    var poolPointer = 10;
+    var timer = null;
+    var INTERVAL = 4500; // Hold static for ~4.5s
+    var DURATION = 820;  // 820ms silky crossfade duration
+    var isUpwardCycle = true; // Alternates direction (true = up, false = down)
+
+    // Diagonal delay: col * 80ms + row * 50ms (subtle, unified wave feeling)
+    function getSlotDelay(slot) {
+      var col = parseInt(slot.getAttribute('data-col'), 10) || 0;
+      var row = parseInt(slot.getAttribute('data-row'), 10) || 0;
+      return (col * 80) + (row * 50);
+    }
+
+    function transitionSlot(slot, nextPartner, delay, moveUp) {
+      setTimeout(function() {
+        var currentText = slot.querySelector('.gp-partner-text.is-active');
+        
+        // Create new entering text element
+        var nextText = document.createElement('span');
+        nextText.className = 'gp-partner-text' + (nextPartner.isShort ? ' is-short' : '');
+        nextText.textContent = nextPartner.name;
+        
+        // Initial state of entering element (offset in opposite direction)
+        if (moveUp) {
+          nextText.classList.add('pos-below');
+        } else {
+          nextText.classList.add('pos-above');
+        }
+
+        slot.appendChild(nextText);
+
+        // Force reflow
+        void nextText.offsetWidth;
+
+        // Animate simultaneously (True silky crossfade)
+        if (currentText) {
+          currentText.classList.remove('is-active');
+          if (moveUp) {
+            currentText.classList.add('pos-above');
+          } else {
+            currentText.classList.add('pos-below');
+          }
+        }
+
+        nextText.classList.remove('pos-below', 'pos-above');
+        nextText.classList.add('is-active');
+
+        // Clean up DOM after transition completes
+        setTimeout(function() {
+          if (currentText && currentText.parentNode === slot) {
+            slot.removeChild(currentText);
+          }
+        }, DURATION + 100);
+
+      }, delay);
+    }
+
+    function triggerDiagonalWave() {
+      // Find currently visible slots
+      var visibleSlots = slots.filter(function(s) {
+        return s.offsetParent !== null;
+      });
+
+      if (!visibleSlots.length) return;
+
+      var currentDirection = isUpwardCycle;
+      isUpwardCycle = !isUpwardCycle; // Alternate direction for next wave
+
+      visibleSlots.forEach(function(slot) {
+        var nextPartner = PARTNERS_POOL[poolPointer % PARTNERS_POOL.length];
+        poolPointer++;
+        var delay = getSlotDelay(slot);
+        transitionSlot(slot, nextPartner, delay, currentDirection);
+      });
+    }
+
+    function startCycle() {
+      stopCycle();
+      timer = setInterval(triggerDiagonalWave, INTERVAL);
+    }
+
+    function stopCycle() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    startCycle();
+
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        stopCycle();
+      } else {
+        startCycle();
+      }
+    });
+  }
+  initPartnerDiagonalWave();
+
+});

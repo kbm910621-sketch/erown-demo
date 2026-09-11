@@ -12,14 +12,35 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
 
   <div id="container">
 
-    <section class="content contact-page">
-      <div class="contact-align-container">
+    <!-- 1. SUBPAGE TOP HEADER (포트폴리오 페이지와 100% 동일 규격 일치화) -->
+    <section class="mbp-top-sec">
+      <div class="am-container-wide">
+        
+        <!-- BREADCRUMB -->
+        <nav class="mbp-breadcrumb" aria-label="breadcrumb">
+          <a href="/" class="mbp-bc-home">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </a>
+          <span class="mbp-bc-sep">›</span>
+          <span class="mbp-bc-item">상담신청</span>
+          <span class="mbp-bc-sep">›</span>
+          <span class="mbp-bc-current">광고 상담신청</span>
+        </nav>
 
-        <!-- 페이지 헤더 (폼 좌측 라인과 칼정렬) -->
-        <div class="port-page-head">
-          <h1 class="port-page-title wow fadeInUp" data-wow-duration="0.6s">광고 <span>상담신청</span></h1>
-          <p class="port-page-desc wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.1s"><strong>광고</strong>전문기업, <strong>가온엔</strong>과 함께해보세요!</p>
+        <!-- TITLE & SUBTITLE -->
+        <div class="mbp-title-row wow fadeInUp" data-wow-duration="0.6s">
+          <div class="mbp-title-wrap">
+            <h1 class="mbp-main-title">광고 <span style="color:#1855b7;">상담신청</span></h1>
+            <p class="mbp-sub-desc">광고 전문기업 가온엔과 함께 성공적인 온·오프라인 마케팅을 시작해 보세요.</p>
+          </div>
         </div>
+
+      </div>
+    </section>
+
+    <!-- 2. CONSULT FORM SECTION -->
+    <section class="content contact-page" style="padding-top: 40px !important;">
+      <div class="contact-align-container">
 
         <!-- CONSULT SECTION: 폼 -->
         <div class="contact-consult-wrap">
@@ -103,7 +124,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
                     수집 목적: 광고 상담 및 견적 안내 &nbsp;/&nbsp; 보유 기간: 상담 완료 후 1년
                   </div>
                   <label class="cf-agree-check">
-                    <input type="checkbox" id="agree" name="agree" value="Y" checked required>
+                    <input type="checkbox" id="agree" name="agree" value="Y" required>
                     <span>개인정보 수집 및 이용에 동의합니다.</span>
                   </label>
                 </div>

@@ -46,24 +46,58 @@
 
           <div class="masstige-input-grid">
             <div class="masstige-field-pill">
+              <span class="mfp-label">연락처</span>
+              <input type="text" name="in_tel" id="bottom_in_tel" class="mfp-input" placeholder="010-0000-0000" maxlength="13" required>
+            </div>
+            <div class="masstige-field-pill">
               <span class="mfp-label">이메일</span>
               <input type="email" name="in_email" class="mfp-input" placeholder="이메일 주소를 입력해주세요." required>
             </div>
-            <div class="masstige-field-pill">
-              <span class="mfp-label">연락처</span>
-              <input type="text" name="in_tel" class="mfp-input" placeholder="연락처를 입력해주세요." required>
+          </div>
+
+          <div class="masstige-adtype-box">
+            <div class="mad-head">
+              <span class="mfp-label-top">희망 광고 매체</span>
+              <span class="mad-hint">* 관심 매체를 탭해 주세요 (복수 선택 가능)</span>
             </div>
+            <div class="masstige-adtype-chips">
+              <button type="button" class="mad-chip active" data-val="버스 광고">
+                <span class="mad-chip-name">버스 광고</span>
+              </button>
+              <button type="button" class="mad-chip" data-val="택시 광고">
+                <span class="mad-chip-name">택시 광고</span>
+              </button>
+              <button type="button" class="mad-chip" data-val="DID 광고">
+                <span class="mad-chip-name">DID 광고</span>
+              </button>
+              <button type="button" class="mad-chip" data-val="온라인 마케팅">
+                <span class="mad-chip-name">온라인 마케팅</span>
+              </button>
+              <button type="button" class="mad-chip" data-val="인쇄물·현수막">
+                <span class="mad-chip-name">인쇄물 · 현수막</span>
+              </button>
+              <button type="button" class="mad-chip" data-val="홈페이지 제작">
+                <span class="mad-chip-name">홈페이지 제작</span>
+              </button>
+              <button type="button" class="mad-chip" data-val="마트 광고">
+                <span class="mad-chip-name">마트 광고</span>
+              </button>
+              <button type="button" class="mad-chip" data-val="기타 문의">
+                <span class="mad-chip-name">기타 종합 상담</span>
+              </button>
+            </div>
+            <input type="hidden" name="in_ad_type" id="bottom_in_ad_type" value="버스 광고">
           </div>
 
           <div class="masstige-textarea-pill">
             <span class="mfp-label-top">문의내용</span>
-            <textarea name="in_memo" class="mfp-textarea" placeholder="희망 광고 매체(버스, 택시, 온라인, 영상 등) 및 문의 내용을 입력해주세요." rows="4" required></textarea>
+            <textarea name="in_memo" class="mfp-textarea" placeholder="문의 내용을 자유롭게 입력해주세요." rows="4" required></textarea>
           </div>
 
           <div class="masstige-action-row">
             <div class="masstige-privacy-group">
               <label class="masstige-chk-label">
-                <input type="checkbox" name="agree_privacy" class="masstige-native-chk" checked required>
+                <input type="checkbox" name="agree_privacy" id="agree_privacy" class="masstige-native-chk" required>
                 <span class="masstige-custom-dot"></span>
                 <span class="masstige-privacy-text">개인정보수집 및 이용에 동의합니다.</span>
               </label>
