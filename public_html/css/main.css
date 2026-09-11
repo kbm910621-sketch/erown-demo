@@ -57,7 +57,7 @@
 
 
 /* SECTIONS COMMON */
-.am-section { padding:130px 0; border-bottom:1px solid #f1f5f9; }
+.am-section { padding:160px 0; border-bottom:1px solid #f1f5f9; }
 .am-bg-slate { background:#f8fafc; border-bottom-color:#e2e8f0; }
 .am-bg-dark { background:#0b1329; border-bottom-color:#1e293b; color:#ffffff; }
 
@@ -111,7 +111,7 @@
 .apc-num { font-size:18px; font-weight:900; color:#1855b7; font-family:"Pretendard", "Apple SD Gothic Neo", sans-serif; margin-bottom:0; }
 
 /* VIDEO SECTION AMBIENT BACKGROUND GLOW & LENS WATERMARK */
-.am-video-ambient-sec { position:relative; overflow:hidden; background:#060d1b; border-top:1px solid rgba(255,255,255,0.08); padding:130px 0; }
+.am-video-ambient-sec { position:relative; overflow:hidden; background:#060d1b; border-top:1px solid rgba(255,255,255,0.08); padding:160px 0; }
 .avs-ambient-bg { position:absolute; inset:0; pointer-events:none; z-index:1; overflow:hidden; background:radial-gradient(circle at 50% 15%, rgba(24,85,183,0.18) 0%, transparent 65%); }
 .avs-glow { position:absolute; width:600px; height:600px; border-radius:50%; filter:blur(140px); opacity:0.18; }
 .avs-glow.glow-left { top:-100px; left:-100px; background:#1855b7; }
@@ -5551,7 +5551,7 @@ body.menu-open {
 /* ==========================================================================
    08 GAON-N ALL-IN-ONE INLINE FOOTER (클래스당 가로 1줄 단일화 적용)
 ========================================================================== */
-.am-master-conversion-section { width: 100% !important; padding: 110px 0 130px !important; background: #ffffff !important; }
+.am-master-conversion-section { width: 100% !important; padding: 140px 0 160px !important; background: #ffffff !important; }
 .am-master-conversion-section .am-container { width: 100% !important; max-width: 1650px !important; margin: 0 auto !important; padding: 0 40px !important; box-sizing: border-box !important; }
 .masstige-agency-box { width: 100% !important; box-sizing: border-box !important; background: linear-gradient(145deg, #07152c 0%, #0d2244 50%, #061327 100%); border: 1.5px solid rgba(255, 255, 255, 0.12); border-radius: 28px; padding: 72px 64px 64px; display: grid; grid-template-columns: 1fr 1.35fr; gap: 60px; align-items: stretch; color: #ffffff; box-shadow: 0 24px 70px rgba(7, 21, 44, 0.2); position: relative; overflow: hidden; }
 .masstige-left-col { display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
@@ -6346,7 +6346,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 .gts-word.outline { color: transparent; -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.28); }
 @keyframes gtsMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-.ga-about-editorial { padding: 150px 0 140px; background: #ffffff; color: #0f172a; position: relative; z-index: 5; }
+.ga-about-editorial { padding: 160px 0; background: #ffffff; color: #0f172a; position: relative; z-index: 5; }
 .gae-container { max-width: 1520px; margin: 0 auto; padding: 0 48px; box-sizing: border-box; }
 .gae-grid { display: grid; grid-template-columns: 44% 56%; gap: 80px; align-items: flex-start; }
 .gae-kicker { font-size: 13px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: #1855b7; display: block; margin-bottom: 20px; }
@@ -6541,7 +6541,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 .gts-word.outline { color: transparent; -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.28); }
 @keyframes gtsMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-.ga-about-editorial { padding: 150px 0 140px; background: #ffffff; color: #0f172a; position: relative; z-index: 5; }
+.ga-about-editorial { padding: 160px 0; background: #ffffff; color: #0f172a; position: relative; z-index: 5; }
 .gae-container { max-width: 1520px; margin: 0 auto; padding: 0 48px; box-sizing: border-box; }
 .gae-grid { display: grid; grid-template-columns: 44% 56%; gap: 80px; align-items: flex-start; }
 .gae-kicker { font-size: 13px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: #1855b7; display: block; margin-bottom: 20px; }
@@ -6642,7 +6642,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 /* ========================================================================== */
 /* 04-B. CLIENTS & PARTNERS CENTERED SHOWCASE (.ga-partners-sec)              */
 /* ========================================================================== */
-.ga-partners-sec { padding: 140px 0 70px; background: #ffffff; color: #0f172a; position: relative; z-index: 5; border-top: none; border-bottom: none; }
+.ga-partners-sec { padding: 160px 0 80px; background: #ffffff; color: #0f172a; position: relative; z-index: 5; border-top: none; border-bottom: none; }
 
 .gp-container {
   max-width: 1720px;
@@ -6882,12 +6882,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 /* ========================================================================== */
 /* 02. GAON-N BESPOKE OOH 3-TIER EDITORIAL SYSTEM (#bus)                     */
 /* ========================================================================== */
-.go-ooh-editorial-sec {
-  padding: 130px 0 140px;
-  background: #fafbfc;
-  position: relative;
-  border-top: 1px solid #e9edf2;
-}
+.go-ooh-editorial-sec { padding: 160px 0; background: #fafbfc; position: relative; border-top: 1px solid #e9edf2; }
 
 .go-container {
   max-width: 1520px;
@@ -7385,7 +7380,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 /* ========================================================================== */
 /* 03. GAON-N BESPOKE EDITORIAL WORKFLOW PIPELINE (#process)                  */
 /* ========================================================================== */
-.ga-process-editorial-sec { padding: 70px 0 140px; background: #ffffff; position: relative; border-top: none; }
+.ga-process-editorial-sec { padding: 80px 0 160px; background: #ffffff; position: relative; border-top: none; }
 
 .gpe-header-row {
   margin-bottom: 60px;
@@ -7818,11 +7813,11 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   #online,
   #video,
   #archive.am-section {
-    padding: 84px 0 !important;
+    padding: 100px 0 !important;
   }
 
   .am-master-conversion-section {
-    padding: 72px 0 84px !important;
+    padding: 80px 0 100px !important;
   }
 
   /* 3. UNIFIED HEADERS & TYPOGRAPHY */
@@ -8029,7 +8024,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   @keyframes mobFadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
 
   /* 5-B. SECTION CLIENTS & PARTNERS (CENTERED SHOWCASE + MOTION LINE) */
-  .ga-partners-sec { padding: 84px 0 42px !important; border: none !important; }
+  .ga-partners-sec { padding: 100px 0 50px !important; border: none !important; }
   .gp-header-row {
     text-align: center !important;
     margin: 0 auto !important;
@@ -8079,7 +8074,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   }
 
   /* 5-C. PROCESS SECTION TRANSITION */
-  .ga-process-editorial-sec { padding: 42px 0 84px !important; border-top: none !important; }
+  .ga-process-editorial-sec { padding: 50px 0 100px !important; border-top: none !important; }
 
   /* 6. SECTION 01 OOH MEDIA */
   .go-stage-grid {
