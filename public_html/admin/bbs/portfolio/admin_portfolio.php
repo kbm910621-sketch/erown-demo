@@ -256,6 +256,27 @@ if ($result) {
 
       <?php if ($mode === 'write' || $mode === 'modify'): ?>
       <!-- ════════════════ 등록/수정 폼 (board_A0_W) ════════════════ -->
+      <style>
+      .board_A0_W table th { width: 140px; }
+      .port-form-textarea {
+          width: 100% !important;
+          max-width: 850px !important;
+          min-height: 150px !important;
+          box-sizing: border-box !important;
+          padding: 12px 14px !important;
+          font-size: 13.5px !important;
+          line-height: 1.7 !important;
+          border: 1px solid #d5d5d5 !important;
+          border-radius: 4px !important;
+          background: #fff !important;
+          color: #111 !important;
+          resize: vertical !important;
+          font-family: inherit !important;
+      }
+      .port-form-textarea:focus { border-color: #111 !important; outline: none; }
+      .w_max850 { width: 100% !important; max-width: 850px !important; box-sizing: border-box !important; }
+      </style>
+
       <form name="frm" method="post" enctype="multipart/form-data">
         <?php if ($edit): ?>
         <input type="hidden" name="id" value="<?php echo $edit['id']; ?>">
@@ -286,17 +307,17 @@ if ($result) {
 
               <tr>
                 <th scope="row">광고명 <span class="req">*</span></th>
-                <td><input type="text" name="title" id="title" class="input_type01 w_100p" value="<?php echo htmlspecialchars(isset($edit['title']) ? $edit['title'] : ''); ?>" placeholder="예) ○○병원 버스 전면 랩핑"></td>
+                <td><input type="text" name="title" id="title" class="input_type01 w_max850" value="<?php echo htmlspecialchars(isset($edit['title']) ? $edit['title'] : ''); ?>" placeholder="예) ○○병원 버스 전면 랩핑"></td>
               </tr>
 
               <tr>
                 <th scope="row">광고주</th>
-                <td><input type="text" name="client" id="client" class="input_type01 w_300" value="<?php echo htmlspecialchars(isset($edit['client']) ? $edit['client'] : ''); ?>" placeholder="예) ○○병원"></td>
+                <td><input type="text" name="client" id="client" class="input_type01 w_max850" value="<?php echo htmlspecialchars(isset($edit['client']) ? $edit['client'] : ''); ?>" placeholder="예) ○○병원"></td>
               </tr>
 
               <tr>
                 <th scope="row">지역</th>
-                <td><input type="text" name="location" id="location" class="input_type01 w_300" value="<?php echo htmlspecialchars(isset($edit['location']) ? $edit['location'] : ''); ?>" placeholder="예) 광주광역시 북구"></td>
+                <td><input type="text" name="location" id="location" class="input_type01 w_max850" value="<?php echo htmlspecialchars(isset($edit['location']) ? $edit['location'] : ''); ?>" placeholder="예) 광주광역시 북구"></td>
               </tr>
 
               <tr>
@@ -310,12 +331,12 @@ if ($result) {
 
               <tr>
                 <th scope="row">집행 규모</th>
-                <td><input type="text" name="scale" id="scale" class="input_type01 w_300" value="<?php echo htmlspecialchars(isset($edit['scale']) ? $edit['scale'] : ''); ?>" placeholder="예) 버스 10대 / 3개월"></td>
+                <td><input type="text" name="scale" id="scale" class="input_type01 w_max850" value="<?php echo htmlspecialchars(isset($edit['scale']) ? $edit['scale'] : ''); ?>" placeholder="예) 버스 10대 / 3개월"></td>
               </tr>
 
               <tr>
                 <th scope="row">상세 설명</th>
-                <td><textarea name="description" id="description" class="textarea_type01" style="height:120px;"><?php echo htmlspecialchars(isset($edit['description']) ? $edit['description'] : ''); ?></textarea></td>
+                <td><textarea name="description" id="description" class="port-form-textarea" placeholder="포트폴리오에 대한 상세 설명 및 광고 기획 의도를 입력하세요."><?php echo htmlspecialchars(isset($edit['description']) ? $edit['description'] : ''); ?></textarea></td>
               </tr>
 
               <tr>
@@ -323,7 +344,7 @@ if ($result) {
                 <td>
                   <?php if (!empty($edit['thumb'])): ?>
                   <div style="margin-bottom:8px">
-                    <img src="<?php echo normalize_port_img($edit['thumb']); ?>" style="max-height:80px;border:1px solid #e2e8f0;border-radius:4px;vertical-align:middle;">
+                    <img src="<?php echo normalize_port_img($edit['thumb']); ?>" style="max-height:90px;border:1px solid #e2e8f0;border-radius:4px;vertical-align:middle;cursor:pointer;" onclick="openImgModal('<?php echo normalize_port_img($edit['thumb']); ?>', '<?php echo htmlspecialchars(addslashes($edit['title'])); ?>', '');">
                   </div>
                   <?php endif; ?>
                   <ul class="file_Box">
@@ -342,14 +363,14 @@ if ($result) {
                   <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px">
                     <?php foreach ($imgs_arr as $img_path): ?>
                     <div style="position:relative;display:inline-block">
-                      <img src="<?php echo normalize_port_img($img_path); ?>" style="width:70px;height:70px;object-fit:cover;border:1px solid #e2e8f0;border-radius:4px;">
-                      <label style="position:absolute;top:2px;right:2px;background:rgba(220,38,38,0.9);color:#fff;border-radius:3px;padding:1px 4px;font-size:11px;cursor:pointer">
+                      <img src="<?php echo normalize_port_img($img_path); ?>" style="width:75px;height:75px;object-fit:cover;border:1px solid #e2e8f0;border-radius:4px;cursor:pointer;" onclick="openImgModal('<?php echo normalize_port_img($img_path); ?>', '추가 사진 미리보기', '');">
+                      <label style="position:absolute;top:2px;right:2px;background:rgba(220,38,38,0.9);color:#fff;border-radius:3px;padding:1px 5px;font-size:11px;font-weight:bold;cursor:pointer" title="삭제 체크">
                         <input type="checkbox" name="del_images[]" value="<?php echo htmlspecialchars($img_path); ?>" style="display:none"> ✕
                       </label>
                     </div>
                     <?php endforeach; ?>
                   </div>
-                  <p class="exp" style="color:#64748b;font-size:12px;margin-bottom:8px">💡 ✕ 버튼을 누르면 체크되며 저장 시 해당 사진이 삭제됩니다.</p>
+                  <p class="exp" style="color:#64748b;font-size:12.5px;margin-bottom:8px">💡 ✕ 버튼을 누르면 체크되며 저장 시 해당 사진이 삭제됩니다. (사진 클릭 시 확대)</p>
                   <?php endif; ?>
                   <ul class="file_Box">
                     <li><input type="file" class="file_type01" name="images[]" accept="image/*" multiple title="추가 이미지 선택"></li>
@@ -443,10 +464,10 @@ if ($result) {
       <!-- ════════════════ 목록 (board_A0_L) ════════════════ -->
 
       <style>
-      /* Table Customization & Ellipsis */
+      /* Table Layout & Single Line Ellipsis */
       .port-table-wrap table { table-layout: fixed !important; width: 100% !important; border-top: 1px solid #111; }
-      .port-table-wrap th { text-align: center; border-bottom: 1px solid #d5d5d5; padding: 14px 6px; font-weight: 500; background: #fafafa; font-size: 13.5px; }
-      .port-table-wrap td { text-align: center; border-bottom: 1px solid #e5e5e5; padding: 10px 6px; font-size: 13px; vertical-align: middle; }
+      .port-table-wrap th { text-align: center; border-bottom: 1px solid #d5d5d5; padding: 14px 6px; font-weight: 600; background: #fafafa; font-size: 13.5px; }
+      .port-table-wrap td { text-align: center; border-bottom: 1px solid #e5e5e5; padding: 11px 6px; font-size: 13px; vertical-align: middle; }
       .port-table-wrap td.subject { text-align: left; }
       
       /* Pure 1-Line Ellipsis Text */
@@ -465,61 +486,110 @@ if ($result) {
           overflow: hidden !important;
           text-overflow: ellipsis !important;
           color: #111;
-          font-weight: bold;
+          font-weight: 700;
       }
       .port-table-wrap td.subject a:hover {
-          color: #ffba00;
+          color: #2563eb;
           text-decoration: underline;
       }
       .port-thumb-img {
           width: 72px;
           height: 48px;
           object-fit: cover;
-          border: 1px solid #e2e8f0;
+          border: 1px solid #cbd5e1;
           border-radius: 4px;
           vertical-align: middle;
           display: block;
           margin: 0 auto;
-          transition: transform 0.2s;
+          cursor: zoom-in;
+          transition: transform 0.2s, box-shadow 0.2s;
       }
-      .port-thumb-img:hover { transform: scale(1.06); }
+      .port-thumb-img:hover {
+          transform: scale(1.08);
+          box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      }
 
-      /* Top Header & View Mode Switcher */
+      /* Bold Action Buttons */
+      .port-btn-edit {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px 12px;
+          background: #f1f5f9;
+          color: #1e293b !important;
+          border: 1.5px solid #cbd5e1;
+          border-radius: 4px;
+          font-size: 12.5px;
+          font-weight: 800 !important;
+          text-decoration: none !important;
+          transition: all 0.15s ease;
+          letter-spacing: 0.3px;
+      }
+      .port-btn-edit:hover {
+          background: #0f172a;
+          color: #ffffff !important;
+          border-color: #0f172a;
+      }
+      .port-btn-del {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px 12px;
+          background: #fee2e2;
+          color: #dc2626 !important;
+          border: 1.5px solid #fca5a5;
+          border-radius: 4px;
+          font-size: 12.5px;
+          font-weight: 800 !important;
+          text-decoration: none !important;
+          transition: all 0.15s ease;
+          margin-left: 4px;
+          letter-spacing: 0.3px;
+      }
+      .port-btn-del:hover {
+          background: #dc2626;
+          color: #ffffff !important;
+          border-color: #dc2626;
+      }
+
+      /* Top Header & Pictogram Switcher */
       .port-list-header {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          margin-bottom: 12px;
+          margin: 22px 0 16px 0;
+          padding-bottom: 6px;
       }
       .port-list-header .count { margin-bottom: 0; }
       .view-switch-box {
           display: inline-flex;
           background: #f1f5f9;
-          padding: 3px;
-          border-radius: 6px;
-          border: 1px solid #e2e8f0;
-          gap: 2px;
+          padding: 4px;
+          border-radius: 8px;
+          border: 1px solid #cbd5e1;
+          gap: 4px;
       }
       .view-switch-btn {
           display: inline-flex;
           align-items: center;
-          gap: 4px;
-          padding: 6px 12px;
-          font-size: 12px;
-          font-weight: 600;
+          gap: 6px;
+          padding: 6px 14px;
+          font-size: 12.5px;
+          font-weight: 700;
           color: #64748b;
           text-decoration: none !important;
-          border-radius: 4px;
+          border-radius: 5px;
           transition: all 0.15s;
       }
+      .view-switch-btn svg { width: 14px; height: 14px; }
       .view-switch-btn:hover { color: #0f172a; background: rgba(255,255,255,0.7); }
-      .view-switch-btn.active { color: #0f172a; background: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); font-weight: 700; }
+      .view-switch-btn.active { color: #0f172a; background: #ffffff; box-shadow: 0 1px 4px rgba(0,0,0,0.12); font-weight: 800; }
 
       /* Gallery Card View */
       .port-card-grid {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 18px;
+          gap: 20px;
           margin-top: 15px;
           margin-bottom: 30px;
       }
@@ -547,6 +617,8 @@ if ($result) {
           aspect-ratio: 16/10;
           overflow: hidden;
           background: #0f172a;
+          cursor: zoom-in;
+          display: block;
       }
       .port-card-thumb-wrap img {
           width: 100%;
@@ -563,11 +635,26 @@ if ($result) {
           background: rgba(15, 23, 42, 0.85);
           color: #fff;
           font-size: 11px;
-          font-weight: 600;
+          font-weight: 700;
           padding: 3px 8px;
           border-radius: 4px;
           backdrop-filter: blur(4px);
       }
+      .port-zoom-badge {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          background: rgba(0,0,0,0.7);
+          color: #fff;
+          font-size: 11px;
+          font-weight: 600;
+          padding: 3px 8px;
+          border-radius: 4px;
+          opacity: 0;
+          transition: opacity 0.2s;
+      }
+      .port-card:hover .port-zoom-badge { opacity: 1; }
+
       .port-card-body {
           padding: 14px 16px;
           flex: 1;
@@ -649,12 +736,16 @@ if ($result) {
       <div class="board_A0_L port-table-wrap">
           <div class="port-list-header">
               <p class="count">총 <b><?=$totals?></b>건의 내용이 있습니다</p>
+              
+              <!-- 픽토그램 뷰 스위처 (위/아래 여유 공간) -->
               <div class="view-switch-box">
-                  <a href="admin_portfolio.php?view=table&cat=<?=urlencode($filter_cat)?>&frSearch=<?=urlencode($frSearch)?>" class="view-switch-btn <?=$view_mode==='table'?'active':''?>">
-                      <span>📋 목록형</span>
+                  <a href="admin_portfolio.php?view=table&cat=<?=urlencode($filter_cat)?>&frSearch=<?=urlencode($frSearch)?>" class="view-switch-btn <?=$view_mode==='table'?'active':''?>" title="목록형으로 보기">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                      <span>목록형</span>
                   </a>
-                  <a href="admin_portfolio.php?view=gallery&cat=<?=urlencode($filter_cat)?>&frSearch=<?=urlencode($frSearch)?>" class="view-switch-btn <?=$view_mode==='gallery'?'active':''?>">
-                      <span>🖼️ 카드형</span>
+                  <a href="admin_portfolio.php?view=gallery&cat=<?=urlencode($filter_cat)?>&frSearch=<?=urlencode($frSearch)?>" class="view-switch-btn <?=$view_mode==='gallery'?'active':''?>" title="카드형으로 보기">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                      <span>카드형</span>
                   </a>
               </div>
           </div>
@@ -673,7 +764,7 @@ if ($result) {
                   <col width="75" />
                   <col width="75" />
                   <col width="65" />
-                  <col width="115" />
+                  <col width="125" />
               </colgroup>
               <thead>
                   <tr>
@@ -696,16 +787,17 @@ if ($result) {
                       foreach ($list as $row){
                           $cat_title = isset($categories[$row['category']]) ? $categories[$row['category']] : $row['category'];
                           $thumb_src = !empty($row['thumb']) ? normalize_port_img($row['thumb']) : '/images/bs_ad/baro.jpg';
-                          $status_txt = ($row['status'] === 'active') ? '<span style="color:#16a34a; font-weight:600;">공개</span>' : '<span style="color:#94a3b8;">비공개</span>';
-                          $featured_txt = (!empty($row['is_featured'])) ? '<span style="color:#2563eb; font-weight:700;">노출</span>' : '-';
+                          $status_txt = ($row['status'] === 'active') ? '<span style="color:#16a34a; font-weight:700;">공개</span>' : '<span style="color:#94a3b8;">비공개</span>';
+                          $featured_txt = (!empty($row['is_featured'])) ? '<span style="color:#2563eb; font-weight:800;">노출</span>' : '-';
                           $client_txt = $row['client'] ? htmlspecialchars($row['client']) : '-';
                           $loc_txt = $row['location'] ? htmlspecialchars($row['location']) : '-';
                           $title_txt = htmlspecialchars($row['title']);
+                          $title_safe = htmlspecialchars(addslashes($row['title']));
                   ?>
                   <tr>
                       <td class="resp"><?=$cnt?></td>
                       <td>
-                          <a href="admin_portfolio.php?mode=modify&id=<?=$row['id']?>">
+                          <a href="javascript:void(0);" onclick="openImgModal('<?=$thumb_src?>', '<?=$title_safe?>', '<?=$cat_title?>');" title="사진 크게보기 (클릭)">
                               <img src="<?=$thumb_src?>" alt="" class="port-thumb-img">
                           </a>
                       </td>
@@ -719,8 +811,8 @@ if ($result) {
                       <td><?=$featured_txt?></td>
                       <td><?=$row['sort_order']?></td>
                       <td>
-                          <a href="admin_portfolio.php?mode=modify&id=<?=$row['id']?>" class="btn_4 size_t rad_3">수정</a>
-                          <a href="javascript:delPort(<?=$row['id']?>);" class="btn_3 size_t rad_3">삭제</a>
+                          <a href="admin_portfolio.php?mode=modify&id=<?=$row['id']?>" class="port-btn-edit">수정</a>
+                          <a href="javascript:delPort(<?=$row['id']?>);" class="port-btn-del">삭제</a>
                       </td>
                   </tr>
                   <?php $cnt++; }} ?>
@@ -740,15 +832,17 @@ if ($result) {
                   foreach ($list as $row){
                       $cat_title = isset($categories[$row['category']]) ? $categories[$row['category']] : $row['category'];
                       $thumb_src = !empty($row['thumb']) ? normalize_port_img($row['thumb']) : '/images/bs_ad/baro.jpg';
-                      $status_txt = ($row['status'] === 'active') ? '<span style="color:#16a34a; font-weight:600; font-size:12px;">● 공개</span>' : '<span style="color:#94a3b8; font-size:12px;">● 비공개</span>';
-                      $featured_txt = (!empty($row['is_featured'])) ? '<span style="background:#2563eb; color:#fff; font-size:10px; font-weight:700; padding:2px 6px; border-radius:3px; margin-left:4px;">메인</span>' : '';
+                      $status_txt = ($row['status'] === 'active') ? '<span style="color:#16a34a; font-weight:700; font-size:12px;">● 공개</span>' : '<span style="color:#94a3b8; font-size:12px;">● 비공개</span>';
+                      $featured_txt = (!empty($row['is_featured'])) ? '<span style="background:#2563eb; color:#fff; font-size:10px; font-weight:800; padding:2px 6px; border-radius:3px; margin-left:4px;">메인</span>' : '';
                       $client_txt = $row['client'] ? htmlspecialchars($row['client']) : '가온엔 광고';
                       $title_txt = htmlspecialchars($row['title']);
+                      $title_safe = htmlspecialchars(addslashes($row['title']));
               ?>
               <div class="port-card">
-                  <a href="admin_portfolio.php?mode=modify&id=<?=$row['id']?>" class="port-card-thumb-wrap">
+                  <a href="javascript:void(0);" onclick="openImgModal('<?=$thumb_src?>', '<?=$title_safe?>', '<?=$cat_title?>');" class="port-card-thumb-wrap" title="사진 크게보기 (클릭)">
                       <img src="<?=$thumb_src?>" alt="<?=$title_txt?>">
                       <span class="port-card-cat-tag"><?=$cat_title?></span>
+                      <span class="port-zoom-badge">🔍 사진확대</span>
                   </a>
                   <div class="port-card-body">
                       <div>
@@ -758,8 +852,8 @@ if ($result) {
                       <div class="port-card-foot">
                           <div><?=$status_txt?><?=$featured_txt?></div>
                           <div>
-                              <a href="admin_portfolio.php?mode=modify&id=<?=$row['id']?>" class="btn_4 size_t rad_3">수정</a>
-                              <a href="javascript:delPort(<?=$row['id']?>);" class="btn_3 size_t rad_3">삭제</a>
+                              <a href="admin_portfolio.php?mode=modify&id=<?=$row['id']?>" class="port-btn-edit">수정</a>
+                              <a href="javascript:delPort(<?=$row['id']?>);" class="port-btn-del">삭제</a>
                           </div>
                       </div>
                   </div>
@@ -787,6 +881,42 @@ if ($result) {
     </section>
   </div>
 </div>
+
+<!-- Image Preview Modal Lightbox (사진 확대 보기) -->
+<div id="imgPreviewModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.75); z-index:99999; justify-content:center; align-items:center; backdrop-filter:blur(3px);">
+  <div style="position:relative; max-width:90%; max-height:90%; background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 20px 40px rgba(0,0,0,0.3); display:flex; flex-direction:column;">
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:#0f172a; color:#fff;">
+      <div style="font-size:15px; font-weight:700;" id="modalImgTitle">포트폴리오 사진 확대</div>
+      <button type="button" onclick="closeImgModal()" style="background:none; border:none; color:#fff; font-size:24px; line-height:1; cursor:pointer; padding:0 4px;" title="닫기">&times;</button>
+    </div>
+    <div style="padding:15px; background:#1e293b; display:flex; justify-content:center; align-items:center; overflow:auto; max-height:calc(90vh - 120px);">
+      <img id="modalImgTag" src="" alt="" style="max-width:100%; max-height:calc(85vh - 140px); object-fit:contain; border-radius:6px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
+    </div>
+    <div style="padding:12px 20px; background:#f8fafc; border-top:1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center;">
+      <span id="modalImgCat" style="font-size:13px; font-weight:700; color:#2563eb;"></span>
+      <button type="button" onclick="closeImgModal()" class="btn_2 size_s" style="padding:6px 18px; font-size:13px; font-weight:700; cursor:pointer;">닫기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function openImgModal(src, title, cat) {
+    if (!src) return;
+    $('#modalImgTag').attr('src', src);
+    $('#modalImgTitle').text(title || '포트폴리오 사진 확대');
+    $('#modalImgCat').text(cat || '');
+    $('#imgPreviewModal').css('display', 'flex').hide().fadeIn(150);
+}
+function closeImgModal() {
+    $('#imgPreviewModal').fadeOut(150);
+}
+$(document).on('click', '#imgPreviewModal', function(e) {
+    if (e.target === this) closeImgModal();
+});
+$(document).keydown(function(e) {
+    if (e.keyCode === 27) closeImgModal();
+});
+</script>
 
 </body>
 </html>
