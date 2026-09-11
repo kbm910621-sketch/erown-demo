@@ -7287,6 +7287,10 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   height: 100%;
   object-fit: cover;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .go-photo-back {
@@ -8143,6 +8147,8 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
     object-fit: cover !important;
     object-position: center !important;
     display: block !important;
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: crisp-edges !important;
     transition: opacity 0.22s ease-in-out !important;
   }
 
