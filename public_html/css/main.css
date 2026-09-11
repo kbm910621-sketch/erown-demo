@@ -6606,7 +6606,8 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 .broadcast-title-row { display:flex; align-items:center; gap:16px; margin:0 0 14px; flex-wrap:wrap; }
 .broadcast-title-row .broadcast-title { margin:0; }
 .broadcast-title { font-size:clamp(52px,4.2vw,70px); font-weight:750; line-height:1.04; letter-spacing:-0.035em; color:#0f172a; margin:0 0 14px; word-break:keep-all; font-family:"Pretendard",-apple-system,BlinkMacSystemFont,sans-serif; }
-.broadcast-exclusive-badge { display:inline-flex; align-items:center; justify-content:center; background:#1855b7; color:#ffffff; font-size:14px; font-weight:800; padding:6px 14px; border-radius:6px; letter-spacing:-0.3px; line-height:1; box-shadow:0 3px 12px rgba(24,85,183,0.22); font-family:"Pretendard",sans-serif; }
+.broadcast-exclusive-badge { display:inline-flex; align-items:center; gap:8px; background:#1855b7; color:#ffffff; font-size:16px; font-weight:850; padding:8px 18px; border-radius:8px; letter-spacing:-0.3px; line-height:1; box-shadow:0 4px 16px rgba(24,85,183,0.28); font-family:"Pretendard",sans-serif; }
+.broadcast-exclusive-badge::before { content:""; display:inline-block; width:7px; height:7px; border-radius:50%; background:#60a5fa; }
 .broadcast-desc { font-size:16.5px; line-height:1.68; color:#475569; font-weight:500; margin:0 0 20px; word-break:keep-all; max-width:620px; }
 .broadcast-features { margin:0 0 22px; width:100%; }
 .broadcast-feat-label { font-size:11.5px; font-weight:700; letter-spacing:0.14em; color:#64748b; text-transform:uppercase; margin-bottom:8px; display:block; font-family:"Poppins","Pretendard",sans-serif; }
@@ -6641,7 +6642,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 /* ========================================================================== */
 /* 04-B. CLIENTS & PARTNERS CENTERED SHOWCASE (.ga-partners-sec)              */
 /* ========================================================================== */
-.ga-partners-sec { padding: 130px 0 140px; background: #ffffff; color: #0f172a; position: relative; z-index: 5; border-top: none; border-bottom: none; }
+.ga-partners-sec { padding: 140px 0 70px; background: #ffffff; color: #0f172a; position: relative; z-index: 5; border-top: none; border-bottom: none; }
 
 .gp-container {
   max-width: 1720px;
@@ -7384,7 +7385,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 /* ========================================================================== */
 /* 03. GAON-N BESPOKE EDITORIAL WORKFLOW PIPELINE (#process)                  */
 /* ========================================================================== */
-.ga-process-editorial-sec { padding: 130px 0 140px; background: #ffffff; position: relative; border-top: none; }
+.ga-process-editorial-sec { padding: 70px 0 140px; background: #ffffff; position: relative; border-top: none; }
 
 .gpe-header-row {
   margin-bottom: 60px;
@@ -8013,7 +8014,8 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   .broadcast-title-row { display:flex !important; align-items:center !important; gap:10px !important; margin:0 0 10px !important; flex-wrap:wrap !important; }
   .broadcast-title-row .broadcast-title { margin:0 !important; }
   .broadcast-title { font-size:clamp(38px,10vw,46px) !important; line-height:1.06 !important; letter-spacing:-0.03em !important; margin:0 0 10px !important; text-align:left !important; }
-  .broadcast-exclusive-badge { display:inline-flex !important; align-items:center !important; justify-content:center !important; background:#1855b7 !important; color:#ffffff !important; font-size:12px !important; font-weight:800 !important; padding:4px 10px !important; border-radius:5px !important; letter-spacing:-0.3px !important; line-height:1 !important; font-family:"Pretendard",sans-serif !important; }
+  .broadcast-exclusive-badge { display:inline-flex !important; align-items:center !important; justify-content:center !important; gap:6px !important; background:#1855b7 !important; color:#ffffff !important; font-size:13px !important; font-weight:850 !important; padding:5px 12px !important; border-radius:6px !important; letter-spacing:-0.3px !important; line-height:1 !important; font-family:"Pretendard",sans-serif !important; box-shadow:0 3px 10px rgba(24,85,183,0.25) !important; }
+  .broadcast-exclusive-badge::before { content:"" !important; display:inline-block !important; width:5px !important; height:5px !important; border-radius:50% !important; background:#60a5fa !important; }
   .broadcast-desc { font-size:15px !important; line-height:1.65 !important; margin-bottom:16px !important; text-align:left !important; word-break:keep-all !important; }
   .broadcast-features { margin-bottom:18px !important; width:100% !important; }
   .broadcast-feat-list li { font-size:14px !important; text-align:left !important; }
@@ -8027,7 +8029,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   @keyframes mobFadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
 
   /* 5-B. SECTION CLIENTS & PARTNERS (CENTERED SHOWCASE + MOTION LINE) */
-  .ga-partners-sec { padding: 84px 0 !important; border: none !important; }
+  .ga-partners-sec { padding: 84px 0 42px !important; border: none !important; }
   .gp-header-row {
     text-align: center !important;
     margin: 0 auto !important;
@@ -8077,7 +8079,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   }
 
   /* 5-C. PROCESS SECTION TRANSITION */
-  .ga-process-editorial-sec { padding: 84px 0 !important; border-top: none !important; }
+  .ga-process-editorial-sec { padding: 42px 0 84px !important; border-top: none !important; }
 
   /* 6. SECTION 01 OOH MEDIA */
   .go-stage-grid {
