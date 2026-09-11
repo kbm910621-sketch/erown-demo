@@ -26,6 +26,48 @@ CREATE TABLE IF NOT EXISTS `portfolio` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 ");
 
+// ── 시드 데이터 자동 동기화 (누락 항목 자동 삽입) ──
+$check_count_res = mysqli_query($conn, "SELECT COUNT(*) FROM portfolio");
+$db_port_count = 0;
+if ($check_count_res) {
+    $row_c = mysqli_fetch_array($check_count_res);
+    if ($row_c) $db_port_count = (int)$row_c[0];
+}
+
+$seed_file = dirname(__FILE__) . '/portfolio_seed_data.php';
+if (file_exists($seed_file)) {
+    include_once $seed_file;
+    if (isset($GAON_PORTFOLIO_ITEMS) && is_array($GAON_PORTFOLIO_ITEMS)) {
+        if ($db_port_count < count($GAON_PORTFOLIO_ITEMS) || isset($_GET['sync'])) {
+            foreach ($GAON_PORTFOLIO_ITEMS as $item) {
+                $pid = (int)$item['id'];
+                $chk = mysqli_query($conn, "SELECT id FROM portfolio WHERE id = $pid LIMIT 1");
+                if ($chk && mysqli_num_rows($chk) == 0) {
+                    $cat = mysqli_real_escape_string($conn, $item['category']);
+                    $ttl = mysqli_real_escape_string($conn, $item['title']);
+                    $clt = mysqli_real_escape_string($conn, isset($item['client']) ? $item['client'] : '');
+                    $loc = mysqli_real_escape_string($conn, isset($item['location']) ? $item['location'] : '');
+                    $scl = mysqli_real_escape_string($conn, isset($item['scale']) ? $item['scale'] : '');
+                    $dsc = mysqli_real_escape_string($conn, isset($item['description']) ? $item['description'] : '');
+                    $thb = mysqli_real_escape_string($conn, isset($item['thumb']) ? $item['thumb'] : '');
+                    $imgs_json = mysqli_real_escape_string($conn, json_encode(isset($item['images']) ? $item['images'] : array()));
+                    $sort = isset($item['id']) ? (int)$item['id'] : 0;
+                    mysqli_query($conn, "
+                        INSERT INTO portfolio 
+                            (id, category, title, client, location, scale, description, thumb, images, sort_order, status, created_at, updated_at)
+                        VALUES
+                            ($pid, '$cat', '$ttl', '$clt', '$loc', '$scl', '$dsc', '$thb', '$imgs_json', $sort, 'active', NOW(), NOW())
+                    ");
+                }
+            }
+            if (isset($_GET['sync'])) {
+                header('Location: admin_portfolio.php?msg=synced');
+                exit;
+            }
+        }
+    }
+}
+
 function normalize_port_img($url) {
     if (empty($url)) return '/images/bs_ad/baro.jpg';
     return str_replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/', $url);
@@ -252,6 +294,8 @@ if ($result) {
     <script>alert('수정되었습니다.');</script>
     <?php elseif ($msg === 'del'): ?>
     <script>alert('삭제되었습니다.');</script>
+    <?php elseif ($msg === 'synced'): ?>
+    <script>alert('포트폴리오 데이터가 성공적으로 동기화되었습니다.');</script>
     <?php endif; ?>
 
       <?php if ($mode === 'write' || $mode === 'modify'): ?>
@@ -869,7 +913,8 @@ if ($result) {
       <!--//board_A0_list-->
 
       <!--button-->
-      <div class="button a_r mat_30">
+      <div class="button a_r mat_30" style="display:flex; justify-content:flex-end; gap:8px;">
+          <a href="admin_portfolio.php?sync=1" class="btn_2 size_n" style="background:#f1f5f9; color:#334155; border:1px solid #cbd5e1; font-weight:700;" title="시드 데이터 최신화 및 누락 항목 불러오기">🔄 데이터 동기화</a>
           <a href="admin_portfolio.php?mode=write" class="btn_1 size_n">등록</a>
       </div>
       <!--//button-->
