@@ -1363,6 +1363,17 @@ if (!empty($active_popups)) {
             지역 방송과 의료기관을 연결해<br class="pc_only">
             방송 프로그램 연계부터 진행까지 함께합니다.
           </p>
+          <div class="broadcast-mob-tabs mob_only">
+            <button type="button" class="bmt-btn is-active" data-step="1">
+              <span class="bmt-num">01</span>
+              <span class="bmt-name">닥터365</span>
+              <span class="bmt-badge">독점</span>
+            </button>
+            <button type="button" class="bmt-btn" data-step="2">
+              <span class="bmt-num">02</span>
+              <span class="bmt-name">건강365</span>
+            </button>
+          </div>
         </div>
 
         <!-- MAIN SHOWCASE STAGE -->
@@ -1401,6 +1412,12 @@ if (!empty($active_popups)) {
             <div class="broadcast-visual">
               <img src="/images/broadcast/broadcast_kbc_365.jpg" alt="KBC 닥터365 가온엔 독점 연계 프로그램" class="broadcast-img" loading="lazy">
             </div>
+            <div class="broadcast-mob-switch mob_only">
+              <button type="button" class="broadcast-mob-next" data-step="2">
+                <span>다음 프로그램 (MBC 건강365)</span>
+                <span class="bmn-circle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </button>
+            </div>
           </div>
 
           <!-- STEP 02 (2P) : 광주MBC 건강365 -->
@@ -1431,6 +1448,12 @@ if (!empty($active_popups)) {
             </div>
             <div class="broadcast-visual">
               <img src="/images/broadcast/broadcast_mbc_365.jpg" alt="MBC 건강365 방송 연계 프로그램" class="broadcast-img" loading="lazy">
+            </div>
+            <div class="broadcast-mob-switch mob_only">
+              <button type="button" class="broadcast-mob-next" data-step="1">
+                <span>이전 프로그램 (KBC 닥터365 독점)</span>
+                <span class="bmn-circle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></span>
+              </button>
             </div>
           </div>
 
