@@ -1,6 +1,6 @@
 <?php
 /**
- * Gaon-N Portfolio Seed Data (Latest Outdoor Items Prioritized at the Front)
+ * Gaon-N Portfolio Seed Data (Properly Paired Outdoor Cases Front-Prioritized)
  */
 $GAON_PORTFOLIO_ITEMS = array(
   array(
@@ -11,7 +11,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "title" => "광주안과의원 전면·측면 고광택 택시 랩핑 광고",
     "client" => "광주안과의원",
     "location" => "광주 전역 택시 영업구역",
-    "scale" => "법인·개인 택시 래핑",
+    "scale" => "택시 2면 풀래핑 (측면+후측면)",
     "description" => "광주 시내 전역을 상시 운행하는 택시 도어 및 펜더 랩핑으로 도심 유동인구 및 차량 탑승객 대상 고빈도 브랜드 각인",
     "thumb" => "/images/port/port_taxi_01.jpg",
     "images" => array(
@@ -29,7 +29,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "title" => "해태아이스 부라보콘 지원45번 버스 3면 풀래핑 광고",
     "client" => "해태아이스",
     "location" => "광주 지원45번 간선버스 노선",
-    "scale" => "시내버스 차도면·인도면·후면",
+    "scale" => "시내버스 3면 (차도면+인도면+후면)",
     "description" => "친근한 스테디셀러 브랜드 부라보콘의 대형 비주얼을 버스 차도면과 인도면에 와이드하게 부착하여 보행자 및 차량 운전자 시선 집중",
     "thumb" => "/images/port/port_bus_bravo_01.jpg",
     "images" => array(
@@ -48,7 +48,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "title" => "더스마트병원 골절·관절 전문케어 택배차량 래핑 광고",
     "client" => "더스마트병원",
     "location" => "광주 전역 택배 배송 권역 (4대)",
-    "scale" => "택배차량 4대 측면·후면",
+    "scale" => "택배차량 4대 (양측면+후면)",
     "description" => "아파트 단지 및 주택가 골목길을 1일 10시간 이상 누비는 택배차량 양측면과 후면에 병원 진료과목 집중 홍보",
     "thumb" => "/images/port/port_truck_smart_01.jpg",
     "images" => array(
@@ -86,7 +86,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "title" => "스마트인재개발원 IT·AI 취업과정 모집 택배차량 10대 래핑 광고",
     "client" => "스마트인재개발원",
     "location" => "광주 대학가 및 청년 주거밀집 구역 (10대)",
-    "scale" => "택배차량 10대",
+    "scale" => "택배차량 10대 (양측면+후면)",
     "description" => "국비지원 IT·빅데이터·AI 교육생 모집 안내를 2030 주거 및 상권 밀집지역 택배차량에 래핑하여 타깃 접근성 극대화",
     "thumb" => "/images/port/port_truck_smhrd_01.jpg",
     "images" => array(
@@ -110,8 +110,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "thumb" => "/images/port/port_truck_sinsujeong_01.jpg",
     "images" => array(
       "/images/port/port_truck_sinsujeong_01.jpg",
-      "/images/port/port_truck_sinsujeong_02.jpg",
-      "/images/port/port_truck_sinsujeong_03.jpg"
+      "/images/port/port_truck_sinsujeong_02.jpg"
     ),
     "sort_order" => 6,
     "date" => "2026·09"
@@ -143,7 +142,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "title" => "하트치과 분과별 전문진료 택배차량 5대 양면 래핑 광고",
     "client" => "하트치과의원",
     "location" => "광주 도심 및 주거밀집 배송 노선 (5대)",
-    "scale" => "택배차량 5대",
+    "scale" => "택배차량 5대 (양측면+후면)",
     "description" => "치아교정·임플란트 진료 안내를 택배 탑차 측면 대형 면적에 선명한 컬러로 래핑하여 보행자와 주거민에게 각인",
     "thumb" => "/images/port/port_truck_heartdental_01.jpg",
     "images" => array(
@@ -159,37 +158,33 @@ $GAON_PORTFOLIO_ITEMS = array(
     "category" => "bus",
     "badge" => "BUS·WRAP",
     "tag" => "시내버스 광고",
-    "title" => "광주 시내버스 간선노선 측면 와이드 래핑 광고",
+    "title" => "광주 순환01번 시내버스 차도면·인도면 양면 래핑 광고",
     "client" => "광주 주요 공공·기업",
-    "location" => "광주 전역 간선·지선 노선",
-    "scale" => "시내버스 차도면·인도면",
-    "description" => "광주 시내 중심가를 관통하는 간선버스 외부 와이드 광고면을 활용한 고효율 옥외광고 집행 사례",
+    "location" => "광주 도심 순환01번 간선노선",
+    "scale" => "시내버스 2면 (차도면+인도면)",
+    "description" => "광주 시내 중심가를 순환하는 간선버스 차도면 및 인도면 양면 래핑 집행 사례",
     "thumb" => "/images/port/port_bus_new_01.jpg",
     "images" => array(
       "/images/port/port_bus_new_01.jpg",
-      "/images/port/port_bus_new_02.jpg",
-      "/images/port/port_bus_new_03.jpg",
-      "/images/port/port_bus_new_04.jpg"
+      "/images/port/port_bus_new_02.jpg"
     ),
     "sort_order" => 9,
     "date" => "2026·09"
   ),
   array(
     "id" => 74,
-    "category" => "shelter",
-    "badge" => "SHELTER·AD",
-    "tag" => "버스 승강장·쉘터",
-    "title" => "광주 도심 주요 거점 버스승강장 와이드 조명 쉘터 광고",
+    "category" => "bus",
+    "badge" => "BUS·WRAP",
+    "tag" => "시내버스 광고",
+    "title" => "광주 첨단09번 간선버스 차도면·인도면 와이드 래핑 광고",
     "client" => "지역 유력 브랜드",
-    "location" => "광주 서구·북구·남구 주요 환승 정류소",
-    "scale" => "승강장 양면 조명 쉘터",
-    "description" => "야간에도 선명한 백라이트 조명 쉘터로 대중교통 이용객 및 야간 유동인구 시선 밀착 집중",
-    "thumb" => "/images/port/port_bus_new_05.jpg",
+    "location" => "광주 첨단지구-상무지구 간선노선",
+    "scale" => "시내버스 2면 (차도면+인도면)",
+    "description" => "첨단지구와 상무지구를 연결하는 핵심 간선노선 버스 양측면 래핑 광고",
+    "thumb" => "/images/port/port_bus_new_03.jpg",
     "images" => array(
-      "/images/port/port_bus_new_05.jpg",
-      "/images/port/port_bus_new_06.jpg",
-      "/images/port/port_bus_new_07.jpg",
-      "/images/port/port_bus_new_08.jpg"
+      "/images/port/port_bus_new_03.jpg",
+      "/images/port/port_bus_new_04.jpg"
     ),
     "sort_order" => 10,
     "date" => "2026·09"
@@ -199,21 +194,89 @@ $GAON_PORTFOLIO_ITEMS = array(
     "category" => "bus",
     "badge" => "BUS·WRAP",
     "tag" => "시내버스 광고",
-    "title" => "광주 대중교통 시내버스 차도면·후면 복합 래핑 캠페인",
-    "client" => "브랜드 캠페인",
-    "location" => "광주 도심 순환 및 간선도로",
-    "scale" => "시내버스 복합 래핑",
-    "description" => "차량 운전자와 보행자 시선을 동시에 사로잡는 시내버스 차도면 및 후면 복합 래핑 집행",
+    "title" => "광주 송정19번 KTX 연계 시내버스 양면 래핑 광고",
+    "client" => "공공기관 및 브랜드",
+    "location" => "광주송정역-도심 연계 간선노선",
+    "scale" => "시내버스 2면 (차도면+인도면)",
+    "description" => "KTX 광주송정역과 도심 주요 거점을 연결하는 유동인구 밀집 노선 버스 래핑",
+    "thumb" => "/images/port/port_bus_new_05.jpg",
+    "images" => array(
+      "/images/port/port_bus_new_05.jpg",
+      "/images/port/port_bus_new_06.jpg"
+    ),
+    "sort_order" => 11,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 76,
+    "category" => "bus",
+    "badge" => "BUS·WRAP",
+    "tag" => "시내버스 광고",
+    "title" => "광주 봉선37번 주거·학원가 집중 노선 버스 래핑 광고",
+    "client" => "교육·의료 전문 브랜드",
+    "location" => "광주 남구 봉선동 학원가 경유 노선",
+    "scale" => "시내버스 2면 (차도면+인도면)",
+    "description" => "남구 학원가와 아파트 밀집 주거지역을 집중 경유하는 타깃 맞춤형 버스 래핑",
+    "thumb" => "/images/port/port_bus_new_07.jpg",
+    "images" => array(
+      "/images/port/port_bus_new_07.jpg",
+      "/images/port/port_bus_new_08.jpg"
+    ),
+    "sort_order" => 12,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 77,
+    "category" => "bus",
+    "badge" => "BUS·WRAP",
+    "tag" => "시내버스 광고",
+    "title" => "광주 문흥18번 북구 관내 간선버스 양면 래핑 광고",
+    "client" => "지역 거점 유통·의료",
+    "location" => "광주 북구 문흥동-도심 간선노선",
+    "scale" => "시내버스 2면 (차도면+인도면)",
+    "description" => "북구 주거지역과 상권을 연결하는 메인 간선버스 차도면 및 인도면 래핑",
     "thumb" => "/images/port/port_bus_new_09.jpg",
     "images" => array(
       "/images/port/port_bus_new_09.jpg",
-      "/images/port/port_bus_new_10.jpg",
+      "/images/port/port_bus_new_10.jpg"
+    ),
+    "sort_order" => 13,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 78,
+    "category" => "bus",
+    "badge" => "BUS·WRAP",
+    "tag" => "시내버스 광고",
+    "title" => "광주 진월07번 남구-서구 관통 간선버스 래핑 광고",
+    "client" => "금융·공공 캠페인",
+    "location" => "광주 남구 진월동-서구 상무지구 노선",
+    "scale" => "시내버스 2면 (차도면+인도면)",
+    "description" => "남구 주거타운과 서구 업무지구를 오가는 직장인·주민 타깃 간선버스 래핑",
+    "thumb" => "/images/port/port_bus_new_11.jpg",
+    "images" => array(
       "/images/port/port_bus_new_11.jpg",
-      "/images/port/port_bus_new_12.jpg",
+      "/images/port/port_bus_new_12.jpg"
+    ),
+    "sort_order" => 14,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 79,
+    "category" => "bus",
+    "badge" => "BUS·WRAP",
+    "tag" => "시내버스 광고",
+    "title" => "광주 수완12번 광산구 신도시 간선버스 양면 래핑 광고",
+    "client" => "신도시 입주·의료 브랜드",
+    "location" => "광주 수완지구-하남지구 간선노선",
+    "scale" => "시내버스 2면 (차도면+인도면)",
+    "description" => "수완신도시 및 하남산단을 연결하는 젊은 3040 타깃 집중 노선 버스 래핑",
+    "thumb" => "/images/port/port_bus_new_13.jpg",
+    "images" => array(
       "/images/port/port_bus_new_13.jpg",
       "/images/port/port_bus_new_14.jpg"
     ),
-    "sort_order" => 11,
+    "sort_order" => 15,
     "date" => "2026·09"
   ),
   array(
