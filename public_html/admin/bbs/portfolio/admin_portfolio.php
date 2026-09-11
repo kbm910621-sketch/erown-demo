@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/db_conn.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/common.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/session_chk.php";
@@ -90,7 +90,8 @@ if (!empty($_GET['del'])) {
             mysqli_query($conn, "DELETE FROM portfolio WHERE id = $did");
         }
     }
-    header('Location: admin_portfolio.php?msg=del');
+    $ret_view = isset($_GET['view']) ? '&view=' . urlencode($_GET['view']) : '';
+    header('Location: admin_portfolio.php?msg=del' . $ret_view);
     exit;
 }
 
@@ -189,13 +190,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 
+// ── 보기 모드 (table: 목록형 / gallery: 카드형) ──
+$view_mode = isset($_GET['view']) ? $_GET['view'] : (isset($_COOKIE['admin_port_view']) ? $_COOKIE['admin_port_view'] : 'table');
+if (!in_array($view_mode, array('table', 'gallery'))) $view_mode = 'table';
+if (isset($_GET['view'])) {
+    @setcookie('admin_port_view', $view_mode, time() + 3600 * 24 * 365, '/');
+}
+
 // ── 목록 조회 & 검색 & 페이징 ──
 $filter_cat = isset($_GET['cat']) ? trim($_GET['cat']) : '';
 $frSearch   = isset($_GET['frSearch']) ? trim($_GET['frSearch']) : '';
 
 $_page      = isset($_GET['_page']) ? (int)$_GET['_page'] : (isset($_GET['page']) ? (int)$_GET['page'] : 1);
 if (!$_page) $_page = 1;
-$view_limit = 10; // 게시글 노출 수
+$view_limit = ($view_mode === 'gallery') ? 12 : 10; // 게시글 노출 수
 $page       = ($_page - 1) * $view_limit;
 
 $where_arr = array();
@@ -432,7 +440,166 @@ if ($result) {
       </div>
 
       <?php else: ?>
-      <!-- ════════════════ 목록 (board_A0_L - 팝업과 동일한 포맷) ════════════════ -->
+      <!-- ════════════════ 목록 (board_A0_L) ════════════════ -->
+
+      <style>
+      /* Table Customization & Ellipsis */
+      .port-table-wrap table { table-layout: fixed !important; width: 100% !important; border-top: 1px solid #111; }
+      .port-table-wrap th { text-align: center; border-bottom: 1px solid #d5d5d5; padding: 14px 6px; font-weight: 500; background: #fafafa; font-size: 13.5px; }
+      .port-table-wrap td { text-align: center; border-bottom: 1px solid #e5e5e5; padding: 10px 6px; font-size: 13px; vertical-align: middle; }
+      .port-table-wrap td.subject { text-align: left; }
+      
+      /* Pure 1-Line Ellipsis Text */
+      .port-ellipsis {
+          display: block;
+          width: 100%;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          word-break: break-all;
+      }
+      .port-table-wrap td.subject a {
+          display: block;
+          width: 100%;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          color: #111;
+          font-weight: bold;
+      }
+      .port-table-wrap td.subject a:hover {
+          color: #ffba00;
+          text-decoration: underline;
+      }
+      .port-thumb-img {
+          width: 72px;
+          height: 48px;
+          object-fit: cover;
+          border: 1px solid #e2e8f0;
+          border-radius: 4px;
+          vertical-align: middle;
+          display: block;
+          margin: 0 auto;
+          transition: transform 0.2s;
+      }
+      .port-thumb-img:hover { transform: scale(1.06); }
+
+      /* Top Header & View Mode Switcher */
+      .port-list-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 12px;
+      }
+      .port-list-header .count { margin-bottom: 0; }
+      .view-switch-box {
+          display: inline-flex;
+          background: #f1f5f9;
+          padding: 3px;
+          border-radius: 6px;
+          border: 1px solid #e2e8f0;
+          gap: 2px;
+      }
+      .view-switch-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          padding: 6px 12px;
+          font-size: 12px;
+          font-weight: 600;
+          color: #64748b;
+          text-decoration: none !important;
+          border-radius: 4px;
+          transition: all 0.15s;
+      }
+      .view-switch-btn:hover { color: #0f172a; background: rgba(255,255,255,0.7); }
+      .view-switch-btn.active { color: #0f172a; background: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); font-weight: 700; }
+
+      /* Gallery Card View */
+      .port-card-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 18px;
+          margin-top: 15px;
+          margin-bottom: 30px;
+      }
+      @media (max-width: 1200px) { .port-card-grid { grid-template-columns: repeat(3, 1fr); } }
+      @media (max-width: 850px) { .port-card-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 550px) { .port-card-grid { grid-template-columns: 1fr; } }
+
+      .port-card {
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
+          border-radius: 8px;
+          overflow: hidden;
+          transition: all 0.2s ease;
+          display: flex;
+          flex-direction: column;
+      }
+      .port-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+          border-color: #cbd5e1;
+      }
+      .port-card-thumb-wrap {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 16/10;
+          overflow: hidden;
+          background: #0f172a;
+      }
+      .port-card-thumb-wrap img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.3s;
+      }
+      .port-card:hover .port-card-thumb-wrap img { transform: scale(1.05); }
+      .port-card-cat-tag {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background: rgba(15, 23, 42, 0.85);
+          color: #fff;
+          font-size: 11px;
+          font-weight: 600;
+          padding: 3px 8px;
+          border-radius: 4px;
+          backdrop-filter: blur(4px);
+      }
+      .port-card-body {
+          padding: 14px 16px;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+      .port-card-title {
+          font-size: 14px;
+          font-weight: 700;
+          color: #0f172a;
+          margin: 0 0 6px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+      .port-card-meta {
+          font-size: 12px;
+          color: #64748b;
+          margin-bottom: 12px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+      .port-card-foot {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-top: 1px solid #f1f5f9;
+          padding-top: 10px;
+      }
+      </style>
 
       <script type="text/javascript">
       $(function(){
@@ -444,7 +611,8 @@ if ($result) {
       var searchList = function(){
           var frCat = $('#filterCat').val();
           var frSearch = $('#frSearch').val();
-          location.href="admin_portfolio.php?cat="+encodeURI(frCat)+"&frSearch="+encodeURI(frSearch);
+          var view = '<?=$view_mode?>';
+          location.href="admin_portfolio.php?cat="+encodeURI(frCat)+"&frSearch="+encodeURI(frSearch)+"&view="+view;
       }
 
       var EnterKey = function(){
@@ -453,7 +621,8 @@ if ($result) {
 
       function delPort(id) {
           if (confirm('선택한 포트폴리오를 삭제하시겠습니까?')) {
-              location.href = 'admin_portfolio.php?del=' + id;
+              var view = '<?=$view_mode?>';
+              location.href = 'admin_portfolio.php?del=' + id + '&view=' + view;
           }
       }
       </script>
@@ -477,21 +646,34 @@ if ($result) {
       <!--//search-->
 
       <!--board_A0_list-->
-      <div class="board_A0_L">
-          <p class="count">총 <b><?=$totals?></b>건의 내용이 있습니다</p>
+      <div class="board_A0_L port-table-wrap">
+          <div class="port-list-header">
+              <p class="count">총 <b><?=$totals?></b>건의 내용이 있습니다</p>
+              <div class="view-switch-box">
+                  <a href="admin_portfolio.php?view=table&cat=<?=urlencode($filter_cat)?>&frSearch=<?=urlencode($frSearch)?>" class="view-switch-btn <?=$view_mode==='table'?'active':''?>">
+                      <span>📋 목록형</span>
+                  </a>
+                  <a href="admin_portfolio.php?view=gallery&cat=<?=urlencode($filter_cat)?>&frSearch=<?=urlencode($frSearch)?>" class="view-switch-btn <?=$view_mode==='gallery'?'active':''?>">
+                      <span>🖼️ 카드형</span>
+                  </a>
+              </div>
+          </div>
+
+          <?php if ($view_mode === 'table'): ?>
+          <!-- ─── 1. 깔끔한 한 줄 말줄임(...) 목록형 테이블 ─── -->
           <table summary="포트폴리오 관리 목록이며 번호, 썸네일, 광고유형, 광고명, 광고주, 지역, 노출여부, 메인노출, 정렬, 관리를 제공합니다.">
               <caption>포트폴리오 관리 목록</caption>
               <colgroup>
-                  <col width="60" />
-                  <col width="90" />
-                  <col width="140" />
-                  <col width="*" />
+                  <col width="55" />
+                  <col width="85" />
                   <col width="130" />
-                  <col width="120" />
-                  <col width="80" />
-                  <col width="80" />
-                  <col width="70" />
-                  <col width="120" />
+                  <col width="*" />
+                  <col width="140" />
+                  <col width="130" />
+                  <col width="75" />
+                  <col width="75" />
+                  <col width="65" />
+                  <col width="115" />
               </colgroup>
               <thead>
                   <tr>
@@ -501,8 +683,8 @@ if ($result) {
                       <th scope="col">광고명</th>
                       <th scope="col">광고주</th>
                       <th scope="col">지역</th>
-                      <th scope="col">노출여부</th>
-                      <th scope="col">메인노출</th>
+                      <th scope="col">노출</th>
+                      <th scope="col">메인</th>
                       <th scope="col">정렬</th>
                       <th scope="col">관리</th>
                   </tr>
@@ -516,20 +698,23 @@ if ($result) {
                           $thumb_src = !empty($row['thumb']) ? normalize_port_img($row['thumb']) : '/images/bs_ad/baro.jpg';
                           $status_txt = ($row['status'] === 'active') ? '<span style="color:#16a34a; font-weight:600;">공개</span>' : '<span style="color:#94a3b8;">비공개</span>';
                           $featured_txt = (!empty($row['is_featured'])) ? '<span style="color:#2563eb; font-weight:700;">노출</span>' : '-';
+                          $client_txt = $row['client'] ? htmlspecialchars($row['client']) : '-';
+                          $loc_txt = $row['location'] ? htmlspecialchars($row['location']) : '-';
+                          $title_txt = htmlspecialchars($row['title']);
                   ?>
                   <tr>
                       <td class="resp"><?=$cnt?></td>
                       <td>
                           <a href="admin_portfolio.php?mode=modify&id=<?=$row['id']?>">
-                              <img src="<?=$thumb_src?>" alt="" style="width:70px; height:46px; object-fit:cover; border:1px solid #e2e8f0; border-radius:3px; vertical-align:middle;">
+                              <img src="<?=$thumb_src?>" alt="" class="port-thumb-img">
                           </a>
                       </td>
-                      <td><?=$cat_title?></td>
+                      <td><span class="port-ellipsis" title="<?=$cat_title?>"><?=$cat_title?></span></td>
                       <td class="subject">
-                          <a href="admin_portfolio.php?mode=modify&id=<?=$row['id']?>"><b><?=htmlspecialchars($row['title'])?></b></a>
+                          <a href="admin_portfolio.php?mode=modify&id=<?=$row['id']?>" title="<?=$title_txt?>"><?=$title_txt?></a>
                       </td>
-                      <td><?=htmlspecialchars($row['client'] ? $row['client'] : '-')?></td>
-                      <td><?=htmlspecialchars($row['location'] ? $row['location'] : '-')?></td>
+                      <td><span class="port-ellipsis" title="<?=$client_txt?>"><?=$client_txt?></span></td>
+                      <td><span class="port-ellipsis" title="<?=$loc_txt?>"><?=$loc_txt?></span></td>
                       <td><?=$status_txt?></td>
                       <td><?=$featured_txt?></td>
                       <td><?=$row['sort_order']?></td>
@@ -546,6 +731,46 @@ if ($result) {
                   <?php } ?>
               </tbody>
           </table>
+
+          <?php else: ?>
+          <!-- ─── 2. 비주얼 카드/갤러리형 ─── -->
+          <div class="port-card-grid">
+              <?php
+              if($totals > 0){
+                  foreach ($list as $row){
+                      $cat_title = isset($categories[$row['category']]) ? $categories[$row['category']] : $row['category'];
+                      $thumb_src = !empty($row['thumb']) ? normalize_port_img($row['thumb']) : '/images/bs_ad/baro.jpg';
+                      $status_txt = ($row['status'] === 'active') ? '<span style="color:#16a34a; font-weight:600; font-size:12px;">● 공개</span>' : '<span style="color:#94a3b8; font-size:12px;">● 비공개</span>';
+                      $featured_txt = (!empty($row['is_featured'])) ? '<span style="background:#2563eb; color:#fff; font-size:10px; font-weight:700; padding:2px 6px; border-radius:3px; margin-left:4px;">메인</span>' : '';
+                      $client_txt = $row['client'] ? htmlspecialchars($row['client']) : '가온엔 광고';
+                      $title_txt = htmlspecialchars($row['title']);
+              ?>
+              <div class="port-card">
+                  <a href="admin_portfolio.php?mode=modify&id=<?=$row['id']?>" class="port-card-thumb-wrap">
+                      <img src="<?=$thumb_src?>" alt="<?=$title_txt?>">
+                      <span class="port-card-cat-tag"><?=$cat_title?></span>
+                  </a>
+                  <div class="port-card-body">
+                      <div>
+                          <h4 class="port-card-title" title="<?=$title_txt?>"><a href="admin_portfolio.php?mode=modify&id=<?=$row['id']?>" style="color:#0f172a;"><?=$title_txt?></a></h4>
+                          <p class="port-card-meta"><?=$client_txt?> <?=($row['location'] ? '· '.htmlspecialchars($row['location']) : '')?></p>
+                      </div>
+                      <div class="port-card-foot">
+                          <div><?=$status_txt?><?=$featured_txt?></div>
+                          <div>
+                              <a href="admin_portfolio.php?mode=modify&id=<?=$row['id']?>" class="btn_4 size_t rad_3">수정</a>
+                              <a href="javascript:delPort(<?=$row['id']?>);" class="btn_3 size_t rad_3">삭제</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <?php }} ?>
+              <?php if($totals <= 0){ ?>
+              <div style="grid-column: 1 / -1; text-align: center; padding: 50px 0; color: #94a3b8;">등록된 포트폴리오가 없습니다.</div>
+              <?php } ?>
+          </div>
+          <?php endif; ?>
+
       </div>
       <!--//board_A0_list-->
 

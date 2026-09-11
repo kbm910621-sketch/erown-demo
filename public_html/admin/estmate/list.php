@@ -1,4 +1,4 @@
-﻿<?include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/db_conn.php";?>
+<?include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/db_conn.php";?>
 <?include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/common.php";?>
 <?include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/session_chk.php";?>
 
@@ -39,6 +39,16 @@ if ($result) {
     }
 }
 ?>
+
+<style>
+.est-table-wrap table { table-layout: fixed !important; width: 100% !important; border-top: 1px solid #111; }
+.est-table-wrap th { text-align: center; border-bottom: 1px solid #d5d5d5; padding: 14px 6px; font-weight: 500; background: #fafafa; font-size: 13.5px; }
+.est-table-wrap td { text-align: center; border-bottom: 1px solid #e5e5e5; padding: 12px 6px; font-size: 13px; vertical-align: middle; }
+.est-table-wrap td.subject { text-align: left; }
+.est-ellipsis { display: block; width: 100%; white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; word-break: break-all; }
+.est-table-wrap td.subject a { display: block; width: 100%; white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; color: #111; font-weight: bold; }
+.est-table-wrap td.subject a:hover { color: #ffba00; text-decoration: underline; }
+</style>
 
 <script type="text/javascript">
 $(function(){
@@ -102,20 +112,20 @@ var EnterKey = function(){
 
             <!--board_A0_list-->
             <form id="deleteForm" action="process_delete.php" method="post">
-            <div class="board_A0_L">
+            <div class="board_A0_L est-table-wrap">
                 <p class="count">총 <b><?=$totals?></b>건의 내용이 있습니다</p>
                 <table summary="신청정보 관리 목록이며 선택, 번호, 회사/상호명, 담당자명, 직급, 희망 광고유형, 연락처, 이메일, 작성일을 제공합니다.">
                     <caption>신청정보 관리 목록</caption>
                     <colgroup>
-                        <col width="50" />
-                        <col width="70" />
+                        <col width="45" />
+                        <col width="60" />
                         <col width="*" />
                         <col width="110" />
-                        <col width="100" />
-                        <col width="160" />
-                        <col width="140" />
-                        <col width="180" />
-                        <col width="110" />
+                        <col width="90" />
+                        <col width="150" />
+                        <col width="130" />
+                        <col width="170" />
+                        <col width="105" />
                     </colgroup>
                     <thead>
                         <tr>
@@ -138,18 +148,24 @@ var EnterKey = function(){
                             $cnt = $page+1;
                             while($row = mysqli_fetch_array($result)){
                                 $row['est_regdate'] = mb_substr($row['est_regdate'], 0, 10);
+                                $company_txt = htmlspecialchars($row['est_company']);
+                                $name_txt = htmlspecialchars($row['est_name']);
                                 $pos = ($row['est_position'] && $row['est_position'] !== '-') ? htmlspecialchars($row['est_position']) : '-';
+                                $ad_type = htmlspecialchars($row['est_ad_type']);
+                                $phone_txt = htmlspecialchars($row['est_phone']);
                                 $email = ($row['est_email'] && $row['est_email'] !== '-') ? htmlspecialchars($row['est_email']) : '-';
                         ?>
                         <tr>
                             <td><input type="checkbox" name="est_uid[]" value="<?=$row['est_uid']?>"></td>
                             <td class="resp"><?=$cnt?></td>
-                            <td class="subject"><a href="view.php?id=<?=$row['est_uid']?>"><b><?=htmlspecialchars($row['est_company'])?></b></a></td>
-                            <td><?=htmlspecialchars($row['est_name'])?></td>
-                            <td><?=$pos?></td>
-                            <td><?=htmlspecialchars($row['est_ad_type'])?></td>
-                            <td><?=htmlspecialchars($row['est_phone'])?></td>
-                            <td><?=$email?></td>
+                            <td class="subject">
+                                <a href="view.php?id=<?=$row['est_uid']?>" title="<?=$company_txt?>"><b><?=$company_txt?></b></a>
+                            </td>
+                            <td><span class="est-ellipsis" title="<?=$name_txt?>"><?=$name_txt?></span></td>
+                            <td><span class="est-ellipsis" title="<?=$pos?>"><?=$pos?></span></td>
+                            <td><span class="est-ellipsis" title="<?=$ad_type?>"><?=$ad_type?></span></td>
+                            <td><span class="est-ellipsis" title="<?=$phone_txt?>"><?=$phone_txt?></span></td>
+                            <td><span class="est-ellipsis" title="<?=$email?>"><?=$email?></span></td>
                             <td><?=$row['est_regdate']?></td>
                         </tr>
                         <?$cnt++;}}?>

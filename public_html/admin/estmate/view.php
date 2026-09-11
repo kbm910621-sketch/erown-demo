@@ -1,4 +1,4 @@
-﻿<?include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/db_conn.php";?>
+<?include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/db_conn.php";?>
 <?include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/common.php";?>
 <?include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/session_chk.php";?>
 
