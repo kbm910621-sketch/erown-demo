@@ -1,10 +1,16 @@
-﻿<?php
-include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/db_conn.php";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/common.php";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/session_chk.php";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/admin/inc/head.php";
+<?include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/db_conn.php";?>
+<?include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/common.php";?>
+<?include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/session_chk.php";?>
 
-// Stats
+<?include_once $_SERVER['DOCUMENT_ROOT'] . "/admin/inc/head.php";?>
+
+<body class="bg_body">
+
+<!--header-->
+<?include_once $_SERVER['DOCUMENT_ROOT'] . "/admin/inc/header.php";?>
+<!--//header-->
+
+<?php
 $today = date('Y-m-d');
 
 // 1. Estimates
@@ -13,9 +19,7 @@ $sql_est_total = "SELECT COUNT(*) FROM estmate";
 $res_est_total = mysqli_query($conn, $sql_est_total);
 if ($res_est_total) {
     $row_est_total = mysqli_fetch_array($res_est_total);
-    if ($row_est_total) {
-        $tot_est = (int)$row_est_total[0];
-    }
+    if ($row_est_total) $tot_est = (int)$row_est_total[0];
 }
 
 $today_est = 0;
@@ -23,9 +27,7 @@ $sql_est_today = "SELECT COUNT(*) FROM estmate WHERE DATE(est_regdate) = '$today
 $res_est_today = mysqli_query($conn, $sql_est_today);
 if ($res_est_today) {
     $row_est_today = mysqli_fetch_array($res_est_today);
-    if ($row_est_today) {
-        $today_est = (int)$row_est_today[0];
-    }
+    if ($row_est_today) $today_est = (int)$row_est_today[0];
 }
 
 // 2. Portfolio
@@ -34,9 +36,7 @@ $sql_port_total = "SELECT COUNT(*) FROM portfolio";
 $res_port_total = mysqli_query($conn, $sql_port_total);
 if ($res_port_total) {
     $row_port_total = mysqli_fetch_array($res_port_total);
-    if ($row_port_total) {
-        $tot_port = (int)$row_port_total[0];
-    }
+    if ($row_port_total) $tot_port = (int)$row_port_total[0];
 }
 
 // 3. Popups
@@ -45,9 +45,7 @@ $sql_pop_total = "SELECT COUNT(*) FROM popup";
 $res_pop_total = mysqli_query($conn, $sql_pop_total);
 if ($res_pop_total) {
     $row_pop_total = mysqli_fetch_array($res_pop_total);
-    if ($row_pop_total) {
-        $tot_pop = (int)$row_pop_total[0];
-    }
+    if ($row_pop_total) $tot_pop = (int)$row_pop_total[0];
 }
 
 $cat_map = array(
@@ -61,236 +59,25 @@ $cat_map = array(
     'print'   => '인쇄물·현수막',
     'web'     => '홈페이지제작'
 );
+
+function normalize_port_img($url) {
+    if (empty($url)) return '/images/bs_ad/baro.jpg';
+    return str_replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/', $url);
+}
 ?>
 
-<body class="bg_body">
-
-<!--header-->
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/admin/inc/header.php"; ?>
-<!--//header-->
-
 <style>
-/* Modern Dashboard Styles */
-.dash-container { padding: 0 0 50px 0; }
-.dash-welcome {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    border-radius: 12px;
-    padding: 26px 30px;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
-}
-.dash-welcome h2 { font-size: 22px; font-weight: 700; margin: 0 0 6px 0; letter-spacing: -0.5px; color: #fff; }
-.dash-welcome p { font-size: 14px; color: #94a3b8; margin: 0; }
-.dash-welcome .welcome-actions { display: flex; gap: 10px; }
-.btn-site-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 10px 18px;
-    background: #2563eb;
-    color: #ffffff !important;
-    font-size: 13.5px;
-    font-weight: 600;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.2s;
-}
-.btn-site-link:hover { background: #1d4ed8; transform: translateY(-1px); }
-
-/* KPI Grid */
-.kpi-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-bottom: 30px;
-}
-.kpi-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 22px 24px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-    text-decoration: none;
-    display: block;
-}
-.kpi-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    border-color: #cbd5e1;
-}
-.kpi-label { font-size: 13.5px; font-weight: 600; color: #64748b; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
-.kpi-num { font-size: 30px; font-weight: 800; color: #0f172a; line-height: 1.1; letter-spacing: -1px; }
-.kpi-sub { font-size: 12.5px; color: #94a3b8; margin-top: 6px; font-weight: 500; }
-.kpi-sub strong { color: #2563eb; font-weight: 700; }
-.kpi-badge {
-    font-size: 11px;
-    font-weight: 700;
-    padding: 3px 8px;
-    border-radius: 20px;
-    background: #eff6ff;
-    color: #2563eb;
-}
-
-/* Sections Layout */
-.dash-section-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-.dash-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 24px 28px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-}
-.dash-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid #f1f5f9;
-}
-.dash-card-title {
-    font-size: 17px;
-    font-weight: 700;
-    color: #0f172a;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-.dash-card-title::before {
-    content: '';
-    display: inline-block;
-    width: 4px;
-    height: 16px;
-    background: #2563eb;
-    border-radius: 2px;
-}
-.btn-more-link {
-    font-size: 13px;
-    font-weight: 600;
-    color: #64748b;
-    text-decoration: none;
-    transition: color 0.15s;
-}
-.btn-more-link:hover { color: #2563eb; }
-
-/* Inquiries Table */
-.dash-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-.dash-table th {
-    background: #f8fafc;
-    color: #475569;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 12px 14px;
-    border-bottom: 2px solid #e2e8f0;
-    text-align: center;
-}
-.dash-table td {
-    padding: 14px 14px;
-    border-bottom: 1px solid #f1f5f9;
-    font-size: 13.5px;
-    color: #334155;
-    vertical-align: middle;
-    text-align: center;
-}
-.dash-table tbody tr.table-row-hover {
-    cursor: pointer;
-    transition: background-color 0.15s;
-}
-.dash-table tbody tr.table-row-hover:hover {
-    background-color: #f8fafc;
-}
-.dash-badge {
-    display: inline-block;
-    padding: 4px 10px;
-    background: #eff6ff;
-    color: #1e40af;
-    border: 1px solid #bfdbfe;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 600;
-}
-.dash-company { font-weight: 700; color: #0f172a; text-align: left !important; }
-.dash-content-snippet { text-align: left !important; color: #64748b; max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-/* Portfolio Grid */
-.port-preview-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-}
-.port-item-card {
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none;
-    display: block;
-    background: #ffffff;
-    transition: all 0.2s;
-}
-.port-item-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-    border-color: #2563eb;
-}
-.port-item-thumb {
-    width: 100%;
-    height: 140px;
-    background-size: cover;
-    background-position: center;
-    background-color: #f1f5f9;
-    position: relative;
-}
-.port-cat-tag {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: rgba(15, 23, 42, 0.85);
-    color: #ffffff;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 3px 8px;
-    border-radius: 4px;
-    backdrop-filter: blur(4px);
-}
-.port-item-info {
-    padding: 12px 14px;
-}
-.port-item-title {
-    font-size: 13.5px;
-    font-weight: 700;
-    color: #0f172a;
-    margin: 0 0 4px 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.port-item-client {
-    font-size: 12px;
-    color: #64748b;
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-@media (max-width: 1200px) {
-    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
-    .port-preview-grid { grid-template-columns: repeat(2, 1fr); }
-}
+.main_stat_wrap { display: flex; gap: 15px; margin-bottom: 35px; flex-wrap: wrap; }
+.main_stat_box { flex: 1; min-width: 200px; background: #fff; border: 1px solid #dcdcdc; border-radius: 6px; padding: 20px; box-sizing: border-box; text-decoration: none !important; transition: all 0.2s; }
+.main_stat_box:hover { border-color: #111; box-shadow: 0 4px 12px rgba(0,0,0,0.06); transform: translateY(-2px); }
+.main_stat_tit { font-size: 13px; font-weight: 600; color: #666; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
+.main_stat_num { font-size: 26px; font-weight: 700; color: #111; line-height: 1.2; }
+.main_stat_sub { font-size: 12px; color: #888; margin-top: 6px; }
+.main_stat_sub b { color: #2563eb; }
+.main_sec_header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 10px; }
+.main_sec_header h2 { margin: 0; }
+.main_more_btn { font-size: 13px; color: #666; text-decoration: none; }
+.main_more_btn:hover { color: #111; text-decoration: underline; }
 </style>
 
 <!--wrap-->
@@ -298,163 +85,182 @@ $cat_map = array(
 	<!--container-->
 	<div id="container">
 		<!--title-->
-		<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/admin/inc/title.php"; ?>
+		<?include_once $_SERVER['DOCUMENT_ROOT'] . "/admin/inc/title.php";?>
 		<!--//title-->
 
 		<!--content-->
-		<section class="content dash-container">
+		<section class="content">
 
-			<!-- Welcome Banner -->
-			<div class="dash-welcome">
-				<div>
-					<h2>가온엔 관리자 센터</h2>
-					<p>안녕하세요, <strong><?=$_SESSION['MID']?></strong>님. 홈페이지의 실시간 상담 접수 및 콘텐츠를 효율적으로 관리하세요.</p>
-				</div>
-				<div class="welcome-actions">
-					<a href="/" target="_blank" class="btn-site-link">
-						<span>🌐 홈페이지 바로가기</span>
-					</a>
-				</div>
-			</div>
-
-			<!-- KPI Cards -->
-			<div class="kpi-grid">
-				<a href="/admin/estmate/list.php" class="kpi-card">
-					<div class="kpi-label">
-						<span>상담 / 견적 문의</span>
-						<span class="kpi-badge">신청 관리</span>
+			<!-- Stat Box Grid -->
+			<div class="main_stat_wrap">
+				<a href="/admin/estmate/list.php" class="main_stat_box">
+					<div class="main_stat_tit">
+						<span>상담 / 견적 신청</span>
+						<span style="color:#2563eb; font-weight:bold;">신청관리</span>
 					</div>
-					<div class="kpi-num"><?=$tot_est?><span style="font-size:16px; font-weight:500; color:#64748b; margin-left:4px;">건</span></div>
-					<div class="kpi-sub">오늘 신규 접수: <strong><?=$today_est?></strong>건</div>
+					<div class="main_stat_num"><?=$tot_est?><span style="font-size:15px; font-weight:normal; color:#666; margin-left:3px;">건</span></div>
+					<div class="main_stat_sub">오늘 신규 접수: <b><?=$today_est?></b>건</div>
 				</a>
 
-				<a href="/admin/bbs/portfolio/admin_portfolio.php" class="kpi-card">
-					<div class="kpi-label">
+				<a href="/admin/bbs/portfolio/admin_portfolio.php" class="main_stat_box">
+					<div class="main_stat_tit">
 						<span>등록 포트폴리오</span>
-						<span class="kpi-badge">사례 관리</span>
+						<span style="color:#2563eb; font-weight:bold;">사례관리</span>
 					</div>
-					<div class="kpi-num"><?=$tot_port?><span style="font-size:16px; font-weight:500; color:#64748b; margin-left:4px;">개</span></div>
-					<div class="kpi-sub">총 9개 카테고리 운영 중</div>
+					<div class="main_stat_num"><?=$tot_port?><span style="font-size:15px; font-weight:normal; color:#666; margin-left:3px;">개</span></div>
+					<div class="main_stat_sub">총 9개 광고유형 운영</div>
 				</a>
 
-				<a href="/admin/popup/list.php" class="kpi-card">
-					<div class="kpi-label">
+				<a href="/admin/popup/list.php" class="main_stat_box">
+					<div class="main_stat_tit">
 						<span>팝업 관리</span>
-						<span class="kpi-badge">알림창</span>
+						<span style="color:#666; font-weight:bold;">알림창</span>
 					</div>
-					<div class="kpi-num"><?=$tot_pop?><span style="font-size:16px; font-weight:500; color:#64748b; margin-left:4px;">건</span></div>
-					<div class="kpi-sub">메인 및 페이지 안내 팝업</div>
+					<div class="main_stat_num"><?=$tot_pop?><span style="font-size:15px; font-weight:normal; color:#666; margin-left:3px;">건</span></div>
+					<div class="main_stat_sub">메인 및 서브 안내 팝업</div>
 				</a>
 
-				<a href="/admin/setting/pw_change.php" class="kpi-card">
-					<div class="kpi-label">
-						<span>기본 환경 설정</span>
-						<span class="kpi-badge">계정 보안</span>
+				<a href="/" target="_blank" class="main_stat_box">
+					<div class="main_stat_tit">
+						<span>가온엔 홈페이지</span>
+						<span style="color:#111; font-weight:bold;">새창열기 ↗</span>
 					</div>
-					<div class="kpi-num" style="font-size:20px; font-weight:700; color:#2563eb; line-height:1.5;">설정 바로가기</div>
-					<div class="kpi-sub">비밀번호 변경 및 메타 관리</div>
+					<div class="main_stat_num" style="font-size:18px; color:#2563eb; line-height:1.7;">바로가기</div>
+					<div class="main_stat_sub">사용자 화면 확인</div>
 				</a>
 			</div>
 
-			<!-- Sections Wrap -->
-			<div class="dash-section-wrap">
-
-				<!-- Recent Inquiries Section -->
-				<div class="dash-card">
-					<div class="dash-card-header">
-						<div class="dash-card-title">최근 견적 및 상담 문의</div>
-						<a href="/admin/estmate/list.php" class="btn-more-link">더보기 &rsaquo;</a>
-					</div>
-					<table class="dash-table">
-						<thead>
-							<tr>
-								<th style="width: 70px;">번호</th>
-								<th style="width: 180px; text-align: left; padding-left: 16px;">회사/상호명</th>
-								<th style="width: 100px;">담당자</th>
-								<th style="width: 130px;">연락처</th>
-								<th style="width: 140px;">문의 매체</th>
-								<th style="text-align: left; padding-left: 16px;">문의 내용</th>
-								<th style="width: 120px;">접수일시</th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php
-							$sql_est_list = "SELECT * FROM estmate ORDER BY est_uid DESC LIMIT 5";
-							$res_est_list = mysqli_query($conn, $sql_est_list);
-							$has_est = false;
-
-							if ($res_est_list && mysqli_num_rows($res_est_list) > 0) {
-								$has_est = true;
-								while ($row = mysqli_fetch_array($res_est_list)) {
-									$co = !empty($row['est_company']) ? htmlspecialchars($row['est_company']) : '-';
-									$name = !empty($row['est_name']) ? htmlspecialchars($row['est_name']) : '-';
-									$phone = !empty($row['est_phone']) ? htmlspecialchars($row['est_phone']) : '-';
-									$type = !empty($row['est_ad_type']) ? htmlspecialchars($row['est_ad_type']) : '-';
-									$content = !empty($row['est_content']) ? htmlspecialchars($row['est_content']) : '-';
-									$date = substr($row['est_regdate'], 0, 10);
-							?>
-							<tr class="table-row-hover" onclick="location.href='/admin/estmate/view.php?id=<?=$row['est_uid']?>';">
-								<td><?=$row['est_uid']?></td>
-								<td class="dash-company"><?=$co?></td>
-								<td><strong><?=$name?></strong></td>
-								<td><?=$phone?></td>
-								<td><span class="dash-badge"><?=$type?></span></td>
-								<td class="dash-content-snippet"><?=$content?></td>
-								<td style="color:#64748b; font-size:12.5px;"><?=$date?></td>
-							</tr>
-							<?php
-								}
-							}
-							if (!$has_est) {
-							?>
-							<tr>
-								<td colspan="7" style="padding: 40px; color:#94a3b8;">접수된 상담/견적 문의가 없습니다.</td>
-							</tr>
-							<?php } ?>
-						</tbody>
-					</table>
+			<!--board_A0_list : Recent Inquiries -->
+	  		<div class="board_A0_L">
+				<div class="main_sec_header">
+					<h2 class="bbs_rctit" style="margin-bottom:0;">신청정보 최근글</h2>
+					<a href="/admin/estmate/list.php" class="main_more_btn">더보기 +</a>
 				</div>
-
-				<!-- Recent Portfolio Section -->
-				<div class="dash-card">
-					<div class="dash-card-header">
-						<div class="dash-card-title">최근 등록 포트폴리오</div>
-						<a href="/admin/bbs/portfolio/admin_portfolio.php" class="btn-more-link">포트폴리오 관리 &rsaquo;</a>
-					</div>
-					<div class="port-preview-grid">
+				<table summary="신청정보 최근글 목록이며 번호, 회사/상호명, 담당자명, 직급, 희망 광고유형, 연락처, 작성일을 제공합니다.">
+					<caption>신청정보 최근글 목록</caption>
+					<colgroup>
+						<col width="80" />
+						<col width="*" />
+						<col width="120" />
+						<col width="100" />
+						<col width="160" />
+						<col width="150" />
+						<col width="120" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="resp">번호</th>
+							<th scope="col">회사/상호명</th>
+							<th scope="col">담당자명</th>
+							<th scope="col">직급</th>
+							<th scope="col">희망 광고유형</th>
+							<th scope="col">연락처</th>
+							<th scope="col">작성일</th>
+						</tr>
+					</thead>
+					<tbody>
 						<?php
-						$sql_port_list = "SELECT * FROM portfolio ORDER BY id DESC LIMIT 4";
-						$res_port_list = mysqli_query($conn, $sql_port_list);
+						$view_limit = 5;
+						$sql = "SELECT * FROM estmate ORDER BY est_uid DESC LIMIT $view_limit";
+						$result = mysqli_query($conn, $sql);
+						$has_est = false;
+
+						if ($result && mysqli_num_rows($result) > 0) {
+							$has_est = true;
+							$cnt = 1;
+							while ($row = mysqli_fetch_array($result)) {
+								$date = substr($row['est_regdate'], 0, 10);
+								$pos = ($row['est_position'] && $row['est_position'] !== '-') ? htmlspecialchars($row['est_position']) : '-';
+						?>
+						<tr>
+							<td class="resp"><?=$cnt?></td>
+							<td class="subject">
+								<a href="/admin/estmate/view.php?id=<?=$row['est_uid']?>"><b><?=htmlspecialchars($row['est_company'])?></b></a>
+							</td>
+							<td><?=htmlspecialchars($row['est_name'])?></td>
+							<td><?=$pos?></td>
+							<td><?=htmlspecialchars($row['est_ad_type'])?></td>
+							<td><?=htmlspecialchars($row['est_phone'])?></td>
+							<td><?=$date?></td>
+						</tr>
+						<?php $cnt++; }} ?>
+						<?php if (!$has_est) { ?>
+						<tr>
+							<td colspan="7" class="no_text">등록된 신청 정보가 없습니다.</td>
+						</tr>
+						<?php } ?>
+					</tbody>
+				</table>
+			</div>
+			<!--//board_A0_list-->
+
+			<!--board_A0_list : Recent Portfolio -->
+	  		<div class="board_A0_L mat_50">
+				<div class="main_sec_header">
+					<h2 class="bbs_rctit" style="margin-bottom:0;">포트폴리오 최근글</h2>
+					<a href="/admin/bbs/portfolio/admin_portfolio.php" class="main_more_btn">더보기 +</a>
+				</div>
+				<table summary="포트폴리오 최근글 목록이며 번호, 썸네일, 광고유형, 광고명, 광고주, 지역, 등록일을 제공합니다.">
+					<caption>포트폴리오 최근글 목록</caption>
+					<colgroup>
+						<col width="70" />
+						<col width="100" />
+						<col width="140" />
+						<col width="*" />
+						<col width="140" />
+						<col width="120" />
+						<col width="100" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="resp">번호</th>
+							<th scope="col">썸네일</th>
+							<th scope="col">광고유형</th>
+							<th scope="col">광고명</th>
+							<th scope="col">광고주</th>
+							<th scope="col">지역</th>
+							<th scope="col">노출여부</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php
+						$sql_port = "SELECT * FROM portfolio ORDER BY id DESC LIMIT 5";
+						$res_port = mysqli_query($conn, $sql_port);
 						$has_port = false;
 
-						if ($res_port_list && mysqli_num_rows($res_port_list) > 0) {
+						if ($res_port && mysqli_num_rows($res_port) > 0) {
 							$has_port = true;
-							while ($prow = mysqli_fetch_array($res_port_list)) {
+							$cnt = 1;
+							while ($prow = mysqli_fetch_array($res_port)) {
 								$cat_name = isset($cat_map[$prow['category']]) ? $cat_map[$prow['category']] : $prow['category'];
-								$p_thumb = !empty($prow['thumb']) ? $prow['thumb'] : '/images/bs_ad/baro.jpg';
-								$p_thumb = str_replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/', $p_thumb);
+								$thumb_src = !empty($prow['thumb']) ? normalize_port_img($prow['thumb']) : '/images/bs_ad/baro.jpg';
+								$status_txt = ($prow['status'] === 'active') ? '<span style="color:#16a34a; font-weight:bold;">공개</span>' : '<span style="color:#999;">비공개</span>';
 						?>
-						<a href="/admin/bbs/portfolio/admin_portfolio.php" class="port-item-card">
-							<div class="port-item-thumb" style="background-image: url('<?=$p_thumb?>');">
-								<span class="port-cat-tag"><?=$cat_name?></span>
-							</div>
-							<div class="port-item-info">
-								<h4 class="port-item-title"><?=htmlspecialchars($prow['title'])?></h4>
-								<p class="port-item-client"><?=!empty($prow['client']) ? htmlspecialchars($prow['client']) : '가온엔 광고 집행'?></p>
-							</div>
-						</a>
-						<?php
-							}
-						}
-						if (!$has_port) {
-						?>
-						<div style="grid-column: span 4; text-align:center; padding: 40px; color:#94a3b8;">등록된 포트폴리오가 없습니다.</div>
+						<tr>
+							<td class="resp"><?=$cnt?></td>
+							<td>
+								<a href="/admin/bbs/portfolio/admin_portfolio.php?mode=modify&id=<?=$prow['id']?>">
+									<img src="<?=$thumb_src?>" alt="" style="width:70px; height:46px; object-fit:cover; border:1px solid #ddd; border-radius:3px; vertical-align:middle;">
+								</a>
+							</td>
+							<td><?=$cat_name?></td>
+							<td class="subject">
+								<a href="/admin/bbs/portfolio/admin_portfolio.php?mode=modify&id=<?=$prow['id']?>"><b><?=htmlspecialchars($prow['title'])?></b></a>
+							</td>
+							<td><?=htmlspecialchars($prow['client'] ? $prow['client'] : '-')?></td>
+							<td><?=htmlspecialchars($prow['location'] ? $prow['location'] : '-')?></td>
+							<td><?=$status_txt?></td>
+						</tr>
+						<?php $cnt++; }} ?>
+						<?php if (!$has_port) { ?>
+						<tr>
+							<td colspan="7" class="no_text">등록된 포트폴리오가 없습니다.</td>
+						</tr>
 						<?php } ?>
-					</div>
-				</div>
-
+					</tbody>
+				</table>
 			</div>
-			<!--// Sections Wrap -->
+			<!--//board_A0_list-->
 
 		</section>
 		<!--//content-->
