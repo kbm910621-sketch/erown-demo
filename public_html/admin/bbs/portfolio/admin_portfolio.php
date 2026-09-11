@@ -38,27 +38,29 @@ $seed_file = dirname(__FILE__) . '/portfolio_seed_data.php';
 if (file_exists($seed_file)) {
     include_once $seed_file;
     if (isset($GAON_PORTFOLIO_ITEMS) && is_array($GAON_PORTFOLIO_ITEMS)) {
-        if ($db_port_count < count($GAON_PORTFOLIO_ITEMS) || isset($_GET['sync'])) {
             foreach ($GAON_PORTFOLIO_ITEMS as $item) {
                 $pid = (int)$item['id'];
-                $chk = mysqli_query($conn, "SELECT id FROM portfolio WHERE id = $pid LIMIT 1");
-                if ($chk && mysqli_num_rows($chk) == 0) {
-                    $cat = mysqli_real_escape_string($conn, $item['category']);
-                    $ttl = mysqli_real_escape_string($conn, $item['title']);
-                    $clt = mysqli_real_escape_string($conn, isset($item['client']) ? $item['client'] : '');
-                    $loc = mysqli_real_escape_string($conn, isset($item['location']) ? $item['location'] : '');
-                    $scl = mysqli_real_escape_string($conn, isset($item['scale']) ? $item['scale'] : '');
-                    $dsc = mysqli_real_escape_string($conn, isset($item['description']) ? $item['description'] : '');
-                    $thb = mysqli_real_escape_string($conn, isset($item['thumb']) ? $item['thumb'] : '');
-                    $imgs_json = mysqli_real_escape_string($conn, json_encode(isset($item['images']) ? $item['images'] : array()));
-                    $sort = isset($item['id']) ? (int)$item['id'] : 0;
-                    mysqli_query($conn, "
-                        INSERT INTO portfolio 
-                            (id, category, title, client, location, scale, description, thumb, images, sort_order, status, created_at, updated_at)
-                        VALUES
-                            ($pid, '$cat', '$ttl', '$clt', '$loc', '$scl', '$dsc', '$thb', '$imgs_json', $sort, 'active', NOW(), NOW())
-                    ");
-                }
+                $cat = mysqli_real_escape_string($conn, $item['category']);
+                $ttl = mysqli_real_escape_string($conn, $item['title']);
+                $clt = mysqli_real_escape_string($conn, isset($item['client']) ? $item['client'] : '');
+                $loc = mysqli_real_escape_string($conn, isset($item['location']) ? $item['location'] : '');
+                $scl = mysqli_real_escape_string($conn, isset($item['scale']) ? $item['scale'] : '');
+                $dsc = mysqli_real_escape_string($conn, isset($item['description']) ? $item['description'] : '');
+                $thb = mysqli_real_escape_string($conn, isset($item['thumb']) ? $item['thumb'] : '');
+                $imgs_json = mysqli_real_escape_string($conn, json_encode(isset($item['images']) ? $item['images'] : array()));
+                $sort = isset($item['sort_order']) ? (int)$item['sort_order'] : $pid;
+                mysqli_query($conn, "
+                    INSERT INTO portfolio 
+                        (id, category, title, client, location, scale, description, thumb, images, sort_order, status, created_at, updated_at)
+                    VALUES
+                        ($pid, '$cat', '$ttl', '$clt', '$loc', '$scl', '$dsc', '$thb', '$imgs_json', $sort, 'active', NOW(), NOW())
+                    ON DUPLICATE KEY UPDATE
+                        sort_order = VALUES(sort_order),
+                        title = VALUES(title),
+                        category = VALUES(category),
+                        thumb = VALUES(thumb),
+                        images = VALUES(images)
+                ");
             }
             if (isset($_GET['sync'])) {
                 header('Location: admin_portfolio.php?msg=synced');

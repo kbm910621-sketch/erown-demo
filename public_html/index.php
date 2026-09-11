@@ -51,17 +51,22 @@ foreach ($list as $item) {
   if (in_array($item['category'], array('taxi','mart','did','print'))) $portOther[] = $item;
 }
 
-// 01 옥외광고 (버스/택시 등) 기본 샘플 데이터 및 보충
+// 01 옥외광고 (버스/택시/택배 등) 기본 샘플 데이터 및 보충 (최신 등록 사례 최우선 배치)
 $defaultBus = array(
-  array('id'=>1, 'category'=>'bus', 'title'=>'상무지구 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/bs_ad/ooh11/차도면광고.png'),
-  array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'thumb'=>'/images/bs_ad/ooh11/인도면광고.png'),
-  array('id'=>3, 'category'=>'bus', 'title'=>'교차로 신호 대기 차량 타깃 시내버스 후면 래핑', 'thumb'=>'/images/bs_ad/ooh11/노선도01.png'),
-  array('id'=>4, 'category'=>'bus', 'title'=>'광주 시내버스 내부 중앙창문 포스터', 'thumb'=>'/images/bs_ad/ooh11/버스시트광고01.png'),
-  array('id'=>5, 'category'=>'bus', 'title'=>'수완지구 학원가 집중 배차 버스 차도면 3.7m', 'thumb'=>'/images/bs_ad/ooh11/하차문광고01.png'),
-  array('id'=>6, 'category'=>'bus', 'title'=>'광주역·송정역 KTX 연계 간선버스 인도면 래핑', 'thumb'=>'/images/bs_ad/ooh11/버스음성광고.png'),
-  array('id'=>7, 'category'=>'bus', 'title'=>'첨단지구 대단지 아파트 경유 버스 후면 번호판', 'thumb'=>'/images/bs_ad/ooh11/유스퀘어광고.png'),
-  array('id'=>8, 'category'=>'bus', 'title'=>'도심 순환01번 시내버스 전담 음성 방송 광고', 'thumb'=>'/images/bs_ad/ooh11/DID광고.png'),
-  array('id'=>64, 'category'=>'mart', 'title'=>'더스마트병원 대형마트 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/port/mart/mart_01.jpg')
+  array('id'=>65, 'category'=>'taxi', 'title'=>'광주안과의원 전면·측면 고광택 택시 랩핑 광고', 'thumb'=>'/images/port/port_taxi_01.jpg', 'sort_order'=>1),
+  array('id'=>66, 'category'=>'bus', 'title'=>'해태아이스 부라보콘 지원45번 버스 3면 풀래핑 광고', 'thumb'=>'/images/port/port_bus_bravo_01.jpg', 'sort_order'=>2),
+  array('id'=>67, 'category'=>'taxi', 'title'=>'더스마트병원 골절·관절 전문케어 택배차량 래핑 광고', 'thumb'=>'/images/port/port_truck_smart_01.jpg', 'sort_order'=>3),
+  array('id'=>68, 'category'=>'taxi', 'title'=>'삼성스토어 광천점 오픈·가전 페스타 택배차량 30대 래핑 광고', 'thumb'=>'/images/port/port_truck_samsung_01.jpg', 'sort_order'=>4),
+  array('id'=>69, 'category'=>'taxi', 'title'=>'스마트인재개발원 IT·AI 취업과정 모집 택배차량 10대 래핑 광고', 'thumb'=>'/images/port/port_truck_smhrd_01.jpg', 'sort_order'=>5),
+  array('id'=>70, 'category'=>'taxi', 'title'=>'신수정 시의원 지역밀착 의정보고 택배차량 10대 홍보 래핑', 'thumb'=>'/images/port/port_truck_sinsujeong_01.jpg', 'sort_order'=>6),
+  array('id'=>71, 'category'=>'taxi', 'title'=>'정다은 변호사 무료법률상담·전문클리닉 택배차량 40대 래핑 광고', 'thumb'=>'/images/port/port_truck_jungdaeun_01.jpg', 'sort_order'=>7),
+  array('id'=>72, 'category'=>'taxi', 'title'=>'하트치과 분과별 전문진료 택배차량 5대 양면 래핑 광고', 'thumb'=>'/images/port/port_truck_heartdental_01.jpg', 'sort_order'=>8),
+  array('id'=>73, 'category'=>'bus', 'title'=>'광주 시내버스 간선노선 측면 와이드 래핑 광고', 'thumb'=>'/images/port/port_bus_new_01.jpg', 'sort_order'=>9),
+  array('id'=>74, 'category'=>'shelter', 'title'=>'광주 도심 주요 거점 버스승강장 와이드 조명 쉘터 광고', 'thumb'=>'/images/port/port_bus_new_05.jpg', 'sort_order'=>10),
+  array('id'=>75, 'category'=>'bus', 'title'=>'광주 대중교통 시내버스 차도면·후면 복합 래핑 캠페인', 'thumb'=>'/images/port/port_bus_new_09.jpg', 'sort_order'=>11),
+  array('id'=>1, 'category'=>'bus', 'title'=>'상무지구 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/bs_ad/ooh11/차도면광고.png', 'sort_order'=>100),
+  array('id'=>2, 'category'=>'bus', 'title'=>'광주 주요 간선도로 시내버스 인도면 표준 래핑', 'thumb'=>'/images/bs_ad/ooh11/인도면광고.png', 'sort_order'=>101),
+  array('id'=>64, 'category'=>'mart', 'title'=>'더스마트병원 대형마트 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/port/mart/mart_01.jpg', 'sort_order'=>102)
 );
 if (empty($portBus)) {
   $portBus = $defaultBus;

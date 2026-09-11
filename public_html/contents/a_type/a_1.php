@@ -35,7 +35,7 @@ if ($conn) {
     if (!empty($GAON_PORTFOLIO_ITEMS)) {
         foreach ($GAON_PORTFOLIO_ITEMS as $itm) {
             $nid = (int)$itm['id'];
-            $sord = $nid;
+            $sord = isset($itm['sort_order']) ? (int)$itm['sort_order'] : $nid;
             $cat  = mysqli_real_escape_string($conn, $itm['category']);
             $tit  = mysqli_real_escape_string($conn, $itm['title']);
             $cli  = mysqli_real_escape_string($conn, $itm['client']);
@@ -44,7 +44,7 @@ if ($conn) {
             $des  = mysqli_real_escape_string($conn, $itm['description']);
             $thm  = mysqli_real_escape_string($conn, $itm['thumb']);
             $imgs = mysqli_real_escape_string($conn, json_encode($itm['images']));
-            @mysqli_query($conn, "INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale`, `description`, `thumb`, `images`, `is_featured`, `sort_order`, `status`, `created_at`, `updated_at`) VALUES ($nid, '$cat', '$tit', '$cli', '$loc', '$sca', '$des', '$thm', '$imgs', 1, $sord, 'active', NOW(), NOW()) ON DUPLICATE KEY UPDATE `title`=VALUES(`title`), `client`=VALUES(`client`), `scale`=VALUES(`scale`), `description`=VALUES(`description`), `thumb`=VALUES(`thumb`), `images`=VALUES(`images`), `category`=VALUES(`category`)");
+            @mysqli_query($conn, "INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale`, `description`, `thumb`, `images`, `is_featured`, `sort_order`, `status`, `created_at`, `updated_at`) VALUES ($nid, '$cat', '$tit', '$cli', '$loc', '$sca', '$des', '$thm', '$imgs', 1, $sord, 'active', NOW(), NOW()) ON DUPLICATE KEY UPDATE `sort_order`=VALUES(`sort_order`), `title`=VALUES(`title`), `client`=VALUES(`client`), `scale`=VALUES(`scale`), `description`=VALUES(`description`), `thumb`=VALUES(`thumb`), `images`=VALUES(`images`), `category`=VALUES(`category`)");
         }
     }
 
