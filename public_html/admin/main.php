@@ -8,23 +8,47 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/admin/inc/head.php";
 $today = date('Y-m-d');
 
 // 1. Estimates
+$tot_est = 0;
 $sql_est_total = "SELECT COUNT(*) FROM estmate";
 $res_est_total = mysqli_query($conn, $sql_est_total);
-$tot_est = $res_est_total ? (int)mysqli_fetch_array($res_est_total)[0] : 0;
+if ($res_est_total) {
+    $row_est_total = mysqli_fetch_array($res_est_total);
+    if ($row_est_total) {
+        $tot_est = (int)$row_est_total[0];
+    }
+}
 
+$today_est = 0;
 $sql_est_today = "SELECT COUNT(*) FROM estmate WHERE DATE(est_regdate) = '$today'";
 $res_est_today = mysqli_query($conn, $sql_est_today);
-$today_est = $res_est_today ? (int)mysqli_fetch_array($res_est_today)[0] : 0;
+if ($res_est_today) {
+    $row_est_today = mysqli_fetch_array($res_est_today);
+    if ($row_est_today) {
+        $today_est = (int)$row_est_today[0];
+    }
+}
 
 // 2. Portfolio
+$tot_port = 0;
 $sql_port_total = "SELECT COUNT(*) FROM portfolio";
 $res_port_total = mysqli_query($conn, $sql_port_total);
-$tot_port = $res_port_total ? (int)mysqli_fetch_array($res_port_total)[0] : 0;
+if ($res_port_total) {
+    $row_port_total = mysqli_fetch_array($res_port_total);
+    if ($row_port_total) {
+        $tot_port = (int)$row_port_total[0];
+    }
+}
 
 // 3. Popups
+$tot_pop = 0;
 $sql_pop_total = "SELECT COUNT(*) FROM popup";
 $res_pop_total = mysqli_query($conn, $sql_pop_total);
-$tot_pop = $res_pop_total ? (int)mysqli_fetch_array($res_pop_total)[0] : 0;
+if ($res_pop_total) {
+    $row_pop_total = mysqli_fetch_array($res_pop_total);
+    if ($row_pop_total) {
+        $tot_pop = (int)$row_pop_total[0];
+    }
+}
 
 $cat_map = array(
     'bus'     => '시내버스 광고',
