@@ -61,7 +61,7 @@
 .am-bg-slate { background:#f8fafc; border-bottom-color:#e2e8f0; }
 .am-bg-dark { background:#0b1329; border-bottom-color:#1e293b; color:#ffffff; }
 
-.am-sec-head { margin-bottom:44px; }
+.am-sec-head { margin-bottom:64px; }
 .ash-flex { display:flex; justify-content:space-between; align-items:flex-end; gap:40px; flex-wrap:wrap; }
 .ash-actions { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
 .ash-kicker { display:block; font-size:11.5px; font-weight:800; letter-spacing:0.18em; color:#1855b7; margin-bottom:10px; }
@@ -396,7 +396,7 @@
 /* CATEGORY-SPECIFIC SUB-PORTFOLIO STRIP STYLES */
 .am-sub-port-strip { margin-top:60px; padding-top:40px; border-top:1px solid #e2e8f0; }
 .am-sub-port-strip.dark { border-top-color:rgba(255,255,255,0.1); }
-.asps-head { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:24px; }
+.asps-head { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:36px; }
 .asps-title-wrap { display:flex; flex-direction:column; gap:4px; }
 .asps-kicker { font-size:11px; font-weight:900; letter-spacing:0.12em; color:#1855b7; }
 .asps-kicker.green { color:#16a34a; }
@@ -1714,7 +1714,7 @@ body.modal-lock { overflow:hidden !important; }
 /* ==========================================================================
    02. DIGITAL MARKETING SECTION (PC BASE & 100% STICKY PINNING)
 ========================================================================== */
-#online { position:relative; overflow:visible; padding:80px 0 120px; background:#ffffff; }
+#online { position:relative; overflow:visible; background:#ffffff; }
 #online .am-container { position:relative; overflow:visible; }
 .som-layout-stage { display:flex; justify-content:space-between; align-items:flex-start; position:relative; overflow:visible; min-height:1400px; width:100%; }
 .som-left-content { position:-webkit-sticky; position:sticky; top:110px; align-self:flex-start; display:flex; flex-direction:column; gap:20px; width:440px; max-width:440px; flex-shrink:0; box-sizing:border-box; z-index:20; }
@@ -6588,7 +6588,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 .broadcast.is-step-2 { background:#f4f7fb; }
 .broadcast-track { height:180vh; position:relative; width:100%; }
 .broadcast-sticky { position:sticky; top:0; width:100%; height:100vh; min-height:760px; max-height:1080px; display:flex; flex-direction:column; justify-content:center; overflow:hidden; padding:130px 0 48px; box-sizing:border-box; background:transparent; }
-.broadcast-head { max-width:1720px; width:100%; margin:0 auto clamp(20px,2vw,32px); padding:0 clamp(40px,5vw,100px); box-sizing:border-box; text-align:center; }
+.broadcast-head { max-width:1720px; width:100%; margin:0 auto clamp(36px, 3.5vw, 56px); padding:0 clamp(40px,5vw,100px); box-sizing:border-box; text-align:center; }
 .broadcast-kicker { font-size:13px; font-weight:800; letter-spacing:0.18em; color:#1855b7; text-transform:uppercase; display:inline-block; margin-bottom:8px; font-family:"Poppins","Pretendard",sans-serif; }
 .broadcast-head-title { font-size:clamp(32px,3vw,42px); font-weight:800; line-height:1.18; letter-spacing:-1.2px; color:#0f172a; margin:0 0 10px; word-break:keep-all; font-family:"Pretendard","Apple SD Gothic Neo",sans-serif; }
 .broadcast-head-desc { font-size:16px; line-height:1.6; color:#64748b; font-weight:500; margin:0 auto; max-width:640px; word-break:keep-all; }
@@ -6704,7 +6704,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   background: rgba(20, 47, 78, 0.11);
   position: relative;
   overflow: hidden;
-  margin: 38px 0 40px;
+  margin: 48px 0 52px;
   box-sizing: border-box;
 }
 
@@ -6896,7 +6896,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 56px;
+  margin-bottom: 68px;
   gap: 30px;
   visibility: visible !important;
   opacity: 1 !important;
@@ -7382,7 +7382,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 .ga-process-editorial-sec { padding: 95px 0 190px; background: #ffffff; position: relative; border-top: none; }
 
 .gpe-header-row {
-  margin-bottom: 60px;
+  margin-bottom: 72px;
   text-align: left;
 }
 
@@ -7823,8 +7823,10 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   .go-header-row,
   .gp-header-row,
   .gpe-header-row,
-  .som-title-wrap {
-    margin-bottom: 24px !important;
+  .som-title-wrap,
+  .am-sec-head,
+  .asps-head {
+    margin-bottom: 34px !important;
   }
 
   .ash-kicker,
@@ -7987,7 +7989,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   .broadcast { padding:0 !important; border:none !important; background:#ffffff !important; transition:none !important; }
   .broadcast-track { height:auto !important; }
   .broadcast-sticky { position:static !important; height:auto !important; min-height:0 !important; max-height:none !important; padding:0 !important; overflow:visible !important; }
-  .broadcast-head { padding:104px 20px 24px !important; margin:0 !important; }
+  .broadcast-head { padding:104px 20px 32px !important; margin:0 !important; }
   .broadcast-head-title { font-size:clamp(26px,6.8vw,32px) !important; line-height:1.25 !important; letter-spacing:-0.8px !important; margin:0 0 8px !important; }
   .broadcast-head-desc { font-size:14.5px !important; line-height:1.65 !important; }
   .broadcast-mob-tabs { display:grid !important; grid-template-columns:1fr 1fr !important; gap:6px !important; max-width:320px !important; margin:20px auto 0 !important; padding:4px !important; background:#f1f5f9 !important; border-radius:10px !important; border:1px solid #e2e8f0 !important; }
@@ -8034,7 +8036,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
     text-align: center !important;
   }
   .gp-motion-line-track {
-    margin: 30px 0 32px !important;
+    margin: 34px 0 38px !important;
   }
   .gp-motion-line-segment {
     width: 16% !important;
