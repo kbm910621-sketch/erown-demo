@@ -1385,8 +1385,10 @@ if (!empty($active_popups)) {
               <div class="broadcast-logo">
                 <img src="/images/broadcast/kbc.png" alt="KBC" class="broadcast-logo-img">
               </div>
-              <span class="broadcast-exclusive-tag">가온엔 공식 독점 연계 프로그램</span>
-              <h3 class="broadcast-title">닥터365</h3>
+              <div class="broadcast-title-row">
+                <h3 class="broadcast-title">닥터365</h3>
+                <span class="broadcast-exclusive-badge">가온엔 독점 연계</span>
+              </div>
               <p class="broadcast-desc">
                 의료진의 전문성과 병원의 핵심 정보를 방송 콘텐츠로 구성해<br class="pc_only">
                 지역 시청자에게 효과적으로 전달하는 KBC 건강정보 프로그램입니다.
@@ -1417,7 +1419,6 @@ if (!empty($active_popups)) {
               <div class="broadcast-logo">
                 <img src="/images/broadcast/mbc.png" alt="MBC" class="broadcast-logo-img">
               </div>
-              <span class="broadcast-program-tag">광주MBC 대표 의료·건강 정보 프로그램</span>
               <h3 class="broadcast-title">건강365</h3>
               <p class="broadcast-desc">
                 의료진의 전문적인 건강 정보를 방송 콘텐츠로 전달하여<br class="pc_only">
