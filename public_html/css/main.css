@@ -5551,7 +5551,7 @@ body.menu-open {
 /* ==========================================================================
    08 GAON-N ALL-IN-ONE INLINE FOOTER (클래스당 가로 1줄 단일화 적용)
 ========================================================================== */
-.am-master-conversion-section { width: 100% !important; padding: 40px 0 100px !important; background: #ffffff !important; }
+.am-master-conversion-section { width: 100% !important; padding: 110px 0 130px !important; background: #ffffff !important; }
 .am-master-conversion-section .am-container { width: 100% !important; max-width: 1650px !important; margin: 0 auto !important; padding: 0 40px !important; box-sizing: border-box !important; }
 .masstige-agency-box { width: 100% !important; box-sizing: border-box !important; background: linear-gradient(145deg, #07152c 0%, #0d2244 50%, #061327 100%); border: 1.5px solid rgba(255, 255, 255, 0.12); border-radius: 28px; padding: 72px 64px 64px; display: grid; grid-template-columns: 1fr 1.35fr; gap: 60px; align-items: stretch; color: #ffffff; box-shadow: 0 24px 70px rgba(7, 21, 44, 0.2); position: relative; overflow: hidden; }
 .masstige-left-col { display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
@@ -6641,15 +6641,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 /* ========================================================================== */
 /* 04-B. CLIENTS & PARTNERS CENTERED SHOWCASE (.ga-partners-sec)              */
 /* ========================================================================== */
-.ga-partners-sec {
-  padding: 88px 0 95px;
-  background: #ffffff;
-  color: #0f172a;
-  position: relative;
-  z-index: 5;
-  border-top: none;
-  border-bottom: none;
-}
+.ga-partners-sec { padding: 130px 0 140px; background: #ffffff; color: #0f172a; position: relative; z-index: 5; border-top: none; border-bottom: none; }
 
 .gp-container {
   max-width: 1720px;
@@ -7392,12 +7384,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 /* ========================================================================== */
 /* 03. GAON-N BESPOKE EDITORIAL WORKFLOW PIPELINE (#process)                  */
 /* ========================================================================== */
-.ga-process-editorial-sec {
-  padding: 55px 0 140px;
-  background: #ffffff;
-  position: relative;
-  border-top: none;
-}
+.ga-process-editorial-sec { padding: 130px 0 140px; background: #ffffff; position: relative; border-top: none; }
 
 .gpe-header-row {
   margin-bottom: 60px;
@@ -7830,11 +7817,11 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   #online,
   #video,
   #archive.am-section {
-    padding: 68px 0 60px !important;
+    padding: 84px 0 !important;
   }
 
   .am-master-conversion-section {
-    padding: 56px 0 70px !important;
+    padding: 72px 0 84px !important;
   }
 
   /* 3. UNIFIED HEADERS & TYPOGRAPHY */
@@ -8040,10 +8027,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   @keyframes mobFadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
 
   /* 5-B. SECTION CLIENTS & PARTNERS (CENTERED SHOWCASE + MOTION LINE) */
-  .ga-partners-sec {
-    padding: 64px 0 72px !important;
-    border: none !important;
-  }
+  .ga-partners-sec { padding: 84px 0 !important; border: none !important; }
   .gp-header-row {
     text-align: center !important;
     margin: 0 auto !important;
@@ -8093,10 +8077,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   }
 
   /* 5-C. PROCESS SECTION TRANSITION */
-  .ga-process-editorial-sec {
-    padding-top: 42px !important;
-    border-top: none !important;
-  }
+  .ga-process-editorial-sec { padding: 84px 0 !important; border-top: none !important; }
 
   /* 6. SECTION 01 OOH MEDIA */
   .go-stage-grid {
