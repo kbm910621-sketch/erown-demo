@@ -1178,7 +1178,7 @@ if (!empty($active_popups)) {
       <div class="avs-glow glow-right"></div>
     </div>
 
-    <div class="am-container" style="position:relative; z-index:2;">
+    <div class="am-container am-sec-head" style="position:relative; z-index:2; text-align:center; margin-bottom:80px;">
       <span class="ash-kicker cyan">03 / VIDEO &amp; CONTENT PRODUCTION</span>
       <h2 class="ash-title white">영상제작 솔루션</h2>
       <p class="ash-desc light" style="margin:0 auto;">브랜드 홍보영상부터 SNS 릴스·숏폼, DID 등 매체별 영상 콘텐츠를 기획·촬영·편집합니다.</p>
