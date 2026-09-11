@@ -1417,9 +1417,9 @@ if (!empty($active_popups)) {
 
               <!-- PROGRESS STEP INDICATOR (01 — 02) -->
               <div class="gbp-step-indicator" aria-label="프로그램 진행 순서">
-                <span class="gsi-num gsi-01">01</span>
+                <button type="button" class="gsi-num gsi-01" aria-label="MBC 건강365 보기">01</button>
                 <span class="gsi-dash">—</span>
-                <span class="gsi-num gsi-02">02</span>
+                <button type="button" class="gsi-num gsi-02" aria-label="KBC 닥터365 보기">02</button>
               </div>
 
             </div>

@@ -6600,9 +6600,9 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   background: #f4f7fb;
 }
 
-/* Desktop Sticky Track (200vh pinned scroll track) */
+/* Desktop Sticky Track (180vh calibrated sticky scroll track) */
 .gbp-desktop-track {
-  height: 200vh;
+  height: 180vh;
   position: relative;
   width: 100%;
 }
@@ -6849,33 +6849,52 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   visibility: visible;
 }
 
-/* Progress Step Indicator (01 — 02) */
+/* Progress Step Indicator (01 — 02 Interactive Sync) */
 .gbp-step-indicator {
   position: absolute;
   left: 0;
   bottom: -48px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-family: "Poppins", "Pretendard", sans-serif;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.1em;
   color: #94a3b8;
   user-select: none;
+  z-index: 10;
 }
 
 .gsi-num {
-  transition: color 0.4s ease, font-weight 0.4s ease;
+  background: none;
+  border: none;
+  padding: 4px 6px;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: color 0.35s ease, font-weight 0.35s ease, transform 0.2s ease;
+  line-height: 1;
+  display: inline-block;
+  outline: none;
+}
+
+.gsi-num:hover {
+  color: #1855b7;
+  transform: translateY(-1px);
 }
 
 .gsi-dash {
   color: #cbd5e1;
+  font-size: 12px;
 }
 
 .ga-broadcast-sec.is-step-1 .gsi-01 {
   color: #1855b7;
   font-weight: 800;
+  cursor: default;
 }
 
 .ga-broadcast-sec.is-step-1 .gsi-02 {
@@ -6891,6 +6910,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 .ga-broadcast-sec.is-step-2 .gsi-02 {
   color: #1855b7;
   font-weight: 800;
+  cursor: default;
 }
 
 /* Right: Visual Media Stage (Overlapping Images) */

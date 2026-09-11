@@ -1660,30 +1660,56 @@ $(function() {
     function updateStickyStep() {
       if (window.innerWidth <= 768) return;
 
-      var secRect = $sec[0].getBoundingClientRect();
-      var secTop = secRect.top;
-      var secHeight = secRect.height;
+      var trackRect = $track[0].getBoundingClientRect();
+      var trackTop = trackRect.top;
+      var trackHeight = $track[0].offsetHeight;
       var windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
-      // When the section starts pinning at top of screen:
-      var totalScrollable = secHeight - windowHeight;
+      // When the section pins at top of viewport:
+      var totalScrollable = trackHeight - windowHeight;
       if (totalScrollable <= 0) return;
 
-      // How far we have scrolled past the sticky start point:
-      var currentScroll = -secTop;
+      // Scroll progress through the sticky track:
+      var currentScroll = -trackTop;
       var progress = currentScroll / totalScrollable;
 
-      // Transition smoothly from MBC (Step 1) to KBC (Step 2)
-      if (progress >= 0.38) {
+      // Progress Segmentation:
+      // 0.00 ~ 0.38 : STEP 01 (MBC 건강365) Solid View
+      // 0.38 ~ 0.58 : Transition Window (trigger at 0.48 down, 0.42 up with hysteresis)
+      // 0.58 ~ 0.88 : STEP 02 (KBC 닥터365) Solid View
+      // 0.88 ~ 1.00 : Seamless exit to PARTNERS
+      if (progress >= 0.48) {
         if (!$sec.hasClass('is-step-2')) {
           $sec.removeClass('is-step-1').addClass('is-step-2');
         }
-      } else {
+      } else if (progress <= 0.42) {
         if (!$sec.hasClass('is-step-1')) {
           $sec.removeClass('is-step-2').addClass('is-step-1');
         }
       }
     }
+
+    // 01 / 02 Direct Click Synchronization
+    $(document).on('click', '.gbp-step-indicator .gsi-num', function(e) {
+      e.preventDefault();
+      if (window.innerWidth <= 768) return;
+
+      var $btn = $(this);
+      var trackOffsetTop = $track.offset().top;
+      var trackHeight = $track[0].offsetHeight;
+      var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      var totalScrollable = trackHeight - windowHeight;
+
+      if (totalScrollable <= 0) return;
+
+      // 01 -> 18% (MBC sweet spot), 02 -> 70% (KBC sweet spot)
+      var targetProgress = $btn.hasClass('gsi-02') ? 0.70 : 0.18;
+      var targetY = trackOffsetTop + (totalScrollable * targetProgress);
+
+      $('html, body').stop().animate({
+        scrollTop: targetY
+      }, 450);
+    });
 
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll, { passive: true });
