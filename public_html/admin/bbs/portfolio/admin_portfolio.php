@@ -838,11 +838,20 @@ if ($result) {
                           $loc_txt = $row['location'] ? htmlspecialchars($row['location']) : '-';
                           $title_txt = htmlspecialchars($row['title']);
                           $title_safe = htmlspecialchars(addslashes($row['title']));
+
+                          $imgs_arr = array($thumb_src);
+                          if (!empty($row['images'])) {
+                              $dec = is_array($row['images']) ? $row['images'] : json_decode($row['images'], true);
+                              if (is_array($dec) && count($dec) > 0) {
+                                  $imgs_arr = array_map('normalize_port_img', $dec);
+                              }
+                          }
+                          $imgs_json = htmlspecialchars(json_encode($imgs_arr), ENT_QUOTES, 'UTF-8');
                   ?>
                   <tr>
                       <td class="resp"><?=$cnt?></td>
                       <td>
-                          <a href="javascript:void(0);" onclick="openImgModal('<?=$thumb_src?>', '<?=$title_safe?>', '<?=$cat_title?>');" title="사진 크게보기 (클릭)">
+                          <a href="javascript:void(0);" onclick="openImgModal('<?=$thumb_src?>', '<?=$title_safe?>', '<?=$cat_title?>', <?=$imgs_json?>);" title="사진 크게보기 (클릭)">
                               <img src="<?=$thumb_src?>" alt="" class="port-thumb-img">
                           </a>
                       </td>
@@ -882,12 +891,26 @@ if ($result) {
                       $client_txt = $row['client'] ? htmlspecialchars($row['client']) : '가온엔 광고';
                       $title_txt = htmlspecialchars($row['title']);
                       $title_safe = htmlspecialchars(addslashes($row['title']));
+
+                      $imgs_arr = array($thumb_src);
+                      if (!empty($row['images'])) {
+                          $dec = is_array($row['images']) ? $row['images'] : json_decode($row['images'], true);
+                          if (is_array($dec) && count($dec) > 0) {
+                              $imgs_arr = array_map('normalize_port_img', $dec);
+                          }
+                      }
+                      $imgs_json = htmlspecialchars(json_encode($imgs_arr), ENT_QUOTES, 'UTF-8');
+                      $has_multi = count($imgs_arr) > 1;
               ?>
               <div class="port-card">
-                  <a href="javascript:void(0);" onclick="openImgModal('<?=$thumb_src?>', '<?=$title_safe?>', '<?=$cat_title?>');" class="port-card-thumb-wrap" title="사진 크게보기 (클릭)">
+                  <a href="javascript:void(0);" onclick="openImgModal('<?=$thumb_src?>', '<?=$title_safe?>', '<?=$cat_title?>', <?=$imgs_json?>);" class="port-card-thumb-wrap" title="사진 크게보기 (클릭)" style="position:relative;">
                       <img src="<?=$thumb_src?>" alt="<?=$title_txt?>">
                       <span class="port-card-cat-tag"><?=$cat_title?></span>
+                      <?php if ($has_multi): ?>
+                      <span style="position:absolute; bottom:8px; right:8px; background:rgba(15,23,42,0.85); color:#60a5fa; font-size:11px; font-weight:700; padding:2px 7px; border-radius:10px; border:1px solid rgba(96,165,250,0.4);">📷 <?=count($imgs_arr)?>장</span>
+                      <?php else: ?>
                       <span class="port-zoom-badge">🔍 사진확대</span>
+                      <?php endif; ?>
                   </a>
                   <div class="port-card-body">
                       <div>
@@ -935,8 +958,10 @@ if ($result) {
       <div style="font-size:15px; font-weight:700;" id="modalImgTitle">포트폴리오 사진 확대</div>
       <button type="button" onclick="closeImgModal()" style="background:none; border:none; color:#fff; font-size:24px; line-height:1; cursor:pointer; padding:0 4px;" title="닫기">&times;</button>
     </div>
-    <div style="padding:15px; background:#1e293b; display:flex; justify-content:center; align-items:center; overflow:auto; max-height:calc(90vh - 120px);">
-      <img id="modalImgTag" src="" alt="" style="max-width:100%; max-height:calc(85vh - 140px); object-fit:contain; border-radius:6px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
+    <div style="position:relative; padding:15px; background:#1e293b; display:flex; justify-content:center; align-items:center; overflow:auto; max-height:calc(90vh - 120px);">
+      <img id="modalImgTag" src="" alt="" style="max-width:100%; max-height:calc(85vh - 140px); object-fit:contain; border-radius:6px; box-shadow:0 4px 15px rgba(0,0,0,0.5); transition:opacity 0.2s ease;">
+      <!-- Admin Modal Photo Dots -->
+      <div id="adminModalDots" style="display:none; position:absolute; bottom:25px; left:50%; transform:translateX(-50%); background:rgba(15,23,42,0.85); padding:6px 14px; border-radius:999px; border:1px solid rgba(255,255,255,0.25); gap:8px; align-items:center; z-index:10; box-shadow:0 4px 12px rgba(0,0,0,0.4);"></div>
     </div>
     <div style="padding:12px 20px; background:#f8fafc; border-top:1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center;">
       <span id="modalImgCat" style="font-size:13px; font-weight:700; color:#2563eb;"></span>
@@ -946,16 +971,61 @@ if ($result) {
 </div>
 
 <script>
-function openImgModal(src, title, cat) {
+var adminModalImgs = [];
+var adminModalIdx = 0;
+
+function switchAdminPhoto(idx) {
+    if (!adminModalImgs || adminModalImgs.length === 0) return;
+    if (idx < 0) idx = adminModalImgs.length - 1;
+    if (idx >= adminModalImgs.length) idx = 0;
+    adminModalIdx = idx;
+
+    var $img = $('#modalImgTag');
+    $img.css('opacity', '0.4');
+    setTimeout(function() {
+        $img.attr('src', adminModalImgs[idx]);
+        $img.css('opacity', '1');
+    }, 100);
+
+    $('.admin-dot-btn').css({ background: 'rgba(255,255,255,0.4)', width: '9px', borderRadius: '50%' });
+    $('.admin-dot-btn[data-idx="' + idx + '"]').css({ background: '#2563eb', width: '22px', borderRadius: '999px' });
+}
+
+function openImgModal(src, title, cat, images) {
     if (!src) return;
-    $('#modalImgTag').attr('src', src);
+    if (Array.isArray(images) && images.length > 0) {
+        adminModalImgs = images;
+    } else {
+        adminModalImgs = [src];
+    }
+    adminModalIdx = 0;
+
+    $('#modalImgTag').attr('src', adminModalImgs[0]);
     $('#modalImgTitle').text(title || '포트폴리오 사진 확대');
     $('#modalImgCat').text(cat || '');
+
+    var $dots = $('#adminModalDots');
+    if (adminModalImgs.length > 1) {
+        var dotsHtml = '';
+        adminModalImgs.forEach(function(u, i) {
+            var activeStyle = (i === 0) ? 'background:#2563eb; width:22px; border-radius:999px;' : 'background:rgba(255,255,255,0.4); width:9px; border-radius:50%;';
+            dotsHtml += '<button type="button" class="admin-dot-btn" data-idx="' + i + '" style="height:9px; border:none; padding:0; cursor:pointer; outline:none; transition:all 0.2s; ' + activeStyle + '" title="사진 ' + (i+1) + '"></button>';
+        });
+        $dots.html(dotsHtml).css('display', 'flex');
+    } else {
+        $dots.hide().empty();
+    }
+
     $('#imgPreviewModal').css('display', 'flex').hide().fadeIn(150);
 }
 function closeImgModal() {
     $('#imgPreviewModal').fadeOut(150);
 }
+$(document).on('click', '.admin-dot-btn', function(e) {
+    e.stopPropagation();
+    var idx = parseInt($(this).data('idx'), 10) || 0;
+    switchAdminPhoto(idx);
+});
 $(document).on('click', '#imgPreviewModal', function(e) {
     if (e.target === this) closeImgModal();
 });

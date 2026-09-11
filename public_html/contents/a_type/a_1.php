@@ -234,6 +234,12 @@ $totalCount = count($list);
               <span class="mbp-video-play-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> 10초 영상 (스틸컷 캡쳐본)</span>
               <?php elseif ($hasMultiple): ?>
               <span class="mbp-multi-badge" title="다중 사진 등록">📷 <?php echo count($imagesArray); ?>장</span>
+              <!-- Card Multi-photo Dots Switcher (카드 위에서 동그라미로 2장 이상 바로 전환) -->
+              <div class="mbp-card-photo-dots" onclick="event.stopPropagation();">
+                <?php foreach ($imagesArray as $dIdx => $dUrl): ?>
+                <button type="button" class="mbp-card-dot-btn <?php echo $dIdx === 0 ? 'active' : ''; ?>" data-img-url="<?php echo htmlspecialchars($dUrl, ENT_QUOTES, 'UTF-8'); ?>" data-idx="<?php echo $dIdx; ?>" title="<?php echo ($dIdx + 1); ?>번 사진 보기" aria-label="<?php echo ($dIdx + 1); ?>번 사진 보기"></button>
+                <?php endforeach; ?>
+              </div>
               <?php endif; ?>
               <div class="mbp-img-overlay">
                 <span class="mbp-view-btn"><?php echo $videoSrc ? '▶ 10초 영상 재생 (캡쳐본)' : 'View Detail ➔'; ?></span>
@@ -383,7 +389,7 @@ $totalCount = count($list);
 .pm-img-wrap img.is-fading {
   opacity: 0.3;
 }
-/* 사진을 가리지 않는 슬림한 플로팅 동그라미 도트 */
+/* 사진을 가리지 않는 슬림한 플로팅 동그라미 도트 (모달) */
 .pm-photo-dots {
   position: absolute;
   bottom: 14px;
@@ -420,6 +426,52 @@ $totalCount = count($list);
   border-radius: 999px;
   background: #2563eb;
   box-shadow: 0 0 8px rgba(37, 99, 235, 0.8);
+}
+
+/* 카드 위 다중 사진 동그라미(도트) 인디케이터 */
+.mbp-card-photo-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(15, 23, 42, 0.78);
+  padding: 5px 12px;
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+}
+.mbp-card-dot-btn {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.mbp-card-dot-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: scale(1.3);
+}
+.mbp-card-dot-btn.active {
+  width: 22px;
+  border-radius: 999px;
+  background: #2563eb;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.9);
+}
+.mbp-img-box img {
+  transition: opacity 0.2s ease, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.mbp-img-box img.is-switching {
+  opacity: 0.35;
 }
 </style>
 
@@ -537,9 +589,11 @@ $(document).ready(function() {
     if (idx < 0) idx = matchedCards.length - 1;
     if (idx >= matchedCards.length) idx = 0;
     currentModalIndex = idx;
-    currentPhotoIndex = 0;
 
     var $card = $(matchedCards[idx]);
+    var savedPhotoIdx = parseInt($card.data('selected-photo-idx'), 10) || 0;
+    currentPhotoIndex = savedPhotoIdx;
+
     var title = $card.data('name');
     var tag = $card.data('tag');
     var date = $card.data('date');
@@ -560,6 +614,8 @@ $(document).ready(function() {
       if (!u) return '/images/bs_ad/baro.jpg';
       return u.replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/');
     });
+
+    if (currentPhotoIndex >= currentModalImages.length) currentPhotoIndex = 0;
 
     $('#modalTitle').text(title);
     $('#modalCat').text(tag + (scale ? ' · ' + scale : ''));
@@ -589,7 +645,7 @@ $(document).ready(function() {
         $vEl[0].pause();
         $vEl.attr('src', '').hide();
       }
-      $imgEl.show().attr('src', currentModalImages[0]);
+      $imgEl.show().attr('src', currentModalImages[currentPhotoIndex]);
       $('#modalCtaBtn').text('이 매체 집행 견적 문의 ➔');
 
       // Render Sleek Dots if multiple photos
@@ -597,7 +653,7 @@ $(document).ready(function() {
       if (currentModalImages.length > 1) {
         var dotsHtml = '';
         currentModalImages.forEach(function(imgUrl, pIdx) {
-          dotsHtml += '<button type="button" class="pm-dot-btn ' + (pIdx === 0 ? 'active' : '') + '" data-idx="' + pIdx + '" title="사진 ' + (pIdx + 1) + '"></button>';
+          dotsHtml += '<button type="button" class="pm-dot-btn ' + (pIdx === currentPhotoIndex ? 'active' : '') + '" data-idx="' + pIdx + '" title="사진 ' + (pIdx + 1) + '"></button>';
         });
         $dotsWrap.html(dotsHtml).show();
       } else {
@@ -607,6 +663,29 @@ $(document).ready(function() {
 
     $('#modalBackdrop').addClass('open');
   }
+
+  // Card Dot Click Event (카드 목록 위에서 동그라미 클릭 시 사진 즉시 전환)
+  $(document).on('click', '.mbp-card-dot-btn', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    var $dot = $(this);
+    var targetImgUrl = $dot.data('img-url');
+    var pIdx = parseInt($dot.data('idx'), 10) || 0;
+    var $card = $dot.closest('.mbp-card-item');
+    var $img = $card.find('.mbp-img-box img');
+
+    $card.find('.mbp-card-dot-btn').removeClass('active');
+    $dot.addClass('active');
+
+    $img.addClass('is-switching');
+    setTimeout(function() {
+      $img.attr('src', targetImgUrl);
+      $img.removeClass('is-switching');
+    }, 100);
+
+    $card.data('selected-photo-idx', pIdx);
+  });
 
   function closeModal() {
     var $vEl = $('#modalVideo');
