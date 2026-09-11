@@ -1642,7 +1642,7 @@ $(function() {
   /* 04. BROADCAST PROGRAM STICKY SHOWCASE SCROLL CONTROLLER */
   function initBroadcastStickyShowcase() {
     var $sec = $('#broadcast');
-    var $track = $sec.find('.gbp-desktop-track');
+    var $track = $sec.find('.broadcast-track');
     if (!$sec.length || !$track.length) return;
 
     var ticking = false;
@@ -1665,24 +1665,22 @@ $(function() {
       var trackHeight = $track[0].offsetHeight;
       var windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
-      // When the section pins at top of viewport:
       var totalScrollable = trackHeight - windowHeight;
       if (totalScrollable <= 0) return;
 
-      // Scroll progress through the sticky track:
       var currentScroll = -trackTop;
       var progress = currentScroll / totalScrollable;
 
-      // Progress Segmentation:
-      // 0.00 ~ 0.38 : STEP 01 (MBC 건강365) Solid View
-      // 0.38 ~ 0.58 : Transition Window (trigger at 0.48 down, 0.42 up with hysteresis)
-      // 0.58 ~ 0.88 : STEP 02 (KBC 닥터365) Solid View
+      // Progress Stages:
+      // 0.00 ~ 0.35 : STEP 01 (MBC 건강365) Solid View
+      // 0.35 ~ 0.55 : Scene Transition (trigger at 0.46 down, 0.40 up with hysteresis)
+      // 0.55 ~ 0.88 : STEP 02 (KBC 닥터365) Solid View
       // 0.88 ~ 1.00 : Seamless exit to PARTNERS
-      if (progress >= 0.48) {
+      if (progress >= 0.46) {
         if (!$sec.hasClass('is-step-2')) {
           $sec.removeClass('is-step-1').addClass('is-step-2');
         }
-      } else if (progress <= 0.42) {
+      } else if (progress <= 0.40) {
         if (!$sec.hasClass('is-step-1')) {
           $sec.removeClass('is-step-2').addClass('is-step-1');
         }
@@ -1690,7 +1688,7 @@ $(function() {
     }
 
     // 01 / 02 Direct Click Synchronization
-    $(document).on('click', '.gbp-step-indicator .gsi-num', function(e) {
+    $(document).on('click', '.broadcast-nav-btn', function(e) {
       e.preventDefault();
       if (window.innerWidth <= 768) return;
 
@@ -1703,7 +1701,7 @@ $(function() {
       if (totalScrollable <= 0) return;
 
       // 01 -> 18% (MBC sweet spot), 02 -> 70% (KBC sweet spot)
-      var targetProgress = $btn.hasClass('gsi-02') ? 0.70 : 0.18;
+      var targetProgress = $btn.hasClass('bnb-02') ? 0.70 : 0.18;
       var targetY = trackOffsetTop + (totalScrollable * targetProgress);
 
       $('html, body').stop().animate({
