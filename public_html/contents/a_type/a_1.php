@@ -31,6 +31,9 @@ if ($conn) {
     @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'shelter' WHERE id IN ($shelterIds) AND (category = '' OR category = 'bus' OR category IS NULL)");
     @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'did' WHERE id IN (16, 45)");
 
+    // Clean up any orphan unbundled test items (id 80~100) if present
+    @mysqli_query($conn, "DELETE FROM `portfolio` WHERE id >= 80 AND id < 101");
+
     // Auto-sync all items from portfolio_seed_data.php
     if (!empty($GAON_PORTFOLIO_ITEMS)) {
         foreach ($GAON_PORTFOLIO_ITEMS as $itm) {
@@ -664,12 +667,14 @@ $(document).ready(function() {
     $('#modalBackdrop').addClass('open');
   }
 
-  // Card Dot Click Event (카드 목록 위에서 동그라미 클릭 시 사진 즉시 전환)
-  $(document).on('click', '.mbp-card-dot-btn', function(e) {
+  // Card Dot Event (마우스 클릭 또는 호버 시 사진 즉시 전환)
+  $(document).on('click mouseenter', '.mbp-card-dot-btn', function(e) {
     e.preventDefault();
     e.stopPropagation();
 
     var $dot = $(this);
+    if ($dot.hasClass('active')) return;
+
     var targetImgUrl = $dot.data('img-url');
     var pIdx = parseInt($dot.data('idx'), 10) || 0;
     var $card = $dot.closest('.mbp-card-item');
@@ -682,7 +687,7 @@ $(document).ready(function() {
     setTimeout(function() {
       $img.attr('src', targetImgUrl);
       $img.removeClass('is-switching');
-    }, 100);
+    }, 90);
 
     $card.data('selected-photo-idx', pIdx);
   });
