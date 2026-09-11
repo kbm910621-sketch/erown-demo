@@ -6583,29 +6583,59 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 
 /* ========================================================================== */
 /* 04. BROADCAST PROGRAM SECTION (.ga-broadcast-sec)                          */
+/* STICKY SHOWCASE (PC) & STACKED EDITORIAL (MOBILE)                          */
 /* ========================================================================== */
 .ga-broadcast-sec {
-  padding: 88px 0 0;
+  position: relative;
+  width: 100%;
   background: #ffffff;
   color: #0f172a;
-  position: relative;
   z-index: 5;
   border-top: none;
   border-bottom: none;
+  transition: background-color 0.85s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gbp-header-container {
-  max-width: 1680px;
+.ga-broadcast-sec.is-step-2 {
+  background: #f4f7fb;
+}
+
+/* Desktop Sticky Track (200vh pinned scroll track) */
+.gbp-desktop-track {
+  height: 200vh;
+  position: relative;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 clamp(48px, 6vw, 120px);
+}
+
+.gbp-sticky-frame {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 720px;
+  max-height: 1080px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent;
+  padding: 30px 0 40px;
   box-sizing: border-box;
 }
 
-/* Section Header (Left-aligned, standard section typography) */
+/* Centered Header */
+.gbp-header-container {
+  max-width: 1720px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(40px, 5vw, 100px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
 .gbp-header-row {
-  margin-bottom: clamp(48px, 4.5vw, 64px);
-  text-align: left;
+  margin: 0 auto clamp(36px, 3.8vw, 56px);
+  text-align: center;
 }
 
 .gbp-kicker {
@@ -6614,79 +6644,74 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   letter-spacing: 0.18em;
   color: #1855b7;
   text-transform: uppercase;
-  display: block;
-  margin-bottom: 12px;
+  display: inline-block;
+  margin-bottom: 10px;
   font-family: "Poppins", "Pretendard", sans-serif;
 }
 
 .gbp-title {
-  font-size: clamp(34px, 3.4vw, 46px);
+  font-size: clamp(34px, 3.2vw, 44px);
   font-weight: 800;
   line-height: 1.18;
   letter-spacing: -1.2px;
   color: #0f172a;
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   word-break: keep-all;
   font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
 }
 
 .gbp-desc {
-  font-size: 17px;
-  line-height: 1.65;
+  font-size: 16.5px;
+  line-height: 1.62;
   color: #64748b;
   font-weight: 500;
-  margin: 0;
-  max-width: 680px;
+  margin: 0 auto;
+  max-width: 640px;
   word-break: keep-all;
 }
 
-/* Full-Width Solution Rows Stack (Seamless transition between scenes) */
-.gbp-solution-rows {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Solution Row Base */
-.gbp-sol-row {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* ROW 01: Pure White Scene */
-.gbp-row-white {
-  background: #ffffff;
-  padding: clamp(16px, 2vw, 32px) 0 clamp(64px, 6vw, 90px);
-}
-
-/* ROW 02: Pale Blue-Gray Scene (Seamlessly follows ROW 01 without white margin) */
-.gbp-row-pale-blue {
-  background: #f4f7fb;
-  padding: clamp(76px, 6.5vw, 104px) 0;
-}
-
-/* Inner Container: 54% Text / 46% Image */
-.gbp-sol-inner {
-  max-width: 1680px;
+/* Main Showcase Stage (Grid 40% Text / 60% Visual) */
+.gbp-stage-container {
+  max-width: 1720px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 clamp(48px, 6vw, 120px);
-  display: grid;
-  grid-template-columns: 54% 46%;
-  gap: clamp(40px, 5vw, 76px);
-  align-items: center;
+  padding: 0 clamp(40px, 5vw, 100px);
   box-sizing: border-box;
 }
 
-/* Left: Grand Editorial Text Block (54%) */
-.gbp-sol-text {
+.gbp-stage-grid {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: clamp(40px, 5vw, 84px);
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Left: Overlapping Crossfading Text Stack */
+.gbp-text-col {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding-right: clamp(10px, 2vw, 32px);
+}
+
+.gbp-text-layer {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  box-sizing: border-box;
-  padding-right: clamp(12px, 2vw, 36px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;
+  will-change: transform, opacity;
 }
 
 .gbp-station {
@@ -6699,39 +6724,50 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   font-family: "Poppins", "Pretendard", sans-serif;
 }
 
-/* Grand Scale Program Name: PC 72~88px */
+/* Grand Program Name: PC 64~80px */
 .gbp-prog-title {
-  font-size: clamp(56px, 5.2vw, 84px);
+  font-size: clamp(60px, 4.8vw, 78px);
   font-weight: 750;
   line-height: 1.04;
   letter-spacing: -0.035em;
   color: #0f172a;
-  margin: 0 0 22px;
+  margin: 0 0 20px;
   word-break: keep-all;
   font-family: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* KBC Exclusive Editorial Block */
+/* KBC Exclusive Block */
 .gbp-exclusive-block {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 }
 
 .gbp-ex-kicker {
   font-size: 11.5px;
-  font-weight: 800;
-  letter-spacing: 0.18em;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   color: #1855b7;
   text-transform: uppercase;
   display: block;
-  margin-bottom: 4px;
   font-family: "Poppins", "Pretendard", sans-serif;
 }
 
+.gbp-ex-line {
+  width: 0;
+  height: 1.5px;
+  background: #1855b7;
+  margin: 5px 0 6px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+}
+
+.is-step-2 .gbp-ex-line {
+  width: 38px;
+}
+
 .gbp-ex-title {
-  font-size: 18px;
+  font-size: 17.5px;
   font-weight: 700;
   color: #0f172a;
   letter-spacing: -0.4px;
@@ -6739,16 +6775,19 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 }
 
 .gbp-prog-desc {
-  font-size: 16.5px;
-  line-height: 1.72;
+  font-size: 16px;
+  line-height: 1.7;
   color: #596270;
   font-weight: 500;
-  margin: 0 0 32px;
+  margin: 0 0 28px;
   word-break: keep-all;
-  max-width: 520px;
+  max-width: 480px;
 }
 
-/* Editorial CTA Link */
+.gbp-cta-wrap {
+  display: block;
+}
+
 .gbp-cta-link {
   display: inline-flex;
   align-items: center;
@@ -6781,37 +6820,130 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   font-weight: 800;
 }
 
-/* Right: Visual Media Block (46%) */
-.gbp-sol-media {
+/* PC Crossfade Text State Management */
+.ga-broadcast-sec.is-step-1 .gbp-text-layer.is-mbc {
+  opacity: 1;
+  transform: translateY(-50%);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.ga-broadcast-sec.is-step-1 .gbp-text-layer.is-kbc {
+  opacity: 0;
+  transform: translateY(calc(-50% + 14px));
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.ga-broadcast-sec.is-step-2 .gbp-text-layer.is-mbc {
+  opacity: 0;
+  transform: translateY(calc(-50% - 14px));
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.ga-broadcast-sec.is-step-2 .gbp-text-layer.is-kbc {
+  opacity: 1;
+  transform: translateY(-50%);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/* Progress Step Indicator (01 — 02) */
+.gbp-step-indicator {
+  position: absolute;
+  left: 0;
+  bottom: -48px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Poppins", "Pretendard", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+  user-select: none;
+}
+
+.gsi-num {
+  transition: color 0.4s ease, font-weight 0.4s ease;
+}
+
+.gsi-dash {
+  color: #cbd5e1;
+}
+
+.ga-broadcast-sec.is-step-1 .gsi-01 {
+  color: #1855b7;
+  font-weight: 800;
+}
+
+.ga-broadcast-sec.is-step-1 .gsi-02 {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.ga-broadcast-sec.is-step-2 .gsi-01 {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.ga-broadcast-sec.is-step-2 .gsi-02 {
+  color: #1855b7;
+  font-weight: 800;
+}
+
+/* Right: Visual Media Stage (Overlapping Images) */
+.gbp-media-col {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-.gbp-media-frame {
+.gbp-visual-stage {
   position: relative;
   width: 100%;
-  max-width: 680px;
-  max-height: 410px;
-  aspect-ratio: 16 / 10;
+  height: clamp(430px, 32vw, 520px);
   border-radius: 12px;
   overflow: hidden;
   background: #e2e8f0;
   box-sizing: border-box;
 }
 
-.gbp-media-img {
+.gbp-img-layer {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transform: scale(1);
-  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
 }
 
-.gbp-sol-row:hover .gbp-media-img {
+.ga-broadcast-sec.is-step-1 .gbp-img-layer.is-mbc {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ga-broadcast-sec.is-step-1 .gbp-img-layer.is-kbc {
+  opacity: 0;
+  transform: scale(1.035);
+}
+
+.ga-broadcast-sec.is-step-2 .gbp-img-layer.is-mbc {
+  opacity: 0;
   transform: scale(1.025);
+}
+
+.ga-broadcast-sec.is-step-2 .gbp-img-layer.is-kbc {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gbp-visual-stage:hover .gbp-img-layer {
+  transform: scale(1.025) !important;
 }
 
 /* ========================================================================== */
@@ -8185,57 +8317,79 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 
   /* 5-A. SECTION BROADCAST PROGRAM */
   .ga-broadcast-sec {
-    padding: 60px 0 0 !important;
+    padding: 0 !important;
     border: none !important;
+    background: #ffffff !important;
+    transition: none !important;
   }
-  .gbp-header-container {
-    padding: 0 20px !important;
+  .gbp-desktop-track {
+    display: none !important;
   }
-  .gbp-header-row {
-    margin-bottom: 36px !important;
+  .gbp-mobile-stack {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
   }
-  .gbp-solution-rows {
-    gap: 0 !important;
+  .gbp-mob-header {
+    text-align: center !important;
+    padding: 60px 20px 32px !important;
   }
-  .gbp-row-white {
-    padding: 10px 0 44px !important;
+  .gbp-mob-card {
+    width: 100% !important;
+    padding: 24px 20px 48px !important;
+    box-sizing: border-box !important;
   }
-  .gbp-row-pale-blue {
-    padding: 44px 0 48px !important;
+  .gbp-mob-mbc {
+    background: #ffffff !important;
   }
-  .gbp-sol-inner {
-    padding: 0 20px !important;
-    grid-template-columns: 1fr !important;
-    gap: 22px !important;
+  .gbp-mob-kbc {
+    background: #f4f7fb !important;
+    padding-top: 48px !important;
   }
-  .gbp-sol-text {
-    padding-right: 0 !important;
-  }
-  .gbp-prog-title {
-    font-size: clamp(44px, 11.5vw, 54px) !important;
-    line-height: 1.05 !important;
-    letter-spacing: -0.03em !important;
-    margin-bottom: 14px !important;
-  }
-  .gbp-exclusive-block {
-    margin-bottom: 14px !important;
-  }
-  .gbp-ex-title {
-    font-size: 16.5px !important;
-  }
-  .gbp-prog-desc {
-    font-size: 15px !important;
-    line-height: 1.65 !important;
+  .gbp-mob-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
     margin-bottom: 22px !important;
   }
-  .gbp-cta-link {
-    font-size: 15px !important;
-    margin-bottom: 4px !important;
+  .gbp-mob-card .gbp-station {
+    margin-bottom: 8px !important;
   }
-  .gbp-media-frame {
-    max-height: none !important;
+  .gbp-mob-card .gbp-prog-title {
+    font-size: clamp(38px, 10vw, 48px) !important;
+    line-height: 1.06 !important;
+    letter-spacing: -0.03em !important;
+    margin-bottom: 12px !important;
+  }
+  .gbp-mob-card .gbp-exclusive-block {
+    margin-bottom: 12px !important;
+  }
+  .gbp-mob-card .gbp-ex-line {
+    width: 38px !important;
+  }
+  .gbp-mob-card .gbp-ex-title {
+    font-size: 16px !important;
+  }
+  .gbp-mob-card .gbp-prog-desc {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 20px !important;
+  }
+  .gbp-mob-card .gbp-cta-link {
+    font-size: 15px !important;
+  }
+  .gbp-mob-media {
+    width: 100% !important;
     aspect-ratio: 16 / 10 !important;
     border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #e2e8f0 !important;
+  }
+  .gbp-mob-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
   }
 
   /* 5-B. SECTION CLIENTS & PARTNERS (CENTERED SHOWCASE + MOTION LINE) */

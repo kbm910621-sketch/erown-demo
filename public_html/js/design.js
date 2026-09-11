@@ -1639,4 +1639,56 @@ $(function() {
   }
   initPartnerDiagonalWave();
 
+  /* 04. BROADCAST PROGRAM STICKY SHOWCASE SCROLL CONTROLLER */
+  function initBroadcastStickyShowcase() {
+    var $sec = $('#broadcast');
+    var $track = $sec.find('.gbp-desktop-track');
+    if (!$sec.length || !$track.length) return;
+
+    var ticking = false;
+
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          updateStickyStep();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+
+    function updateStickyStep() {
+      if (window.innerWidth <= 768) return;
+
+      var secRect = $sec[0].getBoundingClientRect();
+      var secTop = secRect.top;
+      var secHeight = secRect.height;
+      var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+      // When the section starts pinning at top of screen:
+      var totalScrollable = secHeight - windowHeight;
+      if (totalScrollable <= 0) return;
+
+      // How far we have scrolled past the sticky start point:
+      var currentScroll = -secTop;
+      var progress = currentScroll / totalScrollable;
+
+      // Transition smoothly from MBC (Step 1) to KBC (Step 2)
+      if (progress >= 0.38) {
+        if (!$sec.hasClass('is-step-2')) {
+          $sec.removeClass('is-step-1').addClass('is-step-2');
+        }
+      } else {
+        if (!$sec.hasClass('is-step-1')) {
+          $sec.removeClass('is-step-2').addClass('is-step-1');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    updateStickyStep();
+  }
+  initBroadcastStickyShowcase();
+
 });

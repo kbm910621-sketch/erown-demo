@@ -1349,75 +1349,152 @@ if (!empty($active_popups)) {
 
   <!-- ============================================
        04 SECTION : BROADCAST PROGRAM (#broadcast)
+       STICKY SHOWCASE (PC) / STACKED EDITORIAL (MOBILE)
   ============================================ -->
-  <section class="ga-broadcast-sec" id="broadcast">
+  <section class="ga-broadcast-sec is-step-1" id="broadcast">
     
-    <!-- SECTION HEADER (Inside standard container) -->
-    <div class="gbp-header-container">
-      <div class="gbp-header-row wow fadeInUp" data-wow-duration="0.8s">
-        <span class="gbp-kicker">BROADCAST PROGRAM</span>
-        <h2 class="gbp-title">방송 연계 프로그램</h2>
-        <p class="gbp-desc">
-          지역 방송과 의료기관을 연결해<br class="pc_only">
-          방송 프로그램 연계부터 진행까지 함께합니다.
-        </p>
+    <!-- DESKTOP STICKY SHOWCASE (>= 769px) -->
+    <div class="gbp-desktop-track pc_only">
+      <div class="gbp-sticky-frame">
+        
+        <!-- CENTERED SECTION HEADER -->
+        <div class="gbp-header-container">
+          <div class="gbp-header-row wow fadeInUp" data-wow-duration="0.8s">
+            <span class="gbp-kicker">BROADCAST PROGRAM</span>
+            <h2 class="gbp-title">방송 연계 프로그램</h2>
+            <p class="gbp-desc">
+              지역 방송과 의료기관을 연결해<br class="pc_only">
+              방송 프로그램 연계부터 진행까지 함께합니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- MAIN SHOWCASE STAGE -->
+        <div class="gbp-stage-container">
+          <div class="gbp-stage-grid">
+            
+            <!-- LEFT: OVERLAPPING CROSSFADE TEXT LAYERS -->
+            <div class="gbp-text-col">
+              
+              <!-- STEP 01 : MBC 건강365 -->
+              <div class="gbp-text-layer is-mbc">
+                <span class="gbp-station">MBC</span>
+                <h3 class="gbp-prog-title">건강365</h3>
+                <p class="gbp-prog-desc">
+                  의료·건강 정보를 방송 콘텐츠로 전달하는<br class="pc_only">
+                  지역 건강정보 프로그램
+                </p>
+                <div class="gbp-cta-wrap">
+                  <a href="#contact" class="gbp-cta-link">
+                    <span>건강365 문의</span>
+                    <span class="gbp-cta-arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- STEP 02 : KBC 닥터365 (EXCLUSIVE) -->
+              <div class="gbp-text-layer is-kbc">
+                <span class="gbp-station">KBC</span>
+                <h3 class="gbp-prog-title">닥터365</h3>
+                
+                <div class="gbp-exclusive-block">
+                  <span class="gbp-ex-kicker">GAON-N EXCLUSIVE</span>
+                  <div class="gbp-ex-line"></div>
+                  <strong class="gbp-ex-title">가온엔 독점 연계 프로그램</strong>
+                </div>
+
+                <p class="gbp-prog-desc">
+                  의료진의 전문적인 건강 정보를<br class="pc_only">
+                  지역 시청자에게 전달하는 건강 프로그램
+                </p>
+                <div class="gbp-cta-wrap">
+                  <a href="#contact" class="gbp-cta-link gbp-cta-exclusive">
+                    <span>닥터365 독점 연계 문의</span>
+                    <span class="gbp-cta-arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- PROGRESS STEP INDICATOR (01 — 02) -->
+              <div class="gbp-step-indicator" aria-label="프로그램 진행 순서">
+                <span class="gsi-num gsi-01">01</span>
+                <span class="gsi-dash">—</span>
+                <span class="gsi-num gsi-02">02</span>
+              </div>
+
+            </div>
+
+            <!-- RIGHT: OVERLAPPING CROSSFADE IMAGE LAYERS -->
+            <div class="gbp-media-col">
+              <div class="gbp-visual-stage">
+                <img src="/images/broadcast/broadcast_mbc_365.jpg" alt="MBC 건강365 방송 연계 프로그램" class="gbp-img-layer is-mbc" loading="lazy">
+                <img src="/images/broadcast/broadcast_kbc_365.jpg" alt="KBC 닥터365 가온엔 독점 연계 프로그램" class="gbp-img-layer is-kbc" loading="lazy">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <!-- FULL-WIDTH SOLUTION ROWS -->
-    <div class="gbp-solution-rows">
+    <!-- MOBILE STACKED VIEW (<= 768px) -->
+    <div class="gbp-mobile-stack mob_only">
       
-      <!-- ROW 01 : MBC 건강365 (WHITE BACKGROUND) -->
-      <div class="gbp-sol-row gbp-row-white">
-        <div class="gbp-sol-inner">
-          <div class="gbp-sol-text wow fadeInUp" data-wow-duration="0.75s" data-wow-delay="0.1s">
-            <span class="gbp-station">MBC</span>
-            <h3 class="gbp-prog-title">건강365</h3>
-            <p class="gbp-prog-desc">
-              의료·건강 정보를 방송 콘텐츠로 전달하는<br class="pc_only">
-              지역 건강정보 프로그램
-            </p>
+      <!-- MOBILE HEADER -->
+      <div class="gbp-mob-header">
+        <span class="gbp-kicker">BROADCAST PROGRAM</span>
+        <h2 class="gbp-title">방송 연계 프로그램</h2>
+        <p class="gbp-desc">
+          지역 방송과 의료기관을 연결해<br>
+          방송 프로그램 연계부터 진행까지 함께합니다.
+        </p>
+      </div>
+
+      <!-- MOBILE PROGRAM 01 : MBC (WHITE) -->
+      <div class="gbp-mob-card gbp-mob-mbc">
+        <div class="gbp-mob-content">
+          <span class="gbp-station">MBC</span>
+          <h3 class="gbp-prog-title">건강365</h3>
+          <p class="gbp-prog-desc">
+            의료·건강 정보를 방송 콘텐츠로 전달하는<br>
+            지역 건강정보 프로그램
+          </p>
+          <div class="gbp-cta-wrap">
             <a href="#contact" class="gbp-cta-link">
               <span>건강365 문의</span>
               <span class="gbp-cta-arrow">↗</span>
             </a>
           </div>
-
-          <div class="gbp-sol-media wow fadeInUp" data-wow-duration="0.85s" data-wow-delay="0.2s">
-            <div class="gbp-media-frame">
-              <img src="/images/broadcast/broadcast_mbc_365.jpg" alt="MBC 건강365 방송 연계 프로그램" class="gbp-media-img" loading="lazy">
-            </div>
-          </div>
+        </div>
+        <div class="gbp-mob-media">
+          <img src="/images/broadcast/broadcast_mbc_365.jpg" alt="MBC 건강365 방송 연계 프로그램" class="gbp-mob-img" loading="lazy">
         </div>
       </div>
 
-      <!-- ROW 02 : KBC 닥터365 (PALE BLUE-GRAY BACKGROUND) -->
-      <div class="gbp-sol-row gbp-row-pale-blue">
-        <div class="gbp-sol-inner">
-          <div class="gbp-sol-text wow fadeInUp" data-wow-duration="0.75s" data-wow-delay="0.1s">
-            <span class="gbp-station">KBC</span>
-            <h3 class="gbp-prog-title">닥터365</h3>
-            
-            <div class="gbp-exclusive-block">
-              <span class="gbp-ex-kicker">GAON-N EXCLUSIVE</span>
-              <strong class="gbp-ex-title">가온엔 독점 연계 프로그램</strong>
-            </div>
-
-            <p class="gbp-prog-desc">
-              의료진의 전문적인 건강 정보를<br class="pc_only">
-              지역 시청자에게 전달하는 건강 프로그램
-            </p>
+      <!-- MOBILE PROGRAM 02 : KBC (PALE BLUE-GRAY) -->
+      <div class="gbp-mob-card gbp-mob-kbc">
+        <div class="gbp-mob-content">
+          <span class="gbp-station">KBC</span>
+          <h3 class="gbp-prog-title">닥터365</h3>
+          <div class="gbp-exclusive-block">
+            <span class="gbp-ex-kicker">GAON-N EXCLUSIVE</span>
+            <div class="gbp-ex-line"></div>
+            <strong class="gbp-ex-title">가온엔 독점 연계 프로그램</strong>
+          </div>
+          <p class="gbp-prog-desc">
+            의료진의 전문적인 건강 정보를<br>
+            지역 시청자에게 전달하는 건강 프로그램
+          </p>
+          <div class="gbp-cta-wrap">
             <a href="#contact" class="gbp-cta-link gbp-cta-exclusive">
               <span>닥터365 독점 연계 문의</span>
               <span class="gbp-cta-arrow">↗</span>
             </a>
           </div>
-
-          <div class="gbp-sol-media wow fadeInUp" data-wow-duration="0.85s" data-wow-delay="0.2s">
-            <div class="gbp-media-frame">
-              <img src="/images/broadcast/broadcast_kbc_365.jpg" alt="KBC 닥터365 가온엔 독점 연계 프로그램" class="gbp-media-img" loading="lazy">
-            </div>
-          </div>
+        </div>
+        <div class="gbp-mob-media">
+          <img src="/images/broadcast/broadcast_kbc_365.jpg" alt="KBC 닥터365 가온엔 독점 연계 프로그램" class="gbp-mob-img" loading="lazy">
         </div>
       </div>
 
