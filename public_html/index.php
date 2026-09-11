@@ -1409,7 +1409,7 @@ if (!empty($active_popups)) {
               </div>
             </div>
             <div class="broadcast-visual">
-              <img src="/images/broadcast/broadcast_kbc_365.jpg" alt="KBC 닥터365 가온엔 독점 연계 프로그램" class="broadcast-img" loading="lazy">
+              <img src="/images/broadcast/broadcast_kbc_365.jpg?v=<?php echo time(); ?>" alt="KBC 닥터365 가온엔 독점 연계 프로그램" class="broadcast-img" loading="lazy">
             </div>
           </div>
 
@@ -1417,7 +1417,7 @@ if (!empty($active_popups)) {
           <div class="broadcast-card is-mbc">
             <div class="broadcast-copy">
               <div class="broadcast-logo">
-                <img src="/images/broadcast/mbc.png" alt="MBC" class="broadcast-logo-img">
+                <img src="/images/broadcast/mbc.png?v=<?php echo time(); ?>" alt="MBC" class="broadcast-logo-img">
               </div>
               <h3 class="broadcast-title">건강365</h3>
               <p class="broadcast-desc">
@@ -1440,7 +1440,7 @@ if (!empty($active_popups)) {
               </div>
             </div>
             <div class="broadcast-visual">
-              <img src="/images/broadcast/broadcast_mbc_365.jpg" alt="MBC 건강365 방송 연계 프로그램" class="broadcast-img" loading="lazy">
+              <img src="/images/broadcast/broadcast_mbc_365.jpg?v=<?php echo time(); ?>" alt="MBC 건강365 방송 연계 프로그램" class="broadcast-img" loading="lazy">
             </div>
           </div>
 
