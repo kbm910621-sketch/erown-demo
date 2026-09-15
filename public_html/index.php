@@ -1341,9 +1341,9 @@ if (!empty($active_popups)) {
                   <div class="aru-action-btn">↗️</div>
                 </div>
                 <div class="aru-bottom-info">
-                  <span class="aru-brand-tag">@JOAJIN_HOSPITAL</span>
-                  <h4 class="aru-title">조아진병원 SNS 릴스 · 숏폼</h4>
-                  <p class="aru-desc">전문의 척추 자가진단 9:16 모바일 숏폼 영상</p>
+                  <span class="aru-brand-tag">@GAON_N_OFFICIAL</span>
+                  <h4 class="aru-title">SNS 릴스 · 유튜브 숏폼</h4>
+                  <p class="aru-desc">전문의 건강정보 9:16 모바일 세로형 숏폼</p>
                 </div>
               </div>
             </div>
@@ -1366,8 +1366,8 @@ if (!empty($active_popups)) {
           </div>
 
           <div class="avs-item-card" data-target-mode="shorts"
-              data-title="조아진병원 건강정보 SNS 릴스 · 쇼츠"
-              data-sub="전문의 직접 설명 모바일 9:16 세로형 숏폼">
+              data-title="SNS 릴스 · 유튜브 쇼츠 · 숏폼"
+              data-sub="전문의 건강정보 · 모바일 환경에 맞춘 세로형 영상 콘텐츠">
           <span class="avs-badge gold">02 / SOCIAL SHORTFORM</span>
           <strong class="avs-title">SNS 릴스 · 유튜브 숏폼</strong>
           <span class="avs-sub">9:16 모바일 세로형 콘텐츠</span>
