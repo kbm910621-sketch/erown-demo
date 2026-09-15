@@ -99,14 +99,18 @@
             <textarea name="in_memo" class="mfp-textarea" placeholder="문의 내용을 자유롭게 입력해주세요." rows="4" required></textarea>
           </div>
 
+          <div class="masstige-agree-box" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 11px 14px; font-size: 12px; color: #cbd5e1; line-height: 1.6; margin-top: 14px; margin-bottom: 12px; text-align: left;">
+            수집하는 개인정보 항목: 회사명, 담당자명, 연락처, 이메일<br>
+            수집 목적: 광고 상담 및 견적 안내 &nbsp;/&nbsp; 보유 기간: 상담 완료 후 1년
+          </div>
+
           <div class="masstige-action-row">
             <div class="masstige-privacy-group">
               <label class="masstige-chk-label">
                 <input type="checkbox" name="agree_privacy" id="agree_privacy" class="masstige-native-chk" required>
                 <span class="masstige-custom-dot"></span>
-                <span class="masstige-privacy-text">개인정보수집 및 이용에 동의합니다.</span>
+                <span class="masstige-privacy-text">개인정보 수집 및 이용에 동의합니다.</span>
               </label>
-              <a href="/contents/email.php" target="_blank" class="masstige-privacy-badge">전문보기</a>
             </div>
 
             <button type="submit" class="masstige-submit-btn">
