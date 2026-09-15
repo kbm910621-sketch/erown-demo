@@ -386,13 +386,13 @@ $GAON_PORTFOLIO_ITEMS = array(
   array(
     "id" => 86,
     "category" => "video",
-    "badge" => "BRAND·VIDEO",
-    "tag" => "병원 브랜드 홍보영상",
+    "badge" => "10s·VIDEO",
+    "tag" => "10초 영상 (스틸컷 캡쳐본)",
     "title" => "병원 브랜드 홍보영상 기획·촬영·편집",
     "client" => "하이온요양병원",
     "location" => "광주 전역",
-    "scale" => "FHD 16:9 와이드 브랜드 홍보영상",
-    "description" => "의료진 전문 인터뷰 및 입원실, 첨단 하이푸 치료 시설 등 병원의 강점과 편의 시설을 체계적으로 담아낸 고품질 브랜드 홍보영상",
+    "scale" => "10초 하이라이트 영상 (대표 프레임 캡쳐본)",
+    "description" => "의료진 전문 인터뷰 및 입원실, 첨단 치료 시설 10초 하이라이트 영상 및 대표 스틸컷 캡쳐본",
     "thumb" => "/images/port/video/video_thumb_hion.jpg",
     "images" => array(
       "/images/port/video/video_thumb_hion.jpg"
@@ -404,13 +404,13 @@ $GAON_PORTFOLIO_ITEMS = array(
   array(
     "id" => 87,
     "category" => "video",
-    "badge" => "9:16·SHORTS",
-    "tag" => "SNS 릴스 · 유튜브 숏폼",
+    "badge" => "10s·SHORTS",
+    "tag" => "10초 숏폼 (스틸컷 캡쳐본)",
     "title" => "병원 척추·관절 건강정보 SNS 릴스·숏폼 영상",
     "client" => "조아진병원",
     "location" => "광주 전역",
-    "scale" => "9:16 세로형 FHD 모바일 숏폼",
-    "description" => "전문의가 직접 설명하는 허리디스크 자가진단 및 건강정보를 모바일 사용자 눈높이에 맞춰 직관적으로 전달하는 숏폼 영상",
+    "scale" => "10초 세로형 숏폼 영상 (대표 프레임 캡쳐본)",
+    "description" => "전문의가 직접 설명하는 허리디스크 자가진단 및 건강정보 10초 하이라이트 숏폼 영상 및 대표 스틸컷 캡쳐본",
     "thumb" => "/images/port/video/video_thumb_joajin.jpg",
     "images" => array(
       "/images/port/video/video_thumb_joajin.jpg"

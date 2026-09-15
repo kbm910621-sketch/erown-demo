@@ -185,6 +185,7 @@ $totalCount = count($list);
                 else if ($cat === 'taxi') { $badgeText = 'SPECIAL·AD'; $tagText = '택시·택배·특화매체'; }
                 else if ($cat === 'bus') { $badgeText = 'BUS·AD'; $tagText = '시내버스 광고'; }
                 else if ($cat === 'mart') { $badgeText = 'MART·CART'; $tagText = '대형마트 카트'; }
+                else if ($cat === 'video') { $badgeText = '10s·VIDEO'; $tagText = '10초 영상 (스틸컷 캡쳐본)'; }
             }
 
             $imgSrc = normalize_port_img(!empty($item['thumb']) ? $item['thumb'] : '');

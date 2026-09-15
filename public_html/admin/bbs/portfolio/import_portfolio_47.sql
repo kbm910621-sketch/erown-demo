@@ -152,10 +152,10 @@ ON DUPLICATE KEY UPDATE `title`=VALUES(`title`), `client`=VALUES(`client`), `sca
 
 -- 86. 병원 브랜드 홍보영상 기획·촬영·편집
 INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale`, `description`, `thumb`, `images`, `video`, `is_featured`, `sort_order`, `status`, `created_at`, `updated_at`)
-VALUES (86, 'video', '병원 브랜드 홍보영상 기획·촬영·편집', '하이온요양병원', '광주 전역', 'FHD 16:9 와이드 브랜드 홍보영상', '의료진 전문 인터뷰 및 입원실, 첨단 하이푸 치료 시설 등 병원의 강점과 편의 시설을 체계적으로 담아낸 고품질 브랜드 홍보영상', '/images/port/video/video_thumb_hion.jpg', '["/images/port/video/video_thumb_hion.jpg"]', '/images/port/video/video_clip_hion.mp4', 1, 22, 'active', NOW(), NOW())
+VALUES (86, 'video', '병원 브랜드 홍보영상 기획·촬영·편집', '하이온요양병원', '광주 전역', '10초 하이라이트 영상 (대표 프레임 캡쳐본)', '의료진 전문 인터뷰 및 입원실, 첨단 치료 시설 10초 하이라이트 영상 및 대표 스틸컷 캡쳐본', '/images/port/video/video_thumb_hion.jpg', '["/images/port/video/video_thumb_hion.jpg"]', '/images/port/video/video_clip_hion.mp4', 1, 22, 'active', NOW(), NOW())
 ON DUPLICATE KEY UPDATE `title`=VALUES(`title`), `client`=VALUES(`client`), `scale`=VALUES(`scale`), `description`=VALUES(`description`), `thumb`=VALUES(`thumb`), `images`=VALUES(`images`), `video`=VALUES(`video`), `category`='video';
 
 -- 87. 병원 척추·관절 건강정보 SNS 릴스·숏폼 영상
 INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale`, `description`, `thumb`, `images`, `video`, `is_featured`, `sort_order`, `status`, `created_at`, `updated_at`)
-VALUES (87, 'video', '병원 척추·관절 건강정보 SNS 릴스·숏폼 영상', '조아진병원', '광주 전역', '9:16 세로형 FHD 모바일 숏폼', '전문의가 직접 설명하는 허리디스크 자가진단 및 건강정보를 모바일 사용자 눈높이에 맞춰 직관적으로 전달하는 숏폼 영상', '/images/port/video/video_thumb_joajin.jpg', '["/images/port/video/video_thumb_joajin.jpg"]', '/images/port/video/video_clip_joajin.mp4', 1, 23, 'active', NOW(), NOW())
+VALUES (87, 'video', '병원 척추·관절 건강정보 SNS 릴스·숏폼 영상', '조아진병원', '광주 전역', '10초 세로형 숏폼 영상 (대표 프레임 캡쳐본)', '전문의가 직접 설명하는 허리디스크 자가진단 및 건강정보 10초 하이라이트 숏폼 영상 및 대표 스틸컷 캡쳐본', '/images/port/video/video_thumb_joajin.jpg', '["/images/port/video/video_thumb_joajin.jpg"]', '/images/port/video/video_clip_joajin.mp4', 1, 23, 'active', NOW(), NOW())
 ON DUPLICATE KEY UPDATE `title`=VALUES(`title`), `client`=VALUES(`client`), `scale`=VALUES(`scale`), `description`=VALUES(`description`), `thumb`=VALUES(`thumb`), `images`=VALUES(`images`), `video`=VALUES(`video`), `category`='video';
