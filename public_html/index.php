@@ -1431,7 +1431,6 @@ if (!empty($active_popups)) {
               <div class="asps-info">
                 <div class="asps-title-row">
                   <strong class="asps-item-title white"><?php echo htmlspecialchars($vItem['title']); ?></strong>
-                  <span class="asps-title-arrow" style="color:#ffffff;">▶</span>
                 </div>
                 <span class="asps-item-loc light"><?php echo $vClient; ?> · 스틸컷 캡쳐본</span>
               </div>
