@@ -32,6 +32,12 @@
       <div class="masstige-right-col">
         <form class="masstige-form-wrap quickEstimateFormAjax" method="post" action="/board/estmate/process_quick_write.php">
           
+          <!-- Honeypot Field for Spam Bot Protection (Invisible to humans) -->
+          <div style="display:none !important; position:absolute !important; left:-9999px !important; width:0 !important; height:0 !important; opacity:0 !important; z-index:-1 !important; visibility:hidden !important;" aria-hidden="true">
+            <label for="bottom_hp_website">웹사이트</label>
+            <input type="text" name="hp_website" id="bottom_hp_website" autocomplete="off" tabindex="-1" value="">
+          </div>
+
           <div class="masstige-input-grid">
             <div class="masstige-field-pill">
               <span class="mfp-label">회사명</span>

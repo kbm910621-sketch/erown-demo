@@ -49,6 +49,12 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
             <div class="consult-right">
               <form name="frm" id="contactForm" method="post" action="process_write.php">
 
+                <!-- Honeypot Field for Spam Bot Protection (Invisible to humans) -->
+                <div style="display:none !important; position:absolute !important; left:-9999px !important; width:0 !important; height:0 !important; opacity:0 !important; z-index:-1 !important; visibility:hidden !important;" aria-hidden="true">
+                  <label for="hp_website">웹사이트</label>
+                  <input type="text" name="hp_website" id="hp_website" autocomplete="off" tabindex="-1" value="">
+                </div>
+
                 <!-- 01 회사 정보 -->
                 <div class="cf-section-head first anim">
                   <span class="cf-num">01</span>

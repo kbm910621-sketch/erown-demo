@@ -29,6 +29,23 @@ if (!preg_match($regEmail, $est_email)) {
     exit;
 }
 
+// 스팸봇 방지 필터 (Honeypot, 스팸 키워드, URL 도배 검증)
+include_once dirname(__FILE__) . "/spam_filter.php";
+$spam_check_data = array(
+    'hp_website' => isset($_POST['hp_website']) ? $_POST['hp_website'] : '',
+    'company'    => $est_company,
+    'name'       => $est_name,
+    'email'      => $est_email,
+    'position'   => $est_position,
+    'memo'       => $est_memo
+);
+$spam_result = check_estimate_spam($spam_check_data);
+if ($spam_result['is_spam']) {
+    // 스팸봇인 경우 DB 저장 및 SMS 발송을 건너뛰고 정상 완료된 것처럼 위장 응답
+    echo json_encode(array('status' => 'success', 'message' => '문의가 정상적으로 접수되었습니다. 확인 후 담당자가 신속히 연락드리겠습니다.'));
+    exit;
+}
+
 $sql = "
 INSERT INTO estmate
 (est_company, est_name, est_position, est_ad_type, est_phone, est_email, est_memo, est_regdate)
@@ -48,6 +65,9 @@ $result = mysqli_query($conn, $sql);
 if ($result === false) {
     echo json_encode(array('status' => 'error', 'message' => '접수 처리 중 데이터베이스 오류가 발생했습니다.'));
 } else {
+    // [SMS 연동 위치] 정상 등록 및 DB 저장 성공 시 담당자 알림 문자 발송
+    // send_sms_notification($est_name, $est_phone, $est_company);
+
     echo json_encode(array('status' => 'success', 'message' => '문의가 정상적으로 접수되었습니다. 확인 후 담당자가 신속히 연락드리겠습니다.'));
 }
 ?>
