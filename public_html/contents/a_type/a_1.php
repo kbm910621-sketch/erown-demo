@@ -8,7 +8,7 @@ $categories = array(
     'all'     => 'ALL',
     'bus'     => '시내버스 광고',
     'shelter' => '버스 승강장·쉘터',
-    'did'     => 'DID·터미널 광고',
+    'did'     => '터미널 광고',
     'taxi'    => '택시·택배·특화매체',
     'video'   => '영상제작',
     'mart'    => '대형마트 카트'
@@ -29,10 +29,10 @@ if ($conn) {
     
     $shelterIds = "2,4,5,10,11,12,19,21,26,30,32,34,39,41,42,43,44";
     @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'shelter' WHERE id IN ($shelterIds) AND (category = '' OR category = 'bus' OR category IS NULL)");
-    @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'did' WHERE id IN (16, 45)");
+    @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'did' WHERE id IN (16, 45, 81)");
 
-    // Clean up any orphan unbundled test items (id 80~100) if present
-    @mysqli_query($conn, "DELETE FROM `portfolio` WHERE id >= 80 AND id < 101");
+    // Clean up any orphan unbundled test items (id 82~100) if present
+    @mysqli_query($conn, "DELETE FROM `portfolio` WHERE id >= 82 AND id < 101");
 
     // Auto-sync all items from portfolio_seed_data.php
     if (!empty($GAON_PORTFOLIO_ITEMS)) {
@@ -122,7 +122,7 @@ $totalCount = count($list);
         <div class="mbp-title-row wow fadeInUp" data-wow-duration="0.6s">
           <div class="mbp-title-wrap">
             <h1 class="mbp-main-title">포트폴리오</h1>
-            <p class="mbp-sub-desc">시내버스 광고, 버스 승강장 쉘터, 터미널·DID 매체 등 가온엔의 고화질 현장 집행 실적입니다.</p>
+            <p class="mbp-sub-desc">시내버스 광고, 버스 승강장 쉘터, 터미널 광고 등 가온엔의 고화질 현장 집행 실적입니다.</p>
           </div>
 
           <!-- SEARCH PILL -->
@@ -180,7 +180,7 @@ $totalCount = count($list);
             $tagText = !empty($item['tag']) ? htmlspecialchars($item['tag']) : (isset($categories[$cat]) ? $categories[$cat] : '옥외광고');
             if (empty($item['badge'])) {
                 if ($cat === 'shelter') { $badgeText = 'SHELTER·AD'; $tagText = '버스 승강장·쉘터'; }
-                else if ($cat === 'did') { $badgeText = 'TERMINAL·AD'; $tagText = '터미널·DID 광고'; }
+                else if ($cat === 'did') { $badgeText = 'TERMINAL·AD'; $tagText = '터미널 광고'; }
                 else if ($cat === 'taxi') { $badgeText = 'SPECIAL·AD'; $tagText = '택시·택배·특화매체'; }
                 else if ($cat === 'bus') { $badgeText = 'BUS·AD'; $tagText = '시내버스 광고'; }
                 else if ($cat === 'mart') { $badgeText = 'MART·CART'; $tagText = '대형마트 카트'; }

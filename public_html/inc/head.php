@@ -131,7 +131,7 @@ $key_desc  = !empty($krow['key_ch5']) ? $krow['key_ch5'] : '가온엔 공식 포
       "url": "https://gaon-n.com",
       "logo": "https://gaon-n.com/images/logo.png",
       "image": "https://gaon-n.com/images/bs_ad/main_sec02_img.jpg",
-      "description": "광주광역시 104개 전 노선 시내버스 3면 래핑 광고 공식 직영 시공사. 버스 승강장 쉘터, 유스퀘어 터미널 DID, 택시 래핑, 네이버 스마트플레이스 순위 관리, C-Rank 브랜드 블로그, 4K UHD 시네마틱 홍보영상 및 숏폼 제작을 원스톱으로 제공하는 종합 광고대행사입니다.",
+      "description": "광주광역시 104개 전 노선 시내버스 3면 래핑 광고 공식 직영 시공사. 버스 승강장 쉘터, 유스퀘어 터미널 광고, 택시 래핑, 네이버 스마트플레이스 순위 관리, C-Rank 브랜드 블로그, 4K UHD 시네마틱 홍보영상 및 숏폼 제작을 원스톱으로 제공하는 종합 광고대행사입니다.",
       "telephone": "+82-62-385-0110",
       "email": "contact@gaon-n.com",
       "priceRange": "$",
@@ -174,7 +174,7 @@ $key_desc  = !empty($krow['key_ch5']) ? $krow['key_ch5'] : '가온엔 공식 포
       "knowsAbout": [
         "광주 시내버스 래핑 광고",
         "버스 승강장 쉘터 조명 광고",
-        "광주 유스퀘어 종합버스터미널 DID 광고",
+        "광주 유스퀘어 종합버스터미널 광고",
         "법인 택시 및 택배차량 래핑 광고",
         "대형마트 쇼핑카트 광고",
         "네이버 스마트플레이스 최적화 및 상위 노출",
@@ -200,7 +200,7 @@ $key_desc  = !empty($krow['key_ch5']) ? $krow['key_ch5'] : '가온엔 공식 포
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "버스 승강장 쉘터 & 터미널 DID 광고",
+              "name": "버스 승강장 쉘터 & 터미널 광고",
               "description": "야간 고휘도 LED 조명 패널 및 유스퀘어 터미널 유동인구 밀집 구간 광고"
             }
           },

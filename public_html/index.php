@@ -21,7 +21,7 @@ $totals = $temp[0];
 $categories = array(
   'bus'     => '시내버스 광고',
   'shelter' => '버스 승강장·쉘터',
-  'did'     => 'DID·터미널 광고',
+  'did'     => '터미널 광고',
   'taxi'    => '택시·택배·특화매체',
   'online'  => '온라인 마케팅',
   'video'   => '영상제작',
@@ -69,6 +69,7 @@ $defaultBus = array(
   array('id'=>78, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'신수정 시의원 지역밀착 의정보고 택배차량 10대 홍보 래핑', 'thumb'=>'/images/port/port_truck_sinsujeong_01.jpg', 'images'=>array('/images/port/port_truck_sinsujeong_01.jpg','/images/port/port_truck_sinsujeong_02.jpg'), 'client'=>'신수정 시의원', 'location'=>'광주 북구 10대', 'sort_order'=>14),
   array('id'=>79, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'정다은 변호사 무료법률상담·전문클리닉 택배차량 40대 래핑 광고', 'thumb'=>'/images/port/port_truck_jungdaeun_01.jpg', 'images'=>array('/images/port/port_truck_jungdaeun_01.jpg','/images/port/port_truck_jungdaeun_02.jpg','/images/port/port_truck_jungdaeun_03.jpg'), 'client'=>'정다은 변호사', 'location'=>'광주 40대 플릿', 'sort_order'=>15),
   array('id'=>80, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'하트치과 분과별 전문진료 택배차량 5대 양면 래핑 광고', 'thumb'=>'/images/port/port_truck_heartdental_01.jpg', 'images'=>array('/images/port/port_truck_heartdental_01.jpg','/images/port/port_truck_heartdental_02.jpg','/images/port/port_truck_heartdental_03.jpg'), 'client'=>'하트치과의원', 'location'=>'광주 5대 권역', 'sort_order'=>16),
+  array('id'=>81, 'category'=>'did', 'badge'=>'TERMINAL·AD', 'title'=>'상무힐링재활요양병원 유스퀘어 광천터미널 중앙통로 와이드 조명광고', 'thumb'=>'/images/port/port_terminal_usquare_01.jpg', 'images'=>array('/images/port/port_terminal_usquare_01.jpg','/images/port/port_terminal_usquare_02.jpg'), 'client'=>'상무힐링재활요양병원', 'location'=>'광주 유스퀘어 광천터미널 1층 중앙통로', 'sort_order'=>17),
   array('id'=>1, 'category'=>'bus', 'badge'=>'BUS·SIDE', 'title'=>'상무지구 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/bs_ad/ooh11/차도면광고.png', 'images'=>array('/images/bs_ad/ooh11/차도면광고.png'), 'client'=>'메디컬센터', 'location'=>'상무지구 노선', 'sort_order'=>100),
   array('id'=>64, 'category'=>'mart', 'badge'=>'MART·CART', 'title'=>'더스마트병원 대형마트 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/port/mart/mart_01.jpg', 'images'=>array('/images/port/mart/mart_01.jpg'), 'client'=>'더스마트병원', 'location'=>'광주 대형마트', 'sort_order'=>102)
 );
@@ -342,7 +343,7 @@ if (!empty($active_popups)) {
           <span class="go-kicker">01 / OOH MEDIA</span>
           <h2 class="go-title">옥외광고 솔루션</h2>
           <p class="go-desc">
-            시내버스부터 택시, 터미널, DID까지 생활권 곳곳에서 만나는 다양한 옥외매체를 운영합니다.
+            시내버스부터 택시, 유스퀘어 터미널, 특화매체까지 생활권 곳곳에서 만나는 다양한 옥외매체를 운영합니다.
           </p>
         </div>
       </div>
@@ -353,23 +354,22 @@ if (!empty($active_popups)) {
         <!-- LEFT: 4 PRIMARY ACCORDION CATEGORIES -->
         <div class="go-left-col">
           
-          <!-- PRIMARY ACCORDION LIST -->
-          <div class="go-primary-list" id="goPrimaryList">
-            
-            <!-- 01. 시내버스 외부광고 (DEFAULT OPEN) -->
+          <div class="go-primary-accordions" id="goAccordionList">
+
+            <!-- 01. 버스 외부광고 -->
             <div class="go-primary-item on" 
-                 data-cat="outdoor" 
+                 data-cat="bus_out" 
                  data-num="01" 
                  data-eng="BUS OUTDOOR" 
-                 data-title="시내버스 외부광고" 
+                 data-title="버스 외부광고" 
                  data-guide="guideBusOut">
               <div class="gpi-header-btn">
                 <div class="gpi-title-wrap">
                   <div class="gpi-eyebrow-row">
                     <span class="gpi-eyebrow">01 / BUS OUTDOOR</span>
                   </div>
-                  <h3 class="gpi-title">시내버스 외부광고</h3>
-                  <p class="gpi-sub">광주·나주 주요 생활권을 운행하며 브랜드를 알리는 이동형 광고매체</p>
+                  <h3 class="gpi-title">버스 외부광고</h3>
+                  <p class="gpi-sub">차도면 · 인도면 · 후면 · 하차문</p>
                 </div>
                 <div class="gpi-toggle-icon">
                   <span class="gpi-icon-bar h"></span>
@@ -382,8 +382,8 @@ if (!empty($active_popups)) {
                 <div class="gpi-body-inner">
                   <div class="gds-sub-list">
                     <button type="button" class="gds-item on" 
-                            data-id="bus_road" 
-                            data-cat="outdoor"
+                            data-id="bus_side_road" 
+                            data-cat="bus_out"
                             data-num="01"
                             data-eng="BUS OUTDOOR"
                             data-img="/images/bs_ad/ooh11/차도면광고.png" 
@@ -394,8 +394,8 @@ if (!empty($active_popups)) {
                       <span class="gds-item-arrow">→</span>
                     </button>
                     <button type="button" class="gds-item" 
-                            data-id="bus_side" 
-                            data-cat="outdoor"
+                            data-id="bus_side_pave" 
+                            data-cat="bus_out"
                             data-num="01"
                             data-eng="BUS OUTDOOR"
                             data-img="/images/bs_ad/ooh11/인도면광고.png" 
@@ -406,15 +406,27 @@ if (!empty($active_popups)) {
                       <span class="gds-item-arrow">→</span>
                     </button>
                     <button type="button" class="gds-item" 
-                            data-id="bus_back" 
-                            data-cat="outdoor"
+                            data-id="bus_rear" 
+                            data-cat="bus_out"
                             data-num="01"
                             data-eng="BUS OUTDOOR"
-                            data-img="/images/bs_ad/ooh11/후면광고.jpg" 
+                            data-img="/images/bs_ad/ooh11/후면광고.png" 
                             data-sub="후면 광고" 
                             data-guide="guideBusOut">
                       <span class="gds-item-num">03</span>
                       <span class="gds-item-txt">후면 광고</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                    <button type="button" class="gds-item" 
+                            data-id="bus_getoff" 
+                            data-cat="bus_out"
+                            data-num="01"
+                            data-eng="BUS OUTDOOR"
+                            data-img="/images/bs_ad/ooh11/하차문광고.png" 
+                            data-sub="하차문 광고" 
+                            data-guide="guideBusOut">
+                      <span class="gds-item-num">04</span>
+                      <span class="gds-item-txt">하차문 광고</span>
                       <span class="gds-item-arrow">→</span>
                     </button>
                   </div>
@@ -432,20 +444,20 @@ if (!empty($active_popups)) {
               </div>
             </div>
 
-            <!-- 02. 버스 내부 · 음성광고 -->
+            <!-- 02. 버스 내부광고 -->
             <div class="go-primary-item" 
-                 data-cat="interior" 
+                 data-cat="bus_in" 
                  data-num="02" 
                  data-eng="BUS INTERIOR" 
-                 data-title="버스 내부 · 음성광고" 
+                 data-title="버스 내부광고" 
                  data-guide="guideBusIn">
               <div class="gpi-header-btn">
                 <div class="gpi-title-wrap">
                   <div class="gpi-eyebrow-row">
                     <span class="gpi-eyebrow">02 / BUS INTERIOR</span>
                   </div>
-                  <h3 class="gpi-title">버스 내부 · 음성광고</h3>
-                  <p class="gpi-sub">버스 이용객의 이동시간 동안 시각과 음성으로 브랜드를 전달하는 매체</p>
+                  <h3 class="gpi-title">버스 내부광고</h3>
+                  <p class="gpi-sub">중앙문 · 노선도 · 시트커버 · 음성안내</p>
                 </div>
                 <div class="gpi-toggle-icon">
                   <span class="gpi-icon-bar h"></span>
@@ -458,44 +470,44 @@ if (!empty($active_popups)) {
                 <div class="gpi-body-inner">
                   <div class="gds-sub-list">
                     <button type="button" class="gds-item on" 
-                            data-id="bus_window" 
-                            data-cat="interior"
+                            data-id="bus_in_center" 
+                            data-cat="bus_in"
+                            data-num="02"
+                            data-eng="BUS INTERIOR"
+                            data-img="/images/bs_ad/ooh11/중앙문광고.png" 
+                            data-sub="중앙문 광고" 
+                            data-guide="guideBusIn">
+                      <span class="gds-item-num">01</span>
+                      <span class="gds-item-txt">중앙문 광고</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                    <button type="button" class="gds-item" 
+                            data-id="bus_in_route" 
+                            data-cat="bus_in"
                             data-num="02"
                             data-eng="BUS INTERIOR"
                             data-img="/images/bs_ad/ooh11/노선도01.png" 
                             data-sub="노선도 광고" 
                             data-guide="guideBusIn">
-                      <span class="gds-item-num">01</span>
+                      <span class="gds-item-num">02</span>
                       <span class="gds-item-txt">노선도 광고</span>
                       <span class="gds-item-arrow">→</span>
                     </button>
                     <button type="button" class="gds-item" 
-                            data-id="bus_door" 
-                            data-cat="interior"
+                            data-id="bus_in_sheet" 
+                            data-cat="bus_in"
                             data-num="02"
                             data-eng="BUS INTERIOR"
-                            data-img="/images/bs_ad/ooh11/하차문광고01.png" 
-                            data-sub="하차문 광고" 
-                            data-guide="guideBusIn">
-                      <span class="gds-item-num">02</span>
-                      <span class="gds-item-txt">하차문 광고</span>
-                      <span class="gds-item-arrow">→</span>
-                    </button>
-                    <button type="button" class="gds-item" 
-                            data-id="bus_seat" 
-                            data-cat="interior"
-                            data-num="02"
-                            data-eng="BUS INTERIOR"
-                            data-img="/images/bs_ad/ooh11/버스시트광고01.png" 
-                            data-sub="좌석시트 광고" 
+                            data-img="/images/bs_ad/ooh11/시트커버광고.png" 
+                            data-sub="시트커버 광고" 
                             data-guide="guideBusIn">
                       <span class="gds-item-num">03</span>
-                      <span class="gds-item-txt">좌석시트 광고</span>
+                      <span class="gds-item-txt">시트커버 광고</span>
                       <span class="gds-item-arrow">→</span>
                     </button>
                     <button type="button" class="gds-item" 
-                            data-id="bus_voice" 
-                            data-cat="interior"
+                            data-id="bus_in_voice" 
+                            data-cat="bus_in"
                             data-num="02"
                             data-eng="BUS INTERIOR"
                             data-img="/images/bs_ad/ooh11/버스음성광고.png" 
@@ -509,11 +521,11 @@ if (!empty($active_popups)) {
                   <!-- MOBILE INLINE PREVIEW -->
                   <div class="go-mobile-preview">
                     <div class="gmp-image-wrap">
-                      <img class="gmp-image" src="/images/bs_ad/ooh11/노선도01.png" alt="노선도 광고">
+                      <img class="gmp-image" src="/images/bs_ad/ooh11/중앙문광고.png" alt="중앙문 광고">
                     </div>
                     <div class="gmp-caption">
                       <span class="gmp-meta">02 / BUS INTERIOR</span>
-                      <strong class="gmp-title">노선도 광고</strong>
+                      <strong class="gmp-title">중앙문 광고</strong>
                     </div>
                   </div>
                 </div>
@@ -525,15 +537,15 @@ if (!empty($active_popups)) {
                  data-cat="terminal" 
                  data-num="03" 
                  data-eng="TERMINAL MEDIA" 
-                 data-title="유스퀘어 전광판 광고" 
+                 data-title="유스퀘어 터미널 광고" 
                  data-guide="guideUsquare">
               <div class="gpi-header-btn">
                 <div class="gpi-title-wrap">
                   <div class="gpi-eyebrow-row">
                     <span class="gpi-eyebrow">03 / TERMINAL MEDIA</span>
                   </div>
-                  <h3 class="gpi-title">유스퀘어 전광판 광고</h3>
-                  <p class="gpi-sub">유스퀘어 매표소 상단에 설치된 대형 LED 전광판 광고</p>
+                  <h3 class="gpi-title">유스퀘어 터미널 광고</h3>
+                  <p class="gpi-sub">매표소 상단 전광판 · 중앙통로 조명광고 · 터미널 승강장 쉘터</p>
                 </div>
                 <div class="gpi-toggle-icon">
                   <span class="gpi-icon-bar h"></span>
@@ -546,26 +558,50 @@ if (!empty($active_popups)) {
                 <div class="gpi-body-inner">
                   <div class="gds-sub-list">
                     <button type="button" class="gds-item on" 
-                            data-id="usquare" 
+                            data-id="usquare_led" 
                             data-cat="terminal"
                             data-num="03"
                             data-eng="TERMINAL MEDIA"
                             data-img="/images/bs_ad/ooh11/유스퀘어광고.png" 
-                            data-sub="매표소 상단 LED 전광판" 
+                            data-sub="매표소 상단 대형 전광판" 
                             data-guide="guideUsquare">
                       <span class="gds-item-num">01</span>
-                      <span class="gds-item-txt">매표소 상단 LED 전광판</span>
+                      <span class="gds-item-txt">매표소 상단 대형 전광판</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                    <button type="button" class="gds-item" 
+                            data-id="usquare_corridor" 
+                            data-cat="terminal"
+                            data-num="03"
+                            data-eng="TERMINAL MEDIA"
+                            data-img="/images/bs_ad/ooh11/유스퀘어_통로광고.jpg" 
+                            data-sub="중앙통로 와이드 조명광고" 
+                            data-guide="guideUsquare">
+                      <span class="gds-item-num">02</span>
+                      <span class="gds-item-txt">중앙통로 와이드 조명광고</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                    <button type="button" class="gds-item" 
+                            data-id="usquare_shelter" 
+                            data-cat="terminal"
+                            data-num="03"
+                            data-eng="TERMINAL MEDIA"
+                            data-img="/images/bs_ad/ooh11/쉘터광고.png" 
+                            data-sub="터미널 승강장 쉘터광고" 
+                            data-guide="guideShelter">
+                      <span class="gds-item-num">03</span>
+                      <span class="gds-item-txt">터미널 승강장 쉘터광고</span>
                       <span class="gds-item-arrow">→</span>
                     </button>
                   </div>
                   <!-- MOBILE INLINE PREVIEW -->
                   <div class="go-mobile-preview">
                     <div class="gmp-image-wrap">
-                      <img class="gmp-image" src="/images/bs_ad/ooh11/유스퀘어광고.png" alt="매표소 상단 LED 전광판">
+                      <img class="gmp-image" src="/images/bs_ad/ooh11/유스퀘어광고.png" alt="매표소 상단 대형 전광판">
                     </div>
                     <div class="gmp-caption">
                       <span class="gmp-meta">03 / TERMINAL MEDIA</span>
-                      <strong class="gmp-title">매표소 상단 LED 전광판</strong>
+                      <strong class="gmp-title">매표소 상단 대형 전광판</strong>
                     </div>
                   </div>
                 </div>
@@ -1523,38 +1559,38 @@ if (!empty($active_popups)) {
           <!-- ROW A (5 Items) -->
           <div class="gp-row gp-row-a">
             <div class="gp-slot" data-row="0" data-col="0">
-              <span class="gp-partner-text is-active is-short">KBC</span>
+              <img src="/images/partners/kbc.png" alt="KBC" class="gp-partner-logo opt-compact is-active" loading="lazy">
             </div>
             <div class="gp-slot" data-row="0" data-col="1">
-              <span class="gp-partner-text is-active">광주MBC</span>
+              <img src="/images/partners/mbc.jpg" alt="광주MBC" class="gp-partner-logo opt-compact is-active" loading="lazy">
             </div>
             <div class="gp-slot" data-row="0" data-col="2">
-              <span class="gp-partner-text is-active">광주광역시청</span>
+              <img src="/images/partners/광주광역시청.jpg" alt="광주광역시청" class="gp-partner-logo opt-standard is-active" loading="lazy">
             </div>
             <div class="gp-slot" data-row="0" data-col="3">
-              <span class="gp-partner-text is-active">한국폴리텍대학</span>
+              <img src="/images/partners/폴리텍대학.svg" alt="한국폴리텍대학" class="gp-partner-logo opt-standard is-active" loading="lazy">
             </div>
             <div class="gp-slot" data-row="0" data-col="4">
-              <span class="gp-partner-text is-active">롯데하이마트</span>
+              <img src="/images/partners/롯데하이마트.png" alt="롯데하이마트" class="gp-partner-logo opt-standard is-active" loading="lazy">
             </div>
           </div>
 
           <!-- ROW B (5 Items - Organic Offset) -->
           <div class="gp-row gp-row-b">
             <div class="gp-slot" data-row="1" data-col="0">
-              <span class="gp-partner-text is-active">국립목포대학교</span>
+              <img src="/images/partners/국립목포대학교.jpg" alt="국립목포대학교" class="gp-partner-logo opt-wide is-active" loading="lazy">
             </div>
             <div class="gp-slot" data-row="1" data-col="1">
-              <span class="gp-partner-text is-active">광주안과</span>
+              <img src="/images/partners/김대중컨벤션센터로고.jpg" alt="김대중컨벤션센터" class="gp-partner-logo opt-boost is-active" loading="lazy">
             </div>
             <div class="gp-slot" data-row="1" data-col="2">
-              <span class="gp-partner-text is-active">동신대학교광주한방병원</span>
+              <img src="/images/partners/더스마트병원.jpg" alt="더스마트병원" class="gp-partner-logo opt-standard is-active" loading="lazy">
             </div>
             <div class="gp-slot" data-row="1" data-col="3">
-              <span class="gp-partner-text is-active">새나래병원</span>
+              <img src="/images/partners/스마트인재개발원.png" alt="스마트인재개발원" class="gp-partner-logo opt-standard is-active" loading="lazy">
             </div>
             <div class="gp-slot" data-row="1" data-col="4">
-              <span class="gp-partner-text is-active">스마트인재개발원</span>
+              <img src="/images/partners/봉선한방병원.png" alt="봉선한방병원" class="gp-partner-logo opt-standard is-active" loading="lazy">
             </div>
           </div>
 
@@ -1693,6 +1729,10 @@ if (!empty($active_popups)) {
           <button type="button" class="rsm-tab" data-filter-cat="nam">남구 (봉선·풍암)</button>
           <button type="button" class="rsm-tab" data-filter-cat="buk">북구 (용봉·일곡)</button>
           <button type="button" class="rsm-tab" data-filter-cat="gwangsan">광산구 (수완·첨단)</button>
+          <a href="http://bus.gwangju.go.kr" target="_blank" rel="noopener noreferrer" class="rsm-tab rsm-external-tab" title="광주광역시 버스운행정보시스템 공식 사이트 새창 열기">
+            <span>광주버스(BIS) 전체 노선보기</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
 
         <div class="rsm-directory-list" id="modalBusRouteFullGrid">
@@ -1702,10 +1742,16 @@ if (!empty($active_popups)) {
 
       <div class="rsm-foot">
         <div class="rf-notice">
-          <strong>※ 병원 / 학원 / 매장 앞 통과 노선 무료 매칭 서비스</strong>
-          <span>광고주님의 사업장 위치를 알려주시면 가장 노출 빈도가 높은 골든 노선 조합을 1:1 무료 컨설팅해 드립니다.</span>
+          <strong>※ 병원 / 학원 / 매장 앞 통과 노선 맞춤 매칭 안내</strong>
+          <span>광고주님의 사업장 위치를 알려주시면 가장 유효 노출 빈도가 높은 최적 노선 조합을 1:1 맞춤 컨설팅해 드립니다.</span>
         </div>
-        <a href="/board/estmate/write.php" class="rsm-foot-btn" onclick="closeRouteModal();">1:1 노선 무료 분석 신청 →</a>
+        <div class="rsm-foot-actions">
+          <a href="http://bus.gwangju.go.kr" target="_blank" rel="noopener noreferrer" class="rsm-bis-btn" title="광주광역시 버스운행정보시스템 새창 열기">
+            <span>광주버스(BIS) 전체 노선보기</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a href="/board/estmate/write.php" class="rsm-foot-btn" onclick="closeRouteModal();">1:1 노선 맞춤 분석 신청 →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -1744,7 +1790,7 @@ if (!empty($active_popups)) {
         </button>
         <button type="button" class="lmt-tab" data-target="guideUsquare">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          <span>유스퀘어 전광판</span>
+          <span>유스퀘어·터미널</span>
         </button>
         <button type="button" class="lmt-tab" data-target="guideTaxiSpec">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
@@ -1769,83 +1815,244 @@ if (!empty($active_popups)) {
         
         <!-- 01 BUS OUTSIDE GUIDE -->
         <div class="bus-guide-page on" id="guideBusOut">
+          
+          <!-- TOP PROPOSAL DOWNLOAD BANNER -->
           <div class="lmg-download-banner">
             <div class="ldb-info">
               <span class="ldb-badge">OFFICIAL PDF</span>
               <strong class="ldb-title">광주 시내버스 외부광고 공식 제안서 및 단가표 (PDF)</strong>
-              <p class="ldb-meta">차도면·인도면·후면 실측 도면 및 광주 104개 노선별 집행 단가표 수록 (PDF)</p>
+              <p class="ldb-meta">광주 1,040대 인가 차량 실측 도면 · 차종별 정밀 규격 및 101개 노선별 공식 단가표 수록</p>
             </div>
-            <a href="/pdf/gaon_bus_outside.pdf" download="가온엔_시내버스_외부광고_공식제안서.pdf" class="ldb-btn">
+            <a href="/pdf/gaon_bus_outside.pdf" download="가온엔_광주시내버스_외부광고_매체제안서.pdf" class="ldb-btn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              <span>외부광고 제안서 다운로드</span>
+              <span>공식 제안서 다운로드</span>
             </a>
           </div>
 
-          <div class="lmg-high-contrast-grid">
-            <div class="lhc-card">
-              <div class="lhc-side">
-                <span class="lhc-badge blue">차도면 광고</span>
-                <strong class="lhc-size">3,700 × 1,000 mm</strong>
-                <span class="lhc-aspect">운전자 시야 정면 노출</span>
+          <!-- KEY METRICS STATS BAR -->
+          <div class="lmg-stats-strip">
+            <div class="lss-card">
+              <span class="lss-num">1,040<span style="font-size:16px; font-weight:700;">대</span></span>
+              <strong class="lss-label">차량 인가대수</strong>
+              <span class="lss-desc">광주광역시 시내버스 운행 차량</span>
+            </div>
+            <div class="lss-card">
+              <span class="lss-num">101<span style="font-size:16px; font-weight:700;">개</span></span>
+              <strong class="lss-label">운행 노선망</strong>
+              <span class="lss-desc">급행 6 · 간선 31 · 지선 64개</span>
+            </div>
+            <div class="lss-card">
+              <span class="lss-num">7~9<span style="font-size:16px; font-weight:700;">회</span></span>
+              <strong class="lss-label">1일 평균 왕복</strong>
+              <span class="lss-desc">1일 18시간 고정 노선 반복 운행</span>
+            </div>
+            <div class="lss-card">
+              <span class="lss-num">3면<span style="font-size:16px; font-weight:700;">구성</span></span>
+              <strong class="lss-label">기본 부착 구성</strong>
+              <span class="lss-desc">차도면 + 인도면 + 하차문</span>
+            </div>
+          </div>
+
+          <!-- 01. OFFICIAL ADVERTISING RATES -->
+          <h4 class="lmg-sec-heading">시내버스 외부광고 기본 단가표 (월 기준 / 1대당)</h4>
+          <div class="lmg-rate-grid">
+            
+            <!-- 측면광고 -->
+            <div class="lrg-card">
+              <div class="lrg-title-row">
+                <h5 class="lrg-title">시내버스 측면광고</h5>
+                <span class="lrg-sub">차도면 + 인도면 + 하차문 3면 구성</span>
               </div>
-              <div class="lhc-main">
-                <h5 class="lhc-title">차도면 대형 래핑 광고 (좌측면)</h5>
-                <p class="lhc-desc">버스 좌측면의 넓은 광고면을 활용해 도로 이용자와 보행자에게 브랜드를 전달하는 대형 외부광고입니다.</p>
-                <div class="lhc-spec-list">
-                  <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">도심 간선도로 운전자 &amp; 반대편 보행자</strong></div>
-                  <div class="lsl-item"><span class="lsl-k">원단 소재 :</span><strong class="lsl-v">차량용 내후성 점착 시트</strong></div>
+              <div class="lrg-price-box">
+                <div class="lrg-row">
+                  <span class="lrg-k">광고료 (月)</span>
+                  <strong class="lrg-v">700,000<span style="font-size:13px; font-weight:700;">원</span></strong>
                 </div>
+                <div class="lrg-row">
+                  <span class="lrg-k">초기 제작비 (1회)</span>
+                  <strong class="lrg-v small">150,000원</strong>
+                </div>
+              </div>
+              <div class="lrg-spec-tag">
+                차도면(370×100) + 인도면(270×50) + 하차문(85×100)
               </div>
             </div>
 
-            <div class="lhc-card">
-              <div class="lhc-side">
-                <span class="lhc-badge blue">인도면 광고</span>
-                <strong class="lhc-size">3,000 × 500 mm</strong>
-                <span class="lhc-aspect">정류장·보행자 시야에 가까운 위치</span>
+            <!-- 후면광고 -->
+            <div class="lrg-card">
+              <div class="lrg-title-row">
+                <h5 class="lrg-title">시내버스 후면광고</h5>
+                <span class="lrg-sub">후방 대기 운전자 시선 정면 배치</span>
               </div>
-              <div class="lhc-main">
-                <h5 class="lhc-title">인도면 표준 래핑 광고 (우측면)</h5>
-                <p class="lhc-desc">버스 정류장 대기 승객 및 인도 보행자의 눈높이와 1:1로 밀착되어 상세 진료 과목, 상호, 전화번호 정보 전달에 활용할 수 있습니다.</p>
-                <div class="lhc-spec-list">
-                  <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">정류소 탑승 대기 승객 &amp; 인도 보행자</strong></div>
-                  <div class="lsl-item"><span class="lsl-k">원단 소재 :</span><strong class="lsl-v">LG 하우시스 최고급 내후성 솔벤 시트</strong></div>
+              <div class="lrg-price-box">
+                <div class="lrg-row">
+                  <span class="lrg-k">광고료 (月)</span>
+                  <strong class="lrg-v">300,000<span style="font-size:13px; font-weight:700;">원</span></strong>
                 </div>
+                <div class="lrg-row">
+                  <span class="lrg-k">초기 제작비 (1회)</span>
+                  <strong class="lrg-v small">70,000원</strong>
+                </div>
+              </div>
+              <div class="lrg-spec-tag">
+                차량 후면 전용 규격 적용 (세부 실측 규격은 제안서 수록)
               </div>
             </div>
 
-            <div class="lhc-card">
-              <div class="lhc-side">
-                <span class="lhc-badge blue">후면 광고</span>
-                <strong class="lhc-size">2,400 × 300 mm</strong>
-                <span class="lhc-aspect">신호대기·정체 구간에서 노출</span>
+            <!-- 세트광고 -->
+            <div class="lrg-card featured">
+              <span class="lrg-ribbon">패키지</span>
+              <div class="lrg-title-row">
+                <h5 class="lrg-title">시내버스 세트광고</h5>
+                <span class="lrg-sub">측면 3면 + 후면 통합 집행</span>
               </div>
-              <div class="lhc-main">
-                <h5 class="lhc-title">후면 번호판 상단 래핑 광고</h5>
-                <p class="lhc-desc">교차로 신호 대기 및 출퇴근 도로 정체 시 후방 차량 운전자에게 신호대기 및 도로 정체 시 후방 차량에서 확인할 수 있는 광고면 입니다.</p>
-                <div class="lhc-spec-list">
-                  <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">신호 대기 후방 차량 운전자</strong></div>
-                  <div class="lsl-item"><span class="lsl-k">원단 소재 :</span><strong class="lsl-v">LG 하우시스 정품 솔벤 반사 시트 지원</strong></div>
+              <div class="lrg-price-box">
+                <div class="lrg-row">
+                  <span class="lrg-k">광고료 (月)</span>
+                  <strong class="lrg-v" style="color:#1d4ed8;">1,000,000<span style="font-size:13px; font-weight:700;">원</span></strong>
                 </div>
+                <div class="lrg-row">
+                  <span class="lrg-k">초기 제작비 (1회)</span>
+                  <strong class="lrg-v small">200,000원</strong>
+                </div>
+              </div>
+              <div class="lrg-spec-tag" style="background:#eff6ff; border-color:#bfdbfe; color:#1d4ed8;">
+                차도면 + 인도면 + 하차문 + 후면 통합 부착
               </div>
             </div>
 
-            <div class="lhc-card">
-              <div class="lhc-side">
-                <span class="lhc-badge purple">나주 광역</span>
-                <strong class="lhc-size">2,000 × 400 mm</strong>
-                <span class="lhc-aspect">혁신도시 공공기관 특화</span>
+          </div>
+
+          <!-- 나주 광역 & 마을버스 단가 미니 그리드 -->
+          <div style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:16px; margin-bottom:28px;">
+            <div class="lrg-card" style="padding:18px 20px;">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong style="font-size:15.5px; color:#0f172a; font-weight:900;">나주 광역버스 (999번 등)</strong>
+                <span style="font-size:11px; background:#faf5ff; color:#9333ea; border:1px solid #e9d5ff; padding:2px 8px; border-radius:4px; font-weight:800;">혁신도시 노선</span>
               </div>
-              <div class="lhc-main">
-                <h5 class="lhc-title">나주 시내버스 후면 와이드 래핑</h5>
-                <p class="lhc-desc">광주-나주 혁신도시를 왕복 운행하는 광역 간선버스 후면에 단독 부착되어 혁신도시 공공기관 임직원 타깃에 특화됩니다.</p>
-                <div class="lhc-spec-list">
-                  <div class="lsl-item"><span class="lsl-k">핵심 타깃 :</span><strong class="lsl-v">나주 혁신도시 공공기관 임직원 &amp; 출퇴근 차량</strong></div>
-                  <div class="lsl-item"><span class="lsl-k">원단 소재 :</span><strong class="lsl-v">고접착 실사 솔벤 시트</strong></div>
-                </div>
+              <div style="display:flex; justify-content:space-between; font-size:13px; margin-top:8px; padding-top:8px; border-top:1px dashed #e2e8f0;">
+                <span>측면: <strong>600,000원</strong> <span style="font-size:11px; color:#64748b;">(제작비 10만)</span></span>
+                <span>후면: <strong>250,000원</strong> <span style="font-size:11px; color:#64748b;">(제작비 6만)</span></span>
+              </div>
+            </div>
+
+            <div class="lrg-card" style="padding:18px 20px;">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong style="font-size:15.5px; color:#0f172a; font-weight:900;">광주 마을버스</strong>
+                <span style="font-size:11px; background:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0; padding:2px 8px; border-radius:4px; font-weight:800;">지역 생활권</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; font-size:13px; margin-top:8px; padding-top:8px; border-top:1px dashed #e2e8f0;">
+                <span>측면: <strong>600,000원</strong> <span style="font-size:11px; color:#64748b;">(제작비 10만 / 빛고을면 10만)</span></span>
+                <span>후면: <strong>250,000원</strong> <span style="font-size:11px; color:#64748b;">(제작비 6만)</span></span>
               </div>
             </div>
           </div>
+
+          <!-- 02. DETAILED VEHICLE SPECIFICATION TABLE -->
+          <h4 class="lmg-sec-heading">시내버스 차종별 실측 정밀 규격 (단위 : cm)</h4>
+          <div class="lmg-table-wrap">
+            <table class="lmg-spec-table">
+              <thead>
+                <tr>
+                  <th style="width:14%;">구분</th>
+                  <th style="width:20%;">부착 위치</th>
+                  <th style="width:23%;">대형 / 저상버스</th>
+                  <th style="width:21%;">중형버스</th>
+                  <th style="width:22%;">좌석버스</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2" style="font-weight:800; background:#f8fafc; text-align:center;">측면 광고</td>
+                  <td><strong>차도면 (좌측면)</strong></td>
+                  <td>
+                    일반 <strong class="lmg-size-val">370 × 100</strong> cm<br>
+                    저상 <strong class="lmg-size-val">370 × 90</strong> cm
+                  </td>
+                  <td><strong class="lmg-size-val">300 × 100</strong> cm</td>
+                  <td><strong class="lmg-size-val">370 × 90</strong> cm</td>
+                </tr>
+                <tr>
+                  <td><strong>인도면 (우측면) + 하차문</strong></td>
+                  <td>
+                    인도면 <strong class="lmg-size-val">270 × 50</strong> cm<br>
+                    하차문 <strong class="lmg-size-val">85 × 100</strong> cm<br>
+                    <span class="lmg-note">※ 저상버스 하차문 옆면 70×60 cm</span>
+                  </td>
+                  <td>
+                    인도면 <strong class="lmg-size-val">230 × 50</strong> cm<br>
+                    하차문 <strong class="lmg-size-val">85 × 100</strong> cm
+                  </td>
+                  <td>
+                    인도면 <strong class="lmg-size-val">250 × 50</strong> cm<br>
+                    하차문 <strong class="lmg-size-val">75 × 90</strong> cm
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-weight:800; background:#f8fafc; text-align:center;">후면 광고</td>
+                  <td><strong>후면 번호판 상/중/하단</strong></td>
+                  <td colspan="3">
+                    차종별 맞춤 규격 적용 <span class="lmg-note">(※ 현대·대우·전기차 등 차종별 상세 도면 및 치수는 공식 제안서 참조)</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 03. 4 KEY ADVERTISING FEATURES -->
+          <h4 class="lmg-sec-heading">시내버스 외부광고 주요 매체 특징</h4>
+          <div class="lmg-high-contrast-grid">
+            
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge blue">01. 접촉 빈도</span>
+                <strong class="lhc-size">생활 밀착형 노출</strong>
+                <span class="lhc-aspect">도심 이동 동선 중심</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">보행자 및 차량 운전자 대상 상시 노출</h5>
+                <p class="lhc-desc">광주 주요 간선도로와 교차로를 순환하며 보행자 및 차량 운전자의 시선에 자연스럽게 전달됩니다.</p>
+              </div>
+            </div>
+
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge gold">02. 노선 타깃팅</span>
+                <strong class="lhc-size">1일 18시간 운행</strong>
+                <span class="lhc-aspect">1일 7~9회 반복 순환</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">핵심 생활권 중심의 지정 노선 운행</h5>
+                <p class="lhc-desc">상무지구, 수완지구, 첨단지구 등 광고주의 타깃 상권을 경유하는 노선을 선택해 지속적인 지역 마케팅이 가능합니다.</p>
+              </div>
+            </div>
+
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge green">03. 대형 규격</span>
+                <strong class="lhc-size">3.7m 와이드</strong>
+                <span class="lhc-aspect">차도면 3,700 × 1,000 mm</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">선명한 비주얼과 높은 시인성</h5>
+                <p class="lhc-desc">차도면 대형 규격과 차량 전용 실사 원단을 적용해 원거리에서도 상호와 주요 메시지를 명확히 전달합니다.</p>
+              </div>
+            </div>
+
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge purple">04. 맞춤 배정</span>
+                <strong class="lhc-size">노선 맞춤 기획</strong>
+                <span class="lhc-aspect">상권 및 이동 동선 분석</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">광고주 사업장 위치에 맞춘 최적 노선 제안</h5>
+                <p class="lhc-desc">병원, 학원, 매장 등 광고주의 타깃 권역과 주요 이동 동선을 분석하여 가장 효율적인 노선 조합을 제안합니다.</p>
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
         <!-- 02 BUS INSIDE & VOICE GUIDE -->
@@ -1853,31 +2060,86 @@ if (!empty($active_popups)) {
           <div class="lmg-download-banner">
             <div class="ldb-info">
               <span class="ldb-badge">OFFICIAL PDF</span>
-              <strong class="ldb-title">광주 시내버스 내부광고 &amp; 음성안내 제안서 및 단가표 (PDF)</strong>
-              <p class="ldb-meta">노선도, 하차문, 좌석시트 및 음성안내 광고 규격과 노선별 단가표 수록 (PDF)</p>
+              <strong class="ldb-title">광주 시내버스 내부광고 &amp; 음성안내 공식 제안서 (PDF)</strong>
+              <p class="ldb-meta">노선도, 하차문, 좌석시트, 천정/유리창 및 정류소 음성안내 광고 규격 수록</p>
             </div>
-            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <div class="ldb-actions-right">
               <a href="/pdf/gaon_bus_inside.pdf" download="가온엔_시내버스_내부광고_공식제안서.pdf" class="ldb-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>내부광고 제안서 다운로드</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>내부광고 제안서</span>
               </a>
-              <a href="/pdf/gaon_bus_voice.pdf" download="가온엔_시내버스_음성광고_공식제안서.pdf" class="ldb-btn" style="background:#0f274e;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>음성광고 제안서 다운로드</span>
+              <a href="/pdf/gaon_bus_voice.pdf" download="가온엔_시내버스_음성광고_공식제안서.pdf" class="ldb-btn ldb-btn-dark">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>음성광고 제안서</span>
               </a>
             </div>
           </div>
 
+          <!-- 01. BUS INTERIOR SUMMARY SPEC TABLE -->
+          <h4 class="lmg-sec-heading">시내버스 내부광고 매체별 규격 및 부착 위치</h4>
+          <div class="lmg-table-wrap" style="margin-bottom:28px;">
+            <table class="lmg-spec-table">
+              <thead>
+                <tr>
+                  <th style="width:18%;">매체 구분</th>
+                  <th style="width:22%;">부착 위치</th>
+                  <th style="width:20%;">표준 규격 (가로×세로)</th>
+                  <th style="width:16%;">1대당 수량</th>
+                  <th style="width:24%;">매체 특장점</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight:800; background:#f8fafc; text-align:center;">노선도 광고</td>
+                  <td>차량 내부 상단 노선도 부근</td>
+                  <td><strong class="lmg-size-val">110 × 50</strong> cm</td>
+                  <td>1대당 2매</td>
+                  <td>탑승객 시선이 오래 머무는 위치</td>
+                </tr>
+                <tr>
+                  <td style="font-weight:800; background:#f8fafc; text-align:center;">하차문 광고</td>
+                  <td>하차문 유리창 및 측면부</td>
+                  <td><strong class="lmg-size-val">100 × 50</strong> cm</td>
+                  <td>1대당 1매</td>
+                  <td>하차 직전 승객 대상 시선 접촉</td>
+                </tr>
+                <tr>
+                  <td style="font-weight:800; background:#f8fafc; text-align:center;">좌석시트 광고</td>
+                  <td>승객 좌석 등받이 후면</td>
+                  <td><strong class="lmg-size-val">24 × 12</strong> cm</td>
+                  <td>1대당 약 20매</td>
+                  <td>이동 시간 동안 착석 승객 노출</td>
+                </tr>
+                <tr>
+                  <td style="font-weight:800; background:#f8fafc; text-align:center;">천정/유리창 광고</td>
+                  <td>내부 측면 유리창 상단</td>
+                  <td><strong class="lmg-size-val">55 × 25</strong> cm</td>
+                  <td>1대당 다수 매</td>
+                  <td>입석 및 착석 승객 시야 확보</td>
+                </tr>
+                <tr>
+                  <td style="font-weight:800; background:#f8fafc; text-align:center;">정류소 음성안내</td>
+                  <td>차내 자동 안내방송</td>
+                  <td><strong class="lmg-size-val">7초 이내 (56자)</strong></td>
+                  <td>1개 정류소 1구좌</td>
+                  <td>하차 안내 시 성우 음성 송출</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 02. BUS INTERIOR CARDS -->
+          <h4 class="lmg-sec-heading">내부 매체별 상세 안내</h4>
           <div class="lmg-high-contrast-grid">
             <div class="lhc-card">
               <div class="lhc-side">
                 <span class="lhc-badge blue">노선도 광고</span>
                 <strong class="lhc-size">1,100 × 500 mm</strong>
-                <span class="lhc-aspect">차량 1대당 2매 부착</span>
+                <span class="lhc-aspect">1대당 2매 부착</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">노선도 광고</h5>
-                <p class="lhc-desc">차량 내부 좌석 및 입석 승객의 눈높이 정면에 위치하며, 차량 1대당 2매가 부착되어 높은 가독성을 제공합니다.</p>
+                <p class="lhc-desc">버스 내부 상단 노선도 옆에 부착되어 탑승객이 이동하는 동안 시선이 자연스럽게 머무는 매체입니다.</p>
               </div>
             </div>
 
@@ -1885,24 +2147,35 @@ if (!empty($active_popups)) {
               <div class="lhc-side">
                 <span class="lhc-badge blue">하차문 광고</span>
                 <strong class="lhc-size">1,000 × 500 mm</strong>
-                <span class="lhc-aspect">하차 대기 동선에 가까운 위치</span>
+                <span class="lhc-aspect">하차문 주변 부착</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">하차문 광고</h5>
-                <p class="lhc-desc">하차를 위해 대기하는 승객의 동선과 가까운 위치에 설치되어 자연스럽게 시야에 들어오는 내부 광고입니다.</p>
+                <p class="lhc-desc">하차문 주변에 부착되어 버스에서 내리는 승객들에게 자연스럽게 노출됩니다.</p>
               </div>
             </div>
-
 
             <div class="lhc-card">
               <div class="lhc-side">
                 <span class="lhc-badge blue">좌석시트 광고</span>
                 <strong class="lhc-size">240 × 120 mm</strong>
-                <span class="lhc-aspect">좌석 20매 전면 부착</span>
+                <span class="lhc-aspect">좌석 등받이 부착</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">좌석 시트 광고</h5>
-                <p class="lhc-desc">차량 좌석 등받이에 설치되어 착석 승객의 가까운 거리에서 자연스럽게 반복 노출되는 내부 광고매체입니다.</p>
+                <p class="lhc-desc">승객 좌석 등받이 후면에 설치되어 착석 승객에게 가까운 거리에서 반복 노출됩니다.</p>
+              </div>
+            </div>
+
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge blue">천정/유리창 광고</span>
+                <strong class="lhc-size">550 × 250 mm</strong>
+                <span class="lhc-aspect">유리창 상단 부착</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">천정 / 유리창 광고</h5>
+                <p class="lhc-desc">버스 내부 측면 유리창 상단 공간을 활용하여 승객들에게 부담 없이 노출됩니다.</p>
               </div>
             </div>
 
@@ -1910,43 +2183,70 @@ if (!empty($active_popups)) {
               <div class="lhc-side">
                 <span class="lhc-badge gold">음성안내 방송</span>
                 <strong class="lhc-size">7초 이내 (56자)</strong>
-                <span class="lhc-aspect">정류소 도착 전 성우 음성</span>
+                <span class="lhc-aspect">정류소 도착 전 방송</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">시내버스 정류소 음성안내 방송 광고</h5>
-                <p class="lhc-desc">정류소 도착 전 안내방송과 함께 브랜드명과 위치 등의 정보를 음성으로 전달할 수 있는 광고입니다.</p>
+                <h5 class="lhc-title">정류소 음성안내 방송</h5>
+                <p class="lhc-desc">지정 정류소 도착 전 차내 안내방송을 통해 상호와 위치 정보를 음성으로 전달합니다.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 03 U-SQUARE LED GUIDE -->
+        <!-- 03 U-SQUARE TERMINAL GUIDE -->
         <div class="bus-guide-page" id="guideUsquare">
           <div class="lmg-high-contrast-grid">
             <div class="lhc-card">
               <div class="lhc-side">
-                <span class="lhc-badge purple">유스퀘어 LED 전광판</span>
+                <span class="lhc-badge purple">유스퀘어 전광판</span>
                 <strong class="lhc-size">2,500 × 1,500 mm</strong>
                 <span class="lhc-aspect">고속버스 매표소 상단</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">유스퀘어 매표소 상단 LED 전광판</h5>
+                <h5 class="lhc-title">유스퀘어 매표소 상단 대형 LED 전광판</h5>
                 <p class="lhc-desc">
-                  유스퀘어 고속버스 매표소 상단에 설치된 LED 전광판으로
-                  고정이미지와 동영상 광고를 송출할 수 있습니다.
+                  호남 최대 관문 유스퀘어 고속버스 매표소 상단에 위치하여 표를 예매하거나 대기하는 수많은 유동인구에게 고정이미지 및 동영상 광고를 선명하게 송출합니다.
+                </p>
+              </div>
+            </div>
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge purple">중앙통로 조명광고</span>
+                <strong class="lhc-size">와이드 LED 패널</strong>
+                <span class="lhc-aspect">1층 메인 게이트 이동동선</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">유스퀘어 1층 중앙통로 와이드 조명 광고</h5>
+                <p class="lhc-desc">
+                  유스퀘어 1층 출입구 및 승하차 게이트, 편의시설로 이어지는 핵심 중앙통로 벽면에 설치된 고휘도 LED 와이드 조명 매체로, 보행자 시선 정면에 100% 밀착 노출됩니다.
+                </p>
+              </div>
+            </div>
+            <div class="lhc-card">
+              <div class="lhc-side">
+                <span class="lhc-badge purple">터미널 쉘터</span>
+                <strong class="lhc-size">정류소 양면 쉘터</strong>
+                <span class="lhc-aspect">시내·시외버스 승강장</span>
+              </div>
+              <div class="lhc-main">
+                <h5 class="lhc-title">유스퀘어 광천터미널 승강장 쉘터 광고</h5>
+                <p class="lhc-desc">
+                  광천터미널 앞 시내버스 환승 승강장 및 시외버스 승하차 구역에 위치하여 버스를 기다리는 탑승객과 차량 이용자에게 주야간 높은 주목도를 제공합니다.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 03 TAXI & SPECIALIZED OOH GUIDE -->
+        <!-- 04 TAXI & SPECIALIZED OOH GUIDE (AUTHENTIC TAXI PROPOSAL DATA) -->
         <div class="bus-guide-page" id="guideTaxiSpec">
+          
+          <!-- TOP PROPOSAL DOWNLOAD BANNER -->
           <div class="lmg-download-banner">
             <div class="ldb-info">
               <span class="ldb-badge">OFFICIAL PDF</span>
               <strong class="ldb-title">광주 택시 래핑 광고 공식 제안서 및 단가표 (PDF)</strong>
-              <p class="ldb-meta">법인·개인택시 200대 양측면 래핑 규격 및 운영 가이드 단가표 수록 (PDF)</p>
+              <p class="ldb-meta">운전석·조수석 양측면 래핑 규격(220×50cm) 및 월 광고료 단가표 수록 (PDF)</p>
             </div>
             <a href="/pdf/gaon_taxi_ad.pdf" download="가온엔_택시광고_공식제안서.pdf" class="ldb-btn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -1954,26 +2254,59 @@ if (!empty($active_popups)) {
             </a>
           </div>
 
-          <div class="lmg-high-contrast-grid">
-            <div class="lhc-card">
-              <div class="lhc-side">
-                <span class="lhc-badge blue">택시 래핑</span>
-                <strong class="lhc-size">2,000 × 370 mm</strong>
+          <!-- 01. TAXI RATE & SPEC CARD -->
+          <h4 class="lmg-sec-heading">택시 외부 래핑 광고 공식 단가표 (월 기준 / 1대당)</h4>
+          <div class="lmg-rate-grid" style="grid-template-columns:repeat(2, minmax(0, 1fr));">
+            
+            <div class="lrg-card featured">
+              <span class="lrg-ribbon">기본 구성</span>
+              <div class="lrg-title-row">
+                <h5 class="lrg-title">택시 양측면 래핑 광고</h5>
+                <span class="lrg-sub">운전석 + 조수석 양측 도어 래핑</span>
               </div>
-              <div class="lhc-main">
-                <h5 class="lhc-title">도심 생활권 이동 노출</h5>
-                <p class="lhc-desc">광주 생활권을 이동하는 법인·개인택시의 양측면을 활용해 다양한 지역에서 반복적으로 노출되는 차량 광고입니다.</p>
+              <div class="lrg-price-box">
+                <div class="lrg-row">
+                  <span class="lrg-k">광고료 (月 / 1대)</span>
+                  <strong class="lrg-v" style="color:#1d4ed8;">50,000<span style="font-size:13px; font-weight:700;">원</span></strong>
+                </div>
+                <div class="lrg-row">
+                  <span class="lrg-k">초기 제작비 (1회)</span>
+                  <strong class="lrg-v small">50,000원</strong>
+                </div>
+              </div>
+              <div class="lrg-spec-tag" style="background:#eff6ff; border-color:#bfdbfe; color:#1d4ed8;">
+                규격: <strong>220 × 50 cm</strong> (양측면) · 최소 100여 대 단위 권역 분산 집행
               </div>
             </div>
 
+            <div class="lrg-card">
+              <div class="lrg-title-row">
+                <h5 class="lrg-title">택시 매체 주요 특징</h5>
+                <span class="lrg-sub">광주 시내 전역 이동형 매체</span>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:8px; font-size:13px; color:#334155; padding-top:4px;">
+                <div>• <strong>도심 전역 운행</strong>: 특정 노선에 한정되지 않고 시내 전역을 자유롭게 순환</div>
+                <div>• <strong>지속적인 노출</strong>: 주·야간 유동인구 동선에 맞춘 자연스러운 시선 접촉</div>
+                <div>• <strong>전용 실사 래핑</strong>: 차량 전용 시트 출력으로 깔끔한 외관 및 시인성 유지</div>
+                <div>• <strong>분산 배차 집행</strong>: 100여 대 규모 분산 배차로 주요 생활권 다각도 노출</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 02. OTHER SPECIAL OOH MEDIA (TRUCK, CART, DID) -->
+          <h4 class="lmg-sec-heading">기타 특화 옥외매체 규격 안내</h4>
+          <div class="lmg-high-contrast-grid">
+            
             <div class="lhc-card">
               <div class="lhc-side">
                 <span class="lhc-badge blue">택배 탑차</span>
                 <strong class="lhc-size">3,000 × 1,500 mm</strong>
+                <span class="lhc-aspect">차량 3면 와이드 래핑</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">택배 탑차 3면 와이드 래핑 광고</h5>
-                <p class="lhc-desc">택배 차량의 넓은 외부면을 활용해 아파트와 주거지역 등 배송 동선에서 브랜드를 노출하는 래핑 광고입니다.</p>
+                <h5 class="lhc-title">택배 탑차 3면 래핑 광고</h5>
+                <p class="lhc-desc">택배 차량의 외부 면을 활용해 아파트 단지와 주거 밀집 지역의 배송 동선에서 브랜드를 노출하는 래핑 광고입니다.</p>
               </div>
             </div>
 
@@ -1981,10 +2314,11 @@ if (!empty($active_popups)) {
               <div class="lhc-side">
                 <span class="lhc-badge gold">쇼핑카트</span>
                 <strong class="lhc-size">280 × 160 mm</strong>
+                <span class="lhc-aspect">양면 플레이트 부착</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">매장 내 쇼핑동선 노출</h5>
-                <p class="lhc-desc">대형마트 쇼핑카트에 광고를 부착해 고객의 매장 이용 동선에서 자연스럽게 브랜드와 상품 정보를 전달하는 매체입니다.</p>
+                <h5 class="lhc-title">대형마트 쇼핑카트 광고</h5>
+                <p class="lhc-desc">대형마트 쇼핑카트에 광고를 부착해 매장 이용 고객의 쇼핑 동선에서 자연스럽게 브랜드와 정보를 전달합니다.</p>
               </div>
             </div>
 
@@ -1996,10 +2330,12 @@ if (!empty($active_popups)) {
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">지역 거점 DID 디지털 전광판</h5>
-                <p class="lhc-desc">터미널 등 지역 생활거점에 설치된 디지털 전광판을 활용해 이미지와 영상 광고를 송출하는 옥외매체입니다.</p>
+                <p class="lhc-desc">터미널 등 지역 거점에 설치된 디지털 전광판을 통해 이미지와 영상 광고를 송출하는 옥외매체입니다.</p>
               </div>
             </div>
+
           </div>
+
         </div>
 
         <!-- 04 ONLINE MARKETING GUIDE -->

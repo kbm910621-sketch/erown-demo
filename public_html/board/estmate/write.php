@@ -104,7 +104,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
                   <div class="cf-checks">
                     <input type="checkbox" class="cf-chk" name="in_ad_type[]" id="t1" value="버스 광고" checked><label for="t1">버스 광고</label>
                     <input type="checkbox" class="cf-chk" name="in_ad_type[]" id="t2" value="택시 광고"><label for="t2">택시 광고</label>
-                    <input type="checkbox" class="cf-chk" name="in_ad_type[]" id="t3" value="DID 광고"><label for="t3">DID 광고</label>
+                    <input type="checkbox" class="cf-chk" name="in_ad_type[]" id="t3" value="터미널 광고"><label for="t3">터미널 광고</label>
                     <input type="checkbox" class="cf-chk" name="in_ad_type[]" id="t4" value="인쇄물·현수막"><label for="t4">인쇄물·현수막</label>
                     <input type="checkbox" class="cf-chk" name="in_ad_type[]" id="t5" value="온라인 마케팅"><label for="t5">온라인 마케팅</label>
                     <input type="checkbox" class="cf-chk" name="in_ad_type[]" id="t6" value="홈페이지 제작"><label for="t6">홈페이지 제작</label>

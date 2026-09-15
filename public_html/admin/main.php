@@ -51,7 +51,7 @@ if ($res_pop_total) {
 $cat_map = array(
     'bus'     => '시내버스 광고',
     'shelter' => '버스 승강장·쉘터',
-    'did'     => 'DID·터미널 광고',
+    'did'     => '터미널 광고',
     'taxi'    => '택시·택배·특화매체',
     'online'  => '온라인 마케팅',
     'video'   => '영상제작',

@@ -39,7 +39,7 @@
           <span><em>TEL</em> 062-381-1350</span>
           <span><em>FAX</em> 062-385-1370</span>
           <span><em>E-Mail</em> lgmo123@naver.com</span>
-          <span class="full"><em>영업시간</em> 평일 09:30 – 18:30 &nbsp;·&nbsp; 토·일·공휴일 휴무</span>
+          <span class="full"><em>영업시간</em> 평일 09:00 – 18:00 &nbsp;·&nbsp; 토·일·공휴일 휴무</span>
         </div>
       </div>
       <div class="foot_right">

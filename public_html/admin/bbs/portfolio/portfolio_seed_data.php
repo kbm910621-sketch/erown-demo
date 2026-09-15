@@ -296,6 +296,24 @@ $GAON_PORTFOLIO_ITEMS = array(
     "date" => "2026·09"
   ),
   array(
+    "id" => 81,
+    "category" => "did",
+    "badge" => "TERMINAL·AD",
+    "tag" => "터미널 광고",
+    "title" => "상무힐링재활요양병원 유스퀘어 광천터미널 중앙통로 와이드 조명광고",
+    "client" => "상무힐링재활요양병원",
+    "location" => "광주 유스퀘어 광천터미널 1층 중앙통로",
+    "scale" => "터미널 내부 고휘도 와이드 조명 패널",
+    "description" => "호남 최대 교통 허브 유스퀘어 광천터미널 1층 게이트 및 중앙통로에 위치하여 버스 승하차객과 터미널 방문객 시선을 100% 사로잡는 고휘도 와이드 조명 광고",
+    "thumb" => "/images/port/port_terminal_usquare_01.jpg",
+    "images" => array(
+      "/images/port/port_terminal_usquare_01.jpg",
+      "/images/port/port_terminal_usquare_02.jpg"
+    ),
+    "sort_order" => 17,
+    "date" => "2026·09"
+  ),
+  array(
     "id" => 1,
     "category" => "bus",
     "badge" => "BUS·IN",
@@ -556,7 +574,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "id" => 16,
     "category" => "did",
     "badge" => "TERMINAL·AD",
-    "tag" => "터미널·DID 광고",
+    "tag" => "터미널 광고",
     "title" => "뉴스타정형외과의원 버스터미널 대형 조명 와이드 광고",
     "client" => "뉴스타정형외과",
     "location" => "영광종합버스터미널 대합실",
@@ -578,7 +596,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "client" => "닥터스피부과",
     "location" => "상무지구/수완지구 경유 노선",
     "scale" => "시내버스 2대 (후면)",
-    "description" => "도심 주요 정체 교차로에서 후방 운전자 시야를 압도하는 프리미엄 피부과 래핑",
+    "description" => "도심 주요 정체 교차로에서 후방 운전자 시야에 선명하게 전달되는 프리미엄 피부과 래핑",
     "thumb" => "/images/port/port_17_1.jpg",
     "images" => array(
       "/images/port/port_17_1.jpg"
@@ -815,8 +833,8 @@ $GAON_PORTFOLIO_ITEMS = array(
     "category" => "bus",
     "badge" => "BUS·WRAP",
     "tag" => "시내버스 광고",
-    "title" => "아미아여성의원 프리미엄 여성의학 시내버스 후면 광고",
-    "client" => "아미아여성의원",
+    "title" => "아이마여성의원 프리미엄 여성의학 시내버스 후면 광고",
+    "client" => "아이마여성의원",
     "location" => "상무지구/수완지구 경유 노선",
     "scale" => "시내버스 2대 (후면)",
     "description" => "후방 대기 차량 운전자 시선에 최적화된 하이엔드 여성클리닉 래핑",
@@ -1052,7 +1070,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "id" => 45,
     "category" => "did",
     "badge" => "TERMINAL·AD",
-    "tag" => "터미널·DID 광고",
+    "tag" => "터미널 광고",
     "title" => "롯데하이마트 목포종합버스터미널 대형 와이드 조명 광고",
     "client" => "롯데하이마트",
     "location" => "목포종합버스터미널 대합실",
