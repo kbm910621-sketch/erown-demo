@@ -205,7 +205,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 updated_at=NOW()
             WHERE id=?
         ");
-        mysqli_stmt_bind_param($stmt, 'sssssssssiisi',
+        mysqli_stmt_bind_param($stmt, 'ssssssssssiisi',
             $category, $title, $client, $location,
             $period_start, $period_end, $scale, $description,
             $thumb, $images_json, $is_featured, $sort_order, $status,
@@ -221,7 +221,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             VALUES
                 (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())
         ");
-        mysqli_stmt_bind_param($stmt, 'sssssssssiiss',
+        mysqli_stmt_bind_param($stmt, 'ssssssssssiis',
             $category, $title, $client, $location,
             $period_start, $period_end, $scale, $description,
             $thumb, $images_json, $is_featured, $sort_order, $status
