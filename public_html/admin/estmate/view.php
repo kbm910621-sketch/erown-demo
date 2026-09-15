@@ -70,7 +70,7 @@ $row['est_regdate'] = mb_substr($row['est_regdate'], 0, 16);
 						</tr>
 						<tr>
 							<td colspan="4" class="body_matter" style="min-height:160px; line-height:1.8; padding:30px 20px; font-size:14px;">
-								<?=nl2br(htmlspecialchars($row['est_content']))?>
+								<?=nl2br(htmlspecialchars(!empty($row['est_memo']) ? $row['est_memo'] : (!empty($row['est_content']) ? $row['est_content'] : '-')))?><br><br>
 							</td>
 						</tr>
 					</tbody>
