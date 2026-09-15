@@ -35,7 +35,7 @@ if ($check_count_res) {
 }
 
 $seed_file = dirname(__FILE__) . '/portfolio_seed_data.php';
-if (file_exists($seed_file)) {
+if (file_exists($seed_file) && ($db_port_count === 0 || isset($_GET['sync']))) {
     include_once $seed_file;
     if (isset($GAON_PORTFOLIO_ITEMS) && is_array($GAON_PORTFOLIO_ITEMS)) {
             foreach ($GAON_PORTFOLIO_ITEMS as $item) {
@@ -92,23 +92,10 @@ $edit = null;
 
 // ── 수정 데이터 로드 ──
 if ($mode === 'modify' && !empty($_GET['id'])) {
-    $eid  = (int)$_GET['id'];
-    $stmt = mysqli_prepare($conn, "SELECT * FROM portfolio WHERE id = ?");
-    if ($stmt) {
-        mysqli_stmt_bind_param($stmt, 'i', $eid);
-        mysqli_stmt_execute($stmt);
-        mysqli_stmt_bind_result($stmt, $id_col, $category_col, $title_col, $client_col, $location_col, $period_start_col, $period_end_col, $scale_col, $description_col, $thumb_col, $images_col, $is_featured_col, $sort_order_col, $status_col, $created_at_col, $updated_at_col);
-        mysqli_stmt_fetch($stmt);
-        $edit = array(
-            'id'=>$id_col, 'category'=>$category_col, 'title'=>$title_col,
-            'client'=>$client_col, 'location'=>$location_col,
-            'period_start'=>$period_start_col, 'period_end'=>$period_end_col,
-            'scale'=>$scale_col, 'description'=>$description_col,
-            'thumb'=>$thumb_col, 'images'=>$images_col,
-            'is_featured'=>$is_featured_col, 'sort_order'=>$sort_order_col,
-            'status'=>$status_col, 'created_at'=>$created_at_col, 'updated_at'=>$updated_at_col
-        );
-        mysqli_stmt_close($stmt);
+    $eid = (int)$_GET['id'];
+    $res = mysqli_query($conn, "SELECT * FROM portfolio WHERE id = $eid LIMIT 1");
+    if ($res && mysqli_num_rows($res) > 0) {
+        $edit = mysqli_fetch_assoc($res);
     }
 }
 
