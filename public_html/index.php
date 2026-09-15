@@ -1327,7 +1327,7 @@ if (!empty($active_popups)) {
 
       </div>
 
-      <!-- 4 CLEAN VISUAL DELIVERABLE SELECTORS -->
+      <!-- 3 CLEAN VISUAL DELIVERABLE SELECTORS -->
       <div class="avh-selectors-grid">
 
           <div class="avs-item-card on" data-target-mode="wide"
@@ -1346,6 +1346,7 @@ if (!empty($active_popups)) {
           <span class="avs-sub">9:16 모바일 세로형 콘텐츠</span>
           </div>
 
+          <!-- 03 DID 전광판 영상 (숨김 처리)
           <div class="avs-item-card" data-target-mode="wide"
               data-title="DID 디지털 사이니지 영상"
               data-sub="설치 매체의 규격과 송출 환경에 맞춘 광고영상">
@@ -1353,11 +1354,12 @@ if (!empty($active_popups)) {
           <strong class="avs-title">DID 전광판 영상</strong>
           <span class="avs-sub">매체 규격 맞춤 영상 콘텐츠</span>
           </div>
+          -->
 
           <div class="avs-item-card" data-target-mode="wide"
               data-title="광고 · 캠페인 영상 콘텐츠"
               data-sub="온라인과 오프라인 광고에 활용할 수 있는 영상 제작">
-          <span class="avs-badge">04 / AD CONTENT</span>
+          <span class="avs-badge">03 / AD CONTENT</span>
           <strong class="avs-title">광고 · 캠페인 영상</strong>
           <span class="avs-sub">기획 · 촬영 · 편집</span>
           </div>
