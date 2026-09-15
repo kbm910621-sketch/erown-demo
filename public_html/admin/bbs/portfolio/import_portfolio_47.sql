@@ -150,9 +150,9 @@ INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale
 VALUES (85, 'did', '더스마트병원 유스퀘어 광천터미널 매표소 상단 대형 LED 전광판 광고', '더스마트병원', '광주 유스퀘어 광천터미널 1층 고속버스 매표소 상단', '대형 와이드 LED 전광판 (2,500 × 1,500 mm)', '유스퀘어 광천터미널 1층 고속버스 매표소 및 안내데스크 상단에 위치한 초대형 LED 전광판으로 매표 및 대기 승객의 시선을 압도하는 고화질 영상·이미지 광고', '/images/port/port_usquare_led_01.jpg', '["/images/port/port_usquare_led_01.jpg"]', 1, 21, 'active', NOW(), NOW())
 ON DUPLICATE KEY UPDATE `title`=VALUES(`title`), `client`=VALUES(`client`), `scale`=VALUES(`scale`), `description`=VALUES(`description`), `thumb`=VALUES(`thumb`), `images`=VALUES(`images`), `category`='did';
 
--- 86. 하이온요양병원 브랜드 홍보영상 기획·촬영·편집
+-- 86. 병원 브랜드 홍보영상 기획·촬영·편집
 INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale`, `description`, `thumb`, `images`, `video`, `is_featured`, `sort_order`, `status`, `created_at`, `updated_at`)
-VALUES (86, 'video', '하이온요양병원 브랜드 홍보영상 기획·촬영·편집', '하이온요양병원', '광주 전역', 'FHD 16:9 와이드 브랜드 홍보영상', '의료진 전문 인터뷰 및 입원실, 첨단 하이푸 치료 시설 등 병원의 강점과 편의 시설을 체계적으로 담아낸 고품질 브랜드 홍보영상', '/images/port/video/video_thumb_hion.jpg', '["/images/port/video/video_thumb_hion.jpg"]', '/images/port/video/video_clip_hion.mp4', 1, 22, 'active', NOW(), NOW())
+VALUES (86, 'video', '병원 브랜드 홍보영상 기획·촬영·편집', '하이온요양병원', '광주 전역', 'FHD 16:9 와이드 브랜드 홍보영상', '의료진 전문 인터뷰 및 입원실, 첨단 하이푸 치료 시설 등 병원의 강점과 편의 시설을 체계적으로 담아낸 고품질 브랜드 홍보영상', '/images/port/video/video_thumb_hion.jpg', '["/images/port/video/video_thumb_hion.jpg"]', '/images/port/video/video_clip_hion.mp4', 1, 22, 'active', NOW(), NOW())
 ON DUPLICATE KEY UPDATE `title`=VALUES(`title`), `client`=VALUES(`client`), `scale`=VALUES(`scale`), `description`=VALUES(`description`), `thumb`=VALUES(`thumb`), `images`=VALUES(`images`), `video`=VALUES(`video`), `category`='video';
 
 -- 87. 조아진병원 척추·관절 건강정보 SNS 릴스·쇼츠 영상

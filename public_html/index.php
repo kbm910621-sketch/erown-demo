@@ -1316,7 +1316,7 @@ if (!empty($active_popups)) {
             <div class="acf-scrim"></div>
             <div class="acf-overlay-info">
               <span class="acf-tag gold">VIDEO &amp; CONTENT PRODUCTION</span>
-              <h3 class="acf-title" id="dynCinemaTitle">하이온요양병원 브랜드 홍보영상</h3>
+              <h3 class="acf-title" id="dynCinemaTitle">병원 브랜드 홍보영상</h3>
               <p class="acf-sub" id="dynCinemaSub">의료진 전문 인터뷰 · 첨단 치료 시설 · 입원실 기획·촬영·편집</p>
             </div>
           </div>
@@ -1358,7 +1358,7 @@ if (!empty($active_popups)) {
       <div class="avh-selectors-grid">
 
           <div class="avs-item-card on" data-target-mode="wide"
-              data-title="하이온요양병원 브랜드 홍보영상"
+              data-title="병원 브랜드 홍보영상"
               data-sub="의료진 인터뷰 · 첨단 치료 시설 · 병원 브랜딩 기획·촬영·편집">
           <span class="avs-badge">01 / BRAND CONTENT</span>
           <strong class="avs-title">기업 · 병원 홍보영상</strong>
