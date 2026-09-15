@@ -14,7 +14,7 @@ $(function() {
     '/images/bs_ad/ooh11/DID광고.png',
     '/images/bs_ad/ooh11/택시광고01.png',
     '/images/bs_ad/ooh11/택배차광고01.png',
-    '/images/bs_ad/ooh11/mart_cart_01.jpg'
+    '/images/port/mart/mart_01.jpg'
   ];
   // Preload all high-res OOH images into browser memory immediately
   oohImages.forEach(function(src) {

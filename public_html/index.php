@@ -693,8 +693,8 @@ if (!empty($active_popups)) {
                             data-cat="special"
                             data-num="04"
                             data-eng="SPECIAL MEDIA"
-                            data-img="/images/bs_ad/ooh11/mart_cart_01.jpg" 
-                            data-sub="대형마트 카트광고" 
+                            data-img="/images/port/mart/mart_01.jpg" 
+                            data-sub="더스마트병원 대형마트 쇼핑카트 광고" 
                             data-guide="guideTaxiSpec">
                       <span class="gds-item-num">03</span>
                       <span class="gds-item-txt">대형마트 카트광고</span>
