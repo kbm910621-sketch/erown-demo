@@ -66,7 +66,7 @@ $defaultBus = array(
   array('id'=>75, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'더스마트병원 골절·관절 전문케어 택배차량 래핑 광고', 'thumb'=>'/images/port/port_truck_smart_01.jpg', 'images'=>array('/images/port/port_truck_smart_01.jpg','/images/port/port_truck_smart_02.jpg','/images/port/port_truck_smart_03.jpg'), 'client'=>'더스마트병원', 'location'=>'광주 전역 택배 배송 권역', 'sort_order'=>11),
   array('id'=>76, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'삼성스토어 광천점 오픈·가전 페스타 택배차량 30대 래핑 광고', 'thumb'=>'/images/port/port_truck_samsung_01.jpg', 'images'=>array('/images/port/port_truck_samsung_01.jpg','/images/port/port_truck_samsung_02.jpg','/images/port/port_truck_samsung_03.jpg'), 'client'=>'삼성스토어', 'location'=>'광주 30대 배송 권역', 'sort_order'=>12),
   array('id'=>77, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'스마트인재개발원 IT·AI 취업과정 모집 택배차량 10대 래핑 광고', 'thumb'=>'/images/port/port_truck_smhrd_01.jpg', 'images'=>array('/images/port/port_truck_smhrd_01.jpg','/images/port/port_truck_smhrd_02.jpg','/images/port/port_truck_smhrd_03.jpg'), 'client'=>'스마트인재개발원', 'location'=>'광주 10대 배송 권역', 'sort_order'=>13),
-  array('id'=>78, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'신수정 시의원 지역밀착 의정보고 택배차량 10대 홍보 래핑', 'thumb'=>'/images/port/port_truck_sinsujeong_01.jpg', 'images'=>array('/images/port/port_truck_sinsujeong_01.jpg','/images/port/port_truck_sinsujeong_02.jpg'), 'client'=>'신수정 시의원', 'location'=>'광주 북구 10대', 'sort_order'=>14),
+  array('id'=>78, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'신수정 시의원 의정보고 택배차량 10대 홍보 래핑', 'thumb'=>'/images/port/port_truck_sinsujeong_01.jpg', 'images'=>array('/images/port/port_truck_sinsujeong_01.jpg','/images/port/port_truck_sinsujeong_02.jpg'), 'client'=>'신수정 시의원', 'location'=>'광주 북구 10대', 'sort_order'=>14),
   array('id'=>79, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'정다은 변호사 무료법률상담·전문클리닉 택배차량 40대 래핑 광고', 'thumb'=>'/images/port/port_truck_jungdaeun_01.jpg', 'images'=>array('/images/port/port_truck_jungdaeun_01.jpg','/images/port/port_truck_jungdaeun_02.jpg','/images/port/port_truck_jungdaeun_03.jpg'), 'client'=>'정다은 변호사', 'location'=>'광주 40대 플릿', 'sort_order'=>15),
   array('id'=>80, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'하트치과 분과별 전문진료 택배차량 5대 양면 래핑 광고', 'thumb'=>'/images/port/port_truck_heartdental_01.jpg', 'images'=>array('/images/port/port_truck_heartdental_01.jpg','/images/port/port_truck_heartdental_02.jpg','/images/port/port_truck_heartdental_03.jpg'), 'client'=>'하트치과의원', 'location'=>'광주 5대 권역', 'sort_order'=>16),
   array('id'=>81, 'category'=>'did', 'badge'=>'TERMINAL·AD', 'title'=>'상무힐링재활요양병원 유스퀘어 광천터미널 중앙통로 와이드 조명광고', 'thumb'=>'/images/port/port_terminal_usquare_01.jpg', 'images'=>array('/images/port/port_terminal_usquare_01.jpg','/images/port/port_terminal_usquare_02.jpg'), 'client'=>'상무힐링재활요양병원', 'location'=>'광주 유스퀘어 광천터미널 1층 중앙통로', 'sort_order'=>17),
@@ -2010,7 +2010,7 @@ if (!empty($active_popups)) {
             <div class="lhc-card">
               <div class="lhc-side">
                 <span class="lhc-badge blue">01. 접촉 빈도</span>
-                <strong class="lhc-size">생활 밀착형 노출</strong>
+                <strong class="lhc-size">도심 집중 노출</strong>
                 <span class="lhc-aspect">도심 이동 동선 중심</span>
               </div>
               <div class="lhc-main">
@@ -2217,12 +2217,12 @@ if (!empty($active_popups)) {
               <div class="lhc-side">
                 <span class="lhc-badge purple">중앙통로 조명광고</span>
                 <strong class="lhc-size">와이드 LED 패널</strong>
-                <span class="lhc-aspect">1층 메인 게이트 이동동선</span>
+                <span class="lhc-aspect">1층 메인 이동동선</span>
               </div>
               <div class="lhc-main">
                 <h5 class="lhc-title">유스퀘어 1층 중앙통로 와이드 조명 광고</h5>
                 <p class="lhc-desc">
-                  유스퀘어 1층 출입구 및 승하차 게이트, 편의시설로 이어지는 핵심 중앙통로 벽면에 설치된 고휘도 LED 와이드 조명 매체로, 보행자 시선 정면에 100% 밀착 노출됩니다.
+                  유스퀘어 1층 출입구 및 편의시설로 이어지는 핵심 중앙통로 벽면에 설치된 고휘도 LED 와이드 조명 매체로, 보행자 시선 정면에 선명하게 노출됩니다.
                 </p>
               </div>
             </div>
@@ -2235,7 +2235,27 @@ if (!empty($active_popups)) {
               <div class="lhc-main">
                 <h5 class="lhc-title">유스퀘어 광천터미널 승강장 쉘터 광고</h5>
                 <p class="lhc-desc">
-                  광천터미널 앞 시내버스 환승 승강장 및 시외버스 승하차 구역에 위치하여 버스를 기다리는 탑승객과 차량 이용자에게 주야간 높은 주목도를 제공합니다.
+                  광천터미널 앞 시내버스 환승 승강장 및 시외버스 승차 구역에 위치하여 버스를 기다리는 탑승객과 차량 이용자에게 주야간 높은 주목도를 제공합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- REGIONAL TERMINAL AD GUIDE NOTICE -->
+          <div class="lmg-terminal-notice" style="margin-top: 20px; padding: 22px 24px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px;">
+            <div style="display:flex; align-items:flex-start; gap:16px;">
+              <div style="flex-shrink:0; width:44px; height:44px; border-radius:10px; background:#e0e7ff; color:#4338ca; display:flex; align-items:center; justify-content:center;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div style="flex:1;">
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap;">
+                  <span class="lhc-badge" style="background:#4338ca; color:#fff; font-size:12px; font-weight:700; padding:3px 8px; border-radius:4px;">지역 버스터미널 광고</span>
+                  <span style="font-size:13px; font-weight:700; color:#475569;">영광 · 목포 · 해남 · 나주 · 순천 등 전남·광역권</span>
+                </div>
+                <h5 style="font-size:16px; font-weight:700; color:#0f172a; margin-bottom:6px;">지역 버스터미널 광고 (대합실 와이드 조명 · 벽면 조명판)</h5>
+                <p style="font-size:13.5px; line-height:1.6; color:#64748b; margin:0;">
+                  터미널 광고는 각 지역 버스터미널 환경에 따라 설치 규격 및 사이즈에 차이가 있습니다.<br>
+                  희망하시는 지역 및 터미널을 문의해 주시면 현장 상세 규격과 광고 위치를 친절하게 안내해 드립니다.
                 </p>
               </div>
             </div>

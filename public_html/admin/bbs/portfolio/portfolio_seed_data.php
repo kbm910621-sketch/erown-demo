@@ -244,10 +244,10 @@ $GAON_PORTFOLIO_ITEMS = array(
     "category" => "taxi",
     "badge" => "PARCEL·AD",
     "tag" => "택배차량 광고",
-    "title" => "신수정 시의원 지역밀착 의정보고 택배차량 10대 홍보 래핑",
+    "title" => "신수정 시의원 의정보고 택배차량 10대 홍보 래핑",
     "client" => "신수정 광주광역시의원",
     "location" => "광주 북구 관내 생활권역 (10대)",
-    "scale" => "택배차량 10대 생활밀착 래핑",
+    "scale" => "택배차량 10대 홍보 래핑",
     "description" => "북구 주민들의 생활 동선 구석구석을 누비는 택배차량 10대를 활용하여 의정활동 보고 및 주요 정책 성과 홍보",
     "thumb" => "/images/port/port_truck_sinsujeong_01.jpg",
     "images" => array(
@@ -304,7 +304,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "client" => "상무힐링재활요양병원",
     "location" => "광주 유스퀘어 광천터미널 1층 중앙통로",
     "scale" => "터미널 내부 고휘도 와이드 조명 패널",
-    "description" => "호남 최대 교통 허브 유스퀘어 광천터미널 1층 게이트 및 중앙통로에 위치하여 버스 승하차객과 터미널 방문객 시선을 100% 사로잡는 고휘도 와이드 조명 광고",
+    "description" => "호남 최대 교통 허브 유스퀘어 광천터미널 1층 중앙통로에 위치하여 터미널 이용객과 방문객의 시선을 사로잡는 고휘도 와이드 조명 광고",
     "thumb" => "/images/port/port_terminal_usquare_01.jpg",
     "images" => array(
       "/images/port/port_terminal_usquare_01.jpg",
@@ -322,7 +322,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "client" => "365열린야간의원",
     "location" => "광주 대형마트 쇼핑카트 (운암동 권역)",
     "scale" => "쇼핑카트 양면 플레이트 (전면+내면)",
-    "description" => "운암동 365열린야간의원의 연중무휴·야간진료 및 1인수액실 안내를 대형마트 쇼핑카트 양면에 부착하여 가족 단위 장보기 고객에게 100% 밀착 노출",
+    "description" => "운암동 365열린야간의원의 연중무휴·야간진료 및 1인수액실 안내를 대형마트 쇼핑카트 양면에 부착하여 가족 단위 장보기 고객에게 효과적으로 노출",
     "thumb" => "/images/port/mart/mart_365open_01.jpg",
     "images" => array(
       "/images/port/mart/mart_365open_01.jpg",
@@ -494,7 +494,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "client" => "광주광역시청",
     "location" => "광주 주요 간선/지선 3개 노선",
     "scale" => "시내버스 3대 (옆면+하차문)",
-    "description" => "광주광역시 핵심 시정 과제 홍보 버스 승하차 승객 및 보행자 타깃 집행",
+    "description" => "광주광역시 핵심 시정 과제 홍보 버스 이용 승객 및 보행자 타깃 집행",
     "thumb" => "/images/port/port_07_1.jpg",
     "images" => array(
       "/images/port/port_07_1.jpg"
@@ -511,7 +511,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "client" => "광주안과",
     "location" => "광주 시내버스 34대 전 노선",
     "scale" => "시내버스 34대 (시트 전석)",
-    "description" => "탑승 승객 평균 20분 이상 장시간 밀착 노출 시트커버 포스터",
+    "description" => "탑승 승객 평균 20분 이상 장시간 지속 노출 시트커버 포스터",
     "thumb" => "/images/port/port_08_1.jpg",
     "images" => array(
       "/images/port/port_08_1.jpg"
@@ -718,7 +718,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "client" => "밝은안과21병원",
     "location" => "광주 시내버스 전 노선",
     "scale" => "시내버스 하차문 단독면",
-    "description" => "하차 직전 모든 승객이 100% 응시하는 골든존 하차문 스팟 광고",
+    "description" => "하차 직전 승객의 시선이 집중되는 하차문 포스터 광고",
     "thumb" => "/images/port/port_20_1.jpg",
     "images" => array(
       "/images/port/port_20_1.jpg"
@@ -770,7 +770,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "client" => "북구치매안심센터",
     "location" => "광주 북구 전역 시내버스",
     "scale" => "시내버스 12대 (시트커버)",
-    "description" => "만 60세 이상 어르신 무료 치매선별검진 안내 버스 좌석 밀착 홍보",
+    "description" => "만 60세 이상 어르신 무료 치매선별검진 안내 버스 좌석 포스터 홍보",
     "thumb" => "/images/port/port_23_1.jpg",
     "images" => array(
       "/images/port/port_23_1.jpg"
@@ -941,7 +941,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "client" => "광주광역시청",
     "location" => "광주 전역 간선 시내버스",
     "scale" => "시내버스 인도면 와이드",
-    "description" => "광주 미래 발전을 위한 광주 군공항 이전 공공정책 시민 밀착 안내 래핑",
+    "description" => "광주 미래 발전을 위한 광주 군공항 이전 공공정책 시민 안내 래핑",
     "thumb" => "/images/port/port_33_1.jpg",
     "images" => array(
       "/images/port/port_33_1.jpg"
@@ -1434,7 +1434,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "client" => "원도요양병원",
     "location" => "광주 북구 및 도심 전역 배송권역",
     "scale" => "택배차량 측면 도어·탑 래핑",
-    "description" => "체계적인 암케어 및 입원 치료 안내를 도심 골목 구석구석을 운행하는 택배 차량 측면에 부착하여 지역 주민 밀착 홍보 집행",
+    "description" => "체계적인 암케어 및 입원 치료 안내를 도심 골목 구석구석을 운행하는 택배 차량 측면에 부착하여 지역 주민 대상 홍보 집행",
     "thumb" => "/images/port/port_61_1.jpg",
     "images" => array(
       "/images/port/port_61_1.jpg"
