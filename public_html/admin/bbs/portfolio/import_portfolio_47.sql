@@ -130,3 +130,19 @@ INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale
 VALUES (81, 'did', '상무힐링재활요양병원 유스퀘어 광천터미널 중앙통로 와이드 조명광고', '상무힐링재활요양병원', '광주 유스퀘어 광천터미널 1층 중앙통로', '터미널 내부 고휘도 와이드 조명 패널', '호남 최대 교통 허브 유스퀘어 광천터미널 1층 게이트 및 중앙통로에 위치하여 버스 승하차객과 터미널 방문객 시선을 100% 사로잡는 고휘도 와이드 조명 광고', '/images/port/port_terminal_usquare_01.jpg', '["/images/port/port_terminal_usquare_01.jpg","/images/port/port_terminal_usquare_02.jpg"]', 1, 17, 'active', NOW(), NOW())
 ON DUPLICATE KEY UPDATE `title`=VALUES(`title`), `client`=VALUES(`client`), `scale`=VALUES(`scale`), `description`=VALUES(`description`), `thumb`=VALUES(`thumb`), `images`=VALUES(`images`), `category`='did';
 
+-- 82. 365열린야간의원 연중무휴 야간진료 대형마트 카트광고
+INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale`, `description`, `thumb`, `images`, `is_featured`, `sort_order`, `status`, `created_at`, `updated_at`)
+VALUES (82, 'mart', '365열린야간의원 연중무휴 야간진료 대형마트 카트광고', '365열린야간의원', '광주 대형마트 쇼핑카트 (운암동 권역)', '쇼핑카트 양면 플레이트 (전면+내면)', '운암동 365열린야간의원의 연중무휴·야간진료 및 1인수액실 안내를 대형마트 쇼핑카트 양면에 부착하여 가족 단위 장보기 고객에게 100% 밀착 노출', '/images/port/mart/mart_365open_01.jpg', '["/images/port/mart/mart_365open_01.jpg","/images/port/mart/mart_365open_02.jpg"]', 1, 18, 'active', NOW(), NOW())
+ON DUPLICATE KEY UPDATE `title`=VALUES(`title`), `client`=VALUES(`client`), `scale`=VALUES(`scale`), `description`=VALUES(`description`), `thumb`=VALUES(`thumb`), `images`=VALUES(`images`), `category`='mart';
+
+-- 83. 광주 최대 창고형 메가하이약국 365일 영업 마트 카트광고
+INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale`, `description`, `thumb`, `images`, `is_featured`, `sort_order`, `status`, `created_at`, `updated_at`)
+VALUES (83, 'mart', '광주 최대 창고형 메가하이약국 365일 영업 마트 카트광고', '메가하이약국', '광주 대형마트 쇼핑카트 전 구역', '쇼핑카트 양면 플레이트 (전면+내면)', '200평 규모 광주 최대 창고형 메가하이약국의 365일 연중무휴 영업 및 넓은 주차공간을 쇼핑카트 양면 플레이트에 선명하게 노출', '/images/port/mart/mart_megahi_01.jpg', '["/images/port/mart/mart_megahi_01.jpg","/images/port/mart/mart_megahi_02.jpg"]', 1, 19, 'active', NOW(), NOW())
+ON DUPLICATE KEY UPDATE `title`=VALUES(`title`), `client`=VALUES(`client`), `scale`=VALUES(`scale`), `description`=VALUES(`description`), `thumb`=VALUES(`thumb`), `images`=VALUES(`images`), `category`='mart';
+
+-- 84. 굿플란트치과의원 4인원장 협진진료 마트 카트광고
+INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale`, `description`, `thumb`, `images`, `is_featured`, `sort_order`, `status`, `created_at`, `updated_at`)
+VALUES (84, 'mart', '굿플란트치과의원 4인원장 협진진료 마트 카트광고', '굿플란트치과의원', '광주 남구 대형마트 (이마트 봉선점 등)', '쇼핑카트 전면 플레이트 부착', '봉선동 굿플란트치과의원의 임플란트 4인 원장 협진진료 및 365일 주말·공휴일 진료 안내를 쇼핑카트 전면 패널에 부착하여 높은 주목도 확보', '/images/port/mart/mart_goodplant_01.jpg', '["/images/port/mart/mart_goodplant_01.jpg"]', 1, 20, 'active', NOW(), NOW())
+ON DUPLICATE KEY UPDATE `title`=VALUES(`title`), `client`=VALUES(`client`), `scale`=VALUES(`scale`), `description`=VALUES(`description`), `thumb`=VALUES(`thumb`), `images`=VALUES(`images`), `category`='mart';
+
+

@@ -314,6 +314,59 @@ $GAON_PORTFOLIO_ITEMS = array(
     "date" => "2026·09"
   ),
   array(
+    "id" => 82,
+    "category" => "mart",
+    "badge" => "MART·CART",
+    "tag" => "대형마트 카트",
+    "title" => "365열린야간의원 연중무휴 야간진료 대형마트 카트광고",
+    "client" => "365열린야간의원",
+    "location" => "광주 대형마트 쇼핑카트 (운암동 권역)",
+    "scale" => "쇼핑카트 양면 플레이트 (전면+내면)",
+    "description" => "운암동 365열린야간의원의 연중무휴·야간진료 및 1인수액실 안내를 대형마트 쇼핑카트 양면에 부착하여 가족 단위 장보기 고객에게 100% 밀착 노출",
+    "thumb" => "/images/port/mart/mart_365open_01.jpg",
+    "images" => array(
+      "/images/port/mart/mart_365open_01.jpg",
+      "/images/port/mart/mart_365open_02.jpg"
+    ),
+    "sort_order" => 18,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 83,
+    "category" => "mart",
+    "badge" => "MART·CART",
+    "tag" => "대형마트 카트",
+    "title" => "광주 최대 창고형 메가하이약국 365일 영업 마트 카트광고",
+    "client" => "메가하이약국",
+    "location" => "광주 대형마트 쇼핑카트 전 구역",
+    "scale" => "쇼핑카트 양면 플레이트 (전면+내면)",
+    "description" => "200평 규모 광주 최대 창고형 메가하이약국의 365일 연중무휴 영업 및 넓은 주차공간을 쇼핑카트 양면 플레이트에 선명하게 노출",
+    "thumb" => "/images/port/mart/mart_megahi_01.jpg",
+    "images" => array(
+      "/images/port/mart/mart_megahi_01.jpg",
+      "/images/port/mart/mart_megahi_02.jpg"
+    ),
+    "sort_order" => 19,
+    "date" => "2026·09"
+  ),
+  array(
+    "id" => 84,
+    "category" => "mart",
+    "badge" => "MART·CART",
+    "tag" => "대형마트 카트",
+    "title" => "굿플란트치과의원 4인원장 협진진료 마트 카트광고",
+    "client" => "굿플란트치과의원",
+    "location" => "광주 남구 대형마트 (이마트 봉선점 등)",
+    "scale" => "쇼핑카트 전면 플레이트 부착",
+    "description" => "봉선동 굿플란트치과의원의 임플란트 4인 원장 협진진료 및 365일 주말·공휴일 진료 안내를 쇼핑카트 전면 패널에 부착하여 높은 주목도 확보",
+    "thumb" => "/images/port/mart/mart_goodplant_01.jpg",
+    "images" => array(
+      "/images/port/mart/mart_goodplant_01.jpg"
+    ),
+    "sort_order" => 20,
+    "date" => "2026·09"
+  ),
+  array(
     "id" => 1,
     "category" => "bus",
     "badge" => "BUS·IN",
