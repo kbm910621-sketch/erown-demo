@@ -27,7 +27,7 @@
                         </div>
                         <div class="gdf_col">
                             <span class="gdf_lbl">E-MAIL</span>
-                            <span class="gdf_email">gaon-n@naver.com</span>
+                            <a href="mailto:lgmo123@naver.com" class="gdf_email" style="color:inherit; text-decoration:none;">lgmo123@naver.com</a>
                         </div>
                     </div>
                     <a href="/board/estmate/write.php" class="gdf_cta_btn">

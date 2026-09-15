@@ -562,7 +562,7 @@ if (!empty($active_popups)) {
                             data-cat="terminal"
                             data-num="03"
                             data-eng="TERMINAL MEDIA"
-                            data-img="/images/bs_ad/ooh11/유스퀘어광고.png" 
+                            data-img="/images/bs_ad/ooh11/DID광고.png" 
                             data-sub="매표소 상단 대형 전광판" 
                             data-guide="guideUsquare">
                       <span class="gds-item-num">01</span>
@@ -586,7 +586,7 @@ if (!empty($active_popups)) {
                             data-cat="terminal"
                             data-num="03"
                             data-eng="TERMINAL MEDIA"
-                            data-img="/images/bs_ad/ooh11/쉘터광고.png" 
+                            data-img="/images/bs_ad/ooh11/유스퀘어광고.png" 
                             data-sub="터미널 승강장 쉘터광고" 
                             data-guide="guideShelter">
                       <span class="gds-item-num">03</span>
@@ -597,7 +597,7 @@ if (!empty($active_popups)) {
                   <!-- MOBILE INLINE PREVIEW -->
                   <div class="go-mobile-preview">
                     <div class="gmp-image-wrap">
-                      <img class="gmp-image" src="/images/bs_ad/ooh11/유스퀘어광고.png" alt="매표소 상단 대형 전광판">
+                      <img class="gmp-image" src="/images/bs_ad/ooh11/DID광고.png" alt="매표소 상단 대형 전광판">
                     </div>
                     <div class="gmp-caption">
                       <span class="gmp-meta">03 / TERMINAL MEDIA</span>

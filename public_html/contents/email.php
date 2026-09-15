@@ -104,10 +104,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.php";
             <div class="ep-contact-box">
               <strong class="ecb-title">(주)가온엔 공식 담당처</strong>
               <div class="ecb-list">
-                <span><em>대표전화</em> 062-385-0110</span>
-                <span><em>직통문의</em> 062-381-1350</span>
-                <span><em>대표이메일</em> lgmo123@naver.com</span>
-                <span><em>상담시간</em> 평일 09:30 – 18:30 (주말·공휴일 휴무)</span>
+                <span><em>대표전화</em> <a href="tel:062-385-0110" style="color:inherit; text-decoration:none;">062-385-0110</a></span>
+                <span><em>직통문의</em> <a href="tel:062-381-1350" style="color:inherit; text-decoration:none;">062-381-1350</a></span>
+                <span><em>대표이메일</em> <a href="mailto:lgmo123@naver.com" style="color:inherit; text-decoration:none;">lgmo123@naver.com</a></span>
+                <span><em>상담시간</em> 평일 09:00 – 18:00 (주말·공휴일 휴무)</span>
               </div>
             </div>
 

@@ -36,9 +36,9 @@
           <span><em>대표자</em> 김창현</span>
           <span><em>사업자등록번호</em> 137-87-02335</span>
           <span><em>주소</em> 광주광역시 서구 상무버들로 28 재민빌딩</span>
-          <span><em>TEL</em> 062-381-1350</span>
+          <span><em>TEL</em> <a href="tel:062-381-1350" style="color:inherit; text-decoration:none;">062-381-1350</a></span>
           <span><em>FAX</em> 062-385-1370</span>
-          <span><em>E-Mail</em> lgmo123@naver.com</span>
+          <span><em>E-Mail</em> <a href="mailto:lgmo123@naver.com" style="color:inherit; text-decoration:none;">lgmo123@naver.com</a></span>
           <span class="full"><em>영업시간</em> 평일 09:00 – 18:00 &nbsp;·&nbsp; 토·일·공휴일 휴무</span>
         </div>
       </div>

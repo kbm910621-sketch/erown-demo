@@ -24,7 +24,6 @@
             <a href="https://www.instagram.com/gaon_n_official/" target="_blank" rel="noopener" class="masstige-sns-icon" aria-label="인스타그램">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
-            <a href="/board/estmate/write.php" class="masstige-download-link">회사소개서 다운로드</a>
           </div>
         </div>
       </div>
@@ -120,8 +119,8 @@
               <span>사업자등록번호: 137-87-02335</span>
             </div>
             <div class="mlm-line">
-              <span>대표전화: 062-385-0110</span>
-              <span>이메일: lgmo123@naver.com</span>
+              <span>대표전화: <a href="tel:062-385-0110" style="color:inherit; text-decoration:none;">062-385-0110</a></span>
+              <span>이메일: <a href="mailto:lgmo123@naver.com" style="color:inherit; text-decoration:none;">lgmo123@naver.com</a></span>
             </div>
             <p class="mlm-copy">© 2004–2026 GAON-N</p>
           </div>
