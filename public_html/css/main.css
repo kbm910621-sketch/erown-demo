@@ -6437,7 +6437,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 .gts-track { display: flex; align-items: center; gap: 60px; white-space: nowrap; animation: gtsMarquee 40s linear infinite; }
 .gts-track:hover { animation-play-state: paused; }
 .gts-word { font-size: clamp(64px, 7vw, 110px); font-weight: 900; letter-spacing: -0.02em; color: #ffffff; text-transform: uppercase; line-height: 1; }
-.gts-word.outline { color: transparent; -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.28); }
+.gts-word.outline { color: transparent; -webkit-text-stroke: 2.5px rgba(255, 255, 255, 0.7); paint-order: stroke fill; }
 @keyframes gtsMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 .ga-about-editorial { padding: 190px 0; background: #ffffff; color: #0f172a; position: relative; z-index: 5; }
@@ -6632,7 +6632,7 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
 .gts-track { display: flex; align-items: center; gap: 60px; white-space: nowrap; animation: gtsMarquee 40s linear infinite; }
 .gts-track:hover { animation-play-state: paused; }
 .gts-word { font-size: clamp(64px, 7vw, 110px); font-weight: 900; letter-spacing: -0.02em; color: #ffffff; text-transform: uppercase; line-height: 1; }
-.gts-word.outline { color: transparent; -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.28); }
+.gts-word.outline { color: transparent; -webkit-text-stroke: 2.5px rgba(255, 255, 255, 0.7); paint-order: stroke fill; }
 @keyframes gtsMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 .ga-about-editorial { padding: 190px 0; background: #ffffff; color: #0f172a; position: relative; z-index: 5; }
@@ -8137,6 +8137,9 @@ html.modal-popup-active, body.modal-popup-active { overflow: hidden !important; 
   }
   .gts-word {
     font-size: clamp(32px, 8.5vw, 44px) !important;
+  }
+  .gts-word.outline {
+    -webkit-text-stroke: 1.8px rgba(255, 255, 255, 0.75) !important;
   }
   .gts-track {
     gap: 22px !important;
