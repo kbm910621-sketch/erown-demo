@@ -69,7 +69,7 @@ $defaultBus = array(
   array('id'=>78, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'신수정 시의원 의정보고 택배차량 10대 홍보 래핑', 'thumb'=>'/images/port/port_truck_sinsujeong_01.jpg', 'images'=>array('/images/port/port_truck_sinsujeong_01.jpg','/images/port/port_truck_sinsujeong_02.jpg'), 'client'=>'신수정 시의원', 'location'=>'광주 북구 10대', 'sort_order'=>14),
   array('id'=>79, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'정다은 변호사 무료법률상담·전문클리닉 택배차량 40대 래핑 광고', 'thumb'=>'/images/port/port_truck_jungdaeun_01.jpg', 'images'=>array('/images/port/port_truck_jungdaeun_01.jpg','/images/port/port_truck_jungdaeun_02.jpg','/images/port/port_truck_jungdaeun_03.jpg'), 'client'=>'정다은 변호사', 'location'=>'광주 40대 플릿', 'sort_order'=>15),
   array('id'=>80, 'category'=>'taxi', 'badge'=>'PARCEL·AD', 'title'=>'하트치과 분과별 전문진료 택배차량 5대 양면 래핑 광고', 'thumb'=>'/images/port/port_truck_heartdental_01.jpg', 'images'=>array('/images/port/port_truck_heartdental_01.jpg','/images/port/port_truck_heartdental_02.jpg','/images/port/port_truck_heartdental_03.jpg'), 'client'=>'하트치과의원', 'location'=>'광주 5대 권역', 'sort_order'=>16),
-  array('id'=>81, 'category'=>'did', 'badge'=>'TERMINAL·AD', 'title'=>'상무힐링재활요양병원 유스퀘어 광천터미널 중앙통로 와이드 조명광고', 'thumb'=>'/images/port/port_terminal_usquare_01.jpg', 'images'=>array('/images/port/port_terminal_usquare_01.jpg','/images/port/port_terminal_usquare_02.jpg'), 'client'=>'상무힐링재활요양병원', 'location'=>'광주 유스퀘어 광천터미널 1층 중앙통로', 'sort_order'=>17),
+  array('id'=>81, 'category'=>'did', 'badge'=>'TERMINAL·AD', 'title'=>'상무힐링재활요양병원 유스퀘어 광천터미널 중앙통로 조명 광고', 'thumb'=>'/images/port/port_terminal_usquare_01.jpg', 'images'=>array('/images/port/port_terminal_usquare_01.jpg','/images/port/port_terminal_usquare_02.jpg'), 'client'=>'상무힐링재활요양병원', 'location'=>'광주 유스퀘어 광천터미널 1층 중앙통로', 'sort_order'=>17),
   array('id'=>82, 'category'=>'mart', 'badge'=>'MART·CART', 'title'=>'365열린야간의원 연중무휴 야간진료 대형마트 카트광고', 'thumb'=>'/images/port/mart/mart_365open_01.jpg', 'images'=>array('/images/port/mart/mart_365open_01.jpg','/images/port/mart/mart_365open_02.jpg'), 'client'=>'365열린야간의원', 'location'=>'광주 대형마트 (운암동)', 'sort_order'=>18),
   array('id'=>83, 'category'=>'mart', 'badge'=>'MART·CART', 'title'=>'광주 최대 창고형 메가하이약국 365일 영업 마트 카트광고', 'thumb'=>'/images/port/mart/mart_megahi_01.jpg', 'images'=>array('/images/port/mart/mart_megahi_01.jpg','/images/port/mart/mart_megahi_02.jpg'), 'client'=>'메가하이약국', 'location'=>'광주 대형마트 쇼핑카트', 'sort_order'=>19),
   array('id'=>84, 'category'=>'mart', 'badge'=>'MART·CART', 'title'=>'굿플란트치과의원 4인원장 협진진료 마트 카트광고', 'thumb'=>'/images/port/mart/mart_goodplant_01.jpg', 'images'=>array('/images/port/mart/mart_goodplant_01.jpg'), 'client'=>'굿플란트치과의원', 'location'=>'광주 남구 대형마트', 'sort_order'=>20),
@@ -536,20 +536,20 @@ if (!empty($active_popups)) {
               </div>
             </div>
 
-            <!-- 03. 유스퀘어 터미널 광고 -->
+            <!-- 03. 터미널 광고 (유스퀘어 & 일반 터미널 분리) -->
             <div class="go-primary-item" 
                  data-cat="terminal" 
                  data-num="03" 
                  data-eng="TERMINAL MEDIA" 
-                 data-title="유스퀘어 터미널 광고" 
+                 data-title="터미널 광고" 
                  data-guide="guideUsquare">
               <div class="gpi-header-btn">
                 <div class="gpi-title-wrap">
                   <div class="gpi-eyebrow-row">
                     <span class="gpi-eyebrow">03 / TERMINAL MEDIA</span>
                   </div>
-                  <h3 class="gpi-title">유스퀘어 터미널 광고</h3>
-                  <p class="gpi-sub">매표소 상단 전광판 · 중앙통로 조명광고 · 터미널 승강장 쉘터</p>
+                  <h3 class="gpi-title">터미널 광고</h3>
+                  <p class="gpi-sub">광주 유스퀘어 터미널 (3종) · 전남 시외·고속 버스터미널</p>
                 </div>
                 <div class="gpi-toggle-icon">
                   <span class="gpi-icon-bar h"></span>
@@ -560,14 +560,20 @@ if (!empty($active_popups)) {
               <!-- NESTED DETAIL ACCORDION BODY -->
               <div class="gpi-accordion-body">
                 <div class="gpi-body-inner">
-                  <div class="gds-sub-list">
+                  
+                  <!-- SUB-SECTION 1: 광주 유스퀘어 -->
+                  <div style="font-size:11px; font-weight:800; color:#4f46e5; padding:6px 12px 3px; letter-spacing:0.02em; display:flex; align-items:center; gap:6px;">
+                    <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:#4f46e5;"></span>
+                    광주 유스퀘어 터미널
+                  </div>
+                  <div class="gds-sub-list" style="margin-bottom:8px;">
                     <button type="button" class="gds-item on" 
                             data-id="usquare_led" 
                             data-cat="terminal"
                             data-num="03"
                             data-eng="TERMINAL MEDIA"
                             data-img="/images/bs_ad/ooh11/유스퀘어_매표소광고.jpg" 
-                            data-sub="매표소 상단 대형 전광판" 
+                            data-sub="유스퀘어 매표소 상단 전광판" 
                             data-guide="guideUsquare">
                       <span class="gds-item-num">01</span>
                       <span class="gds-item-txt">매표소 상단 대형 전광판</span>
@@ -579,10 +585,10 @@ if (!empty($active_popups)) {
                             data-num="03"
                             data-eng="TERMINAL MEDIA"
                             data-img="/images/bs_ad/ooh11/유스퀘어_통로광고.jpg" 
-                            data-sub="중앙통로 와이드 조명광고" 
+                            data-sub="유스퀘어 중앙통로 조명 광고" 
                             data-guide="guideUsquare">
                       <span class="gds-item-num">02</span>
-                      <span class="gds-item-txt">중앙통로 와이드 조명광고</span>
+                      <span class="gds-item-txt">중앙통로 조명 광고</span>
                       <span class="gds-item-arrow">→</span>
                     </button>
                     <button type="button" class="gds-item" 
@@ -591,13 +597,34 @@ if (!empty($active_popups)) {
                             data-num="03"
                             data-eng="TERMINAL MEDIA"
                             data-img="/images/bs_ad/ooh11/유스퀘어광고.png" 
-                            data-sub="터미널 승강장 쉘터광고" 
+                            data-sub="유스퀘어 승강장 쉘터광고" 
                             data-guide="guideShelter">
                       <span class="gds-item-num">03</span>
                       <span class="gds-item-txt">터미널 승강장 쉘터광고</span>
                       <span class="gds-item-arrow">→</span>
                     </button>
                   </div>
+
+                  <!-- SUB-SECTION 2: 일반 시외·고속 버스터미널 -->
+                  <div style="font-size:11px; font-weight:800; color:#0284c7; padding:10px 12px 3px; border-top:1px dashed #e2e8f0; letter-spacing:0.02em; display:flex; align-items:center; gap:6px;">
+                    <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:#0284c7;"></span>
+                    일반 시외·고속 버스터미널 (지역별)
+                  </div>
+                  <div class="gds-sub-list">
+                    <button type="button" class="gds-item" 
+                            data-id="terminal_regional" 
+                            data-cat="terminal"
+                            data-num="03"
+                            data-eng="TERMINAL MEDIA"
+                            data-img="/images/port/port_16_1.jpg" 
+                            data-sub="지역 버스터미널 조명 광고 (영광·목포 등)" 
+                            data-guide="guideUsquare">
+                      <span class="gds-item-num">04</span>
+                      <span class="gds-item-txt">지역 버스터미널 광고 (영광·목포 등)</span>
+                      <span class="gds-item-arrow">→</span>
+                    </button>
+                  </div>
+
                   <!-- MOBILE INLINE PREVIEW -->
                   <div class="go-mobile-preview">
                     <div class="gmp-image-wrap">
@@ -2199,69 +2226,84 @@ if (!empty($active_popups)) {
           </div>
         </div>
 
-        <!-- 03 U-SQUARE TERMINAL GUIDE -->
+        <!-- 03 TERMINAL GUIDE (U-SQUARE & REGIONAL TERMINAL SEPARATED) -->
         <div class="bus-guide-page" id="guideUsquare">
-          <div class="lmg-high-contrast-grid">
-            <div class="lhc-card">
-              <div class="lhc-side">
-                <span class="lhc-badge purple">유스퀘어 전광판</span>
-                <strong class="lhc-size">2,500 × 1,500 mm</strong>
-                <span class="lhc-aspect">고속버스 매표소 상단</span>
+          
+          <!-- PART 1 : 광주 유스퀘어 터미널 광고 (3종) -->
+          <div class="lmg-terminal-group" style="margin-bottom: 36px;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+              <span class="lhc-badge purple" style="font-size:12px; font-weight:800; padding:4px 10px;">유스퀘어 광고</span>
+              <h4 style="font-size:18px; font-weight:800; color:#0f172a; margin:0;">01. 광주 유스퀘어 터미널 광고</h4>
+              <span style="font-size:13px; color:#64748b;">(호남 최대 복합교통문화공간)</span>
+            </div>
+            
+            <div class="lmg-high-contrast-grid">
+              <div class="lhc-card">
+                <div class="lhc-side">
+                  <span class="lhc-badge purple">유스퀘어 전광판</span>
+                  <strong class="lhc-size">2,500 × 1,500 mm</strong>
+                  <span class="lhc-aspect">고속버스 매표소 상단</span>
+                </div>
+                <div class="lhc-main">
+                  <h5 class="lhc-title">유스퀘어 매표소 상단 대형 LED 전광판</h5>
+                  <p class="lhc-desc">
+                    유스퀘어 고속버스 매표소 상단에 위치하여 표를 예매하거나 대기하는 유동인구에게 고정이미지 및 동영상 광고를 선명하게 송출합니다.
+                  </p>
+                </div>
               </div>
-              <div class="lhc-main">
-                <h5 class="lhc-title">유스퀘어 매표소 상단 대형 LED 전광판</h5>
-                <p class="lhc-desc">
-                  호남 최대 관문 유스퀘어 고속버스 매표소 상단에 위치하여 표를 예매하거나 대기하는 수많은 유동인구에게 고정이미지 및 동영상 광고를 선명하게 송출합니다.
-                </p>
+              <div class="lhc-card">
+                <div class="lhc-side">
+                  <span class="lhc-badge purple">중앙통로 광고</span>
+                  <strong class="lhc-size">벽면 조명 패널</strong>
+                  <span class="lhc-aspect">1층 메인 이동동선</span>
+                </div>
+                <div class="lhc-main">
+                  <h5 class="lhc-title">유스퀘어 1층 중앙통로 조명 광고</h5>
+                  <p class="lhc-desc">
+                    유스퀘어 1층 출입구 및 편의시설로 이어지는 핵심 중앙통로 벽면에 설치되어 보행자 시선 정면에 선명하게 노출됩니다.
+                  </p>
+                </div>
+              </div>
+              <div class="lhc-card">
+                <div class="lhc-side">
+                  <span class="lhc-badge purple">터미널 쉘터</span>
+                  <strong class="lhc-size">정류소 양면 쉘터</strong>
+                  <span class="lhc-aspect">시내·시외버스 승강장</span>
+                </div>
+                <div class="lhc-main">
+                  <h5 class="lhc-title">유스퀘어 광천터미널 승강장 쉘터 광고</h5>
+                  <p class="lhc-desc">
+                    광천터미널 앞 시내버스 환승 승강장 및 시외버스 승차 구역에 위치하여 버스를 기다리는 탑승객과 차량 이용자에게 주야간 높은 주목도를 제공합니다.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="lhc-card">
-              <div class="lhc-side">
-                <span class="lhc-badge purple">중앙통로 조명광고</span>
-                <strong class="lhc-size">와이드 LED 패널</strong>
-                <span class="lhc-aspect">1층 메인 이동동선</span>
-              </div>
-              <div class="lhc-main">
-                <h5 class="lhc-title">유스퀘어 1층 중앙통로 와이드 조명 광고</h5>
-                <p class="lhc-desc">
-                  유스퀘어 1층 출입구 및 편의시설로 이어지는 핵심 중앙통로 벽면에 설치된 고휘도 LED 와이드 조명 매체로, 보행자 시선 정면에 선명하게 노출됩니다.
-                </p>
-              </div>
+          </div>
+
+          <!-- PART 2 : 일반 시외·고속 버스터미널 광고 (지역별 터미널) -->
+          <div class="lmg-terminal-group" style="padding: 24px; background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 16px;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;">
+              <span class="lhc-badge blue" style="font-size:12px; font-weight:800; padding:4px 10px;">지역 터미널</span>
+              <h4 style="font-size:18px; font-weight:800; color:#0f172a; margin:0;">02. 일반 시외·고속 버스터미널 광고</h4>
+              <span style="font-size:13px; font-weight:600; color:#475569;">(영광 · 목포 · 해남 · 나주 · 순천 등 전남·광역권)</span>
             </div>
-            <div class="lhc-card">
+            
+            <div class="lhc-card" style="background:#ffffff; border-color:#cbd5e1; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
               <div class="lhc-side">
-                <span class="lhc-badge purple">터미널 쉘터</span>
-                <strong class="lhc-size">정류소 양면 쉘터</strong>
-                <span class="lhc-aspect">시내·시외버스 승강장</span>
+                <span class="lhc-badge blue">일반 터미널</span>
+                <strong class="lhc-size" style="font-size:14px; color:#1e293b;">지역별 규격 상이</strong>
+                <span class="lhc-aspect">대합실 · 승차홈 벽면</span>
               </div>
               <div class="lhc-main">
-                <h5 class="lhc-title">유스퀘어 광천터미널 승강장 쉘터 광고</h5>
-                <p class="lhc-desc">
-                  광천터미널 앞 시내버스 환승 승강장 및 시외버스 승차 구역에 위치하여 버스를 기다리는 탑승객과 차량 이용자에게 주야간 높은 주목도를 제공합니다.
+                <h5 class="lhc-title">각 지역 버스터미널 대합실 조명 광고 및 내부 광고판</h5>
+                <p class="lhc-desc" style="line-height:1.65;">
+                  일반 버스터미널 광고는 각 지역 터미널의 건물 구조와 대합실 환경에 따라 설치 규격 및 사이즈에 차이가 있습니다.<br>
+                  영광종합버스터미널, 목포종합버스터미널 등 희망하시는 지역을 문의해 주시면 해당 터미널의 실측 규격과 광고 위치를 안내해 드립니다.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- REGIONAL TERMINAL AD GUIDE NOTICE -->
-          <div class="lmg-terminal-notice" style="margin-top: 20px; padding: 22px 24px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px;">
-            <div style="display:flex; align-items:flex-start; gap:16px;">
-              <div style="flex-shrink:0; width:44px; height:44px; border-radius:10px; background:#e0e7ff; color:#4338ca; display:flex; align-items:center; justify-content:center;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div style="flex:1;">
-                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap;">
-                  <span class="lhc-badge" style="background:#4338ca; color:#fff; font-size:12px; font-weight:700; padding:3px 8px; border-radius:4px;">지역 버스터미널 광고</span>
-                  <span style="font-size:13px; font-weight:700; color:#475569;">영광 · 목포 · 해남 · 나주 · 순천 등 전남·광역권</span>
-                </div>
-                <h5 style="font-size:16px; font-weight:700; color:#0f172a; margin-bottom:6px;">지역 버스터미널 광고 (대합실 와이드 조명 · 벽면 조명판)</h5>
-                <p style="font-size:13.5px; line-height:1.6; color:#64748b; margin:0;">
-                  터미널 광고는 각 지역 버스터미널 환경에 따라 설치 규격 및 사이즈에 차이가 있습니다.<br>
-                  희망하시는 지역 및 터미널을 문의해 주시면 현장 상세 규격과 광고 위치를 친절하게 안내해 드립니다.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- 04 TAXI & SPECIALIZED OOH GUIDE (AUTHENTIC TAXI PROPOSAL DATA) -->
