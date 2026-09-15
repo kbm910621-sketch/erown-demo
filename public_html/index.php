@@ -652,7 +652,7 @@ if (!empty($active_popups)) {
                     <span class="gpi-eyebrow">04 / SPECIAL MEDIA</span>
                   </div>
                   <h3 class="gpi-title">특화 옥외매체</h3>
-                  <p class="gpi-sub">DID · 택시 · 택배차 · 대형마트 카트</p>
+                  <p class="gpi-sub">택시 · 택배차 · 대형마트 카트</p>
                 </div>
                 <div class="gpi-toggle-icon">
                   <span class="gpi-icon-bar h"></span>
@@ -665,18 +665,6 @@ if (!empty($active_popups)) {
                 <div class="gpi-body-inner">
                   <div class="gds-sub-list">
                     <button type="button" class="gds-item on" 
-                            data-id="did" 
-                            data-cat="special"
-                            data-num="04"
-                            data-eng="SPECIAL MEDIA"
-                            data-img="/images/bs_ad/ooh11/유스퀘어_매표소광고.jpg" 
-                            data-sub="DID 디지털 전광판" 
-                            data-guide="guideTaxiSpec">
-                      <span class="gds-item-num">01</span>
-                      <span class="gds-item-txt">DID 디지털 전광판</span>
-                      <span class="gds-item-arrow">→</span>
-                    </button>
-                    <button type="button" class="gds-item" 
                             data-id="taxi" 
                             data-cat="special"
                             data-num="04"
@@ -684,7 +672,7 @@ if (!empty($active_popups)) {
                             data-img="/images/bs_ad/ooh11/택시광고01.png" 
                             data-sub="택시 광고" 
                             data-guide="guideTaxiSpec">
-                      <span class="gds-item-num">02</span>
+                      <span class="gds-item-num">01</span>
                       <span class="gds-item-txt">택시 광고</span>
                       <span class="gds-item-arrow">→</span>
                     </button>
@@ -696,7 +684,7 @@ if (!empty($active_popups)) {
                             data-img="/images/bs_ad/ooh11/택배차광고01.png" 
                             data-sub="택배차 래핑광고" 
                             data-guide="guideTaxiSpec">
-                      <span class="gds-item-num">03</span>
+                      <span class="gds-item-num">02</span>
                       <span class="gds-item-txt">택배차 래핑광고</span>
                       <span class="gds-item-arrow">→</span>
                     </button>
@@ -708,7 +696,7 @@ if (!empty($active_popups)) {
                             data-img="/images/bs_ad/ooh11/mart_cart_01.jpg" 
                             data-sub="대형마트 카트광고" 
                             data-guide="guideTaxiSpec">
-                      <span class="gds-item-num">04</span>
+                      <span class="gds-item-num">03</span>
                       <span class="gds-item-txt">대형마트 카트광고</span>
                       <span class="gds-item-arrow">→</span>
                     </button>
@@ -716,11 +704,11 @@ if (!empty($active_popups)) {
                   <!-- MOBILE INLINE PREVIEW -->
                   <div class="go-mobile-preview">
                     <div class="gmp-image-wrap">
-                      <img class="gmp-image" src="/images/bs_ad/ooh11/유스퀘어_매표소광고.jpg" alt="DID 디지털 전광판">
+                      <img class="gmp-image" src="/images/bs_ad/ooh11/택시광고01.png" alt="택시 광고">
                     </div>
                     <div class="gmp-caption">
                       <span class="gmp-meta">04 / SPECIAL MEDIA</span>
-                      <strong class="gmp-title">DID 디지털 전광판</strong>
+                      <strong class="gmp-title">택시 광고</strong>
                     </div>
                   </div>
                 </div>

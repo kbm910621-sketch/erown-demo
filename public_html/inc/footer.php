@@ -10,7 +10,17 @@
   </button>
 </div>
 <!-- //gotop -->
-<a href="/board/estmate/write.php" class="cta-btn_m">
+<!-- Direct Phone Call CTA (모바일 & 데스크탑 직통 전화걸기) -->
+<a href="tel:062-385-0110" class="cta-btn_tel" aria-label="전화상담 바로연결 062-385-0110" title="전화상담 062-385-0110">
+  <div class="cta-btn_tel-circle">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.45-5.15-3.76-6.59-6.59l1.97-1.57c.28-.28.37-.68.25-1.02A11.36 11.36 0 0 1 8.56 4c0-.55-.45-1-1-1H4.11c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.62c0-.55-.45-1-1-1z"/>
+    </svg>
+    <span class="cta-btn_tel-text">전화</span>
+  </div>
+</a>
+
+<a href="/board/estmate/write.php" class="cta-btn_m" aria-label="온라인 광고 상담신청">
   <div class="cta-btn_m-ring">
     <svg viewBox="0 0 90 90">
       <defs>
