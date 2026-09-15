@@ -33,7 +33,7 @@ if ($conn) {
     @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'mart' WHERE id IN (64, 82, 83, 84)");
 
     // Clean up any orphan unbundled test items (id 85~100) if present
-    @mysqli_query($conn, "DELETE FROM `portfolio` WHERE id >= 86 AND id < 101");
+    @mysqli_query($conn, "DELETE FROM `portfolio` WHERE id >= 88 AND id < 101");
 
     // Auto-sync all items from portfolio_seed_data.php
     if (!empty($GAON_PORTFOLIO_ITEMS)) {

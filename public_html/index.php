@@ -1316,8 +1316,8 @@ if (!empty($active_popups)) {
             <div class="acf-scrim"></div>
             <div class="acf-overlay-info">
               <span class="acf-tag gold">VIDEO &amp; CONTENT PRODUCTION</span>
-              <h3 class="acf-title" id="dynCinemaTitle">기업 · 병원 브랜드 홍보영상</h3>
-              <p class="acf-sub" id="dynCinemaSub">브랜드와 서비스의 특징을 담은 기획 · 촬영 · 편집</p>
+              <h3 class="acf-title" id="dynCinemaTitle">하이온요양병원 브랜드 홍보영상</h3>
+              <p class="acf-sub" id="dynCinemaSub">의료진 전문 인터뷰 · 첨단 치료 시설 · 입원실 기획·촬영·편집</p>
             </div>
           </div>
         </div>
@@ -1332,7 +1332,7 @@ if (!empty($active_popups)) {
             
             <div class="apm-screen">
               <video autoplay muted loop playsinline class="apm-video">
-                <source src="/images/movie.mp4" type="video/mp4">
+                <source src="/images/movie_shorts.mp4" type="video/mp4">
               </video>
               <div class="apm-reels-ui">
                 <div class="aru-right-actions">
@@ -1341,9 +1341,9 @@ if (!empty($active_popups)) {
                   <div class="aru-action-btn">↗️</div>
                 </div>
                 <div class="aru-bottom-info">
-                  <span class="aru-brand-tag">@GAON_N_OFFICIAL</span>
-                  <h4 class="aru-title">SNS 릴스 · 유튜브 숏폼</h4>
-                  <p class="aru-desc">모바일 환경에 맞춘 세로형 영상 콘텐츠</p>
+                  <span class="aru-brand-tag">@JOAJIN_HOSPITAL</span>
+                  <h4 class="aru-title">조아진병원 SNS 릴스 · 숏폼</h4>
+                  <p class="aru-desc">전문의 척추 자가진단 9:16 모바일 숏폼 영상</p>
                 </div>
               </div>
             </div>
@@ -1358,16 +1358,16 @@ if (!empty($active_popups)) {
       <div class="avh-selectors-grid">
 
           <div class="avs-item-card on" data-target-mode="wide"
-              data-title="기업 · 병원 · 브랜드 홍보영상"
-              data-sub="브랜드와 서비스의 특징을 담은 기획·촬영·편집">
+              data-title="하이온요양병원 브랜드 홍보영상"
+              data-sub="의료진 인터뷰 · 첨단 치료 시설 · 병원 브랜딩 기획·촬영·편집">
           <span class="avs-badge">01 / BRAND CONTENT</span>
           <strong class="avs-title">기업 · 병원 홍보영상</strong>
           <span class="avs-sub">브랜드 소개 · 인터뷰 · 홍보 콘텐츠</span>
           </div>
 
           <div class="avs-item-card" data-target-mode="shorts"
-              data-title="SNS 릴스 · 유튜브 쇼츠 · 숏폼"
-              data-sub="모바일 환경에 맞춘 세로형 영상 콘텐츠">
+              data-title="조아진병원 건강정보 SNS 릴스 · 쇼츠"
+              data-sub="전문의 직접 설명 모바일 9:16 세로형 숏폼">
           <span class="avs-badge gold">02 / SOCIAL SHORTFORM</span>
           <strong class="avs-title">SNS 릴스 · 유튜브 숏폼</strong>
           <span class="avs-sub">9:16 모바일 세로형 콘텐츠</span>
@@ -1418,7 +1418,7 @@ if (!empty($active_popups)) {
             <?php foreach ($portVideo as $vItem): 
               $vVideo = !empty($vItem['video']) ? $vItem['video'] : '';
               if (empty($vVideo) && !empty($vItem['id'])) {
-                $vIdxMap = array(54 => '01', 55 => '02', 56 => '03', 57 => '04', 58 => '05', 63 => '06');
+                $vIdxMap = array(86 => 'hion', 87 => 'joajin', 54 => '01', 55 => '02', 56 => '03', 57 => '04', 58 => '05', 63 => '06');
                 if (isset($vIdxMap[$vItem['id']])) {
                   $vVideo = '/images/port/video/video_clip_' . $vIdxMap[$vItem['id']] . '.mp4';
                 }
