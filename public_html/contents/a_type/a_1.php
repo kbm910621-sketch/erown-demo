@@ -29,11 +29,11 @@ if ($conn) {
     
     $shelterIds = "2,4,5,10,11,12,19,21,26,30,32,34,39,41,42,43,44";
     @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'shelter' WHERE id IN ($shelterIds) AND (category = '' OR category = 'bus' OR category IS NULL)");
-    @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'did' WHERE id IN (16, 45, 81)");
+    @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'did' WHERE id IN (16, 45, 81, 85)");
     @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'mart' WHERE id IN (64, 82, 83, 84)");
 
     // Clean up any orphan unbundled test items (id 85~100) if present
-    @mysqli_query($conn, "DELETE FROM `portfolio` WHERE id >= 85 AND id < 101");
+    @mysqli_query($conn, "DELETE FROM `portfolio` WHERE id >= 86 AND id < 101");
 
     // Auto-sync all items from portfolio_seed_data.php
     if (!empty($GAON_PORTFOLIO_ITEMS)) {

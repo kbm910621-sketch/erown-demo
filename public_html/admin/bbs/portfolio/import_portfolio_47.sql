@@ -145,4 +145,7 @@ INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale
 VALUES (84, 'mart', '굿플란트치과의원 4인원장 협진진료 마트 카트광고', '굿플란트치과의원', '광주 남구 대형마트 (이마트 봉선점 등)', '쇼핑카트 전면 플레이트 부착', '봉선동 굿플란트치과의원의 임플란트 4인 원장 협진진료 및 365일 주말·공휴일 진료 안내를 쇼핑카트 전면 패널에 부착하여 높은 주목도 확보', '/images/port/mart/mart_goodplant_01.jpg', '["/images/port/mart/mart_goodplant_01.jpg"]', 1, 20, 'active', NOW(), NOW())
 ON DUPLICATE KEY UPDATE `title`=VALUES(`title`), `client`=VALUES(`client`), `scale`=VALUES(`scale`), `description`=VALUES(`description`), `thumb`=VALUES(`thumb`), `images`=VALUES(`images`), `category`='mart';
 
-
+-- 85. 더스마트병원 유스퀘어 광천터미널 매표소 상단 대형 LED 전광판 광고
+INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale`, `description`, `thumb`, `images`, `is_featured`, `sort_order`, `status`, `created_at`, `updated_at`)
+VALUES (85, 'did', '더스마트병원 유스퀘어 광천터미널 매표소 상단 대형 LED 전광판 광고', '더스마트병원', '광주 유스퀘어 광천터미널 1층 고속버스 매표소 상단', '대형 와이드 LED 전광판 (2,500 × 1,500 mm)', '유스퀘어 광천터미널 1층 고속버스 매표소 및 안내데스크 상단에 위치한 초대형 LED 전광판으로 매표 및 대기 승객의 시선을 압도하는 고화질 영상·이미지 광고', '/images/port/port_usquare_led_01.jpg', '["/images/port/port_usquare_led_01.jpg"]', 1, 21, 'active', NOW(), NOW())
+ON DUPLICATE KEY UPDATE `title`=VALUES(`title`), `client`=VALUES(`client`), `scale`=VALUES(`scale`), `description`=VALUES(`description`), `thumb`=VALUES(`thumb`), `images`=VALUES(`images`), `category`='did';

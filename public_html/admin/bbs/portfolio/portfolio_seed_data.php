@@ -367,6 +367,23 @@ $GAON_PORTFOLIO_ITEMS = array(
     "date" => "2026·09"
   ),
   array(
+    "id" => 85,
+    "category" => "did",
+    "badge" => "TERMINAL·AD",
+    "tag" => "터미널 광고",
+    "title" => "더스마트병원 유스퀘어 광천터미널 매표소 상단 대형 LED 전광판 광고",
+    "client" => "더스마트병원",
+    "location" => "광주 유스퀘어 광천터미널 1층 고속버스 매표소 상단",
+    "scale" => "대형 와이드 LED 전광판 (2,500 × 1,500 mm)",
+    "description" => "유스퀘어 광천터미널 1층 고속버스 매표소 및 안내데스크 상단에 위치한 초대형 LED 전광판으로 매표 및 대기 승객의 시선을 압도하는 고화질 영상·이미지 광고",
+    "thumb" => "/images/port/port_usquare_led_01.jpg",
+    "images" => array(
+      "/images/port/port_usquare_led_01.jpg"
+    ),
+    "sort_order" => 21,
+    "date" => "2026·09"
+  ),
+  array(
     "id" => 1,
     "category" => "bus",
     "badge" => "BUS·IN",

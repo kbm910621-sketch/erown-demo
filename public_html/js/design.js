@@ -1625,29 +1625,26 @@ $(function() {
     var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
 
-    // Full Partner Data Pool (21 distinct real partners)
+    // Full Partner Data Pool with verified logo images & optical balance classes
     var PARTNERS_POOL = [
-      { name: 'KBC', isShort: true },
-      { name: '광주MBC', isShort: false },
-      { name: '광주광역시청', isShort: false },
-      { name: '한국폴리텍대학', isShort: false },
-      { name: '롯데하이마트', isShort: false },
-      { name: '국립목포대학교', isShort: false },
-      { name: '광주안과', isShort: false },
-      { name: '동신대학교광주한방병원', isShort: false },
-      { name: '새나래병원', isShort: false },
-      { name: '스마트인재개발원', isShort: false },
-      { name: '봉선한방병원', isShort: false },
-      { name: '광산센트럴병원', isShort: false },
-      { name: '아미아여성의원', isShort: false },
-      { name: '북구청세무과', isShort: false },
-      { name: '스마트미디어', isShort: false },
-      { name: '빛고을선병원', isShort: false },
-      { name: '조아진병원', isShort: false },
-      { name: '첨단선병원', isShort: false },
-      { name: '최고안과의원', isShort: false },
-      { name: '호호이비인후과', isShort: false },
-      { name: '빛고을노인건강타운', isShort: false }
+      { name: 'KBC', logo: '/images/partners/kbc.png', optClass: 'opt-compact' },
+      { name: '광주MBC', logo: '/images/partners/mbc.jpg', optClass: 'opt-compact' },
+      { name: '광주광역시청', logo: '/images/partners/광주광역시청.jpg', optClass: 'opt-standard' },
+      { name: '한국폴리텍대학', logo: '/images/partners/폴리텍대학.svg', optClass: 'opt-standard' },
+      { name: '롯데하이마트', logo: '/images/partners/롯데하이마트.png', optClass: 'opt-standard' },
+      { name: '국립목포대학교', logo: '/images/partners/국립목포대학교.jpg', optClass: 'opt-wide' },
+      { name: '김대중컨벤션센터', logo: '/images/partners/김대중컨벤션센터로고.jpg', optClass: 'opt-boost' },
+      { name: '더스마트병원', logo: '/images/partners/더스마트병원.jpg', optClass: 'opt-standard' },
+      { name: '스마트인재개발원', logo: '/images/partners/스마트인재개발원.png', optClass: 'opt-standard' },
+      { name: '봉선한방병원', logo: '/images/partners/봉선한방병원.png', optClass: 'opt-standard' },
+      { name: '광산센트럴병원', logo: '/images/partners/광산센트럴병원.png', optClass: 'opt-wide' },
+      { name: '아이마여성의원', logo: '/images/partners/아이마여성의원.jpg', optClass: 'opt-boost' },
+      { name: '북구청세무과', logo: '/images/partners/북구청세무과.svg', optClass: 'opt-standard' },
+      { name: '빛고을선병원', logo: '/images/partners/빛고을선병원.png', optClass: 'opt-standard' },
+      { name: '조아진병원', logo: '/images/partners/조아진병원.jpg', optClass: 'opt-boost' },
+      { name: '첨단선병원', logo: '/images/partners/첨단선병원.png', optClass: 'opt-tame' },
+      { name: '최고안과', logo: '/images/partners/최고안과.png', optClass: 'opt-boost' },
+      { name: '호호이비인후과', logo: '/images/partners/호호이비인후과.png', optClass: 'opt-wide' }
     ];
 
     var poolPointer = 10;
@@ -1665,42 +1662,44 @@ $(function() {
 
     function transitionSlot(slot, nextPartner, delay, moveUp) {
       setTimeout(function() {
-        var currentText = slot.querySelector('.gp-partner-text.is-active');
+        var currentLogo = slot.querySelector('.gp-partner-logo.is-active') || slot.querySelector('.gp-partner-text.is-active');
         
-        // Create new entering text element
-        var nextText = document.createElement('span');
-        nextText.className = 'gp-partner-text' + (nextPartner.isShort ? ' is-short' : '');
-        nextText.textContent = nextPartner.name;
+        // Create new entering logo image element with optical balance class
+        var nextLogo = document.createElement('img');
+        nextLogo.src = nextPartner.logo;
+        nextLogo.alt = nextPartner.name;
+        nextLogo.className = 'gp-partner-logo ' + (nextPartner.optClass || 'opt-standard');
+        nextLogo.loading = 'lazy';
         
         // Initial state of entering element (offset in opposite direction)
         if (moveUp) {
-          nextText.classList.add('pos-below');
+          nextLogo.classList.add('pos-below');
         } else {
-          nextText.classList.add('pos-above');
+          nextLogo.classList.add('pos-above');
         }
 
-        slot.appendChild(nextText);
+        slot.appendChild(nextLogo);
 
         // Force reflow
-        void nextText.offsetWidth;
+        void nextLogo.offsetWidth;
 
         // Animate simultaneously (True silky crossfade)
-        if (currentText) {
-          currentText.classList.remove('is-active');
+        if (currentLogo) {
+          currentLogo.classList.remove('is-active');
           if (moveUp) {
-            currentText.classList.add('pos-above');
+            currentLogo.classList.add('pos-above');
           } else {
-            currentText.classList.add('pos-below');
+            currentLogo.classList.add('pos-below');
           }
         }
 
-        nextText.classList.remove('pos-below', 'pos-above');
-        nextText.classList.add('is-active');
+        nextLogo.classList.remove('pos-below', 'pos-above');
+        nextLogo.classList.add('is-active');
 
         // Clean up DOM after transition completes
         setTimeout(function() {
-          if (currentText && currentText.parentNode === slot) {
-            slot.removeChild(currentText);
+          if (currentLogo && currentLogo.parentNode === slot) {
+            slot.removeChild(currentLogo);
           }
         }, DURATION + 100);
 

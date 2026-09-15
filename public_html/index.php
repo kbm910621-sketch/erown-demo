@@ -73,6 +73,7 @@ $defaultBus = array(
   array('id'=>82, 'category'=>'mart', 'badge'=>'MART·CART', 'title'=>'365열린야간의원 연중무휴 야간진료 대형마트 카트광고', 'thumb'=>'/images/port/mart/mart_365open_01.jpg', 'images'=>array('/images/port/mart/mart_365open_01.jpg','/images/port/mart/mart_365open_02.jpg'), 'client'=>'365열린야간의원', 'location'=>'광주 대형마트 (운암동)', 'sort_order'=>18),
   array('id'=>83, 'category'=>'mart', 'badge'=>'MART·CART', 'title'=>'광주 최대 창고형 메가하이약국 365일 영업 마트 카트광고', 'thumb'=>'/images/port/mart/mart_megahi_01.jpg', 'images'=>array('/images/port/mart/mart_megahi_01.jpg','/images/port/mart/mart_megahi_02.jpg'), 'client'=>'메가하이약국', 'location'=>'광주 대형마트 쇼핑카트', 'sort_order'=>19),
   array('id'=>84, 'category'=>'mart', 'badge'=>'MART·CART', 'title'=>'굿플란트치과의원 4인원장 협진진료 마트 카트광고', 'thumb'=>'/images/port/mart/mart_goodplant_01.jpg', 'images'=>array('/images/port/mart/mart_goodplant_01.jpg'), 'client'=>'굿플란트치과의원', 'location'=>'광주 남구 대형마트', 'sort_order'=>20),
+  array('id'=>85, 'category'=>'did', 'badge'=>'TERMINAL·AD', 'title'=>'더스마트병원 유스퀘어 광천터미널 매표소 상단 대형 LED 전광판 광고', 'thumb'=>'/images/port/port_usquare_led_01.jpg', 'images'=>array('/images/port/port_usquare_led_01.jpg'), 'client'=>'더스마트병원', 'location'=>'광주 유스퀘어 광천터미널 1층 매표소 상단', 'sort_order'=>21),
   array('id'=>1, 'category'=>'bus', 'badge'=>'BUS·SIDE', 'title'=>'상무지구 메디컬센터 시내버스 3면 풀래핑 광고', 'thumb'=>'/images/bs_ad/ooh11/차도면광고.png', 'images'=>array('/images/bs_ad/ooh11/차도면광고.png'), 'client'=>'메디컬센터', 'location'=>'상무지구 노선', 'sort_order'=>100),
   array('id'=>64, 'category'=>'mart', 'badge'=>'MART·CART', 'title'=>'더스마트병원 대형마트 쇼핑카트 양면 플레이트 광고', 'thumb'=>'/images/port/mart/mart_01.jpg', 'images'=>array('/images/port/mart/mart_01.jpg'), 'client'=>'더스마트병원', 'location'=>'광주 대형마트', 'sort_order'=>102)
 );
@@ -565,7 +566,7 @@ if (!empty($active_popups)) {
                             data-cat="terminal"
                             data-num="03"
                             data-eng="TERMINAL MEDIA"
-                            data-img="/images/bs_ad/ooh11/DID광고.png" 
+                            data-img="/images/bs_ad/ooh11/유스퀘어_매표소광고.jpg" 
                             data-sub="매표소 상단 대형 전광판" 
                             data-guide="guideUsquare">
                       <span class="gds-item-num">01</span>
@@ -600,7 +601,7 @@ if (!empty($active_popups)) {
                   <!-- MOBILE INLINE PREVIEW -->
                   <div class="go-mobile-preview">
                     <div class="gmp-image-wrap">
-                      <img class="gmp-image" src="/images/bs_ad/ooh11/DID광고.png" alt="매표소 상단 대형 전광판">
+                      <img class="gmp-image" src="/images/bs_ad/ooh11/유스퀘어_매표소광고.jpg" alt="매표소 상단 대형 전광판">
                     </div>
                     <div class="gmp-caption">
                       <span class="gmp-meta">03 / TERMINAL MEDIA</span>
@@ -641,7 +642,7 @@ if (!empty($active_popups)) {
                             data-cat="special"
                             data-num="04"
                             data-eng="SPECIAL MEDIA"
-                            data-img="/images/bs_ad/ooh11/DID광고.png" 
+                            data-img="/images/bs_ad/ooh11/유스퀘어_매표소광고.jpg" 
                             data-sub="DID 디지털 전광판" 
                             data-guide="guideTaxiSpec">
                       <span class="gds-item-num">01</span>
@@ -688,7 +689,7 @@ if (!empty($active_popups)) {
                   <!-- MOBILE INLINE PREVIEW -->
                   <div class="go-mobile-preview">
                     <div class="gmp-image-wrap">
-                      <img class="gmp-image" src="/images/bs_ad/ooh11/DID광고.png" alt="DID 디지털 전광판">
+                      <img class="gmp-image" src="/images/bs_ad/ooh11/유스퀘어_매표소광고.jpg" alt="DID 디지털 전광판">
                     </div>
                     <div class="gmp-caption">
                       <span class="gmp-meta">04 / SPECIAL MEDIA</span>
