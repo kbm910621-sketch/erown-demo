@@ -1299,7 +1299,7 @@ if (!empty($active_popups)) {
         <div class="avh-cinema-frame on" id="cinemaFrame">
           <div class="acf-bezel">
             <video autoplay muted loop playsinline class="acf-video">
-              <source src="/images/port/video/video_clip_hion.mp4" type="video/mp4">
+              <source src="/images/movie.mp4" type="video/mp4">
             </video>
             <div class="acf-scrim"></div>
             <div class="acf-overlay-info">
@@ -1404,16 +1404,10 @@ if (!empty($active_popups)) {
         <div class="swiper asps-swiper asps-swiper-video">
           <div class="swiper-wrapper">
             <?php foreach ($portVideo as $vItem): 
-              $vVideo = !empty($vItem['video']) ? $vItem['video'] : '';
-              if (empty($vVideo) && !empty($vItem['id'])) {
-                $vIdxMap = array(86 => 'hion', 87 => 'joajin', 54 => '01', 55 => '02', 56 => '03', 57 => '04', 58 => '05', 63 => '06');
-                if (isset($vIdxMap[$vItem['id']])) {
-                  $vVideo = '/images/port/video/video_clip_' . $vIdxMap[$vItem['id']] . '.mp4';
-                }
-              }
+              $vVideo = !empty($vItem['video']) ? $vItem['video'] : '/images/movie.mp4';
               $vClient = !empty($vItem['client']) ? htmlspecialchars($vItem['client']) : '가온엔 기획 · 제작';
             ?>
-            <div class="swiper-slide asps-card dark main-port-card" data-cat="<?php echo htmlspecialchars($vItem['category']); ?>" data-id="<?php echo (int)$vItem['id']; ?>" data-name="<?php echo htmlspecialchars($vItem['title']); ?>" data-img="<?php echo htmlspecialchars($vItem['thumb']); ?>" data-video="<?php echo htmlspecialchars($vVideo); ?>" data-tag="10초 영상 (스틸컷 캡쳐본)">
+            <div class="swiper-slide asps-card dark main-port-card" data-cat="<?php echo htmlspecialchars($vItem['category']); ?>" data-id="<?php echo (int)$vItem['id']; ?>" data-name="<?php echo htmlspecialchars($vItem['title']); ?>" data-img="<?php echo htmlspecialchars($vItem['thumb']); ?>" data-video="<?php echo htmlspecialchars($vVideo); ?>" data-tag="영상 광고">
               <div class="asps-thumb">
                 <img src="<?php echo htmlspecialchars($vItem['thumb']); ?>" alt="<?php echo htmlspecialchars($vItem['title']); ?>" loading="lazy">
                 <span class="asps-badge cyan">10초 영상</span>

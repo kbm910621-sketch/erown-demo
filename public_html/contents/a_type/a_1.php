@@ -177,23 +177,7 @@ $totalCount = count($list);
             $imgSrc = normalize_port_img(!empty($item['thumb']) ? $item['thumb'] : '');
             $videoSrc = !empty($item['video']) ? htmlspecialchars($item['video']) : '';
             if (empty($videoSrc) && $cat === 'video') {
-                $vIdxMap = array(
-                    86 => 'hion',
-                    87 => 'joajin',
-                    54 => '01',
-                    55 => '02',
-                    56 => '03',
-                    57 => '04',
-                    58 => '05',
-                    63 => '06'
-                );
-                if (isset($vIdxMap[$item['id']])) {
-                    $videoSrc = '/images/port/video/video_clip_' . $vIdxMap[$item['id']] . '.mp4';
-                } else if ($item['id'] == 86 || strpos($item['thumb'], 'hion') !== false) {
-                    $videoSrc = '/images/port/video/video_clip_hion.mp4';
-                } else if ($item['id'] == 87 || strpos($item['thumb'], 'joajin') !== false) {
-                    $videoSrc = '/images/port/video/video_clip_joajin.mp4';
-                }
+                $videoSrc = '/images/movie.mp4';
             }
             $dateText = !empty($item['date']) ? htmlspecialchars($item['date']) : '2026·09';
             $titleText = htmlspecialchars($item['title']);
