@@ -1311,7 +1311,7 @@ if (!empty($active_popups)) {
         <div class="avh-cinema-frame on" id="cinemaFrame">
           <div class="acf-bezel">
             <video autoplay muted loop playsinline class="acf-video">
-              <source src="/images/movie.mp4" type="video/mp4">
+              <source src="/images/port/video/video_clip_hion.mp4" type="video/mp4">
             </video>
             <div class="acf-scrim"></div>
             <div class="acf-overlay-info">
@@ -1332,7 +1332,7 @@ if (!empty($active_popups)) {
             
             <div class="apm-screen">
               <video autoplay muted loop playsinline class="apm-video">
-                <source src="/images/movie_shorts.mp4" type="video/mp4">
+                <source src="/images/port/video/video_clip_joajin.mp4" type="video/mp4">
               </video>
               <div class="apm-reels-ui">
                 <div class="aru-right-actions">
