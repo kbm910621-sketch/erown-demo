@@ -1339,6 +1339,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/video_thumb_01.jpg"
     ),
+    "video" => "/images/port/video/video_clip_01.mp4",
     "sort_order" => 154,
     "date" => "2026·09"
   ),
@@ -1356,6 +1357,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/video_thumb_02.jpg"
     ),
+    "video" => "/images/port/video/video_clip_02.mp4",
     "sort_order" => 155,
     "date" => "2026·09"
   ),
@@ -1373,6 +1375,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/video_thumb_03.jpg"
     ),
+    "video" => "/images/port/video/video_clip_03.mp4",
     "sort_order" => 156,
     "date" => "2026·09"
   ),
@@ -1390,6 +1393,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/video_thumb_04.jpg"
     ),
+    "video" => "/images/port/video/video_clip_04.mp4",
     "sort_order" => 157,
     "date" => "2026·09"
   ),
@@ -1407,6 +1411,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/video_thumb_05.jpg"
     ),
+    "video" => "/images/port/video/video_clip_05.mp4",
     "sort_order" => 158,
     "date" => "2026·09"
   ),
@@ -1424,6 +1429,7 @@ $GAON_PORTFOLIO_ITEMS = array(
     "images" => array(
       "/images/port/video_thumb_06.jpg"
     ),
+    "video" => "/images/port/video/video_clip_06.mp4",
     "sort_order" => 163,
     "date" => "2026·09"
   ),

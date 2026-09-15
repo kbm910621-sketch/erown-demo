@@ -174,10 +174,22 @@ $totalCount = count($list);
                 }
             }
 
+            $vIdxMap = array(
+                86 => '/images/port/video/video_clip_hion.mp4',
+                87 => '/images/port/video/video_clip_joajin.mp4',
+                54 => '/images/port/video/video_clip_01.mp4',
+                55 => '/images/port/video/video_clip_02.mp4',
+                56 => '/images/port/video/video_clip_03.mp4',
+                57 => '/images/port/video/video_clip_04.mp4',
+                58 => '/images/port/video/video_clip_05.mp4',
+                63 => '/images/port/video/video_clip_06.mp4'
+            );
             $imgSrc = normalize_port_img(!empty($item['thumb']) ? $item['thumb'] : '');
             $videoSrc = !empty($item['video']) ? htmlspecialchars($item['video']) : '';
-            if (empty($videoSrc) && $cat === 'video') {
-                $videoSrc = '/images/movie.mp4';
+            if (empty($videoSrc) && $cat === 'video' && isset($vIdxMap[$item['id']])) {
+                $videoSrc = $vIdxMap[$item['id']];
+            } else if (empty($videoSrc) && $cat === 'video') {
+                $videoSrc = '/images/port/video/video_clip_01.mp4';
             }
             $dateText = !empty($item['date']) ? htmlspecialchars($item['date']) : '2026·09';
             $titleText = htmlspecialchars($item['title']);

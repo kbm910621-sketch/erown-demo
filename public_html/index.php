@@ -1407,7 +1407,17 @@ if (!empty($active_popups)) {
         <div class="swiper asps-swiper asps-swiper-video">
           <div class="swiper-wrapper">
             <?php foreach ($portVideo as $vItem): 
-              $vVideo = !empty($vItem['video']) ? $vItem['video'] : '/images/movie.mp4';
+              $vIdxMap = array(
+                86 => '/images/port/video/video_clip_hion.mp4',
+                87 => '/images/port/video/video_clip_joajin.mp4',
+                54 => '/images/port/video/video_clip_01.mp4',
+                55 => '/images/port/video/video_clip_02.mp4',
+                56 => '/images/port/video/video_clip_03.mp4',
+                57 => '/images/port/video/video_clip_04.mp4',
+                58 => '/images/port/video/video_clip_05.mp4',
+                63 => '/images/port/video/video_clip_06.mp4'
+              );
+              $vVideo = !empty($vItem['video']) ? $vItem['video'] : (isset($vIdxMap[$vItem['id']]) ? $vIdxMap[$vItem['id']] : '');
               $vClient = !empty($vItem['client']) ? htmlspecialchars($vItem['client']) : '가온엔 기획 · 제작';
             ?>
             <div class="swiper-slide asps-card dark main-port-card" data-cat="<?php echo htmlspecialchars($vItem['category']); ?>" data-id="<?php echo (int)$vItem['id']; ?>" data-name="<?php echo htmlspecialchars($vItem['title']); ?>" data-img="<?php echo htmlspecialchars($vItem['thumb']); ?>" data-video="<?php echo htmlspecialchars($vVideo); ?>" data-tag="영상 광고">
