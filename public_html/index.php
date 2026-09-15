@@ -1463,7 +1463,7 @@ if (!empty($active_popups)) {
             <button type="button" class="bmt-btn is-active" data-step="1">
               <span class="bmt-num">01</span>
               <span class="bmt-name">닥터365</span>
-              <span class="bmt-badge">독점</span>
+              <span class="bmt-badge">공식협력</span>
             </button>
             <button type="button" class="bmt-btn" data-step="2">
               <span class="bmt-num">02</span>
@@ -1483,7 +1483,7 @@ if (!empty($active_popups)) {
               </div>
               <div class="broadcast-title-row">
                 <h3 class="broadcast-title">닥터365</h3>
-                <span class="broadcast-exclusive-badge">가온엔 독점 연계</span>
+                <span class="broadcast-exclusive-badge">방송사 공식 협력 프로그램</span>
               </div>
               <p class="broadcast-desc">
                 의료진의 전문성과 병원의 핵심 정보를 방송 콘텐츠로 구성해<br class="pc_only">
@@ -1494,18 +1494,18 @@ if (!empty($active_popups)) {
                 <ul class="broadcast-feat-list">
                   <li><span class="bf-num">01</span><span class="bf-txt">의료진 전문 콘텐츠 기획 및 구성</span></li>
                   <li><span class="bf-num">02</span><span class="bf-txt">지역 방송망을 통한 높은 신뢰도 확보</span></li>
-                  <li><span class="bf-num">03</span><span class="bf-txt">가온엔 독점 프로그램 공식 연계 지원</span></li>
+                  <li><span class="bf-num">03</span><span class="bf-txt">방송사 공식 협력 프로그램 연계 지원</span></li>
                 </ul>
               </div>
               <div class="broadcast-cta">
                 <a href="#contact" class="broadcast-cta-btn broadcast-cta-exclusive">
-                  <span>닥터365 독점 연계 문의</span>
+                  <span>닥터365 방송 연계 문의</span>
                   <span class="broadcast-cta-arrow">↗</span>
                 </a>
               </div>
             </div>
             <div class="broadcast-visual">
-              <img src="/images/broadcast/broadcast_kbc_365.jpg?v=<?php echo time(); ?>" alt="KBC 닥터365 가온엔 독점 연계 프로그램" class="broadcast-img" loading="lazy">
+              <img src="/images/broadcast/broadcast_kbc_365.jpg?v=<?php echo time(); ?>" alt="KBC 닥터365 방송사 공식 협력 프로그램" class="broadcast-img" loading="lazy">
             </div>
           </div>
 
