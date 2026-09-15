@@ -4488,7 +4488,7 @@ body.modal-lock { overflow:hidden !important; }
 .asps-card:hover .asps-arrow-badge {
   background: #1855b7 !important;
   border-color: #1855b7 !important;
-  transform: scale(1.12) rotate(45deg) !important;
+  transform: scale(1.08) !important;
   box-shadow: 0 4px 14px rgba(24, 85, 183, 0.5) !important;
 }
 
