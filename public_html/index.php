@@ -1299,7 +1299,7 @@ if (!empty($active_popups)) {
         <div class="avh-cinema-frame on" id="cinemaFrame">
           <div class="acf-bezel">
             <video autoplay muted loop playsinline class="acf-video">
-              <source src="/images/movie.mp4" type="video/mp4">
+              <source src="/images/port/video/video_clip_hion.mp4" type="video/mp4">
             </video>
             <div class="acf-scrim"></div>
             <div class="acf-overlay-info">
@@ -1347,7 +1347,8 @@ if (!empty($active_popups)) {
 
           <div class="avs-item-card on" data-target-mode="wide"
               data-title="병원 브랜드 홍보영상"
-              data-sub="의료진 인터뷰 · 첨단 치료 시설 · 병원 브랜딩 기획·촬영·편집">
+              data-sub="의료진 인터뷰 · 첨단 치료 시설 · 병원 브랜딩 기획·촬영·편집"
+              data-video-src="/images/port/video/video_clip_hion.mp4">
           <span class="avs-badge">01 / BRAND CONTENT</span>
           <strong class="avs-title">기업 · 병원 홍보영상</strong>
           <span class="avs-sub">브랜드 소개 · 인터뷰 · 홍보 콘텐츠</span>
@@ -1355,7 +1356,8 @@ if (!empty($active_popups)) {
 
           <div class="avs-item-card" data-target-mode="shorts"
               data-title="SNS 릴스 · 유튜브 쇼츠 · 숏폼"
-              data-sub="전문의 건강정보 · 모바일 환경에 맞춘 세로형 영상 콘텐츠">
+              data-sub="전문의 건강정보 · 모바일 환경에 맞춘 세로형 영상 콘텐츠"
+              data-video-src="/images/port/video/video_clip_joajin.mp4">
           <span class="avs-badge gold">02 / SOCIAL SHORTFORM</span>
           <strong class="avs-title">SNS 릴스 · 유튜브 숏폼</strong>
           <span class="avs-sub">9:16 모바일 세로형 콘텐츠</span>
@@ -1373,7 +1375,8 @@ if (!empty($active_popups)) {
 
           <div class="avs-item-card" data-target-mode="wide"
               data-title="광고 · 캠페인 영상 콘텐츠"
-              data-sub="온라인과 오프라인 광고에 활용할 수 있는 영상 제작">
+              data-sub="온라인과 오프라인 광고에 활용할 수 있는 영상 제작"
+              data-video-src="/images/movie.mp4">
           <span class="avs-badge">03 / AD CONTENT</span>
           <strong class="avs-title">광고 · 캠페인 영상</strong>
           <span class="avs-sub">기획 · 촬영 · 편집</span>

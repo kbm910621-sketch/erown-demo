@@ -478,11 +478,21 @@ $(function() {
     if (mode === 'shorts') {
       $('#cinemaFrame').removeClass('on');
       $('#phoneMockup').addClass('on');
-      $('.avs-item-card[data-target-mode="shorts"]').first().addClass('on').siblings().removeClass('on');
+      var $target = $('.avs-item-card[data-target-mode="shorts"]').first();
+      $target.addClass('on').siblings().removeClass('on');
     } else {
       $('#phoneMockup').removeClass('on');
       $('#cinemaFrame').addClass('on');
-      $('.avs-item-card[data-target-mode="wide"]').first().addClass('on').siblings().removeClass('on');
+      var $target = $('.avs-item-card[data-target-mode="wide"]').first();
+      $target.addClass('on').siblings().removeClass('on');
+      var vSrc = $target.data('video-src') || '/images/port/video/video_clip_hion.mp4';
+      var $acfVid = $('#cinemaFrame video');
+      if ($acfVid.length && $acfVid.find('source').attr('src') !== vSrc) {
+        $acfVid.find('source').attr('src', vSrc);
+        $acfVid[0].load();
+        var p = $acfVid[0].play();
+        if (p !== undefined) p.catch(function(){});
+      }
     }
   });
 
@@ -492,6 +502,7 @@ $(function() {
     var title = $(this).data('title');
     var sub = $(this).data('sub');
     var mode = $(this).data('target-mode');
+    var vSrc = $(this).data('video-src');
 
     $('#dynCinemaTitle').text(title);
     $('#dynCinemaSub').text(sub);
@@ -500,10 +511,28 @@ $(function() {
       $('#cinemaFrame').removeClass('on');
       $('#phoneMockup').addClass('on');
       $('.avh-mode-btn[data-video-mode="shorts"]').addClass('on').siblings().removeClass('on');
+      if (vSrc) {
+        var $apmVid = $('#phoneMockup video');
+        if ($apmVid.length && $apmVid.find('source').attr('src') !== vSrc) {
+          $apmVid.find('source').attr('src', vSrc);
+          $apmVid[0].load();
+          var p = $apmVid[0].play();
+          if (p !== undefined) p.catch(function(){});
+        }
+      }
     } else {
       $('#phoneMockup').removeClass('on');
       $('#cinemaFrame').addClass('on');
       $('.avh-mode-btn[data-video-mode="wide"]').addClass('on').siblings().removeClass('on');
+      if (vSrc) {
+        var $acfVid = $('#cinemaFrame video');
+        if ($acfVid.length && $acfVid.find('source').attr('src') !== vSrc) {
+          $acfVid.find('source').attr('src', vSrc);
+          $acfVid[0].load();
+          var p = $acfVid[0].play();
+          if (p !== undefined) p.catch(function(){});
+        }
+      }
     }
   });
 
