@@ -215,6 +215,7 @@ $totalCount = count($list);
                         $imagesArray = $decoded;
                     }
                 }
+            }
             $cleanImages = array();
             foreach ($imagesArray as $u) {
                 $cleanImages[] = normalize_port_img($u, $cat);
