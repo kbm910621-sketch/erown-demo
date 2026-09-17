@@ -1,7 +1,23 @@
 <?php
+ob_start();
 include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/db_conn.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/common.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/session_chk.php";
+
+// 업로드 디렉토리 권한 및 카테고리별 폴더 자동 보장 (777 퍼미션)
+$auto_upload_base = $_SERVER['DOCUMENT_ROOT'] . '/admin/bbs/portfolio/uploads/';
+if (!is_dir($auto_upload_base)) {
+    @mkdir($auto_upload_base, 0777, true);
+    @chmod($auto_upload_base, 0777);
+}
+$auto_cats = array('shelter', 'bus', 'mart', 'led', 'taxi', 'video', 'print', 'etc');
+foreach ($auto_cats as $ac) {
+    $ac_dir = $auto_upload_base . $ac . '/';
+    if (!is_dir($ac_dir)) {
+        @mkdir($ac_dir, 0777, true);
+    }
+    @chmod($ac_dir, 0777);
+}
 
 // 포트폴리오 테이블 자동 생성 및 안전성 보장
 mysqli_query($conn, "
@@ -142,16 +158,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $period_start = $period_start ? $period_start : null;
     $period_end   = $period_end   ? $period_end   : null;
 
-    $upload_dir = $_SERVER['DOCUMENT_ROOT'] . '/admin/bbs/portfolio/uploads/' . $category . '/';
-    if (!is_dir($upload_dir)) mkdir($upload_dir, 0755, true);
-    $upload_url = '/admin/bbs/portfolio/uploads/' . $category . '/';
+    $cat_folder = !empty($category) ? preg_replace('/[^a-zA-Z0-9_-]/', '', $category) : 'etc';
+    $base_upload_dir = $_SERVER['DOCUMENT_ROOT'] . '/admin/bbs/portfolio/uploads/';
+    if (!is_dir($base_upload_dir)) {
+        @mkdir($base_upload_dir, 0777, true);
+        @chmod($base_upload_dir, 0777);
+    }
+    $upload_dir = $base_upload_dir . $cat_folder . '/';
+    if (!is_dir($upload_dir)) {
+        @mkdir($upload_dir, 0777, true);
+    }
+    @chmod($upload_dir, 0777);
+    $upload_url = '/admin/bbs/portfolio/uploads/' . $cat_folder . '/';
 
     // 대표 이미지
     $thumb = isset($_POST['thumb_old']) ? $_POST['thumb_old'] : '';
     if (!empty($_FILES['thumb']['name'])) {
         $ext   = strtolower(pathinfo($_FILES['thumb']['name'], PATHINFO_EXTENSION));
         $fname = uniqid('thumb_') . '.' . $ext;
-        if (move_uploaded_file($_FILES['thumb']['tmp_name'], $upload_dir . $fname)) {
+        if (@move_uploaded_file($_FILES['thumb']['tmp_name'], $upload_dir . $fname)) {
+            @chmod($upload_dir . $fname, 0777);
             if ($thumb && file_exists($_SERVER['DOCUMENT_ROOT'] . $thumb)) @unlink($_SERVER['DOCUMENT_ROOT'] . $thumb);
             $thumb = $upload_url . $fname;
         }
@@ -168,7 +194,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (empty($fname_orig)) continue;
             $ext   = strtolower(pathinfo($fname_orig, PATHINFO_EXTENSION));
             $fname = uniqid('img_') . '.' . $ext;
-            if (move_uploaded_file($_FILES['images']['tmp_name'][$i], $upload_dir . $fname)) {
+            if (@move_uploaded_file($_FILES['images']['tmp_name'][$i], $upload_dir . $fname)) {
+                @chmod($upload_dir . $fname, 0777);
                 $images[] = $upload_url . $fname;
             }
         }
