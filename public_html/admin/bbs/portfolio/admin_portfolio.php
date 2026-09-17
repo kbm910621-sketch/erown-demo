@@ -10,7 +10,7 @@ if (!is_dir($auto_upload_base)) {
     @mkdir($auto_upload_base, 0777, true);
     @chmod($auto_upload_base, 0777);
 }
-$auto_cats = array('shelter', 'bus', 'mart', 'led', 'taxi', 'video', 'print', 'etc');
+$auto_cats = array('shelter', 'bus', 'mart', 'did', 'led', 'taxi', 'video', 'print', 'online', 'web', 'etc');
 foreach ($auto_cats as $ac) {
     $ac_dir = $auto_upload_base . $ac . '/';
     if (!is_dir($ac_dir)) {
@@ -151,12 +151,18 @@ if (!empty($_GET['del'])) {
 // ── Base64 이미지 디코딩 및 파일 저장 도우미 함수 ──
 if (!function_exists('save_base64_to_file')) {
     function save_base64_to_file($base64_string, $output_file) {
+        if (empty($base64_string)) return false;
         if (preg_match('/^data:image\/(\w+);base64,(.+)$/', $base64_string, $matches)) {
-            $data = base64_decode($matches[2]);
+            $data = base64_decode(str_replace(' ', '+', $matches[2]));
         } else {
-            $data = base64_decode($base64_string);
+            $data = base64_decode(str_replace(' ', '+', $base64_string));
         }
         if ($data !== false && strlen($data) > 0) {
+            $dir = dirname($output_file);
+            if (!is_dir($dir)) {
+                @mkdir($dir, 0777, true);
+                @chmod($dir, 0777);
+            }
             if (@file_put_contents($output_file, $data) !== false) {
                 @chmod($output_file, 0777);
                 return true;

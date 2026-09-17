@@ -61,7 +61,14 @@ $cat_map = array(
 );
 
 function normalize_port_img($url, $cat = '') {
-    if (empty($url)) return '/images/port/port_01_1.jpg';
+    if (empty($url)) {
+        if ($cat === 'shelter') return '/images/port/port_02_1.jpg';
+        if ($cat === 'mart') return '/images/port/mart/mart_01.jpg';
+        if ($cat === 'video') return '/images/port/video/video_thumb_hion.jpg';
+        if ($cat === 'taxi') return '/images/port/port_59_1.jpg';
+        if ($cat === 'led') return '/images/port/port_28_1.jpg';
+        return '/images/port/port_01_1.jpg';
+    }
     return $url;
 }
 ?>
@@ -224,7 +231,7 @@ function normalize_port_img($url, $cat = '') {
 					</thead>
 					<tbody>
 						<?php
-						$sql_port = "SELECT * FROM portfolio ORDER BY id DESC LIMIT 5";
+						$sql_port = "SELECT * FROM portfolio ORDER BY sort_order ASC, id DESC LIMIT 5";
 						$res_port = mysqli_query($conn, $sql_port);
 						$has_port = false;
 
@@ -233,7 +240,7 @@ function normalize_port_img($url, $cat = '') {
 							$cnt = 1;
 							while ($prow = mysqli_fetch_array($res_port)) {
 								$cat_name = isset($cat_map[$prow['category']]) ? $cat_map[$prow['category']] : $prow['category'];
-								$thumb_src = !empty($prow['thumb']) ? normalize_port_img($prow['thumb']) : '/images/bs_ad/baro.jpg';
+								$thumb_src = normalize_port_img($prow['thumb'], $prow['category']);
 								$status_txt = ($prow['status'] === 'active') ? '<span style="color:#16a34a; font-weight:bold;">공개</span>' : '<span style="color:#999;">비공개</span>';
 						?>
 						<tr>
