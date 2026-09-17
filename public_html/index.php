@@ -785,7 +785,12 @@ if (!empty($active_popups)) {
               if (!empty($bItem['images'])) {
                 $bDec = is_array($bItem['images']) ? $bItem['images'] : json_decode($bItem['images'], true);
                 if (is_array($bDec) && count($bDec) > 0) {
-                  $bImages = array_map(function($u) use ($bItem) { return normalize_port_img($u, $bItem['category']); }, $bDec);
+                  $bImagesClean = array();
+                  $bItemCat = !empty($bItem['category']) ? $bItem['category'] : '';
+                  foreach ($bDec as $u) {
+                    $bImagesClean[] = normalize_port_img($u, $bItemCat);
+                  }
+                  $bImages = $bImagesClean;
                 }
               }
               $bHasMulti = count($bImages) > 1;

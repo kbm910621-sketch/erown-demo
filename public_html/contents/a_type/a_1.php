@@ -215,8 +215,11 @@ $totalCount = count($list);
                         $imagesArray = $decoded;
                     }
                 }
+            $cleanImages = array();
+            foreach ($imagesArray as $u) {
+                $cleanImages[] = normalize_port_img($u, $cat);
             }
-            $imagesArray = array_map(function($u) use ($cat) { return normalize_port_img($u, $cat); }, $imagesArray);
+            $imagesArray = $cleanImages;
             $imagesJsonAttr = htmlspecialchars(json_encode($imagesArray), ENT_QUOTES, 'UTF-8');
             $hasMultiple = count($imagesArray) > 1;
           ?>
