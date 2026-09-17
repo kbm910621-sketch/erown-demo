@@ -299,38 +299,52 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     $images_json = json_encode(array_values($images));
 
+    $p_start_sql = (!empty($period_start) && $period_start !== '0000-00-00') ? "'" . mysqli_real_escape_string($conn, $period_start) . "'" : "NULL";
+    $p_end_sql   = (!empty($period_end) && $period_end !== '0000-00-00')   ? "'" . mysqli_real_escape_string($conn, $period_end) . "'"   : "NULL";
+
+    $e_cat   = mysqli_real_escape_string($conn, $category);
+    $e_ttl   = mysqli_real_escape_string($conn, $title);
+    $e_clt   = mysqli_real_escape_string($conn, $client);
+    $e_loc   = mysqli_real_escape_string($conn, $location);
+    $e_scl   = mysqli_real_escape_string($conn, $scale);
+    $e_dsc   = mysqli_real_escape_string($conn, $description);
+    $e_thb   = mysqli_real_escape_string($conn, $thumb);
+    $e_imgs  = mysqli_real_escape_string($conn, $images_json);
+    $e_stat  = mysqli_real_escape_string($conn, $status);
+
     if ($id > 0) {
-        $stmt = mysqli_prepare($conn, "
-            UPDATE portfolio SET
-                category=?, title=?, client=?, location=?,
-                period_start=?, period_end=?, scale=?, description=?,
-                thumb=?, images=?, is_featured=?, sort_order=?, status=?,
-                updated_at=NOW()
-            WHERE id=?
-        ");
-        mysqli_stmt_bind_param($stmt, 'ssssssssssiisi',
-            $category, $title, $client, $location,
-            $period_start, $period_end, $scale, $description,
-            $thumb, $images_json, $is_featured, $sort_order, $status,
-            $id
-        );
-        mysqli_stmt_execute($stmt);
-        mysqli_stmt_close($stmt);
+        $sql = "UPDATE portfolio SET
+                    category = '$e_cat',
+                    title = '$e_ttl',
+                    client = '$e_clt',
+                    location = '$e_loc',
+                    period_start = $p_start_sql,
+                    period_end = $p_end_sql,
+                    scale = '$e_scl',
+                    description = '$e_dsc',
+                    thumb = '$e_thb',
+                    images = '$e_imgs',
+                    is_featured = $is_featured,
+                    sort_order = $sort_order,
+                    status = '$e_stat',
+                    updated_at = NOW()
+                WHERE id = $id";
+        $res_update = mysqli_query($conn, $sql);
+        if (!$res_update) {
+            echo "<script>alert('DB 저장 오류: " . addslashes(mysqli_error($conn)) . "'); history.back();</script>";
+            exit;
+        }
         header('Location: admin_portfolio.php?cat=' . urlencode($category) . '&msg=modify');
     } else {
-        $stmt = mysqli_prepare($conn, "
-            INSERT INTO portfolio
-                (category, title, client, location, period_start, period_end, scale, description, thumb, images, is_featured, sort_order, status, created_at, updated_at)
-            VALUES
-                (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())
-        ");
-        mysqli_stmt_bind_param($stmt, 'ssssssssssiis',
-            $category, $title, $client, $location,
-            $period_start, $period_end, $scale, $description,
-            $thumb, $images_json, $is_featured, $sort_order, $status
-        );
-        mysqli_stmt_execute($stmt);
-        mysqli_stmt_close($stmt);
+        $sql = "INSERT INTO portfolio
+                    (category, title, client, location, period_start, period_end, scale, description, thumb, images, is_featured, sort_order, status, created_at, updated_at)
+                VALUES
+                    ('$e_cat', '$e_ttl', '$e_clt', '$e_loc', $p_start_sql, $p_end_sql, '$e_scl', '$e_dsc', '$e_thb', '$e_imgs', $is_featured, $sort_order, '$e_stat', NOW(), NOW())";
+        $res_insert = mysqli_query($conn, $sql);
+        if (!$res_insert) {
+            echo "<script>alert('DB 등록 오류: " . addslashes(mysqli_error($conn)) . "'); history.back();</script>";
+            exit;
+        }
         header('Location: admin_portfolio.php?cat=' . urlencode($category) . '&msg=write');
     }
     exit;
@@ -685,8 +699,21 @@ if ($result) {
                         return;
                     }
                 }
-                document.frm.action="admin_portfolio.php?mode=<?php echo $edit ? 'modify&id='.$edit['id'] : 'write'; ?>";
-                document.frm.submit();
+
+                var thumbFile = $('#thumb_file_input')[0] ? $('#thumb_file_input')[0].files[0] : null;
+                if (thumbFile && !$('#thumb_base64').val()) {
+                    compressImageFile(thumbFile, 1920, 0.88, function(dataUrl) {
+                        $('#thumb_base64').val(dataUrl);
+                        doSubmit();
+                    });
+                } else {
+                    doSubmit();
+                }
+
+                function doSubmit() {
+                    document.frm.action="admin_portfolio.php?mode=<?php echo $edit ? 'modify&id='.$edit['id'] : 'write'; ?>";
+                    document.frm.submit();
+                }
             });
         });
         </script>
