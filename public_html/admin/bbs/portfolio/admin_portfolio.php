@@ -215,6 +215,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $images = $new_images;
         }
     }
+    // 대표 이미지가 비어있고 추가 이미지가 등록되어 있다면 첫 번째 추가 이미지를 대표 이미지로 자동 지정
+    if (empty($thumb) && !empty($images[0])) {
+        $thumb = $images[0];
+    }
+    // 대표 이미지는 등록되었으나 추가 이미지가 비어있다면 대표 이미지를 추가 이미지 목록에도 포함
+    if (!empty($thumb) && empty($images)) {
+        $images = array($thumb);
+    }
     $images_json = json_encode(array_values($images));
 
     if ($id > 0) {

@@ -41,7 +41,7 @@ $result = mysqli_query($conn, "SELECT * FROM portfolio WHERE status='active' ORD
 $list   = array();
 if ($result) {
   while ($row = mysqli_fetch_assoc($result)) {
-    $row['thumb'] = normalize_port_img($row['thumb']);
+    $row['thumb'] = normalize_port_img($row['thumb'], $row['category']);
     $list[] = $row;
   }
 }
@@ -780,12 +780,12 @@ if (!empty($active_popups)) {
         <div class="swiper asps-swiper asps-swiper-bus">
           <div class="swiper-wrapper">
             <?php foreach ($portBus as $bItem): 
-              $bThumb = normalize_port_img(!empty($bItem['thumb']) ? $bItem['thumb'] : '');
+              $bThumb = normalize_port_img(!empty($bItem['thumb']) ? $bItem['thumb'] : '', !empty($bItem['category']) ? $bItem['category'] : '');
               $bImages = array($bThumb);
               if (!empty($bItem['images'])) {
                 $bDec = is_array($bItem['images']) ? $bItem['images'] : json_decode($bItem['images'], true);
                 if (is_array($bDec) && count($bDec) > 0) {
-                  $bImages = array_map('normalize_port_img', $bDec);
+                  $bImages = array_map(function($u) use ($bItem) { return normalize_port_img($u, $bItem['category']); }, $bDec);
                 }
               }
               $bHasMulti = count($bImages) > 1;

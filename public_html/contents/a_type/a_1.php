@@ -66,7 +66,7 @@ if ($conn) {
     $list = array();
     if ($result) {
         while ($row = mysqli_fetch_assoc($result)) {
-            $row['thumb'] = normalize_port_img($row['thumb']);
+            $row['thumb'] = normalize_port_img($row['thumb'], $row['category']);
             $list[] = $row;
         }
     }
@@ -191,7 +191,7 @@ $totalCount = count($list);
                 58 => '/images/port/video/video_clip_05.mp4',
                 63 => '/images/port/video/video_clip_06.mp4'
             );
-            $imgSrc = normalize_port_img(!empty($item['thumb']) ? $item['thumb'] : '');
+            $imgSrc = normalize_port_img(!empty($item['thumb']) ? $item['thumb'] : '', $cat);
             $videoSrc = !empty($item['video']) ? htmlspecialchars($item['video']) : '';
             if (empty($videoSrc) && $cat === 'video' && isset($vIdxMap[$item['id']])) {
                 $videoSrc = $vIdxMap[$item['id']];
@@ -216,7 +216,7 @@ $totalCount = count($list);
                     }
                 }
             }
-            $imagesArray = array_map('normalize_port_img', $imagesArray);
+            $imagesArray = array_map(function($u) use ($cat) { return normalize_port_img($u, $cat); }, $imagesArray);
             $imagesJsonAttr = htmlspecialchars(json_encode($imagesArray), ENT_QUOTES, 'UTF-8');
             $hasMultiple = count($imagesArray) > 1;
           ?>
