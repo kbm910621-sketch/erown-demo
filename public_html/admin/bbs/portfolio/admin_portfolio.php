@@ -151,24 +151,38 @@ if (!empty($_GET['del'])) {
 }
 
 // ── Base64 이미지 디코딩 및 파일 저장 도우미 함수 ──
+if (!function_exists('extract_base64_bytes')) {
+    function extract_base64_bytes($base64_string) {
+        if (empty($base64_string)) return false;
+        $pos = strpos($base64_string, ',');
+        if ($pos !== false) {
+            $base64_data = substr($base64_string, $pos + 1);
+        } else {
+            $base64_data = $base64_string;
+        }
+        $base64_data = str_replace(array(' ', "\r", "\n", "\t"), array('+', '', '', ''), $base64_data);
+        $decoded = base64_decode($base64_data);
+        if ($decoded !== false && strlen($decoded) > 0) {
+            return $decoded;
+        }
+        return false;
+    }
+}
+
 if (!function_exists('save_base64_to_file')) {
     function save_base64_to_file($base64_string, $output_file) {
-        if (empty($base64_string)) return false;
-        if (preg_match('/^data:image\/(\w+);base64,(.+)$/', $base64_string, $matches)) {
-            $data = base64_decode(str_replace(' ', '+', $matches[2]));
-        } else {
-            $data = base64_decode(str_replace(' ', '+', $base64_string));
+        $data = extract_base64_bytes($base64_string);
+        if ($data === false) return false;
+        
+        $dir = dirname($output_file);
+        if (!is_dir($dir)) {
+            @mkdir($dir, 0777, true);
+            @chmod($dir, 0777);
         }
-        if ($data !== false && strlen($data) > 0) {
-            $dir = dirname($output_file);
-            if (!is_dir($dir)) {
-                @mkdir($dir, 0777, true);
-                @chmod($dir, 0777);
-            }
-            if (@file_put_contents($output_file, $data) !== false) {
-                @chmod($output_file, 0777);
-                return true;
-            }
+        $written = @file_put_contents($output_file, $data);
+        if ($written !== false && $written > 0) {
+            @chmod($output_file, 0777);
+            return true;
         }
         return false;
     }
@@ -204,25 +218,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     $upload_url = '/admin/bbs/portfolio/uploads/' . $cat_folder . '/';
 
-    // 1) 대표 이미지 업로드 (1단계: /uploads/ -> 2단계: /images/port/ -> 3단계: Base64 DataURL 직접 보존)
+    // 1) 대표 이미지 업로드 (디스크 파일로 안전 저장)
     $thumb = isset($_POST['thumb_old']) ? $_POST['thumb_old'] : '';
     $thumb_saved = false;
 
     if (!empty($_POST['thumb_base64'])) {
         $fname = uniqid('thumb_') . '.jpg';
-        $target_path = $upload_dir . $fname;
-        if (save_base64_to_file($_POST['thumb_base64'], $target_path)) {
+        if (save_base64_to_file($_POST['thumb_base64'], $upload_dir . $fname)) {
             $thumb = $upload_url . $fname;
             $thumb_saved = true;
-        } else {
-            $alt_target = $_SERVER['DOCUMENT_ROOT'] . '/images/port/' . $fname;
-            if (save_base64_to_file($_POST['thumb_base64'], $alt_target)) {
-                $thumb = '/images/port/' . $fname;
-                $thumb_saved = true;
-            } else {
-                $thumb = $_POST['thumb_base64'];
-                $thumb_saved = true;
-            }
+        } else if (save_base64_to_file($_POST['thumb_base64'], $_SERVER['DOCUMENT_ROOT'] . '/images/port/' . $fname)) {
+            $thumb = '/images/port/' . $fname;
+            $thumb_saved = true;
+        } else if (save_base64_to_file($_POST['thumb_base64'], $base_upload_dir . $fname)) {
+            $thumb = '/admin/bbs/portfolio/uploads/' . $fname;
+            $thumb_saved = true;
         }
     }
 
@@ -233,9 +243,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $target_path = $upload_dir . $fname;
         
         $moved = @move_uploaded_file($_FILES['thumb']['tmp_name'], $target_path);
-        if (!$moved) {
-            $moved = @copy($_FILES['thumb']['tmp_name'], $target_path);
-        }
+        if (!$moved) $moved = @copy($_FILES['thumb']['tmp_name'], $target_path);
         if (!$moved && is_readable($_FILES['thumb']['tmp_name'])) {
             $file_bytes = @file_get_contents($_FILES['thumb']['tmp_name']);
             if ($file_bytes !== false) {
@@ -268,16 +276,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         foreach ($_POST['images_base64'] as $b64) {
             if (empty($b64)) continue;
             $fname = uniqid('img_') . '.jpg';
-            $target_path = $upload_dir . $fname;
-            if (save_base64_to_file($b64, $target_path)) {
+            if (save_base64_to_file($b64, $upload_dir . $fname)) {
                 $images[] = $upload_url . $fname;
-            } else {
-                $alt_target = $_SERVER['DOCUMENT_ROOT'] . '/images/port/' . $fname;
-                if (save_base64_to_file($b64, $alt_target)) {
-                    $images[] = '/images/port/' . $fname;
-                } else {
-                    $images[] = $b64;
-                }
+            } else if (save_base64_to_file($b64, $_SERVER['DOCUMENT_ROOT'] . '/images/port/' . $fname)) {
+                $images[] = '/images/port/' . $fname;
+            } else if (save_base64_to_file($b64, $base_upload_dir . $fname)) {
+                $images[] = '/admin/bbs/portfolio/uploads/' . $fname;
             }
         }
     }
@@ -292,9 +296,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $target_path = $upload_dir . $fname;
             
             $moved = @move_uploaded_file($_FILES['images']['tmp_name'][$i], $target_path);
-            if (!$moved) {
-                $moved = @copy($_FILES['images']['tmp_name'][$i], $target_path);
-            }
+            if (!$moved) $moved = @copy($_FILES['images']['tmp_name'][$i], $target_path);
             if (!$moved && is_readable($_FILES['images']['tmp_name'][$i])) {
                 $file_bytes = @file_get_contents($_FILES['images']['tmp_name'][$i]);
                 if ($file_bytes !== false) {
@@ -672,7 +674,7 @@ if ($result) {
                     canvas.height = h;
                     var ctx = canvas.getContext('2d');
                     ctx.drawImage(img, 0, 0, w, h);
-                    var dataUrl = canvas.toDataURL('image/jpeg', quality || 0.88);
+                    var dataUrl = canvas.toDataURL('image/jpeg', quality || 0.80);
                     callback(dataUrl, (file.size / 1024).toFixed(0) + 'KB', (Math.round(dataUrl.length * 3 / 4) / 1024).toFixed(0) + 'KB');
                 };
                 img.src = e.target.result;
@@ -688,7 +690,7 @@ if ($result) {
                 $('#thumb_base64').val('');
                 return;
             }
-            compressImageFile(file, 1920, 0.88, function(dataUrl, origSize, compSize) {
+            compressImageFile(file, 1400, 0.80, function(dataUrl, origSize, compSize) {
                 $('#thumb_base64').val(dataUrl);
                 $('#thumb_preview_img').attr('src', dataUrl);
                 $('#thumb_preview_info').html('✨ 업로드 준비 완료 (' + origSize + ' ➔ ' + compSize + ' 자동 최적화)');
@@ -712,7 +714,7 @@ if ($result) {
             previewBox.show();
             for (var i = 0; i < files.length; i++) {
                 (function(f, idx) {
-                    compressImageFile(f, 1920, 0.88, function(dataUrl, origSize, compSize) {
+                    compressImageFile(f, 1400, 0.80, function(dataUrl, origSize, compSize) {
                         var hiddenInput = $('<input type="hidden" name="images_base64[]">').val(dataUrl);
                         container.append(hiddenInput);
 
@@ -739,7 +741,7 @@ if ($result) {
 
                 var thumbFile = $('#thumb_file_input')[0] ? $('#thumb_file_input')[0].files[0] : null;
                 if (thumbFile && !$('#thumb_base64').val()) {
-                    compressImageFile(thumbFile, 1920, 0.88, function(dataUrl) {
+                    compressImageFile(thumbFile, 1400, 0.80, function(dataUrl) {
                         $('#thumb_base64').val(dataUrl);
                         doSubmit();
                     });
