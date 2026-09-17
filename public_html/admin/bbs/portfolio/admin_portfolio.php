@@ -166,31 +166,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $period_end   = $period_end   ? $period_end   : null;
 
     $cat_folder = !empty($category) ? preg_replace('/[^a-zA-Z0-9_-]/', '', $category) : 'etc';
-    $base_upload_dir = $_SERVER['DOCUMENT_ROOT'] . '/admin/bbs/portfolio/uploads/';
-    if (!is_dir($base_upload_dir)) {
+    $base_upload_dir = dirname(__FILE__) . '/uploads/';
+    if (!file_exists($base_upload_dir)) {
         @mkdir($base_upload_dir, 0777, true);
         @chmod($base_upload_dir, 0777);
     }
     $upload_dir = $base_upload_dir . $cat_folder . '/';
-    if (!is_dir($upload_dir)) {
+    if (!file_exists($upload_dir)) {
         @mkdir($upload_dir, 0777, true);
+        @chmod($upload_dir, 0777);
     }
-    @chmod($upload_dir, 0777);
     $upload_url = '/admin/bbs/portfolio/uploads/' . $cat_folder . '/';
 
-    // 대표 이미지
+    // 대표 이미지 업로드 처리 (move_uploaded_file -> copy -> file_put_contents 3중 안전 처리)
     $thumb = isset($_POST['thumb_old']) ? $_POST['thumb_old'] : '';
-    if (!empty($_FILES['thumb']['name'])) {
+    if (!empty($_FILES['thumb']['name']) && !empty($_FILES['thumb']['tmp_name'])) {
         $ext   = strtolower(pathinfo($_FILES['thumb']['name'], PATHINFO_EXTENSION));
         $fname = uniqid('thumb_') . '.' . $ext;
-        if (@move_uploaded_file($_FILES['thumb']['tmp_name'], $upload_dir . $fname)) {
-            @chmod($upload_dir . $fname, 0777);
-            if ($thumb && file_exists($_SERVER['DOCUMENT_ROOT'] . $thumb)) @unlink($_SERVER['DOCUMENT_ROOT'] . $thumb);
+        $target_path = $upload_dir . $fname;
+        
+        $moved = @move_uploaded_file($_FILES['thumb']['tmp_name'], $target_path);
+        if (!$moved) {
+            $moved = @copy($_FILES['thumb']['tmp_name'], $target_path);
+        }
+        if (!$moved && is_readable($_FILES['thumb']['tmp_name'])) {
+            $file_bytes = @file_get_contents($_FILES['thumb']['tmp_name']);
+            if ($file_bytes !== false) {
+                $moved = (@file_put_contents($target_path, $file_bytes) !== false);
+            }
+        }
+        if ($moved) {
+            @chmod($target_path, 0777);
+            if ($thumb && file_exists(dirname(__FILE__) . '/../../../..' . $thumb)) {
+                @unlink(dirname(__FILE__) . '/../../../..' . $thumb);
+            }
             $thumb = $upload_url . $fname;
         }
     }
 
-    // 추가 이미지
+    // 추가 이미지 업로드 처리
     $images = array();
     if (!empty($_POST['images_old'])) {
         $decoded = json_decode($_POST['images_old'], true);
@@ -198,18 +212,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     if (!empty($_FILES['images']['name'][0])) {
         foreach ($_FILES['images']['name'] as $i => $fname_orig) {
-            if (empty($fname_orig)) continue;
+            if (empty($fname_orig) || empty($_FILES['images']['tmp_name'][$i])) continue;
             $ext   = strtolower(pathinfo($fname_orig, PATHINFO_EXTENSION));
             $fname = uniqid('img_') . '.' . $ext;
-            if (@move_uploaded_file($_FILES['images']['tmp_name'][$i], $upload_dir . $fname)) {
-                @chmod($upload_dir . $fname, 0777);
+            $target_path = $upload_dir . $fname;
+            
+            $moved = @move_uploaded_file($_FILES['images']['tmp_name'][$i], $target_path);
+            if (!$moved) {
+                $moved = @copy($_FILES['images']['tmp_name'][$i], $target_path);
+            }
+            if (!$moved && is_readable($_FILES['images']['tmp_name'][$i])) {
+                $file_bytes = @file_get_contents($_FILES['images']['tmp_name'][$i]);
+                if ($file_bytes !== false) {
+                    $moved = (@file_put_contents($target_path, $file_bytes) !== false);
+                }
+            }
+            if ($moved) {
+                @chmod($target_path, 0777);
                 $images[] = $upload_url . $fname;
             }
         }
     }
     if (!empty($_POST['del_images'])) {
         foreach ($_POST['del_images'] as $di) {
-            if (file_exists($_SERVER['DOCUMENT_ROOT'] . $di)) @unlink($_SERVER['DOCUMENT_ROOT'] . $di);
+            if (file_exists(dirname(__FILE__) . '/../../../..' . $di)) {
+                @unlink(dirname(__FILE__) . '/../../../..' . $di);
+            }
             $new_images = array();
             foreach ($images as $v) { if ($v !== $di) $new_images[] = $v; }
             $images = $new_images;

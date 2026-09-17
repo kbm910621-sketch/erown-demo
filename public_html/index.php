@@ -795,8 +795,16 @@ if (!empty($active_popups)) {
               }
               $bHasMulti = count($bImages) > 1;
               $bImagesJson = htmlspecialchars(json_encode($bImages), ENT_QUOTES, 'UTF-8');
-              $bBadge = !empty($bItem['badge']) ? htmlspecialchars($bItem['badge']) : '옥외매체';
-              $bTag = !empty($bItem['tag']) ? htmlspecialchars($bItem['tag']) : '옥외광고';
+              $bBadge = !empty($bItem['badge']) ? htmlspecialchars($bItem['badge']) : '';
+              if (empty($bBadge)) {
+                if ($bItem['category'] === 'bus') $bBadge = 'BUS·AD';
+                else if ($bItem['category'] === 'shelter') $bBadge = 'SHELTER·AD';
+                else if ($bItem['category'] === 'mart') $bBadge = 'MART·CART';
+                else if ($bItem['category'] === 'taxi') $bBadge = 'TAXI·WRAP';
+                else if ($bItem['category'] === 'did') $bBadge = 'TERMINAL·AD';
+                else $bBadge = 'OOH·AD';
+              }
+              $bTag = !empty($bItem['tag']) ? htmlspecialchars($bItem['tag']) : (isset($categories[$bItem['category']]) ? $categories[$bItem['category']] : '옥외광고');
               $bClient = !empty($bItem['client']) ? htmlspecialchars($bItem['client']) : '';
               $bLoc = !empty($bItem['location']) ? htmlspecialchars($bItem['location']) : '광주 맞춤 직영 시공';
             ?>
