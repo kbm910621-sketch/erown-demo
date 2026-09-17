@@ -23,7 +23,7 @@ function normalize_port_img($url, $cat = '') {
         if ($cat === 'led') return '/images/port/port_28_1.jpg';
         return '/images/port/port_01_1.jpg';
     }
-    return str_replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/', $url);
+    return $url;
 }
 
 if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/admin/bbs/portfolio/portfolio_seed_data.php")) {

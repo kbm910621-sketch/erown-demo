@@ -1,9 +1,13 @@
 <header id="header" class="<?php echo isset($use_depth)?$use_depth:'';?>">
     <div class="inner">
-        <h1 class="logo"><a href="/index.php">가온엔</a></h1>
+        <div class="logo"><a href="/index.php">가온엔</a></div>
         <div class="mobile_hamburger">
             <button class="gnb_open" id="gnbOpenBtn" type="button" aria-label="메뉴 열기" onclick="openMobileNav();" ontouchstart="openMobileNav();">
-                <span class="stic_1"></span><span class="stic_2"></span><span class="stic_3"></span>
+                <svg width="20" height="13" viewBox="0 0 20 13" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round">
+                    <line x1="1" y1="1" x2="19" y2="1"></line>
+                    <line x1="1" y1="6.5" x2="19" y2="6.5"></line>
+                    <line x1="1" y1="12" x2="19" y2="12"></line>
+                </svg>
             </button>
         </div>
         <nav id="gnb" class="gnb_nav">
@@ -23,7 +27,7 @@
                     <div class="gdf_info_row">
                         <div class="gdf_col">
                             <span class="gdf_lbl">CONTACT</span>
-                            <a href="tel:062-385-0110" class="gdf_tel">062-385-0110</a>
+                            <a href="tel:062-385-1350" class="gdf_tel">062-385-1350</a>
                         </div>
                         <div class="gdf_col">
                             <span class="gdf_lbl">E-MAIL</span>

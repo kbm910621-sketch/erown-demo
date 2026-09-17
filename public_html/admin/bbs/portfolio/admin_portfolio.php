@@ -94,7 +94,7 @@ function normalize_port_img($url, $cat = '') {
         if ($cat === 'led') return '/images/port/port_28_1.jpg';
         return '/images/port/port_01_1.jpg';
     }
-    return str_replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/', $url);
+    return $url;
 }
 
 $categories = array(
@@ -148,6 +148,24 @@ if (!empty($_GET['del'])) {
     exit;
 }
 
+// ── Base64 이미지 디코딩 및 파일 저장 도우미 함수 ──
+if (!function_exists('save_base64_to_file')) {
+    function save_base64_to_file($base64_string, $output_file) {
+        if (preg_match('/^data:image\/(\w+);base64,(.+)$/', $base64_string, $matches)) {
+            $data = base64_decode($matches[2]);
+        } else {
+            $data = base64_decode($base64_string);
+        }
+        if ($data !== false && strlen($data) > 0) {
+            if (@file_put_contents($output_file, $data) !== false) {
+                @chmod($output_file, 0777);
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
 // ── 저장 (등록/수정) ──
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id           = (int)(isset($_POST['id'])           ? $_POST['id']           : 0);
@@ -178,10 +196,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     $upload_url = '/admin/bbs/portfolio/uploads/' . $cat_folder . '/';
 
-    // 대표 이미지 업로드 처리 (move_uploaded_file -> copy -> file_put_contents 3중 안전 처리)
+    // 1) 대표 이미지 업로드 (Base64 우선 처리 -> multipart fallback)
     $thumb = isset($_POST['thumb_old']) ? $_POST['thumb_old'] : '';
-    if (!empty($_FILES['thumb']['name']) && !empty($_FILES['thumb']['tmp_name'])) {
+    $thumb_saved = false;
+
+    if (!empty($_POST['thumb_base64'])) {
+        $fname = uniqid('thumb_') . '.jpg';
+        $target_path = $upload_dir . $fname;
+        if (save_base64_to_file($_POST['thumb_base64'], $target_path)) {
+            $thumb = $upload_url . $fname;
+            $thumb_saved = true;
+        }
+    }
+
+    if (!$thumb_saved && !empty($_FILES['thumb']['name']) && !empty($_FILES['thumb']['tmp_name'])) {
         $ext   = strtolower(pathinfo($_FILES['thumb']['name'], PATHINFO_EXTENSION));
+        if (empty($ext)) $ext = 'jpg';
         $fname = uniqid('thumb_') . '.' . $ext;
         $target_path = $upload_dir . $fname;
         
@@ -197,23 +227,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         if ($moved) {
             @chmod($target_path, 0777);
-            if ($thumb && file_exists(dirname(__FILE__) . '/../../../..' . $thumb)) {
-                @unlink(dirname(__FILE__) . '/../../../..' . $thumb);
-            }
             $thumb = $upload_url . $fname;
+            $thumb_saved = true;
         }
     }
 
-    // 추가 이미지 업로드 처리
+    // 2) 추가 이미지 업로드
     $images = array();
     if (!empty($_POST['images_old'])) {
         $decoded = json_decode($_POST['images_old'], true);
         if (is_array($decoded)) $images = $decoded;
     }
+
+    // Base64 추가 이미지 처리
+    if (!empty($_POST['images_base64']) && is_array($_POST['images_base64'])) {
+        foreach ($_POST['images_base64'] as $b64) {
+            if (empty($b64)) continue;
+            $fname = uniqid('img_') . '.jpg';
+            $target_path = $upload_dir . $fname;
+            if (save_base64_to_file($b64, $target_path)) {
+                $images[] = $upload_url . $fname;
+            }
+        }
+    }
+
+    // Multipart 추가 이미지 처리
     if (!empty($_FILES['images']['name'][0])) {
         foreach ($_FILES['images']['name'] as $i => $fname_orig) {
             if (empty($fname_orig) || empty($_FILES['images']['tmp_name'][$i])) continue;
             $ext   = strtolower(pathinfo($fname_orig, PATHINFO_EXTENSION));
+            if (empty($ext)) $ext = 'jpg';
             $fname = uniqid('img_') . '.' . $ext;
             $target_path = $upload_dir . $fname;
             
@@ -233,16 +276,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
     }
-    if (!empty($_POST['del_images'])) {
+
+    // 삭제 선택된 기존 이미지 파일 제거
+    if (!empty($_POST['del_images']) && is_array($_POST['del_images'])) {
         foreach ($_POST['del_images'] as $di) {
-            if (file_exists(dirname(__FILE__) . '/../../../..' . $di)) {
-                @unlink(dirname(__FILE__) . '/../../../..' . $di);
+            if (file_exists($_SERVER['DOCUMENT_ROOT'] . $di)) {
+                @unlink($_SERVER['DOCUMENT_ROOT'] . $di);
             }
             $new_images = array();
             foreach ($images as $v) { if ($v !== $di) $new_images[] = $v; }
             $images = $new_images;
         }
     }
+
     // 대표 이미지가 비어있고 추가 이미지가 등록되어 있다면 첫 번째 추가 이미지를 대표 이미지로 자동 지정
     if (empty($thumb) && !empty($images[0])) {
         $thumb = $images[0];
@@ -457,12 +503,18 @@ if ($result) {
                 <td>
                   <?php if (!empty($edit['thumb'])): ?>
                   <div style="margin-bottom:8px">
+                    <span style="font-size:12px;color:#64748b;display:block;margin-bottom:4px;">현재 등록된 대표 썸네일:</span>
                     <img src="<?php echo normalize_port_img($edit['thumb']); ?>" style="max-height:90px;border:1px solid #e2e8f0;border-radius:4px;vertical-align:middle;cursor:pointer;" onclick="openImgModal('<?php echo normalize_port_img($edit['thumb']); ?>', '<?php echo htmlspecialchars(addslashes($edit['title'])); ?>', '');">
                   </div>
                   <?php endif; ?>
                   <ul class="file_Box">
-                    <li><input type="file" class="file_type01" name="thumb" accept="image/*" title="대표 이미지 선택"></li>
+                    <li><input type="file" class="file_type01" name="thumb" id="thumb_file_input" accept="image/*" title="대표 이미지 선택"></li>
                   </ul>
+                  <input type="hidden" name="thumb_base64" id="thumb_base64">
+                  <div id="thumb_preview_box" style="margin-top:8px;display:none;align-items:center;gap:12px;background:#f8fafc;padding:8px 12px;border-radius:6px;border:1px dashed #3b82f6;">
+                    <img id="thumb_preview_img" src="" style="width:70px;height:50px;object-fit:cover;border-radius:4px;border:1px solid #cbd5e1;">
+                    <span id="thumb_preview_info" style="font-size:12.5px;color:#1e293b;font-weight:600;"></span>
+                  </div>
                 </td>
               </tr>
 
@@ -478,7 +530,7 @@ if ($result) {
                     <div style="position:relative;display:inline-block">
                       <img src="<?php echo normalize_port_img($img_path); ?>" style="width:75px;height:75px;object-fit:cover;border:1px solid #e2e8f0;border-radius:4px;cursor:pointer;" onclick="openImgModal('<?php echo normalize_port_img($img_path); ?>', '추가 사진 미리보기', '');">
                       <label style="position:absolute;top:2px;right:2px;background:rgba(220,38,38,0.9);color:#fff;border-radius:3px;padding:1px 5px;font-size:11px;font-weight:bold;cursor:pointer" title="삭제 체크">
-                        <input type="checkbox" name="del_images[]" value="<?php echo htmlspecialchars($img_path); ?>" style="display:none"> ✕
+                        <input type="checkbox" name="del_images[]" value="<?php echo htmlspecialchars($img_path); ?>"> ✕
                       </label>
                     </div>
                     <?php endforeach; ?>
@@ -486,8 +538,10 @@ if ($result) {
                   <p class="exp" style="color:#64748b;font-size:12.5px;margin-bottom:8px">💡 ✕ 버튼을 누르면 체크되며 저장 시 해당 사진이 삭제됩니다. (사진 클릭 시 확대)</p>
                   <?php endif; ?>
                   <ul class="file_Box">
-                    <li><input type="file" class="file_type01" name="images[]" accept="image/*" multiple title="추가 이미지 선택"></li>
+                    <li><input type="file" class="file_type01" name="images[]" id="images_file_input" accept="image/*" multiple title="추가 이미지 선택"></li>
                   </ul>
+                  <div id="images_base64_container"></div>
+                  <div id="images_preview_box" style="margin-top:8px;display:none;flex-wrap:wrap;gap:8px;background:#f8fafc;padding:8px 12px;border-radius:6px;border:1px dashed #3b82f6;"></div>
                 </td>
               </tr>
 
@@ -544,6 +598,83 @@ if ($result) {
             monthNames:["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"],
             showMonthAfterYear:true, yearSuffix:"년"
         });
+
+        // ── 순수 자바스크립트 이미지 스마트 압축 및 인스턴트 프리뷰 ──
+        function compressImageFile(file, maxDim, quality, callback) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var img = new Image();
+                img.onload = function() {
+                    var w = img.width;
+                    var h = img.height;
+                    if (w > maxDim || h > maxDim) {
+                        if (w > h) {
+                            h = Math.round((h * maxDim) / w);
+                            w = maxDim;
+                        } else {
+                            w = Math.round((w * maxDim) / h);
+                            h = maxDim;
+                        }
+                    }
+                    var canvas = document.createElement('canvas');
+                    canvas.width = w;
+                    canvas.height = h;
+                    var ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, w, h);
+                    var dataUrl = canvas.toDataURL('image/jpeg', quality || 0.88);
+                    callback(dataUrl, (file.size / 1024).toFixed(0) + 'KB', (Math.round(dataUrl.length * 3 / 4) / 1024).toFixed(0) + 'KB');
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // 대표 썸네일 선택 이벤트
+        $('#thumb_file_input').on('change', function() {
+            var file = this.files[0];
+            if (!file) {
+                $('#thumb_preview_box').hide();
+                $('#thumb_base64').val('');
+                return;
+            }
+            compressImageFile(file, 1920, 0.88, function(dataUrl, origSize, compSize) {
+                $('#thumb_base64').val(dataUrl);
+                $('#thumb_preview_img').attr('src', dataUrl);
+                $('#thumb_preview_info').html('✨ 업로드 준비 완료 (' + origSize + ' ➔ ' + compSize + ' 자동 최적화)');
+                $('#thumb_preview_box').css('display', 'flex');
+            });
+        });
+
+        // 추가 사진 선택 이벤트
+        $('#images_file_input').on('change', function() {
+            var files = this.files;
+            var container = $('#images_base64_container');
+            var previewBox = $('#images_preview_box');
+            container.empty();
+            previewBox.empty();
+
+            if (!files || files.length === 0) {
+                previewBox.hide();
+                return;
+            }
+
+            previewBox.show();
+            for (var i = 0; i < files.length; i++) {
+                (function(f, idx) {
+                    compressImageFile(f, 1920, 0.88, function(dataUrl, origSize, compSize) {
+                        var hiddenInput = $('<input type="hidden" name="images_base64[]">').val(dataUrl);
+                        container.append(hiddenInput);
+
+                        var thumbElem = $('<div style="display:inline-flex;flex-direction:column;align-items:center;background:#fff;padding:4px;border:1px solid #cbd5e1;border-radius:4px;">' +
+                            '<img src="' + dataUrl + '" style="width:65px;height:65px;object-fit:cover;border-radius:3px;">' +
+                            '<span style="font-size:10.5px;color:#64748b;margin-top:2px;">' + compSize + '</span>' +
+                        '</div>');
+                        previewBox.append(thumbElem);
+                    });
+                })(files[i], i);
+            }
+        });
+
         $(function(){
             $('#btn_submit').click(function(){
                 if(!chkForm('category','광고 유형을','select','1')) return;
@@ -557,12 +688,6 @@ if ($result) {
                 document.frm.action="admin_portfolio.php?mode=<?php echo $edit ? 'modify&id='.$edit['id'] : 'write'; ?>";
                 document.frm.submit();
             });
-        });
-
-        $(document).on('change', 'input[name="del_images[]"]', function() {
-            if ($(this).is(':checked')) {
-                $(this).closest('div').fadeOut(200, function() { $(this).remove(); });
-            }
         });
         </script>
 

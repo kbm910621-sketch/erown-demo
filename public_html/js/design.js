@@ -914,11 +914,28 @@ $(function() {
   function initAllSubPortfolioSwipers() {
     if (typeof Swiper === 'undefined') return;
 
+    function ensureSlidesForLoop($swiperEl, minCount) {
+      var $wrapper = $swiperEl.find('.swiper-wrapper');
+      var $slides = $wrapper.children('.swiper-slide:not(.swiper-slide-duplicate)');
+      var count = $slides.length;
+      if (count > 0 && count < minCount) {
+        var repeatTimes = Math.ceil(minCount / count);
+        var originalHtml = '';
+        $slides.each(function() {
+          originalHtml += $(this).prop('outerHTML');
+        });
+        for (var i = 1; i < repeatTimes; i++) {
+          $wrapper.append(originalHtml);
+        }
+      }
+    }
+
     if ($('.asps-swiper-bus').length) {
       if (busSwiperInstance) {
         try { busSwiperInstance.destroy(true, true); } catch(e) {}
       }
       try {
+        ensureSlidesForLoop($('.asps-swiper-bus'), 10);
         busSwiperInstance = new Swiper('.asps-swiper-bus', {
           slidesPerView: 4,
           spaceBetween: 22,
@@ -928,7 +945,9 @@ $(function() {
           observeParents: true,
           watchOverflow: true,
           loop: true,
-          loopAdditionalSlides: 2,
+          rewind: false,
+          loopPreventsSliding: false,
+          loopAdditionalSlides: 4,
           autoplay: {
             delay: 4000,
             disableOnInteraction: false,
@@ -965,6 +984,7 @@ $(function() {
         try { videoSwiperInstance.destroy(true, true); } catch(e) {}
       }
       try {
+        ensureSlidesForLoop($('.asps-swiper-video'), 10);
         videoSwiperInstance = new Swiper('.asps-swiper-video', {
           slidesPerView: 4,
           spaceBetween: 22,
@@ -974,7 +994,9 @@ $(function() {
           observeParents: true,
           watchOverflow: true,
           loop: true,
-          loopAdditionalSlides: 2,
+          rewind: false,
+          loopPreventsSliding: false,
+          loopAdditionalSlides: 4,
           autoplay: {
             delay: 4000,
             disableOnInteraction: false,
@@ -1008,6 +1030,7 @@ $(function() {
 
     if ($('.asps-swiper-online').length) {
       try {
+        ensureSlidesForLoop($('.asps-swiper-online'), 10);
         new Swiper('.asps-swiper-online', {
           slidesPerView: 4,
           spaceBetween: 22,
@@ -1017,7 +1040,9 @@ $(function() {
           observeParents: true,
           watchOverflow: true,
           loop: true,
-          loopAdditionalSlides: 2,
+          rewind: false,
+          loopPreventsSliding: false,
+          loopAdditionalSlides: 4,
           autoplay: {
             delay: 4000,
             disableOnInteraction: false,
@@ -1048,6 +1073,29 @@ $(function() {
         });
       } catch(e) { console.error('onlineSwiper error:', e); }
     }
+
+    // 10초 영상 사례 카드 마우스 호버 시 프리뷰 자동 재생 & 아웃 시 정지
+    $(document).off('mouseenter.aspsVideo mouseleave.aspsVideo', '.asps-video-card');
+    $(document).on('mouseenter.aspsVideo', '.asps-video-card', function() {
+      var vid = $(this).find('video.asps-card-video')[0];
+      if (vid) {
+        try {
+          vid.currentTime = 0;
+          var playPromise = vid.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(function(err) {});
+          }
+        } catch(e) {}
+      }
+    }).on('mouseleave.aspsVideo', '.asps-video-card', function() {
+      var vid = $(this).find('video.asps-card-video')[0];
+      if (vid) {
+        try {
+          vid.pause();
+          vid.currentTime = 0;
+        } catch(e) {}
+      }
+    });
   }
 
   // Active sub-portfolio Swipers immediately and on DOM Ready & Load

@@ -25,4 +25,5 @@ Allow: /
 User-agent: NaverBot
 Allow: /
 
-Sitemap: https://gaon-n.com/sitemap.xml
+Sitemap: http://bs-ad.co.kr/sitemap.xml
+

@@ -9,3 +9,5 @@ $conn = mysqli_connect($host_name, $db_id, $db_pw, $db_name);
 if(!$conn){
     die('Connect Error: ' . mysqli_connect_errno());
 }
+mysqli_set_charset($conn, "utf8");
+mysqli_query($conn, "SET NAMES utf8");

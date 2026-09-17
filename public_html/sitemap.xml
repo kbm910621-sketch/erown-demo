@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://gaon-n.com/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>http://bs-ad.co.kr/</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://gaon-n.com/a_1.php</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>http://bs-ad.co.kr/contents/a_type/a_1.php</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://gaon-n.com/portfolio.php</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>http://bs-ad.co.kr/board/estmate/write.php</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://gaon-n.com/c_type/c_1.php</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>http://bs-ad.co.kr/contents/b_type/b_1.php</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gaon-n.com/board/estmate/write.php</loc>
-    <lastmod>2026-09-08</lastmod>
+    <loc>http://bs-ad.co.kr/contents/c_type/c_1.php</loc>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
+

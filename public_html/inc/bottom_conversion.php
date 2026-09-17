@@ -9,14 +9,14 @@
       <div class="masstige-left-col">
         <div class="masstige-left-top">
           <h3 class="masstige-main-title">가온엔과<br>성공적인 협력을<br>시작해 보세요.</h3>
-          <a href="tel:062-385-0110" class="masstige-main-phone">062-385-0110</a>
+          <a href="tel:062-385-1350" class="masstige-main-phone">062-385-1350</a>
         </div>
 
         <div class="masstige-left-bottom">
           <p class="masstige-corp-tagline">
             <strong>GAON-N®</strong> is an integrated creative advertising agency driven by data, execution, and trust.
           </p>
-          <p class="masstige-corp-addr">주소: 광주광역시 서구 상무버들로 28 재민빌딩 2층 (주)가온엔</p>
+          <p class="masstige-corp-addr">주소: 광주광역시 서구 상무버들로 28 4층 (주)가온엔</p>
           <div class="masstige-sns-row">
             <a href="https://blog.naver.com/bsad550" target="_blank" rel="noopener" class="masstige-sns-icon" aria-label="블로그">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM9 16.5H6.5v-9H9v9zm8.5 0h-2.5v-4.5c0-1.1-.9-2-2-2s-2 .9-2 2v4.5H8.5v-9H11v1.2c.7-.9 1.8-1.5 3-1.5 2.2 0 4 1.8 4 4v5.3z"/></svg>
@@ -129,7 +129,7 @@
               <span>사업자등록번호: 137-87-02335</span>
             </div>
             <div class="mlm-line">
-              <span>대표전화: <a href="tel:062-385-0110" style="color:inherit; text-decoration:none;">062-385-0110</a></span>
+              <span>대표전화: <a href="tel:062-385-1350" style="color:inherit; text-decoration:none;">062-385-1350</a></span>
               <span>이메일: <a href="mailto:lgmo123@naver.com" style="color:inherit; text-decoration:none;">lgmo123@naver.com</a></span>
             </div>
             <p class="mlm-copy">© 2004–2026 GAON-N</p>

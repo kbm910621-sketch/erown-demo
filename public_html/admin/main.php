@@ -60,9 +60,9 @@ $cat_map = array(
     'web'     => '홈페이지제작'
 );
 
-function normalize_port_img($url) {
-    if (empty($url)) return '/images/bs_ad/baro.jpg';
-    return str_replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/', $url);
+function normalize_port_img($url, $cat = '') {
+    if (empty($url)) return '/images/port/port_01_1.jpg';
+    return $url;
 }
 ?>
 
