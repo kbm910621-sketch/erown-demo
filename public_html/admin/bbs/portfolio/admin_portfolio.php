@@ -222,6 +222,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $thumb = isset($_POST['thumb_old']) ? $_POST['thumb_old'] : '';
     $thumb_saved = false;
 
+    // 대표 썸네일 삭제 체크 처리
+    if (!empty($_POST['del_thumb']) && empty($_POST['thumb_base64']) && empty($_FILES['thumb']['name'])) {
+        if ($thumb && file_exists($_SERVER['DOCUMENT_ROOT'] . $thumb)) {
+            @unlink($_SERVER['DOCUMENT_ROOT'] . $thumb);
+        }
+        $thumb = '';
+    }
+
     if (!empty($_POST['thumb_base64'])) {
         $fname = uniqid('thumb_') . '.jpg';
         if (save_base64_to_file($_POST['thumb_base64'], $upload_dir . $fname)) {
@@ -555,9 +563,14 @@ if ($result) {
                 <th scope="row">대표 썸네일</th>
                 <td>
                   <?php if (!empty($edit['thumb'])): ?>
-                  <div style="margin-bottom:8px">
-                    <span style="font-size:12px;color:#64748b;display:block;margin-bottom:4px;">현재 등록된 대표 썸네일:</span>
-                    <img src="<?php echo normalize_port_img($edit['thumb']); ?>" style="max-height:90px;border:1px solid #e2e8f0;border-radius:4px;vertical-align:middle;cursor:pointer;" onclick="openImgModal('<?php echo normalize_port_img($edit['thumb']); ?>', '<?php echo htmlspecialchars(addslashes($edit['title'])); ?>', '');">
+                  <div style="margin-bottom:8px;display:flex;align-items:flex-end;gap:15px;">
+                    <div>
+                      <span style="font-size:12px;color:#64748b;display:block;margin-bottom:4px;">현재 등록된 대표 썸네일:</span>
+                      <img src="<?php echo normalize_port_img($edit['thumb']); ?>" style="max-height:90px;border:1px solid #e2e8f0;border-radius:4px;vertical-align:middle;cursor:pointer;" onclick="openImgModal('<?php echo normalize_port_img($edit['thumb']); ?>', '<?php echo htmlspecialchars(addslashes($edit['title'])); ?>', '');">
+                    </div>
+                    <label style="display:inline-flex;align-items:center;gap:6px;background:#fee2e2;color:#dc2626;border:1px solid #fca5a5;padding:6px 12px;border-radius:5px;font-size:12.5px;font-weight:700;cursor:pointer;margin-bottom:5px;">
+                      <input type="checkbox" name="del_thumb" value="1"> ✕ 현재 대표 썸네일 삭제
+                    </label>
                   </div>
                   <?php endif; ?>
                   <ul class="file_Box">
@@ -578,17 +591,20 @@ if ($result) {
                   $imgs_arr = !empty($edit['images']) ? json_decode($edit['images'], true) : array();
                   if (!empty($imgs_arr) && is_array($imgs_arr)):
                   ?>
-                  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+                  <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px">
                     <?php foreach ($imgs_arr as $img_path): ?>
-                    <div style="position:relative;display:inline-block">
-                      <img src="<?php echo normalize_port_img($img_path); ?>" style="width:75px;height:75px;object-fit:cover;border:1px solid #e2e8f0;border-radius:4px;cursor:pointer;" onclick="openImgModal('<?php echo normalize_port_img($img_path); ?>', '추가 사진 미리보기', '');">
-                      <label style="position:absolute;top:2px;right:2px;background:rgba(220,38,38,0.9);color:#fff;border-radius:3px;padding:1px 5px;font-size:11px;font-weight:bold;cursor:pointer" title="삭제 체크">
-                        <input type="checkbox" name="del_images[]" value="<?php echo htmlspecialchars($img_path); ?>"> ✕
+                    <div class="existing-img-card" style="position:relative;display:inline-block;border:2px solid #e2e8f0;border-radius:6px;overflow:hidden;background:#fff;transition:all 0.2s;">
+                      <img src="<?php echo normalize_port_img($img_path); ?>" style="width:85px;height:85px;object-fit:cover;display:block;cursor:pointer;" onclick="openImgModal('<?php echo normalize_port_img($img_path); ?>', '추가 사진 미리보기', '');">
+                      <label class="del-toggle-btn" style="position:absolute;top:3px;right:3px;background:rgba(220,38,38,0.92);color:#fff;border-radius:4px;padding:2px 6px;font-size:11px;font-weight:bold;cursor:pointer;user-select:none;box-shadow:0 1px 3px rgba(0,0,0,0.3);" title="클릭 시 삭제 대상 지정">
+                        <input type="checkbox" name="del_images[]" value="<?php echo htmlspecialchars($img_path); ?>" style="display:none;" class="del-chk"> ✕ 삭제
                       </label>
+                      <div class="del-overlay" style="display:none;position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(220,38,38,0.72);color:#fff;font-size:11.5px;font-weight:bold;align-items:center;justify-content:center;text-align:center;pointer-events:none;line-height:1.3;">
+                        삭제 대상<br><span style="font-size:10px;font-weight:normal;">(저장 시 삭제)</span>
+                      </div>
                     </div>
                     <?php endforeach; ?>
                   </div>
-                  <p class="exp" style="color:#64748b;font-size:12.5px;margin-bottom:8px">💡 ✕ 버튼을 누르면 체크되며 저장 시 해당 사진이 삭제됩니다. (사진 클릭 시 확대)</p>
+                  <p class="exp" style="color:#64748b;font-size:12.5px;margin-bottom:8px">💡 삭제할 사진의 <b>[✕ 삭제]</b> 버튼을 누르면 붉은색으로 표시되며, 하단의 <b>[확인]</b> 버튼을 눌러 저장 시 실제 삭제됩니다.</p>
                   <?php endif; ?>
                   <ul class="file_Box">
                     <li><input type="file" class="file_type01" name="images[]" id="images_file_input" accept="image/*" multiple title="추가 이미지 선택"></li>
@@ -725,6 +741,20 @@ if ($result) {
                         previewBox.append(thumbElem);
                     });
                 })(files[i], i);
+            }
+        });
+
+        // 추가 사진 삭제 체크 인터랙티브 토글
+        $(document).on('change', '.del-chk', function() {
+            var $card = $(this).closest('.existing-img-card');
+            if ($(this).is(':checked')) {
+                $card.find('.del-overlay').css('display', 'flex');
+                $card.css('border-color', '#dc2626');
+                $(this).closest('label').css('background', '#991b1b');
+            } else {
+                $card.find('.del-overlay').hide();
+                $card.css('border-color', '#e2e8f0');
+                $(this).closest('label').css('background', 'rgba(220,38,38,0.92)');
             }
         });
 
