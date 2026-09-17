@@ -31,36 +31,6 @@ if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/admin/bbs/portfolio/portfolio_seed
 }
 
 if ($conn) {
-    @mysqli_query($conn, "ALTER TABLE `portfolio` MODIFY COLUMN `category` VARCHAR(50) NOT NULL DEFAULT 'bus'");
-    @mysqli_query($conn, "UPDATE `portfolio` SET `thumb` = REPLACE(`thumb`, '/admin/bbs/portfolio/uploads/bus/', '/images/port/'), `images` = REPLACE(`images`, '/admin/bbs/portfolio/uploads/bus/', '/images/port/')");
-    
-    $shelterIds = "2,4,5,10,11,12,19,21,26,30,32,34,39,41,42,43,44";
-    @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'shelter' WHERE id IN ($shelterIds) AND (category = '' OR category = 'bus' OR category IS NULL)");
-    @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'did' WHERE id IN (16, 45, 81, 85)");
-    @mysqli_query($conn, "UPDATE `portfolio` SET `category` = 'mart' WHERE id IN (64, 82, 83, 84)");
-
-    // Clean up any orphan unbundled test items (id 85~100) if present
-    @mysqli_query($conn, "DELETE FROM `portfolio` WHERE id >= 88 AND id < 101");
-
-
-    // Check count and auto-seed if empty
-    $chkCount = mysqli_query($conn, "SELECT COUNT(*) as cnt FROM `portfolio`");
-    $chkRow = $chkCount ? mysqli_fetch_assoc($chkCount) : array('cnt' => 0);
-    if ($chkRow['cnt'] == 0 && !empty($GAON_PORTFOLIO_ITEMS)) {
-        foreach ($GAON_PORTFOLIO_ITEMS as $itm) {
-            $sord = (int)$itm['id'];
-            $cat  = mysqli_real_escape_string($conn, $itm['category']);
-            $tit  = mysqli_real_escape_string($conn, $itm['title']);
-            $cli  = mysqli_real_escape_string($conn, $itm['client']);
-            $loc  = mysqli_real_escape_string($conn, $itm['location']);
-            $sca  = mysqli_real_escape_string($conn, $itm['scale']);
-            $des  = mysqli_real_escape_string($conn, $itm['description']);
-            $thm  = mysqli_real_escape_string($conn, normalize_port_img($itm['thumb']));
-            $imgs = mysqli_real_escape_string($conn, json_encode(array_map('normalize_port_img', $itm['images'])));
-            mysqli_query($conn, "INSERT INTO `portfolio` (`id`, `category`, `title`, `client`, `location`, `scale`, `description`, `thumb`, `images`, `is_featured`, `sort_order`, `status`, `created_at`, `updated_at`) VALUES ($sord, '$cat', '$tit', '$cli', '$loc', '$sca', '$des', '$thm', '$imgs', 1, $sord, 'active', NOW(), NOW())");
-        }
-    }
-
     $sql = "SELECT * FROM portfolio WHERE status='active' AND category != 'online' AND category != 'web' ORDER BY sort_order ASC, id DESC";
     $result = mysqli_query($conn, $sql);
     $list = array();
