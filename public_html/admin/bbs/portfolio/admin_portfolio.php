@@ -318,14 +318,25 @@ if ($result) {
 
     <section class="content">
 
-    <?php if ($msg === 'write'): ?>
-    <script>alert('등록되었습니다.');</script>
-    <?php elseif ($msg === 'modify'): ?>
-    <script>alert('수정되었습니다.');</script>
-    <?php elseif ($msg === 'del'): ?>
-    <script>alert('삭제되었습니다.');</script>
-    <?php elseif ($msg === 'synced'): ?>
-    <script>alert('포트폴리오 데이터가 성공적으로 동기화되었습니다.');</script>
+    <?php if ($msg): ?>
+    <script>
+      <?php if ($msg === 'write'): ?>
+      alert('등록되었습니다.');
+      <?php elseif ($msg === 'modify'): ?>
+      alert('수정되었습니다.');
+      <?php elseif ($msg === 'del'): ?>
+      alert('삭제되었습니다.');
+      <?php elseif ($msg === 'synced'): ?>
+      alert('포트폴리오 데이터가 성공적으로 동기화되었습니다.');
+      <?php endif; ?>
+      if (window.history && window.history.replaceState) {
+        try {
+          var u = new URL(window.location.href);
+          u.searchParams.delete('msg');
+          window.history.replaceState(null, '', u.pathname + (u.searchParams.toString() ? '?' + u.searchParams.toString() : ''));
+        } catch(e) {}
+      }
+    </script>
     <?php endif; ?>
 
       <?php if ($mode === 'write' || $mode === 'modify'): ?>
