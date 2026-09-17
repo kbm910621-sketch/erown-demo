@@ -31,8 +31,8 @@ CREATE TABLE IF NOT EXISTS `portfolio` (
   `period_end` date DEFAULT NULL,
   `scale` varchar(100) DEFAULT '',
   `description` text,
-  `thumb` varchar(255) DEFAULT '',
-  `images` text,
+  `thumb` mediumtext,
+  `images` longtext,
   `is_featured` tinyint(1) DEFAULT 0,
   `sort_order` int(11) DEFAULT 0,
   `status` enum('active','inactive') DEFAULT 'active',
@@ -41,6 +41,8 @@ CREATE TABLE IF NOT EXISTS `portfolio` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 ");
+@mysqli_query($conn, "ALTER TABLE `portfolio` MODIFY `thumb` MEDIUMTEXT");
+@mysqli_query($conn, "ALTER TABLE `portfolio` MODIFY `images` LONGTEXT");
 
 // ── 시드 데이터 자동 동기화 (누락 항목 자동 삽입) ──
 $check_count_res = mysqli_query($conn, "SELECT COUNT(*) FROM portfolio");
@@ -202,7 +204,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     $upload_url = '/admin/bbs/portfolio/uploads/' . $cat_folder . '/';
 
-    // 1) 대표 이미지 업로드 (Base64 우선 처리 -> multipart fallback)
+    // 1) 대표 이미지 업로드 (1단계: /uploads/ -> 2단계: /images/port/ -> 3단계: Base64 DataURL 직접 보존)
     $thumb = isset($_POST['thumb_old']) ? $_POST['thumb_old'] : '';
     $thumb_saved = false;
 
@@ -212,6 +214,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (save_base64_to_file($_POST['thumb_base64'], $target_path)) {
             $thumb = $upload_url . $fname;
             $thumb_saved = true;
+        } else {
+            $alt_target = $_SERVER['DOCUMENT_ROOT'] . '/images/port/' . $fname;
+            if (save_base64_to_file($_POST['thumb_base64'], $alt_target)) {
+                $thumb = '/images/port/' . $fname;
+                $thumb_saved = true;
+            } else {
+                $thumb = $_POST['thumb_base64'];
+                $thumb_saved = true;
+            }
         }
     }
 
@@ -235,6 +246,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             @chmod($target_path, 0777);
             $thumb = $upload_url . $fname;
             $thumb_saved = true;
+        } else {
+            $alt_target = $_SERVER['DOCUMENT_ROOT'] . '/images/port/' . $fname;
+            if (@copy($_FILES['thumb']['tmp_name'], $alt_target) || (@file_put_contents($alt_target, @file_get_contents($_FILES['thumb']['tmp_name'])) !== false)) {
+                @chmod($alt_target, 0777);
+                $thumb = '/images/port/' . $fname;
+                $thumb_saved = true;
+            }
         }
     }
 
@@ -253,6 +271,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $target_path = $upload_dir . $fname;
             if (save_base64_to_file($b64, $target_path)) {
                 $images[] = $upload_url . $fname;
+            } else {
+                $alt_target = $_SERVER['DOCUMENT_ROOT'] . '/images/port/' . $fname;
+                if (save_base64_to_file($b64, $alt_target)) {
+                    $images[] = '/images/port/' . $fname;
+                } else {
+                    $images[] = $b64;
+                }
             }
         }
     }
@@ -279,6 +304,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($moved) {
                 @chmod($target_path, 0777);
                 $images[] = $upload_url . $fname;
+            } else {
+                $alt_target = $_SERVER['DOCUMENT_ROOT'] . '/images/port/' . $fname;
+                if (@copy($_FILES['images']['tmp_name'][$i], $alt_target) || (@file_put_contents($alt_target, @file_get_contents($_FILES['images']['tmp_name'][$i])) !== false)) {
+                    @chmod($alt_target, 0777);
+                    $images[] = '/images/port/' . $fname;
+                }
             }
         }
     }
