@@ -14,8 +14,15 @@ $categories = array(
     'mart'    => '대형마트 카트'
 );
 
-function normalize_port_img($url) {
-    if (empty($url)) return '/images/bs_ad/baro.jpg';
+function normalize_port_img($url, $cat = '') {
+    if (empty($url)) {
+        if ($cat === 'shelter') return '/images/port/port_02_1.jpg';
+        if ($cat === 'mart') return '/images/port/mart/mart_01.jpg';
+        if ($cat === 'video') return '/images/port/video/video_thumb_hion.jpg';
+        if ($cat === 'taxi') return '/images/port/port_59_1.jpg';
+        if ($cat === 'led') return '/images/port/port_28_1.jpg';
+        return '/images/port/port_01_1.jpg';
+    }
     return str_replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/', $url);
 }
 
@@ -611,7 +618,7 @@ $(document).ready(function() {
     }
 
     currentModalImages = rawImages.map(function(u) {
-      if (!u) return '/images/bs_ad/baro.jpg';
+      if (!u) return '/images/port/port_01_1.jpg';
       return u.replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/');
     });
 

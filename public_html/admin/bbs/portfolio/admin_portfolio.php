@@ -85,8 +85,15 @@ if (file_exists($seed_file) && ($db_port_count === 0 || isset($_GET['sync']))) {
     }
 }
 
-function normalize_port_img($url) {
-    if (empty($url)) return '/images/bs_ad/baro.jpg';
+function normalize_port_img($url, $cat = '') {
+    if (empty($url)) {
+        if ($cat === 'shelter') return '/images/port/port_02_1.jpg';
+        if ($cat === 'mart') return '/images/port/mart/mart_01.jpg';
+        if ($cat === 'video') return '/images/port/video/video_thumb_hion.jpg';
+        if ($cat === 'taxi') return '/images/port/port_59_1.jpg';
+        if ($cat === 'led') return '/images/port/port_28_1.jpg';
+        return '/images/port/port_01_1.jpg';
+    }
     return str_replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/', $url);
 }
 
@@ -845,7 +852,7 @@ if ($result) {
                       $cnt = $page + 1;
                       foreach ($list as $row){
                           $cat_title = isset($categories[$row['category']]) ? $categories[$row['category']] : $row['category'];
-                          $thumb_src = !empty($row['thumb']) ? normalize_port_img($row['thumb']) : '/images/bs_ad/baro.jpg';
+                          $thumb_src = normalize_port_img($row['thumb'], $row['category']);
                           $status_txt = ($row['status'] === 'active') ? '<span style="color:#16a34a; font-weight:700;">공개</span>' : '<span style="color:#94a3b8;">비공개</span>';
                           $featured_txt = (!empty($row['is_featured'])) ? '<span style="color:#2563eb; font-weight:800;">노출</span>' : '-';
                           $client_txt = $row['client'] ? htmlspecialchars($row['client']) : '-';
@@ -899,7 +906,7 @@ if ($result) {
               if($totals > 0){
                   foreach ($list as $row){
                       $cat_title = isset($categories[$row['category']]) ? $categories[$row['category']] : $row['category'];
-                      $thumb_src = !empty($row['thumb']) ? normalize_port_img($row['thumb']) : '/images/bs_ad/baro.jpg';
+                      $thumb_src = normalize_port_img($row['thumb'], $row['category']);
                       $status_txt = ($row['status'] === 'active') ? '<span style="color:#16a34a; font-weight:700; font-size:12px;">● 공개</span>' : '<span style="color:#94a3b8; font-size:12px;">● 비공개</span>';
                       $featured_txt = (!empty($row['is_featured'])) ? '<span style="background:#2563eb; color:#fff; font-size:10px; font-weight:800; padding:2px 6px; border-radius:3px; margin-left:4px;">메인</span>' : '';
                       $client_txt = $row['client'] ? htmlspecialchars($row['client']) : '가온엔 광고';

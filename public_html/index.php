@@ -1,6 +1,13 @@
 <?php
-function normalize_port_img($url) {
-    if (empty($url)) return '/images/bs_ad/baro.jpg';
+function normalize_port_img($url, $cat = '') {
+    if (empty($url)) {
+        if ($cat === 'shelter') return '/images/port/port_02_1.jpg';
+        if ($cat === 'mart') return '/images/port/mart/mart_01.jpg';
+        if ($cat === 'video') return '/images/port/video/video_thumb_hion.jpg';
+        if ($cat === 'taxi') return '/images/port/port_59_1.jpg';
+        if ($cat === 'led') return '/images/port/port_28_1.jpg';
+        return '/images/port/port_01_1.jpg';
+    }
     return str_replace('/admin/bbs/portfolio/uploads/bus/', '/images/port/', $url);
 }
 include_once $_SERVER['DOCUMENT_ROOT'] . "/lib/db_conn.php";
@@ -1268,7 +1275,7 @@ if (!empty($active_popups)) {
     <div class="am-container am-sec-head" style="position:relative; z-index:2; text-align:left; margin-bottom:120px;">
       <span class="ash-kicker cyan">03 / VIDEO &amp; CONTENT PRODUCTION</span>
       <h2 class="ash-title white">영상제작 솔루션</h2>
-      <p class="ash-desc light" style="margin:0; text-align:left;">브랜드 홍보영상부터 SNS 릴스·숏폼, DID 등 매체별 영상 콘텐츠를 기획·촬영·편집합니다.</p>
+      <p class="ash-desc light" style="margin:0; text-align:left;">브랜드 홍보영상부터 SNS 릴스·숏폼까지 맞춤형 영상 콘텐츠를 기획·촬영·편집합니다.</p>
     </div>
 
     <!-- VIDEO PRODUCTION VISUAL CENTER STAGE -->
@@ -1363,16 +1370,6 @@ if (!empty($active_popups)) {
           <span class="avs-sub">9:16 모바일 세로형 콘텐츠</span>
           </div>
 
-          <!-- 03 DID 전광판 영상 (숨김 처리)
-          <div class="avs-item-card" data-target-mode="wide"
-              data-title="DID 디지털 사이니지 영상"
-              data-sub="설치 매체의 규격과 송출 환경에 맞춘 광고영상">
-          <span class="avs-badge">03 / DIGITAL SIGNAGE</span>
-          <strong class="avs-title">DID 전광판 영상</strong>
-          <span class="avs-sub">매체 규격 맞춤 영상 콘텐츠</span>
-          </div>
-          -->
-
           <div class="avs-item-card" data-target-mode="wide"
               data-title="광고 · 캠페인 영상 콘텐츠"
               data-sub="온라인과 오프라인 광고에 활용할 수 있는 영상 제작"
@@ -1420,9 +1417,12 @@ if (!empty($active_popups)) {
               $vVideo = !empty($vItem['video']) ? $vItem['video'] : (isset($vIdxMap[$vItem['id']]) ? $vIdxMap[$vItem['id']] : '');
               $vClient = !empty($vItem['client']) ? htmlspecialchars($vItem['client']) : '가온엔 기획 · 제작';
             ?>
-            <div class="swiper-slide asps-card dark main-port-card" data-cat="<?php echo htmlspecialchars($vItem['category']); ?>" data-id="<?php echo (int)$vItem['id']; ?>" data-name="<?php echo htmlspecialchars($vItem['title']); ?>" data-img="<?php echo htmlspecialchars($vItem['thumb']); ?>" data-video="<?php echo htmlspecialchars($vVideo); ?>" data-tag="영상 광고">
+            <div class="swiper-slide asps-card dark main-port-card asps-video-card" data-cat="<?php echo htmlspecialchars($vItem['category']); ?>" data-id="<?php echo (int)$vItem['id']; ?>" data-name="<?php echo htmlspecialchars($vItem['title']); ?>" data-img="<?php echo htmlspecialchars($vItem['thumb']); ?>" data-video="<?php echo htmlspecialchars($vVideo); ?>" data-tag="영상 광고">
               <div class="asps-thumb">
-                <img src="<?php echo htmlspecialchars($vItem['thumb']); ?>" alt="<?php echo htmlspecialchars($vItem['title']); ?>" loading="lazy">
+                <?php if (!empty($vVideo)): ?>
+                  <video class="asps-card-video" src="<?php echo htmlspecialchars($vVideo); ?>" muted loop playsinline preload="metadata" poster="<?php echo htmlspecialchars($vItem['thumb']); ?>"></video>
+                <?php endif; ?>
+                <img class="asps-card-poster" src="<?php echo htmlspecialchars($vItem['thumb']); ?>" alt="<?php echo htmlspecialchars($vItem['title']); ?>" loading="lazy" style="<?php echo !empty($vVideo) ? 'position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:1; transition:opacity 0.3s ease;' : ''; ?>">
                 <span class="asps-badge cyan">10초 영상</span>
                 <div class="asps-arrow-badge">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -1432,7 +1432,7 @@ if (!empty($active_popups)) {
                 <div class="asps-title-row">
                   <strong class="asps-item-title white"><?php echo htmlspecialchars($vItem['title']); ?></strong>
                 </div>
-                <span class="asps-item-loc light"><?php echo $vClient; ?> · 스틸컷 캡쳐본</span>
+                <span class="asps-item-loc light"><?php echo $vClient; ?> · 10초 하이라이트 영상</span>
               </div>
             </div>
             <?php endforeach; ?>
@@ -1817,7 +1817,7 @@ if (!empty($active_popups)) {
         </button>
         <button type="button" class="lmt-tab" data-target="guideUsquare">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          <span>유스퀘어·터미널</span>
+          <span>터미널·유스퀘어</span>
         </button>
         <button type="button" class="lmt-tab" data-target="guideTaxiSpec">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
